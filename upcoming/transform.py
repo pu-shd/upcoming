@@ -19,7 +19,7 @@ from collections.abc import Sequence
 from datetime import datetime
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from . import locate, provenance
+from . import locate, provenance, rules
 from .errors import SourceFatal
 from .model import Event, Speaker, normalize_instant
 from .parse import RawEvent
@@ -28,7 +28,7 @@ from .registry import SourceConfig
 #: Roles this module implements. ``composite`` and ``mixed`` need the rule engine, because
 #: their SUMMARY carries several fields at once (quantum) or means different things on
 #: different events of one feed (ai).
-IMPLEMENTED_ROLES = frozenset({"speaker", "title"})
+IMPLEMENTED_ROLES = frozenset({"speaker", "title", "rules"})
 
 #: The compact ICS form, ``20260915T203000Z`` or ``20260915T163000``.
 _ICS_DT_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2})(?P<utc>Z)?)?$")
@@ -154,9 +154,9 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
     if role not in IMPLEMENTED_ROLES:
         raise SourceFatal(
             source.slug,
-            f"summary_role {role!r} needs the mapping rule engine, which is not built "
-            f"yet. Refusing rather than guessing: a composite SUMMARY read as a plain "
-            f"title produces valid output with the speaker buried in it.",
+            f"summary_role {role!r} is not implemented. Refusing rather than guessing: a "
+            f"summary read as the wrong field produces valid output with the speaker and "
+            f"title transposed and nothing reporting it.",
         )
 
     if not raw.uid:
@@ -173,6 +173,9 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
     title = ""
     speakers: tuple[Speaker, ...] = ()
     title_source: str | None = None
+    mapping_rule = f"{source.slug}:summary-is-{role}"
+    summary_rest = ""
+    extra_tags: tuple[str, ...] = ()
 
     summary = " ".join(decode_entities(raw.summary).split())
     if role == "speaker":
@@ -180,13 +183,39 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         # and is filled by enrichment or synthesized by the fallback chain.
         if summary:
             speakers = (split_speaker(summary),)
-    else:
+    elif role == "title":
         # MAE: the feed names the talk. A sentinel is absence, not a title -- publishing
         # "TBD" satisfies the schema's minLength and is wrong, and the predecessor does
         # exactly that with no provenance flags at all, so a consumer cannot even tell.
         if not provenance.is_missing(summary):
             title = summary
             title_source = provenance.TitleSource.ICS.value
+    else:
+        # The summary means different things on different events of this feed, so the
+        # mapping is declared as an ordered chain and the rule that fired is published.
+        outcome = rules.apply_chain(
+            summary, source.summary_rules, source.vocabulary, slug=source.slug
+        )
+        mapping_rule = outcome.rule_id
+        summary_rest = outcome.unresolved
+        extra_tags = outcome.tags
+
+        assigned = outcome.assigned
+        if person := assigned.get("speakers"):
+            speakers = (split_speaker(person),)
+        if found := assigned.get("affiliation"):
+            # A separately captured affiliation is more reliable than one split out of the
+            # name, so it wins: the pattern knew where the parenthetical was.
+            speakers = tuple(Speaker(name=s.name, affiliation=found) for s in speakers)
+        candidate = assigned.get("title", "")
+        if candidate and not provenance.is_missing(candidate):
+            title = candidate
+            title_source = provenance.TitleSource.ICS.value
+        # `series_extra` is the series the summary itself names, which the feed's
+        # CATEGORIES may not. Kept as a tag rather than overwriting CATEGORIES, so the
+        # publisher's own categorisation is never silently replaced.
+        if series_extra := assigned.get("series_extra"):
+            extra_tags = (*extra_tags, series_extra)
 
     location, location_rule = locate.parse_location(
         decode_entities(raw.location), source.location_rules
@@ -207,12 +236,13 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         location=location,
         speakers=speakers,
         series=_series(raw.categories),
-        tags=tuple(tags),
+        tags=tuple(tags) + extra_tags,
         raw_categories=tuple(raw.categories),
         content=decode_entities(raw.description),
         summary_raw=raw.summary,
         location_raw=raw.location,
-        mapping_rules=(f"{source.slug}:summary-is-{role}",),
+        mapping_rules=(mapping_rule,),
+        summary_rest=summary_rest,
         location_rule=location_rule,
         title_source=title_source,
         title_is_placeholder=provenance.is_placeholder_source(title_source),

@@ -1,0 +1,274 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Electrical and Computer Engineering
+BEGIN:VEVENT
+UID:ps_events:10876:delta:0
+DTSTART:20260813T140000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260813T160000Z
+URL:https://ece.princeton.edu/events/electrochemically-reconfigurable-thz-m
+ etasurfaces
+LOCATION:EQUAD J323
+SUMMARY:Electrochemically Reconfigurable THz Metasurfaces
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;The terahertz (THz) and sub-THz frequency bands are emer
+ ging as key components of next-generation wireless communications\, sensin
+ g\, and imaging technologies. These frequency ranges offer substantially i
+ ncreased bandwidth as well as enhanced spatial resolution for applications
+  such as high bit-rate communications or high-resolution imaging and spect
+ roscopy. Despite these advantages\, the adoption of THz systems remains hi
+ ndered by the lack of effective sources\, modulators\, and detectors. This
+  gap stems largely from fundamental
+CATEGORIES:Final Public Oral Examinations,Final Public Orals
+DTSTAMP:20260806T182231Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10601:delta:0
+DTSTART:20260817T180000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260817T200000Z
+URL:https://ece.princeton.edu/events/theory-practice-reinforcement-learning
+ -paradigms-aligning-large-language-and-diffusion
+LOCATION:EQUAD J401
+SUMMARY:From Theory to Practice: Reinforcement Learning Paradigms for Align
+ ing Large Language and Diffusion Models
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;This dissertation investigates the alignment and theoret
+ ical foundations of generative AI through reinforcement learning (RL).We b
+ ridge the gap between rigorous mathematical guarantees and practical align
+ ment across two primary parts.In Part I (Alignment of Generative Systems)\
+ , we first expose systematic vulnerability in the LLM-as-a-Judge framework
+ \, identifying “master keys”: non-informative adversarial patterns tha
+ t consistently trigger high false-positive rates\, and we propose a robust
+  reward model to mitigate these
+CATEGORIES:Final Public Oral Examinations,Final Public Orals
+DTSTAMP:20260727T181905Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10901:delta:0
+DTSTART:20260818T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260818T210000Z
+URL:https://ece.princeton.edu/events/towards-physics-guided-wireless-commun
+ ication-and-sensing-above-100-ghz-0
+LOCATION:EQUAD J323
+SUMMARY:Towards Physics-Guided Wireless Communication and Sensing Above 100
+  GHz
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;The sub-Terahertz (sub-THz) bands - frequencies above 10
+ 0 GHz and up to 1 THz - are rapidly emerging as one of the accepted paradi
+ gms for future wireless networks. In principle\, these frequencies can pro
+ vide ultra-fast data transmission due to their large amount of available b
+ andwidth. Nonetheless\, several fundamental challenges stand in the way of
+  their adoption. Instead of merely scaling the existing wireless system ar
+ chitecture\, my thesis investigates how to leverage the physics of sub-THz
+  signals to overcome these hurdles.
+CATEGORIES:Final Public Oral Examinations,Final Public Orals
+DTSTAMP:20260805T195635Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10916:delta:0
+DTSTART:20260827T170000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260827T190000Z
+URL:https://ece.princeton.edu/events/deep-learning-across-communication-sta
+ ck-channel-coding-task-aware-transmission
+LOCATION:EQUAD J323
+SUMMARY:Deep Learning Across the Communication Stack: From Channel Coding t
+ o Task-Aware Transmission
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;Modern communication systems operate remarkably close to
+  fundamental limits\, but their design has historically relied on carefull
+ y engineered mathematical structure. Deep learning offers a complementary 
+ capability: learning representations and decision rules directly from data
+ . Bringing this capability to communication\, however\, is difficult. In c
+ hannel coding\, for example\, learning must generalize across an exponenti
+ ally large message space that no practical training set can cover.This dis
+ sertation argues that classical
+CATEGORIES:Final Public Oral Examinations,Final Public Orals
+DTSTAMP:20260817T193429Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10896:delta:0
+DTSTART:20260827T173000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260827T193000Z
+URL:https://ece.princeton.edu/events/charge-transfer-states-and-polarons-or
+ ganic-donor-acceptor-diodes-generation-recombination-0
+LOCATION:EQUAD B327
+SUMMARY:Charge Transfer States and Polarons in Organic Donor-Acceptor Diode
+ s: Generation\, Recombination\, and Their Interplay
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;Organic solar cells and organic photodetectors combine m
+ echanical flexibility\, solution processability\, and spectral tunability 
+ from the visible to the near infrared\, yet their performance remains limi
+ ted by large voltage losses and parasitic dark currents compared with inor
+ ganic counterparts. In donor–acceptor (D–A) heterojunction diodes\, no
+ nradiative recombination via charge transfer (CT) states broadened by ener
+ getic disorder is a key origin of voltage loss\, but reliable approaches f
+ or quantifying CT state disorder are not yet
+CATEGORIES:Final Public Oral Examinations,Final Public Orals
+DTSTAMP:20260817T171119Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10921:delta:0
+DTSTART:20260828T150000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260828T170000Z
+URL:https://ece.princeton.edu/events/securing-domain-validation-against-net
+ work-attacks-deployable-defenses-web-pki
+LOCATION:EQUAD J323
+SUMMARY:Securing Domain Validation Against Network Attacks: Deployable Defe
+ nses for the Web PKI
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;HTTPS underpins secure communication on the Web\, but it
+ s trust is bootstrapped through domain control validation (DV) : a challen
+ ge-response protocol through which Certificate Authorities (CAs) verify th
+ e requester' s control of a domain name. DV relies on unauthenticated prot
+ ocols (including BGP\, DNS\, and HTTP)\, and is therefore vulnerable to ne
+ twork-level attacks that can enable fraudulent certificate issuance. This 
+ thesis hardens DV against network attacks through three deployable defense
+ s spanning ecosystem-wide protection and
+CATEGORIES:Final Public Oral Examinations,Final Public Orals
+DTSTAMP:20260818T122555Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10946:delta:0
+DTSTART:20260903T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260903T213000Z
+URL:https://ece.princeton.edu/events/closed-loop-systems-closed-loop-design
+ -full-stack-co-design-ai-era
+LOCATION:B205 Engineering Quadrangle
+SUMMARY:From Closed-Loop Systems to Closed-Loop Design: Full-Stack Co-Desig
+ n for the AI Era
+CLASS:PUBLIC
+DESCRIPTION:Abstract:&nbsp\;Computing systems are becoming increasingly clo
+ sed loop. A robot continuously senses\, computes\, and acts in the physica
+ l world\; more broadly\, emerging AI applications interact dynamically wit
+ h users\, tools\, and environments. Yet the way we design these systems re
+ mains largely open loop: models\, software\, hardware architectures\, and 
+ implementations are developed in separate stages\, with slow and incomplet
+ e feedback across layers. As a result\, improvements in isolated metrics s
+ uch as kernel latency\, energy\, or hardware utilization do
+DTSTAMP:20260825T130858Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10936:delta:0
+DTSTART:20260911T170000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260911T190000Z
+URL:https://ece.princeton.edu/events/driven-dissipative-dynamics-fluxonium-
+ measurement-induced-transitions-and-effective
+LOCATION:EQUAD J223
+SUMMARY:Driven-Dissipative Dynamics in Fluxonium: Measurement-Induced Trans
+ itions and Effective Temperatures
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;Superconducting qubits are artificial atoms whose proper
+ ties are shaped through the engineering of nonlinear electrical circuits. 
+ Quantum information is encoded by selecting two levels of this multilevel 
+ system to form the computational subspace. Thus\, standard operations can 
+ inadvertently populate states outside this subspace\, producing leakage er
+ rors. In transmons\, for example\, increasing the resonator drive during r
+ eadout can activate multiphoton resonances that induce measurement-induced
+  state transitions (MISTs)\, transferring
+CATEGORIES:Final Public Oral Examinations,Final Public Orals
+DTSTAMP:20260826T125807Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11016:delta:0
+DTSTART:20260916T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260916T213000Z
+URL:https://ece.princeton.edu/events/emerging-chip-scale-terahertz-systems-
+ sensing-metrology-and-security-applications-0
+LOCATION:B205 Engineering Quadrangle
+SUMMARY:Emerging Chip-Scale Terahertz Systems for Sensing\, Metrology and S
+ ecurity Applications
+CLASS:PUBLIC
+DESCRIPTION:Abstract:&nbsp\;Modern processor architectures are complex mach
+ ines due to decades' worth of performance optimizations. This complexity c
+ an lead to subtle performance issues at the microarchitectural level that 
+ are very difficult to diagnose and repair. Fortunately\, modern processors
+  also contain a rich set of performance monitoring facilities that enable 
+ introspection of many aspects of program execution. I will share our work 
+ on techniques to diagnose and repair\, in running programs\, two particula
+ r performance issues: adjusting code layout on-the-fly to match current
+DTSTAMP:20260910T135602Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11011:delta:0
+DTSTART:20260922T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260922T213000Z
+URL:https://ece.princeton.edu/events/extreme-codesign-efficient-ai-algorith
+ ms-software-and-hardware
+LOCATION:B205 Engineering Quadrangle
+SUMMARY:Extreme Codesign for Efficient AI: Algorithms\, Software\, and Hard
+ ware
+CLASS:PUBLIC
+DESCRIPTION:Abstract:&nbsp\;Large language model (LLM) inference is computa
+ tionally expensive and increasingly dominated by memory bandwidth. This ta
+ lk presents a set of hardware\, software\, and algorithmic techniques that
+  address these bottlenecks through cross-layer co-design\, spanning numeri
+ cal representation\, tensor compression\, and custom hardware accelerator 
+ architectures. I make the case that we are well past the point of "traditi
+ onal codesign" to get to higher computing speeds\, and we need to move tow
+ ards Extreme Codesign where the lines between algorithm\, software\, and
+DTSTAMP:20260908T163621Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11001:delta:0
+DTSTART:20260923T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260923T213000Z
+URL:https://ece.princeton.edu/events/synthetic-data-real-benefits-reliable-
+ inference-and-principled-model-steering
+LOCATION:EQUAD B205
+SUMMARY:Synthetic Data\, Real Benefits: Reliable Inference and Principled M
+ odel Steering
+CLASS:PUBLIC
+DESCRIPTION:ECE&nbsp\; KORHAMMER&nbsp\; SEMINAR&nbsp\; SERIESAbstractAI mod
+ els are powerful\, yet their use in practice raises two fundamental challe
+ nges. The first is trust: how can we make reliable inferences from black-b
+ ox models when we only have a few reference examples to rely on? The secon
+ d is steerability: how can we guide AI generation when we can recognize th
+ e outputs we prefer but cannot precisely quantify our preferences? In this
+  talk\, I will show how statistics and AI can empower one another to tackl
+ e both challenges.The first part
+DTSTAMP:20260904T162035Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:10996:delta:0
+DTSTART:20261007T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261007T213000Z
+URL:https://ece.princeton.edu/events/internet-radar-things-turning-world-ra
+ dios-one-radar
+LOCATION:B205 Engineering Quadrangle
+SUMMARY:Internet of Radar Things: Turning a World of Radios into One Radar
+CLASS:PUBLIC
+DESCRIPTION:Abstract:&nbsp\;Almost every wireless device transmits over the
+  air to communicate\, and an increasing fraction of these devices can also
+  use their signals to sense the physical world.&nbsp\; As integrated sensi
+ ng and communication (ISAC) is moving from research into standards\, these
+  radios periodically sense the world from the response of the environment 
+ on their transmitted signal. At the same time\, WiFi\, cellular\, and auto
+ motive platforms are expanding into millimeter-wave spectrum\, where wide 
+ bandwidths and compact antenna arrays provide fine spatial and temporal
+DTSTAMP:20260903T172319Z
+END:VEVENT
+END:VCALENDAR

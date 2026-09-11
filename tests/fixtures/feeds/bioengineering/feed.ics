@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Omenn-Darling Bioengineering Institute
+BEGIN:VEVENT
+UID:ps_events:2741:delta:0
+DTSTART:20260817T140000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260817T214500Z
+URL:https://bioengineering.princeton.edu/events/2026/agentic-biolab-worksho
+ p
+LOCATION:Briger Hall Auditorium\, C112
+SUMMARY:Agentic Biolab Workshop
+CLASS:PUBLIC
+DESCRIPTION:WorkshopMonday\, August 17\, 202610:00am – 5:45pmThis event h
+ as reached capacity. Registration is closed.AgendaThe full agenda is now a
+ vailable.&nbsp\;Location
+DTSTAMP:20260816T115326Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:2761:delta:0
+DTSTART:20260903T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260903T213000Z
+URL:https://bioengineering.princeton.edu/events/2026/rising-stars-bioengine
+ ering-symposium-2026
+LOCATION:Bioengineering E105
+SUMMARY:Rising Stars in Bioengineering Symposium 2026
+CLASS:PUBLIC
+CATEGORIES:Rising Stars Seminars
+DTSTAMP:20260909T192613Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:2756:delta:0
+DTSTART:20260917T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260917T210000Z
+URL:https://bioengineering.princeton.edu/events/2026/generative-biology-lea
+ rning-program-cellular-machines-and-systems
+LOCATION:Bioengineering E105
+SUMMARY:Generative Biology - Learning to Program Cellular Machines and Syst
+ ems
+CLASS:PUBLIC
+DESCRIPTION:Living cells are capable of sensing their environment\, integra
+ ting this information\, and making complex decisions. These decisions are\
+ , at their heart\, mediated by genetically encoded molecular circuits. In 
+ the field of synthetic biology\, we have been engineering modular molecula
+ r components capable of sensing and actuating and using these components t
+ o create diverse cell-based biological programs. These include programming
+  immune cells to search the body for combinatorial molecular signatures of
+  disease (e.g.\, cancer\, autoimmunity\, and degeneration). We are also pr
+ ogramming multicellular
+CATEGORIES:BioE Colloquium
+DTSTAMP:20260909T151552Z
+END:VEVENT
+END:VCALENDAR

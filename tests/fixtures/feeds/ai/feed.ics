@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:AI at Princeton
+BEGIN:VEVENT
+UID:ps_events:3396:delta:0
+DTSTART:20260909T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260909T170500Z
+URL:https://ai.princeton.edu/events/2026/rafael-gomez-bombarelli
+LOCATION:Bowen Hall 222
+SUMMARY:Rafael Gomez-Bombarelli
+CLASS:PUBLIC
+DESCRIPTION:Abstract: AI has the potential to bring much-needed acceleratio
+ n to the development of chemicals and materials for energy and sustainabil
+ ity\, just like it has delivered intelligence gains in other fields. The p
+ ath to success goes through scaling\, perhaps exclusively through scaling.
+  Rich Sutton's 'bitter lesson' states that "general methods that leverage 
+ computation are ultimately the most effective" in AI. The corollaries are 
+ bittersweet in chemistry and materials.&nbsp\;The lesson permeates through
+  the use of AI in chemistry and materials. The tremendous success of
+CATEGORIES:AI for Accelerating Invention,Princeton AI
+DTSTAMP:20260903T155009Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4051:delta:0
+DTSTART:20260915T160000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260915T171500Z
+URL:https://ai.princeton.edu/events/2026/whose-ai-amazon-forests-technologi
+ cal-sovereignty-indigenizing-science
+LOCATION:Aaron Burr Hall\, Room 216
+SUMMARY:Whose AI for Amazon Forests? Technological Sovereignty for Indigeni
+ zing Science
+CLASS:PUBLIC
+DESCRIPTION:The study for this talk traces the techno-scientific and politi
+ cal-economic trajectory of the development and use of an Artificial Intell
+ igence (AI) model that simulates\, monitors and predicts Amazonian defores
+ tation. Developed mainly by Brazilian scientists\, this model has been use
+ d for scientific research\, policymaking\, and forest conservation. It als
+ o provided the technical foundation for South America’s first REDD+ fore
+ st carbon project and the world’s first REDD+ carbon accounting methodol
+ ogy. However\, in the process of international validation of this REDD+ ca
+ rbon accounting
+DTSTAMP:20260910T183130Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4056:delta:0
+DTSTART:20260915T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260915T213000Z
+URL:https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-20
+ 26-colloquium-2
+LOCATION:101 Sherrerd Hall
+SUMMARY:ORFE Talks & Seminars Flyers Fall 2026 Colloquium
+CLASS:PUBLIC
+DTSTAMP:20260910T190233Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4061:delta:0
+DTSTART:20260929T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260929T213000Z
+URL:https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-20
+ 26-colloquium
+LOCATION:101 Sherrerd Hall
+SUMMARY:ORFE Talks & Seminars Flyers Fall 2026 Colloquium
+CLASS:PUBLIC
+DTSTAMP:20260910T190750Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4066:delta:0
+DTSTART:20261027T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261027T213000Z
+URL:https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-20
+ 26-colloquium-0
+LOCATION:101 Sherrerd Hall
+SUMMARY:ORFE Talks & Seminars Flyers Fall 2026 Colloquium
+CLASS:PUBLIC
+DTSTAMP:20260910T185610Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4071:delta:0
+DTSTART:20261110T213000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261110T213000Z
+URL:https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-20
+ 26-colloquium-1
+LOCATION:101 Sherrerd Hall
+SUMMARY:ORFE Talks & Seminars Flyers Fall 2026 Colloquium
+CLASS:PUBLIC
+DTSTAMP:20260910T190144Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3391:delta:0
+DTSTART:20261118T213000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261118T223000Z
+URL:https://ai.princeton.edu/events/2026/ai%C2%B2-research-talk-series
+LOCATION:TBA
+SUMMARY:AI² Research Talk Series
+CLASS:PUBLIC
+CATEGORIES:AI for Accelerating Invention,Princeton AI
+DTSTAMP:20260903T160509Z
+END:VEVENT
+END:VCALENDAR

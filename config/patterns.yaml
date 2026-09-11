@@ -1,0 +1,168 @@
+# Named patterns and vocabulary shared by every source's mapping rules.
+#
+# This is the harmonized layer. A shape like "<person> - <title>" is the same wherever it
+# appears, so it is written once, tested once, and a fix reaches every source using it.
+# Which patterns a source applies, and in what order, is the diverging layer and lives in
+# that source's entry in sources.yaml.
+#
+# Every pattern carries `match` and `no_match` examples, run as a table test. The negative
+# examples are the real guard: the risk here is never failing to match, it is matching
+# something confidently and wrongly. A pattern with no negative examples fails the suite.
+#
+# All examples are real values from the live feeds, measured 2026-09-11.
+
+patterns:
+  # --------------------------------------------------------------------------------
+  # Whole-summary shapes
+  # --------------------------------------------------------------------------------
+
+  person_dash_title:
+    # citp: "Arvind Narayanan - AI Agents and the Augmentation Agenda"
+    # The left side must look like a name, or every title containing a dash would split.
+    regex: '^(?P<person>[A-Z][\w.''’-]*(?:\s+[A-Z][\w.''’-]*){1,3})\s+[-–—]\s+(?P<title>.{3,300})$'
+    match:
+      - "Arvind Narayanan - AI Agents and the Augmentation Agenda"
+      - "Helen Nissenbaum - The Bystander Privacy Problem"
+      - "Aditya Vashistha - Towards Globally Equitable AI"
+      - "Joshua Cohen - DARK MANSIONS: AI, Innovation, and Fermat’s Last Theorem"
+    no_match:
+      # The left side is a phrase, not a name.
+      - "Hidden Order in Disorder - The Expanding Landscape of Hyperuniformity"
+      # A location, not a summary. Shares the shape; must never be read as one.
+      - "101 - Sherrerd Hall"
+      # No dash at all.
+      - "Bias in AI Reading Group"
+      # A hyphen inside a word is not a separator.
+      - "Rafael Gomez-Bombarelli"
+
+  # --------------------------------------------------------------------------------
+  # <series>: <rest> shapes -- quantum and materials
+  # --------------------------------------------------------------------------------
+
+  series_quoted_title_dash_person_paren:
+    # quantum: Quantum Group Meeting: "Local Autonomous…" - Sid Midha (Gopalakrishnan Group)
+    # Must be tried BEFORE the unquoted variant, which would otherwise match and keep the
+    # quote marks inside the title.
+    regex: '^(?P<series>[^:]{3,80}):\s*["“](?P<title>[^"”]{3,300})["”]\s*[-–—]\s*(?P<person>[^,()]{2,60}?)\s*\((?P<paren>[^()]{2,120})\)$'
+    match:
+      - 'Quantum Group Meeting: "Local Autonomous Inference Machines For Quantum Error Correcting Codes" - Sid Midha (Gopalakrishnan Group)'
+    no_match:
+      - "Quantum Group Meeting: TBD - Chengyu Wang (Shayegan Group)"
+      - "Princeton Quantum Technology Conference 2026"
+
+  series_title_dash_person_paren:
+    # quantum: Quantum Group Meeting: <title> - <person> (<group>)
+    # The greedy `.+?` stops at the first dash that is followed by a person and a trailing
+    # parenthetical, so a title containing its own dash still works.
+    regex: '^(?P<series>[^:]{3,80}):\s*(?P<title>.+?)\s*[-–—]\s*(?P<person>[^,()]{2,60}?)\s*\((?P<paren>[^()]{2,120})\)$'
+    match:
+      - "Quantum Group Meeting: Quantum signatures in molecular polaritonics and other emerging photonic platforms. - Arghadip Koner (Scholes Group)"
+      - "Quantum Group Meeting: TBD - Chengyu Wang (Shayegan Group)"
+      - "Quantum Group Meeting: TBD - Ray Su (Yazdani Group)"
+    no_match:
+      # No trailing parenthetical.
+      - "Quantum Group Meeting: Something - Someone"
+      # No colon, so no series.
+      - "Princeton Quantum Technology Conference 2026"
+
+  series_title_comma_person_paren:
+    # quantum: Princeton Quantum Colloquium: <title>, <person> (<affiliation>)
+    #
+    # The hard one. The title may contain a colon AND a parenthetical of its own
+    # ("…From Fundamental Physics to (Possibly) Quantum Computation"), and the affiliation
+    # may contain a comma ("University of Colorado, Boulder"). It works because `[^()]+`
+    # cannot cross a parenthesis, so the greedy `.+?` is forced to leave the LAST
+    # parenthetical to `paren`.
+    regex: '^(?P<series>[^:]{3,80}):\s*(?P<title>.+?),\s*(?P<person>[^,()]{2,60}?)\s*\((?P<paren>[^()]{2,120})\)$'
+    match:
+      - "Princeton Quantum Colloquium: TBD, Aram Harrow (MIT)"
+      - "Princeton Quantum Colloquium: TBD, Rahul Nandkishore (University of Colorado, Boulder)"
+      - "Princeton Quantum Colloquium: An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation, Jainendra Jain (Penn State University)"
+    no_match:
+      - "Princeton Quantum Technology Conference 2026"
+      - "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts, University of Texas at Austin"
+
+  series_person_comma_affiliation:
+    # materials: PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts, University of Texas at Austin
+    # No parenthetical here -- the affiliation simply follows the comma to the end.
+    regex: '^(?P<series>[^:]{3,80}):\s*(?P<person>[^,()]{2,60}?),\s*(?P<paren>[^()]{2,120})$'
+    match:
+      - "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts, University of Texas at Austin"
+      - "PMI/PCCM SEMINAR SERIES Fall 2026: Rafael Gomez-Bombarelli, Massachusetts Institute of Technology"
+      - "PMI/PCCM SEMINAR SERIES Fall 2026: Dimitris Lagoudas, Texas A&M University"
+    no_match:
+      # No colon.
+      - "Princeton Materials Institute Symposium"
+      # Has a trailing parenthetical, so it belongs to the quantum patterns.
+      - "Princeton Quantum Colloquium: TBD, Aram Harrow (MIT)"
+
+  series_listing:
+    # ai: "ORFE Talks & Seminars Flyers Fall 2026 Colloquium", "AI² Research Talk Series".
+    # These name a listing page, not a talk -- neither a title nor a speaker. Parked rather
+    # than published as a title, so the fallback chain owns the field and says so.
+    regex: '(?i)^(?P<listing>.*\b(?:flyers?|talk series|seminar series|reading group)\b.*)$'
+    match:
+      - "ORFE Talks & Seminars Flyers Fall 2026 Colloquium"
+      - "AI² Research Talk Series"
+    no_match:
+      - "Whose AI for Amazon Forests? Technological Sovereignty for Indigenizing Science"
+      - "Rafael Gomez-Bombarelli"
+      - "Princeton Symposium on Advances in Optics and Ultrafast Science"
+
+# -----------------------------------------------------------------------------------
+# Vocabulary for the `person_name_shape` predicate (upcoming/patterns.py).
+#
+# Deciding whether "Andy Guess" is a person and "Bias in AI Reading Group" is not cannot
+# be done by shape alone: both are title-case word sequences. This list is what separates
+# them, and it is the load-bearing part -- without it, three real titles pass as names
+# ("Towards Globally Equitable AI", "AI² Research Talk Series", "Princeton Materials
+# Institute Symposium"). A test asserts exactly that, so nobody removes it as redundant.
+#
+# Every entry is a word no person is named.
+# -----------------------------------------------------------------------------------
+not_a_person:
+  # Event nouns
+  - event
+  - events
+  - symposium
+  - conference
+  - workshop
+  - colloquium
+  - seminar
+  - talk
+  - talks
+  - meeting
+  - lecture
+  - session
+  - summit
+  - forum
+  - panel
+  - series
+  - group
+  # Organisational nouns
+  - institute
+  - center
+  - centre
+  - laboratory
+  - lab
+  - program
+  - programme
+  - school
+  - college
+  - university
+  - department
+  - initiative
+  - project
+  - council
+  - committee
+  - society
+  # Words that appear in a listing title but never in a name
+  - research
+  - annual
+  - fall
+  - spring
+  - summer
+  - winter
+  - flyers
+  - agenda
+  - ai

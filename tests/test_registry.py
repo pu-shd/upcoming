@@ -51,9 +51,14 @@ def test_the_committed_registry_loads(registry) -> None:
 
 
 def test_every_source_declares_what_summary_means(registry) -> None:
-    """The fact the predecessor's fork got wrong. Stated, never inferred."""
+    """The fact the predecessor's fork got wrong. Stated, never inferred.
+
+    `composite` and `mixed` were collapsed into `rules` because both meant "see the rules
+    list" and I had already misapplied them -- citp was declared composite while its 24
+    events are 13 plain titles, 6 speaker-dash-title and 5 bare names.
+    """
     for source in registry.sources:
-        assert source.expectations.summary_role in {"speaker", "title", "composite", "mixed"}
+        assert source.expectations.summary_role in {"speaker", "title", "rules"}
 
 
 def test_orfe_and_mae_declare_opposite_summary_roles(registry) -> None:

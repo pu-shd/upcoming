@@ -6,10 +6,9 @@ One `events.json` per data source, plus combined feeds composed from them by dec
 algebra. A refactor of [pu-orfe/upcoming](https://github.com/pu-orfe/upcoming), informed by
 [pubino/mae-upcoming](https://github.com/pubino/mae-upcoming).
 
-> **Status: two sources build end to end.** `orfe` and `mae` produce real `events.json`
-> from committed fixtures, offline, and are checked field-by-field against the
-> predecessor's own expected output. Enrichment and fetching are next; the ten remaining
-> sources follow.
+> **Status: all twelve live sources build.** Every one produces `events.json` from
+> committed fixtures, offline, with `orfe` and `mae` additionally checked field-by-field
+> against the predecessor's own expected output. Enrichment and fetching are next.
 
 ## The important section
 
@@ -25,7 +24,8 @@ and it is the failure this project is built to make impossible:
 
 - **`expectations.summary_role` has no default.** A source that does not declare what its
   `SUMMARY` field means fails to load. Every possible default is wrong for roughly half
-  these feeds, and wrong invisibly, so the only fix is to refuse to have one.
+  these feeds, and wrong invisibly, so the only fix is to refuse to have one. Three values:
+  `speaker`, `title`, and `rules` for the four feeds where it varies event by event.
 - **Every mapping decision is recorded on the event** (`mappingRules`, `locationRule`,
   `titleSource`, `summaryRaw`), so "which field did `SUMMARY` go to?" is answerable from
   published output alone.
@@ -128,6 +128,52 @@ guarantee is structural rather than a convention. The suite enforces the same th
 socket layer.
 
 Requires Python 3.12+. Docker Compose is invoked as `docker-compose`.
+
+## When one field means several things
+
+Four feeds pack more than one field into `SUMMARY`, or mean different things by it on
+different events of the same feed. They declare an ordered rule chain instead of a single
+role:
+
+```yaml
+summary:
+  on_no_match: fail            # there is no silent option
+  rules:
+    - id: speaker-dash-title
+      when: { matches: person_dash_title }
+      then: { capture: { speakers: person, title: title } }
+    - id: bare-person-name
+      when: { predicate: person_name_shape }
+      then: { assign: { speakers: summary }, defer: [title] }
+    - id: title
+      when: { always: true }
+      then: { assign: { title: summary } }
+```
+
+Two layers, deliberately separate. **Named patterns** in `config/patterns.yaml` are shared
+by every source, each carrying `match` *and* `no_match` examples run as a table test — the
+risk with these shapes is never failing to match, it is matching something confidently and
+wrongly. **Rule chains** are per source, because which patterns apply and in what order is
+a property of one department's conventions.
+
+The engine is small on purpose: no arithmetic, no computed values, no cross-event state,
+and predicate nesting stops at depth two. Anything needing more gets a *name* — a pattern
+or a Python predicate — which config selects but cannot define.
+
+Every event records which rule mapped it, and each source's test pins the exact
+distribution. A reordering that silently moves four events between rules still produces
+schema-valid output; the recorded counts are the only thing that catches it.
+
+The hardest case parses correctly:
+
+```
+Princeton Quantum Colloquium: An Astonishing Quantum Universe in Two Dimensions: From
+Fundamental Physics to (Possibly) Quantum Computation, Jainendra Jain (Penn State University)
+```
+
+The series ends at the first colon; the title keeps its own colon and its own
+parenthetical; the speaker and affiliation come from the last one. Elsewhere in the same
+feed, `University of Colorado, Boulder` survives its comma intact.
 
 ## Checked against the predecessor
 

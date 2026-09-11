@@ -1,0 +1,501 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Center for Information Technology Policy
+BEGIN:VEVENT
+UID:ps_events:4756:delta:0
+DTSTART:20260908T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260908T171500Z
+URL:https://citp.princeton.edu/events/2026/arvind-narayanan-ai-agents-and-a
+ ugmentation-agenda
+LOCATION:Sherrerd Hall 306
+SUMMARY:Arvind Narayanan - AI Agents and the Augmentation Agenda
+CLASS:PUBLIC
+DESCRIPTION:The dominant paradigm in AI research and development envisions 
+ the goal as automation of tasks and entire jobs. But another\, comparative
+ ly marginalized vision has existed since the beginning of AI — that of a
+ ugmenting workers and amplifying human potential. In this talk\, it is arg
+ ued that the automation agenda is struggling even on purely commercial gro
+ unds\, and it is time to invest more into augmentation. Building agents fo
+ r collaboration instead of automation requires elevating a set of underexp
+ lored research challenges in human-computer interaction. Such agents can b
+ etter serve human
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260902T133613Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:0
+DTSTART:20260910T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260910T200000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4696:delta:0
+DTSTART:20260915T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260915T171500Z
+URL:https://citp.princeton.edu/events/2026/helen-nissenbaum-bystander-priva
+ cy-problem
+LOCATION:Sherrerd Hall 306
+SUMMARY:Helen Nissenbaum - The Bystander Privacy Problem
+CLASS:PUBLIC
+DESCRIPTION:Not first to pose a threat to “bystander privacy\,” Meta Ra
+ y-bans (and similar)\, have drawn public ire\, even disgust. Despite this\
+ , we have yet to see decisive pushback from regulatory bodies\, and the co
+ mpanies rolling out these products\, without a trace of irony\, swear to a
+ n ongoing commitment to privacy. Setting aside corporate self-dealing and 
+ misdirection\, Nissenbaum is interested\, particularly\, in the role of co
+ nceptual failure in sustaining the status quo. She explains why a privacy 
+ framework that has shaped regulatory thinking and institutional practice f
+ or decades (despite
+CATEGORIES:Privacy & Security
+DTSTAMP:20260908T182916Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:1
+DTSTART:20260917T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260917T200000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5156:delta:0
+DTSTART:20260922T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260922T171500Z
+URL:https://citp.princeton.edu/events/2026/unlocking-digital-behavior-using
+ -accelerator-comscore-data
+LOCATION:Sherrerd Hall 306
+SUMMARY:Unlocking Digital Behavior Using Accelerator Comscore Data
+CLASS:PUBLIC
+DESCRIPTION:The Accelerator has acquired several years of Comscore panel da
+ ta capturing real-world mobile and desktop browsing behavior\, enriched wi
+ th detailed demographic information. This dataset provides session-level i
+ nsights into how people use their devices — what apps they open\, what w
+ ebsites they visit\, how long they spend\, and in what sequence. Unlike so
+ cial media APIs or traditional surveys\, these data capture the invisible 
+ majority of online behavior: browsing\, reading\, and app
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260910T132418Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:2
+DTSTART:20260924T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260924T200000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5116:delta:0
+DTSTART:20260929T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260929T171500Z
+URL:https://citp.princeton.edu/events/2026/joshua-cohen-dark-mansions-ai-in
+ novation-and-fermat%E2%80%99s-last-theorem
+LOCATION:Computer Science Building 105
+SUMMARY:Joshua Cohen - DARK MANSIONS: AI\, Innovation\, and Fermat’s Last
+  Theorem
+CLASS:PUBLIC
+DESCRIPTION:Yiu\, Kosoy\, and Gopnik (2024) argue that “Cultural evolutio
+ n depends on a fine balance between imitation and innovation.” Writing i
+ n a world prior to reasoning models\, they argued that large language mode
+ ls fall squarely on the imitation side. This paper—focused principally o
+ n formal and scientific innovation—proposes a finer-grained\, three-tier
+  taxonomy: Tier 1 is transmission\, Tier 2 is something new (invention) wi
+ thin a fixed problem formulation\, and Tier 3 is framework-generating inno
+ vation. Tier 3 requires both historical novelty—a new construction or fr
+ amework—and functional novelty—a
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260908T194723Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:3
+DTSTART:20261001T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261001T200000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3976:delta:0
+DTSTART:20261006T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261006T171500Z
+URL:https://citp.princeton.edu/events/2026/aditya-vashistha-towards-globall
+ y-equitable-ai
+LOCATION:Sherrerd Hall 306
+SUMMARY:Aditya Vashistha - Towards Globally Equitable AI
+CLASS:PUBLIC
+DESCRIPTION:AI has the power to drive meaningful change\, but its benefits 
+ have remained concentrated among privileged communities in the West\, whic
+ h account for only a small fraction of the global population. Even convers
+ ations about AI risks are rooted in Western contexts\, despite AI’s wide
+ spread use across the world. Consequently\, current AI technologies not on
+ ly lack representation of diverse non-Western cultures and languages\, but
+  also perpetuate harmful stereotypes about people in these cultures.&nbsp\
+ ; This talk will examine these challenges through case studies of my work 
+ with people with
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260902T133738Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:4
+DTSTART:20261008T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261008T200000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4686:delta:0
+DTSTART:20261013T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261013T171500Z
+URL:https://citp.princeton.edu/events/2026/liat-krawczyk-ai-innovation-ai-d
+ eployment-building-institutions-ai-driven-economy
+LOCATION:Sherrerd Hall 306
+SUMMARY:Liat Krawczyk - From AI Innovation to AI Deployment: Building the I
+ nstitutions for an AI-Driven Economy
+CLASS:PUBLIC
+DESCRIPTION:Artificial intelligence is advancing faster than the institutio
+ ns\, workforces\, and systems expected to absorb it. The challenge ahead i
+ s therefore not only one of technological innovation\, but of deployment: 
+ how do we translate rapidly evolving capabilities into broad-based economi
+ c opportunity\, institutional capacity\, and public benefit?This talk will
+  explore the New Jersey AI Hub as an emerging model for tackling that chal
+ lenge. A public-private initiative founded by Princeton University\, the S
+ tate of New Jersey\, Microsoft\, and CoreWeave\, the Hub brings together u
+ niversities\,
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260902T130101Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:5
+DTSTART:20261015T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261015T200000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:6
+DTSTART:20261029T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261029T200000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5151:delta:0
+DTSTART:20261103T171500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261103T181500Z
+URL:https://citp.princeton.edu/events/2026/shira-zilberstein-code-care-mora
+ lization-healthcare-machine-learning
+LOCATION:Sherrerd Hall 306
+SUMMARY:Shira Zilberstein - From Code to Care: The Moralization of Healthca
+ re Machine Learning
+CLASS:PUBLIC
+DESCRIPTION:Artificial intelligence is widely promoted as a promising solut
+ ion to healthcare challenges\, yet its clinical benefits still remain unce
+ rtain and its risks persistent. Drawing on extensive fieldwork with resear
+ chers developing machine-learning applications for healthcare\, this talk 
+ demonstrates how practitioners sustain AI’s legitimacy by framing their 
+ work as serving the common good. It is argued that “moralization”—th
+ e work of aligning technological projects with values such as equity\, car
+ e\, and wellbeing—generates consensus and momentum for technological sol
+ utions to social problems amid
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260908T183810Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5136:delta:0
+DTSTART:20261105T140000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261106T210000Z
+URL:https://citp.princeton.edu/events/2026/princeton-ai-science-evaluation-
+ workshop
+SUMMARY:Princeton AI in Science Evaluation Workshop
+CLASS:PUBLIC
+DESCRIPTION:At this historical juncture\, the methods of artificial intelli
+ gence (AI) are taking on ever more (and ever more foundational) roles in t
+ he routine course of science. AI-based tools are projected to transform ev
+ ery stage of the research pipeline\, from literature review and hypothesis
+  generation\, to the production of synthetic data and data analysis. Incre
+ asingly\, with the rise of generative AI\, AI tools are also put forward a
+ s means of arbitration over the scientific research process itself. Propos
+ ed functions for AI as scientific arbiter have included AI based peer revi
+ ew\, AI based grant
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260819T202936Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:7
+DTSTART:20261105T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261105T210000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5196:delta:0
+DTSTART:20261110T171500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261110T181500Z
+URL:https://citp.princeton.edu/events/2026/angel-hwang
+LOCATION:Sherrerd Hall 306
+SUMMARY:Angel Hwang
+CLASS:PUBLIC
+DESCRIPTION:Talk information: TBABio:Angel Hsing-Chi Hwang (she/her) is an 
+ assistant professor of communication and computer science at University of
+  Southern California and a human-AI interaction (HAII) researcher. Her res
+ earch explores the impact of artificial intelligence (AI) on social intera
+ ction in both professional and personal settings\, as well as its downstre
+ am influences on people’s mental health\, wellbeing\, and work practices
+ . Her work aims to inform the design of more responsible and human-centere
+ d AI systems for the future of work and social life. Prior to
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260902T133938Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:8
+DTSTART:20261112T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261112T210000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5146:delta:0
+DTSTART:20261117T171500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261117T181500Z
+URL:https://citp.princeton.edu/events/2026/eve-fleisig
+LOCATION:Sherrerd Hall 306
+SUMMARY:Eve Fleisig
+CLASS:PUBLIC
+DESCRIPTION:Talk information: TBABio:Eve Fleisig is a computer scientist wh
+ ose work combines natural language processing (NLP) and AI ethics. She dev
+ elops methods to ensure that language models benefit all users\, when thos
+ e users have diverse perspectives and varied needs. She holds a Ph.D. from
+  Berkeley EECS\, where she was advised by Dan Klein in the Berkeley NLP gr
+ oup\; previously\, she received a B.S.E. in computer science from Princeto
+ n University. Her research has been awarded an NSF Graduate Research Fello
+ wship\, Berkeley Chancellor’s Fellowship\, and Outstanding Paper
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260902T134007Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:9
+DTSTART:20261119T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261119T210000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5106:delta:0
+DTSTART:20261201T171500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261201T181500Z
+URL:https://citp.princeton.edu/events/2026/alia-elkattan
+LOCATION:Sherrerd Hall 306
+SUMMARY:Alia ElKattan
+CLASS:PUBLIC
+DESCRIPTION:Talk information: TBABio:Alia ElKattan is a researcher who exam
+ ines the sociopolitical implications of online platforms and emerging tech
+ nologies. She obtained her Ph.D. at NYU Politics\, where her research focu
+ sed on how the design of technology mediates the acquisition of political 
+ information\, and how to motivate and safeguard responsible\, healthy\, an
+ d critical engagement with emerging technologies such as large language mo
+ dels and conversational agents. She also has a creative technology practic
+ e which leverages play and interactive storytelling to both
+DTSTAMP:20260902T134405Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5261:delta:10
+DTSTART:20261203T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261203T210000Z
+URL:https://citp.princeton.edu/events/2026/bias-ai-reading-group-0
+LOCATION:Sherrerd Hall 008
+SUMMARY:Bias in AI Reading Group
+CLASS:PUBLIC
+DESCRIPTION:This reading group focuses on justice\, bias and fairness conce
+ rns in AI from a wide range of disciplinary perspectives—including CS\, 
+ law\, philosophy\, and STS. The group is open to anyone interested\, regar
+ dless of whether bias/fairness is your primary research focus. For an exam
+ ple of the kinds of topics we have discussed in the past\, check out our r
+ eading list from&nbsp\;
+CATEGORIES:Artificial Intelligence, Data Science & Society
+DTSTAMP:20260909T145802Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5266:delta:0
+DTSTART:20270126T171500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20270126T181500Z
+URL:https://citp.princeton.edu/events/2027/seyi-olojo
+LOCATION:Sherrerd Hall 306
+SUMMARY:Seyi Olojo
+CLASS:PUBLIC
+DESCRIPTION:Talk information: TBABio:Seyi Olojo is a critical information s
+ tudies scholar who studies epistemic&nbsp\;cultures in computing. Her work
+  situates natural language processing as a sociotechnical practice that me
+ diates hierarchies of power within a global political economy of AI. Olojo
+ ’s dissertation investigated the politics of digitizing and mechanizing 
+ African languages\, where African language communities hold visions for la
+ nguage revitalization and cultural preservation. Her research has been pub
+ lished in Information\, Communication &amp\; Society\; Frontiers of Psycho
+ logy\;
+DTSTAMP:20260909T195809Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4656:delta:0
+DTSTART:20270413T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20270413T171500Z
+URL:https://citp.princeton.edu/events/2027/andy-guess
+LOCATION:Sherrerd Hall 306
+SUMMARY:Andy Guess
+CLASS:PUBLIC
+DESCRIPTION:Talk information: TBA&nbsp\;Bio:Andy Guess is an associate prof
+ essor of politics and public affairs and the director of the survey resear
+ ch center at Princeton University. Via a combination of experimental and c
+ omputational methods\, he studies how people choose\, process\, spread\, a
+ nd respond to information about politics on the internet. His research has
+  investigated the extent to which online Americans’ news habits are pola
+ rized\, patterns in the consumption and spread of online misinformation\, 
+ and the effectiveness of efforts to counteract misperceptions
+DTSTAMP:20260902T134455Z
+END:VEVENT
+END:VCALENDAR

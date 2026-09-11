@@ -1,0 +1,243 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Chemical and Biological Engineering
+BEGIN:VEVENT
+UID:ps_events:5276:delta:0
+DTSTART:20260902T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260902T210000Z
+URL:https://cbe.princeton.edu/events/beyond-monomer-designing-sequence-patt
+ erns-composition-and-architecture-macromolecules
+LOCATION:E105 SEAS-BioE
+SUMMARY:Beyond the Monomer: Designing Sequence\, Patterns\, Composition\, a
+ nd Architecture in Macromolecules
+CLASS:PUBLIC
+DESCRIPTION:Polymers are essential to a wide range of technologies\, yet de
+ signing them with targeted structural and functional properties remains a 
+ grand challenge. Moreover\, the products and technology only exploit a fra
+ ction of the prospective design space availed by macromolecules. A major o
+ pportunity lies in applying machine learning to help navigate the vast com
+ binatorial design space—spanning sequence\, composition\, architecture\,
+  morphology\, processing\, and more—to discover new formulations or repl
+ ace existing ones with more sustainable alternatives. However\, this compl
+ exity\, combined with data
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260902T150258Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5281:delta:0
+DTSTART:20260909T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260909T210000Z
+URL:https://cbe.princeton.edu/events/structure-function-relationships-susta
+ inable-feedstock-upgrading-lessons-oxidation-chemistry
+LOCATION:F204 SEAS-CBE
+SUMMARY:Structure-function Relationships for Sustainable Feedstock Upgradin
+ g: Lessons in Oxidation Chemistry
+CLASS:PUBLIC
+DESCRIPTION:Structure-function relationships for heterogeneous catalysis pl
+ ay a key role in&nbsp\;the&nbsp\;development of atom-efficient catalysts\,
+  reducing the need for energy-intensive separations or catalyst regenerati
+ on protocols and enabling new routes to platform chemicals from abundant f
+ eedstocks. The Noh research group at Penn State uses multi-scale approache
+ s\, spanning from molecular-level detail to mechanistic assessment of cata
+ lysts\, and combining experiment and theory (density functional theory\, D
+ FT) to understand the nature and speciation of active sites\, their commun
+ ication with other
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260812T155504Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5446:delta:0
+DTSTART:20260915T143000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260915T160000Z
+URL:https://cbe.princeton.edu/events/molecular-mechanisms-underlying-conden
+ sed-phase-phenomena-insights-atomistic-simulations
+LOCATION:SEAS-CBE F212
+SUMMARY:Molecular Mechanisms Underlying Condensed-Phase Phenomena: Insights
+  from Atomistic Simulations
+CLASS:PUBLIC
+DESCRIPTION:The performance of modern materials often depends on achieving 
+ a precise balance among multiple\, sometimes competing\, properties. Desig
+ n and optimization of such materials require understanding how subtle vari
+ ations in molecular composition and organization change this balance. Howe
+ ver\, this relationship is often difficult to predict as macroscopic prope
+ rties originate from many interactions occurring at length and time scales
+  far smaller than those directly observed. Molecular simulations provide a
+  means to bridge this gap by relating molecular-level behavior to material
+  response. This
+CATEGORIES:Final Public Oral Examinations
+DTSTAMP:20260902T145903Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5286:delta:0
+DTSTART:20260916T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260916T210000Z
+URL:https://cbe.princeton.edu/events/network-phases-block-polymers
+LOCATION:F204 SEAS-CBE
+SUMMARY:Network Phases in Block Polymers
+CLASS:PUBLIC
+DESCRIPTION:This presentation will explore our recent computational researc
+ h self-assembled network phases in block copolymers\, which can serve as t
+ emplates for creating metallic metamaterials. In the first part of the pre
+ sentation\, I will describe routes to produce single-gyroid phases\, chira
+ l network with three-fold connectors. While single gyroid is metastable in
+  simple AB diblock copolymers\, blends of linear diblock polymers and neat
+  melts of nonlinear copolymer architectures expose stability windows for a
+ lternating gyroid and single gyroid\, respectively\, in experimentally acc
+ essible systems. The
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260812T160615Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5291:delta:0
+DTSTART:20260923T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260923T210000Z
+URL:https://cbe.princeton.edu/events/crystal-engineering-pharmaceutical-ind
+ ustry-opportunities-further-innovation
+LOCATION:F204 SEAS-CBE
+SUMMARY:Crystal Engineering in the Pharmaceutical Industry: Opportunities f
+ or Further Innovation
+CLASS:PUBLIC
+DESCRIPTION:Crystal engineering has been used within the pharmaceutical ind
+ ustry for multiple decades\, primarily applied to batch processes. Crystal
+  engineering is employed for the control of crystal attributes such as cry
+ stal form\, particle size\, particle morphology as well as impurity reject
+ ion. While applied across intermediate steps\, crystal engineering is ofte
+ n utilized for the isolation of the active pharmaceutical ingredient\, as 
+ these particle attributes can directly impact the bioavailability of the d
+ rug when used in solid oral dosage forms. Concurrent with the increased ut
+ ilization of particle
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260819T202224Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5296:delta:0
+DTSTART:20260930T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260930T210000Z
+URL:https://cbe.princeton.edu/events/flow-structure-and-motion-correlation-
+ nearly-jammed-suspensions
+LOCATION:F204 SEAS-CBE
+SUMMARY:Flow\, Structure\, and Motion Correlation in Nearly-jammed Suspensi
+ ons
+CLASS:PUBLIC
+DESCRIPTION:Some general introductory ideas about suspensions of particles 
+ in liquids as well as a set of new findings will be developed in this talk
+ . Suspensions are found in many forms and settings\, and the compositions 
+ and properties can vary widely.&nbsp\; However\, certain issues prevail: o
+ ne is the influence of the liquid through hydrodynamic interactions\, and 
+ a second is the importance of the solid fraction and interparticle forces 
+ in controlling the flow properties\, which we usually call the rheology of
+  the material. Suspensions include colloidal dispersions of nanoparticles 
+ as well as cases
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260812T163432Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5301:delta:0
+DTSTART:20261007T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261007T210000Z
+URL:https://cbe.princeton.edu/events/selective-ion-transport-hydration-limi
+ ted-sub-nm-pores-polymer-membranes
+LOCATION:F204 SEAS-CBE
+SUMMARY:Selective Ion Transport in Hydration-limited Sub-nm Pores of Polyme
+ r Membranes
+CLASS:PUBLIC
+DESCRIPTION:Ion transport under nanoscale confinement and in the presence o
+ f charge is poorly understood from a fundamental perspective. Under the co
+ nditions of dielectric saturation that arise in nanoscale pores\, the clas
+ sical ideas that guide our understanding of electrostatic interactions bre
+ ak down\, and new principles that account for the role of pore geometry an
+ d chemistry on water structure and ion interactions are needed. At the sam
+ e time\, our ability to develop such principles is hindered by the challen
+ ge of generating relevant well-defined geometries that enable experimental
+  studies over
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260812T164422Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5306:delta:0
+DTSTART:20261014T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261014T210000Z
+URL:https://cbe.princeton.edu/events/material-chemistry-approaches-design-e
+ lectrocatalyst-sustainability
+LOCATION:F204 SEAS-CBE
+SUMMARY:Material Chemistry Approaches to the Design of Electrocatalyst for 
+ Sustainability
+CLASS:PUBLIC
+DESCRIPTION:Meeting the growing demand for energy requires the development 
+ of innovative energy conversion and storage processes beyond conventional 
+ thermal technologies and electrocatalysis plays a central role in this tra
+ nsition. While electrocatalysis shares a number of common design principle
+ s with thermal catalysis\, they also differ greatly. Besides reactivity an
+ d selectivity\, durability and stability under electrochemical reaction co
+ nditions are required for an electrocatalyst. In addition\, electrochemica
+ l processes often occur at liquid-solid interface under potential\, postin
+ g new challenges in
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260812T165325Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5311:delta:0
+DTSTART:20261028T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261028T210000Z
+URL:https://cbe.princeton.edu/events/understanding-simulating-and-designing
+ -catalysts-machine-learning
+LOCATION:F204 SEAS-CBE
+SUMMARY:Understanding\, Simulating\, and Designing Catalysts with Machine L
+ earning
+CLASS:PUBLIC
+DESCRIPTION:Machine learning is transforming catalysis by enabling research
+ ers not only to predict catalyst behavior but also to extract scientific u
+ nderstanding\, model catalytic materials across previously inaccessible ti
+ me and length scales\, and increasingly accelerate scientific discovery. I
+ n this talk\, I will present recent advances spanning interpretable machin
+ e learning for uncovering the physical origins of chemisorption\, machine-
+ learning-driven simulations of catalyst dynamics and the design of catalyt
+ ic materials\, and AI agents for accelerating reaction mechanism discovery
+ . By integrating
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260812T173740Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:5316:delta:0
+DTSTART:20261202T210000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261202T220000Z
+URL:https://cbe.princeton.edu/events/decoding-repetitive-proteins-design-st
+ imuli-responsive-biopolymers
+LOCATION:F204 SEAS-CBE
+SUMMARY:Decoding Repetitive Proteins to Design Stimuli-Responsive Biopolyme
+ rs
+CLASS:PUBLIC
+DESCRIPTION:Evolution allows organisms to adapt to their environments\, yet
+  some molecular patterns stay constant through billions of years of evolut
+ ion. These patterns encode the secrets of biological materials\, such that
+  similar patterns often emerge in different materials with similar functio
+ ns. For example\, a family of elastin proteins form stretchable fibers\, w
+ hich allow the constant movement of human skin\, blood vessels\, and lungs
+ . We aim to decode the secrets of biological materials by investigating se
+ quence patterns in repetitive proteins\, towards establishing systematic p
+ rotein sequence
+CATEGORIES:Departmental Seminar
+DTSTAMP:20260812T175113Z
+END:VEVENT
+END:VCALENDAR

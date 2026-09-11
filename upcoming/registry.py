@@ -34,6 +34,8 @@ import yaml
 from . import locate, serialize
 from .errors import ConfigFatal
 from .model import PLATFORM_SITE_BUILDER
+from .patterns import Vocabulary, load_vocabulary
+from .rules import load_chain
 
 #: Source lifecycle. ``unavailable`` sources are never fetched and never published -- they
 #: exist so a gap is visible and reviewable instead of being forgotten.
@@ -44,7 +46,16 @@ VALID_STATUSES = frozenset({STATUS_LIVE, STATUS_UNAVAILABLE})
 #: What a feed's SUMMARY field carries. There is deliberately **no default**: every default
 #: is wrong for roughly half these feeds, and wrong *silently*, because the output still
 #: validates with the title and speaker transposed. The only fix is to refuse to have one.
-SUMMARY_ROLES = frozenset({"speaker", "title", "composite", "mixed"})
+#:
+#: ``rules`` means "it varies -- see summary.rules". It replaces an earlier `composite` and
+#: `mixed` pair that both meant the same thing and that I had already misapplied: citp was
+#: declared composite while its 24 events are 13 plain titles, 6 speaker-dash-title and 5
+#: bare names. A label that cannot be checked against data, and is wrong in its first two
+#: uses, is not documentation.
+SUMMARY_ROLES = frozenset({"speaker", "title", "rules"})
+
+#: The role whose mapping is declared rather than implied.
+ROLE_RULES = "rules"
 
 #: Environment overrides are a closed allowlist. Mapping decisions, selectors, and rules
 #: are repo config only -- putting the most failure-prone decision in the system into an
@@ -144,6 +155,10 @@ class SourceConfig:
     #: that re-runs enrichment when an abstract is posted to the event page *after* the
     #: feed settles -- a defect both predecessors have and neither documents.
     rebuild_after_hours: int = 24
+    #: Ordered mapping rules, for a source whose summary_role is `rules`. None otherwise.
+    summary_rules: Any = None
+    #: The shared pattern and predicate vocabulary the rules select from.
+    vocabulary: Any = None
     #: Fields whose commas and semicolons are re-escaped on output. Per field rather than
     #: one per-source boolean: ORFE's ingest wants an escaped speaker, and the same
     #: boolean in the predecessor also governs MAE's title, where it mangles
@@ -415,7 +430,7 @@ def _build_enrich(raw: Mapping[str, Any], slug: str) -> tuple[EnrichTarget, ...]
     return tuple(targets)
 
 
-def _build_source(slug: str, raw: Mapping[str, Any]) -> SourceConfig:
+def _build_source(slug: str, raw: Mapping[str, Any], vocabulary: Vocabulary) -> SourceConfig:
     if not _SLUG_RE.match(slug):
         raise ConfigFatal(f"source slug {slug!r} must be lowercase alphanumeric with hyphens")
 
@@ -438,6 +453,8 @@ def _build_source(slug: str, raw: Mapping[str, Any]) -> SourceConfig:
         )
     if status == STATUS_LIVE and not feed_url:
         raise ConfigFatal(f"{slug} is live but has no feed_url")
+
+    expectations = _build_expectations(raw, slug, status)
 
     location_rules = tuple(raw.get("location_rules") or ())
     if status == STATUS_LIVE and not location_rules:
@@ -471,6 +488,16 @@ def _build_source(slug: str, raw: Mapping[str, Any]) -> SourceConfig:
                 f"'- Sherrerd Hall' as the venue."
             )
 
+    summary_rules = None
+    if expectations.summary_role == ROLE_RULES:
+        summary_rules = load_chain(raw.get("summary") or {}, vocabulary, slug=slug)
+    elif raw.get("summary"):
+        raise ConfigFatal(
+            f"{slug} declares summary rules but its summary_role is "
+            f"{expectations.summary_role!r}, so they would never run. Either set the role "
+            f"to {ROLE_RULES!r} or remove the rules."
+        )
+
     escape_fields = tuple((raw.get("wire") or {}).get("escape") or ())
     if unknown_escape := set(escape_fields) - serialize.ESCAPABLE_FIELDS:
         raise ConfigFatal(
@@ -485,7 +512,7 @@ def _build_source(slug: str, raw: Mapping[str, Any]) -> SourceConfig:
         status=status,
         platform=str(raw.get("platform", PLATFORM_SITE_BUILDER)),
         timezone=str(raw.get("timezone", "America/New_York")),
-        expectations=_build_expectations(raw, slug, status),
+        expectations=expectations,
         feed_url=feed_url,
         host=host,
         cadence=str(raw.get("cadence", "1h")),
@@ -496,6 +523,8 @@ def _build_source(slug: str, raw: Mapping[str, Any]) -> SourceConfig:
         reason=reason,
         rebuild_after_hours=int(raw.get("rebuild_after_hours", 24)),
         escape_fields=escape_fields,
+        summary_rules=summary_rules,
+        vocabulary=vocabulary,
         title_template=str((raw.get("fallback") or {}).get("title_template", "")),
         fallback_include_speaker=bool((raw.get("fallback") or {}).get("include_speaker", True)),
         raw=raw,
@@ -506,6 +535,7 @@ def load_registry(
     path: str | os.PathLike[str] = "config/sources.yaml",
     *,
     env: Mapping[str, str] | None = None,
+    patterns: str | os.PathLike[str] = "config/patterns.yaml",
 ) -> Registry:
     """Load, layer, resolve and validate every source.
 
@@ -514,6 +544,7 @@ def load_registry(
     the rest without a word, so a knob set in the config file silently does nothing.
     """
     env = os.environ if env is None else env
+    vocabulary = load_vocabulary(patterns)
     config_path = Path(path)
     if not config_path.is_file():
         raise ConfigFatal(f"no source registry at {config_path}")
@@ -548,7 +579,7 @@ def load_registry(
 
         merged = _merge(defaults, entry)
         merged = _merge(merged, _env_overrides(str(slug), env))
-        source = _build_source(str(slug), merged)
+        source = _build_source(str(slug), merged, vocabulary)
 
         # Resolve secret headers only for sources that actually scrape. The bypass
         # credential is needed for event *pages*, not for the feed -- measured: every ICS

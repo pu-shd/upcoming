@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Robotics at Princeton
+BEGIN:VEVENT
+UID:ps_events:236:delta:0
+DTSTART;VALUE=DATE:20261003
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20261004
+URL:https://robotics.princeton.edu/events/2026/northeast-robotics-colloquiu
+ m-nerc
+LOCATION:Commons
+SUMMARY:Northeast Robotics Colloquium (NERC)
+CLASS:PUBLIC
+DESCRIPTION:NERC 2026 will provide a vibrant forum for researchers\, studen
+ ts\, and industry professionals in the field of robotics. The colloquium w
+ ill feature distinguished keynotes\, rising star lightning talks\, engagin
+ g poster sessions\, valuable networking opportunities\, and technical demo
+ nstrations.&nbsp\;This event aims to foster collaboration and showcase cut
+ ting-edge research among the leading robotics research institutions in the
+  Northeast. It offers an exceptional platform for students and researchers
+  to present their latest work and engage with the broader robotics
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+DTSTAMP:20260729T142843Z
+END:VEVENT
+END:VCALENDAR

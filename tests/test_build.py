@@ -29,16 +29,32 @@ def feed_path(slug: str) -> Path:
 
 
 @pytest.mark.parametrize("slug", ["citp", "quantum", "materials", "ai"])
-def test_an_unimplemented_summary_role_refuses_to_build(slug: str, registry) -> None:
-    """`composite` and `mixed` need the rule engine, so they fail loudly.
+def test_the_declared_rule_sources_build(slug: str, registry) -> None:
+    """The four that refused before Phase 3.
+
+    Each declares an ordered rule chain because its SUMMARY packs several fields into one
+    string, or means different things on different events of the same feed.
+    """
+    load_pronunciation()
+    result = build_from_file(feed_path(slug), registry.by_slug(slug))
+    assert result.status == "ok", result.diagnostics
+    assert result.counts["events"] > 0
+
+
+def test_an_unimplemented_summary_role_still_refuses(registry) -> None:
+    """The refusal that made Phase 2 honest is still in place for a role nobody built.
 
     Falling back to a plain title mapping would produce schema-valid output with the
     speaker buried inside the title -- a source that fails to build is a problem somebody
     fixes, and a source that builds wrongly is a problem nobody notices.
     """
-    result = build_from_file(feed_path("orfe"), registry.by_slug(slug))
+    from dataclasses import replace
+
+    source = registry.by_slug("mae")
+    bogus = replace(source, expectations=replace(source.expectations, summary_role="someday"))
+    result = build_from_file(feed_path("mae"), bogus)
     assert result.status == "failed"
-    assert "rule engine" in result.diagnostics[0]
+    assert "not implemented" in result.diagnostics[0]
 
 
 def test_a_platform_mismatch_refuses_to_build(registry) -> None:
@@ -154,15 +170,15 @@ def test_build_exits_distinctly_when_a_source_fails(
             REGISTRY,
             "build",
             "--source",
-            "citp",
+            "mae",
             "--feed",
-            str(feed_path("orfe")),
+            str(tmp_path / "absent.ics"),
             "--out",
             str(tmp_path / "out.json"),
         ]
     )
     assert code == EXIT_SOURCE_FAILED
-    assert "rule engine" in capsys.readouterr().err
+    assert "cannot read" in capsys.readouterr().err
 
 
 def test_build_refuses_a_source_declared_unavailable(
@@ -218,3 +234,48 @@ def test_the_written_feed_ends_in_a_newline(
         ]
     )
     assert out.read_text(encoding="utf-8").endswith("]\n")
+
+
+# --------------------------------------------------------------------------------------
+# Every live source
+# --------------------------------------------------------------------------------------
+
+
+def test_every_live_source_builds(registry) -> None:
+    """All twelve, offline from committed fixtures.
+
+    The four that declare rule chains were refusing to build before Phase 3; the other
+    eight use the two direct roles. Nothing here branches on a source slug -- the
+    difference is entirely `config/sources.yaml`.
+    """
+    load_pronunciation()
+    built = {}
+    for source in registry.live:
+        feed = FIXTURES / "feeds" / source.slug / "feed.ics"
+        assert feed.is_file(), f"{source.slug} is live but has no committed fixture"
+        result = build_from_file(feed, source)
+        assert result.status == "ok", f"{source.slug}: {result.diagnostics}"
+        built[source.slug] = result.counts["events"]
+
+    assert len(built) == 12, f"expected 12 live sources, built {sorted(built)}"
+    assert sum(built.values()) >= 110
+
+
+def test_a_legitimately_empty_feed_builds_rather_than_failing(registry) -> None:
+    """kellercenter serves a well-formed calendar with no events.
+
+    Empty and broken produce identical payloads, so only the source's declared
+    `allow_empty` can tell them apart -- and a count floor it could never satisfy would
+    leave it permanently red, which teaches everyone to ignore the alerts.
+    """
+    source = registry.by_slug("kellercenter")
+    assert source.expectations.allow_empty is True
+
+    result = build_from_file(FIXTURES / "feeds" / "kellercenter" / "feed.ics", source)
+    assert result.status == "ok"
+    assert result.counts["events"] == 0
+
+
+def test_a_non_site_builder_feed_is_not_forced_through_the_site_builder_check(registry) -> None:
+    """kellercenter is `-//Drupal iCal API//EN`, and says so in its config."""
+    assert registry.by_slug("kellercenter").platform == "drupal-ical-api"

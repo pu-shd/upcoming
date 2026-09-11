@@ -51,6 +51,12 @@ defaults:
   # and `whole` puts an unsplittable venue in `name` entire.
   location_rules: [sentinel, detail_dash_name, comma_room, parenthetical, slash_room, unambiguous_room, whole]
 
+  # How a title is synthesized when the feed carries none. Harmonized here so the shape is
+  # consistent across departments; a source needing different wording overrides it.
+  # {a_an} picks the article by sound -- "an S. S. Wilks seminar", "a university seminar".
+  fallback:
+    title_template: "{a_an} {series} Talk by"
+
   expectations:
     min_events: 1
     allow_empty: false
@@ -77,11 +83,9 @@ sources:
     # boolean, two incompatible right answers.
     wire:
       escape: [speaker, speakers, content]
-    # No ORFE event carries a title: its SUMMARY is the speaker. Every one of the 23 is
-    # synthesized, and published with titleSource/titleIsPlaceholder so a consumer can
-    # tell an invented title from one a department wrote.
-    fallback:
-      title_template: "{a_an} {series} Talk by"
+    # No ORFE event carries a title: its SUMMARY is the speaker, so every event is
+    # synthesized from the inherited template and published with
+    # titleSource/titleIsPlaceholder so a consumer can tell.
     enrich:
       - field: title
         selectors: ["div.event-subtitle"]
@@ -103,10 +107,29 @@ sources:
     rebuild_after_hours: 6
     # Composite: "Arvind Narayanan - AI Agents and the Augmentation Agenda".
     location_rules: [sentinel, unambiguous_room, whole]
+    # 6 events are "speaker - title", 5 are a bare speaker name, 13 are a plain title.
+    # The bare-name rule is the one judgement call: "Andy Guess" and "Bias in AI Reading
+    # Group" are both title-case word sequences, separated only by the not_a_person
+    # vocabulary in patterns.yaml.
+    summary:
+      on_no_match: fail
+      rules:
+        - id: speaker-dash-title
+          when: { matches: person_dash_title }
+          then:
+            capture: { speakers: person, title: title }
+        - id: bare-person-name
+          when: { predicate: person_name_shape }
+          then:
+            assign: { speakers: summary }
+            defer: [title]
+        - id: title
+          when: { always: true }
+          then: { assign: { title: summary } }
     expectations:
-      summary_role: composite
+      summary_role: rules
       min_events: 5
-      max_placeholder_title_rate: 0.3
+      max_placeholder_title_rate: 0.5
 
   - slug: quantum
     label: Princeton Quantum Initiative
@@ -118,8 +141,46 @@ sources:
     # unset. That is normal here, so the placeholder band is wide on purpose; what should
     # alert is a change in the rate, not the rate itself.
     location_rules: [sentinel, unambiguous_room, whole]
+    # SUMMARY packs series, title, speaker and affiliation into one string, in three
+    # shapes. Order matters: the quoted-title pattern must precede the unquoted one, or
+    # the unquoted pattern matches a quoted string and keeps the quote marks in the title.
+    #
+    # A captured "TBD" title is absence, not a title -- provenance.is_missing treats it so,
+    # and the fallback chain synthesizes one and flags it. 14 of 18 events are in that
+    # state, which is why the placeholder band below is wide.
+    summary:
+      on_no_match: fail
+      rules:
+        - id: series-quoted-title-dash-person
+          when: { matches: series_quoted_title_dash_person_paren }
+          then:
+            capture:
+              series_extra: series
+              title: title
+              speakers: person
+              affiliation: paren
+        - id: series-title-dash-person
+          when: { matches: series_title_dash_person_paren }
+          then:
+            capture:
+              series_extra: series
+              title: title
+              speakers: person
+              affiliation: paren
+        - id: series-title-comma-person
+          when: { matches: series_title_comma_person_paren }
+          then:
+            capture:
+              series_extra: series
+              title: title
+              speakers: person
+              affiliation: paren
+        # "Princeton Quantum Technology Conference 2026" -- no colon, so a plain title.
+        - id: title
+          when: { always: true }
+          then: { assign: { title: summary } }
     expectations:
-      summary_role: composite
+      summary_role: rules
       max_placeholder_title_rate: 0.95
 
   - slug: materials
@@ -129,9 +190,27 @@ sources:
     # Also carries "Briger Hall (C112 + Atrium C102)", hence the parenthetical rule, and
     # two events with no LOCATION property at all.
     location_rules: [sentinel, parenthetical, unambiguous_room, whole]
+    # 12 of 16 are "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts, University of Texas
+    # at Austin" -- the series and the speaker, with no title anywhere in the feed. The
+    # other 4 are plain titles for symposia.
+    summary:
+      on_no_match: fail
+      rules:
+        - id: series-person-affiliation
+          when: { matches: series_person_comma_affiliation }
+          then:
+            capture:
+              series_extra: series
+              speakers: person
+              affiliation: paren
+            defer: [title]
+        - id: title
+          when: { always: true }
+          then: { assign: { title: summary } }
     expectations:
-      summary_role: composite
+      summary_role: rules
       max_location_declined_rate: 0.4
+      max_placeholder_title_rate: 0.85
 
   - slug: ece
     label: Electrical and Computer Engineering
@@ -185,9 +264,33 @@ sources:
     # Also carries all three location conventions: "Bowen Hall 222",
     # "Aaron Burr Hall\, Room 216", "101 Sherrerd Hall".
     location_rules: [sentinel, comma_room, unambiguous_room, whole]
+    # Three meanings in one feed, so the mapping is declared rather than implied.
+    # The listing rule comes first: "ORFE Talks & Seminars Flyers Fall 2026 Colloquium"
+    # names a listing page, not a talk, and would otherwise be published as a title.
+    summary:
+      on_no_match: fail
+      rules:
+        # "ORFE Talks & Seminars Flyers Fall 2026 Colloquium" names a listing page rather
+        # than one talk. It is still what the department published as this event's name, so
+        # it becomes the title -- deferring instead yields "A Talk", which is worse than
+        # the publisher's own words. The tag lets a consumer filter these out.
+        - id: series-listing
+          when: { matches: series_listing }
+          then:
+            capture: { title: listing }
+            tag: [listing]
+            defer: [speakers]
+        - id: bare-person-name
+          when: { predicate: person_name_shape }
+          then:
+            assign: { speakers: summary }
+            defer: [title]
+        - id: title
+          when: { always: true }
+          then: { assign: { title: summary } }
     expectations:
-      summary_role: mixed
-      max_placeholder_title_rate: 0.6
+      summary_role: rules
+      max_placeholder_title_rate: 0.9
 
   - slug: bioengineering
     label: Omenn-Darling Bioengineering Institute

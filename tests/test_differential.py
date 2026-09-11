@@ -258,7 +258,11 @@ def test_mae_tbd_title_is_synthesized_rather_than_published(mae) -> None:
 
     record = mine[guid]
     assert record["title"] == "An MAE Departmental Seminars Talk"
-    assert record["titleSource"] == "fallback-series"
+    # `fallback-template` rather than `fallback-series`: a default title template now
+    # lives in `defaults:`, so the template branch produces this rather than the
+    # series-only last resort. The text is unchanged and the honesty is the same -- the
+    # provenance is simply more accurate about which branch ran.
+    assert record["titleSource"] == "fallback-template"
     assert record["titleIsPlaceholder"] is True
 
 

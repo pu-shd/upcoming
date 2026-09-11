@@ -1,0 +1,331 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Princeton Materials Institute
+BEGIN:VEVENT
+UID:ps_events:4146:delta:0
+DTSTART:20260820T120000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260821T173000Z
+URL:https://materials.princeton.edu/events/2026/princeton-symposium-advance
+ s-optics-and-ultrafast-science
+LOCATION:Briger Hall (C112 + Atrium C102)
+SUMMARY:Princeton Symposium on Advances in Optics and Ultrafast Science
+CLASS:PUBLIC
+DESCRIPTION:We are pleased to host the inaugural Princeton Symposium on Adv
+ ances in Optics and Ultrafast Science\, sponsored by the SEAS Cluster of E
+ xcellence on Advanced Optical Metrology and Ultrafast Dynamics. The sympos
+ ium will bring together leading researchers from Princeton and institution
+ s around the world to discuss recent advances across a broad range of topi
+ cs\, including ultrafast science\, spectroscopy\, time-resolved X-ray and 
+ electron scattering\, and quantum materials. The two-day program will feat
+ ure keynote and invited talks\, a poster session\, and opportunities for
+DTSTAMP:20260819T192550Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4076:delta:0
+DTSTART:20260902T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260902T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-sean-roberts-university-texas-austin
+LOCATION:Bowen 222
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts\, University of Tex
+ as at Austin
+CLASS:PUBLIC
+DESCRIPTION:Reshaping Light via Photon Up- and Down-ConversionAbstract: Due
+  to its ability to transmit energy and information through space\, light p
+ lays a central role in nearly all aspects of human society. However\, ligh
+ t has a peculiar property as its energy content is transmitted by photons\
+ , discrete particles whose energy must be matched to their intended applic
+ ation. Materials that reshape light\, by combining the energy of multiple 
+ low-energy photons or by using single high-energy photons to produce multi
+ ple lower energy ones\, can enable new light-driven
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260804T154515Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4081:delta:0
+DTSTART:20260909T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260909T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-rafael-gomez-bombarelli-massachusetts-institute
+LOCATION:Bowen 222
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Rafael Gomez-Bombarelli\, Massac
+ husetts Institute of Technology
+CLASS:PUBLIC
+DESCRIPTION:The Bittersweet Lesson of Scaling in AI for MaterialsAbstract: 
+ AI has the potential to bring much-needed acceleration to the development 
+ of chemicals and materials for energy and sustainability\, just like it ha
+ s delivered intelligence gains in other fields. The path to success goes t
+ hrough scaling\, perhaps exclusively through scaling. Rich Sutton's 'bitte
+ r lesson' states that "general methods that leverage computation are ultim
+ ately the most effective" in AI. The corollaries are bittersweet in chemis
+ try and materials.&nbsp\;The lesson permeates
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260813T153251Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4086:delta:0
+DTSTART:20260916T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260916T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-nuh-gedik-massachusetts-institute-technology
+LOCATION:Bowen 222
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Nuh Gedik\, Massachusetts Instit
+ ute of Technology
+CLASS:PUBLIC
+DESCRIPTION:Capturing Light Induced Phase Transitions with Femtosecond Movi
+ esAbstract: Materials typically undergo phase changes as a function of ext
+ ernal parameters such as temperature\, pressure or magnetic field. Light c
+ an also be used to both switch between equilibrium phases and to create ne
+ w photo-induced states that may have no equilibrium counterparts. Even tho
+ ugh there are fascinating examples of photoinduced phase transitions\, the
+  detailed microscopic mechanisms and overarching principles that govern th
+ ese are still not known. In this talk\, I will
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260811T142115Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4091:delta:0
+DTSTART:20260923T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260923T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-ryan-lively-georgia-institute-technology
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Ryan Lively\, Georgia Institute 
+ of Technology
+CLASS:PUBLIC
+DESCRIPTION:Organic Solvent Reverse Osmosis Membranes for Complex Mixture S
+ eparations&nbsp\;Abstract: In this talk\, the potential for membrane mater
+ ials to reduce energy and carbon requirements for the separation of hydroc
+ arbon feedstocks and products will be discussed. We developed a series of 
+ polymer materials that feature rigid polymer backbones with engineered mob
+ ility and functionality. We imbue the polymers with resistance to dilation
+  induced by hydrocarbon immersion without the loss of solution-based membr
+ ane fabrication
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260810T200712Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4101:delta:0
+DTSTART:20260930T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260930T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-amrit-venkatesh-university-virginia
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Amrit Venkatesh\, University of 
+ Virginia
+CLASS:PUBLIC
+DESCRIPTION:Atomic-Level Characterization of Materials using Advanced Solid
+ -State NMRAbstract: Establishing atomic-level structure-property relations
+ hips is essential for understanding and designing functional materials. So
+ lid-state NMR spectroscopy is uniquely suited to probe local structure and
+  dynamics in complex materials\, but its application is often constrained 
+ by inherently low sensitivity. The Venkatesh group develops and applies dy
+ namic nuclear polarization (DNP) and fast magic-angle spinning (MAS) metho
+ ds that dramatically enhance the sensitivity and
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260831T192054Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4096:delta:0
+DTSTART:20261007T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261007T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-yuriy-roman-massachusetts-institute-technology
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Yuriy Roman\, Massachusetts Inst
+ itute of Technology
+CLASS:PUBLIC
+DESCRIPTION:Reimagining Thermochemical Catalysis: Promoting Reactions with 
+ Electric FieldsAbstract: Catalysis has long relied on conventional handles
+  such as temperature\, pressure\, and concentration to accelerate chemical
+  reactions. Across biology and electrochemistry\, electric fields provide 
+ an additional parameter to control rates. Enzymes exploit strong\, oriente
+ d fields within their active sites to stabilize intermediates and accelera
+ te turnover\, while in electrochemistry\, interfacial polarization dictate
+ s electron and proton transfer rates. In heterogeneous
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260909T200031Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4106:delta:0
+DTSTART:20261014T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261014T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-alan-west-columbia-university
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Alan West\, Columbia University
+CLASS:PUBLIC
+DESCRIPTION:Critical Materials Processing via Closed-Loop Redox-Mediated Le
+ achingAbstract: Electrification can transform the way chemical reagents ar
+ e produced\, regenerated\, and integrated into industrial processes. In hy
+ drometallurgy\, electrochemical regeneration of redox carriers enables clo
+ sed-loop redox-mediated leaching (CL-RML)\, changing the relationship betw
+ een reagent selection\, process performance\, and sustainability. Rather t
+ han treating oxidants or reductants as consumable reagents\, CL-RML allows
+  redox carriers to be selected primarily for their
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260810T171930Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4181:delta:0
+DTSTART:20261019T120000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261021T180000Z
+URL:https://materials.princeton.edu/events/2026/4th-frontiers-electron-and-
+ scanning-probe-microscopy-physical-and-life-sciences
+LOCATION:Maeder Hall
+SUMMARY:4th Frontiers in Electron and Scanning Probe Microscopy for the Phy
+ sical and Life Sciences
+CLASS:PUBLIC
+DESCRIPTION:Advances in electron microscopy instrumentation and methods con
+ tinue to drive progress in the physical and life sciences. The 
+DTSTAMP:20260819T180740Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4166:delta:0
+DTSTART:20261028T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261028T170500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-joseph-fedeyko-johnson-matthey
+LOCATION:Bowen 222
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Joseph Fedeyko\, Johnson Matthey
+CLASS:PUBLIC
+DESCRIPTION:Creating Abundance through CatalysisAbstract: Humanity is at a 
+ crossroads trying to drive future advancements in science and quality of l
+ ife with significant challenges related to global climate change\, economi
+ c insecurity\, and natural resource constraints. The evolution of the ener
+ gy landscape is one challenge that must be addressed to ensure that we con
+ tinue to thrive. The centralized model to power generation is starting to 
+ fray\; and whether that’s related to supporting the rising need for data
+  storage\, electrification for mobility or the
+DTSTAMP:20260811T181501Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4116:delta:0
+DTSTART:20261104T170500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261104T180500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-dimitris-lagoudas-texas-am-university
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Dimitris Lagoudas\, Texas A&M Un
+ iversity
+CLASS:PUBLIC
+DESCRIPTION:Abstract and bio TBA&nbsp\;
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260804T154936Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4111:delta:0
+DTSTART:20261111T170500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261111T180500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-makhsud-saidaminov-university-victoria
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Makhsud Saidaminov\, University 
+ of Victoria
+CLASS:PUBLIC
+DESCRIPTION:Beyond Conventional Silicon: Perovskite Solar Cells and X-ray D
+ etectorsAbstract: Silicon underpins modern electronics\, yet its technolog
+ ical dominance and geographically concentrated supply chains present growi
+ ng concerns. In this talk\, I will introduce halide perovskites\, a class 
+ of high-performance semiconductors that can be synthesized and processed a
+ t relatively simple conditions. I will describe our progress in scalable p
+ erovskite solar cells fabricated in ambient air using green solvents\, fol
+ lowed by the automated growth of single crystals for
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260804T153426Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4126:delta:0
+DTSTART:20261118T170500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261118T180500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-mahesh-mahanthappa-university-minnesota
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Mahesh Mahanthappa\, University 
+ of Minnesota
+CLASS:PUBLIC
+DESCRIPTION:Abstract and bio TBA&nbsp\;
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260810T183625Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4121:delta:0
+DTSTART:20261202T170500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261202T180500Z
+URL:https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall
+ -2026-piran-kidambi-university-florida
+LOCATION:Bowen Hall
+SUMMARY:PMI/PCCM SEMINAR SERIES Fall 2026: Piran Kidambi\, University of Fl
+ orida
+CLASS:PUBLIC
+DESCRIPTION:Atomically Thin Membranes: Opportunities and Challenges&nbsp\;A
+ bstract: Two-dimensional (2D) nanomaterials offer fundamentally new opport
+ unities to study mass transport at sub-atomic and molecular length scales.
+  Their atomic thickness enables transport phenomena such as quantum tunnel
+ ing\, while their ability to host atomically precise defects that function
+  as nanopores enables highly size-selective ionic and molecular sieving. T
+ ogether\, these unique characteristics open new frontiers in membrane scie
+ nce and molecular separations.In this talk\, I
+CATEGORIES:PMI/PCCM Seminar Series
+DTSTAMP:20260903T193228Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4151:delta:0
+DTSTART:20261209T130000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261211T200000Z
+URL:https://materials.princeton.edu/events/2026/hidden-order-disorder-expan
+ ding-landscape-hyperuniformity
+SUMMARY:Hidden Order in Disorder: The Expanding Landscape of Hyperuniformit
+ y
+CLASS:PUBLIC
+DTSTAMP:20260724T132056Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4056:delta:0
+DTSTART:20270331T123000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20270401T180000Z
+URL:https://materials.princeton.edu/events/2027/princeton-materials-institu
+ te-symposium
+SUMMARY:Princeton Materials Institute Symposium
+CLASS:PUBLIC
+DESCRIPTION:Princeton Materials Institute&nbsp\;-- the interdisciplinary ce
+ nter for materials science and engineering research\, education\,&nbsp\;an
+ d outreach at Princeton University -- invites you to attend our upcoming a
+ nnual research symposium.Additional information will be posted as it becom
+ es available.
+DTSTAMP:20260603T201009Z
+END:VEVENT
+END:VCALENDAR

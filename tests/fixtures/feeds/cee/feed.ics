@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Civil and Environmental Engineering
+BEGIN:VEVENT
+UID:ps_events:2411:delta:0
+DTSTART:20261002T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261002T171500Z
+URL:https://cee.princeton.edu/events/peculiarities-heat-driven-and-light-dr
+ iven-evaporation
+LOCATION:Maeder Hall Auditorium
+SUMMARY:Peculiarities of Heat-Driven and Light-Driven Evaporation
+CLASS:PUBLIC
+DESCRIPTION:Joint CEE/MAE Distinguished SeminarAbstract:This talk will disc
+ uss two peculiar effects we recently discovered: the photomolecular effect
+  and the evaporative refrigeration effect. To explain super-thermal solar-
+ interfacial evaporation from hydrogels and other porous materials\, we hyp
+ othesize that photons can directly cleave off water clusters at the liquid
+ -vapor interface in a way similar to the photoelectric effect\, which we c
+ all the photomolecular effect. I will discuss experimental evidence we hav
+ e so far. This photomolecular
+CATEGORIES:Civil and Environmental Engineering,Special Seminar
+DTSTAMP:20260910T191903Z
+END:VEVENT
+END:VCALENDAR

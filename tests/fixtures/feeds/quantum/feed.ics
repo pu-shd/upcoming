@@ -1,0 +1,326 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Princeton Quantum Initiative
+BEGIN:VEVENT
+UID:ps_events:3941:delta:0
+DTSTART:20260911T160000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260911T180000Z
+URL:https://quantum.princeton.edu/events/quantum-group-meeting-local-autono
+ mous-inference-machines-quantum-error-correcting-codes-sid
+LOCATION:EQuad J401
+SUMMARY:Quantum Group Meeting: "Local Autonomous Inference Machines For Qua
+ ntum Error Correcting Codes" - Sid Midha (Gopalakrishnan Group)
+CLASS:PUBLIC
+DESCRIPTION:Title: Local autonomous inference machines for quantum error co
+ rrecting codesAbstract: Quantum error correction is the central ingredient
+  in making large-scale quantum computers work. Over the last three decades
+ \, we have found increasingly powerful ways of redundantly encoding quantu
+ m information so that it can survive physical errors. Yet\, a central chal
+ lenge remains decoding:&nbsp\;the task of inferring which errors have occu
+ rred from syndrome measurements\, and determining how they should be corre
+ cted. As quantum processors grow in size\,
+CATEGORIES:Quantum Group Meeting
+DTSTAMP:20260904T134232Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3796:delta:0
+DTSTART:20260914T161000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260914T171000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-aston
+ ishing-quantum-universe-two-dimensions-fundamental-physics
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: An Astonishing Quantum Universe in Tw
+ o Dimensions: From Fundamental Physics to (Possibly) Quantum Computation\,
+  Jainendra Jain (Penn State University)
+CLASS:PUBLIC
+DESCRIPTION:Title: An Astonishing Quantum Universe in Two Dimensions: From 
+ Fundamental Physics to (Possibly) Quantum Computation&nbsp\;Abstract: When
+  electrons are confined to two dimensions and subjected to a magnetic fiel
+ d\, they enter an astonishing quantum world that defies our everyday intui
+ tion.&nbsp\;&nbsp\;Here\, electrons capture quanta of magnetic field and t
+ ransform into exotic particles known as&nbsp\;composite fermions\, which r
+ eveal a remarkably rich landscape of strongly-correlated quantum states an
+ d phenomena\, including the fractional quantum Hall
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260907T204959Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3831:delta:0
+DTSTART:20260921T161000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260921T171000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-f
+ rancesca-ferlaino-university-innsbruck
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Francesca Ferlaino (University 
+ of Innsbruck)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260618T172636Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3946:delta:0
+DTSTART:20260925T160000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260925T180000Z
+URL:https://quantum.princeton.edu/events/quantum-group-meeting-quantum-sign
+ atures-molecular-polaritonics-and-other-emerging-photonic
+LOCATION:EQuad J401
+SUMMARY:Quantum Group Meeting: Quantum signatures in molecular polaritonics
+  and other emerging photonic platforms. - Arghadip Koner (Scholes Group)
+CLASS:PUBLIC
+DESCRIPTION:Title: Quantum signatures in molecular polaritonics and other e
+ merging photonic platforms.&nbsp\;Abstract: Molecular polaritons emerge wh
+ en ensembles of molecules strongly couple to confined electromagnetic mode
+ s\, enabling repeated energy exchange between light and matter. Such inter
+ actions are expected to activate nonlinear optical processes\, yet many ex
+ perimental observations remain accurately described by classical optics. W
+ e address this paradox from a spectroscopic perspective. We derive a gener
+ al expression for the polaritonic linear response\,
+CATEGORIES:Quantum Group Meeting
+DTSTAMP:20260908T141017Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3776:delta:0
+DTSTART:20261005T161000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261005T171000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-r
+ ahul-nandkishore-university-colorado-boulder
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Rahul Nandkishore (University o
+ f Colorado\, Boulder)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260427T124636Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3951:delta:0
+DTSTART:20261009T160000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261009T180000Z
+URL:https://quantum.princeton.edu/events/quantum-group-meeting-tbd-chengyu-
+ wang-shayegan-group
+LOCATION:EQuad J401
+SUMMARY:Quantum Group Meeting: TBD - Chengyu Wang (Shayegan Group)
+CLASS:PUBLIC
+DESCRIPTION:Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQ
+ uad J401.
+CATEGORIES:Quantum Group Meeting
+DTSTAMP:20260830T185121Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3811:delta:0
+DTSTART:20261012T161000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261012T171000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-a
+ leksander-kubica-yale-university
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Aleksander Kubica (Yale Univers
+ ity)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260527T151605Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3741:delta:0
+DTSTART:20261022T123000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261023T190000Z
+URL:https://quantum.princeton.edu/pqtc2026
+LOCATION:Princeton University Commons
+SUMMARY:Princeton Quantum Technology Conference 2026
+CLASS:PUBLIC
+DESCRIPTION:The Princeton Quantum Technology Conference (PQTC) aims to brin
+ g together visionary speakers from disparate fields that are pushing the f
+ rontiers of quantum technology by seriously tackling challenges in quantum
+  hardware and materials\, system architecture and scaling\, and error corr
+ ection. The event structure will be designed to allow ample time for discu
+ ssion and interaction\, with the hope of catalyzing new ideas and collabor
+ ations.This event is supported by the Princeton Quantum Initiative.Event d
+ etails
+CATEGORIES:Other Seminars,Princeton Quantum Colloquium
+DTSTAMP:20260830T182139Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3956:delta:0
+DTSTART:20261023T160000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261023T180000Z
+URL:https://quantum.princeton.edu/events/quantum-group-meeting-tbd-nadine-b
+ radbury-subotnik-group
+LOCATION:EQuad J401
+SUMMARY:Quantum Group Meeting: TBD - Nadine Bradbury (Subotnik Group)
+CLASS:PUBLIC
+DESCRIPTION:Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQ
+ uad J401.
+CATEGORIES:Quantum Group Meeting
+DTSTAMP:20260830T185236Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3781:delta:0
+DTSTART:20261026T161000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261026T171000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-a
+ ram-harrow-mit
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Aram Harrow (MIT)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260427T124720Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3786:delta:0
+DTSTART:20261102T171000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261102T181000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-z
+ ohreh-davoudi-university-maryland
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Zohreh Davoudi (University of M
+ aryland)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260427T124804Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3961:delta:0
+DTSTART:20261106T170000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261106T190000Z
+URL:https://quantum.princeton.edu/events/quantum-group-meeting-tbd-laura-fu
+ tamura-bakr-group
+LOCATION:EQuad J401
+SUMMARY:Quantum Group Meeting: TBD - Laura Futamura (Bakr Group)
+CLASS:PUBLIC
+DESCRIPTION:Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQ
+ uad J401.
+CATEGORIES:Quantum Group Meeting
+DTSTAMP:20260830T185344Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3816:delta:0
+DTSTART:20261109T171000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261109T181000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-a
+ ndrew-potter-quantinuum
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Andrew Potter (Quantinuum)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260527T165827Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3791:delta:0
+DTSTART:20261116T171000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261116T181000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-j
+ ames-thompson-university-colorado-boulder
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, James Thompson (University of C
+ olorado\, Boulder)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260427T124840Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3966:delta:0
+DTSTART:20261120T170000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261120T190000Z
+URL:https://quantum.princeton.edu/events/quantum-group-meeting-tbd-faranak-
+ bahrami-de-leon-group
+LOCATION:EQuad J401
+SUMMARY:Quantum Group Meeting: TBD - Faranak Bahrami (De Leon Group)
+CLASS:PUBLIC
+DESCRIPTION:Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQ
+ uad J401.
+CATEGORIES:Quantum Group Meeting
+DTSTAMP:20260830T185439Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3821:delta:0
+DTSTART:20261123T171000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261123T181000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-x
+ ing-fan-harvard-university
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Xing Fan (Harvard University)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260603T163245Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3971:delta:0
+DTSTART:20261204T170000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261204T190000Z
+URL:https://quantum.princeton.edu/events/quantum-group-meeting-tbd-ray-su-y
+ azdani-group
+LOCATION:EQuad J401
+SUMMARY:Quantum Group Meeting: TBD - Ray Su (Yazdani Group)
+CLASS:PUBLIC
+DESCRIPTION:Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQ
+ uad J401.
+CATEGORIES:Quantum Group Meeting
+DTSTAMP:20260830T185539Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:3931:delta:0
+DTSTART:20261207T171000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261207T181000Z
+URL:https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-m
+ arko-loncar-harvard-university
+LOCATION:Bowen Hall
+SUMMARY:Princeton Quantum Colloquium: TBD\, Marko Loncar (Harvard Universit
+ y)
+CLASS:PUBLIC
+DESCRIPTION:Title: tbd&nbsp\;Abstract: tbdA light lunch will be served in t
+ he Bowen Atrium&nbsp\;at 11:45am.
+CATEGORIES:Princeton Quantum Colloquium
+DTSTAMP:20260716T125430Z
+END:VEVENT
+END:VCALENDAR
