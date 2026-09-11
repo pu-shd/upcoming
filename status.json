@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T19:41:23Z",
+  "generatedAt": "2026-09-11T20:03:01Z",
   "summary": {
     "ok": 16,
     "empty": 1,
@@ -12,7 +12,7 @@
       "path": "combos/all-no-fpo/events.json",
       "status": "ok",
       "events": 113,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "orfe",
         "citp",
@@ -35,7 +35,7 @@
       "path": "combos/all/events.json",
       "status": "ok",
       "events": 123,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "orfe",
         "citp",
@@ -58,7 +58,7 @@
       "path": "combos/engineering/events.json",
       "status": "ok",
       "events": 37,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "cbe",
         "cee",
@@ -80,7 +80,7 @@
       "path": "combos/seminars/events.json",
       "status": "ok",
       "events": 62,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "orfe",
         "citp",
@@ -103,7 +103,7 @@
       "path": "combos/sherrerd-hall/events.json",
       "status": "ok",
       "events": 44,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "orfe",
         "citp",
@@ -132,7 +132,7 @@
       "path": "feeds/ai/events.json",
       "status": "ok",
       "events": 7,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "ai"
       ]
@@ -141,7 +141,7 @@
       "path": "feeds/bioengineering/events.json",
       "status": "ok",
       "events": 4,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "bioengineering"
       ]
@@ -150,7 +150,7 @@
       "path": "feeds/cbe/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "cbe"
       ]
@@ -159,7 +159,7 @@
       "path": "feeds/cee/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "cee"
       ]
@@ -168,7 +168,7 @@
       "path": "feeds/citp/events.json",
       "status": "ok",
       "events": 25,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "citp"
       ]
@@ -195,7 +195,7 @@
       "path": "feeds/ece/events.json",
       "status": "ok",
       "events": 12,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "ece"
       ]
@@ -204,7 +204,7 @@
       "path": "feeds/kellercenter/events.json",
       "status": "empty",
       "events": 0,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "kellercenter"
       ]
@@ -213,7 +213,7 @@
       "path": "feeds/mae/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "mae"
       ]
@@ -222,7 +222,7 @@
       "path": "feeds/materials/events.json",
       "status": "ok",
       "events": 16,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "materials"
       ]
@@ -249,7 +249,7 @@
       "path": "feeds/orfe/events.json",
       "status": "ok",
       "events": 19,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "orfe"
       ],
@@ -261,7 +261,7 @@
       "path": "feeds/quantum/events.json",
       "status": "ok",
       "events": 18,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "quantum"
       ]
@@ -270,7 +270,7 @@
       "path": "feeds/robotics/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-11T19:41:23Z",
+      "lastSuccessAt": "2026-09-11T20:03:01Z",
       "sources": [
         "robotics"
       ]
