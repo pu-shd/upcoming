@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "ruff", "mypy", "types-requests", "types-PyYAML"]
+dev = ["pytest", "ruff", "mypy", "types-requests", "types-PyYAML", "types-jsonschema"]
 
 [project.scripts]
 upcoming = "upcoming.cli:main"

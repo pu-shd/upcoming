@@ -158,6 +158,9 @@ class Event:
     #: Categories exactly as the feed spelled them, so an unmapped vocabulary is visible
     #: rather than dropped.
     raw_categories: tuple[str, ...] = ()
+    #: Categories no canonical tag recognised. Published rather than counted only, so a
+    #: consumer can see what a department invented and a maintainer knows what to add.
+    unmapped_tags: tuple[str, ...] = ()
     #: Clean, unescaped, normalized text. Escaping is applied when writing.
     content: str = ""
 
@@ -269,6 +272,7 @@ WIRE_FIELDS: tuple[tuple[str, str], ...] = (
     ("series", "series"),
     ("tags", "tags"),
     ("rawCategories", "raw_categories"),
+    ("unmappedTags", "unmapped_tags"),
     ("location", "location"),
     ("urlRef", "url"),
     ("content", "content"),

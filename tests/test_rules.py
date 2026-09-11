@@ -112,7 +112,10 @@ def test_a_title_keeps_its_own_colon_and_parenthetical(registry) -> None:
     )
     assert event.speakers[0].name == "Jainendra Jain"
     assert event.speakers[0].affiliation == "Penn State University"
-    assert "Princeton Quantum Colloquium" in event.tags
+    # The series reaches `tags` canonicalized, not verbatim: tags are the vocabulary
+    # combo predicates match on, so they hold only canonical values.
+    assert "colloquium" in event.tags
+    assert event.summary_raw.startswith("Princeton Quantum Colloquium")
     assert event.title_is_placeholder is False
 
 
@@ -184,7 +187,10 @@ def test_materials_publishes_a_speaker_where_the_feed_names_no_title(registry) -
     event = next(e for e in built("materials", registry) if "Sean Roberts" in e.speaker)
     assert event.speakers[0].name == "Sean Roberts"
     assert event.speakers[0].affiliation == "University of Texas at Austin"
-    assert "PMI/PCCM SEMINAR SERIES Fall 2026" in event.tags
+    # "PMI/PCCM SEMINAR SERIES Fall 2026" canonicalizes to `seminar` -- the term
+    # suffix is dropped, so the alias keeps matching next year.
+    assert "seminar" in event.tags
+    assert "PMI/PCCM SEMINAR SERIES Fall 2026" in event.summary_raw
     assert event.title_is_placeholder
 
 

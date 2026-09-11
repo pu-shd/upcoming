@@ -221,6 +221,21 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         decode_entities(raw.location), source.location_rules
     )
 
+    # Canonical tags, so a combined feed's "exclude FPOs" means something across four
+    # upstream spellings.
+    #
+    # Everything goes through the same vocabulary: the feed's CATEGORIES, a tag a mapping
+    # rule added, and the series a rule read out of the SUMMARY. `tags` therefore contains
+    # *only* canonical values, which is what lets a combo predicate and the schema both
+    # rely on it. An unrecognised value is never published as a tag -- it stays in
+    # `raw_categories` or `summary_raw` and is reported as unmapped, so a department
+    # inventing a new series shows up as a number rather than as a one-off tag nobody
+    # can filter on.
+    candidates = (*raw.categories, *extra_tags)
+    canonical, unmapped = (
+        source.tags.normalize(candidates) if source.tags else ((), tuple(candidates))
+    )
+
     return Event(
         id=Event.make_id(source.slug, raw.uid),
         guid=raw.uid,
@@ -236,7 +251,8 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         location=location,
         speakers=speakers,
         series=_series(raw.categories),
-        tags=tuple(tags) + extra_tags,
+        tags=tuple(dict.fromkeys((*tags, *canonical))),
+        unmapped_tags=unmapped,
         raw_categories=tuple(raw.categories),
         content=decode_entities(raw.description),
         summary_raw=raw.summary,

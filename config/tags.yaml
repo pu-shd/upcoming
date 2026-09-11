@@ -1,0 +1,88 @@
+# Canonical tags, and the upstream spellings that map to them.
+#
+# Departments name the same thing differently. A final public oral examination is published
+# as "FPO" by orfe, "Final Public Oral Exam" by mae, "Final Public Oral Examinations" by
+# cbe and ece, and "Final Public Orals" by ece as well -- four spellings for one concept,
+# in one university. A combined feed that says "exclude FPOs" is meaningless without this
+# file, and the predecessor's own workflow shows why: it excludes the literal string "FPO",
+# which matches nothing at all in MAE's feed and so produces a "filtered" variant identical
+# to the unfiltered one.
+#
+# Matching is casefold plus whitespace collapse, then an EXACT alias lookup. No stemming,
+# no fuzzy matching: a tag that silently becomes a different tag is the same class of bug
+# as a transposed title, and it would be just as invisible.
+#
+# A category with no alias here is NOT dropped. It stays in `rawCategories` on the event and
+# is counted as unmapped in the build report, so a department inventing a new series shows
+# up as a number rather than vanishing.
+#
+# All spellings below were measured on the live feeds, 2026-09-11.
+
+tags:
+  fpo:
+    label: Final Public Oral Examination
+    aliases:
+      - FPO                              # orfe
+      - Final Public Oral Exam           # mae
+      - Final Public Oral Exams
+      - Final Public Oral Examination
+      - Final Public Oral Examinations   # cbe, ece
+      - Final Public Orals               # ece, alongside the line above on the same events
+      - Final Public Oral
+
+  seminar:
+    label: Seminar
+    aliases:
+      - Departmental Seminar             # cbe
+      - Departmental Seminars
+      - MAE Departmental Seminars        # mae
+      - Optimization Seminar             # orfe
+      - Stochastic Analysis Seminar      # orfe
+      - Special Seminar                  # cee
+      - Other Seminars                   # quantum
+      - Rising Stars Seminars            # bioengineering
+      - S. S. Wilks Memorial Seminar in Statistics   # orfe
+      - PMI/PCCM Seminar Series          # materials
+
+  colloquium:
+    label: Colloquium
+    aliases:
+      - Princeton Quantum Colloquium     # quantum
+      - ORFE Department Colloquia        # orfe
+      - BioE Colloquium                  # bioengineering
+      - Colloquium
+      - Colloquia
+
+  group-meeting:
+    label: Group meeting
+    aliases:
+      - Quantum Group Meeting            # quantum
+      - Group Meeting
+
+  ai:
+    label: Artificial intelligence
+    aliases:
+      - Artificial Intelligence          # citp
+      - Princeton AI                     # ai
+      - AI for Accelerating Invention    # ai
+
+  civil-environmental:
+    label: Civil and environmental engineering
+    aliases:
+      - Civil and Environmental Engineering   # cee
+
+  privacy-security:
+    label: Privacy and security
+    aliases:
+      - Privacy & Security               # citp
+
+  data-science:
+    label: Data science
+    aliases:
+      - Data Science & Society           # citp
+
+  # Assigned by a mapping rule rather than a CATEGORIES value: ai publishes listing pages
+  # as events, and this is what lets a consumer filter them out.
+  listing:
+    label: Listing page, not a single talk
+    aliases: []

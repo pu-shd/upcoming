@@ -14,9 +14,11 @@ a feed with no scraped titles or speakers. Both failures were schema-valid and s
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+import json
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
 import yaml
 
@@ -30,6 +32,7 @@ from .registry import SourceConfig
 from .scrape import ScrapeStats
 from .serialize import dump_feed, wire_format_for
 from .transform import transform
+from .validate import GateResult, failures, run_gates, schema_errors, warnings
 
 DEFAULT_PRONUNCIATION = "config/pronunciation.yaml"
 
@@ -42,7 +45,11 @@ class BuildResult:
     status: str
     events: tuple[Event, ...] = ()
     diagnostics: tuple[str, ...] = ()
+    #: Non-fatal findings. A feed still publishes with these; they exist so a signal that
+    #: is not yet a problem is visible rather than absent.
+    notes: tuple[str, ...] = ()
     counts: dict[str, int] = field(default_factory=dict)
+    gates: tuple[GateResult, ...] = ()
 
     @property
     def ok(self) -> bool:
@@ -122,7 +129,15 @@ def render(events: Sequence[Event], source: SourceConfig) -> str:
     return dump_feed(events, wire_format_for(source.escape_fields))
 
 
-def build_from_text(text: str, source: SourceConfig, cache: PageCache | None = None) -> BuildResult:
+def build_from_text(
+    text: str,
+    source: SourceConfig,
+    cache: PageCache | None = None,
+    *,
+    previous: Sequence[Mapping[str, Any]] | None = None,
+    allow_large_diff: bool = False,
+    schema_dir: str | Path = "schema",
+) -> BuildResult:
     """Build one source, attributing any failure to it rather than raising onward.
 
     The single bare-``Exception`` boundary. A source that fails leaves the others alone,
@@ -145,6 +160,20 @@ def build_from_text(text: str, source: SourceConfig, cache: PageCache | None = N
     if problems := breaches(enrich_stats, source):
         return BuildResult(source=source.slug, status="failed", diagnostics=problems)
 
+    # Gates run on every build, not only when something looks wrong: the failures they
+    # catch are all shapes that satisfy the schema completely.
+    gates = run_gates(events, source, previous=previous, allow_large_diff=allow_large_diff)
+    if problems := failures(gates):
+        return BuildResult(source=source.slug, status="failed", diagnostics=problems, gates=gates)
+
+    if schema_problems := schema_errors(json.loads(render(events, source)), schema_dir=schema_dir):
+        return BuildResult(
+            source=source.slug,
+            status="failed",
+            diagnostics=tuple(f"schema: {p}" for p in schema_problems),
+            gates=gates,
+        )
+
     counts = {
         "events": len(events),
         "placeholder_titles": sum(1 for e in events if e.title_is_placeholder),
@@ -154,11 +183,24 @@ def build_from_text(text: str, source: SourceConfig, cache: PageCache | None = N
         counts[f"enriched_{field_name}"] = stat.filled
         if stat.rejected:
             counts[f"rejected_{field_name}"] = stat.rejected
-    return BuildResult(source=source.slug, status="ok", events=events, counts=counts)
+    return BuildResult(
+        source=source.slug,
+        status="ok",
+        events=events,
+        counts=counts,
+        notes=warnings(gates),
+        gates=gates,
+    )
 
 
 def build_from_file(
-    path: str | Path, source: SourceConfig, cache: PageCache | None = None
+    path: str | Path,
+    source: SourceConfig,
+    cache: PageCache | None = None,
+    *,
+    previous: Sequence[Mapping[str, Any]] | None = None,
+    allow_large_diff: bool = False,
+    schema_dir: str | Path = "schema",
 ) -> BuildResult:
     """Build one source from an ICS file on disk."""
     try:
@@ -167,7 +209,14 @@ def build_from_file(
         return BuildResult(
             source=source.slug, status="failed", diagnostics=(f"cannot read {path}: {exc}",)
         )
-    return build_from_text(text, source, cache)
+    return build_from_text(
+        text,
+        source,
+        cache,
+        previous=previous,
+        allow_large_diff=allow_large_diff,
+        schema_dir=schema_dir,
+    )
 
 
 __all__: list[str] = [

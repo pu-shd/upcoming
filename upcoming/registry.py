@@ -36,6 +36,7 @@ from .errors import ConfigFatal
 from .model import PLATFORM_SITE_BUILDER
 from .patterns import Vocabulary, load_vocabulary
 from .rules import load_chain
+from .tags import TagVocabulary, load_tags
 
 #: Source lifecycle. ``unavailable`` sources are never fetched and never published -- they
 #: exist so a gap is visible and reviewable instead of being forgotten.
@@ -136,6 +137,10 @@ class Expectations:
     #: alert is a *change*, so this is a band plus drift rather than a ceiling.
     max_placeholder_title_rate: float = 1.0
     max_location_declined_rate: float = 0.3
+    #: How much of the previously published feed may disappear in one build. The
+    #: gate that catches a truncated upstream response, which is otherwise
+    #: schema-valid and passes every other check.
+    max_removed_ratio: float = 0.5
 
 
 @dataclass(frozen=True)
@@ -170,6 +175,9 @@ class SourceConfig:
     summary_rules: Any = None
     #: The shared pattern and predicate vocabulary the rules select from.
     vocabulary: Any = None
+    #: The shared canonical-tag vocabulary. Shared, not per source: the point of a
+    #: canonical tag is that every source reaches the same one.
+    tags: Any = None
     #: Fields whose commas and semicolons are re-escaped on output. Per field rather than
     #: one per-source boolean: ORFE's ingest wants an escaped speaker, and the same
     #: boolean in the predecessor also governs MAE's title, where it mangles
@@ -375,6 +383,7 @@ def _build_expectations(raw: Mapping[str, Any], slug: str, status: str) -> Expec
         min_enrich_success_rate=float(exp.get("min_enrich_success_rate", 0.8)),
         max_placeholder_title_rate=float(exp.get("max_placeholder_title_rate", 1.0)),
         max_location_declined_rate=float(exp.get("max_location_declined_rate", 0.3)),
+        max_removed_ratio=float(exp.get("max_removed_ratio", 0.5)),
     )
 
 
@@ -456,7 +465,12 @@ def _build_enrich(raw: Mapping[str, Any], slug: str) -> tuple[EnrichTarget, ...]
     return tuple(targets)
 
 
-def _build_source(slug: str, raw: Mapping[str, Any], vocabulary: Vocabulary) -> SourceConfig:
+def _build_source(
+    slug: str,
+    raw: Mapping[str, Any],
+    vocabulary: Vocabulary,
+    tag_vocabulary: TagVocabulary,
+) -> SourceConfig:
     if not _SLUG_RE.match(slug):
         raise ConfigFatal(f"source slug {slug!r} must be lowercase alphanumeric with hyphens")
 
@@ -551,6 +565,7 @@ def _build_source(slug: str, raw: Mapping[str, Any], vocabulary: Vocabulary) -> 
         escape_fields=escape_fields,
         summary_rules=summary_rules,
         vocabulary=vocabulary,
+        tags=tag_vocabulary,
         title_template=str((raw.get("fallback") or {}).get("title_template", "")),
         fallback_include_speaker=bool((raw.get("fallback") or {}).get("include_speaker", True)),
         raw=raw,
@@ -562,6 +577,7 @@ def load_registry(
     *,
     env: Mapping[str, str] | None = None,
     patterns: str | os.PathLike[str] = "config/patterns.yaml",
+    tags: str | os.PathLike[str] = "config/tags.yaml",
 ) -> Registry:
     """Load, layer, resolve and validate every source.
 
@@ -571,6 +587,7 @@ def load_registry(
     """
     env = os.environ if env is None else env
     vocabulary = load_vocabulary(patterns)
+    tag_vocabulary = load_tags(tags)
     config_path = Path(path)
     if not config_path.is_file():
         raise ConfigFatal(f"no source registry at {config_path}")
@@ -605,7 +622,7 @@ def load_registry(
 
         merged = _merge(defaults, entry)
         merged = _merge(merged, _env_overrides(str(slug), env))
-        source = _build_source(str(slug), merged, vocabulary)
+        source = _build_source(str(slug), merged, vocabulary, tag_vocabulary)
 
         # Resolve secret headers only for sources that actually scrape. The bypass
         # credential is needed for event *pages*, not for the feed -- measured: every ICS

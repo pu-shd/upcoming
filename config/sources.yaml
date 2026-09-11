@@ -19,7 +19,12 @@ defaults:
   status: live
   cadence: 1h
   rebuild_after_hours: 24
-  uid_pattern: '^ps_events:\d+:delta:0$'
+  # `delta:N` is the recurrence index, not a constant. citp publishes one weekly reading
+  # group as ps_events:5261:delta:0 through :delta:10 -- eleven instances of one recurring
+  # event, each with its own DTSTART. The full UID therefore identifies one *occurrence*,
+  # which is what a feed of events wants. Discovered by the uid_pattern gate, which was
+  # written against `delta:0` examples alone.
+  uid_pattern: '^ps_events:\d+:delta:\d+$'
 
   http:
     timeout:
