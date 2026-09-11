@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field, replace
 from datetime import UTC, datetime, timedelta
+from typing import ClassVar
 
 import pytest
 
@@ -129,7 +130,7 @@ def test_a_304_is_never_retried(registry) -> None:  # type: ignore[no-untyped-de
     class NotModified:
         status_code = 304
         text = ""
-        headers = {"ETag": '"abc"'}
+        headers: ClassVar[dict[str, str]] = {"ETag": '"abc"'}
 
     def fake_get(url, headers, timeout):  # type: ignore[no-untyped-def]
         attempts.append(url)

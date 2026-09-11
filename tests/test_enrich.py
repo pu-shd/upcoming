@@ -7,6 +7,8 @@ outcome tells them apart, and the predecessor records neither.
 
 from __future__ import annotations
 
+from typing import ClassVar
+
 import pytest
 
 from tests.fixture_transport import EMPTY_PAGE, BlockedTransport, FixtureTransport
@@ -229,7 +231,7 @@ def test_a_403_is_never_retried() -> None:
         text = ""
         # A real requests.Response always carries headers; the transport reads cache
         # validators off every response, so a stub without them models nothing real.
-        headers: dict[str, str] = {}
+        headers: ClassVar[dict[str, str]] = {}
 
     def fake_get(url, headers, timeout):  # type: ignore[no-untyped-def]
         attempts.append(url)
