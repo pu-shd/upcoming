@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pu-shd.github.io/upcoming/schema/event.schema.json",
+  "title": "Upcoming event",
+  "description": "One event, as published in a per-source feed or a combined one. The shape is identical in both: sources is always an array, so a consumer parses them the same way.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "guid",
+    "sources",
+    "platform",
+    "startsAt",
+    "endsAt",
+    "startTime",
+    "endTime",
+    "timezone",
+    "title",
+    "location",
+    "urlRef",
+    "cancelled",
+    "bannerImage",
+    "itemType"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*:.+$",
+      "description": "\"{source}:{guid}\". THE identifier, unique within every feed and every combined feed. Source-scoped because ps_events UIDs are per-site sequences, not a global namespace: ps_events:4056:delta:0 is ai's \"ORFE Colloquium\" and materials' \"Materials Institute Symposium\", two unrelated events."
+    },
+    "guid": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The upstream UID, verbatim. Source-scoped and NOT unique across feeds -- that is what makes consumer-side de-duplication possible at all. Published because it is what the campus ingest keys on."
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+      "description": "Every registered source whose feed carried this exact event. Length 1 in a per-source feed; longer in a combined feed means two or more units published an identical listing and this record represents both. Never a scalar, in any output."
+    },
+    "platform": {
+      "type": "string",
+      "enum": ["princeton-site-builder", "drupal-ical-api"],
+      "description": "Checked against the feed's PRODID rather than assumed: kellercenter serves a Drupal iCal feed from a URL that looks like every Site Builder one."
+    },
+
+    "startsAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+      "description": "The absolute instant, canonical UTC. Compared as a string throughout -- for ordering, for de-duplication, and for byte-stable output -- so the form has to be canonical or string comparison stops meaning instant comparison."
+    },
+    "endsAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+    },
+    "startTime": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$",
+      "description": "Local wall clock, no offset. The predecessor's published shape, retained because the campus ingest parses it. Never compare this across sources."
+    },
+    "endTime": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$"
+    },
+    "timezone": { "type": "string", "minLength": 1 },
+
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Never empty. When the feed carries none -- ORFE's SUMMARY is the speaker, and quantum posts 14 of 18 titles as TBD -- one is synthesized, and titleSource and titleIsPlaceholder say so."
+    },
+    "speakers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "affiliation"],
+        "properties": {
+          "name": { "type": "string" },
+          "affiliation": { "type": "string" }
+        }
+      },
+      "description": "Every speaker. An event can have several: bioengineering's Rising Stars symposium lists four."
+    },
+    "speaker": {
+      "type": "string",
+      "description": "Derived from speakers, for the existing campus ingest. One speaker renders \"Name, Affiliation\"; several join with \"; \" -- not a comma, which already separates a name from its affiliation."
+    },
+    "affiliation": {
+      "type": "string",
+      "description": "Derived: the affiliation when one applies to the whole event, empty when the speakers disagree. Picking the first would attribute one person's institution to the panel."
+    },
+
+    "series": {
+      "type": "string",
+      "description": "The feed's CATEGORIES joined with a bare comma, in feed order. Downstream code splits on that comma."
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+      "description": "Canonical tags -- what combined-feed predicates match on. Only ever canonical: a final public oral examination reaches these feeds under four spellings, and \"exclude FPOs\" is meaningless without one name for it."
+    },
+    "rawCategories": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Categories exactly as the feed spelled them."
+    },
+    "unmappedTags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Categories no canonical tag recognised. Published rather than only counted, so a department inventing a series is visible to a consumer as well as to a maintainer."
+    },
+
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "id", "detail"],
+      "properties": {
+        "name": { "type": "string", "description": "The venue. An unsplittable value belongs here whole rather than guessed apart." },
+        "id": { "type": "string", "description": "Reserved for a canonical venue id; normally empty." },
+        "detail": { "type": "string", "description": "The room, when one could be identified without guessing." }
+      }
+    },
+    "urlRef": { "type": "string", "format": "uri" },
+
+    "content": { "type": "string" },
+    "rawEventDetails": { "type": "string" },
+    "rawExtractAbstract": { "type": "string" },
+    "rawExtractBio": { "type": "string" },
+
+    "cancelled": { "type": "string" },
+    "bannerImage": { "type": "string" },
+    "itemType": { "type": "string", "enum": ["advertisement"] },
+
+    "summaryRaw": {
+      "type": "string",
+      "description": "The untouched SUMMARY, so a mapping decision can be re-examined from published output alone."
+    },
+    "locationRaw": { "type": "string" },
+    "mappingRules": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "The rule that mapped this event, as \"{source}:{rule}\". A reordering that reclassifies events still produces valid output, so the recorded rule is what makes it visible."
+    },
+    "locationRule": { "type": "string" },
+    "summaryRest": {
+      "type": "string",
+      "description": "Text a rule parked rather than guessing which field it belonged to."
+    },
+    "titleSource": {
+      "type": ["string", "null"],
+      "enum": ["ics", "enriched", "fallback-speaker", "fallback-template", "fallback-series", null],
+      "description": "Where the title came from. ics and enriched mean a department wrote it; every fallback means this pipeline synthesized it."
+    },
+    "titleIsPlaceholder": {
+      "type": "boolean",
+      "description": "True when the title was synthesized. A consumer must always be able to tell; the predecessor publishes a literal \"TBD\" with neither this nor titleSource set."
+    },
+    "mappingConflict": { "type": "boolean" }
+  }
+}

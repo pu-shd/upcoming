@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pu-shd.github.io/upcoming/schema/events.schema.json",
+  "title": "Upcoming events feed",
+  "description": "A published feed: per-source or combined, the same shape either way. Six lines, because the record is defined once in event.schema.json and $ref'd -- the predecessor keeps two hand-cloned copies because its validator was built without a resolver, and says so in its own schema description.",
+  "type": "array",
+  "items": { "$ref": "https://pu-shd.github.io/upcoming/schema/event.schema.json" }
+}
