@@ -20,9 +20,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-import yaml
-
 from . import fallback
+from .config import read_mapping
 from .enrich import breaches, enrich
 from .errors import SourceFatal
 from .fetch import PageCache
@@ -62,10 +61,9 @@ def load_pronunciation(path: str | Path = DEFAULT_PRONUNCIATION) -> None:
     Absent is fine: the module carries a working default, and a source whose acronyms are
     all spelled out needs nothing here.
     """
-    config = Path(path)
-    if not config.is_file():
-        return
-    data = yaml.safe_load(config.read_text(encoding="utf-8")) or {}
+    data = read_mapping(
+        path, what="pronunciation vocabulary", allow={"word_acronyms"}, required=False
+    )
     fallback.set_word_acronyms(data.get("word_acronyms") or ())
 
 

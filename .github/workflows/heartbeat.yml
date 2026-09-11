@@ -1,0 +1,107 @@
+# Keeps the scheduled workflows alive, and reports any that stopped.
+#
+# GitHub disables scheduled workflows on a public repository after 60 days without
+# repository activity. It emails the owner, stops running them, and nothing in the
+# repository reports it -- the site just stops updating. For a project built on the premise
+# that a failure must never be silent, that is the most important silent failure available.
+#
+# Known limit, stated rather than implied: if *every* scheduled workflow is disabled at
+# once, this one is disabled too and cannot rescue itself. That is inherent to running your
+# own monitoring inside the thing being monitored. The keepalive commit is what prevents it
+# arising; the API check catches the partial cases, including somebody switching the
+# publisher off by hand and forgetting.
+
+name: Heartbeat
+
+on:
+  schedule:
+    # Daily, off the hour so it never lands on a publish or a verify tick. The decision to
+    # commit is a threshold on repository quiet time, so running daily costs one API call
+    # on all but a handful of days a year.
+    - cron: '47 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: heartbeat
+  cancel-in-progress: false
+
+jobs:
+  heartbeat:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: pip install -e '.'
+
+      - name: Decide, and check the schedules
+        id: beat
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          gh api "repos/${GITHUB_REPOSITORY}/actions/workflows" > workflows.json
+
+          # `|| code=$?` because the default shell is `bash -e`: a stopped schedule exits
+          # non-zero, and ending the step here would skip the steps that repair and report
+          # it -- which is the whole point of noticing.
+          code=0
+          python -m upcoming.cli heartbeat \
+            --last-commit-epoch "$(git log -1 --format=%ct HEAD)" \
+            --sha "$GITHUB_SHA" \
+            --ref "$GITHUB_REF_NAME" \
+            --workflow-states workflows.json \
+            --github-output "$GITHUB_OUTPUT" > report.txt 2>&1 || code=$?
+          cat report.txt
+          echo "status=$code" >> "$GITHUB_OUTPUT"
+          {
+            echo '```'
+            cat report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the keepalive
+        if: steps.beat.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .ci/heartbeat.json
+          git commit -m "Keep the scheduled workflows alive"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Re-enable anything GitHub stopped
+        if: steps.beat.outputs.stopped != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for path in ${{ steps.beat.outputs.paths }}; do
+            name="${path##*/}"
+            echo "re-enabling $name"
+            gh api --method PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/${name}/enable"
+          done
+
+      - name: Say so, beyond this run
+        if: steps.beat.outputs.stopped != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          body=$(printf '%s\n\n```\n%s\n```\n\nRe-enabled automatically. If this recurs, the repository is going quiet faster than the keepalive threshold expects.\n\n[the run](%s/%s/actions/runs/%s)\n' \
+            "A scheduled workflow had stopped running." \
+            "$(cat report.txt)" \
+            "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")
+          gh issue create --title "A scheduled workflow had stopped" --label watchdog --body "$body"
+
+      - name: Fail the run if a schedule had stopped
+        if: steps.beat.outputs.status != '0'
+        run: exit 1

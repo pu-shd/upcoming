@@ -23,11 +23,12 @@ import json
 import os
 from collections.abc import Mapping
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 from .build import BuildResult, render
+from .clock import now as clock_now
+from .clock import stamp
 from .combine import Combo, ComboResult
 from .registry import Registry
 from .serialize import WireFormat, dump_feed, load_feed, wire_format_for
@@ -345,8 +346,8 @@ def write(tree: Tree, root: str | os.PathLike[str]) -> list[str]:
 
 
 def utc_now() -> str:
-    """The one place this package reads the clock."""
-    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+    """The current instant, spelled the way everything published spells it."""
+    return stamp(clock_now())
 
 
 __all__ = [

@@ -29,9 +29,8 @@ from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
-import yaml
-
 from . import locate, serialize
+from .config import read_mapping
 from .errors import ConfigFatal
 from .model import PLATFORM_SITE_BUILDER
 from .patterns import Vocabulary, load_vocabulary
@@ -589,15 +588,7 @@ def load_registry(
     vocabulary = load_vocabulary(patterns)
     tag_vocabulary = load_tags(tags)
     config_path = Path(path)
-    if not config_path.is_file():
-        raise ConfigFatal(f"no source registry at {config_path}")
-
-    try:
-        document = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
-    except yaml.YAMLError as exc:
-        raise ConfigFatal(f"{config_path} is not valid YAML: {exc}") from exc
-    if not isinstance(document, dict):
-        raise ConfigFatal(f"{config_path} must be a mapping")
+    document = read_mapping(config_path, what="source registry", allow={"defaults", "sources"})
 
     defaults = document.get("defaults") or {}
     entries = document.get("sources")

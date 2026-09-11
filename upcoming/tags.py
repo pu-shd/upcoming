@@ -23,8 +23,7 @@ from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import yaml
-
+from .config import read_mapping
 from .errors import ConfigFatal
 
 DEFAULT_TAGS = "config/tags.yaml"
@@ -84,16 +83,7 @@ def load_tags(path: str | os.PathLike[str] = DEFAULT_TAGS) -> TagVocabulary:
     be an accident of file order, and the loser would silently never appear.
     """
     config = Path(path)
-    if not config.is_file():
-        raise ConfigFatal(f"no tag vocabulary at {config}")
-
-    try:
-        document = yaml.safe_load(config.read_text(encoding="utf-8")) or {}
-    except yaml.YAMLError as exc:
-        raise ConfigFatal(f"{config} is not valid YAML: {exc}") from exc
-
-    if unknown := set(document) - {"tags"}:
-        raise ConfigFatal(f"{config}: unknown top-level keys {sorted(unknown)}")
+    document = read_mapping(config, what="tag vocabulary", allow={"tags"})
 
     by_alias: dict[str, str] = {}
     labels: dict[str, str] = {}

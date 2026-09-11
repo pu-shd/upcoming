@@ -17,8 +17,9 @@ from __future__ import annotations
 import json
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import datetime
 
+from .clock import parse as parse_instant
 from .fetch import FetchOutcome, Transport
 
 #: How a finding is treated. ``fail`` means the site is not serving what it should;
@@ -38,11 +39,13 @@ class Finding:
 
 
 def parse_stamp(value: str) -> datetime | None:
-    """Read a ``status.json`` timestamp, or ``None`` if it is not one."""
-    try:
-        return datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=UTC)
-    except (ValueError, TypeError):
-        return None
+    """Read a ``status.json`` timestamp, or ``None`` if it is not one.
+
+    Shares its format with the code that writes it. Hardcoding it here once meant the
+    producer and the consumer of the same string were defined separately, so a change to
+    either would have this reporting a healthy site as serving a timestamp that is not one.
+    """
+    return parse_instant(value)
 
 
 def check_freshness(

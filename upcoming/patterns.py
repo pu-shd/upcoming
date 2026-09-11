@@ -21,8 +21,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-import yaml
-
+from .config import read_mapping
 from .errors import ConfigFatal
 
 DEFAULT_PATTERNS = "config/patterns.yaml"
@@ -129,16 +128,7 @@ def load_vocabulary(path: str | os.PathLike[str] = DEFAULT_PATTERNS) -> Vocabula
     ``no_match`` example can catch that.
     """
     config = Path(path)
-    if not config.is_file():
-        raise ConfigFatal(f"no pattern vocabulary at {config}")
-
-    try:
-        document = yaml.safe_load(config.read_text(encoding="utf-8")) or {}
-    except yaml.YAMLError as exc:
-        raise ConfigFatal(f"{config} is not valid YAML: {exc}") from exc
-
-    if unknown := set(document) - {"patterns", "not_a_person"}:
-        raise ConfigFatal(f"{config}: unknown top-level keys {sorted(unknown)}")
+    document = read_mapping(config, what="pattern vocabulary", allow={"patterns", "not_a_person"})
 
     patterns: dict[str, NamedPattern] = {}
     for name, entry in (document.get("patterns") or {}).items():

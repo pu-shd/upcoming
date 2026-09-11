@@ -28,6 +28,8 @@ from dataclasses import dataclass, field, replace
 from datetime import UTC, datetime
 from typing import Any
 
+from .clock import stamp
+
 #: Platform identifiers. The parse and enrichment layers must not assume Site Builder:
 #: kellercenter serves ``PRODID:-//Drupal iCal API//EN`` from a stable-looking URL.
 PLATFORM_SITE_BUILDER = "princeton-site-builder"
@@ -65,7 +67,7 @@ def normalize_instant(value: str) -> str:
                 f"instant. Reading it as UTC or as local time would shift the event by "
                 f"hours in one direction or the other."
             )
-    return parsed.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return stamp(parsed)
 
 
 @dataclass(frozen=True, slots=True)

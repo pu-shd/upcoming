@@ -19,6 +19,7 @@ Exit codes are distinct so CI can act on them:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from collections.abc import Sequence
 from datetime import UTC, datetime
@@ -28,6 +29,17 @@ from .build import BuildResult, build_from_file, load_pronunciation, render
 from .combine import combine, load_combos
 from .errors import ConfigFatal
 from .fetch import FetchOutcome, HttpTransport, fetch_feeds
+from .heartbeat import (
+    DEFAULT_THRESHOLD_DAYS,
+    WorkflowState,
+    decide,
+    keepalive,
+    parse_states,
+    report,
+    scheduled_workflows,
+    stopped,
+)
+from .heartbeat import utc_now as heartbeat_now
 from .model import Event, from_wire
 from .publish import (
     STATUS_DISABLED,
@@ -147,6 +159,39 @@ def _build_parser() -> argparse.ArgumentParser:
             "confirming upstream really did shrink."
         ),
     )
+    beat = sub.add_parser(
+        "heartbeat",
+        help="keep the scheduled workflows from being disabled for inactivity",
+        description=(
+            "GitHub disables scheduled workflows on a public repository after 60 days "
+            "without repository activity. It emails the owner and stops running them; "
+            "nothing in the repository reports it and the site simply stops updating. "
+            "This writes a keepalive when the repository has been quiet past the "
+            "threshold, and reports any scheduled workflow that is not running."
+        ),
+    )
+    beat.add_argument(
+        "--last-commit-epoch",
+        type=int,
+        required=True,
+        help="unix timestamp of HEAD, from `git log -1 --format=%%ct`",
+    )
+    beat.add_argument("--threshold-days", type=float, default=DEFAULT_THRESHOLD_DAYS)
+    beat.add_argument("--output", default=".ci/heartbeat.json")
+    beat.add_argument("--ref", default="main")
+    beat.add_argument("--sha", default="")
+    beat.add_argument(
+        "--workflow-states",
+        help=(
+            "a JSON file from `gh api repos/{owner}/{repo}/actions/workflows`. Without "
+            "it only the keepalive half runs."
+        ),
+    )
+    beat.add_argument(
+        "--github-output",
+        help="write `changed` and `stopped` here for a workflow step to read",
+    )
+
     verify_cmd = sub.add_parser(
         "verify",
         help="check what the published site is actually serving",
@@ -410,6 +455,48 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
     return EXIT_OK
 
 
+def _cmd_heartbeat(args: argparse.Namespace) -> int:
+    """Decide whether to write a keepalive, and report any stopped schedule."""
+    now = heartbeat_now()
+    decision = decide(
+        datetime.fromtimestamp(args.last_commit_epoch, tz=UTC),
+        now=now,
+        threshold_days=args.threshold_days,
+    )
+    print(decision.reason)
+
+    if decision.needed:
+        target = Path(args.output)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(
+            keepalive(decision, now=now, ref=args.ref, sha=args.sha), encoding="utf-8"
+        )
+        print(f"wrote {target}")
+
+    stopped_states: list[WorkflowState] = []
+    if args.workflow_states:
+        expected = scheduled_workflows(
+            {
+                path.name: path.read_text(encoding="utf-8")
+                for path in sorted(Path(".github/workflows").glob("*.yml"))
+            }
+        )
+        stopped_states = stopped(
+            parse_states(json.loads(Path(args.workflow_states).read_text(encoding="utf-8"))),
+            expected,
+        )
+        print(report(stopped_states))
+
+    if args.github_output:
+        with Path(args.github_output).open("a", encoding="utf-8") as handle:
+            handle.write(f"changed={str(decision.needed).lower()}\n")
+            handle.write(f"stopped={len(stopped_states)}\n")
+            handle.write(f"paths={' '.join(s.path for s in stopped_states)}\n")
+
+    # A stopped schedule is a failure; a keepalive being unnecessary is not.
+    return EXIT_SOURCE_FAILED if stopped_states else EXIT_OK
+
+
 def _cmd_verify(args: argparse.Namespace) -> int:
     """Report on what the live origin serves. No registry, no config, no build."""
     findings, document = verify(
@@ -451,6 +538,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             return _cmd_publish(args.registry, args)
         if args.command == "verify":
             return _cmd_verify(args)
+        if args.command == "heartbeat":
+            return _cmd_heartbeat(args)
         handlers = {"sources": _cmd_sources, "check": _cmd_check}
         handler = handlers.get(args.command)
         if handler is None:  # pragma: no cover - argparse enforces the choice

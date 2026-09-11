@@ -33,8 +33,7 @@ from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
-import yaml
-
+from .config import read_mapping
 from .errors import ConfigFatal
 from .model import Event
 from .tags import TagVocabulary
@@ -200,16 +199,7 @@ def load_combos(
 ) -> tuple[Combo, ...]:
     """Load and validate every declared combined feed."""
     config = Path(path)
-    if not config.is_file():
-        raise ConfigFatal(f"no combo configuration at {config}")
-
-    try:
-        document = yaml.safe_load(config.read_text(encoding="utf-8")) or {}
-    except yaml.YAMLError as exc:
-        raise ConfigFatal(f"{config} is not valid YAML: {exc}") from exc
-    if unknown := set(document) - {"combos"}:
-        raise ConfigFatal(f"{config}: unknown top-level keys {sorted(unknown)}")
-
+    document = read_mapping(config, what="combo configuration", allow={"combos"})
     combos: list[Combo] = []
     seen: set[str] = set()
     for index, entry in enumerate(document.get("combos") or []):
