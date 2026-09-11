@@ -34,6 +34,7 @@ from .config import read_mapping
 from .errors import ConfigFatal
 from .model import PLATFORM_SITE_BUILDER
 from .patterns import Vocabulary, load_vocabulary
+from .predicate import validate as validate_predicate
 from .rules import load_chain
 from .tags import TagVocabulary, load_tags
 
@@ -176,6 +177,22 @@ class SourceConfig:
     #: once this term. Refetching a quiet departmental server every twenty minutes is
     #: seventy-two requests a day to be told nothing changed.
     cadence: str = "1h"
+    #: Predicates over the source's own feed. ``publish_where`` keeps only matching events;
+    #: ``publish_unless`` drops matching ones. Both use the same vocabulary as a combined
+    #: feed's ``where`` / ``exclude_where``, because a department writing one after reading
+    #: about the other should not be learning a second dialect.
+    #:
+    #: This makes a per-source feed a *declared* view of its upstream rather than an
+    #: unconditional mirror, which is a real change in what the feed promises -- so the
+    #: count it dropped is published in status.json rather than left for a consumer to
+    #: notice by subtracting.
+    publish_where: Mapping[str, Any] | None = None
+    publish_unless: Mapping[str, Any] | None = None
+
+    @property
+    def publishes_everything(self) -> bool:
+        """Whether this feed is an unfiltered mirror of its upstream."""
+        return self.publish_where is None and self.publish_unless is None
 
     @property
     def cadence_minutes(self) -> int:
@@ -568,6 +585,12 @@ def _build_source(
             f"to {ROLE_RULES!r} or remove the rules."
         )
 
+    publish_where = raw.get("publish_where") or None
+    publish_unless = raw.get("publish_unless") or None
+    for clause, node in (("publish_where", publish_where), ("publish_unless", publish_unless)):
+        if node is not None:
+            validate_predicate(node, tag_vocabulary, where=f"{slug}.{clause}")
+
     escape_fields = tuple((raw.get("wire") or {}).get("escape") or ())
     if unknown_escape := set(escape_fields) - serialize.ESCAPABLE_FIELDS:
         raise ConfigFatal(
@@ -586,6 +609,8 @@ def _build_source(
         feed_url=feed_url,
         host=host,
         cadence=str(raw.get("cadence", "1h")),
+        publish_where=publish_where,
+        publish_unless=publish_unless,
         location_rules=location_rules,
         enrich=_build_enrich(raw, slug),
         http=_build_http(raw),

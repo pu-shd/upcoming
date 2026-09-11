@@ -252,8 +252,13 @@ feed under NextG's name. Every unavailable source and every disabled combo appea
 
 `all-no-fpo` removes exactly the ten final public orals across three departments. That is
 what the canonical tag vocabulary in `config/tags.yaml` exists for: the four upstream
-spellings of the same thing map to one tag. The predecessor excludes the literal string
-`FPO` and so publishes a "filtered" feed identical to the unfiltered one.
+spellings of the same thing map to one tag. The predecessor filters on the literal series
+string `FPO`, which is correct for ORFE — measured against its live feed, it publishes 19
+events and excludes exactly the 4 final public orals, all of which carry `series: "FPO"`.
+What that approach does not survive is a second department: `mae` publishes
+`Final Public Oral Exam` and `ece` publishes
+`Final Public Oral Examinations,Final Public Orals`, so a literal match finds neither. The
+vocabulary exists for the scale, not because the predecessor was wrong within its own.
 
 ### `status.json` is the contract for "is this current"
 
@@ -369,8 +374,24 @@ identifiers. Measured: `ps_events:4056:delta:0` is `ai`'s "ORFE Colloquium" **an
 published verbatim but documented as source-scoped, and a dedupe key of `guid` alone is a
 configuration error.
 
-**Per-source feeds never deduplicate.** Each is a faithful representation of one upstream
-feed. A consumer reading two of them that collide resolves that itself.
+**Per-source feeds never deduplicate.** Each represents one upstream feed. A consumer
+reading two of them that collide resolves that itself.
+
+**A source may decline to publish part of its own feed.** `publish_unless` drops matching
+events and `publish_where` keeps only matching ones, using the same predicate vocabulary as
+a combined feed's `exclude_where` / `where` — one dialect, so reading about either teaches
+the other. ORFE uses it: the department does not list final public orals on its
+upcoming-events display, so `feeds/orfe/events.json` carries 19 of the 23 events its
+calendar publishes.
+
+This makes a per-source feed a *declared view* of its upstream rather than an unconditional
+mirror, which is a real change in what the feed promises — so the count declined and the
+predicate that did it are published in `status.json`. A filtered feed and a feed whose
+upstream went quiet look identical from outside, and only one of them is a decision.
+Filtering runs after mapping (so tags exist to match on) and before enrichment (so an event
+we are not publishing costs nobody a page fetch — for ORFE that is four requests saved
+every half hour). Every other source is an unfiltered mirror, and a test fails if that
+changes without the diff showing it.
 
 **Combined feeds deduplicate only when every detail matches**, collapsing to one record
 whose `sources` array names every feed that carried it. When a key matches but details

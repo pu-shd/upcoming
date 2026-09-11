@@ -41,8 +41,11 @@ combos:
   - name: all-no-fpo
     label: Every live source, without final public orals
     # This is the filter the canonical tag vocabulary exists for. "fpo" covers four upstream
-    # spellings across three departments; the predecessor excludes the literal string "FPO"
-    # and so produces a "filtered" feed identical to the unfiltered one.
+    # spellings across three departments. The predecessor filters on the literal series
+    # string "FPO", which is right for ORFE -- its four final public orals all carry
+    # series: "FPO" -- but finds neither "Final Public Oral Exam" (mae) nor "Final Public
+    # Oral Examinations,Final Public Orals" (ece). One word per concept is what makes the
+    # filter hold across departments.
     include: ["*"]
     exclude_where:
       tags:

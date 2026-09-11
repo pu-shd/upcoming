@@ -27,6 +27,7 @@ from .errors import SourceFatal
 from .fetch import PageCache
 from .model import Event
 from .parse import parse_ics, prodid
+from .predicate import matches
 from .registry import SourceConfig
 from .scrape import ScrapeStats
 from .serialize import dump_feed, wire_format_for
@@ -80,7 +81,7 @@ def build_events(
     synthesized one and the fallback only fills what is still missing. The predecessor
     leaves this ordering implicit across two entry points that have twice drifted apart.
     """
-    events, _stats = build_events_with_stats(text, source, cache)
+    events, _stats, _declined = build_events_with_stats(text, source, cache)
     return events
 
 
@@ -99,18 +100,47 @@ def check_platform(text: str, source: SourceConfig) -> None:
         )
 
 
+def select(events: Sequence[Event], source: SourceConfig) -> tuple[tuple[Event, ...], int]:
+    """Apply the source's own publish predicates, returning what survives and what did not.
+
+    Placed after mapping and **before** enrichment, deliberately, for two reasons. Tags and
+    series only exist once mapping has run, so a predicate on either has nothing to read
+    before it. And an event we are not going to publish should not cost a page fetch --
+    ORFE drops four final public orals, which is four fewer requests to their web server
+    every time the feed is built.
+
+    The dropped count comes back rather than being discarded, because a filtered feed and
+    a feed whose upstream went quiet are indistinguishable from the outside. Publishing the
+    number is what keeps "we chose not to" from reading like "there was nothing there".
+    """
+    if source.publishes_everything:
+        return tuple(events), 0
+
+    kept = [
+        event
+        for event in events
+        if (source.publish_where is None or matches(event, source.publish_where))
+        and (source.publish_unless is None or not matches(event, source.publish_unless))
+    ]
+    return tuple(kept), len(events) - len(kept)
+
+
 def build_events_with_stats(
     text: str, source: SourceConfig, cache: PageCache | None = None
-) -> tuple[tuple[Event, ...], dict[str, ScrapeStats]]:
-    """The pipeline, and what enrichment did. One implementation, used by every caller."""
+) -> tuple[tuple[Event, ...], dict[str, ScrapeStats], int]:
+    """The pipeline, what enrichment did, and how many events the source declined to publish.
+
+    One implementation, used by every caller.
+    """
     check_platform(text, source)
 
     events = transform(parse_ics(text), source)
+    events, declined = select(events, source)
     stats: dict[str, ScrapeStats] = {}
     if cache is not None:
         events, stats = enrich(events, source, cache)
     events, _ = fill_titles_for(events, source)
-    return events, stats
+    return events, stats, declined
 
 
 def fill_titles_for(events: Sequence[Event], source: SourceConfig) -> tuple[tuple[Event, ...], int]:
@@ -143,7 +173,7 @@ def build_from_text(
     """
     enrich_stats: dict[str, ScrapeStats] = {}
     try:
-        events, enrich_stats = build_events_with_stats(text, source, cache)
+        events, enrich_stats, declined = build_events_with_stats(text, source, cache)
     except SourceFatal as exc:
         return BuildResult(source=source.slug, status="failed", diagnostics=(exc.message,))
     except Exception as exc:
@@ -177,6 +207,8 @@ def build_from_text(
         "placeholder_titles": sum(1 for e in events if e.title_is_placeholder),
         "locations_declined": sum(1 for e in events if e.location.is_empty),
     }
+    if declined:
+        counts["declined"] = declined
     for field_name, stat in enrich_stats.items():
         counts[f"enriched_{field_name}"] = stat.filled
         if stat.rejected:
@@ -186,8 +218,34 @@ def build_from_text(
         status="ok",
         events=events,
         counts=counts,
-        notes=warnings(gates),
+        notes=(*_declined_note(declined, source), *warnings(gates)),
         gates=gates,
+    )
+
+
+def _declined_note(declined: int, source: SourceConfig) -> tuple[str, ...]:
+    """Say what the source chose not to publish, in the note a consumer can read.
+
+    A filtered feed and a feed whose upstream went quiet look identical from outside. This
+    is the line that separates them, and it names the predicate so the answer to "where did
+    those events go" is in the manifest rather than in this repository's git history.
+    """
+    if not declined:
+        return ()
+    clause = "publish_unless" if source.publish_unless else "publish_where"
+    predicate = source.publish_unless or source.publish_where or {}
+    return (
+        f"declined: {declined} event(s) present in the upstream feed are deliberately not "
+        f"published here, per this source's {clause} ({_terse(predicate)}).",
+    )
+
+
+def _terse(predicate: Mapping[str, Any]) -> str:
+    """A predicate as one readable clause."""
+    return "; ".join(
+        f"{field} {op} {value!r}"
+        for field, tests in predicate.items()
+        for op, value in tests.items()
     )
 
 

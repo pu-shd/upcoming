@@ -100,6 +100,18 @@ sources:
     # SUMMARY is the speaker ("FPO\, Aaradhya Pandey"); the talk title lives on the event
     # page. The exact inverse of mae, and the pair that proves the registry works.
     location_rules: [sentinel, detail_dash_name, unambiguous_room, whole]
+    # ORFE does not list final public orals on its upcoming-events display, so this feed
+    # does not carry them. Matching the canonical `fpo` tag rather than the literal series
+    # string "FPO": the tag is what the vocabulary normalizes every department's spelling
+    # to, so this keeps working if ORFE renames the series -- which it has already done
+    # once, to a seminar series, and that rename silently dropped four events from a
+    # filtered feed until the unmapped-tags gate caught it.
+    #
+    # The count declined is published in status.json. A filtered feed and a feed whose
+    # upstream went quiet look identical from outside, and only one of them is a choice.
+    publish_unless:
+      tags:
+        contains: fpo
     # Per field, not one boolean per source. ORFE's downstream ingest expects
     # "Elynn Chen\, New York University" with the comma escaped. The predecessor has a
     # single `escape_name_commas` governing whatever SUMMARY maps to, which is the speaker
