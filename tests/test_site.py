@@ -19,6 +19,12 @@ from upcoming.verify import WARN, check_landing_page
 
 SITE = REPO_ROOT / "site"
 INDEX = (SITE / "index.html").read_text(encoding="utf-8")
+SIMULATOR = (SITE / "simulator.html").read_text(encoding="utf-8")
+STYLE = (SITE / "style.css").read_text(encoding="utf-8")
+
+#: Every page, so an assertion about "a page" cannot silently apply to one of them. A
+#: second page that skipped these checks would be the obvious regression.
+PAGES = {"index.html": INDEX, "simulator.html": SIMULATOR}
 
 
 def test_the_site_directory_has_an_index() -> None:
@@ -60,29 +66,31 @@ def test_site_files_absent_is_not_an_error(tmp_path):  # type: ignore[no-untyped
 # --------------------------------------------------------------------------------------
 
 
-def test_the_page_loads_no_external_resource() -> None:
-    """Self-contained, so it cannot break because someone else's CDN did.
+@pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
+def test_no_page_loads_an_external_resource(page: str) -> None:
+    """Self-contained, so a page cannot break because someone else's CDN did.
 
     Resources only. A hyperlink to another site is navigation the reader chooses, and the
-    page still renders fully offline without it -- the newsletter this feed is gathered for
-    is linked precisely so a reader can get to it.
+    page still renders fully offline without it.
     """
-    resources = re.findall(r'src\s*=\s*["\']([^"\']+)', INDEX)
-    resources += re.findall(r'<link[^>]+href\s*=\s*["\']([^"\']+)', INDEX)
+    body = PAGES[page]
+    resources = re.findall(r'src\s*=\s*["\']([^"\']+)', body)
+    resources += re.findall(r'<link[^>]+href\s*=\s*["\']([^"\']+)', body)
     for url in resources:
-        assert not url.startswith(("http://", "https://", "//")), f"external resource: {url}"
+        assert not url.startswith(("http://", "https://", "//")), f"{page}: external {url}"
 
 
-def test_every_outbound_link_is_somewhere_we_meant_to_send_people() -> None:
+@pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
+def test_every_outbound_link_is_somewhere_we_meant_to_send_people(page: str) -> None:
     """Navigation is allowed, but not to anywhere at all.
 
     A stray absolute URL in a published page is how a typo becomes a link to somebody
     else's site, so the hosts are enumerated rather than merely permitted.
     """
     allowed = ("github.com/pu-shd/upcoming",)
-    for url in re.findall(r'<a[^>]+href\s*=\s*["\']([^"\']+)', INDEX):
+    for url in re.findall(r'<a[^>]+href\s*=\s*["\']([^"\']+)', PAGES[page]):
         if url.startswith(("http://", "https://")):
-            assert any(host in url for host in allowed), f"unexpected outbound link: {url}"
+            assert any(host in url for host in allowed), f"{page}: unexpected link {url}"
 
 
 def test_the_page_reads_the_manifest_rather_than_being_generated_with_it() -> None:
@@ -129,20 +137,78 @@ def test_the_page_states_the_contracts_a_consumer_needs(claim: str) -> None:
     assert claim in INDEX
 
 
-def test_the_page_declares_a_viewport_and_a_language() -> None:
-    assert 'name="viewport"' in INDEX
-    assert re.search(r'<html[^>]+lang="en"', INDEX)
+@pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
+def test_every_page_declares_a_viewport_and_a_language(page: str) -> None:
+    assert 'name="viewport"' in PAGES[page]
+    assert re.search(r'<html[^>]+lang="en"', PAGES[page])
 
 
-def test_wide_content_scrolls_inside_its_own_container() -> None:
+@pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
+def test_wide_content_scrolls_inside_its_own_container(page: str) -> None:
     """The tables are wide and the body must never scroll sideways on a phone."""
-    assert "overflow-x: auto" in INDEX
-    assert INDEX.count('class="card scroll"') >= 3
+    assert "overflow-x: auto" in STYLE
+    assert 'class="card scroll"' in PAGES[page]
 
 
-def test_the_page_works_in_both_themes() -> None:
-    assert "prefers-color-scheme: dark" in INDEX
-    assert "color-scheme: light dark" in INDEX
+def test_both_themes_are_defined_once_in_the_shared_stylesheet() -> None:
+    """A colour defined only inside the dark block is the classic unreadable-page bug.
+
+    Defining the palette on bare `:root` and redefining only the tokens under the media
+    query is what makes the un-stamped default resolve as a complete set.
+    """
+    assert "color-scheme: light dark" in STYLE
+    assert "prefers-color-scheme: dark" in STYLE
+    for page in PAGES.values():
+        assert "prefers-color-scheme" not in page, "theming belongs in style.css, not a page"
+
+
+@pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
+def test_every_page_uses_the_shared_stylesheet(page: str) -> None:
+    """One stylesheet, not a copy per page.
+
+    Duplicating it would be clone-and-retarget in miniature, which is the failure the
+    simulator page exists to demonstrate an alternative to -- the two predecessor
+    repositories ship byte-identical simulator JavaScript.
+    """
+    assert '<link rel="stylesheet" href="style.css">' in PAGES[page]
+    assert "<style>" not in PAGES[page]
+
+
+@pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
+def test_every_page_carries_the_menu(page: str) -> None:
+    """A menu on one page only is the likely regression, so it is asserted on both."""
+    body = PAGES[page]
+    assert 'class="nav"' in body
+    for target in PAGES:
+        assert f'href="{target}"' in body, f"{page} does not link {target}"
+    assert body.count('aria-current="page"') == 1
+    assert f'href="{page}" aria-current="page"' in body
+
+
+def test_the_stylesheet_is_published_with_the_pages(registry, tmp_path) -> None:  # type: ignore[no-untyped-def]
+    """It is a resource the pages cannot render without, so a publish that drops it is
+    worse than one that drops a page -- both pages would serve unstyled."""
+    load_pronunciation()
+    results = {
+        s.slug: build_from_file(FIXTURES / "feeds" / s.slug / "feed.ics", s) for s in registry.live
+    }
+    tree = assemble(registry, results, {}, {}, root=tmp_path, generated_at="2026-09-11T12:00:00Z")
+    assert tree.files["style.css"] == STYLE
+    assert tree.files["simulator.html"] == SIMULATOR
+    assert "simulator.js" in tree.files
+
+
+def test_the_simulator_declares_every_control_it_wires_up() -> None:
+    """The JS looks controls up by id. A renamed id fails silently at runtime -- the
+    listener simply never attaches -- so the two are checked against each other here."""
+    wanted = set(
+        re.findall(r'\$\("([a-z-]+)"\)', (SITE / "simulator.js").read_text(encoding="utf-8"))
+    )
+    assert wanted, "expected the simulator to look up controls by id"
+    for control in sorted(wanted):
+        assert f'id="{control}"' in SIMULATOR, (
+            f"simulator.js wires #{control}, the page has no such id"
+        )
 
 
 # --------------------------------------------------------------------------------------

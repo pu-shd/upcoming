@@ -1,0 +1,96 @@
+{
+  "_source": "Princeton Engineering Events: September 7 - September 14, 2026.html, a Mailchimp export of the live newsletter, transcribed by hand.",
+  "_why": "The simulator exists to predict what this edition would contain. Checking it against a real one is the only way to know whether it does. Transcribed rather than parsed because the export is 34 nested layout tables and a multi-line sponsor list defeats any cheap parser -- which is itself why the editors want this generated.",
+  "_edition": {
+    "titled": "September 7 - September 14, 2026",
+    "publicationDate": "2026-09-08",
+    "note": "The title the editors wrote spans Mon 7th to Mon 14th, which is a human label rather than the coverage window. Publication shifted to Tuesday the 8th for Labor Day, so our weekly rule needs the publication date overridden to reproduce it."
+  },
+
+  "events": [
+    {
+      "day": "Tuesday, September 8",
+      "time": "12:15 p.m.",
+      "title": "AI Agents and the Augmentation Agenda",
+      "modality": "hybrid",
+      "speakers": ["Arvind Narayanan, Princeton University"],
+      "sponsors": ["Center for Information Technology Policy"],
+      "series": "CITP Seminars",
+      "location": "Sherrerd Hall, Room 306",
+      "expect": { "source": "citp", "inFixtures": true }
+    },
+    {
+      "day": "Tuesday, September 8",
+      "time": "12:15 p.m.",
+      "title": "Uncovering Latent Stock-risk Linkages: Financial Graph Learning via Mixed Membership Co-jump Networks",
+      "speakers": ["Yingying Li, Hong Kong University of Science and Technology"],
+      "sponsors": ["Operations Research and Financial Engineering"],
+      "series": "S. S. Wilks Memorial Seminars in Statistics",
+      "location": "Sherrerd Hall, Room 101",
+      "expect": { "source": "orfe", "inFixtures": false }
+    },
+    {
+      "day": "Tuesday, September 8",
+      "time": "4:30 p.m.",
+      "title": "Large-scale Composite-null Testing: A Unified Inference Framework for Causal Mediation, Replication, and Pleiotropy",
+      "speakers": ["Xihong Lin, Harvard University"],
+      "sponsors": ["Operations Research and Financial Engineering"],
+      "series": "ORFE Department Colloquia",
+      "location": "Sherrerd Hall, Room 101",
+      "expect": { "source": "orfe", "inFixtures": false }
+    },
+    {
+      "day": "Wednesday, September 9",
+      "time": "10:00 a.m.",
+      "title": "AI Resource Workshop",
+      "modality": "hybrid",
+      "speakers": ["Multiple speakers"],
+      "sponsors": ["Data and Intelligent Systems"],
+      "location": "Maeder Hall, Room 002",
+      "expect": {
+        "source": null,
+        "inFixtures": false,
+        "why": "Data and Intelligent Systems publishes no feed we have registered, so no configuration of the simulator can produce this event. It is recorded here so the gap is visible rather than looking like a simulator fault."
+      }
+    },
+    {
+      "day": "Wednesday, September 9",
+      "time": "12:05 p.m.",
+      "title": "The Bittersweet Lesson of Scaling in AI for Materials",
+      "speakers": ["Rafael Gomez-Bombarelli, Massachusetts Institute of Technology"],
+      "sponsors": [
+        "Princeton Materials Institute",
+        "AI at Princeton",
+        "Program in Materials Science and Engineering"
+      ],
+      "series": "PMI/PCCM Seminars Series",
+      "location": "Bowen Hall, Room 222",
+      "expect": {
+        "source": "materials",
+        "alsoPublishedBy": "ai",
+        "inFixtures": true,
+        "why": "The editors merged one talk that two units both list into a single entry with three sponsors. Our feeds publish it twice, because a per-source feed reproduces its own upstream and does not de-duplicate. The simulator must therefore *count* it as a collision -- which is the whole reason the collision note exists."
+      }
+    },
+    {
+      "day": "Wednesday, September 9",
+      "time": "4:00 p.m.",
+      "title": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
+      "speakers": ["Gina Noh, The Pennsylvania State University"],
+      "sponsors": ["Chemical and Biological Engineering"],
+      "series": "CBE Seminars Series",
+      "location": "CBE F204",
+      "expect": { "source": "cbe", "inFixtures": true }
+    },
+    {
+      "day": "Wednesday, September 9",
+      "time": "4:30 p.m.",
+      "title": "Harnessing Synthetic Data From Generative AI for Statistical Inference",
+      "speakers": ["Xihong Lin, Harvard University"],
+      "sponsors": ["Operations Research and Financial Engineering"],
+      "series": "S. S. Wilks Distinguished Lecture Series",
+      "location": "Computer Science, Room 104",
+      "expect": { "source": "orfe", "inFixtures": false }
+    }
+  ]
+}

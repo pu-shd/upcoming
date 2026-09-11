@@ -577,6 +577,30 @@ def test_the_summary_truncates_a_long_reason_rather_than_wrapping(registry, buil
 # --------------------------------------------------------------------------------------
 
 
+def test_every_feed_record_carries_its_units_own_name(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """Published because a consumer composing a listing has to credit the publisher.
+
+    Nothing turns the slug `citp` into "Center for Information Technology Policy" but the
+    registry, and the newsletter's editors write exactly that string by hand today.
+    """
+    document = json.loads(build_tree(registry, built, tmp_path).files["status.json"])
+    by_path = {f["path"]: f for f in document["feeds"]}
+    for source in registry.sources:
+        record = by_path[f"feeds/{source.slug}/events.json"]
+        assert record["label"] == source.label, source.slug
+    assert by_path["feeds/citp/events.json"]["label"] == "Center for Information Technology Policy"
+    # A combined feed is not one unit's, so it carries no label rather than a misleading one.
+    assert "label" not in by_path["combos/all/events.json"]
+
+
+def test_an_unavailable_feed_is_still_named(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """So a consumer can say what is missing, not just that something is."""
+    document = json.loads(build_tree(registry, built, tmp_path).files["status.json"])
+    cs = next(f for f in document["feeds"] if f["path"] == "feeds/cs/events.json")
+    assert cs["status"] == "disabled"
+    assert cs["label"]
+
+
 def test_a_successful_feed_records_when_it_was_built(registry, built, tmp_path):  # type: ignore[no-untyped-def]
     document = json.loads(build_tree(registry, built, tmp_path).files["status.json"])
     for record in document["feeds"]:

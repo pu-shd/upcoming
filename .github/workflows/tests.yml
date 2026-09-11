@@ -33,6 +33,13 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
+      # The simulator's edition logic is JavaScript by decision, so Node is a test
+      # dependency rather than a convenience. Installed here so the check runs for real:
+      # a test that skips itself when a tool is missing reports green while checking
+      # nothing, which is the failure this repository is built around.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - run: pip install -e '.[dev]'
       - run: pytest -q
 

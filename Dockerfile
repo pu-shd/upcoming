@@ -31,5 +31,15 @@ CMD ["python", "-m", "upcoming.cli", "check"]
 
 
 FROM runtime AS dev
+
+# Node is a test dependency, not a build one: the newsletter simulator's edition logic is
+# JavaScript by decision, and the suite exercises it through Node rather than leaving it
+# unchecked. It goes in `dev` alone -- generating feeds needs none of it -- and it is
+# installed rather than made optional, because a test that skips itself when a tool is
+# absent reports green while checking nothing.
+RUN apt-get update \
+ && apt-get install --no-install-recommends -y nodejs \
+ && rm -rf /var/lib/apt/lists/*
+
 RUN pip install --no-cache-dir -e '.[dev]'
 CMD ["pytest", "-q"]

@@ -160,6 +160,8 @@ schema/events.schema.json    the contract, served so a validator can $ref it
 state/upstream.json          internal bookkeeping, not a contract (see below)
 status.json                  what succeeded, what failed, and how stale anything is
 index.html                   the landing page, which reads status.json at load time
+simulator.html               the newsletter simulator (see below)
+simulator.js  style.css      its behaviour, and the styles both pages share
 ```
 
 Five combined feeds are declared in `config/combos.yaml` as set algebra over the
@@ -178,6 +180,64 @@ What that approach does not survive is a second department: `mae` publishes
 `Final Public Oral Exam` and `ece` publishes
 `Final Public Oral Examinations,Final Public Orals`, so a literal match finds neither. The
 vocabulary exists for the scale, not because the predecessor was wrong within its own.
+
+## The newsletter simulator
+
+`simulator.html` answers the question an editor actually has: *which of these events would
+my edition contain?* Pick a publication date and it shows what an editorial system would
+ingest for that edition, which titles are still unannounced, and the listing made up ready
+to compose. A menu moves between it and the feed listing.
+
+Beyond what the predecessor sites offer it adds **source selection** — a checkbox per feed,
+with unavailable ones shown and disabled beside their reason — and **purpose selection**,
+filtering on the `purposes` each event carries. One button selects the feeds declaring a
+purpose; the two controls otherwise stay independent, so neither silently overrides the
+other.
+
+**Nothing about the feeds is written into the page.** Sources, their names and their
+purposes all come from `status.json`, so a thirteenth source appears in the simulator the
+moment it is registered. That is a deliberate response to the predecessors: ORFE's and
+MAE's `feed-simulator.js` are **byte-identical** (`md5 1f4aa8d0…`) with the department
+baked in, which is how one file came to be maintained twice — and both are a lossy mirror
+of ORFE's 750-line `newsletter.py`, missing its blackouts and exceptions entirely.
+
+### The listing it exports
+
+Shaped like the edition the editors assemble in Mailchimp by hand: grouped by day, only
+days with events, each entry carrying the time and their own field labels — `Speaker(s):`,
+`Sponsor(s):`, `Series:`, `Location:`. Copy for Mailchimp puts it on the clipboard as rich
+text so a paste keeps its structure.
+
+**Sponsor** is the one field they write by hand that we can now generate: it is each feed's
+declared name for itself, which is why `label` joins every feed's record in `status.json`.
+Nothing turns the slug `citp` into "Center for Information Technology Policy" but the
+registry.
+
+Two things the feeds do not carry, so the page says so rather than leaving an editor to
+notice: an event's **modality** (their `(hybrid)` marker) and a building name longer than
+the calendar gives — `Bowen` where the newsletter writes `Bowen Hall`. A title still
+awaiting announcement is **marked** in the export, since replacing it is the editor's job.
+
+### Checked against an edition that went out
+
+`tests/fixtures/newsletter/2026-09-08-edition.json` is the real 7–14 September 2026 issue,
+transcribed from its Mailchimp export with every field verified against that file. The
+suite runs the simulator's own JavaScript through Node over the committed feeds and
+compares. Three of the seven events are in the fixture snapshot and are asserted exactly,
+sponsor included; the fixture records why the other four are not — three are ORFE events
+absent from the snapshot, and one is published by a unit we have no feed for.
+
+It found a real defect. `ai` and `materials` both list the same 12:05 talk, and the editors
+merged it into one entry with **three** sponsors. Our feeds publish it twice, correctly —
+a per-source feed reproduces its own upstream — so the simulator counts it as a repeat. But
+both titles were still *synthesized placeholders*, generated from each unit's own template,
+so matching on the title found no duplicate where there plainly was one. The repeat check
+now keys on the speaker's name whenever the title is a placeholder.
+
+The edition rule is the standard weekly schedule only — Monday publication at noon, the
+Tuesday before as the deadline, coverage from publication day to that week's Sunday. It has
+**no holiday shifts**: the real 7 September edition published on the Tuesday for Labor Day,
+and reproducing it means overriding the publication date, which the page tells you.
 
 ### Purpose
 

@@ -61,6 +61,11 @@ class PublishedFeed:
     detail: str = ""
     sources: tuple[str, ...] = ()
     notes: tuple[str, ...] = ()
+    #: The unit's own name for itself, as declared in the registry. Published because a
+    #: consumer composing a listing needs to credit the publisher, and deriving
+    #: "Center for Information Technology Policy" from the slug `citp` is not something a
+    #: consumer can do -- the newsletter's editors write exactly this string by hand today.
+    label: str = ""
     #: Downstream publications this feed is gathered for. Published so "which feeds does
     #: the newsletter draw on" is answerable from the manifest, including for the sources
     #: that are declared but unavailable.
@@ -207,6 +212,7 @@ def assemble(
                     detail=" ".join(source.reason.split())[:300],
                     sources=(source.slug,),
                     purposes=source.purposes,
+                    label=source.label,
                 )
             )
             continue
@@ -225,6 +231,7 @@ def assemble(
                     sources=(source.slug,),
                     notes=result.notes,
                     purposes=source.purposes,
+                    label=source.label,
                     last_success=generated_at,
                 ),
             )
@@ -244,6 +251,7 @@ def assemble(
                     detail=f"{detail}. Never published, so nothing is served at this path.",
                     sources=(source.slug,),
                     purposes=source.purposes,
+                    label=source.label,
                 )
             )
             degraded[source.slug] = f"{source.slug} failed and has never been published"
@@ -260,6 +268,7 @@ def assemble(
                 detail=detail,
                 sources=(source.slug,),
                 purposes=source.purposes,
+                label=source.label,
                 last_success=str(was.get(path, {}).get("lastSuccessAt", "")),
             ),
         )
@@ -363,6 +372,7 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
                 **({"stale": True} if feed.stale else {}),
                 **({"detail": feed.detail} if feed.detail else {}),
                 **({"lastSuccessAt": feed.last_success} if feed.last_success else {}),
+                **({"label": feed.label} if feed.label else {}),
                 **({"sources": list(feed.sources)} if feed.sources else {}),
                 **({"purposes": list(feed.purposes)} if feed.purposes else {}),
                 **({"notes": list(feed.notes)} if feed.notes else {}),
