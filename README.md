@@ -258,7 +258,10 @@ spellings of the same thing map to one tag. The predecessor excludes the literal
 The feeds deliberately carry **no timestamp**, which is what lets published bytes be
 compared byte-for-byte to detect drift — so `status.json` is the only file with a clock,
 and the only way a consumer can tell fresh from frozen. It names every feed, its status
-(`ok` / `empty` / `failed` / `disabled`), its event count, whether it is stale, and why.
+(`ok` / `empty` / `failed` / `disabled`), its event count, whether it is stale, why, and
+`lastSuccessAt` — when its content was last built from a live fetch. That last field is
+carried forward across failures, which is what makes staleness a **duration** rather than
+a yes/no: without it, every run of a week-long outage would look like its first.
 
 `empty` is first-class rather than a kind of failure: `kellercenter` serves a well-formed
 calendar with no events, and that payload is byte-identical to a broken source's. Only the
@@ -276,12 +279,35 @@ relies on, which is the failure mode this whole layer exists to prevent.
 One source failing still publishes the other eleven, still deploys, and still ends the run
 red.
 
+## Keeping it running
+
+GitHub disables scheduled workflows on a public repository after 60 days without
+repository activity: it emails the owner, stops running them, and nothing in the
+repository reports it. The site simply stops updating — and the watchdog that would notice
+stops with it. `heartbeat.yml` commits a keepalive once the repository has been quiet past
+35 days, leaving 25 days of slack, and separately asks the API whether each scheduled
+workflow is still `active`, re-enabling and reporting anything that is not. A workflow
+somebody switched off by hand is reported too: turning the publisher off is legitimate,
+leaving it off silently is not.
+
+The limit it cannot cover, stated rather than implied: if *every* scheduled workflow is
+disabled at once, the heartbeat is disabled too and cannot rescue itself. That is inherent
+to running your own monitoring inside the thing being monitored, and only a check from
+outside the repository answers it.
+
 ## Cadence and the watchdog
 
 `publish.yml` runs every 20 minutes on weekday daytime Eastern and hourly otherwise —
 departmental calendars are edited by people during working hours, so a uniform cadence
 spends most of its runs proving nothing changed overnight while still being slower than it
 needs to be when someone posts a seminar. The three crons do not overlap; a test proves it.
+
+That schedule is the *fastest* any source is polled, not the rate every source is polled
+at. Each source declares its own `cadence` (`30m`, `1h`, `6h`) and is only refetched once
+that has elapsed. `cee` published one event this term; asking it seventy-two times a day to
+be told nothing changed is not something to do to someone else's server. A source that is
+not due is reported as **current**, not stale — it is serving exactly what its own
+configuration asked for. `--ignore-cadence` overrides this.
 
 Every run deploys, including runs where no feed changed, because `status.json` is the
 site's liveness beacon. A consumer must be able to tell "we checked eleven minutes ago and
@@ -296,8 +322,12 @@ it. A check living inside that job would have been skipped by the same failure.
 It fetches `status.json`, checks its age, fetches every path the manifest promises, and
 compares the served event counts against the promised ones — which is what catches a
 **partial deploy**, where some paths updated and some did not and neither file alone looks
-wrong. A stale source warns rather than fails: the site is working, and a watchdog that
-stays red for the length of an upstream outage trains everyone to ignore it. It opens one
+wrong. Staleness is graded by duration rather than treated as a yes/no, which is the difference
+between a useful watchdog and an ignored one. A department whose server rebooted is stale
+for twenty minutes and needs nobody woken; one stale for two days is an outage nobody has
+noticed. Under six hours is a warning, past it a failure that files an issue. Reporting
+both the same way would mean either the reboot pages or the two-day outage stays green,
+and there is no threshold that makes both right. It opens one
 issue when something is wrong and closes it on recovery, so a problem outlives the run that
 found it.
 

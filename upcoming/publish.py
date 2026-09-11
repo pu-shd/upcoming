@@ -23,14 +23,16 @@ import json
 import os
 from collections.abc import Mapping
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
 from .build import BuildResult, render
 from .clock import now as clock_now
+from .clock import parse as parse_instant
 from .clock import stamp
 from .combine import Combo, ComboResult
-from .registry import Registry
+from .registry import Registry, SourceConfig
 from .serialize import WireFormat, dump_feed, load_feed, wire_format_for
 
 #: Status values a source can end a run with. ``empty`` is first-class rather than a kind
@@ -40,6 +42,12 @@ STATUS_OK = "ok"
 STATUS_EMPTY = "empty"
 STATUS_FAILED = "failed"
 STATUS_DISABLED = "disabled"
+
+#: Tolerance when comparing elapsed time against a cadence. Without it a 60-minute cadence
+#: checked by a 20-minute schedule waits 80 minutes, because the tick at 60 lands a few
+#: seconds early and the next one is 20 minutes later. Half a tick is enough to absorb
+#: that without ever letting a source drift past its next scheduled slot.
+_CADENCE_SLACK_MINUTES = 10
 
 
 @dataclass(frozen=True)
@@ -53,6 +61,11 @@ class PublishedFeed:
     detail: str = ""
     sources: tuple[str, ...] = ()
     notes: tuple[str, ...] = ()
+    #: When this feed's content was last built from a live fetch. Carried forward across
+    #: failures, so ``stale`` stops being a yes/no and becomes a duration: the watchdog can
+    #: then tell a twenty-minute blip from a week-long outage, which the two need, because
+    #: one is noise and the other is an outage nobody has noticed.
+    last_success: str = ""
 
 
 @dataclass
@@ -102,6 +115,61 @@ def previous_payload(
     return list(load_feed(records, wire_format))
 
 
+def previous_status(root: Path) -> dict[str, dict[str, Any]]:
+    """The last published ``status.json``, indexed by feed path.
+
+    Read so ``lastSuccessAt`` survives a failure. Without carrying it forward, the first
+    failed run would erase the only record of when the feed was actually current, and every
+    subsequent run would report the outage as if it had just started.
+    """
+    body = _last_good(root, "status.json")
+    if body is None:
+        return {}
+    try:
+        document = json.loads(body)
+    except json.JSONDecodeError:
+        return {}
+    feeds = document.get("feeds") if isinstance(document, dict) else None
+    if not isinstance(feeds, list):
+        return {}
+    return {
+        str(record["path"]): record
+        for record in feeds
+        if isinstance(record, dict) and "path" in record
+    }
+
+
+def due(
+    source: SourceConfig, was: Mapping[str, Mapping[str, Any]], *, now: datetime
+) -> tuple[bool, str]:
+    """Is this source due for a refetch, per its own declared cadence?
+
+    The cadence has been in ``config/sources.yaml`` since the first commit and nothing read
+    it, which made it a promise the code did not keep. Honouring it is politeness with
+    teeth: `cee` published one event this term, and refetching it every twenty minutes is
+    seventy-two requests a day to a departmental server to be told nothing changed.
+
+    A source that is not due is **current**, not stale -- it is serving exactly what its own
+    configuration asked for. Conflating the two would report eight of twelve departments as
+    degraded on most ticks.
+    """
+    record = was.get(f"feeds/{source.slug}/events.json")
+    if record is None:
+        return True, "never published"
+    raw = record.get("lastSuccessAt")
+    last = parse_instant(raw) if isinstance(raw, str) else None
+    if last is None:
+        return True, "no recorded success to measure from"
+    waited = (now - last).total_seconds() / 60
+    if waited < 0:
+        # A stamp in the future. Refetch rather than trust it: a clock this wrong would
+        # otherwise park the source indefinitely.
+        return True, "last success is dated in the future"
+    if waited + _CADENCE_SLACK_MINUTES < source.cadence_minutes:
+        return False, f"fetched {waited:.0f}m ago, cadence is {source.cadence_minutes}m"
+    return True, f"fetched {waited:.0f}m ago, cadence is {source.cadence_minutes}m"
+
+
 def assemble(
     registry: Registry,
     results: Mapping[str, BuildResult],
@@ -117,6 +185,7 @@ def assemble(
     make a run reproducible and so nothing in this module reaches for the time.
     """
     tree = Tree()
+    was = previous_status(root)
     #: slug -> why a combined feed built from it is not fully current. Recorded during the
     #: per-source pass and read during the combo pass, so a combo never has to guess at the
     #: state of its inputs by inspecting sibling records.
@@ -150,6 +219,7 @@ def assemble(
                     events=len(result.events),
                     sources=(source.slug,),
                     notes=result.notes,
+                    last_success=generated_at,
                 ),
             )
             continue
@@ -182,6 +252,7 @@ def assemble(
                 stale=True,
                 detail=detail,
                 sources=(source.slug,),
+                last_success=str(was.get(path, {}).get("lastSuccessAt", "")),
             ),
         )
         degraded[source.slug] = f"the last good copy of {source.slug}"
@@ -231,6 +302,17 @@ def assemble(
                 events=len(built.events),
                 stale=bool(reasons),
                 sources=built.inputs,
+                # A combined feed is exactly as current as its oldest input, so the
+                # earliest stamp is the honest one. Using `generated_at` here would report
+                # a feed built from a week-old copy as fresh.
+                last_success=min(
+                    (
+                        f.last_success
+                        for f in tree.feeds
+                        if f.last_success and f.sources and f.sources[0] in built.inputs
+                    ),
+                    default=generated_at,
+                ),
                 detail=f"built from {', '.join(reasons)}" if reasons else "",
                 notes=tuple(notes),
             ),
@@ -270,6 +352,7 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
                 "events": feed.events,
                 **({"stale": True} if feed.stale else {}),
                 **({"detail": feed.detail} if feed.detail else {}),
+                **({"lastSuccessAt": feed.last_success} if feed.last_success else {}),
                 **({"sources": list(feed.sources)} if feed.sources else {}),
                 **({"notes": list(feed.notes)} if feed.notes else {}),
             }
@@ -358,8 +441,10 @@ __all__ = [
     "PublishedFeed",
     "Tree",
     "assemble",
+    "due",
     "markdown_summary",
     "previous_payload",
+    "previous_status",
     "site_files",
     "status_document",
     "utc_now",

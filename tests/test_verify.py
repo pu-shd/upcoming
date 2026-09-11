@@ -171,6 +171,7 @@ def test_a_stale_source_warns_rather_than_fails() -> None:
     Failing here would make the watchdog red for as long as an upstream outage lasts,
     which trains everyone to ignore it -- the failure mode that lets a real outage through.
     """
+    recent = (NOW - timedelta(minutes=25)).strftime("%Y-%m-%dT%H:%M:%SZ")
     document = status(
         feeds=[
             {
@@ -178,6 +179,7 @@ def test_a_stale_source_warns_rather_than_fails() -> None:
                 "status": "failed",
                 "events": 2,
                 "stale": True,
+                "lastSuccessAt": recent,
                 "detail": "upstream returned 503",
             }
         ]
@@ -185,6 +187,7 @@ def test_a_stale_source_warns_rather_than_fails() -> None:
     findings, _ = verify(BASE, site(document), now=NOW)
     assert failures(findings) == []
     assert len(warnings(findings)) == 1
+    assert "25 minutes" in warnings(findings)[0].message
     assert "503" in warnings(findings)[0].message
 
 
@@ -200,7 +203,7 @@ def test_a_source_that_failed_with_nothing_to_serve_is_a_failure_not_a_warning()
             }
         ]
     )
-    findings = check_declared_feeds(document)
+    findings = check_declared_feeds(document, now=NOW)
     assert [f.level for f in findings] == [FAIL]
 
 
@@ -233,3 +236,82 @@ def test_the_age_limit_is_exclusive_at_the_boundary() -> None:
     assert check_freshness({"generatedAt": exactly}, now=NOW, max_age_minutes=90) == []
     over = (NOW - timedelta(minutes=91)).strftime("%Y-%m-%dT%H:%M:%SZ")
     assert check_freshness({"generatedAt": over}, now=NOW, max_age_minutes=90) != []
+
+
+# --------------------------------------------------------------------------------------
+# Staleness is a duration, not a yes/no
+# --------------------------------------------------------------------------------------
+
+
+def stale_feed(last_success: str | None, detail: str = "upstream returned 503") -> dict:
+    record = {
+        "path": "feeds/orfe/events.json",
+        "status": "failed",
+        "events": 2,
+        "stale": True,
+        "detail": detail,
+    }
+    if last_success is not None:
+        record["lastSuccessAt"] = last_success
+    return status(feeds=[record])
+
+
+def at(minutes: float) -> str:
+    return (NOW - timedelta(minutes=minutes)).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+@pytest.mark.parametrize("minutes", [1, 25, 120, 359])
+def test_a_recent_outage_warns(minutes: float) -> None:
+    """A department's server rebooting must not page anyone."""
+    findings = check_declared_feeds(stale_feed(at(minutes)), now=NOW)
+    assert [f.level for f in findings] == [WARN]
+
+
+@pytest.mark.parametrize("minutes", [361, 1440, 20000])
+def test_a_sustained_outage_fails(minutes: float) -> None:
+    """Two days stale is an outage nobody has noticed, not a blip.
+
+    Before this graded, both ends reported identically — so either the reboot paged or the
+    two-day outage stayed green, and there was no setting that made both right.
+    """
+    findings = check_declared_feeds(stale_feed(at(minutes)), now=NOW)
+    assert [f.level for f in findings] == [FAIL]
+    assert "outage rather than a blip" in findings[0].message
+
+
+def test_the_boundary_is_exclusive() -> None:
+    """Exactly at the limit is still a warning; a second past it is a failure."""
+    assert check_declared_feeds(stale_feed(at(360)), now=NOW)[0].level == WARN
+    assert check_declared_feeds(stale_feed(at(360 + 1 / 60)), now=NOW)[0].level == FAIL
+
+
+def test_the_limit_is_configurable_per_run() -> None:
+    document = stale_feed(at(120))
+    assert check_declared_feeds(document, now=NOW, max_stale_minutes=60)[0].level == FAIL
+    assert check_declared_feeds(document, now=NOW, max_stale_minutes=600)[0].level == WARN
+
+
+@pytest.mark.parametrize("value", [None, "", "not a time", "2026-09-11T12:00:00+00:00"])
+def test_absent_or_unreadable_timing_never_escalates(value: str | None) -> None:
+    """Warn on missing data; never fail on it.
+
+    A feed published before lastSuccessAt existed, or one that has never succeeded, must
+    not be reported as a two-day outage on the strength of a field we cannot read.
+    """
+    findings = check_declared_feeds(stale_feed(value), now=NOW)
+    assert [f.level for f in findings] == [WARN]
+    assert "serving a stale copy" in findings[0].message
+
+
+def test_the_duration_is_reported_in_units_a_person_reads() -> None:
+    def message(minutes: float) -> str:
+        return check_declared_feeds(stale_feed(at(minutes)), now=NOW)[0].message
+
+    assert "45 minutes" in message(45)
+    assert "3.0 hours" in message(180)
+    assert "5.0 days" in message(7200)
+
+
+def test_a_healthy_feed_produces_no_finding_at_all() -> None:
+    """Only the exceptions are reported; sixteen "fine" lines would bury the one that isn't."""
+    assert check_declared_feeds(status(), now=NOW) == []

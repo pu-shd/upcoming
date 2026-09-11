@@ -6,6 +6,11 @@
 # when someone actually posts a seminar. The three crons below do not overlap, so a
 # scheduled tick is never a duplicate run.
 #
+# Each source is refetched on its own declared cadence rather than on every tick, so the
+# 20-minute schedule is the *fastest* any source is polled, not the rate every source is
+# polled at. cee published one event this term; asking it seventy-two times a day to be
+# told nothing changed is not something to do to somebody else's server.
+#
 # Every run deploys, including the ones where no feed changed. That is deliberate:
 # status.json is the site's liveness beacon, and a consumer must be able to tell "we
 # checked eleven minutes ago and ORFE is stale" from "nothing has run in three days". The
@@ -43,6 +48,10 @@ on:
         description: 'Scrape event pages for the fields the ICS omits'
         type: boolean
         default: true
+      ignore_cadence:
+        description: 'Refetch every source, ignoring its declared cadence'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -98,6 +107,7 @@ jobs:
           BOT_BYPASS_HEADER: ${{ secrets.BOT_BYPASS_HEADER }}
           ENRICH: ${{ inputs.enrich }}
           ALLOW_LARGE_DIFF: ${{ inputs.allow_large_diff }}
+          IGNORE_CADENCE: ${{ inputs.ignore_cadence }}
         run: |
           set -uo pipefail
           if [ -z "${BOT_BYPASS_HEADER}" ]; then
@@ -109,6 +119,7 @@ jobs:
           # Unset on a schedule or a push, which is when enrichment should be on.
           if [ "${ENRICH:-true}" != "false" ]; then args+=(--enrich); fi
           if [ "${ALLOW_LARGE_DIFF:-false}" = "true" ]; then args+=(--allow-large-diff); fi
+          if [ "${IGNORE_CADENCE:-false}" = "true" ]; then args+=(--ignore-cadence); fi
 
           # `|| code=$?` rather than a bare `$?`, because the default shell is `bash -e`
           # and `set -uo pipefail` does not clear that. A source failing must still publish

@@ -28,6 +28,12 @@ from .fetch import FetchOutcome, Transport
 FAIL = "fail"
 WARN = "warn"
 
+#: How long a source may serve its last good feed before that stops being a blip. Six
+#: hours is eighteen failed fetches at the daytime cadence -- generous enough that a
+#: server reboot or a maintenance window does not page anyone, tight enough that nothing
+#: sits broken for a whole working day unnoticed.
+DEFAULT_MAX_STALE_MINUTES = 360
+
 
 @dataclass(frozen=True)
 class Finding:
@@ -80,12 +86,23 @@ def check_freshness(
     return []
 
 
-def check_declared_feeds(document: Mapping[str, object]) -> list[Finding]:
+def check_declared_feeds(
+    document: Mapping[str, object],
+    *,
+    now: datetime,
+    max_stale_minutes: int = DEFAULT_MAX_STALE_MINUTES,
+) -> list[Finding]:
     """Does the manifest itself report a problem?
 
     Read before fetching anything, because the site can be perfectly well served and still
-    be publishing a week-old copy of a department -- which is a real finding even though
-    every byte fetches with a 200.
+    be publishing a week-old copy of a department -- a real finding even though every byte
+    fetches with a 200.
+
+    Staleness is graded by **duration** rather than treated as a yes/no. That distinction
+    is the difference between a useful watchdog and an ignored one: a department whose
+    server rebooted is stale for twenty minutes and needs nobody woken, while one stale for
+    two days is an outage nobody has noticed. Reporting both the same way means either the
+    first pages or the second does not, and both of those are wrong.
     """
     findings: list[Finding] = []
     feeds = document.get("feeds")
@@ -96,21 +113,51 @@ def check_declared_feeds(document: Mapping[str, object]) -> list[Finding]:
         if not isinstance(record, dict):
             continue
         path = str(record.get("path", "?"))
-        status = record.get("status")
-        if status == "failed":
-            detail = record.get("detail", "no reason given")
+        detail = str(record.get("detail", "")) or "no reason given"
+
+        if not record.get("stale"):
+            if record.get("status") == "failed":
+                # Failed with nothing to fall back on, so this path serves nothing at all.
+                # Not merely degraded.
+                findings.append(Finding(FAIL, path, f"the last run failed: {detail}"))
+            continue
+
+        age = _stale_minutes(record, now=now)
+        if age is None:
+            # No lastSuccessAt to measure against -- an older publish, or a feed that has
+            # never succeeded. Warn, but never escalate on absent data.
+            findings.append(Finding(WARN, path, f"serving a stale copy: {detail}"))
+        elif age > max_stale_minutes:
             findings.append(
                 Finding(
-                    WARN if record.get("stale") else FAIL,
+                    FAIL,
                     path,
-                    f"the last run failed: {detail}",
+                    f"stale for {_duration(age)} -- past the "
+                    f"{_duration(max_stale_minutes)} limit, so this is an outage rather "
+                    f"than a blip: {detail}",
                 )
             )
-        elif record.get("stale"):
+        else:
             findings.append(
-                Finding(WARN, path, f"serving a stale copy: {record.get('detail', '')}")
+                Finding(WARN, path, f"stale for {_duration(age)}, still serving: {detail}")
             )
     return findings
+
+
+def _stale_minutes(record: Mapping[str, object], *, now: datetime) -> float | None:
+    """How long since this feed was last built from a live fetch."""
+    raw = record.get("lastSuccessAt")
+    moment = parse_stamp(raw) if isinstance(raw, str) else None
+    return None if moment is None else (now - moment).total_seconds() / 60
+
+
+def _duration(minutes: float) -> str:
+    """Minutes as something a person reads without having to divide."""
+    if minutes < 90:
+        return f"{minutes:.0f} minutes"
+    if minutes < 60 * 48:
+        return f"{minutes / 60:.1f} hours"
+    return f"{minutes / 1440:.1f} days"
 
 
 def check_served(
@@ -202,6 +249,7 @@ def verify(
     *,
     now: datetime,
     max_age_minutes: int = 90,
+    max_stale_minutes: int = DEFAULT_MAX_STALE_MINUTES,
     headers: Mapping[str, str] | None = None,
 ) -> tuple[list[Finding], Mapping[str, object] | None]:
     """Run every check against a live origin, returning findings and the manifest.
@@ -226,7 +274,7 @@ def verify(
 
     findings = [
         *check_freshness(document, now=now, max_age_minutes=max_age_minutes),
-        *check_declared_feeds(document),
+        *check_declared_feeds(document, now=now, max_stale_minutes=max_stale_minutes),
         *check_served(document, base_url, transport, headers=headers),
         *check_landing_page(base_url, transport, headers=headers),
     ]
@@ -242,6 +290,7 @@ def warnings(findings: Sequence[Finding]) -> list[Finding]:
 
 
 __all__ = [
+    "DEFAULT_MAX_STALE_MINUTES",
     "FAIL",
     "WARN",
     "Finding",

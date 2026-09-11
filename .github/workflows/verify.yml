@@ -45,6 +45,10 @@ jobs:
       # that a single delayed scheduled run -- which GitHub does routinely under load --
       # is not a page.
       MAX_AGE: ${{ inputs.max_age_minutes || '90' }}
+      # One source serving its last good feed for six hours is eighteen failed fetches:
+      # an outage rather than a blip, and worth an issue. Below that it is a warning, so a
+      # departmental server rebooting does not train everyone to ignore this workflow.
+      MAX_STALE: ${{ inputs.max_stale_minutes || '360' }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -67,7 +71,8 @@ jobs:
           code=0
           python -m upcoming.cli verify \
             --base-url "$SITE_BASE_URL" \
-            --max-age-minutes "$MAX_AGE" > report.txt 2>&1 || code=$?
+            --max-age-minutes "$MAX_AGE" \
+            --max-stale-minutes "$MAX_STALE" > report.txt 2>&1 || code=$?
           cat report.txt
           echo "status=$code" >> "$GITHUB_OUTPUT"
           {

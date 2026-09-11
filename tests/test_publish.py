@@ -12,6 +12,7 @@ import json
 import re
 from collections.abc import Mapping
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
 
 import pytest
 
@@ -27,6 +28,7 @@ from upcoming.publish import (
     STATUS_OK,
     PublishedFeed,
     assemble,
+    due,
     markdown_summary,
     previous_payload,
     status_document,
@@ -564,3 +566,128 @@ def test_the_summary_truncates_a_long_reason_rather_than_wrapping(registry, buil
     tree = build_tree(registry, built, tmp_path)
     for line in markdown_summary(tree, generated_at=FIXED_TIME).splitlines():
         assert len(line) < 400
+
+
+# --------------------------------------------------------------------------------------
+# lastSuccessAt, which turns staleness from a yes/no into a duration
+# --------------------------------------------------------------------------------------
+
+
+def test_a_successful_feed_records_when_it_was_built(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    document = json.loads(build_tree(registry, built, tmp_path).files["status.json"])
+    for record in document["feeds"]:
+        if record["status"] in {"ok", "empty"}:
+            assert record["lastSuccessAt"] == FIXED_TIME
+
+
+def test_the_stamp_survives_a_failure(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """Without carrying it forward, every run of an outage looks like its first.
+
+    Erasing it on the first failure would leave nothing to measure, and the watchdog could
+    never tell a twenty-minute blip from a week.
+    """
+    write(build_tree(registry, built, tmp_path), tmp_path)
+    results, combos, config = built
+    broken = dict(results)
+    broken["orfe"] = BuildResult("orfe", "failed", diagnostics=("boom",))
+    later = "2026-09-12T09:00:00Z"
+    tree = assemble(registry, broken, combos, config, root=tmp_path, generated_at=later)
+
+    document = json.loads(tree.files["status.json"])
+    orfe = next(f for f in document["feeds"] if f["path"] == "feeds/orfe/events.json")
+    assert document["generatedAt"] == later
+    assert orfe["lastSuccessAt"] == FIXED_TIME  # the earlier run, not this one
+
+
+def test_a_combo_reports_its_oldest_input_not_its_own_build_time(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """A union built from a week-old copy of one department is a week old.
+
+    Stamping it with the run time would report it as fresh, which is the lie the whole
+    staleness mechanism exists to prevent.
+    """
+    write(build_tree(registry, built, tmp_path), tmp_path)
+    results, combos, config = built
+    broken = dict(results)
+    broken["orfe"] = BuildResult("orfe", "failed", diagnostics=("boom",))
+    tree = assemble(
+        registry, broken, combos, config, root=tmp_path, generated_at="2026-09-12T09:00:00Z"
+    )
+
+    records = {f.path: f for f in tree.feeds}
+    assert records["combos/all/events.json"].last_success == FIXED_TIME
+    # engineering excludes orfe, so every one of its inputs is current.
+    assert records["combos/engineering/events.json"].last_success == "2026-09-12T09:00:00Z"
+
+
+def test_a_corrupt_previous_status_does_not_stop_a_publish(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """Losing the stamps is a degradation; refusing to publish would be an outage."""
+    (tmp_path / "status.json").write_text("{ truncated")
+    tree = build_tree(registry, built, tmp_path)
+    assert json.loads(tree.files["status.json"])["feeds"]
+
+
+# --------------------------------------------------------------------------------------
+# The declared cadence, which nothing read until now
+# --------------------------------------------------------------------------------------
+
+
+def test_a_source_never_published_is_always_due(registry):  # type: ignore[no-untyped-def]
+    orfe = next(s for s in registry.live if s.slug == "orfe")
+    is_due, why = due(orfe, {}, now=datetime(2026, 9, 11, 12, tzinfo=UTC))
+    assert is_due
+    assert "never published" in why
+
+
+def test_a_source_fetched_within_its_cadence_is_not_due(registry):  # type: ignore[no-untyped-def]
+    """`cee` published one event this term; asking it 72 times a day is not politeness."""
+    cee = next(s for s in registry.live if s.slug == "cee")
+    assert cee.cadence_minutes == 360
+    now = datetime(2026, 9, 11, 12, tzinfo=UTC)
+    was = {"feeds/cee/events.json": {"lastSuccessAt": "2026-09-11T10:00:00Z"}}
+    is_due, why = due(cee, was, now=now)
+    assert is_due is False
+    assert "cadence is 360m" in why
+
+
+def test_a_source_past_its_cadence_is_due(registry):  # type: ignore[no-untyped-def]
+    cee = next(s for s in registry.live if s.slug == "cee")
+    now = datetime(2026, 9, 11, 12, tzinfo=UTC)
+    was = {"feeds/cee/events.json": {"lastSuccessAt": "2026-09-11T05:00:00Z"}}
+    assert due(cee, was, now=now)[0] is True
+
+
+def test_the_slack_stops_a_cadence_slipping_a_whole_tick(registry):  # type: ignore[no-untyped-def]
+    """A 60-minute cadence checked every 20 minutes must not become 80.
+
+    The tick at 60 minutes lands a few seconds early, so a strict comparison defers to the
+    next one — and every source with an hourly cadence would quietly run at 80 minutes.
+    """
+    mae = next(s for s in registry.live if s.slug == "mae")
+    assert mae.cadence_minutes == 60
+    now = datetime(2026, 9, 11, 12, tzinfo=UTC)
+    was = {"feeds/mae/events.json": {"lastSuccessAt": "2026-09-11T11:00:02Z"}}
+    assert due(mae, was, now=now)[0] is True
+
+
+@pytest.mark.parametrize("stamp_value", ["", "not a time", None])
+def test_an_unreadable_stamp_means_fetch_rather_than_skip(registry, stamp_value):  # type: ignore[no-untyped-def]
+    """Never let missing data park a source indefinitely."""
+    cee = next(s for s in registry.live if s.slug == "cee")
+    record: dict = {} if stamp_value is None else {"lastSuccessAt": stamp_value}
+    assert due(cee, {"feeds/cee/events.json": record}, now=datetime(2026, 9, 11, tzinfo=UTC))[0]
+
+
+def test_a_future_stamp_means_fetch_rather_than_trust_it(registry):  # type: ignore[no-untyped-def]
+    cee = next(s for s in registry.live if s.slug == "cee")
+    was = {"feeds/cee/events.json": {"lastSuccessAt": "2027-01-01T00:00:00Z"}}
+    is_due, why = due(cee, was, now=datetime(2026, 9, 11, tzinfo=UTC))
+    assert is_due is True
+    assert "future" in why
+
+
+def test_every_live_source_declares_a_cadence_that_parses(registry):  # type: ignore[no-untyped-def]
+    """A typo falls back to an hour, so a silent fallback must not be hiding in config."""
+    from upcoming.registry import parse_cadence
+
+    for source in registry.live:
+        assert parse_cadence(source.cadence, default=-1) > 0, source.slug

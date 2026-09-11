@@ -26,6 +26,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from .build import BuildResult, build_from_file, load_pronunciation, render
+from .clock import now as clock_now
 from .combine import combine, load_combos
 from .errors import ConfigFatal
 from .fetch import FetchOutcome, HttpTransport, fetch_feeds
@@ -44,15 +45,17 @@ from .model import Event, from_wire
 from .publish import (
     STATUS_DISABLED,
     assemble,
+    due,
     markdown_summary,
     previous_payload,
+    previous_status,
     utc_now,
     write,
 )
 from .registry import load_registry
 from .scrape import build_cache
 from .serialize import wire_format_for
-from .verify import FAIL, failures, verify, warnings
+from .verify import DEFAULT_MAX_STALE_MINUTES, FAIL, failures, verify, warnings
 
 EXIT_OK = 0
 EXIT_USAGE = 2
@@ -140,6 +143,14 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     publish.add_argument("--enrich", action="store_true", help="also scrape event pages")
     publish.add_argument(
+        "--ignore-cadence",
+        action="store_true",
+        help=(
+            "refetch every source regardless of its declared cadence. Without this a "
+            "source is only refetched once its own cadence has elapsed."
+        ),
+    )
+    publish.add_argument(
         "--summary",
         help="write a markdown run summary to this path (CI writes it to the job page)",
     )
@@ -210,6 +221,15 @@ def _build_parser() -> argparse.ArgumentParser:
         help=(
             "how stale status.json may be before it is a failure (default: 90, three "
             "missed runs at the 30-minute cadence)"
+        ),
+    )
+    verify_cmd.add_argument(
+        "--max-stale-minutes",
+        type=int,
+        default=DEFAULT_MAX_STALE_MINUTES,
+        help=(
+            "how long one source may serve its last good feed before that is an outage "
+            "rather than a blip (default: 360)"
         ),
     )
     verify_cmd.add_argument(
@@ -352,11 +372,35 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
     # committed fixtures. CI passes --fetch; a developer reproducing a published tree
     # locally does not, and gets the same code path over known bytes.
     fetched: dict[str, FetchOutcome] = {}
+    skipped: dict[str, str] = {}
     if args.fetch:
         feeds_root.mkdir(parents=True, exist_ok=True)
+        published = previous_status(out_root)
+        moment = clock_now()
+
+        # Each source declares its own cadence, and honouring it is the difference between
+        # asking a quiet departmental server twelve times a day and seventy-two. A source
+        # that is not due keeps the capture already on disk; if there is none -- a fresh
+        # checkout -- it is fetched regardless, since a skipped fetch with nothing to skip
+        # to would publish nothing.
+        wanted = []
+        for source in registry.live:
+            is_due, why = (
+                (True, "forced") if args.ignore_cadence else due(source, published, now=moment)
+            )
+            if is_due or not (feeds_root / source.slug / "feed.ics").is_file():
+                wanted.append(source)
+            else:
+                skipped[source.slug] = why
+
         fetched = fetch_feeds(
-            registry.live, feeds_root, HttpTransport(retries=registry.live[0].http.retries)
+            wanted, feeds_root, HttpTransport(retries=registry.live[0].http.retries)
         )
+        if skipped:
+            print(
+                f"not due, serving the current capture: {', '.join(sorted(skipped))}",
+                file=sys.stderr,
+            )
 
     results: dict[str, BuildResult] = {}
     by_source: dict[str, tuple[Event, ...]] = {}
@@ -504,6 +548,7 @@ def _cmd_verify(args: argparse.Namespace) -> int:
         HttpTransport(),
         now=datetime.now(UTC),
         max_age_minutes=args.max_age_minutes,
+        max_stale_minutes=args.max_stale_minutes,
     )
 
     if document is not None:

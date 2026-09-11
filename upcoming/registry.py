@@ -61,6 +61,23 @@ ROLE_RULES = "rules"
 #: are repo config only -- putting the most failure-prone decision in the system into an
 #: invisible, unreviewed, untested repository variable is what made the fork's central bug
 #: possible.
+#: Suffixes a cadence may use. Minutes, hours, days -- nothing finer, because the
+#: publishing schedule itself never ticks faster than every twenty minutes.
+_CADENCE_UNITS = {"m": 1, "h": 60, "d": 1440}
+
+
+def parse_cadence(value: str, default: int = 60) -> int:
+    """Minutes for a cadence string like ``30m``, ``2h`` or ``1d``."""
+    text = str(value).strip().lower()
+    if len(text) < 2 or text[-1] not in _CADENCE_UNITS:
+        return default
+    try:
+        count = int(text[:-1])
+    except ValueError:
+        return default
+    return count * _CADENCE_UNITS[text[-1]] if count > 0 else default
+
+
 ENV_OVERRIDABLE = frozenset({"feed_url", "status", "enrich_enabled", "cadence"})
 
 #: Fields a scrape may write. Validated at load, so a typo is a config error rather than a
@@ -154,7 +171,21 @@ class SourceConfig:
     expectations: Expectations
     feed_url: str | None = None
     host: str = ""
+    #: How often this source wants to be refetched, as "30m", "2h" or "1d". Declared per
+    #: source because these servers differ: ORFE posts several times a week, cee posted
+    #: once this term. Refetching a quiet departmental server every twenty minutes is
+    #: seventy-two requests a day to be told nothing changed.
     cadence: str = "1h"
+
+    @property
+    def cadence_minutes(self) -> int:
+        """``cadence`` as minutes. Unparseable falls back to an hour rather than to zero.
+
+        Zero would mean "always refetch", so a typo would silently turn the politeness this
+        setting exists for into the maximum possible load on someone else's server.
+        """
+        return parse_cadence(self.cadence)
+
     #: Ordered location rule chain. Order is load-bearing and asserted by test.
     location_rules: tuple[str, ...] = ()
     enrich: tuple[EnrichTarget, ...] = ()
