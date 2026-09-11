@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pu-shd-upcoming"
+version = "0.1.0"
+description = "Multi-source campus event feeds: one events.json per source, plus composable combined feeds."
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+  "requests",
+  "ics",
+  # ics 0.7.3 requires tatsu <5.16.0; 5.17.0 also shipped with a broken rich dependency.
+  "tatsu>=4.2,<5.16",
+  "arrow",
+  "beautifulsoup4",
+  "markdownify",
+  "jsonschema>=4.18",  # 4.18 ships `referencing`, which replaces the deprecated RefResolver
+  "PyYAML",            # the registry and combos are YAML; workflow-contract tests parse CI YAML
+  # zoneinfo fallback: Windows ships no IANA tz database and slim base images may drop theirs.
+  "tzdata",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "mypy", "types-requests", "types-PyYAML"]
+
+[project.scripts]
+upcoming = "upcoming.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["upcoming*"]
+
+[tool.pytest.ini_options]
+# Explicit pythonpath: adding pyproject.toml changes pytest's rootdir resolution, and
+# without this the package imports break all at once.
+pythonpath = ["."]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_unused_ignores = true
+warn_redundant_casts = true
+
+# Strict over the modules carrying the operational invariants. The BeautifulSoup and `ics`
+# surfaces stay at default: making them strict-clean is a week of `# type: ignore` for no
+# real safety, while these modules are where a type error becomes wrong published data.
+[[tool.mypy.overrides]]
+module = ["upcoming.model", "upcoming.registry", "upcoming.errors"]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["ics.*", "bs4.*", "markdownify.*", "arrow.*"]
+ignore_missing_imports = true

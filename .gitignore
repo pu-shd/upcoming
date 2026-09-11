@@ -26,3 +26,8 @@ out/
 # Agent tooling (never commit)
 CLAUDE.md
 .claude/
+
+# Generated feeds -- published via release and Pages, never committed to main
+/feeds/
+/combos/
+/build/

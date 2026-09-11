@@ -1,0 +1,19 @@
+# Keep the build context small. Without this the local virtualenv alone pushes the context
+# past 40MB, which slows every build and can bake a host-specific venv into the image.
+.venv/
+venv/
+.git/
+.github/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Generated output never belongs in the image.
+build/
+dist/
+feeds/
+combos/

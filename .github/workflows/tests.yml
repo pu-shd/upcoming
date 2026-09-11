@@ -1,0 +1,57 @@
+# Correctness and quality gates. Deliberately separate from any publishing workflow: a
+# lint failure must never be able to stop a feed from publishing, so lint gates pull
+# requests, not publishes.
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # A visibly fake value. The registry refuses to load a source with enrichment
+      # enabled when this is unset -- which is the intended behaviour -- so CI supplies a
+      # placeholder to prove config loading, never to authenticate. The suite reaches no
+      # network: an autouse fixture makes any real socket connection raise.
+      BOT_BYPASS_TOKEN: ci-placeholder-not-a-credential
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -e '.[dev]'
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: mypy upcoming
+
+  container:
+    # Exists so `make docker-test` cannot rot: the containerized path is the one a
+    # developer runs locally, and nothing else in CI would notice it breaking.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose -f docker-compose.yml run --rm tests

@@ -1,0 +1,288 @@
+# The source registry.
+#
+# Every feed in scope appears here, including the ones that do not work yet -- a gap
+# recorded as config is reviewable, and enabling a source becomes a one-line change with a
+# test rather than an archaeology project.
+#
+# Field semantics are declared per source and have NO default. On these feeds SUMMARY
+# carries the speaker on some sites and the talk title on others; both satisfy the same
+# schema, so a wrong mapping produces valid, error-free output with the two fields
+# transposed and nothing anywhere reports a problem. `expectations.summary_role` is the
+# human's statement of that fact, and the loader refuses a source without it.
+#
+# All counts and shapes in the comments below were measured on 2026-09-11, not assumed.
+
+defaults:
+  platform: princeton-site-builder
+  url_template: "https://{host}/feeds/events/ical.ics"
+  timezone: America/New_York
+  status: live
+  cadence: 1h
+  rebuild_after_hours: 24
+  uid_pattern: '^ps_events:\d+:delta:0$'
+
+  http:
+    timeout:
+      connect: 5
+      read: 15
+    retries: 2
+    # 403 is deliberately absent: on these hosts it is a bot challenge, not a transient
+    # fault, so retrying burns the budget while the actual fix is a credential.
+    retry_on: [429, 500, 502, 503, 504]
+    headers:
+      User-Agent: "pu-shd-upcoming/0.1 (+https://github.com/pu-shd/upcoming)"
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+      # Load-bearing on every Site Builder host, not just one: measured, every event page
+      # returns 403 to every client without this header, while every ICS endpoint answers
+      # a bare request. So a missing value degrades enrichment ONLY -- the feed still
+      # publishes, green, with nothing scraped. No literal and no fallback default: the
+      # loader fails for any source with enrichment enabled when the secret is unset.
+      x-wdsoit-bot-bypass: "${secret:BOT_BYPASS_TOKEN}"
+
+  # Ordered chain. Order is load-bearing: `detail_dash_name` must precede the room-token
+  # rules, or "125 - Sherrerd Hall" mis-splits. Each rule declines rather than guessing,
+  # and `whole` puts an unsplittable venue in `name` entire.
+  location_rules: [detail_dash_name, comma_room, parenthetical, slash_room, room_token, whole]
+
+  expectations:
+    min_events: 1
+    allow_empty: false
+    min_enrich_success_rate: 0.8
+    max_location_declined_rate: 0.3
+
+sources:
+  # ---------------------------------------------------------------------------------
+  # Live Princeton Site Builder feeds
+  # ---------------------------------------------------------------------------------
+
+  - slug: orfe
+    label: Operations Research and Financial Engineering
+    host: orfe.princeton.edu
+    cadence: 30m
+    rebuild_after_hours: 6
+    # SUMMARY is the speaker ("FPO\, Aaradhya Pandey"); the talk title lives on the event
+    # page. The exact inverse of mae, and the pair that proves the registry works.
+    location_rules: [detail_dash_name, room_token, whole]
+    enrich:
+      - field: title
+        selectors: ["div.event-subtitle"]
+        mode: fill
+        provenance: enriched
+      - field: raw_details
+        selectors: ["div.events-detail-main", "div.event-details-main"]
+    expectations:
+      summary_role: speaker
+      min_events: 5
+      require_nonempty: [speaker]
+      # Every one of its 23 events needs a synthesized title, since the feed carries none.
+      max_placeholder_title_rate: 1.0
+
+  - slug: citp
+    label: Center for Information Technology Policy
+    host: citp.princeton.edu
+    cadence: 30m
+    rebuild_after_hours: 6
+    # Composite: "Arvind Narayanan - AI Agents and the Augmentation Agenda".
+    location_rules: [room_token, whole]
+    expectations:
+      summary_role: composite
+      min_events: 5
+      max_placeholder_title_rate: 0.3
+
+  - slug: quantum
+    label: Princeton Quantum Initiative
+    host: quantum.princeton.edu
+    # Two composite shapes:
+    #   'Quantum Group Meeting: "…title…" - Sid Midha (Gopalakrishnan Group)'
+    #   'Princeton Quantum Colloquium: TBD\, Francesca Ferlaino (University of Innsbruck)'
+    # 14 of 18 events carry a TBD title -- series and speaker known, title genuinely
+    # unset. That is normal here, so the placeholder band is wide on purpose; what should
+    # alert is a change in the rate, not the rate itself.
+    location_rules: [room_token, whole]
+    expectations:
+      summary_role: composite
+      max_placeholder_title_rate: 0.95
+
+  - slug: materials
+    label: Princeton Materials Institute
+    host: materials.princeton.edu
+    # "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts\, University of Texas at Austin"
+    # Also carries "Briger Hall (C112 + Atrium C102)", hence the parenthetical rule, and
+    # two events with no LOCATION property at all.
+    location_rules: [parenthetical, room_token, whole]
+    expectations:
+      summary_role: composite
+      max_location_declined_rate: 0.4
+
+  - slug: ece
+    label: Electrical and Computer Engineering
+    host: ece.princeton.edu
+    # Not in the original host list: discovered because nextg.princeton.edu has no feed of
+    # its own and its events page links here.
+    location_rules: [room_token, whole]
+    expectations:
+      summary_role: title
+      max_placeholder_title_rate: 0.2
+
+  - slug: cbe
+    label: Chemical and Biological Engineering
+    host: cbe.princeton.edu
+    # Writes BOTH "E105 SEAS-BioE" (room first) and "SEAS-CBE F212" (building first) in one
+    # feed, which is why the room rule splits only when exactly one end looks like a room
+    # and declines otherwise.
+    location_rules: [room_token, whole]
+    expectations:
+      summary_role: title
+      max_placeholder_title_rate: 0.2
+
+  - slug: mae
+    label: Mechanical and Aerospace Engineering
+    host: mae.princeton.edu
+    # SUMMARY is the talk title and the event page carries the speaker -- the inverse of
+    # orfe. One event's entire SUMMARY is the literal string "TBD" and one has
+    # LOCATION:TBD, so sentinel detection is exercised from the first source built.
+    location_rules: [slash_room, room_token, whole]
+    enrich:
+      - field: speaker
+        selectors:
+          - "div.field--name-field-ps-event-speaker-name"
+          - "div.event-subtitle"
+        mode: fill
+        # No provenance: this targets `speaker`, and claiming the title was "enriched"
+        # because a speaker was scraped would report a still-unknown title as real.
+      - field: raw_details
+        selectors: ["div.events-detail-main", "div.event-details-main"]
+    expectations:
+      summary_role: title
+      require_nonempty: [title]
+
+  - slug: ai
+    label: Princeton AI Lab
+    host: ai.princeton.edu
+    # MIXED WITHIN ONE FEED -- the case a single per-source mapping cannot express:
+    #   "Rafael Gomez-Bombarelli"                                    -> a speaker
+    #   "Whose AI for Amazon Forests? Technological Sovereignty…"    -> a title
+    #   "ORFE Talks & Seminars Flyers Fall 2026 Colloquium"          -> a series listing
+    # Also carries all three location conventions: "Bowen Hall 222",
+    # "Aaron Burr Hall\, Room 216", "101 Sherrerd Hall".
+    location_rules: [comma_room, room_token, whole]
+    expectations:
+      summary_role: mixed
+      max_placeholder_title_rate: 0.6
+
+  - slug: bioengineering
+    label: Omenn-Darling Bioengineering Institute
+    host: bioengineering.princeton.edu
+    # One event page carries 12 speaker-name fields (a multi-speaker symposium), which the
+    # scalar speaker field cannot represent. Enrichment stays off until that is decided.
+    location_rules: [comma_room, room_token, whole]
+    expectations:
+      summary_role: title
+      min_events: 1
+
+  - slug: cee
+    label: Civil and Environmental Engineering
+    host: cee.princeton.edu
+    cadence: 6h
+    # Legitimately tiny: 1 event. A relative count floor would read that as a collapse, so
+    # the floor stays absolute here.
+    location_rules: [room_token, whole]
+    expectations:
+      summary_role: title
+      min_events: 1
+
+  - slug: robotics
+    label: Princeton Robotics
+    host: robotics.princeton.edu
+    cadence: 6h
+    # 1 event, and "Commons" has no room component -- the location chain must decline
+    # rather than invent a split.
+    location_rules: [room_token, whole]
+    expectations:
+      summary_role: title
+      min_events: 1
+
+  # ---------------------------------------------------------------------------------
+  # Live, but a different platform
+  # ---------------------------------------------------------------------------------
+
+  - slug: kellercenter
+    label: Keller Center for Innovation in Engineering Education
+    host: kellercenter.princeton.edu
+    platform: drupal-ical-api
+    feed_url: "https://kellercenter.princeton.edu/events.ics"
+    cadence: 6h
+    # PRODID:-//Drupal iCal API//EN, NOT Site Builder, from a URL that looks conventional.
+    # Currently a well-formed VCALENDAR with zero VEVENTs. `allow_empty` is what separates
+    # "valid and empty" from "broken": the two payloads are identical and only this
+    # declaration knows which is which. A min_events floor here would leave the source
+    # permanently red, which teaches everyone to ignore the alerts.
+    #
+    # uid_pattern is explicitly unset rather than inheriting Site Builder's: this
+    # platform's UID scheme is unknown, and a UID that fails a declared pattern should
+    # surface as an anomaly instead of being assumed to fit.
+    uid_pattern: null
+    location_rules: [comma_room, room_token, whole]
+    expectations:
+      summary_role: title
+      min_events: 0
+      allow_empty: true
+
+  # ---------------------------------------------------------------------------------
+  # No machine-readable feed. Declared so the gap is visible and the investigation is
+  # recorded; never fetched, never published.
+  # ---------------------------------------------------------------------------------
+
+  - slug: nextg
+    label: NextG Initiative
+    host: nextg.princeton.edu
+    status: unavailable
+    reason: >
+      No feed of its own; its events page links to ece.princeton.edu, so it is correctly a
+      derived view rather than a second fetch. But ece's feed carries exactly one
+      CATEGORIES value across all 12 events -- "Final Public Oral Examinations,Final Public
+      Orals" on 7, and no CATEGORIES at all on the other 5 -- so there is no NextG
+      discriminator in the data to filter on. Enable as a combo over ece once ECE tags
+      NextG events, or once NextG supplies a curated list. A guessed predicate here would
+      be the config-layer version of the mapping bug this project exists to prevent.
+
+  - slug: cs
+    label: Computer Science
+    host: www.cs.princeton.edu
+    status: unavailable
+    reason: >
+      Drupal, but not Princeton Site Builder and with no iCal view enabled. Checked the
+      bare apex too: cs.princeton.edu 301s to www.cs.princeton.edu, so it is the same host
+      rather than a second one. /feeds/events/ical.ics, /events/ical, /ical,
+      /calendar/ical and /events/export/ical all 404 on both spellings, and /events
+      carries no ics, ical or webcal link. Needs an iCal view upstream, or an
+      HTML-listing adapter.
+
+  - slug: acee
+    label: Andlinger Center for Energy and the Environment
+    host: acee.princeton.edu
+    status: unavailable
+    reason: >
+      WordPress 7.1. REST exposes an `events` post type but its ACF fields are empty to an
+      unauthenticated client, so no start or end time is available. /events/feed/ 404s and
+      /events/?ical=1 returns HTML. Needs an ICS export plugin, or ACF date fields exposed
+      to REST.
+
+  - slug: decenter
+    label: DeCenter for Decentralization
+    host: decenter.princeton.edu
+    status: unavailable
+    reason: >
+      WordPress 7.1. REST exposes `conference` and `eng_event` post types; `eng_event`
+      carries an `acf` object that is empty unauthenticated, so no event dates are
+      available. /events/feed/ 404s and /events/?ical=1 returns HTML.
+
+  - slug: metro
+    label: Metropolis Project
+    host: metro.princeton.edu
+    status: unavailable
+    reason: >
+      WordPress 7.1. /events/feed/ does return RSS with 10 items, but its pubDate is the
+      post publication date rather than the event date, so it cannot produce a calendar.
+      REST exposes a `metroevents` type (rest_base `event`) whose ACF fields are empty
+      unauthenticated.

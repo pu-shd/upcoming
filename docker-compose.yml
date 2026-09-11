@@ -1,0 +1,49 @@
+# Invoked as `docker-compose` (the v1 spelling), so the top-level `version` key stays:
+# Compose v1 reads a file without it as the legacy format, in which top-level keys are
+# service names, and would try to build a service literally called "services". Compose v2
+# only warns that the key is obsolete.
+version: "3.8"
+
+services:
+  # The default. `make docker-test` runs this.
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    working_dir: /app
+    environment:
+      TZ: America/New_York
+      # A value, not a real credential. The registry refuses to load a source with
+      # enrichment enabled when this is unset, which is the intended behaviour -- so the
+      # test run supplies a placeholder to prove config loading, never to authenticate.
+      BOT_BYPASS_TOKEN: docker-test-token
+    # Bind-mount so iterating needs no rebuild.
+    volumes:
+      - .:/app
+    command: pytest -q
+
+  # Lint and types. Separate from `tests` because a lint failure must never be able to
+  # stop a feed from publishing -- these gate pull requests, not publishes.
+  lint:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    working_dir: /app
+    environment:
+      TZ: America/New_York
+    volumes:
+      - .:/app
+    command: bash -lc "ruff check . && ruff format --check . && mypy upcoming"
+
+  # Show the resolved registry. The quickest way to see, in one table, what every source
+  # believes its SUMMARY field means -- which is the comparison that catches a source
+  # onboarded by copy-paste from a department whose convention is the opposite.
+  sources:
+    extends:
+      service: tests
+    environment:
+      TZ: America/New_York
+      BOT_BYPASS_TOKEN: docker-test-token
+    command: python -m upcoming.cli sources
