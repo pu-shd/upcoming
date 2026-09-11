@@ -24,6 +24,9 @@
     "tags": [
       "ai"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "AI for Accelerating Invention",
       "Princeton AI"
@@ -71,6 +74,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -116,6 +122,9 @@
     "series": "",
     "tags": [
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -163,6 +172,9 @@
     "tags": [
       "listing"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -208,6 +220,9 @@
     "series": "",
     "tags": [
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -255,6 +270,9 @@
     "tags": [
       "listing"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -301,6 +319,9 @@
     "tags": [
       "ai",
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "AI for Accelerating Invention",

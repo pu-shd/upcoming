@@ -66,6 +66,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -129,6 +132,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Rising Stars Seminars"
     ],
@@ -182,6 +188,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "BioE Colloquium"
     ],
@@ -234,6 +243,9 @@
     "series": "BioE Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "BioE Colloquium"

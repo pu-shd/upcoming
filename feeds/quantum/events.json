@@ -24,6 +24,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -76,6 +79,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -130,6 +136,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -182,6 +191,9 @@
     "series": "Quantum Group Meeting",
     "tags": [
       "group-meeting"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Quantum Group Meeting"
@@ -236,6 +248,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -288,6 +303,9 @@
     "series": "Quantum Group Meeting",
     "tags": [
       "group-meeting"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Quantum Group Meeting"
@@ -342,6 +360,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -390,6 +411,9 @@
     "tags": [
       "colloquium",
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Other Seminars",
@@ -445,6 +469,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -497,6 +524,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -551,6 +581,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -603,6 +636,9 @@
     "series": "Quantum Group Meeting",
     "tags": [
       "group-meeting"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Quantum Group Meeting"
@@ -657,6 +693,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -709,6 +748,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -763,6 +805,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -815,6 +860,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -869,6 +917,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -921,6 +972,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"

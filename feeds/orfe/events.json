@@ -24,6 +24,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -75,6 +78,9 @@
     "affiliation": "Harvard University",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -125,6 +131,9 @@
     "series": "S. S. Wilks Distinguished Lecture Series",
     "tags": [
       "lecture"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Distinguished Lecture Series"
@@ -180,6 +189,9 @@
       "colloquium",
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Optimization Seminar",
       "ORFE Department Colloquia"
@@ -234,6 +246,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -286,6 +301,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -340,6 +358,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -392,6 +413,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -446,6 +470,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "ORFE Department Colloquia"
     ],
@@ -498,6 +525,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -552,6 +582,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "ORFE Department Colloquia"
     ],
@@ -604,6 +637,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -658,6 +694,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -710,6 +749,9 @@
     "series": "Optimization Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar"
@@ -764,6 +806,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -816,6 +861,9 @@
     "series": "ORFE Department Colloquia",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -870,6 +918,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Optimization Seminar"
     ],
@@ -923,6 +974,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -975,6 +1029,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"

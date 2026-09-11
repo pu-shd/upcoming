@@ -24,6 +24,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -71,6 +74,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -137,6 +143,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Rising Stars Seminars"
     ],
@@ -189,6 +198,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -243,6 +255,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -290,6 +305,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -344,6 +362,9 @@
     "tags": [
       "lecture"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Distinguished Lecture Series"
     ],
@@ -396,6 +417,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -451,6 +475,9 @@
       "colloquium",
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Optimization Seminar",
       "ORFE Department Colloquia"
@@ -505,6 +532,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -552,6 +582,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -606,6 +639,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -658,6 +694,9 @@
     "series": "BioE Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "BioE Colloquium"
@@ -712,6 +751,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -764,6 +806,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -818,6 +863,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -865,6 +913,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -919,6 +970,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -971,6 +1025,9 @@
     "series": "MAE Departmental Seminars",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "MAE Departmental Seminars"
@@ -1025,6 +1082,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -1077,6 +1137,9 @@
     "series": "ORFE Department Colloquia",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -1131,6 +1194,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -1178,6 +1244,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -1227,6 +1296,9 @@
     "tags": [
       "civil-environmental",
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Civil and Environmental Engineering",
@@ -1282,6 +1354,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -1334,6 +1409,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -1388,6 +1466,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "BioE Colloquium"
     ],
@@ -1441,6 +1522,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -1488,6 +1572,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -1542,6 +1629,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -1594,6 +1684,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -1648,6 +1741,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -1701,6 +1797,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -1748,6 +1847,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -1797,6 +1899,9 @@
     "tags": [
       "colloquium",
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Other Seminars",
@@ -1852,6 +1957,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -1904,6 +2012,9 @@
     "series": "ORFE Department Colloquia",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -1958,6 +2069,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -2003,6 +2117,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -2057,6 +2174,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -2109,6 +2229,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -2163,6 +2286,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -2215,6 +2341,9 @@
     "series": "Stochastic Analysis and Financial Mathematics Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -2269,6 +2398,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Optimization Seminar"
     ],
@@ -2321,6 +2453,9 @@
     "series": "MAE Departmental Seminars",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "MAE Departmental Seminars"
@@ -2375,6 +2510,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -2427,6 +2565,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -2481,6 +2622,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "ORFE Department Colloquia"
     ],
@@ -2533,6 +2677,9 @@
     "series": "PMI/PCCM Seminar Series",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
@@ -2587,6 +2734,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -2639,6 +2789,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -2693,6 +2846,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -2745,6 +2901,9 @@
     "series": "Optimization Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar"
@@ -2799,6 +2958,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -2851,6 +3013,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -2905,6 +3070,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -2952,6 +3120,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -3006,6 +3177,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -3058,6 +3232,9 @@
     "series": "MAE Departmental Seminars",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "MAE Departmental Seminars"
@@ -3112,6 +3289,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -3165,6 +3345,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -3217,6 +3400,9 @@
     "series": "MAE Departmental Seminars",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "MAE Departmental Seminars"

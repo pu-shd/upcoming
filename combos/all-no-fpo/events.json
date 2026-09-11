@@ -66,6 +66,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -110,6 +113,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -161,6 +167,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -208,6 +217,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -274,6 +286,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Rising Stars Seminars"
     ],
@@ -320,6 +335,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -371,6 +389,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -426,6 +447,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -477,6 +501,9 @@
     "affiliation": "Harvard University",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -527,6 +554,9 @@
     "series": "AI for Accelerating Invention,Princeton AI",
     "tags": [
       "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "AI for Accelerating Invention",
@@ -582,6 +612,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -629,6 +662,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -683,6 +719,9 @@
     "tags": [
       "lecture"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Distinguished Lecture Series"
     ],
@@ -731,6 +770,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -786,6 +828,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -839,6 +884,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -885,6 +933,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -936,6 +987,9 @@
     "tags": [
       "privacy-security"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Privacy & Security"
     ],
@@ -983,6 +1037,9 @@
     "series": "",
     "tags": [
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -1035,6 +1092,9 @@
     "tags": [
       "colloquium",
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar",
@@ -1090,6 +1150,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -1138,6 +1201,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Departmental Seminar"
     ],
@@ -1184,6 +1250,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -1235,6 +1304,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -1283,6 +1355,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -1338,6 +1413,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "BioE Colloquium"
     ],
@@ -1390,6 +1468,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -1444,6 +1525,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -1493,6 +1577,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -1540,6 +1627,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -1591,6 +1681,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -1639,6 +1732,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Departmental Seminar"
     ],
@@ -1685,6 +1781,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -1736,6 +1835,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -1784,6 +1886,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -1839,6 +1944,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -1892,6 +2000,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -1944,6 +2055,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -1999,6 +2113,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -2047,6 +2164,9 @@
     "series": "",
     "tags": [
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -2098,6 +2218,9 @@
     "series": "ORFE Department Colloquia",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -2152,6 +2275,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -2199,6 +2325,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -2249,6 +2378,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -2298,6 +2430,9 @@
     "tags": [
       "civil-environmental",
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Civil and Environmental Engineering",
@@ -2353,6 +2488,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -2399,6 +2537,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -2449,6 +2590,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -2502,6 +2646,9 @@
     "series": "BioE Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "BioE Colloquium"
@@ -2557,6 +2704,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -2611,6 +2761,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -2659,6 +2812,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Departmental Seminar"
     ],
@@ -2705,6 +2861,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -2751,6 +2910,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -2806,6 +2968,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -2858,6 +3023,9 @@
     "series": "MAE Departmental Seminars",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "MAE Departmental Seminars"
@@ -2912,6 +3080,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -2964,6 +3135,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -3019,6 +3193,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -3073,6 +3250,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -3120,6 +3300,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -3170,6 +3353,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -3219,6 +3405,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3272,6 +3461,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -3318,6 +3510,9 @@
     "tags": [
       "colloquium",
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Other Seminars",
@@ -3373,6 +3568,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -3426,6 +3624,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -3473,6 +3674,9 @@
     "series": "",
     "tags": [
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -3524,6 +3728,9 @@
     "series": "ORFE Department Colloquia",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -3578,6 +3785,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -3623,6 +3833,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -3672,6 +3885,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3727,6 +3943,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -3779,6 +3998,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -3834,6 +4056,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -3888,6 +4113,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -3941,6 +4169,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -3989,6 +4220,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4039,6 +4273,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4094,6 +4331,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Optimization Seminar"
     ],
@@ -4146,6 +4386,9 @@
     "series": "Quantum Group Meeting",
     "tags": [
       "group-meeting"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Quantum Group Meeting"
@@ -4200,6 +4443,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -4253,6 +4499,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -4305,6 +4554,9 @@
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -4360,6 +4612,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -4408,6 +4663,9 @@
     "series": "",
     "tags": [
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -4459,6 +4717,9 @@
     "series": "ORFE Department Colloquia",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -4513,6 +4774,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -4561,6 +4825,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4616,6 +4883,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -4668,6 +4938,9 @@
     "series": "Princeton Quantum Colloquium",
     "tags": [
       "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
@@ -4723,6 +4996,9 @@
       "ai",
       "data-science"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Artificial Intelligence",
       "Data Science & Society"
@@ -4777,6 +5053,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -4825,6 +5104,9 @@
     "tags": [
       "ai",
       "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "AI for Accelerating Invention",
@@ -4875,6 +5157,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4930,6 +5215,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Optimization Seminar"
     ],
@@ -4982,6 +5270,9 @@
     "series": "Quantum Group Meeting",
     "tags": [
       "group-meeting"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Quantum Group Meeting"
@@ -5036,6 +5327,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "MAE Departmental Seminars"
     ],
@@ -5089,6 +5383,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -5140,6 +5437,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -5191,6 +5491,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "PMI/PCCM Seminar Series"
     ],
@@ -5238,6 +5541,9 @@
     "series": "Departmental Seminar",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Departmental Seminar"
@@ -5292,6 +5598,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
@@ -5340,6 +5649,9 @@
     "tags": [
       "ai",
       "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -5395,6 +5707,9 @@
     "tags": [
       "group-meeting"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Quantum Group Meeting"
     ],
@@ -5447,6 +5762,9 @@
     "series": "MAE Departmental Seminars",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "MAE Departmental Seminars"
@@ -5501,6 +5819,9 @@
     "tags": [
       "colloquium"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "Princeton Quantum Colloquium"
     ],
@@ -5554,6 +5875,9 @@
     "tags": [
       "seminar"
     ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
     ],
@@ -5600,6 +5924,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -5649,6 +5976,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -5693,6 +6023,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -5742,6 +6075,9 @@
     "affiliation": "",
     "series": "",
     "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
@@ -5792,6 +6128,9 @@
     "series": "MAE Departmental Seminars",
     "tags": [
       "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
     ],
     "rawCategories": [
       "MAE Departmental Seminars"
