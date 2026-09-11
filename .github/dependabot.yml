@@ -1,0 +1,29 @@
+# Keeps dependencies and action versions current without anyone having to notice.
+# The Node 20 deprecation notice on the first CI run is the case this exists for: an
+# action version quietly ages into a warning and then into a failure.
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps(pip)"
+    labels: [dependencies]
+    ignore:
+      # Duplicated in pyproject.toml with the same reason: ics 0.7.3 requires
+      # tatsu <5.16.0, and 5.17.0 also shipped with a broken rich dependency.
+      - dependency-name: tatsu
+        versions: [">=5.16.0"]
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps(actions)"
+    labels: [dependencies]
