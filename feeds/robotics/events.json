@@ -1,0 +1,46 @@
+[
+  {
+    "id": "robotics:ps_events:236:delta:0",
+    "guid": "ps_events:236:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-03T04:00:00Z",
+    "endsAt": "2026-10-04T04:00:00Z",
+    "startTime": "2026-10-03T00:00:00",
+    "endTime": "2026-10-04T00:00:00",
+    "timezone": "America/New_York",
+    "title": "Northeast Robotics Colloquium (NERC)",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Commons",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/northeast-robotics-colloquium-nerc",
+    "content": "NERC 2026 will provide a vibrant forum for researchers, students, and industry professionals in the field of robotics. The colloquium will feature distinguished keynotes, rising star lightning talks, engaging poster sessions, valuable networking opportunities, and technical demonstrations. This event aims to foster collaboration and showcase cutting-edge research among the leading robotics research institutions in the Northeast. It offers an exceptional platform for students and researchers to present their latest work and engage with the broader robotics",
+    "rawEventDetails": "Details Event Description NERC 2026 will provide a vibrant forum for researchers, students, and industry professionals in the field of robotics. The colloquium will feature distinguished keynotes, rising star lightning talks, engaging poster sessions, valuable networking opportunities, and technical demonstrations. This event aims to foster collaboration and showcase cutting-edge research among the leading robotics research institutions in the Northeast. It offers an exceptional platform for students and researchers to present their latest work and engage with the broader robotics community. Visit event site for more details: https://nerc2026.github.io/ Contacts Tom Silver [email protected] Jaime F. Fisac [email protected]",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Northeast Robotics Colloquium (NERC)",
+    "locationRaw": "Commons",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

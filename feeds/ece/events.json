@@ -1,0 +1,565 @@
+[
+  {
+    "id": "ece:ps_events:10876:delta:0",
+    "guid": "ps_events:10876:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-13T14:00:00Z",
+    "endsAt": "2026-08-13T16:00:00Z",
+    "startTime": "2026-08-13T10:00:00",
+    "endTime": "2026-08-13T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Electrochemically Reconfigurable THz Metasurfaces",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "J323"
+    },
+    "urlRef": "https://ece.princeton.edu/events/electrochemically-reconfigurable-thz-metasurfaces",
+    "content": "The terahertz (THz) and sub-THz frequency bands are emerging as key components of next-generation wireless communications, sensing, and imaging technologies. These frequency ranges offer substantially increased bandwidth as well as enhanced spatial resolution for applications such as high bit-rate communications or high-resolution imaging and spectroscopy. Despite these advantages, the adoption of THz systems remains hindered by the lack of effective sources, modulators, and detectors. This gap stems largely from fundamental",
+    "rawEventDetails": "Speaker Jonathan Scott Details Event Description The terahertz (THz) and sub-THz frequency bands are emerging as key components of next-generation wireless communications, sensing, and imaging technologies. These frequency ranges offer substantially increased bandwidth as well as enhanced spatial resolution for applications such as high bit-rate communications or high-resolution imaging and spectroscopy. Despite these advantages, the adoption of THz systems remains hindered by the lack of effective sources, modulators, and detectors. This gap stems largely from fundamental materials and device challenges that prevent conventional silicon CMOS technologies from scaling effectively to THz frequencies. Although a variety of alternative approaches based on material platforms such as two-dimensional (2D) materials or phase-change materials have been demonstrated, these technologies typically suffer from limited modulation depth or fabrication and scalability challenges. This thesis addresses these limitations by introducing a novel class of reconfigurable THz devices based on electrochemically active metasurfaces. We first establish the capability of a class of materials known as organic mixed ionic-electronic conductors (OMIECs) to achieve substantial modulation of impinging THz radiation through electrochemical doping and dedoping via the injection of counterions. We then fabricate patterned OMIEC films into a variety of metasurface geometries that enable THz wave manipulation, including polarization control, broadband frequency-selective filtering, and beam steering. By dynamically tuning the conductivity of the OMIEC films through electrochemical ion injection, these metasurfaces exhibit ontinuous and reversible reconfigurability across multiple intermediate states. This thesis establishes a pathway toward large-area THz wave manipulation using electrochemically active metasurfaces. Adviser: Barry Rand",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Electrochemically Reconfigurable THz Metasurfaces",
+    "locationRaw": "EQUAD J323",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10601:delta:0",
+    "guid": "ps_events:10601:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-17T18:00:00Z",
+    "endsAt": "2026-08-17T20:00:00Z",
+    "startTime": "2026-08-17T14:00:00",
+    "endTime": "2026-08-17T16:00:00",
+    "timezone": "America/New_York",
+    "title": "From Theory to Practice: Reinforcement Learning Paradigms for Aligning Large Language and Diffusion Models",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://ece.princeton.edu/events/theory-practice-reinforcement-learning-paradigms-aligning-large-language-and-diffusion",
+    "content": "This dissertation investigates the alignment and theoretical foundations of generative AI through reinforcement learning (RL).We bridge the gap between rigorous mathematical guarantees and practical alignment across two primary parts.In Part I (Alignment of Generative Systems), we first expose systematic vulnerability in the LLM-as-a-Judge framework, identifying \u201cmaster keys\u201d: non-informative adversarial patterns that consistently trigger high false-positive rates, and we propose a robust reward model to mitigate these",
+    "rawEventDetails": "Speaker Yulai Zhao Details Event Description This dissertation investigates the alignment and theoretical foundations of generative AI through reinforcement learning (RL).We bridge the gap between rigorous mathematical guarantees and practical alignment across two primary parts. In Part I (Alignment of Generative Systems), we first expose systematic vulnerability in the LLM-as-a-Judge framework, identifying \u201cmaster keys\u201d: non-informative adversarial patterns that consistently trigger high false-positive rates, and we propose a robust reward model to mitigate these exploits. Moreover, we enhance diffusion models by introducing a sample-efficient online fine-tuning algorithm that utilizes optimistic exploration. Furthermore, we develop a direct back-propagation framework that enables adding precise, conditional control to diffusion models with superior sample efficiency. In Part II (Reinforcement Learning Theory), we establish foundational guarantees for complex environments. We provide the first proof that local policy optimization achieves global optimality in cooperative multi-agent RL with function approximation. Finally, we develop the first provably efficient algorithm for CVaR (Conditional Value-at-Risk) RL in low-rank MDPs. Together, these contributions establish a principled framework for developing robust, efficient, and controllable generative systems, supported by both novel algorithmic Adviser: Sun-Yuan Kung",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "From Theory to Practice: Reinforcement Learning Paradigms for Aligning Large Language and Diffusion Models",
+    "locationRaw": "EQUAD J401",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10901:delta:0",
+    "guid": "ps_events:10901:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-18T19:00:00Z",
+    "endsAt": "2026-08-18T21:00:00Z",
+    "startTime": "2026-08-18T15:00:00",
+    "endTime": "2026-08-18T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Towards Physics-Guided Wireless Communication and Sensing Above 100 GHz",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "J323"
+    },
+    "urlRef": "https://ece.princeton.edu/events/towards-physics-guided-wireless-communication-and-sensing-above-100-ghz-0",
+    "content": "The sub-Terahertz (sub-THz) bands - frequencies above 100 GHz and up to 1 THz - are rapidly emerging as one of the accepted paradigms for future wireless networks. In principle, these frequencies can provide ultra-fast data transmission due to their large amount of available bandwidth. Nonetheless, several fundamental challenges stand in the way of their adoption. Instead of merely scaling the existing wireless system architecture, my thesis investigates how to leverage the physics of sub-THz signals to overcome these hurdles.",
+    "rawEventDetails": "Speaker Atsutse Kludze Details Event Description The sub-Terahertz (sub-THz) bands - frequencies above 100 GHz and up to 1 THz - are rapidly emerging as one of the accepted paradigms for future wireless networks. In principle, these frequencies can provide ultra-fast data transmission due to their large amount of available bandwidth. Nonetheless, several fundamental challenges stand in the way of their adoption. Instead of merely scaling the existing wireless system architecture, my thesis investigates how to leverage the physics of sub-THz signals to overcome these hurdles. One of the biggest obstacles is power consumption, since generating and amplifying signals above 100 GHz requires power-hungry circuitry. This issue is compounded by severe path loss, which demands highly directional links created by large antenna arrays. To address this, my thesis introduces LeakyScatter, a new passive architecture that enables wideband backscattering above 100 GHz. By exploiting leaky-wave antenna physics, LeakyScatter establishes retro-directive links without active components or power consumption. Power alone, however, does not determine scalability: sub-THz networks also demand devices that can be manufactured over large areas at low cost. To this end, I introduce a new class of broadband, electronically reconfigurable sub-THz metasurfaces whose active element is an organic electrochemical modulator. By electrochemically doping and de-doping large-area patterned organic films, these devices dynamically control the polarization, spectral response, and direction of sub-THz wavefronts at milliwatt-scale power, using fabrication processes compatible with large-area organic electronics. Next, given the emergence of high-frequency devices with electronically large aperture sizes, wireless users may fall into the near-field of an access point, where traditional far-field assumptions break down. I develop analytical and simulation frameworks to evaluate near-field beamforming performance and demonstrate how multiple coordinated arrays can overcome existing range and focusing limitations. Lastly, I explore how sub-THz signals can address pressing real-world challenges far beyond traditional wireless networking, enabling unprecedented sensing functionalities: non-coherent 3D localization from a single broadband transmission, and non-destructive fruit-quality monitoring that targets large-scale food waste where existing methods are invasive or economically impractical. Collectively, these efforts contribute foundational physical-layer architectures and device technologies for next-generation wireless networks. Adviser: Yasaman Ghasempour",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Towards Physics-Guided Wireless Communication and Sensing Above 100 GHz",
+    "locationRaw": "EQUAD J323",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10916:delta:0",
+    "guid": "ps_events:10916:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-27T17:00:00Z",
+    "endsAt": "2026-08-27T19:00:00Z",
+    "startTime": "2026-08-27T13:00:00",
+    "endTime": "2026-08-27T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Deep Learning Across the Communication Stack: From Channel Coding to Task-Aware Transmission",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "J323"
+    },
+    "urlRef": "https://ece.princeton.edu/events/deep-learning-across-communication-stack-channel-coding-task-aware-transmission",
+    "content": "Modern communication systems operate remarkably close to fundamental limits, but their design has historically relied on carefully engineered mathematical structure. Deep learning offers a complementary capability: learning representations and decision rules directly from data. Bringing this capability to communication, however, is difficult. In channel coding, for example, learning must generalize across an exponentially large message space that no practical training set can cover.This dissertation argues that classical",
+    "rawEventDetails": "Speaker Shibara Ashwin Hebbar Details Event Description Modern communication systems operate remarkably close to fundamental limits, but their design has historically relied on carefully engineered mathematical structure. Deep learning offers a complementary capability: learning representations and decision rules directly from data. Bringing this capability to communication, however, is difficult. In channel coding, for example, learning must generalize across an exponentially large message space that no practical training set can cover. This dissertation argues that classical structure and learned optimization play complementary roles in communication system design. It develops a framework of neural augmentation, in which learned components are embedded within classical systems. The classical design organizes computation, guides training, and constrains what learning may change, while learning is concentrated on the operation or representation that limits performance. We develop this principle at progressively deeper levels of the communication stack. TinyTurbo retains the Turbo decoding algorithm and learns a low-dimensional correction to the exchanged soft information, recovering much of the loss introduced by the max-log-MAP approximation. CRISP preserves the sequential structure of Polar and PAC decoding, but learns the conditional decision rules using a curriculum derived from nested subcodes, approaching the reliability of stronger classical decoders without list search or backtracking. DeepPolar goes further by learning the code itself together with a matched decoder. It replaces fixed binary Polar kernels with learned nonlinear transformations while retaining the recursive construction and successive decoding structure needed for scalability. The resulting codes improve reliability over classical Polar and Reed\u2013Muller codes under successive-cancellation decoding. DeepOFDM extends neural augmentation from coding to modulation, replacing independent symbol-wise mappings with context-dependent neural modulation whose gains are largest under high mobility and sparse or absent pilots. Finally, we move iii beyond bit-level fidelity to task-aware source coding for vision-language receivers. Using the question as side information, FoCAL preserves task-relevant image detail and reduces rate by 28\u201357% at matched downstream performance while keeping the receiver frozen. A complementary codec adaptation transfers across multiple receivers without additional retraining. Across these systems, a consistent picture emerges: classical structure provides the architectural and training biases that make learning tractable, while learning improves the approximations and representations that classical design leaves suboptimal. Adviser: Pramod Viswanath",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Deep Learning Across the Communication Stack: From Channel Coding to Task-Aware Transmission",
+    "locationRaw": "EQUAD J323",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10896:delta:0",
+    "guid": "ps_events:10896:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-27T17:30:00Z",
+    "endsAt": "2026-08-27T19:30:00Z",
+    "startTime": "2026-08-27T13:30:00",
+    "endTime": "2026-08-27T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Charge Transfer States and Polarons in Organic Donor-Acceptor Diodes: Generation, Recombination, and Their Interplay",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "B327"
+    },
+    "urlRef": "https://ece.princeton.edu/events/charge-transfer-states-and-polarons-organic-donor-acceptor-diodes-generation-recombination-0",
+    "content": "Organic solar cells and organic photodetectors combine mechanical flexibility, solution processability, and spectral tunability from the visible to the near infrared, yet their performance remains limited by large voltage losses and parasitic dark currents compared with inorganic counterparts. In donor\u2013acceptor (D\u2013A) heterojunction diodes, nonradiative recombination via charge transfer (CT) states broadened by energetic disorder is a key origin of voltage loss, but reliable approaches for quantifying CT state disorder are not yet",
+    "rawEventDetails": "Speaker Manting Gui Details Event Description Organic solar cells and organic photodetectors combine mechanical flexibility, solution processability, and spectral tunability from the visible to the near infrared, yet their performance remains limited by large voltage losses and parasitic dark currents compared with inorganic counterparts. In donor\u2013acceptor (D\u2013A) heterojunction diodes, nonradiative recombination via charge transfer (CT) states broadened by energetic disorder is a key origin of voltage loss, but reliable approaches for quantifying CT state disorder are not yet well-recognized in the community. In parallel, intrinsic dark current generation is increasingly attributed to deep trap states, while its microscopic origin and the deviations from ideal diode behavior are still not fully clarified. This thesis investigates new nonradiative recombination and dark current generation pathways using a combination of steady state and spectroscopic techniques to characterize CT states, associated energy loss, and the thermal dependence of dark current and charge transport. Studies on a series of amorphous and crystalline organic diodes, and inorganic-organic hybrid diodes show that hole polarons play a central role in organic systems by introducing additional nonradiative energy loss channels and inducing extra dark current generation, detrimental for both photovoltaic and photodetector operation. A specific mechanism is identified in which NIR hole polarons act as antennas in D\u2013A blends, facilitating thermal excitation of CT states and inherently driving dark current. The activation energy of the reverse saturation dark current is found to track the activation energy of hole polaron transport, highlighting polaron dynamics as a key control parameter. Overall, device behavior is rationalized as a coupled CT\u2013polaron problem: under illumination, CT recombination governed by the energy gap law, together with CT-polaron spectral overlap, enhances voltage loss and fundamentally limits photocurrent; whereas in the dark, the spectral overlap of blackbody radiation with CT and polaron absorption sets an effective generation prefactor for the dark current. Finally, inorganic\u2013organic hybrid diodes, exemplified by CuSCN/organic acceptor heterojunctions, exhibit substantially reduced dark currents relative to fully organic devices, indicating their potential for high detectivity near infrared photodetectors. Adviser: Barry Rand",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Charge Transfer States and Polarons in Organic Donor-Acceptor Diodes: Generation, Recombination, and Their Interplay",
+    "locationRaw": "EQUAD B327",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10921:delta:0",
+    "guid": "ps_events:10921:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-28T15:00:00Z",
+    "endsAt": "2026-08-28T17:00:00Z",
+    "startTime": "2026-08-28T11:00:00",
+    "endTime": "2026-08-28T13:00:00",
+    "timezone": "America/New_York",
+    "title": "Securing Domain Validation Against Network Attacks: Deployable Defenses for the Web PKI",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "J323"
+    },
+    "urlRef": "https://ece.princeton.edu/events/securing-domain-validation-against-network-attacks-deployable-defenses-web-pki",
+    "content": "HTTPS underpins secure communication on the Web, but its trust is bootstrapped through domain control validation (DV) : a challenge-response protocol through which Certificate Authorities (CAs) verify the requester' s control of a domain name. DV relies on unauthenticated protocols (including BGP, DNS, and HTTP), and is therefore vulnerable to network-level attacks that can enable fraudulent certificate issuance. This thesis hardens DV against network attacks through three deployable defenses spanning ecosystem-wide protection and",
+    "rawEventDetails": "Speaker Grace Cimaszewski Details Event Description HTTPS underpins secure communication on the Web, but its trust is bootstrapped through domain control validation (DV) : a challenge-response protocol through which Certificate Authorities (CAs) verify the requester' s control of a domain name. DV relies on unauthenticated protocols (including BGP, DNS, and HTTP), and is therefore vulnerable to network-level attacks that can enable fraudulent certificate issuance. This thesis hardens DV against network attacks through three deployable defenses spanning ecosystem-wide protection and opt-in cryptographic guarantees, and translates them into real-world standards and deployment. First, we quantify and strengthen multi-perspective issuance corroboration (MPIC). Using a custom full-graph DNS resolver, we present the first Internet-scale measurement of DV' s complete attack surface, covering 1. 1 M domains and over 31 billion DNS queries. Bringing DNS into scope drops single-perspective resilience from 86% to 38%; strategic placement of five diverse vantage points with a unanimous quorum policy restores it to 97%. These findings shaped CA/ Browser Forum Ballot SC-067v3, which standardized the core MPIC framework evaluated here and mandated it for server certificate issuance starting September 2025. MPIC has thus protected over 1. 5 billion certificates to date. Second, we present cryptographically-secure DV (\"crypto-DV\"), a framework providing cryptographic issuance guarantees for opt-in domains. Using DNSSEC trust roots, CAs boot-strap secure channels with domain owners and validate DV challenges with cryptographic integrity. A fail-closed CAA policy enforces this protection under partial deployment: non-implementing CAs must refuse issuance. Its deployment prerequisite, DNSSEC validation by CAs, was mandated by CA/ Browser Forum Ballot SC-085 v2 effective March 2026, and the design informed an IETF working-group draft. Third, we propose secure channel DNS, a scalable alternative to DNSSEC' s stalled per-zone adoption that secures resolver-nameserver communications via encrypted channels. Measuring ~449M domains from Certificate Transparency logs, we find that eight providers host authoritative DNS for 47.7% of measured domains, suggesting that deployment at a few operators could protect resolution for much of the Web. We analyze how SVCB records can support this abstraction and contribute an open-source implementation in Hickory DNS for deployment at Let' a Encrypt. Together, these results show a deployable path for authenticated DNS beyond DNSSEC. Adviser: Prateek Mittal",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Securing Domain Validation Against Network Attacks: Deployable Defenses for the Web PKI",
+    "locationRaw": "EQUAD J323",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10946:delta:0",
+    "guid": "ps_events:10946:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-03T20:30:00Z",
+    "endsAt": "2026-09-03T21:30:00Z",
+    "startTime": "2026-09-03T16:30:00",
+    "endTime": "2026-09-03T17:30:00",
+    "timezone": "America/New_York",
+    "title": "From Closed-Loop Systems to Closed-Loop Design: Full-Stack Co-Design for the AI Era",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/closed-loop-systems-closed-loop-design-full-stack-co-design-ai-era",
+    "content": "Abstract: Computing systems are becoming increasingly closed loop. A robot continuously senses, computes, and acts in the physical world; more broadly, emerging AI applications interact dynamically with users, tools, and environments. Yet the way we design these systems remains largely open loop: models, software, hardware architectures, and implementations are developed in separate stages, with slow and incomplete feedback across layers. As a result, improvements in isolated metrics such as kernel latency, energy, or hardware utilization do",
+    "rawEventDetails": "Speaker Yakun Sophia Shao Affiliation University of California, Berkeley Details Event Description Abstract: Computing systems are becoming increasingly closed loop. A robot continuously senses, computes, and acts in the physical world; more broadly, emerging AI applications interact dynamically with users, tools, and environments. Yet the way we design these systems remains largely open loop: models, software, hardware architectures, and implementations are developed in separate stages, with slow and incomplete feedback across layers. As a result, improvements in isolated metrics such as kernel latency, energy, or hardware utilization do not necessarily translate into better end-to-end behavior. In this talk, I will argue that closing this gap requires rethinking both what we design and how we design it. The full computing stack should be treated as a connected, executable design space in which application goals, software, architecture, and implementation continuously inform one another. I will trace our efforts to close this loop: first by making cross-layer consequences observable in end-to-end applications, then by co-designing heterogeneous hardware and software around system-level requirements, and ultimately by using AI to navigate and accelerate the design process itself. I will conclude with a vision for using AI not simply to generate code or implementations, but to participate in system and architecture design itself. By making design choices, constraints, and feedback explicit and machine-operable, we can move toward a closed-loop methodology that connects application goals to deployable systems, from mission to silicon. Bio: Professor Yakun Sophia Shao is The Class of 1951 Chair Associate Professor at the Electrical Engineering and Computer Sciences department of University of California, Berkeley. Her research interests are in the area of computer architecture, with a special focus on specialized accelerator, heterogeneous architecture, and agile VLSI design methodology. Previously, she was a Senior Research Scientist at NVIDIA Research and received her Ph.D. degree in 2016 from Harvard University. She is a recipient of the 2025 Outstanding Teaching Award in EE, the 2024 Anita Borg Early Career Award, a Sloan Research Fellowship, an NSF CAREER Award, the 2022 IEEE TCCA Young Computer Architect Award, a Google Faculty Rising Stars Award in Systems Research, a Google Research Scholar Award, a Facebook Research Award, an Okawa Foundation Research Grant, and the inaugural Dr. Sudhakar Yalamanchili Award. Her work has been awarded multiple Best Paper Awards and Distinguished Artifact Awards at major hardware conferences. Sponsor Emerging Frontiers in Computer Architecture and Systems",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "From Closed-Loop Systems to Closed-Loop Design: Full-Stack Co-Design for the AI Era",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10936:delta:0",
+    "guid": "ps_events:10936:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-11T17:00:00Z",
+    "endsAt": "2026-09-11T19:00:00Z",
+    "startTime": "2026-09-11T13:00:00",
+    "endTime": "2026-09-11T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Driven-Dissipative Dynamics in Fluxonium: Measurement-Induced Transitions and Effective Temperatures",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "J223"
+    },
+    "urlRef": "https://ece.princeton.edu/events/driven-dissipative-dynamics-fluxonium-measurement-induced-transitions-and-effective",
+    "content": "Superconducting qubits are artificial atoms whose properties are shaped through the engineering of nonlinear electrical circuits. Quantum information is encoded by selecting two levels of this multilevel system to form the computational subspace. Thus, standard operations can inadvertently populate states outside this subspace, producing leakage errors. In transmons, for example, increasing the resonator drive during readout can activate multiphoton resonances that induce measurement-induced state transitions (MISTs), transferring",
+    "rawEventDetails": "Speaker Parth Jatakia Details Event Description Superconducting qubits are artificial atoms whose properties are shaped through the engineering of nonlinear electrical circuits. Quantum information is encoded by selecting two levels of this multilevel system to form the computational subspace. Thus, standard operations can inadvertently populate states outside this subspace, producing leakage errors. In transmons, for example, increasing the resonator drive during readout can activate multiphoton resonances that induce measurement-induced state transitions (MISTs), transferring population to high-lying states and severely reducing measurement fidelity. MISTs therefore constrain attempts to make dispersive readout simultaneously faster and more accurately. Fluxonium pushes this engineering further, suppressing several sources of decoherence within the computational subspace. This produces an unusually rich, strongly anharmonic spectrum in which higher levels can couple more strongly to microwave fields, without the simple nearest-neighbour selection structure of transmons. The first part of this dissertation examines how MISTs arise in fluxonium and what sets their magnitude. Using flux-pulse-assisted measurements, we uncover population transfer that multiphoton resonances alone cannot explain. To explain them, we perform time-dependent open-quantum-system simulations incorporating driven multilevel dynamics and dissipation. The simulations reveal a new decay-assisted pathway for MISTs: the readout drive populates hybridized states involving higher fluxonium levels, while decay redirects population into the excited qubit manifold. We find that the combined action of drive and decay produces an optical-pumping-like transfer that builds up over the measurement pulse. Multiphoton resonances therefore provide pathways for MISTs, while their magnitude depends continuously on the drive protocol and the environment. The second part of this work examines this environment and the processes through which it exchanges energy with the qubit. Existing fluxonium loss models are phenomenological and cannot by themselves pinpoint the microscopic process or material source of dissipation. We therefore measure excitation and relaxation separately, resolving the environment\u2019s ability to supply and absorb energy. Their imbalance defines a transition-specific effective temperature, while flux tunability turns the rates into a spectral probe of the environment. Across frequency and devices, the directed rates reveal substantial variation, underscoring the complexity of the environment governing qubit dissipation. Adviser: Andrew Houck",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Driven-Dissipative Dynamics in Fluxonium: Measurement-Induced Transitions and Effective Temperatures",
+    "locationRaw": "EQUAD J223",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:11016:delta:0",
+    "guid": "ps_events:11016:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-16T20:30:00Z",
+    "endsAt": "2026-09-16T21:30:00Z",
+    "startTime": "2026-09-16T16:30:00",
+    "endTime": "2026-09-16T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Emerging Chip-Scale Terahertz Systems for Sensing, Metrology and Security Applications",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/emerging-chip-scale-terahertz-systems-sensing-metrology-and-security-applications-0",
+    "content": "Abstract: Modern processor architectures are complex machines due to decades' worth of performance optimizations. This complexity can lead to subtle performance issues at the microarchitectural level that are very difficult to diagnose and repair. Fortunately, modern processors also contain a rich set of performance monitoring facilities that enable introspection of many aspects of program execution. I will share our work on techniques to diagnose and repair, in running programs, two particular performance issues: adjusting code layout on-the-fly to match current",
+    "rawEventDetails": "Speaker Joseph Devietti Affiliation University of Pennsylvania Details Event Description Abstract: Modern processor architectures are complex machines due to decades' worth of performance optimizations. This complexity can lead to subtle performance issues at the microarchitectural level that are very difficult to diagnose and repair. Fortunately, modern processors also contain a rich set of performance monitoring facilities that enable introspection of many aspects of program execution. I will share our work on techniques to diagnose and repair, in running programs, two particular performance issues: adjusting code layout on-the-fly to match current hot code paths, and adding data prefetch instructions on-the-fly to improve current data access patterns. I will also discuss some research side quests in bringing GPU acceleration to neurosymbolic programs (which combine deep learning with symbolic reasoning to achieve better data efficiency, interpretability, and generalizability compared to standalone deep learning approaches), and chip design tools that are more idiot-/AI-friendly. Bio: Joseph Devietti is an Associate Professor in the Department of Computer & Information Science at the University of Pennsylvania. His research focuses on making parallel computers easier to program, leveraging techniques across the computing stack, including computer architecture, compilers, runtime systems and programming languages. He was awarded an Intel Early Career Faculty Honor in 2013, and had a paper selected as one of the Top Picks from 2022 Computer Architecture Conferences. He earned his PhD in Computer Science & Engineering from the University of Washington in 2012. Sponsor Emerging Frontiers in Computer Architecture and Systems",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Emerging Chip-Scale Terahertz Systems for Sensing, Metrology and Security Applications",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:11011:delta:0",
+    "guid": "ps_events:11011:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-22T20:30:00Z",
+    "endsAt": "2026-09-22T21:30:00Z",
+    "startTime": "2026-09-22T16:30:00",
+    "endTime": "2026-09-22T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Extreme Codesign for Efficient AI: Algorithms, Software, and Hardware",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/extreme-codesign-efficient-ai-algorithms-software-and-hardware",
+    "content": "Abstract: Large language model (LLM) inference is computationally expensive and increasingly dominated by memory bandwidth. This talk presents a set of hardware, software, and algorithmic techniques that address these bottlenecks through cross-layer co-design, spanning numerical representation, tensor compression, and custom hardware accelerator architectures. I make the case that we are well past the point of \"traditional codesign\" to get to higher computing speeds, and we need to move towards Extreme Codesign where the lines between algorithm, software, and",
+    "rawEventDetails": "Speaker Mohamed Abdelfattah Affiliation Cornell Tech Details Event Description Abstract: Large language model (LLM) inference is computationally expensive and increasingly dominated by memory bandwidth. This talk presents a set of hardware, software, and algorithmic techniques that address these bottlenecks through cross-layer co-design, spanning numerical representation, tensor compression, and custom hardware accelerator architectures. I make the case that we are well past the point of \"traditional codesign\" to get to higher computing speeds, and we need to move towards Extreme Codesign where the lines between algorithm, software, and hardware abstractions are being blurred in the pursuit of performance for AI systems. Bio: Mohamed Abdelfattah is an Assistant Professor at Cornell Tech and in the Electrical and Computer Engineering Department at Cornell University. His research group is designing the next generation of machine-learning-centric computer systems for both datacenters and mobile devices. He received his BSc from the German University in Cairo, his MSc from the University of Stuttgart, and his PhD from the University of Toronto. After his PhD, Mohamed spent six years at Intel and Samsung Research. Recently, he co-founded a startup, Makora, to automate performance optimizations for AI. He is the recipient of multiple best paper awards, the Vanier Canada Graduate Scholarship, and the NSF CAREER award. Sponsor Emerging Frontiers in Computer Architecture and Systems",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Extreme Codesign for Efficient AI: Algorithms, Software, and Hardware",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:11001:delta:0",
+    "guid": "ps_events:11001:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-23T20:30:00Z",
+    "endsAt": "2026-09-23T21:30:00Z",
+    "startTime": "2026-09-23T16:30:00",
+    "endTime": "2026-09-23T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Synthetic Data, Real Benefits: Reliable Inference and Principled Model Steering",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/synthetic-data-real-benefits-reliable-inference-and-principled-model-steering",
+    "content": "ECE KORHAMMER SEMINAR SERIESAbstractAI models are powerful, yet their use in practice raises two fundamental challenges. The first is trust: how can we make reliable inferences from black-box models when we only have a few reference examples to rely on? The second is steerability: how can we guide AI generation when we can recognize the outputs we prefer but cannot precisely quantify our preferences? In this talk, I will show how statistics and AI can empower one another to tackle both challenges.The first part",
+    "rawEventDetails": "Speaker Yaniv Romano Affiliation Technion- Israel Institute of Technology Details Event Description ECE KORHAMMER SEMINAR SERIES Abstract AI models are powerful, yet their use in practice raises two fundamental challenges. The first is trust: how can we make reliable inferences from black-box models when we only have a few reference examples to rely on? The second is steerability: how can we guide AI generation when we can recognize the outputs we prefer but cannot precisely quantify our preferences? In this talk, I will show how statistics and AI can empower one another to tackle both challenges. The first part focuses on reliable inference under limited data. I'll introduce General Synthetic-Powered Inference (GESPI), a framework that safely enhances the sample efficiency of any statistical inference procedure\u2014such as conformal prediction and hypothesis testing\u2014by adaptively leveraging synthetic data. GESPI provides distribution-free error control regardless of synthetic-data quality while improving utility when those data are informative. I'll demonstrate its applicability across domains ranging from predictive uncertainty quantification to principled win-rate evaluation of large reasoning models. I'll also discuss how these ideas can support large-scale scientific discovery with false discovery rate control. In the second part, I'll introduce Preference-based Metropolis-Hastings (Pref-MH): a model-steering framework that leverages pairwise votes from an LLM judge to generate data satisfying complex properties of interest. Pref-MH exploits a novel connection between MH and the Bradley-Terry preference model. This connection enables rigorous steering of a base AI generator toward a target distribution that favors outputs preferred by the judge, without ever needing to estimate the judge's latent reward. Finally, I'll demonstrate Pref-MH in molecular design and show how the resulting synthetic data improve downstream inference when incorporated into GESPI. Bio Yaniv Romano is an associate professor in the Departments of Electrical and Computer Engineering and Computer Science at the Technion. He is also affiliated with NVIDIA as a visiting professor. Previously, he was a postdoctoral scholar in the Department of Statistics at Stanford University. Yaniv holds a PhD, an MSc, and a BSc in electrical engineering, all from the Technion. His super-resolution technology, invented with Peyman Milanfar, has been integrated into Google\u2019s flagship products, including Pixel phones. His uncertainty quantification method, developed with Emmanuel Cand\u00e8s, was used by The Washington Post to estimate outstanding votes during the U.S. presidential election. Yaniv has received several honors and awards, including an ERC Starting Grant, the SIAG/IS Early Career Prize, the Sheila Samson Prime Minister\u2019s Prize (Researcher Recruitment Prize), the IEEE Signal Processing Society Best Paper Award, the Alon Scholarship, the Krill Prize for Excellence in Scientific Research, and the Henry Taub Prize for Academic Excellence. Yaniv is a member of the Young Israel Academy.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Synthetic Data, Real Benefits: Reliable Inference and Principled Model Steering",
+    "locationRaw": "EQUAD B205",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:10996:delta:0",
+    "guid": "ps_events:10996:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-07T20:30:00Z",
+    "endsAt": "2026-10-07T21:30:00Z",
+    "startTime": "2026-10-07T16:30:00",
+    "endTime": "2026-10-07T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Internet of Radar Things: Turning a World of Radios into One Radar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/internet-radar-things-turning-world-radios-one-radar",
+    "content": "Abstract: Almost every wireless device transmits over the air to communicate, and an increasing fraction of these devices can also use their signals to sense the physical world. As integrated sensing and communication (ISAC) is moving from research into standards, these radios periodically sense the world from the response of the environment on their transmitted signal. At the same time, WiFi, cellular, and automotive platforms are expanding into millimeter-wave spectrum, where wide bandwidths and compact antenna arrays provide fine spatial and temporal",
+    "rawEventDetails": "Speaker Akshay Gadre Affiliation University of Washington Details Event Description Abstract: Almost every wireless device transmits over the air to communicate, and an increasing fraction of these devices can also use their signals to sense the physical world. As integrated sensing and communication (ISAC) is moving from research into standards, these radios periodically sense the world from the response of the environment on their transmitted signal. At the same time, WiFi, cellular, and automotive platforms are expanding into millimeter-wave spectrum, where wide bandwidths and compact antenna arrays provide fine spatial and temporal resolution, Together, these trends create the foundation for an Internet of Radar Things (IoRT) : a dense population of access points, base stations, vehicles, robots, and mobile devices whose radios can sense while they communicate. Unfortunately, a network of these sensing-capable radios operates largely as n isolated monostatic sensors: each independently occupies spectrum, illuminates an overlapping environment, and retains only the echoes at its own small aperture. These discarded paths contain complementary viewpoints that could extend coverage through occlusions, distinguish physical objects from multipath ghosts, and synthesize apertures far larger than any individual device. This talk presents a unique vision to coordinate these distributed radars coherently to turn this world of radios into one mega-radar. In this talk, we will first present the unique capabilities such a coherent future could enable and how we achieve coherence on commodity off-the-shelf radars to demonstrate these solutions. We specifically show how distributed radars can eliminate ghost artifacts and improve sensing capability, how we can extract material characteristics of objects using this large aperture and how we can use coherence-in-motion to develop free-flowing hand-held imaging solutions for mmWave radars. We further demonstrate how these improvements can directly translate to WiFi and cellular radios. Finally, we end the talk by describing open challenges that still need to be addressed to unleash the true potential of the Internet of Radar Things. Bio: Akshay Gadre is an Assistant Professor at Electrical and Computer Engineering department at the University of Washington. He leads the Networking and Emerging Wireless Technologies (NEWT) Lab at the University of Washington where they explore the upcoming application domains such as satellite IoT, mmWave radars and underwater devices, to apply wireless expertise for improving communication and sensing capability of these devices while preserving the security and privacy of sensor data. Further, the lab explores novel interaction mechanisms for future smart devices such as smart gloves and XR systems using novel force sensing and gaze modalities. His previous research at Carnegie Mellon University operated at the intersection of wireless, mobile and cyber-physical systems with special focus on empowering the low-power Internet-of-Things devices deployed on earth and space. NEWT Lab is also translating these technologies to industry partners including General Motors and IDD Aerospace. His work is published in premier wireless and mobile systems venues including ACM MobiCom, MobiSys, SenSys, Transactions on Sensor Networks and NSDI. Their lab's work has won two best paper awards, four best demo awards, two best-demo runner up awards at these venues. Both Akshay and his students have received the best PhD Forum presentation award at the CPS-IoT Week. Their work has been recognized with the T-Mobile T-Challenge 2024 Most Engaging Presentation Award for their vision of radio digital twins for consumer applications as well as the AFRL SDR University Challenge Best Demo award for developing a cheap SDR platform for exploring satellite networking. He has been also recognized with the ACM SIGBED-SIGSOFT Frank Anger Memorial Award 2021 for his cross-disciplinary work on IoT networking, cyber-security and software engineering. He was also recognized as a Distinguished TPC Member for his services to ACM SenSys 2026. He received his Bachelor of Technology (Honors) and Master of Technology degrees in Computer Science and Engineering from IIT Madras as well as a Ph.D in Electrical and Computer Engineering from Carnegie Mellon University. Sponsor NextG Wireless",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Internet of Radar Things: Turning a World of Radios into One Radar",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

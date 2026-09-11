@@ -1,0 +1,334 @@
+[
+  {
+    "id": "ai:ps_events:3396:delta:0",
+    "guid": "ps_events:3396:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T16:05:00Z",
+    "endsAt": "2026-09-09T17:05:00Z",
+    "startTime": "2026-09-09T12:05:00",
+    "endTime": "2026-09-09T13:05:00",
+    "timezone": "America/New_York",
+    "title": "An AI for Accelerating Invention Talk by Rafael Gomez-Bombarelli",
+    "speakers": [
+      {
+        "name": "Rafael Gomez-Bombarelli",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Rafael Gomez-Bombarelli",
+    "affiliation": "",
+    "series": "AI for Accelerating Invention,Princeton AI",
+    "tags": [
+      "ai"
+    ],
+    "rawCategories": [
+      "AI for Accelerating Invention",
+      "Princeton AI"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/rafael-gomez-bombarelli",
+    "content": "Abstract: AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton's 'bitter lesson' states that \"general methods that leverage computation are ultimately the most effective\" in AI. The corollaries are bittersweet in chemistry and materials. The lesson permeates through the use of AI in chemistry and materials. The tremendous success of",
+    "rawEventDetails": "Details Event Description Abstract : AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton's 'bitter lesson' states that \"general methods that leverage computation are ultimately the most effective\" in AI. The corollaries are bittersweet in chemistry and materials. The lesson permeates through the use of AI in chemistry and materials. The tremendous success of universal ML interatomic potentials (MLIPs) as surrogate for quantum-mechanical energies and forces is unarguable. Trained on 100-million-count datasets, they reflect scaling laws similar to the ones in language or vision models, generalizing to new scientific questions and enabling simulations that were intractable a few years ago. Generative models, trained mostly on the same synthetic data, are currently being used to propose novel materials at machine speed. The discussion around the power of inductive bias (energy conservation, equivariance) and whether it is better reflected in model architecture or in training strategy is very much ongoing. The physical sciences may well be the last holdout for domain knowledge and inductive bias, or maybe they will ultimately follow the same trends as other domains. But MLIPs are surrogates for physics-based simulators, and arguably, materials only truly matter if they are made in the lab and then scaled up industrially and commercially. This is the truly bitter scaling lesson in materials. The promise of AI for chemistry and materials needs to be realized through very traditional, expensive and slow channels. In this talk, I will describe our group's work both in the highly scalable fusion of simulations and machine learning, and in the \"high-contact\" and lower throughput effort of translating AI designs into tangible, scalable products, in areas like heterogeneous catalysis, battery materials or sustainable polymers Bio: Rafael Gomez-Bombarelli is the Paul M Cook Associate Professor in MIT's Department of Materials Science and Engineering; and co-founder and Chief Scientific Officer at Lila Sciences. He earned his undergraduate and graduate degrees in chemistry from the University of Salamanca, Spain, and conducted postdoctoral research at Heriot-Watt University and Harvard University, under Alan Aspuru-Guzik. Rafa's research integrates machine learning with atomistic simulations to expedite the discovery and design of novel materials for applications in energy, sustainability, and healthcare.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Rafael Gomez-Bombarelli",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "ai:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4051:delta:0",
+    "guid": "ps_events:4051:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-15T16:00:00Z",
+    "endsAt": "2026-09-15T17:15:00Z",
+    "startTime": "2026-09-15T12:00:00",
+    "endTime": "2026-09-15T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Whose AI for Amazon Forests? Technological Sovereignty for Indigenizing Science",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Aaron Burr Hall",
+      "id": "",
+      "detail": "216"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/whose-ai-amazon-forests-technological-sovereignty-indigenizing-science",
+    "content": "The study for this talk traces the techno-scientific and political-economic trajectory of the development and use of an Artificial Intelligence (AI) model that simulates, monitors and predicts Amazonian deforestation. Developed mainly by Brazilian scientists, this model has been used for scientific research, policymaking, and forest conservation. It also provided the technical foundation for South America\u2019s first REDD+ forest carbon project and the world\u2019s first REDD+ carbon accounting methodology. However, in the process of international validation of this REDD+ carbon accounting",
+    "rawEventDetails": "Speaker Shaozeng Zhang Affiliation Associate Professor of Anthropology, Oregon State University; PLAS Visiting Fellow, Princeton University Details Event Description The study for this talk traces the techno-scientific and political-economic trajectory of the development and use of an Artificial Intelligence (AI) model that simulates, monitors and predicts Amazonian deforestation. Developed mainly by Brazilian scientists, this model has been used for scientific research, policymaking, and forest conservation. It also provided the technical foundation for South America\u2019s first REDD+ forest carbon project and the world\u2019s first REDD+ carbon accounting methodology. However, in the process of international validation of this REDD+ carbon accounting methodology, the validation agencies, all from Europe and North America, imposed technical requirements, such as smaller Minimum Mapping Units and higher satellite-imaging resolution, that were disconnected from the geographical scales and technological capacities of tropical rainforest countries. These requirements practically make Brazilian scientists lose control over rainforest data, technical standards, and knowledge validity. They also forced the world\u2019s tropical rainforest countries to reply on European and North American data infrastructures and AI models, continuously paying high transaction costs in global carbon markets and environmental governance. Based on long-term ethnographic work among Brazilian scientists and technocrats since 2009, Shaozeng Zhang uses their growing concern with \u201ctechnological sovereignty\u201d as an emic anthropological concept. Zhang analyzes how AI development and use are constrained by knowledge hegemony and North-South inequality in the postcolonial world. Finally, moving beyond political-economic or ethical debates, Zhang suggests an epistemologically reflexive approach of decolonizing or indigenizing science for better human knowledge production today. ABOUT OUR GUEST SPEAKER Shaozeng Zhang (Ph.D., University of California, Irvine), is Associate Professor of Anthropology, and affiliated professor of humanitarian engineering, at Oregon State University. His research focuses on Amazon forest conservation, climate change adaptation, science and technology studies, big data and artificial intelligence, and mixed-methods innovations. He has published in anthropology journals such as Economic Anthropology , Annals of Anthropological Practice, Teaching Anthropology, and Antropologia Portuguesa, as well as multidisciplinary journals such as Engineering Studies, Methodological Innovations, Annals of the American Association of Geographers, and Tapuya: Latin American Science, Technology and Society. He has been awarded research funding from various agencies, including the U.S. National Science Foundation, the U.S. Department of Energy, and the Wenner-Gren Foundation. He also served as a Junior Visiting Scholar in the Department of Anthropology at the University of Brasilia ( Universidade de Bras\u00edlia ) in Brazil. At Princeton, Zhang will continue developing a carbon-aware and co-evolving human-AI framework for Amazon deforestation monitoring in partnership with computer scientists, Princeton scholars, and Brazilian researchers. DISCUSSANT Lucas Prates, Lecturer, Department of Anthropology, Princeton University This event is co-sponsored by the Department of Anthropology. This event is open to students, faculty, visiting scholars and staff. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Whose AI for Amazon Forests? Technological Sovereignty for Indigenizing Science",
+    "locationRaw": "Aaron Burr Hall, Room 216",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4056:delta:0",
+    "guid": "ps_events:4056:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-15T20:30:00Z",
+    "endsAt": "2026-09-15T21:30:00Z",
+    "startTime": "2026-09-15T16:30:00",
+    "endTime": "2026-09-15T17:30:00",
+    "timezone": "America/New_York",
+    "title": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [
+      "listing"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-2026-colloquium-2",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "locationRaw": "101 Sherrerd Hall",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4061:delta:0",
+    "guid": "ps_events:4061:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T20:30:00Z",
+    "endsAt": "2026-09-29T21:30:00Z",
+    "startTime": "2026-09-29T16:30:00",
+    "endTime": "2026-09-29T17:30:00",
+    "timezone": "America/New_York",
+    "title": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [
+      "listing"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-2026-colloquium",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "locationRaw": "101 Sherrerd Hall",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4066:delta:0",
+    "guid": "ps_events:4066:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-27T20:30:00Z",
+    "endsAt": "2026-10-27T21:30:00Z",
+    "startTime": "2026-10-27T16:30:00",
+    "endTime": "2026-10-27T17:30:00",
+    "timezone": "America/New_York",
+    "title": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [
+      "listing"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-2026-colloquium-0",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "locationRaw": "101 Sherrerd Hall",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4071:delta:0",
+    "guid": "ps_events:4071:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-10T21:30:00Z",
+    "endsAt": "2026-11-10T21:30:00Z",
+    "startTime": "2026-11-10T16:30:00",
+    "endTime": "2026-11-10T16:30:00",
+    "timezone": "America/New_York",
+    "title": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [
+      "listing"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-2026-colloquium-1",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
+    "locationRaw": "101 Sherrerd Hall",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:3391:delta:0",
+    "guid": "ps_events:3391:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-18T21:30:00Z",
+    "endsAt": "2026-11-18T22:30:00Z",
+    "startTime": "2026-11-18T16:30:00",
+    "endTime": "2026-11-18T17:30:00",
+    "timezone": "America/New_York",
+    "title": "AI\u00b2 Research Talk Series",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "AI for Accelerating Invention,Princeton AI",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "rawCategories": [
+      "AI for Accelerating Invention",
+      "Princeton AI"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/ai%C2%B2-research-talk-series",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI\u00b2 Research Talk Series",
+    "locationRaw": "TBA",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

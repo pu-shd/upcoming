@@ -1,0 +1,1287 @@
+[
+  {
+    "id": "citp:ps_events:4756:delta:0",
+    "guid": "ps_events:4756:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-08T16:15:00Z",
+    "endsAt": "2026-09-08T17:15:00Z",
+    "startTime": "2026-09-08T12:15:00",
+    "endTime": "2026-09-08T13:15:00",
+    "timezone": "America/New_York",
+    "title": "AI Agents and the Augmentation Agenda",
+    "speakers": [
+      {
+        "name": "Arvind Narayanan",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Arvind Narayanan",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/arvind-narayanan-ai-agents-and-augmentation-agenda",
+    "content": "The dominant paradigm in AI research and development envisions the goal as automation of tasks and entire jobs. But another, comparatively marginalized vision has existed since the beginning of AI \u2014 that of augmenting workers and amplifying human potential. In this talk, it is argued that the automation agenda is struggling even on purely commercial grounds, and it is time to invest more into augmentation. Building agents for collaboration instead of automation requires elevating a set of underexplored research challenges in human-computer interaction. Such agents can better serve human",
+    "rawEventDetails": "Details Event Description The dominant paradigm in AI research and development envisions the goal as automation of tasks and entire jobs. But another, comparatively marginalized vision has existed since the beginning of AI \u2014 that of augmenting workers and amplifying human potential. In this talk, it is argued that the automation agenda is struggling even on purely commercial grounds, and it is time to invest more into augmentation. Building agents for collaboration instead of automation requires elevating a set of underexplored research challenges in human-computer interaction. Such agents can better serve human flourishing, promote broader economic growth, and put into motion the \u201cpro-worker AI\u201d that economists have advocated for. This talk is based on a collaboration with Gabriel Unger. Bio: Arvind Narayanan is a professor of computer science at Princeton University and the director of the Center for Information Technology Policy. He is a co-author of the book AI Snake Oil and a newsletter of the same name which is read by 60,000 researchers, policy makers, journalists, and AI enthusiasts. He previously co-authored two widely used computer science textbooks: Bitcoin and Cryptocurrency Technologies and Fairness in Machine Learning . Narayanan led the Princeton Web Transparency and Accountability Project to uncover how companies collect and use our personal information. His work was among the first to show how machine learning reflects cultural stereotypes. Narayanan was one of TIME\u2019s inaugural list of 100 most influential people in AI. He is a recipient of the Presidential Early Career Award for Scientists and Engineers (PECASE) This talk will be livestreamed and recorded. The recording will be posted to the CITP website, the CITP YouTube channel and the University Media Central channel. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Arvind Narayanan - AI Agents and the Augmentation Agenda",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:0",
+    "guid": "ps_events:5261:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-10T19:00:00Z",
+    "endsAt": "2026-09-10T20:00:00Z",
+    "startTime": "2026-09-10T15:00:00",
+    "endTime": "2026-09-10T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:4696:delta:0",
+    "guid": "ps_events:4696:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-15T16:15:00Z",
+    "endsAt": "2026-09-15T17:15:00Z",
+    "startTime": "2026-09-15T12:15:00",
+    "endTime": "2026-09-15T13:15:00",
+    "timezone": "America/New_York",
+    "title": "The Bystander Privacy Problem",
+    "speakers": [
+      {
+        "name": "Helen Nissenbaum",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Helen Nissenbaum",
+    "affiliation": "",
+    "series": "Privacy & Security",
+    "tags": [
+      "privacy-security"
+    ],
+    "rawCategories": [
+      "Privacy & Security"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/helen-nissenbaum-bystander-privacy-problem",
+    "content": "Not first to pose a threat to \u201cbystander privacy,\u201d Meta Ray-bans (and similar), have drawn public ire, even disgust. Despite this, we have yet to see decisive pushback from regulatory bodies, and the companies rolling out these products, without a trace of irony, swear to an ongoing commitment to privacy. Setting aside corporate self-dealing and misdirection, Nissenbaum is interested, particularly, in the role of conceptual failure in sustaining the status quo. She explains why a privacy framework that has shaped regulatory thinking and institutional practice for decades (despite",
+    "rawEventDetails": "Details Event Description Not first to pose a threat to \u201cbystander privacy,\u201d Meta Ray-bans (and similar), have drawn public ire, even disgust. Despite this, we have yet to see decisive pushback from regulatory bodies, and the companies rolling out these products, without a trace of irony, swear to an ongoing commitment to privacy. Setting aside corporate self-dealing and misdirection, Nissenbaum is interested, particularly, in the role of conceptual failure in sustaining the status quo. She explains why a privacy framework that has shaped regulatory thinking and institutional practice for decades (despite overwhelming counterevidence) bears significant responsibility for this stalemate. Offering the lens of contextual integrity as an alternative, she argues (spoiler alert) that singling out bystanders for special treatment, in fact, promulgates dominant truisms that we\u2019d be better off without. Bio: Helen Nissenbaum is the Andrew H. and Ann R. Tisch Professor of information science at Cornell Tech and the Cornell Ann S. Bowers College of Computing and Information Science. She is also the director of the Digital Life Initiative , which was launched in 2017 at Cornell Tech to explore societal perspectives surrounding the development and application of digital technology, focusing on ethics, policy, politics, and quality of life. Nissenbaum\u2019s research takes an ethical perspective on policy, law, science, and engineering related to information technology, computing, digital media, and data science. Topics have included privacy, trust, accountability, security, and values in technology design. Her books include \u201cObfuscation: A User\u2019s Guide for Privacy and Protest\u201d with Finn Brunton and \u201cPrivacy in Context: Technology, Policy, and the Integrity of Social Life.\u201d Grants from the NSF , AFOSR , and the U.S. DHHS-ONC have supported her work. She was a recipient of the 2014 Barwise Prize of the American Philosophical Association and an honorary doctorate from Leuphana University, Germany. Nissenbaum has contributed to the development of privacy-enhancing software, including TrackMeNot and AdNauseam. Nissenbaum holds a Ph.D. in philosophy from Stanford University and a B.A. in philosophy and mathematics from the University of the Witwatersrand, South Africa. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Helen Nissenbaum - The Bystander Privacy Problem",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:1",
+    "guid": "ps_events:5261:delta:1",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-17T19:00:00Z",
+    "endsAt": "2026-09-17T20:00:00Z",
+    "startTime": "2026-09-17T15:00:00",
+    "endTime": "2026-09-17T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5156:delta:0",
+    "guid": "ps_events:5156:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-22T16:15:00Z",
+    "endsAt": "2026-09-22T17:15:00Z",
+    "startTime": "2026-09-22T12:15:00",
+    "endTime": "2026-09-22T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Unlocking Digital Behavior Using Accelerator Comscore Data",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/unlocking-digital-behavior-using-accelerator-comscore-data",
+    "content": "The Accelerator has acquired several years of Comscore panel data capturing real-world mobile and desktop browsing behavior, enriched with detailed demographic information. This dataset provides session-level insights into how people use their devices \u2014 what apps they open, what websites they visit, how long they spend, and in what sequence. Unlike social media APIs or traditional surveys, these data capture the invisible majority of online behavior: browsing, reading, and app",
+    "rawEventDetails": "Details Event Description The Accelerator has acquired several years of Comscore panel data capturing real-world mobile and desktop browsing behavior, enriched with detailed demographic information. This dataset provides session-level insights into how people use their devices \u2014 what apps they open, what websites they visit, how long they spend, and in what sequence. Unlike social media APIs or traditional surveys, these data capture the invisible majority of online behavior: browsing, reading, and app usage that leaves no public trace. This talk will open with an overview on the data from Professor Jacob Shapiro, followed by two use cases from Kevin Greene at the Empirical Studies of Conflict Project and Alejandro Cuevas from CITP. The Accelerator Comscore dataset is available for Princeton-based research projects and is currently being used across 10+ projects spanning a variety of subject matter. Speakers: Alejandro Cuevas is a researcher focused on the shady, suspicious, and illicit corners of the Internet\u2013\u2013and how emerging technologies like generative AI both influence and are influenced by these spaces. He blends gonzo and computational social science: first-person fieldwork in underground communities paired with large-scale measurements. His work on darkweb marketplaces has informed criminal investigations and the development of law enforcement tools. More recently, he\u2019s explored how generative AI is reshaping the online information ecosystem, including how people build audiences and craft political narratives\u2013\u2013the latter as a research consultant at Microsoft Research. He earned his Ph.D. in societal computing from Carnegie Mellon University in 2025, where he was advised by Nicolas Christin and honored with a CyLab Presidential Fellowship. He holds a B.S. with honors from Penn State. Outside academia, he co-founded Redoux, a NYC-based fragrance brand. Kevin Greene is an academic research manager in the Empirical Studies of Conflict Project at Princeton University leading the Digital Conflict and Information Integrity project. He was previously a postdoctoral fellow in the Computer Science Department at Dartmouth College. He holds a Ph.D. in Political Science from the University of Pittsburgh. His research examines the role of information and information communication technologies in international and domestic politics. Ongoing projects investigate the spread of unreliable content from algorithmic recommendations, the social and political risks posed by generative AI, and the strategies employed by foreign influence operations. His research has been funded by the National Science Foundation, Lockheed Martin Advanced Technology Labs, and Microsoft and published in Science Advances , PNAS Nexus , the American Political Science Review , Political Analysis , the Journal of Politics , and Political Communication among others. Manoel Horta Ribeiro is an assistant professor at Princeton University in the Department of Computer Science and affiliated with CITP. He received his doctoral degree in Switzerland at EPFL\u2019s Data Science Lab, working with Bob West, and his MSc and BSc in Brazil at UFMG. Ribeiro works at the intersection of computational social science, artificial intelligence, and social computing. He likes doing research that tackles real-world issues and provides actionable insights. Ideally, these insights translate into policy and design changes. Ribeiro's work has also received extensive media coverage, helping shape the public debate around online platforms and generative AI. Jacob N. Shapiro is a professor of politics and international affairs and directs the Empirical Studies of Conflict Project and the Accelerator Initiative. His research on conflict, economic development, security, and technology leverages a wide range of data from administrative records of combat events, to satellite imagery, to social media data and browser telemetry. Shapiro received the 2016 Karl Deutsch Award from ISA, given to a scholar younger than 40 or within 10 years of earning a Ph.D. who has made the most significant contribution to the study of international relations. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Unlocking Digital Behavior Using Accelerator Comscore Data",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:2",
+    "guid": "ps_events:5261:delta:2",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-24T19:00:00Z",
+    "endsAt": "2026-09-24T20:00:00Z",
+    "startTime": "2026-09-24T15:00:00",
+    "endTime": "2026-09-24T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5116:delta:0",
+    "guid": "ps_events:5116:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T16:15:00Z",
+    "endsAt": "2026-09-29T17:15:00Z",
+    "startTime": "2026-09-29T12:15:00",
+    "endTime": "2026-09-29T13:15:00",
+    "timezone": "America/New_York",
+    "title": "DARK MANSIONS: AI, Innovation, and Fermat\u2019s Last Theorem",
+    "speakers": [
+      {
+        "name": "Joshua Cohen",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Joshua Cohen",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Building",
+      "id": "",
+      "detail": "105"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/joshua-cohen-dark-mansions-ai-innovation-and-fermat%E2%80%99s-last-theorem",
+    "content": "Yiu, Kosoy, and Gopnik (2024) argue that \u201cCultural evolution depends on a fine balance between imitation and innovation.\u201d Writing in a world prior to reasoning models, they argued that large language models fall squarely on the imitation side. This paper\u2014focused principally on formal and scientific innovation\u2014proposes a finer-grained, three-tier taxonomy: Tier 1 is transmission, Tier 2 is something new (invention) within a fixed problem formulation, and Tier 3 is framework-generating innovation. Tier 3 requires both historical novelty\u2014a new construction or framework\u2014and functional novelty\u2014a",
+    "rawEventDetails": "Details Event Description Yiu, Kosoy, and Gopnik (2024) argue that \u201cCultural evolution depends on a fine balance between imitation and innovation.\u201d Writing in a world prior to reasoning models, they argued that large language models fall squarely on the imitation side. This paper\u2014focused principally on formal and scientific innovation\u2014proposes a finer-grained, three-tier taxonomy: Tier 1 is transmission, Tier 2 is something new (invention) within a fixed problem formulation, and Tier 3 is framework-generating innovation. Tier 3 requires both historical novelty\u2014a new construction or framework\u2014and functional novelty\u2014a downstream dividend, where the apparatus introduced to solve a problem helps to reorganize later work. We explore Andrew Wiles\u2019s proof of Fermat\u2019s Last Theorem as a case of Tier 3 innovation. Core elements of the proof architecture\u2014especially the R = T modularity-lifting strategy and Taylor\u2013Wiles patching\u2014were not present in the prior mathematical literature. Moreover, the proof apparatus has had substantial downstream impact on number theory and the Langlands program. We consider whether a current frontier AI system trained on pre\u20111987 mathematical sources could have produced a Wiles-type proof strategy, and offer reasons for doubt. Broadening the argument beyond the Wiles proof, we analyze three current AI paradigms for AI in mathematics and argue that they do not yet offer clear mechanisms for Tier 3 innovation. We then assess the empirical record of AI-assisted mathematical discovery, including the refutation of the unit-distance conjecture and the proof of the existence of non-sofic groups. We find a growing number of striking Tier 2 achievements, but no evidence yet of Tier 3 innovation. Tier 3 innovation, we propose, depends on three capacities\u2014imagination, judgment, and tenacity, understood functionally as capacities for novel decomposition, structural evaluation, and sustained exploration. Current architectures have not shown these capacities at the scale required for Tier 3 innovation. The paper concludes with reflections on the architectural changes that may be needed for the innovation that comes from what Andrew Wiles vividly describes as stumbling around in \u201cdark mansions.\u201d Bio: Joshua Cohen is a political philosopher. He has written on issues of democratic theory, freedom of expression, religious freedom, political equality, democracy and digital technology, good jobs, and global justice. His books include On Democracy (with Joel Rogers); Democracy and Associations ( with Joel Rogers); Philosophy, Politics, Democracy ; Rousseau: A Free Community of Equals ; and The Arc of the Moral Universe and Other Essays . He is co-editor of the Norton Introduction to Philosophy , now in its third edition. Cohen taught at MIT (1977-2005), Stanford (2005-2014), is currently on the faculty at Apple University, and is Distinguished Senior Fellow in Law, Philosophy, and Political Science at University of California, Berkeley. Cohen held the Romanell-Phi Beta Kappa Professorship in 2002-3; gave the Tanner Lectures at UC Berkeley in 2007; the Comte Lectures at LSE in 2012; and the Annual Lecture on Ethics and AI at Oxford in 2024. He is co-editor-in-chief of Boston Review . This talk will be recorded and livestreamed via Zoom. The recording will be posted to the CITP website, the CITP YouTube channel and the University Media Central channel. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Joshua Cohen - DARK MANSIONS: AI, Innovation, and Fermat\u2019s Last Theorem",
+    "locationRaw": "Computer Science Building 105",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:3",
+    "guid": "ps_events:5261:delta:3",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-01T19:00:00Z",
+    "endsAt": "2026-10-01T20:00:00Z",
+    "startTime": "2026-10-01T15:00:00",
+    "endTime": "2026-10-01T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:3976:delta:0",
+    "guid": "ps_events:3976:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-06T16:15:00Z",
+    "endsAt": "2026-10-06T17:15:00Z",
+    "startTime": "2026-10-06T12:15:00",
+    "endTime": "2026-10-06T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Towards Globally Equitable AI",
+    "speakers": [
+      {
+        "name": "Aditya Vashistha",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Aditya Vashistha",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/aditya-vashistha-towards-globally-equitable-ai",
+    "content": "AI has the power to drive meaningful change, but its benefits have remained concentrated among privileged communities in the West, which account for only a small fraction of the global population. Even conversations about AI risks are rooted in Western contexts, despite AI\u2019s widespread use across the world. Consequently, current AI technologies not only lack representation of diverse non-Western cultures and languages, but also perpetuate harmful stereotypes about people in these cultures. This talk will examine these challenges through case studies of my work with people with",
+    "rawEventDetails": "Details Event Description AI has the power to drive meaningful change, but its benefits have remained concentrated among privileged communities in the West, which account for only a small fraction of the global population. Even conversations about AI risks are rooted in Western contexts, despite AI\u2019s widespread use across the world. Consequently, current AI technologies not only lack representation of diverse non-Western cultures and languages, but also perpetuate harmful stereotypes about people in these cultures. This talk will examine these challenges through case studies of my work with people with disabilities, women, and emerging users of AI-based technologies in the Global South. Both the promises and pitfalls of existing AI systems will be highlighted, illustrating how they often fail those who are most marginalized. By centering these overlooked perspectives, we will discuss pathways for designing AI technologies that are more inclusive, representative, and equitable on a global scale. Bio: Aditya Vashistha is an assistant professor of Computing and Information Science at Cornell University, where he directs the Cornell Global AI Initiative, an interdisciplinary, university-wide effort to integrate global perspectives into the design, development, evaluation, and governance of AI. His research builds and studies AI technologies that advance equity and improve socioeconomic outcomes for marginalized communities. His work has led to widely used systems impacting over 300,000 people in South Asia and Sub-Saharan Africa, earning multiple best paper awards. His work has been recognized with prestigious accolades, including the Facebook Access Innovation Prize, the UW College of Engineering Award, the Meta Fellowship, Google Faculty Award, Microsoft Faculty Award, and the President\u2019s and Provost\u2019s Faculty Award for Excellence in Research, Teaching, and Service at Cornell. He holds a Ph.D. in Computer Science from the University of Washington, where his dissertation received the William Chan Memorial Dissertation Award and the WAGS/ProQuest Innovation in Technology Award. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsor Center for Information Technology Policy",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Aditya Vashistha - Towards Globally Equitable AI",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:4",
+    "guid": "ps_events:5261:delta:4",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-08T19:00:00Z",
+    "endsAt": "2026-10-08T20:00:00Z",
+    "startTime": "2026-10-08T15:00:00",
+    "endTime": "2026-10-08T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:4686:delta:0",
+    "guid": "ps_events:4686:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-13T16:15:00Z",
+    "endsAt": "2026-10-13T17:15:00Z",
+    "startTime": "2026-10-13T12:15:00",
+    "endTime": "2026-10-13T13:15:00",
+    "timezone": "America/New_York",
+    "title": "From AI Innovation to AI Deployment: Building the Institutions for an AI-Driven Economy",
+    "speakers": [
+      {
+        "name": "Liat Krawczyk",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Liat Krawczyk",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/liat-krawczyk-ai-innovation-ai-deployment-building-institutions-ai-driven-economy",
+    "content": "Artificial intelligence is advancing faster than the institutions, workforces, and systems expected to absorb it. The challenge ahead is therefore not only one of technological innovation, but of deployment: how do we translate rapidly evolving capabilities into broad-based economic opportunity, institutional capacity, and public benefit?This talk will explore the New Jersey AI Hub as an emerging model for tackling that challenge. A public-private initiative founded by Princeton University, the State of New Jersey, Microsoft, and CoreWeave, the Hub brings together universities,",
+    "rawEventDetails": "Details Event Description Artificial intelligence is advancing faster than the institutions, workforces, and systems expected to absorb it. The challenge ahead is therefore not only one of technological innovation, but of deployment: how do we translate rapidly evolving capabilities into broad-based economic opportunity, institutional capacity, and public benefit? This talk will explore the New Jersey AI Hub as an emerging model for tackling that challenge. A public-private initiative founded by Princeton University, the State of New Jersey, Microsoft, and CoreWeave, the Hub brings together universities, government, industry, startups, and communities to accelerate AI innovation and adoption. Liat Krawczyk will discuss the Hub\u2019s work across entrepreneurship, workforce development, applied AI, and responsible governance\u2014and the larger question underlying it: what new forms of collaboration and infrastructure are needed when technological change moves faster than any one institution can respond? Bio: Liat Krawczyk is the inaugural executive director of the New Jersey AI Hub, a public-private initiative launched by Princeton University, the State of New Jersey, Microsoft, and CoreWeave to advance AI innovation, adoption, and workforce development. Previously, she served at the U.S. Department of Commerce\u2019s CHIPS Program Office, where she led workforce strategy and child care efforts tied to the nation\u2019s historic investment in semiconductor manufacturing. Earlier, she led innovation initiatives at the New York City Economic Development Corporation, including work spanning cybersecurity, emerging technology, and the care economy, and has built and advised organizations at the intersection of technology, economic development, and public policy. Her work focuses on a central question of technological change: how institutions, industries, and communities can adapt quickly enough to turn innovation into broadly shared economic opportunity. This talk will be livestreamed and recorded. The recording will be posted to the CITP website, the CITP YouTube channel and the University Media Central channel. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Liat Krawczyk - From AI Innovation to AI Deployment: Building the Institutions for an AI-Driven Economy",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:5",
+    "guid": "ps_events:5261:delta:5",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-15T19:00:00Z",
+    "endsAt": "2026-10-15T20:00:00Z",
+    "startTime": "2026-10-15T15:00:00",
+    "endTime": "2026-10-15T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5271:delta:0",
+    "guid": "ps_events:5271:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-15T20:30:00Z",
+    "endsAt": "2026-10-15T22:00:00Z",
+    "startTime": "2026-10-15T16:30:00",
+    "endTime": "2026-10-15T18:00:00",
+    "timezone": "America/New_York",
+    "title": "A.I. x Journalism: How to Report from the Digital Wild West",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/ai-x-journalism-how-report-digital-wild-west",
+    "content": "What can A.I. do for reporters and what are its limits? How has open-source investigation blown open some of the most essential stories of our time? What data sets can you trust, and how do reporters secure them? Please join the Program in Journalism and the Center for Information Technology Policy for this important conversation, a continuation of our AI x Journalism series.In this panel discussion, Arvind Narayanan (Computer Science and Center for Information Technology Policy), Visiting Ferris Professor Christo Grozev (",
+    "rawEventDetails": "Details Event Description What can A.I. do for reporters and what are its limits? How has open-source investigation blown open some of the most essential stories of our time? What data sets can you trust, and how do reporters secure them? Please join the Program in Journalism and the Center for Information Technology Policy for this important conversation, a continuation of our AI x Journalism series. In this panel discussion, Arvind Narayanan ( Computer Science and Center for Information Technology Policy ), Visiting Ferris Professor Christo Grozev ( investigative journalist and documentary filmmaker ), Dylan Freedman ( The New York Times ), and Madelyne Xiao ( Computer Science ) for a discussion of how to reliably use the tools available to reporters at the edge of technology. Moderated by Eliza Griswold ( Journalism ). Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsor Humanities Council's Program in Journalism",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "A.I. x Journalism: How to Report from the Digital Wild West",
+    "locationRaw": "TBA",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:6",
+    "guid": "ps_events:5261:delta:6",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T19:00:00Z",
+    "endsAt": "2026-10-29T20:00:00Z",
+    "startTime": "2026-10-29T15:00:00",
+    "endTime": "2026-10-29T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5151:delta:0",
+    "guid": "ps_events:5151:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-03T17:15:00Z",
+    "endsAt": "2026-11-03T18:15:00Z",
+    "startTime": "2026-11-03T12:15:00",
+    "endTime": "2026-11-03T13:15:00",
+    "timezone": "America/New_York",
+    "title": "From Code to Care: The Moralization of Healthcare Machine Learning",
+    "speakers": [
+      {
+        "name": "Shira Zilberstein",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Shira Zilberstein",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/shira-zilberstein-code-care-moralization-healthcare-machine-learning",
+    "content": "Artificial intelligence is widely promoted as a promising solution to healthcare challenges, yet its clinical benefits still remain uncertain and its risks persistent. Drawing on extensive fieldwork with researchers developing machine-learning applications for healthcare, this talk demonstrates how practitioners sustain AI\u2019s legitimacy by framing their work as serving the common good. It is argued that \u201cmoralization\u201d\u2014the work of aligning technological projects with values such as equity, care, and wellbeing\u2014generates consensus and momentum for technological solutions to social problems amid",
+    "rawEventDetails": "Details Event Description Artificial intelligence is widely promoted as a promising solution to healthcare challenges, yet its clinical benefits still remain uncertain and its risks persistent. Drawing on extensive fieldwork with researchers developing machine-learning applications for healthcare, this talk demonstrates how practitioners sustain AI\u2019s legitimacy by framing their work as serving the common good. It is argued that \u201cmoralization\u201d\u2014the work of aligning technological projects with values such as equity, care, and wellbeing\u2014generates consensus and momentum for technological solutions to social problems amid uncertainty. At the same time, the moralization of machine learning risks obscuring technical limitations, diffusing accountability, and diverting attention from alternative approaches. Using healthcare AI to illuminate broader transformations in scientific authority as knowledge production becomes increasingly applied, interdisciplinary, and problem-oriented, it is shown how technical authority is established not through claims of neutrality or detachment, but by building relationships across institutional and professional boundaries. Bio: Shira Zilberstein is a sociologist whose research investigates the moral and organizational foundations of knowledge production, with particular attention to how science and technology are used to define and address social problems. Her current work focuses on the development and governance of AI models for healthcare. Using qualitative methods, she studies how researchers and practitioners justify and seek to ensure the social value of their work. She is especially interested in how research communities navigate uncertainty and sustain commitments to technological innovation even in the face of contested outcomes and limitations. Shira holds a Ph.D. in sociology from Harvard University, where she was a Science and Technology Studies Fellow and a BA in sociology and history from Northwestern University. Her research has been supported by the National Science Foundation, the American Sociological Association, the Russell Sage Foundation, and the National Academies of Sciences, Engineering, and Medicine, among others. She has collaborated with researchers at MIT, Duke, and Yale on projects related to the development and governance of healthcare AI. At Princeton, she is also affiliated with the Princeton Societal AI Initiative. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Shira Zilberstein - From Code to Care: The Moralization of Healthcare Machine Learning",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5136:delta:0",
+    "guid": "ps_events:5136:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-05T14:00:00Z",
+    "endsAt": "2026-11-06T21:00:00Z",
+    "startTime": "2026-11-05T09:00:00",
+    "endTime": "2026-11-06T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton AI in Science Evaluation Workshop",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/princeton-ai-science-evaluation-workshop",
+    "content": "At this historical juncture, the methods of artificial intelligence (AI) are taking on ever more (and ever more foundational) roles in the routine course of science. AI-based tools are projected to transform every stage of the research pipeline, from literature review and hypothesis generation, to the production of synthetic data and data analysis. Increasingly, with the rise of generative AI, AI tools are also put forward as means of arbitration over the scientific research process itself. Proposed functions for AI as scientific arbiter have included AI based peer review, AI based grant",
+    "rawEventDetails": "Details Event Description At this historical juncture, the methods of artificial intelligence (AI) are taking on ever more (and ever more foundational) roles in the routine course of science. AI-based tools are projected to transform every stage of the research pipeline, from literature review and hypothesis generation, to the production of synthetic data and data analysis. Increasingly, with the rise of generative AI, AI tools are also put forward as means of arbitration over the scientific research process itself. Proposed functions for AI as scientific arbiter have included AI based peer review, AI based grant review, AI for predicting the replicability of research findings, and AI for science auditing. Such proposals are being put into practice almost as quickly as they can be described, with little oversight or input from relevant expert communities. The workshop seeks to fill this gap by convening scholars with relevant expertise to weigh in on the prospects of AI in science evaluation and its potential ramifications for the future of science. We believe that this timely conversation must include spokespeople from artificial intelligence\u2014both academic and industry, executives and editors at major journals and publishing houses, working scientists, metascientists, and scholars coming from history, philosophy, and sociology of science. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton AI in Science Evaluation Workshop",
+    "locationRaw": "",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:7",
+    "guid": "ps_events:5261:delta:7",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-05T20:00:00Z",
+    "endsAt": "2026-11-05T21:00:00Z",
+    "startTime": "2026-11-05T15:00:00",
+    "endTime": "2026-11-05T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5196:delta:0",
+    "guid": "ps_events:5196:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-10T17:15:00Z",
+    "endsAt": "2026-11-10T18:15:00Z",
+    "startTime": "2026-11-10T12:15:00",
+    "endTime": "2026-11-10T13:15:00",
+    "timezone": "America/New_York",
+    "title": "An Artificial Intelligence Talk by Angel Hwang",
+    "speakers": [
+      {
+        "name": "Angel Hwang",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Angel Hwang",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/angel-hwang",
+    "content": "Talk information: TBABio:Angel Hsing-Chi Hwang (she/her) is an assistant professor of communication and computer science at University of Southern California and a human-AI interaction (HAII) researcher. Her research explores the impact of artificial intelligence (AI) on social interaction in both professional and personal settings, as well as its downstream influences on people\u2019s mental health, wellbeing, and work practices. Her work aims to inform the design of more responsible and human-centered AI systems for the future of work and social life. Prior to",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Angel Hsing-Chi Hwang (she/her) is an assistant professor of communication and computer science at University of Southern California and a human-AI interaction (HAII) researcher. Her research explores the impact of artificial intelligence (AI) on social interaction in both professional and personal settings, as well as its downstream influences on people\u2019s mental health, wellbeing, and work practices. Her work aims to inform the design of more responsible and human-centered AI systems for the future of work and social life. Prior to joining USC, Hwang received her Ph.D. in communication at Cornell University with a concentration in human-computer interaction and conducted her postdoctoral training at Cornell Bowers College of Computing and Information Science. Outside of academia, she also has extensive experience researching state-of-the-art AI across several world-class research organizations in the tech industry, including Microsoft Research, Google Research, Sony AI, Adobe, and Accenture Labs. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Angel Hwang",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:8",
+    "guid": "ps_events:5261:delta:8",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T20:00:00Z",
+    "endsAt": "2026-11-12T21:00:00Z",
+    "startTime": "2026-11-12T15:00:00",
+    "endTime": "2026-11-12T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5146:delta:0",
+    "guid": "ps_events:5146:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-17T17:15:00Z",
+    "endsAt": "2026-11-17T18:15:00Z",
+    "startTime": "2026-11-17T12:15:00",
+    "endTime": "2026-11-17T13:15:00",
+    "timezone": "America/New_York",
+    "title": "An Artificial Intelligence Talk by Eve Fleisig",
+    "speakers": [
+      {
+        "name": "Eve Fleisig",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Eve Fleisig",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/eve-fleisig",
+    "content": "Talk information: TBABio:Eve Fleisig is a computer scientist whose work combines natural language processing (NLP) and AI ethics. She develops methods to ensure that language models benefit all users, when those users have diverse perspectives and varied needs. She holds a Ph.D. from Berkeley EECS, where she was advised by Dan Klein in the Berkeley NLP group; previously, she received a B.S.E. in computer science from Princeton University. Her research has been awarded an NSF Graduate Research Fellowship, Berkeley Chancellor\u2019s Fellowship, and Outstanding Paper",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Eve Fleisig is a computer scientist whose work combines natural language processing (NLP) and AI ethics. She develops methods to ensure that language models benefit all users, when those users have diverse perspectives and varied needs. She holds a Ph.D. from Berkeley EECS, where she was advised by Dan Klein in the Berkeley NLP group; previously, she received a B.S.E. in computer science from Princeton University. Her research has been awarded an NSF Graduate Research Fellowship, Berkeley Chancellor\u2019s Fellowship, and Outstanding Paper Awards at EMNLP and NAACL.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Eve Fleisig",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:9",
+    "guid": "ps_events:5261:delta:9",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T20:00:00Z",
+    "endsAt": "2026-11-19T21:00:00Z",
+    "startTime": "2026-11-19T15:00:00",
+    "endTime": "2026-11-19T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5106:delta:0",
+    "guid": "ps_events:5106:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-01T17:15:00Z",
+    "endsAt": "2026-12-01T18:15:00Z",
+    "startTime": "2026-12-01T12:15:00",
+    "endTime": "2026-12-01T13:15:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by Alia ElKattan",
+    "speakers": [
+      {
+        "name": "Alia ElKattan",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Alia ElKattan",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/alia-elkattan",
+    "content": "Talk information: TBABio:Alia ElKattan is a researcher who examines the sociopolitical implications of online platforms and emerging technologies. She obtained her Ph.D. at NYU Politics, where her research focused on how the design of technology mediates the acquisition of political information, and how to motivate and safeguard responsible, healthy, and critical engagement with emerging technologies such as large language models and conversational agents. She also has a creative technology practice which leverages play and interactive storytelling to both",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Alia ElKattan is a researcher who examines the sociopolitical implications of online platforms and emerging technologies. She obtained her Ph.D. at NYU Politics, where her research focused on how the design of technology mediates the acquisition of political information, and how to motivate and safeguard responsible, healthy, and critical engagement with emerging technologies such as large language models and conversational agents. She also has a creative technology practice which leverages play and interactive storytelling to both demystify opaque technologies, and expand public imaginaries of alternative technological futures. ElKattan is a grantee of the Responsible Technology Youth Power Fund and a two-time winner of Mozilla Foundation\u2019s Creative Media Award for work on AI bias, data transparency, user choice in algorithmic feeds. Her work has been published in venues such as Sociological Science, FAccT, the Journal for Quantitative Description, and and been presented in media festivals including the International Documentary Festival Amsterdam (IDFA) in the Netherlands, Sheffield DocFest in the UK, and March On Festival in Washington, DC, among others. When not writing code or papers, ElKattan can most often be found playing football (soccer), skateboarding, or making playlists. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsor Center for Information Technology Policy",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Alia ElKattan",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5261:delta:10",
+    "guid": "ps_events:5261:delta:10",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T20:00:00Z",
+    "endsAt": "2026-12-03T21:00:00Z",
+    "startTime": "2026-12-03T15:00:00",
+    "endTime": "2026-12-03T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Bias in AI Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
+    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
+    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Bias in AI Reading Group",
+    "locationRaw": "Sherrerd Hall 008",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5266:delta:0",
+    "guid": "ps_events:5266:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-01-26T17:15:00Z",
+    "endsAt": "2027-01-26T18:15:00Z",
+    "startTime": "2027-01-26T12:15:00",
+    "endTime": "2027-01-26T13:15:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by Seyi Olojo",
+    "speakers": [
+      {
+        "name": "Seyi Olojo",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Seyi Olojo",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2027/seyi-olojo",
+    "content": "Talk information: TBABio:Seyi Olojo is a critical information studies scholar who studies epistemic cultures in computing. Her work situates natural language processing as a sociotechnical practice that mediates hierarchies of power within a global political economy of AI. Olojo\u2019s dissertation investigated the politics of digitizing and mechanizing African languages, where African language communities hold visions for language revitalization and cultural preservation. Her research has been published in Information, Communication & Society; Frontiers of Psychology;",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Seyi Olojo is a critical information studies scholar who studies epistemic cultures in computing. Her work situates natural language processing as a sociotechnical practice that mediates hierarchies of power within a global political economy of AI. Olojo\u2019s dissertation investigated the politics of digitizing and mechanizing African languages, where African language communities hold visions for language revitalization and cultural preservation. Her research has been published in Information, Communication & Society; Frontiers of Psychology; the ACM Conferences on Computer-Supported Cooperative Work & Social Computing (CSCW); Fairness, Accountability, and Transparency (FAccT); and Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO). She received her Ph.D. from the School of Information at the University of California, Berkeley and her research has been supported by the National Science Foundation, the Eugene Cota-Robles Fellowship, the US Fulbright Program, and the Weizenbaum Institute for the Networked Society. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Seyi Olojo",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:4656:delta:0",
+    "guid": "ps_events:4656:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-04-13T16:15:00Z",
+    "endsAt": "2027-04-13T17:15:00Z",
+    "startTime": "2027-04-13T12:15:00",
+    "endTime": "2027-04-13T13:15:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by Andy Guess",
+    "speakers": [
+      {
+        "name": "Andy Guess",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Andy Guess",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2027/andy-guess",
+    "content": "Talk information: TBA Bio:Andy Guess is an associate professor of politics and public affairs and the director of the survey research center at Princeton University. Via a combination of experimental and computational methods, he studies how people choose, process, spread, and respond to information about politics on the internet. His research has investigated the extent to which online Americans\u2019 news habits are polarized, patterns in the consumption and spread of online misinformation, and the effectiveness of efforts to counteract misperceptions",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Andy Guess is an associate professor of politics and public affairs and the director of the survey research center at Princeton University. Via a combination of experimental and computational methods, he studies how people choose, process, spread, and respond to information about politics on the internet. His research has investigated the extent to which online Americans\u2019 news habits are polarized, patterns in the consumption and spread of online misinformation, and the effectiveness of efforts to counteract misperceptions originating on social media. His research has been supported by grants from VolkswagenStiftung, the Russell Sage Foundation, and the National Science Foundation and published in peer-reviewed journals such as Science Advances , Nature Human Behaviour , Political Analysis , and Proceedings of the National Academy of Sciences . Andy is the founding co-editor, with former CITP Fellows Eszter Hargittai and Kevin Munger, of the Journal of Quantitative Description: Digital Media . If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Andy Guess",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  }
+]

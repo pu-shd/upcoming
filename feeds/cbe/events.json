@@ -1,0 +1,482 @@
+[
+  {
+    "id": "cbe:ps_events:5276:delta:0",
+    "guid": "ps_events:5276:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-02T20:00:00Z",
+    "endsAt": "2026-09-02T21:00:00Z",
+    "startTime": "2026-09-02T16:00:00",
+    "endTime": "2026-09-02T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Beyond the Monomer: Designing Sequence, Patterns, Composition, and Architecture in Macromolecules",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/beyond-monomer-designing-sequence-patterns-composition-and-architecture-macromolecules",
+    "content": "Polymers are essential to a wide range of technologies, yet designing them with targeted structural and functional properties remains a grand challenge. Moreover, the products and technology only exploit a fraction of the prospective design space availed by macromolecules. A major opportunity lies in applying machine learning to help navigate the vast combinatorial design space\u2014spanning sequence, composition, architecture, morphology, processing, and more\u2014to discover new formulations or replace existing ones with more sustainable alternatives. However, this complexity, combined with data",
+    "rawEventDetails": "Speaker Michael Webb Affiliation Princeton University Details Event Description Polymers are essential to a wide range of technologies, yet designing them with targeted structural and functional properties remains a grand challenge. Moreover, the products and technology only exploit a fraction of the prospective design space availed by macromolecules. A major opportunity lies in applying machine learning to help navigate the vast combinatorial design space\u2014spanning sequence, composition, architecture, morphology, processing, and more\u2014to discover new formulations or replace existing ones with more sustainable alternatives. However, this complexity, combined with data scarcity and characterization challenges, limits the effectiveness of purely rational design and/or high-throughput screening. In this talk, I will describe some of our recent efforts to integrate molecular simulation, machine learning, and theory to map and navigate structure\u2013function relationships in chemically and topologically diverse polymeric materials. I will describe strategies that we have employed across a range of applications to overcome data limitations in polymer science by developing physics-informed (or guided) models as well as other algorithmic innovations. Specific examples of our approach will be drawn from the characterization of single-chain nanoparticle morphologies, the design of enzyme-stabilizing copolymers, and the formulation of architecturally complex polymer additives that tune solution rheology. These examples will showcase utility, limitations, and opportunities for data-driven approaches in modern-day science and how coupling them with (or using them to develop) physical insight can accelerate innovation and deepen materials understanding.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Beyond the Monomer: Designing Sequence, Patterns, Composition, and Architecture in Macromolecules",
+    "locationRaw": "E105 SEAS-BioE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5281:delta:0",
+    "guid": "ps_events:5281:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T20:00:00Z",
+    "endsAt": "2026-09-09T21:00:00Z",
+    "startTime": "2026-09-09T16:00:00",
+    "endTime": "2026-09-09T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/structure-function-relationships-sustainable-feedstock-upgrading-lessons-oxidation-chemistry",
+    "content": "Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other",
+    "rawEventDetails": "Speaker Gina Noh Affiliation The Pennsylvania State University Details Event Description Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other functions, and their consequences for catalysis. In this seminar, I will present two vignettes: (1) dry reforming of methane over Ni-CeO 2 materials and (2) ethanol oxidative dehydrogenation to form acetaldehyde over M1-MoVO x catalysts. The role of elementary steps involving oxygen and oxygen-transport reactions in reactivity, selectivity, and stability will be clarified.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5446:delta:0",
+    "guid": "ps_events:5446:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-15T14:30:00Z",
+    "endsAt": "2026-09-15T16:00:00Z",
+    "startTime": "2026-09-15T10:30:00",
+    "endTime": "2026-09-15T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Molecular Mechanisms Underlying Condensed-Phase Phenomena: Insights from Atomistic Simulations",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F212"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/molecular-mechanisms-underlying-condensed-phase-phenomena-insights-atomistic-simulations",
+    "content": "The performance of modern materials often depends on achieving a precise balance among multiple, sometimes competing, properties. Design and optimization of such materials require understanding how subtle variations in molecular composition and organization change this balance. However, this relationship is often difficult to predict as macroscopic properties originate from many interactions occurring at length and time scales far smaller than those directly observed. Molecular simulations provide a means to bridge this gap by relating molecular-level behavior to material response. This",
+    "rawEventDetails": "Speaker Baris Eser Ugur Details Event Description The performance of modern materials often depends on achieving a precise balance among multiple, sometimes competing, properties. Design and optimization of such materials require understanding how subtle variations in molecular composition and organization change this balance. However, this relationship is often difficult to predict as macroscopic properties originate from many interactions occurring at length and time scales far smaller than those directly observed. Molecular simulations provide a means to bridge this gap by relating molecular-level behavior to material response. This dissertation combines physics-based molecular dynamics (MD) simulations and data-driven machine learning techniques to investigate how molecular chemistry governs physical properties across diverse organic condensed-phase systems, particularly molecular liquids and polymeric materials. In the case of molecular liquids, the central challenge is determining how strongly nuclear quantum effects (NQEs) influence thermophysical properties across chemical space. For polymeric materials, the challenge lies in resolving how functional group chemistry, mixture composition, and comonomer sequence underlie distinct physical phenomena in structurally complex systems. The studies presented here address distinct challenges in relating molecular chemistry to macroscopic properties in complex condensed-phase systems. Together, these insights provide molecular-level principles for understanding physical phenomena and help guide the rational design of high-performance materials.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Molecular Mechanisms Underlying Condensed-Phase Phenomena: Insights from Atomistic Simulations",
+    "locationRaw": "SEAS-CBE F212",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5286:delta:0",
+    "guid": "ps_events:5286:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-16T20:00:00Z",
+    "endsAt": "2026-09-16T21:00:00Z",
+    "startTime": "2026-09-16T16:00:00",
+    "endTime": "2026-09-16T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Network Phases in Block Polymers",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/network-phases-block-polymers",
+    "content": "This presentation will explore our recent computational research self-assembled network phases in block copolymers, which can serve as templates for creating metallic metamaterials. In the first part of the presentation, I will describe routes to produce single-gyroid phases, chiral network with three-fold connectors. While single gyroid is metastable in simple AB diblock copolymers, blends of linear diblock polymers and neat melts of nonlinear copolymer architectures expose stability windows for alternating gyroid and single gyroid, respectively, in experimentally accessible systems. The",
+    "rawEventDetails": "Speaker Kevin Dorfman Affiliation University of Minnesota Details Event Description This presentation will explore our recent computational research self-assembled network phases in block copolymers, which can serve as templates for creating metallic metamaterials. In the first part of the presentation, I will describe routes to produce single-gyroid phases, chiral network with three-fold connectors. While single gyroid is metastable in simple AB diblock copolymers, blends of linear diblock polymers and neat melts of nonlinear copolymer architectures expose stability windows for alternating gyroid and single gyroid, respectively, in experimentally accessible systems. The second part of the presentation will discuss a new principle, known as boundary frustration, that guides termination plane selection between two non-preferential surfaces. Finally, I will describe a new approach known as \u201cgenerative SCFT\u201d that leverages generative adversarial networks to learn from self-consistent field theory (SCFT) solution trajectories to propose new initial guesses for subsequent SCFT calculations. This approach not only identified all known block polymer network phases but also uncovered a vast library of candidate network phases.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Network Phases in Block Polymers",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5291:delta:0",
+    "guid": "ps_events:5291:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-23T20:00:00Z",
+    "endsAt": "2026-09-23T21:00:00Z",
+    "startTime": "2026-09-23T16:00:00",
+    "endTime": "2026-09-23T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Crystal Engineering in the Pharmaceutical Industry: Opportunities for Further Innovation",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/crystal-engineering-pharmaceutical-industry-opportunities-further-innovation",
+    "content": "Crystal engineering has been used within the pharmaceutical industry for multiple decades, primarily applied to batch processes. Crystal engineering is employed for the control of crystal attributes such as crystal form, particle size, particle morphology as well as impurity rejection. While applied across intermediate steps, crystal engineering is often utilized for the isolation of the active pharmaceutical ingredient, as these particle attributes can directly impact the bioavailability of the drug when used in solid oral dosage forms. Concurrent with the increased utilization of particle",
+    "rawEventDetails": "Speaker Christopher Burcham Affiliation University of Illinois Urbana-Champaign Details Event Description Crystal engineering has been used within the pharmaceutical industry for multiple decades, primarily applied to batch processes. Crystal engineering is employed for the control of crystal attributes such as crystal form, particle size, particle morphology as well as impurity rejection. While applied across intermediate steps, crystal engineering is often utilized for the isolation of the active pharmaceutical ingredient, as these particle attributes can directly impact the bioavailability of the drug when used in solid oral dosage forms. Concurrent with the increased utilization of particle engineering techniques, the pharmaceutical industry has also rediscovered continuous processing and as a natural result there has been an increased interest in continuous crystallization and isolation of pharmaceutical intermediates and APIs. Continuous crystallization presents unique challenges to the control of physical properties of active pharmaceutical ingredients by direct crystallization when compared to batch crystallization processes. These limitations can be overcome to some extent by the implementation of in-situ milling and other process intensification technologies. Development of these processes has historically been experiential through trial-and-error experimentation \u2013 which leads to long development cycles, and the need for significant quantities of materials to fund the development studies. Application and utilization of population balance models (PBM) significantly decrease both the development cycle time and the material needs \u2013 a case study demonstrating the efficiency gains of using PBMs will be presented. While the utilization of PBMs greatly decreases the development timeframe, the overall process development cycle is quite linear, such that the development of the process cannot begin until many other activities are completed, all of which rely on the selection of the crystal form that will be carried forward \u2013 which until recently has been done through extensive crystal screening studies. Innovations in ab-initio crystal structure predictions (CSP) offer the promise of transforming polymorph screening and selection by predicting all possible polymorphs of a given organic molecule along with the associated free energies of each predicted form. These advances in the ability to predict crystal form as well as crystal growth have progressed to such a point where one can ask \u2013 can the linear process development workflow be replaced through in-silico simulations? (Burcham et al, 2024). An in-silico workflow for the digital design of crystallization processes starting from the chemical structure of the active pharmaceutical ingredient (API) through to process development will be presented. The opportunities, current limitations and prospects for future innovation of this approach will be discussed. 1. Burcham, C. L., et al. (2024). \"PharmaceuScal Digital Design: From Chemical Structure through Crystal Polymorph to Conceptual Crystallization Process.\" Crystal Growth & Design 24(13): 5417\u20135438.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Crystal Engineering in the Pharmaceutical Industry: Opportunities for Further Innovation",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5296:delta:0",
+    "guid": "ps_events:5296:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-30T20:00:00Z",
+    "endsAt": "2026-09-30T21:00:00Z",
+    "startTime": "2026-09-30T16:00:00",
+    "endTime": "2026-09-30T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Flow, Structure, and Motion Correlation in Nearly-jammed Suspensions",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/flow-structure-and-motion-correlation-nearly-jammed-suspensions",
+    "content": "Some general introductory ideas about suspensions of particles in liquids as well as a set of new findings will be developed in this talk. Suspensions are found in many forms and settings, and the compositions and properties can vary widely. However, certain issues prevail: one is the influence of the liquid through hydrodynamic interactions, and a second is the importance of the solid fraction and interparticle forces in controlling the flow properties, which we usually call the rheology of the material. Suspensions include colloidal dispersions of nanoparticles as well as cases",
+    "rawEventDetails": "Speaker Jeffrey Morris Affiliation The City College of New York Details Event Description Some general introductory ideas about suspensions of particles in liquids as well as a set of new findings will be developed in this talk. Suspensions are found in many forms and settings, and the compositions and properties can vary widely. However, certain issues prevail: one is the influence of the liquid through hydrodynamic interactions, and a second is the importance of the solid fraction and interparticle forces in controlling the flow properties, which we usually call the rheology of the material. Suspensions include colloidal dispersions of nanoparticles as well as cases involving somewhat larger particles such as cement, ceramics, and mud. The last three are all examples of dense suspensions, with solid fraction approaching the limit of flowability known as jamming. Because the rheology most often depends on the magnitude of the applied forces (e.g. pressure gradient in a pipe flow), suspensions are complex fluids \u2013 or they may be unyielded soft solids that can be caused to flow by enough force, as seen in the examples of cement mortars or muds. Here, we will present results based on simulations of suspensions approaching jamming to illustrate the unique features of these materials. These include discontinuous shear thickening (DST) as well as shear-induced jamming. The role of interparticle forces, including conservative and frictional contact forces, and the imposed stress in this process will be briefly reviewed, followed by our current examination of structures that are found to be related to the abrupt flow transitions. On approach to jamming, these structures develop as a result of the progressive reduction of the particle degrees of freedom in their motion as networks of contacts are formed. These networks rapidly break and reform during flow, but give rise to strongly correlated near-rigid motions of identifiable domains or \u201ctransient clusters.\u201d The resulting fluctuations in motion become dominant as jamming is approached. In the DST regime, the contact number is found to fluctuate very strongly, but can result in highly connected but once again transient structures; system-spanning, or percolating, structures of frictionally-contacting particles are found to have important influence on the observed rheology.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Flow, Structure, and Motion Correlation in Nearly-jammed Suspensions",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5301:delta:0",
+    "guid": "ps_events:5301:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-07T20:00:00Z",
+    "endsAt": "2026-10-07T21:00:00Z",
+    "startTime": "2026-10-07T16:00:00",
+    "endTime": "2026-10-07T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Selective Ion Transport in Hydration-limited Sub-nm Pores of Polymer Membranes",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/selective-ion-transport-hydration-limited-sub-nm-pores-polymer-membranes",
+    "content": "Ion transport under nanoscale confinement and in the presence of charge is poorly understood from a fundamental perspective. Under the conditions of dielectric saturation that arise in nanoscale pores, the classical ideas that guide our understanding of electrostatic interactions break down, and new principles that account for the role of pore geometry and chemistry on water structure and ion interactions are needed. At the same time, our ability to develop such principles is hindered by the challenge of generating relevant well-defined geometries that enable experimental studies over",
+    "rawEventDetails": "Speaker Chinedum Osuji Affiliation University of Pennsylvania Details Event Description Ion transport under nanoscale confinement and in the presence of charge is poorly understood from a fundamental perspective. Under the conditions of dielectric saturation that arise in nanoscale pores, the classical ideas that guide our understanding of electrostatic interactions break down, and new principles that account for the role of pore geometry and chemistry on water structure and ion interactions are needed. At the same time, our ability to develop such principles is hindered by the challenge of generating relevant well-defined geometries that enable experimental studies over statistically meaningful volumes such that experimental data can be more confidently considered alongside data from computational efforts. Beyond the fundamental implications, new understanding is needed to drive the rational design of materials for ion separations in critical minerals production and resource recovery, among other examples, where the need to distinguish between ions of the same valency and charge imposes a severe challenge. Here, we examine transport of ions in polymer membranes with well-defined sub-1 nm pores. The membranes are charged, modestly hydrated nanoporous polymers produced by crosslinking self-assembled lyotropic mesophases with direct hexagonal and gyroid nanostructures. This work addresses the roles of hydration, pore geometry and ion identity on transport using a combination of electrochemical and NMR measurements, and molecular simulation. Our results highlight the roles of hydration, solubility, pore size, and ion-pore wall interactions in dictating transport in the pores. They provide new insight regarding transport under nanoscale confinement in the presence of charge and that we suggest could be relevant for the development of materials for challenging ion separations.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Selective Ion Transport in Hydration-limited Sub-nm Pores of Polymer Membranes",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5306:delta:0",
+    "guid": "ps_events:5306:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-14T20:00:00Z",
+    "endsAt": "2026-10-14T21:00:00Z",
+    "startTime": "2026-10-14T16:00:00",
+    "endTime": "2026-10-14T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Material Chemistry Approaches to the Design of Electrocatalyst for Sustainability",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/material-chemistry-approaches-design-electrocatalyst-sustainability",
+    "content": "Meeting the growing demand for energy requires the development of innovative energy conversion and storage processes beyond conventional thermal technologies and electrocatalysis plays a central role in this transition. While electrocatalysis shares a number of common design principles with thermal catalysis, they also differ greatly. Besides reactivity and selectivity, durability and stability under electrochemical reaction conditions are required for an electrocatalyst. In addition, electrochemical processes often occur at liquid-solid interface under potential, posting new challenges in",
+    "rawEventDetails": "Speaker Hong Yang Affiliation University of Illinois Urbana-Champaign Details Event Description Meeting the growing demand for energy requires the development of innovative energy conversion and storage processes beyond conventional thermal technologies and electrocatalysis plays a central role in this transition. While electrocatalysis shares a number of common design principles with thermal catalysis, they also differ greatly. Besides reactivity and selectivity, durability and stability under electrochemical reaction conditions are required for an electrocatalyst. In addition, electrochemical processes often occur at liquid-solid interface under potential, posting new challenges in design. In this presentation, I will discuss our research effort, aiming at uncovering structural design for electrocatalysts. Specifically, I will present the studies on structural and interfacial control of metal oxide and alloy electrocatalysts for oxygen evolution reaction (OER) which occurs in a range of chemical processes, such as hydrogen production from water splitting. Our finding suggests defect engineering is often central in the design of high-performance electrocatalysts for site and crystalline phase tunable complex oxides (i.e., rutile, pyrochlore, and perovskite) and for strained alloys. Flexibility in lattice of complex oxides (A x B y O z ) and tunability of surface strain of alloys often provide the controls of surface and lattice structures that affect the electrocatalytic reaction pathways and performance. Notably, unlike thermal catalysts, proper design of structural defects could simultaneously enhance both activity and stability of electrocatalysts. Valence band analysis, in situ Raman spectroscopy, X-ray photoelectron spectroscopy, molecular probe and isotope kinetic studies, together with electrochemical characterizations, have been used to identify reactive intermediates and to understand reaction mechanisms.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Material Chemistry Approaches to the Design of Electrocatalyst for Sustainability",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5311:delta:0",
+    "guid": "ps_events:5311:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-28T20:00:00Z",
+    "endsAt": "2026-10-28T21:00:00Z",
+    "startTime": "2026-10-28T16:00:00",
+    "endTime": "2026-10-28T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Understanding, Simulating, and Designing Catalysts with Machine Learning",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/understanding-simulating-and-designing-catalysts-machine-learning",
+    "content": "Machine learning is transforming catalysis by enabling researchers not only to predict catalyst behavior but also to extract scientific understanding, model catalytic materials across previously inaccessible time and length scales, and increasingly accelerate scientific discovery. In this talk, I will present recent advances spanning interpretable machine learning for uncovering the physical origins of chemisorption, machine-learning-driven simulations of catalyst dynamics and the design of catalytic materials, and AI agents for accelerating reaction mechanism discovery. By integrating",
+    "rawEventDetails": "Speaker Bryan Goldsmith Affiliation University of Michigan Details Event Description Machine learning is transforming catalysis by enabling researchers not only to predict catalyst behavior but also to extract scientific understanding, model catalytic materials across previously inaccessible time and length scales, and increasingly accelerate scientific discovery. In this talk, I will present recent advances spanning interpretable machine learning for uncovering the physical origins of chemisorption, machine-learning-driven simulations of catalyst dynamics and the design of catalytic materials, and AI agents for accelerating reaction mechanism discovery. By integrating machine learning with electronic structure theory and atomistic simulations, these approaches reveal fundamental structure\u2013property relationships while accelerating catalyst development. Together, these studies illustrate how machine learning is evolving from a predictive tool into a framework for generating scientific insight and enabling the next generation of catalyst discovery.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Understanding, Simulating, and Designing Catalysts with Machine Learning",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5316:delta:0",
+    "guid": "ps_events:5316:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-02T21:00:00Z",
+    "endsAt": "2026-12-02T22:00:00Z",
+    "startTime": "2026-12-02T16:00:00",
+    "endTime": "2026-12-02T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Decoding Repetitive Proteins to Design Stimuli-Responsive Biopolymers",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/decoding-repetitive-proteins-design-stimuli-responsive-biopolymers",
+    "content": "Evolution allows organisms to adapt to their environments, yet some molecular patterns stay constant through billions of years of evolution. These patterns encode the secrets of biological materials, such that similar patterns often emerge in different materials with similar functions. For example, a family of elastin proteins form stretchable fibers, which allow the constant movement of human skin, blood vessels, and lungs. We aim to decode the secrets of biological materials by investigating sequence patterns in repetitive proteins, towards establishing systematic protein sequence",
+    "rawEventDetails": "Speaker Danielle Mai Affiliation Stanford University Details Event Description Evolution allows organisms to adapt to their environments, yet some molecular patterns stay constant through billions of years of evolution. These patterns encode the secrets of biological materials, such that similar patterns often emerge in different materials with similar functions. For example, a family of elastin proteins form stretchable fibers, which allow the constant movement of human skin, blood vessels, and lungs. We aim to decode the secrets of biological materials by investigating sequence patterns in repetitive proteins, towards establishing systematic protein sequence\u2013biomaterial property relationships. This talk explores two classes of repetitive proteins as stimuli-responsive biopolymers. First, we investigate bacterial proteins that undergo conformational changes in response to calcium ions. We modify hydrophobicity, electrostatics, and sequence heterogeneity to demonstrate sequence-dependent, reversible folding and domain size changes in response to calcium ions. We also identify structural features that give rise to ion selectivity, which is not yet well-predicted by AI/ML tools. Second, we introduce enzymatic stimuli to drive isothermal phase separation of elastin-like polypeptides (ELPs). ELPs have drawn interest as heat-responsive biopolymers, such that ELPs undergo reversible phase separation from water upon heating. However, temperature is not always a convenient trigger, especially in biological environments that maintain near-constant temperature, pH, and ionic composition. To expand ELP function, we program a mechanism for isothermal phase separation upon proteolytic cleavage of a di-block ELP. This mechanism presents a new opportunity to exploit biological triggers for ELP phase behavior and self-assembly processes. Overall, we demonstrate repetitive proteins as tunable and modular building blocks for functional biomaterials.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Decoding Repetitive Proteins to Design Stimuli-Responsive Biopolymers",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

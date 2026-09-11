@@ -1,0 +1,817 @@
+[
+  {
+    "id": "materials:ps_events:4146:delta:0",
+    "guid": "ps_events:4146:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-20T12:00:00Z",
+    "endsAt": "2026-08-21T17:30:00Z",
+    "startTime": "2026-08-20T08:00:00",
+    "endTime": "2026-08-21T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Symposium on Advances in Optics and Ultrafast Science",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Briger Hall",
+      "id": "",
+      "detail": "C112 + Atrium C102"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/princeton-symposium-advances-optics-and-ultrafast-science",
+    "content": "We are pleased to host the inaugural Princeton Symposium on Advances in Optics and Ultrafast Science, sponsored by the SEAS Cluster of Excellence on Advanced Optical Metrology and Ultrafast Dynamics. The symposium will bring together leading researchers from Princeton and institutions around the world to discuss recent advances across a broad range of topics, including ultrafast science, spectroscopy, time-resolved X-ray and electron scattering, and quantum materials. The two-day program will feature keynote and invited talks, a poster session, and opportunities for",
+    "rawEventDetails": "Details Event Description We are pleased to host the inaugural Princeton Symposium on Advances in Optics and Ultrafast Science , sponsored by the SEAS Cluster of Excellence on Advanced Optical Metrology and Ultrafast Dynamics. The symposium will bring together leading researchers from Princeton and institutions around the world to discuss recent advances across a broad range of topics, including ultrafast science, spectroscopy, time-resolved X-ray and electron scattering, and quantum materials. The two-day program will feature keynote and invited talks, a poster session, and opportunities for interdisciplinary discussion and collaboration. We welcome participants from both academia and industry. Agenda Schedule is subject to change. Thursday, August 20: Time Activity Speaker(s) 8:00 - 9:00 Breakfast and coffee 9:00 - 9:15 Welcome Remarks Aditya Sood (Princeton University) Andrew Houck (Dean, School of Engineering and Applied Sciences, Princeton University) 9:15 - 10:00 Keynote Tony Heinz (Stanford University) Light-Matter Interactions in 2D Materials 10:00 - 12:00 Session 1 Chair: Aditya Sood Libai Huang (Purdue University) Imaging the Transport Dynamics of Correlated Exciton Phases via Ultrafast Microscopy Sarah King (University of Chicago) Electron Nanoimaging of Hyperbolic Plasmon Polaritons in the Quasi 1D Metal MoOCl\u2082 Milan Delor (Columbia University) Electron, Phonon, and Light Dynamics in Asymmetric Quantum Media Daniel Adams (Colorado School of Mines) Ultrafast Single Shot Computational Imaging 12:00 - 1:30 Lunch + Posters 1:30 - 3:30 Session 2 Chair: Alice Kunin Roel Tempelaar (Northwestern University) Tuning Material Properties by Optical, Electronic, and Phononic Interferences Greg Scholes (Princeton University) Wavepackets as Probes of Ultrafast Dynamics Marissa Weichman (Princeton University) Molecules in Optical Cavities: New Platforms for Precision Spectroscopy and Strong Light-Matter Interactions Gerard Wysocki (Princeton University) Mid-infrared and THz Quantum Cascade Laser Frequency Combs for high resolution spectroscopic sensing 3:30 - 4:00 Coffee break 4:00 - 6:00 Session 3 Chair: Julia Mikhailova Paul Evans (University of Wisconsin) Few-nm-scale Dynamics of Ferroic Oxides at the Crossover Between Fundamental Excitations and Nanoscale Phenomena Venkat Gopalan (Pennsylvania State University) Metastable Polar Textures: Creation, Probing and Emergent Properties Jared Maxson (Cornell University) An Ultrafast Photoinduced Twist in Moir\u00e9 Materials Aditya Sood (Princeton University) Ultrafast Atomic Thermometry using MeV Electrons \u2013 Emergent Thermal Physics in Moire Materials Friday, August 21: Time Activity Speaker(s) 8:00 - 8:45 Breakfast and coffee 8:45 - 9:30 Keynote Paul Corkum (University of Ottawa) Tunnelling, Recollision and Core Dynamics -- Exploiting Plasmas for Attosecond Technology 9:30 - 12:00 Session 4 Chair: Marissa Weichman Shambhu Ghimire (SLAC, National Accelerator Laboratory) Ultrafast Spectroscopy Based on High-order Harmonic Generation Mechanism Julia Mikhailova (Princeton University) Plasma Optics for Ultrafast High-field Science Arvinder Sandhu (Arizona State University) Development of Compact X-ray Sources at ASU for Femtosecond and Attosecond Science Aleksei Zheltikov (Texas A&M University) The Nonlinear Susceptibility for Stimulated Light Scattering in Plasmas Alice Kunin (Princeton University) Tracking and Controlling Ultrafast Exciton Dynamics in Novel 2D Materials 12:00 - 12:05 Closing remarks Julia Mikhailova (Princeton University) Parking Visitor parking is available at Stadium Drive Garage . A parking permit is required; You may register ahead of time here . It\u2019s a 10-minute walk from Stadium Drive Garage to Briger Hall, or take the free University shuttle (Tiger Transit) #4 or #5. The shuttle stop nearest Briger Hall is Goheen Walk on Washington Road. See today\u2019s bus schedules and real-time bus location . Briger Hall is located between Ivy Lane and Prospect Avenue. Please see the campus map for more information. Questions? Please contact Aditya Sood . Organizing Committee Faculty of the SEAS Cluster of Excellence on Advanced Optical Metrology and Ultrafast Dynamics : Craig Arnold, Alice Kunin, Julia Mikhailova, Gregory Scholes, Aditya Sood, Marissa Weichman, and Gerard Wysocki",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Symposium on Advances in Optics and Ultrafast Science",
+    "locationRaw": "Briger Hall (C112 + Atrium C102)",
+    "mappingRules": [
+      "materials:title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4076:delta:0",
+    "guid": "ps_events:4076:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-02T16:05:00Z",
+    "endsAt": "2026-09-02T17:05:00Z",
+    "startTime": "2026-09-02T12:05:00",
+    "endTime": "2026-09-02T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Sean Roberts, University of Texas at Austin",
+    "speakers": [
+      {
+        "name": "Sean Roberts",
+        "affiliation": "University of Texas at Austin"
+      }
+    ],
+    "speaker": "Sean Roberts, University of Texas at Austin",
+    "affiliation": "University of Texas at Austin",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-sean-roberts-university-texas-austin",
+    "content": "Reshaping Light via Photon Up- and Down-ConversionAbstract: Due to its ability to transmit energy and information through space, light plays a central role in nearly all aspects of human society. However, light has a peculiar property as its energy content is transmitted by photons, discrete particles whose energy must be matched to their intended application. Materials that reshape light, by combining the energy of multiple low-energy photons or by using single high-energy photons to produce multiple lower energy ones, can enable new light-driven",
+    "rawEventDetails": "Details Event Description Reshaping Light via Photon Up- and Down-Conversion Abstract : Due to its ability to transmit energy and information through space, light plays a central role in nearly all aspects of human society. However, light has a peculiar property as its energy content is transmitted by photons, discrete particles whose energy must be matched to their intended application. Materials that reshape light, by combining the energy of multiple low-energy photons or by using single high-energy photons to produce multiple lower energy ones, can enable new light-driven technologies and optoelectronics. In this presentation, I will highlight work by my group to design hybrid structures that interface organic molecules with inorganic nanocrystals and bulk solids for the purpose of reshaping light\u2019s energy content. When properly assembled, these materials can facilitate photon upconversion, the creation of higher energy photons from pairs of low-energy ones, which has applications for bioimaging, light detection, and additive manufacturing. With some small design changes, energy can be made to flow in the opposite direction in these structures, achieving photon downconversion which can be used for solar energy harvesting, quantum information science, and catalysis. Much of the work that I will feature will focus on using ultrafast microscopy methods to track energy flow within these materials with femtosecond time-resolution and sub-micron spatial resolution. Website: www.RobertsGroupUT.org Biography: Sean T. Roberts received a BS in Chemistry from the University of California Los Angeles in 2003, a PhD in Chemistry from the Massachusetts Institute in Technology in 2010, and worked as a National Science Foundation postdoctoral fellow at the University of Southern California from 2010 to 2013. In 2014, Dr. Roberts started his independent career at the University of Texas at Austin where he leads a research group that develops ultrafast spectroscopic techniques to visualize the transport of charge, energy, and spin in nanoscale materials designed for applications in solar energy, 3D printing, imaging, and optoelectronics. Dr. Roberts was named a Fellow of the W. T. Doherty Professorship in Chemistry in 2025 and received the Richard Van Duyne Early Career Award in Experimental Physical Chemistry from the American Chemical Society in 2026. In 2024, Dr. Roberts received the Partners in Progress & Prosperity Award, also from the American Chemical Society, for his work in education and he currently serves as the education and outreach faculty director for the Center for Dynamics and Control of Materials, a National Science Foundation Materials Research Science and Engineering Center (MRSEC) based at UT Austin.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts, University of Texas at Austin",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4081:delta:0",
+    "guid": "ps_events:4081:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T16:05:00Z",
+    "endsAt": "2026-09-09T17:05:00Z",
+    "startTime": "2026-09-09T12:05:00",
+    "endTime": "2026-09-09T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Rafael Gomez-Bombarelli, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Rafael Gomez-Bombarelli",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Rafael Gomez-Bombarelli, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-rafael-gomez-bombarelli-massachusetts-institute",
+    "content": "The Bittersweet Lesson of Scaling in AI for MaterialsAbstract: AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton's 'bitter lesson' states that \"general methods that leverage computation are ultimately the most effective\" in AI. The corollaries are bittersweet in chemistry and materials. The lesson permeates",
+    "rawEventDetails": "Details Event Description The Bittersweet Lesson of Scaling in AI for Materials Abstract : AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton's 'bitter lesson' states that \"general methods that leverage computation are ultimately the most effective\" in AI. The corollaries are bittersweet in chemistry and materials. The lesson permeates through the use of AI in chemistry and materials. The tremendous success of universal ML interatomic potentials (MLIPs) as surrogate for quantum-mechanical energies and forces is unarguable. Trained on 100-million-count datasets, they reflect scaling laws similar to the ones in language or vision models, generalizing to new scientific questions and enabling simulations that were intractable a few years ago. Generative models, trained mostly on the same synthetic data, are currently being used to propose novel materials at machine speed. The discussion around the power of inductive bias (energy conservation, equivariance) and whether it is better reflected in model architecture or in training strategy is very much ongoing. The physical sciences may well be the last holdout for domain knowledge and inductive bias, or maybe they will ultimately follow the same trends as other domains. But MLIPs are surrogates for physics-based simulators, and arguably, materials only truly matter if they are made in the lab and then scaled up industrially and commercially. This is the truly bitter scaling lesson in materials. The promise of AI for chemistry and materials needs to be realized through very traditional, expensive and slow channels. In this talk, I will describe our group's work both in the highly scalable fusion of simulations and machine learning, and in the \"high-contact\" and lower throughput effort of translating AI designs into tangible, scalable products, in areas like heterogeneous catalysis, battery materials or sustainable polymers Bio: Rafael Gomez-Bombarelli is the Paul M Cook Associate Professor in MIT's Department of Materials Science and Engineering; and co-founder and Chief Scientific Officer at Lila Sciences. He earned his undergraduate and graduate degrees in chemistry from the University of Salamanca, Spain, and conducted postdoctoral research at Heriot-Watt University and Harvard University, under Alan Aspuru-Guzik. Rafa's research integrates machine learning with atomistic simulations to expedite the discovery and design of novel materials for applications in energy, sustainability, and healthcare.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Rafael Gomez-Bombarelli, Massachusetts Institute of Technology",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4086:delta:0",
+    "guid": "ps_events:4086:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-16T16:05:00Z",
+    "endsAt": "2026-09-16T17:05:00Z",
+    "startTime": "2026-09-16T12:05:00",
+    "endTime": "2026-09-16T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Nuh Gedik, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Nuh Gedik",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Nuh Gedik, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-nuh-gedik-massachusetts-institute-technology",
+    "content": "Capturing Light Induced Phase Transitions with Femtosecond MoviesAbstract: Materials typically undergo phase changes as a function of external parameters such as temperature, pressure or magnetic field. Light can also be used to both switch between equilibrium phases and to create new photo-induced states that may have no equilibrium counterparts. Even though there are fascinating examples of photoinduced phase transitions, the detailed microscopic mechanisms and overarching principles that govern these are still not known. In this talk, I will",
+    "rawEventDetails": "Details Event Description Capturing Light Induced Phase Transitions with Femtosecond Movies Abstract : Materials typically undergo phase changes as a function of external parameters such as temperature, pressure or magnetic field. Light can also be used to both switch between equilibrium phases and to create new photo-induced states that may have no equilibrium counterparts. Even though there are fascinating examples of photoinduced phase transitions, the detailed microscopic mechanisms and overarching principles that govern these are still not known. In this talk, I will present two recent examples of this phenomena. First, I will describe how we used ultrashort laser pulses to capture light induced melting and recovery of a charge density wave phase with femtosecond time resolution. During this process, a new state that does not exist in equilibrium is also transiently created. Secondly, I will show experiments in which high field THz pulses are used to induce metastable magnetization in a layered antiferromagnet. Understanding light induced phase transitions could pave the way for optical engineering of new quantum states of matter. Bio : Professor Gedik received his B.S. in Physics in 1998 from Bogazici University, Istanbul, Turkey and his Ph.D in Physics in 2004 from University of California, Berkeley. After his Ph.D, he moved to Caltech where he worked as a postdoctoral scholar till January 2008. He joined MIT Physics Department as an assistant professor in January 2008 and was promoted to Full Professor of Physics in 2018. His reserach centers on developing advanced ultrafast spectroscopies to study quantum materials. His awards include National Science Foundation CAREER Award, Department of Energy Early Career Award, Sloan fellowship, DARPA Young Faculty Award, Moore Experimental Investigator award and National Brown Investigator Award.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Nuh Gedik, Massachusetts Institute of Technology",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4091:delta:0",
+    "guid": "ps_events:4091:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-23T16:05:00Z",
+    "endsAt": "2026-09-23T17:05:00Z",
+    "startTime": "2026-09-23T12:05:00",
+    "endTime": "2026-09-23T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Ryan Lively, Georgia Institute of Technology",
+    "speakers": [
+      {
+        "name": "Ryan Lively",
+        "affiliation": "Georgia Institute of Technology"
+      }
+    ],
+    "speaker": "Ryan Lively, Georgia Institute of Technology",
+    "affiliation": "Georgia Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-ryan-lively-georgia-institute-technology",
+    "content": "Organic Solvent Reverse Osmosis Membranes for Complex Mixture Separations Abstract: In this talk, the potential for membrane materials to reduce energy and carbon requirements for the separation of hydrocarbon feedstocks and products will be discussed. We developed a series of polymer materials that feature rigid polymer backbones with engineered mobility and functionality. We imbue the polymers with resistance to dilation induced by hydrocarbon immersion without the loss of solution-based membrane fabrication",
+    "rawEventDetails": "Details Event Description Organic Solvent Reverse Osmosis Membranes for Complex Mixture Separations Abstract : In this talk, the potential for membrane materials to reduce energy and carbon requirements for the separation of hydrocarbon feedstocks and products will be discussed. We developed a series of polymer materials that feature rigid polymer backbones with engineered mobility and functionality. We imbue the polymers with resistance to dilation induced by hydrocarbon immersion without the loss of solution-based membrane fabrication techniques. These materials exhibit good separation of liquid phase hydrocarbon mixtures at ambient temperatures via a hydraulic permeation technique known as organic solvent reverse osmosis. The integration of these polymeric membranes into fuel and chemical feedstock separation processes was investigated in a series of experiments. Technoeconomic analyses based on these experiments indicate that the best-performing membrane materials can substantially reduce the energy costs and associated carbon emissions of hydrocarbon separations (two to ten fold, depending on product specifications). Bio : Ryan Lively is the Thomas C. DeLoach Professor in the School of Chemical & Biomolecular Engineering at the Georgia Institute of Technology. His current research seeks to revolutionize fluid separation processes critical to the global energy and carbon infrastructure. He has a specific focus on membrane- and adsorbent-based science and technology aimed at addressing some of the world\u2019s most difficult chemical separations. His group\u2019s research activities range from fundamental material science and discovery to translational engineering applications focusing on making and testing separation devices. He has received a variety of awards for his research efforts including the 2020 Allan P. Colburn Award from AIChE, and the 2022 Curtis W. McGraw Award from ASEE and a 2025 Finalist for the Blavatnik Young Scientist Award. He is currently an Editor for the Journal of Membrane Science, the Secretary of the North American Membrane Society, and an ACS Industrial & Engineering Chemistry Division Fellow. He is the Director of the Center forUnderstanding & Controlling Accelerated and Gradual Evolution of Materials for Energy (UNCAGE-ME), an Energy Frontier Research Center of the US Department of Energy. He has over 240 publications in the field of separations including articles in Science , Nature , and other impactful venues.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Ryan Lively, Georgia Institute of Technology",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4101:delta:0",
+    "guid": "ps_events:4101:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-30T16:05:00Z",
+    "endsAt": "2026-09-30T17:05:00Z",
+    "startTime": "2026-09-30T12:05:00",
+    "endTime": "2026-09-30T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Amrit Venkatesh, University of Virginia",
+    "speakers": [
+      {
+        "name": "Amrit Venkatesh",
+        "affiliation": "University of Virginia"
+      }
+    ],
+    "speaker": "Amrit Venkatesh, University of Virginia",
+    "affiliation": "University of Virginia",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-amrit-venkatesh-university-virginia",
+    "content": "Atomic-Level Characterization of Materials using Advanced Solid-State NMRAbstract: Establishing atomic-level structure-property relationships is essential for understanding and designing functional materials. Solid-state NMR spectroscopy is uniquely suited to probe local structure and dynamics in complex materials, but its application is often constrained by inherently low sensitivity. The Venkatesh group develops and applies dynamic nuclear polarization (DNP) and fast magic-angle spinning (MAS) methods that dramatically enhance the sensitivity and",
+    "rawEventDetails": "Details Event Description Atomic-Level Characterization of Materials using Advanced Solid-State NMR Abstract : Establishing atomic-level structure-property relationships is essential for understanding and designing functional materials. Solid-state NMR spectroscopy is uniquely suited to probe local structure and dynamics in complex materials, but its application is often constrained by inherently low sensitivity. The Venkatesh group develops and applies dynamic nuclear polarization (DNP) and fast magic-angle spinning (MAS) methods that dramatically enhance the sensitivity and resolution of solid-state NMR experiments. These advances enable high-resolution studies of nuclei across the Periodic Table and facilitate multidimensional investigations of heterogeneous materials, including surfaces, interfaces, and nanostructured systems. In this seminar, we will highlight recent efforts to characterize complex materials relevant to catalysis and energy, demonstrating how advanced solid-state NMR methodologies provide atomic-level insights that are inaccessible by conventional approaches. Bio : Dr. Amrit Venkatesh is an Assistant Professor of Chemistry at the University of Virginia (UVA), where he leads a research program focused on developing dynamic nuclear polarization (DNP) enhanced and advanced solid-state NMR methods for characterizing complex materials. He received his Ph.D. in Chemistry from Iowa State University, earning the Zaffarano Award in 2021 for outstanding doctoral research. He subsequently held a Marie Sk\u0142odowska-Curie Postdoctoral Fellowship at the \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne (EPFL), Switzerland, and later served as Research Faculty at the National High Magnetic Field Laboratory at Florida State University. At UVA, his research combines methodological innovation in magnetic resonance with applications to heterogeneous materials, surfaces, catalysts, and energy-relevant systems, with the goal of establishing atomic-level structure-property relationships that guide materials design.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Amrit Venkatesh, University of Virginia",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4096:delta:0",
+    "guid": "ps_events:4096:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-07T16:05:00Z",
+    "endsAt": "2026-10-07T17:05:00Z",
+    "startTime": "2026-10-07T12:05:00",
+    "endTime": "2026-10-07T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Yuriy Roman, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Yuriy Roman",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Yuriy Roman, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-yuriy-roman-massachusetts-institute-technology",
+    "content": "Reimagining Thermochemical Catalysis: Promoting Reactions with Electric FieldsAbstract: Catalysis has long relied on conventional handles such as temperature, pressure, and concentration to accelerate chemical reactions. Across biology and electrochemistry, electric fields provide an additional parameter to control rates. Enzymes exploit strong, oriented fields within their active sites to stabilize intermediates and accelerate turnover, while in electrochemistry, interfacial polarization dictates electron and proton transfer rates. In heterogeneous",
+    "rawEventDetails": "Details Event Description Reimagining Thermochemical Catalysis: Promoting Reactions with Electric Fields Abstract : Catalysis has long relied on conventional handles such as temperature, pressure, and concentration to accelerate chemical reactions. Across biology and electrochemistry, electric fields provide an additional parameter to control rates. Enzymes exploit strong, oriented fields within their active sites to stabilize intermediates and accelerate turnover, while in electrochemistry, interfacial polarization dictates electron and proton transfer rates. In heterogeneous thermochemical catalysis, however, little is known about these effects, yet they may offer new opportunities to control reactivity. In this talk, I will describe our group\u2019s efforts to harness electric fields to promote thermochemical reactions. For many electrochemical half-reactions, varying the applied potential accelerates rates by driving rate-controlling proton-coupled electron transfer (PCET) steps. We hypothesized that if an elementary PCET step were embedded within a thermochemical reaction, its strong potential dependence could be leveraged to enhance the overall rate. Because interfacial PCET involves proton exchange across the electric double layer, we anticipated that Br\u00f8nsted acid catalysis, governed by proton transfer, would be particularly susceptible to polarization. First, I will show how spontaneous interfacial fields at conductive particles dispersed in liquid media can measurably modulate turnover rates. Next, I will discuss how applied potentials produce reversible, exponential rate promotion in acid-catalyzed alcohol dehydration, accelerating rates by up to five orders of magnitude while the overall catalytic cycle remains non-Faradaic. Our kinetic analyses reveal that this acceleration arises from a field-driven increase in the population of reactive intermediates prior to the rate-determining step, providing a mechanistic basis for log-linear rate scaling with potential. I will then examine how electrolyte concentration and solvent properties set the interfacial potential profile and the fraction of the potential drop sampled by proton transfer, which separates electrostatic promotion from conventional solvent effects. In highly polar solvents, even trace ionic species can place nominally electrolyte-free reactions in a strongly suppressed regime through the catalyst's native open-circuit potential. Finally, I will highlight our development of polarized slurry reactors, which extend these principles from 2D electrodes to 3D catalyst slurries and enable rate enhancements under conditions more suitable for scale-up. These results establish interfacial electric fields and catalyst potential as design variables for controlling thermochemical reactivity and developing scalable catalytic processes. Bio : Yuriy Rom\u00e1n-Leshkov is the Robert T. Haslam Professor of Chemical Engineering at MIT, where he joined the faculty in 2010 and holds a joint appointment in the Department of Chemistry. His research group works at the intersection of heterogeneous catalysis, materials science, and sustainable chemical processes. His research group designs heterogeneous catalysts and functional materials to tackle sustainability challenges in energy and chemicals. His group pioneered the use of electric fields to promote thermochemical reactions, developed catalytic routes to convert lignin into drop-in sustainable aviation fuel components, established the analytical and reactor engineering foundations for the chemical recycling of polyolefins, and created data-driven tools to predict zeolite synthesis. Several of these technologies are on a path to commercialization. Together, these efforts build the foundation for a circular, low-carbon chemical industry. From 2023 to 2025 he served as Chief Scientist of Solugen, where he led catalyst development for the production of bio-based chemicals at the ton scale. A native of Mexico City, he earned his B.S. at the University of Pennsylvania and his Ph.D. at the University of Wisconsin-Madison under the supervision of Prof. Jim Dumesic, followed by postdoctoral research at Caltech under the guidance of Prof. Mark Davis. He has authored more than 200 peer-reviewed articles and holds 28 patents. His work has been recognized with the Paul H. Emmett Award in Fundamental Catalysis, the International Catalysis Award from the International Association of Catalysis Societies, the NSF CAREER Award, the ACS Early Career in Catalysis Award, the AIChE Catalysis and Reaction Engineering Division Young Investigator Award, among other honors.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Yuriy Roman, Massachusetts Institute of Technology",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4106:delta:0",
+    "guid": "ps_events:4106:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-14T16:05:00Z",
+    "endsAt": "2026-10-14T17:05:00Z",
+    "startTime": "2026-10-14T12:05:00",
+    "endTime": "2026-10-14T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Alan West, Columbia University",
+    "speakers": [
+      {
+        "name": "Alan West",
+        "affiliation": "Columbia University"
+      }
+    ],
+    "speaker": "Alan West, Columbia University",
+    "affiliation": "Columbia University",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-alan-west-columbia-university",
+    "content": "Critical Materials Processing via Closed-Loop Redox-Mediated LeachingAbstract: Electrification can transform the way chemical reagents are produced, regenerated, and integrated into industrial processes. In hydrometallurgy, electrochemical regeneration of redox carriers enables closed-loop redox-mediated leaching (CL-RML), changing the relationship between reagent selection, process performance, and sustainability. Rather than treating oxidants or reductants as consumable reagents, CL-RML allows redox carriers to be selected primarily for their",
+    "rawEventDetails": "Details Event Description Critical Materials Processing via Closed-Loop Redox-Mediated Leaching Abstract: Electrification can transform the way chemical reagents are produced, regenerated, and integrated into industrial processes. In hydrometallurgy, electrochemical regeneration of redox carriers enables closed-loop redox-mediated leaching (CL-RML), changing the relationship between reagent selection, process performance, and sustainability. Rather than treating oxidants or reductants as consumable reagents, CL-RML allows redox carriers to be selected primarily for their extraction performance and selectivity. This seminar will discuss a framework of closed-loop redox chemistry and discuss how it expands the design space for critical-materials extraction. Recent studies of nickel and copper extraction from sulfide minerals will be presented to illustrate how electrochemically regenerated redox carriers enable new opportunities to control mineral transformations, improve selectivity, and rethink process architecture. These examples demonstrate how regeneration influences not only leaching chemistry, but also upstream and downstream processes. By leveraging scalable industrial electrochemical technologies, closed-loop redox chemistry offers a pathway toward more modular, flexible extraction processes capable of treating increasingly complex mineral resources. Together, these concepts suggest that the greatest opportunity of CL-RML may be to expand the chemical and process design space available for future critical-minerals supply chains while simultaneously improving sustainability. Bio: Alan West is the Samuel Ruben\u2013Peter G. Viele Professor of Electrochemistry at Columbia University, with appointments in the Department of Chemical Engineering, the Department of Earth and Environmental Engineering, and the Columbia Climate School. He is also Co-Director of the Columbia Electrochemical Energy Center, which has grown to 14 core faculty from five departments. Professor West received his B.S. in Chemical Engineering from Case Western Reserve University and his Ph.D. in Chemical Engineering from the University of California, Berkeley. His research integrates electrochemistry, reaction engineering, and hydrometallurgy to develop sustainable technologies for critical materials production, resource recovery, batteries, electrochemical synthesis, and electrodeposition. His recent work focuses on electrochemically regenerated redox carriers and closed-loop redox-mediated leaching for the selective extraction of critical metals from sulfide minerals and other complex resources.Professor West previously served as Chair of Columbia's Department of Chemical Engineering for eight years, during a period of significant growth and expansion. He is a Fellow of The Electrochemical Society.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Alan West, Columbia University",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4181:delta:0",
+    "guid": "ps_events:4181:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-19T12:00:00Z",
+    "endsAt": "2026-10-21T18:00:00Z",
+    "startTime": "2026-10-19T08:00:00",
+    "endTime": "2026-10-21T14:00:00",
+    "timezone": "America/New_York",
+    "title": "4th Frontiers in Electron and Scanning Probe Microscopy for the Physical and Life Sciences",
+    "speakers": [
+      {
+        "name": "In partnership with Nature Conference",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "In partnership with Nature Conference",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Maeder Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/4th-frontiers-electron-and-scanning-probe-microscopy-physical-and-life-sciences",
+    "content": "Advances in electron microscopy instrumentation and methods continue to drive progress in the physical and life sciences. The",
+    "rawEventDetails": "Details Event Description Advances in electron microscopy instrumentation and methods continue to drive progress in the physical and life sciences. The 4th edition of the Frontiers in Electron and Scanning Probe Microscopy for the Physical and Life Sciences conference will bring together researchers from physical and life sciences working at the frontiers of electron microscopy, tomography, artificial intelligence, and scanning probe microscopy. Enjoy engaging presentations from select international scientists and explore scientific questions outside of your comfort zone. Emphasis on identifying and addressing new challenges, promoting synergies and developing the next generation of instruments and tools. Interactive panel discussions on scientific publishing with Nature Portfolio editors and on diverse career paths with field leaders. Ample opportunities for engaging with leading scientists, peers, and editors through poster sessions, flash talks, and networking events. Tentative Agenda https://natureconferences.streamgo.live/4th-frontiers-in-electron-and-scanning-probe-microscopy/agenda Registration fees All fees are in $, US Dollars. Early Bird Until September 8, 2026 Regular From September 8 - September 21, 2026 Student $150 $250 Academic $650 $750 Industry $1,150 $1,250 Early Bird fees end on: September 8, 2026 Regular Registration from: September 8 - September 21, 2026 Registration Your registration includes: Acess to all scientific presentations Poster session(s) Meals as indicated in the conference program E-Program book Cancellation Policy Cancellation by September 21, 2026: 100% refund, minus a $100 administrative fee. Cancellation after September 21, 2026: No refund. Questions? For questions regarding registration, please contact [email protected] .",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "4th Frontiers in Electron and Scanning Probe Microscopy for the Physical and Life Sciences",
+    "locationRaw": "Maeder Hall",
+    "mappingRules": [
+      "materials:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4166:delta:0",
+    "guid": "ps_events:4166:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-28T16:05:00Z",
+    "endsAt": "2026-10-28T17:05:00Z",
+    "startTime": "2026-10-28T12:05:00",
+    "endTime": "2026-10-28T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by Joseph Fedeyko, Johnson Matthey",
+    "speakers": [
+      {
+        "name": "Joseph Fedeyko",
+        "affiliation": "Johnson Matthey"
+      }
+    ],
+    "speaker": "Joseph Fedeyko, Johnson Matthey",
+    "affiliation": "Johnson Matthey",
+    "series": "",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-joseph-fedeyko-johnson-matthey",
+    "content": "Creating Abundance through CatalysisAbstract: Humanity is at a crossroads trying to drive future advancements in science and quality of life with significant challenges related to global climate change, economic insecurity, and natural resource constraints. The evolution of the energy landscape is one challenge that must be addressed to ensure that we continue to thrive. The centralized model to power generation is starting to fray; and whether that\u2019s related to supporting the rising need for data storage, electrification for mobility or the",
+    "rawEventDetails": "Details Event Description Creating Abundance through Catalysis Abstract : Humanity is at a crossroads trying to drive future advancements in science and quality of life with significant challenges related to global climate change, economic insecurity, and natural resource constraints. The evolution of the energy landscape is one challenge that must be addressed to ensure that we continue to thrive. The centralized model to power generation is starting to fray; and whether that\u2019s related to supporting the rising need for data storage, electrification for mobility or the technologies needed to combat climate change, a decentralized model needs to grow to replace it. This model creates new challenges with regards to emissions and efficiency, but potentially creates opportunities for new technologies and new fuels often driven by catalysis. Johnson Matthey\u2019s Clean Air Solutions team has been supporting a diverse range of industries from data centers to coal mines through these challenges leveraging our core competencies of platinum group metal refining and emission control as well as our growing strengths in fuel cells, carbon capture and methane removal. Here we will discuss some of those challenges and how as scientists we identify markets, partners and potential products, creating opportunities for ourselves as well as the partners we support. We will discuss some of the pitfalls product designers can face and share our insights into where new developments can make a meaningful difference toward designing a bright future. Bio : Joseph Fedeyko is currently the Business Development Manager for Johnson Matthey\u2019s Clean Air Solutions Team. He holds a Ph. D. in Chemical Engineering from the University of Delaware. Since joining Johnson Matthey in 2006, he has been the driving force for innovative technologies across catalysis, material development, process development, and system design, resulting in 50 granted patent families and significant product launches. In addition, he has dedicated his time to serving in several leadership roles in both the Catalysis Club of Philadelphia and the North-East Corridor Zeolite Association. His current role coordinates product development, engineering, sales and business development for existing stationary emission markets and the development of new market opportunities to support decarbonization and the energy transition.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Joseph Fedeyko, Johnson Matthey",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4116:delta:0",
+    "guid": "ps_events:4116:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-04T17:05:00Z",
+    "endsAt": "2026-11-04T18:05:00Z",
+    "startTime": "2026-11-04T12:05:00",
+    "endTime": "2026-11-04T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Dimitris Lagoudas, Texas A&M University",
+    "speakers": [
+      {
+        "name": "Dimitris Lagoudas",
+        "affiliation": "Texas A&M University"
+      }
+    ],
+    "speaker": "Dimitris Lagoudas, Texas A&M University",
+    "affiliation": "Texas A&M University",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-dimitris-lagoudas-texas-am-university",
+    "content": "Abstract and bio TBA",
+    "rawEventDetails": "Details Event Description Abstract and bio TBA",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Dimitris Lagoudas, Texas A&M University",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4111:delta:0",
+    "guid": "ps_events:4111:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-11T17:05:00Z",
+    "endsAt": "2026-11-11T18:05:00Z",
+    "startTime": "2026-11-11T12:05:00",
+    "endTime": "2026-11-11T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Makhsud Saidaminov, University of Victoria",
+    "speakers": [
+      {
+        "name": "Makhsud Saidaminov",
+        "affiliation": "University of Victoria"
+      }
+    ],
+    "speaker": "Makhsud Saidaminov, University of Victoria",
+    "affiliation": "University of Victoria",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-makhsud-saidaminov-university-victoria",
+    "content": "Beyond Conventional Silicon: Perovskite Solar Cells and X-ray DetectorsAbstract: Silicon underpins modern electronics, yet its technological dominance and geographically concentrated supply chains present growing concerns. In this talk, I will introduce halide perovskites, a class of high-performance semiconductors that can be synthesized and processed at relatively simple conditions. I will describe our progress in scalable perovskite solar cells fabricated in ambient air using green solvents, followed by the automated growth of single crystals for",
+    "rawEventDetails": "Details Event Description Beyond Conventional Silicon: Perovskite Solar Cells and X-ray Detectors Abstract : Silicon underpins modern electronics, yet its technological dominance and geographically concentrated supply chains present growing concerns. In this talk, I will introduce halide perovskites, a class of high-performance semiconductors that can be synthesized and processed at relatively simple conditions. I will describe our progress in scalable perovskite solar cells fabricated in ambient air using green solvents, followed by the automated growth of single crystals for emerging X-ray photon-counting medical imaging. These examples will illustrate how solution chemistry and automation can enable new semiconductors beyond conventional silicon. Bio: Makhsud Saidaminov is a Canada Research Chair in Advanced Functional Materials and Associate Professor at the University of Victoria. His research focuses on solution-processed materials and their applications, guided by the vision that technologies should not be luxuries but broadly accessible. Raised in Tajikistan, he received his PhD from Lomonosov Moscow State University and held postdoctoral fellowships at KAUST and the University of Toronto. He has been recognized as a Highly Cited Researcher since 2021, received the Canadian Society for Chemistry\u2019s Keith Laidler Award, and serves as an Associate Editor of ACS Photonics. He is also a co-founder of AY Sensors, which develops perovskite X-ray photon-counting detectors for medical imaging.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Makhsud Saidaminov, University of Victoria",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4126:delta:0",
+    "guid": "ps_events:4126:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-18T17:05:00Z",
+    "endsAt": "2026-11-18T18:05:00Z",
+    "startTime": "2026-11-18T12:05:00",
+    "endTime": "2026-11-18T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Mahesh Mahanthappa, University of Minnesota",
+    "speakers": [
+      {
+        "name": "Mahesh Mahanthappa",
+        "affiliation": "University of Minnesota"
+      }
+    ],
+    "speaker": "Mahesh Mahanthappa, University of Minnesota",
+    "affiliation": "University of Minnesota",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-mahesh-mahanthappa-university-minnesota",
+    "content": "Abstract and bio TBA",
+    "rawEventDetails": "Details Event Description Abstract and bio TBA",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Mahesh Mahanthappa, University of Minnesota",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4121:delta:0",
+    "guid": "ps_events:4121:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-02T17:05:00Z",
+    "endsAt": "2026-12-02T18:05:00Z",
+    "startTime": "2026-12-02T12:05:00",
+    "endTime": "2026-12-02T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Piran Kidambi, University of Florida",
+    "speakers": [
+      {
+        "name": "Piran Kidambi",
+        "affiliation": "University of Florida"
+      }
+    ],
+    "speaker": "Piran Kidambi, University of Florida",
+    "affiliation": "University of Florida",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-piran-kidambi-university-florida",
+    "content": "Atomically Thin Membranes: Opportunities and Challenges Abstract: Two-dimensional (2D) nanomaterials offer fundamentally new opportunities to study mass transport at sub-atomic and molecular length scales. Their atomic thickness enables transport phenomena such as quantum tunneling, while their ability to host atomically precise defects that function as nanopores enables highly size-selective ionic and molecular sieving. Together, these unique characteristics open new frontiers in membrane science and molecular separations.In this talk, I",
+    "rawEventDetails": "Details Event Description Atomically Thin Membranes: Opportunities and Challenges Abstract: Two-dimensional (2D) nanomaterials offer fundamentally new opportunities to study mass transport at sub-atomic and molecular length scales. Their atomic thickness enables transport phenomena such as quantum tunneling, while their ability to host atomically precise defects that function as nanopores enables highly size-selective ionic and molecular sieving. Together, these unique characteristics open new frontiers in membrane science and molecular separations. In this talk, I will discuss our recent advances in the synthesis, fundamental transport characterization, scalable processing, and device integration of 2D materials. I will highlight their application as next-generation proton exchange membranes for fuel cells and redox flow batteries, where atomically thin selective layers can overcome the long-standing permeability\u2013selectivity trade-off that limits conventional membrane technologies. Finally, I will present emerging opportunities for 2D materials to enable entirely new separation processes, including highly energy-efficient hydrogen isotope separation. Bio : Piran R. Kidambi is an Associate Professor at the University of Florida. After receiving his PhD from the University of Cambridge, he pursued postdoctoral research at MIT through a Lindemann Trust Fellowship. Kidambi's research leverages the intersection between (i) nanomaterial synthesis, (ii) process engineering, and (iii) in situ metrology, to enable bottom-up materials design and synthesis for energy, separations, and healthcare applications. His research has been recognized via several awards and honors. Related documents Atomically Thin Membranes",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Piran Kidambi, University of Florida",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4151:delta:0",
+    "guid": "ps_events:4151:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-09T13:00:00Z",
+    "endsAt": "2026-12-11T20:00:00Z",
+    "startTime": "2026-12-09T08:00:00",
+    "endTime": "2026-12-11T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Hidden Order in Disorder: The Expanding Landscape of Hyperuniformity",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/hidden-order-disorder-expanding-landscape-hyperuniformity",
+    "content": "",
+    "rawEventDetails": "Details Event Description Organizers: Carlo Vanoni, Sarang Gopalakrishnan, Paul J. Steinhardt, Salvatore Torquato This workshop will bring together researchers working across theory, computation, and experiment to address fundamental open questions in the rapidly evolving field of hyperuniformity. Topics will include the emergence of hyperuniformity in equilibrium and nonequilibrium statistical mechanics, its theoretical foundations, and its consequences for transport, optical response, quantum mechanical behavior, structural organization, discrete geometry, and constrained optimization in biological systems. Sponsors PCTS PMI Related documents List of Speakers",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Hidden Order in Disorder: The Expanding Landscape of Hyperuniformity",
+    "locationRaw": "",
+    "mappingRules": [
+      "materials:title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4056:delta:0",
+    "guid": "ps_events:4056:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-03-31T12:30:00Z",
+    "endsAt": "2027-04-01T18:00:00Z",
+    "startTime": "2027-03-31T08:30:00",
+    "endTime": "2027-04-01T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Materials Institute Symposium",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/princeton-materials-institute-symposium",
+    "content": "Princeton Materials Institute -- the interdisciplinary center for materials science and engineering research, education, and outreach at Princeton University -- invites you to attend our upcoming annual research symposium.Additional information will be posted as it becomes available.",
+    "rawEventDetails": "Details Event Description Princeton Materials Institute -- the interdisciplinary center for materials science and engineering research, education, and outreach at Princeton University -- invites you to attend our upcoming annual research symposium. Additional information will be posted as it becomes available.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Materials Institute Symposium",
+    "locationRaw": "",
+    "mappingRules": [
+      "materials:title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

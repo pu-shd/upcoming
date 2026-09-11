@@ -1,0 +1,52 @@
+[
+  {
+    "id": "cee:ps_events:2411:delta:0",
+    "guid": "ps_events:2411:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T16:15:00Z",
+    "endsAt": "2026-10-02T17:15:00Z",
+    "startTime": "2026-10-02T12:15:00",
+    "endTime": "2026-10-02T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Civil and Environmental Engineering,Special Seminar",
+    "tags": [
+      "civil-environmental",
+      "seminar"
+    ],
+    "rawCategories": [
+      "Civil and Environmental Engineering",
+      "Special Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Maeder Hall Auditorium",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://cee.princeton.edu/events/peculiarities-heat-driven-and-light-driven-evaporation",
+    "content": "Joint CEE/MAE Distinguished SeminarAbstract:This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular",
+    "rawEventDetails": "Details Event Description Joint CEE/MAE Distinguished Seminar Abstract: This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular evaporation process may exist widely in nature. Our studies on photomolecular evaporation also led us to investigate peculiarities in thermal evaporation. At an evaporating interface, a temperature discontinuity exists between the liquid and the vapor sides, which was predicted by theories and observed in some experiments. However, the existing theories cannot explain experiments. We develop a new interfacial condition that can be used to couple transport on both sides of the interface, leading to agreements between theory and experiments. Our modeling reveals the existence of a new refrigeration effect: the vapor temperature can drop below that of the liquid film and in fact, lower than even the condensing surface temperature. This effect has yet to be confirmed experimentally and may find applications in air-conditioning and refrigeration. Biography: Gang Chen is the Carl Richard Soderberg Professor of Power Engineering at Massachusetts Institute of Technology (MIT). He served as the Department Head of the Department of Mechanical Engineering at MIT from 2013 to 2018. He obtained his PhD degree from the Mechanical Engineering Department at UC Berkeley under the supervision of then UC Berkeley Chancellor Chang-Lin Tien. He was a faculty member at Duke University and UCLA, before joining MIT in 2001. He received an NSF Young Investigator Award, an R&D 100 award, an ASME Heat Transfer Memorial Award, an ASME Frank Kreith Award in Energy, a Nukiyama Memorial Award by the Japan Heat Transfer Society, a World Technology Network Award in Energy, an Eringen medal from the Society of Engineering Science, the Capers and Marion McDonald Award for Excellences in Mentoring and Advising from MIT, a Steven Chu medal from the Asian American Academy of Science and Engineering, and an American Courage Award from Asian American Advancing Justice. He serves on the board of the Asian American Scholar Forum. He is a fellow of the American Association for the Advancement of Science, the American Physical Society, The American Society of Mechanical Engineers, and the Guggenheim Foundation. He is a foreign member of the Chinese Academy of Sciences, an academician of Academy Sinica, a fellow of the American Academy of Arts and Sciences, and a member of the US National Academy of Engineering and a member of the US National Academy of Science.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "locationRaw": "Maeder Hall Auditorium",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

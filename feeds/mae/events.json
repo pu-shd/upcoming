@@ -1,0 +1,532 @@
+[
+  {
+    "id": "mae:ps_events:4741:delta:0",
+    "guid": "ps_events:4741:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-24T13:00:00Z",
+    "endsAt": "2026-08-24T15:00:00Z",
+    "startTime": "2026-08-24T09:00:00",
+    "endTime": "2026-08-24T11:00:00",
+    "timezone": "America/New_York",
+    "title": "The influence of surfactants on air-liquid-air sheets and bubble bursting",
+    "speakers": [
+      {
+        "name": "Jun Eshima",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Jun Eshima",
+    "affiliation": "",
+    "series": "Final Public Oral Exam",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Exam"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad J Wing",
+      "id": "",
+      "detail": "J223"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/influence-surfactants-air-liquid-air-sheets-and-bubble-bursting",
+    "content": "",
+    "rawEventDetails": "Speaker Jun Eshima Event Category Final Public Oral Exam",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "The influence of surfactants on air-liquid-air sheets and bubble bursting",
+    "locationRaw": "Engineering Quad J Wing/J223",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "slash_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4786:delta:0",
+    "guid": "ps_events:4786:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-31T18:00:00Z",
+    "endsAt": "2026-08-31T20:00:00Z",
+    "startTime": "2026-08-31T14:00:00",
+    "endTime": "2026-08-31T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Winds, Waves, and Wakes: Investigating the impact of ocean waves in large eddy simulations of marine atmospheric boundary layers and offshore wind farms",
+    "speakers": [
+      {
+        "name": "Hannah Williams",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Hannah Williams",
+    "affiliation": "",
+    "series": "Final Public Oral Exam",
+    "tags": [
+      "fpo"
+    ],
+    "rawCategories": [
+      "Final Public Oral Exam"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad J Wing",
+      "id": "",
+      "detail": "J223"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/winds-waves-and-wakes-investigating-impact-ocean-waves-large-eddy-simulations-marine",
+    "content": "",
+    "rawEventDetails": "Speaker Hannah Williams Event Category Final Public Oral Exam",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Winds, Waves, and Wakes: Investigating the impact of ocean waves in large eddy simulations of marine atmospheric boundary layers and offshore wind farms",
+    "locationRaw": "Engineering Quad J Wing/J223",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "slash_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4746:delta:0",
+    "guid": "ps_events:4746:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T19:00:00Z",
+    "endsAt": "2026-09-25T20:00:00Z",
+    "startTime": "2026-09-25T15:00:00",
+    "endTime": "2026-09-25T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Industrial Electrification: Technologies and Interactions with the Energy System",
+    "speakers": [
+      {
+        "name": "Dr. Rebecca Ciez",
+        "affiliation": "Purdue University"
+      }
+    ],
+    "speaker": "Dr. Rebecca Ciez, Purdue University",
+    "affiliation": "Purdue University",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/industrial-electrification-technologies-and-interactions-energy-system",
+    "content": "Abstract: Electrifying energy-intensive industries is a key component of reducing fossil fuel consumption and meeting decarbonization goals, but these end uses have been slower to transition than other sectors of the economy because of the diversity of industrial processes, the heat and temperature requirements involved, and the capital-intensive nature of existing infrastructure. The scale of transitioning this sector of the economy will also have significant impacts on the broader electricity sector, including changes in demand patterns, grid capacity requirements, and",
+    "rawEventDetails": "Details Event Description Abstract: Electrifying energy-intensive industries is a key component of reducing fossil fuel consumption and meeting decarbonization goals, but these end uses have been slower to transition than other sectors of the economy because of the diversity of industrial processes, the heat and temperature requirements involved, and the capital-intensive nature of existing infrastructure. The scale of transitioning this sector of the economy will also have significant impacts on the broader electricity sector, including changes in demand patterns, grid capacity requirements, and infrastructure investment needs, all of which need to be taken into account in order to evaluate the impact of industrial technologies. This seminar will introduce multiscale modeling frameworks used to analyze the impact of industrial electrification on the broader electricity system, from individual process-level changes up to system-wide effects, as well as the lifecycle analysis methods used to assess the environmental impacts of these electrified alternatives across their full value chain. In addition to the environmental impacts of industrial electrification, these methods also consider the impacts on energy prices and the cost of producing goods via electrified alternatives, offering a more complete picture of the economic trade-offs involved in this transition. Examples of industrial electrification pathways at different scales will be presented, including individual facilities with small and large energy demand, as well as broader scenarios considering the electrification of entire industrial sectors like the steel industry, illustrating how these modeling approaches can inform decision-making at both the facility and sector level. Bio: Dr. Rebecca Ciez is an Assistant Professor in Mechanical Engineering and Sustainability Engineering and Environmental Engineering at Purdue University. Prior to Purdue, she was a postdoctoral researcher at the Andlinger Center for Energy and the Environment. Her research combines methods from engineering, quantitative policy analysis, and economics to consider the economic and environmental impacts of energy systems and technologies. Her research group uses these methods to consider both electrochemical energy storage technologies and industrial electrification technologies. Dr. Ciez was a Negative Emissions Science Scialog Fellow, and was named a 40 under 40 rising star in Environmental Engineering and Science by the American Academy of Environmental Engineers & Scientists. Dr. Ciez\u2019s work has been published in journals including ACS Energy Letters, Energy and Environmental Science, Joule, and Nature Sustainability. She holds a bachelor\u2019s degree in mechanical engineering from Columbia University and a Ph.D. in Engineering and Public Policy from Carnegie Mellon University. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Industrial Electrification: Technologies and Interactions with the Energy System",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4846:delta:0",
+    "guid": "ps_events:4846:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T16:15:00Z",
+    "endsAt": "2026-10-02T17:15:00Z",
+    "startTime": "2026-10-02T12:15:00",
+    "endTime": "2026-10-02T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "speakers": [
+      {
+        "name": "Dr. Gang Chen",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Dr. Gang Chen, MIT",
+    "affiliation": "MIT",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/peculiarities-heat-driven-and-light-driven-evaporation",
+    "content": "Joint CEE/MAE Distinguished SeminarAbstract:This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular",
+    "rawEventDetails": "Details Event Description Joint CEE/MAE Distinguished Seminar Abstract: This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular evaporation process may exist widely in nature. Our studies on photomolecular evaporation also led us to investigate peculiarities in thermal evaporation. At an evaporating interface, a temperature discontinuity exists between the liquid and the vapor sides, which was predicted by theories and observed in some experiments. However, the existing theories cannot explain experiments. We develop a new interfacial condition that can be used to couple transport on both sides of the interface, leading to agreements between theory and experiments. Our modeling reveals the existence of a new refrigeration effect: the vapor temperature can drop below that of the liquid film and in fact, lower than even the condensing surface temperature. This effect has yet to be confirmed experimentally and may find applications in air-conditioning and refrigeration. Biography: Gang Chen is the Carl Richard Soderberg Professor of Power Engineering at Massachusetts Institute of Technology (MIT). He served as the Department Head of the Department of Mechanical Engineering at MIT from 2013 to 2018. He obtained his PhD degree from the Mechanical Engineering Department at UC Berkeley under the supervision of then UC Berkeley Chancellor Chang-Lin Tien. He was a faculty member at Duke University and UCLA, before joining MIT in 2001. He received an NSF Young Investigator Award, an R&D 100 award, an ASME Heat Transfer Memorial Award, an ASME Frank Kreith Award in Energy, a Nukiyama Memorial Award by the Japan Heat Transfer Society, a World Technology Network Award in Energy, an Eringen medal from the Society of Engineering Science, the Capers and Marion McDonald Award for Excellences in Mentoring and Advising from MIT, a Steven Chu medal from the Asian American Academy of Science and Engineering, and an American Courage Award from Asian American Advancing Justice. He serves on the board of the Asian American Scholar Forum. He is a fellow of the American Association for the Advancement of Science, the American Physical Society, The American Society of Mechanical Engineers, and the Guggenheim Foundation. He is a foreign member of the Chinese Academy of Sciences, an academician of Academy Sinica, a fellow of the American Academy of Arts and Sciences, and a member of the US National Academy of Engineering and a member of the US National Academy of Science. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "locationRaw": "TBD",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4751:delta:0",
+    "guid": "ps_events:4751:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T19:00:00Z",
+    "endsAt": "2026-10-09T20:00:00Z",
+    "startTime": "2026-10-09T15:00:00",
+    "endTime": "2026-10-09T16:00:00",
+    "timezone": "America/New_York",
+    "title": "The Mechanics of Asteroid Exploration: Recent Missions and Future Plans",
+    "speakers": [
+      {
+        "name": "Dr. Daniel Scheeres",
+        "affiliation": "University of Colorado"
+      }
+    ],
+    "speaker": "Dr. Daniel Scheeres, University of Colorado",
+    "affiliation": "University of Colorado",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/mechanics-asteroid-exploration-recent-missions-and-future-plans",
+    "content": "Abstract:The exploration of primitive bodies in the solar system, such as asteroids and comets, is driven by scientific questions about the early solar system, long-term goals of utilizing primitive body resources in space, and the protection of the planet from hazardous impacts. Motivated by these concerns, there have been many missions to these small bodies over the last few decades, with each one uncovering new details about these bodies that further motivate their exploration, while identifying new technologies that are needed to continue our progress. Despite past success, there",
+    "rawEventDetails": "Details Event Description Abstract: The exploration of primitive bodies in the solar system, such as asteroids and comets, is driven by scientific questions about the early solar system, long-term goals of utilizing primitive body resources in space, and the protection of the planet from hazardous impacts. Motivated by these concerns, there have been many missions to these small bodies over the last few decades, with each one uncovering new details about these bodies that further motivate their exploration, while identifying new technologies that are needed to continue our progress. Despite past success, there still remain significant challenges across a range of scientific and technical issues associated with small body exploration. Several recent missions have opened up new possibilities for their exploration, and some current and planned missions will continue our progress in the exploration and characterization of these bodies. These missions, both from NASA and from international agencies, are pushing boundaries by exploring new classes of asteroids and improving our ability to interact with them. This talk will introduce the motivations for exploring these primitive bodies, discuss recent progress made by a range of missions, and outline their future exploration, identifying what new questions can and are being pursued. Bio: Daniel J. Scheeres is a University of Colorado Distinguished Professor and holds the A. Richard Seebass Endowed Chair in the Smead Department of Aerospace Engineering Sciences. Before this, he held faculty positions at the University of Michigan and Iowa State, and was a senior member of the technical staff at NASA\u2019s Jet Propulsion Laboratory. Scheeres is a member of the National Academy of Engineering and the International Academy of Astronautics, an Honorary Fellow of the American Institute of Aeronautics and Astronautics, and a Fellow of the American Astronautical Society. Asteroid 8887 is named \u201cScheeres\u201d to recognize his contributions to the scientific understanding of the dynamical environment about asteroids. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "The Mechanics of Asteroid Exploration: Recent Missions and Future Plans",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4756:delta:0",
+    "guid": "ps_events:4756:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-06T20:00:00Z",
+    "endsAt": "2026-11-06T21:00:00Z",
+    "startTime": "2026-11-06T15:00:00",
+    "endTime": "2026-11-06T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials",
+    "speakers": [
+      {
+        "name": "Dr. David Cahill",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      }
+    ],
+    "speaker": "Dr. David Cahill, University of Illinois Urbana-Champaign",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/current-understanding-and-unsolved-problems-thermal-conductivity-materials",
+    "content": "Abstract:Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and",
+    "rawEventDetails": "Details Event Description Abstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and high accuracy. Theory and computation are playing an increasingly importantrole in guiding and interpreting experiments. In this lecture, I will highlight recent discoveries of extremes of thermal conductivity of materials using examples from hard and soft matter (cubic boron arsenide, ultra-high molecular weight polyethylene, disordered layered 2D materials, functionalized fullerenes) and our work on expanding the upper and lower limits of the thermal conductivity ofcommon polymers (polyurethanes, epoxies, polyesters, and polyimides). Bio: Dr. David Cahill is the Grainger Distinguished Chair in Engineering, and Professor of Materials Science and Engineering at the University of Illinois Urbana-Champaign. He served as department head from 2010 to 2018. His research program advances physical insights on thermal transport at the nanoscale; extremes of low and high thermal conductivity in polymers; thermal metrology for microelectronics;the thermal science of electrochemical cells and battery materials; and materials for quantum computing. Cahill received the 2018 Innovation in Materials Characterization Award of the Materials Research Society, the 2015 Touloukian Award of the American Society of Mechanical Engineers, and the Klemens Award from the International Conference on Phonon Scattering in Condensed Matter. He is a fellow of the MRS, the American Physical Society, the AAAS, and is an elected member of the American Academy of Arts and Sciences. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4761:delta:0",
+    "guid": "ps_events:4761:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T20:00:00Z",
+    "endsAt": "2026-11-13T21:00:00Z",
+    "startTime": "2026-11-13T15:00:00",
+    "endTime": "2026-11-13T16:00:00",
+    "timezone": "America/New_York",
+    "title": "An MAE Departmental Seminars Talk by Dr. Maruthi Akella, UT Austin",
+    "speakers": [
+      {
+        "name": "Dr. Maruthi Akella, UT Austin",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Dr. Maruthi Akella, UT Austin",
+    "affiliation": "",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/tbd",
+    "content": "Abstract:TBDBio:Dr. Maruthi Akella is a professor in Aerospace Engineering and Engineering Mechanics at UT Austin where he holds the Cockrell Family Endowed Chair in Engineering. His research encompasses coordinated systems, learning, adaptation, and vision-based sensing. His research group contributed the onboard guidance algorithm for the Intuitive Machines IM-1 mission \u2013 the first U.S. moon landing in more than 50 years since the Apollo era. The major impacts of Dr. Akella\u2019s work have been recognized through the AIAA Mechanics and Control of Flight Award, the AAS",
+    "rawEventDetails": "Details Event Description Abstract: TBD Bio: Dr. Maruthi Akella is a professor in Aerospace Engineering and Engineering Mechanics at UT Austin where he holds the Cockrell Family Endowed Chair in Engineering. His research encompasses coordinated systems, learning, adaptation, and vision-based sensing. His research group contributed the onboard guidance algorithm for the Intuitive Machines IM-1 mission \u2013 the first U.S. moon landing in more than 50 years since the Apollo era. The major impacts of Dr. Akella\u2019s work have been recognized through the AIAA Mechanics and Control of Flight Award, the AAS Dirk Brouwer Award, the IEEE-CSS Award for Excellence in Aerospace Control, the Judith Resnik Space Award from the IEEE Aerospace and Electronic Systems Society, and the AIAA von K\u00e1rm\u00e1n Lecture Award in Astronautics. In October 2024, the International Astronomical Union designated asteroid number 5376 \u2013 a nearly 5-mile diameter-sized minor planet from the main asteroid belt as \u201cMaruthiakella\u201d honoring Dr. Akella\u2019s contributions to many successful applications in astrodynamics. Dr. Akella is Editor-in Chief for the Journal of the Astronautical Sciences, a Fellow of the AIAA, IEEE, and AAS, and holds the Academician rank with the International Academy of Astronautics. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "TBD",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4801:delta:0",
+    "guid": "ps_events:4801:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-20T20:00:00Z",
+    "endsAt": "2026-11-20T21:00:00Z",
+    "startTime": "2026-11-20T15:00:00",
+    "endTime": "2026-11-20T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Nuclear Electric Propulsion: Progress, Challenges, and the Path to High-Power Space Systems",
+    "speakers": [
+      {
+        "name": "Dr. Kurt Polzin",
+        "affiliation": "NASA"
+      }
+    ],
+    "speaker": "Dr. Kurt Polzin, NASA",
+    "affiliation": "NASA",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/nuclear-electric-propulsion-progress-challenges-and-path-high-power-space-systems",
+    "content": "Abstract:Nuclear electric propulsion (NEP) offers the potential to fundamentally expand the capability and reach of spacecraft, but realizing that potential requires overcoming significant challenges in reactor technology, power conversion and distribution, thermal management, electric propulsion, and system integration. This seminar will examine the current state of NEP development, highlighting recent progress while exploring the demanding requirements associated with operating high-power systems continuously for years or even decades in the space environment.",
+    "rawEventDetails": "Details Event Description Abstract: Nuclear electric propulsion (NEP) offers the potential to fundamentally expand the capability and reach of spacecraft, but realizing that potential requires overcoming significant challenges in reactor technology, power conversion and distribution, thermal management, electric propulsion, and system integration. This seminar will examine the current state of NEP development, highlighting recent progress while exploring the demanding requirements associated with operating high-power systems continuously for years or even decades in the space environment. Particular attention will be given to high-power electric propulsion, lightweight high-temperature radiators, radiation-tolerant power electronics, and the testing and evaluation infrastructure needed to mature these technologies and demonstrate integrated systems. The discussion will also consider an evolutionary path toward increasingly capable NEP systems, beginning with lower-power long-duration missions and building toward higher-power systems for human exploration and deep-space science. Finally, the seminar will examine the technology investments and national test and evaluation capabilities needed to turn this vision into a sustained spaceflight capability. BIO : Dr. Kurt Polzin is a senior aerospace engineer and internationally recognized expert in advanced space propulsion. He is from the George C. Marshall Space Flight Center and currently serves as NASA\u2019s Capability Manager for Advanced Propulsion within the Space Transportation Program, where he leads technology development activities spanning electric propulsion, green propellants, solar sails, and other advanced propulsion technologies. Previously, he served as Chief Engineer for NASA\u2019s Space Nuclear Propulsion portfolio as the engineering technical authority for a national, multi-agency effort to advance nuclear thermal and nuclear electric propulsion systems. Dr. Polzin has authored more than 150 technical publications and has conducted research and development in electric propulsion, plasma physics, nuclear propulsion, spacecraft power systems, and advanced space transportation. He is an AIAA Fellow and recipient of the AIAA Engineer of the Year and Plasmadynamics & Lasers Awards. Dr. Polzin received his B.S. in Aerospace Engineering from The Ohio State University and his M.A. and Ph.D. in Mechanical and Aerospace Engineering from Princeton University. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Nuclear Electric Propulsion: Progress, Challenges, and the Path to High-Power Space Systems",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4766:delta:0",
+    "guid": "ps_events:4766:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T20:00:00Z",
+    "endsAt": "2026-12-04T21:00:00Z",
+    "startTime": "2026-12-04T15:00:00",
+    "endTime": "2026-12-04T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Local Maps Are All You Need!",
+    "speakers": [
+      {
+        "name": "Timothy Barfoot",
+        "affiliation": "University of Toronto Institute for Aerospace Studies"
+      }
+    ],
+    "speaker": "Timothy Barfoot, University of Toronto Institute for Aerospace Studies",
+    "affiliation": "University of Toronto Institute for Aerospace Studies",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/local-maps-are-all-you-need",
+    "content": "Abstract: In robotics, we have spent a lot of time building really good maps from noisy sensor data. Who doesn\u2019t like a nice, crisp, globally consistent map? Over the last 20 years, I have been exploring a paradigm to robot navigation that eschews such globally consistent maps in favour of graphs of local maps, which are cheaper to construct, store, and query. These topometric maps enable so-called teach-and-repeat (T&R) navigation. In this talk, I will give a progress update on some of the new things we are doing with T&R including using different primary sensors,",
+    "rawEventDetails": "Details Event Description Abstract: In robotics, we have spent a lot of time building really good maps from noisy sensor data. Who doesn\u2019t like a nice, crisp, globally consistent map? Over the last 20 years, I have been exploring a paradigm to robot navigation that eschews such globally consistent maps in favour of graphs of local maps, which are cheaper to construct, store, and query. These topometric maps enable so-called teach-and-repeat (T&R) navigation. In this talk, I will give a progress update on some of the new things we are doing with T&R including using different primary sensors, teaching with one robot and repeating with another, repeating with multiple robots together, and enabling end-user applications such as Arctic patrol and lunar cargo transport. Hopefully I will convince you that local maps are all you need (i.e.,sufficient) for a lot of common robotics scenarios. I will also try to convince you that local maps are necessary! Bio: Timothy Barfoot (University of Toronto Institute for Aerospace Studies \u2013 UTIAS) works in the area of autonomy for mobile robots targeting a variety of applications. He develops methods (localization, mapping, planning, control) to allow robots to operate over long periods of time in large-scale, unstructured, three-dimensional environments, using rich onboard sensing (e.g., cameras, laser rangefinders, radar) and computation. Timothy holds a BASc (9T6+PEY, Aerospace Option) from the UofT Engineering Science program and a PhD from UTIAS in robotics. He took up his academic position at UTIAS in May 2007, after spending four years at MDA Space (builder of the well-known Canadarm space manipulators), where he developed autonomous vehicle navigation technologies for both planetary rovers and terrestrial applications such as underground mining. He is a Fellow of the IEEE, a Fellow of the Canadian Academy of Engineering, held a Canada Research Chair for the full 10 years, was an Early Researcher Awardee in the Province of Ontario, and has received three paper awards at the IEEE International Conference on Robotics and Automation (ICRA 2010, 2021, 2025) as well as four at the Conference on Robots and Vision (CRV 2014, 2016, 2023, 2025). Timothy began serving as Director (Dept. Head) of UTIAS on 1 July 2026, and previously served as Director of the UofT Robotics Institute,Director of the UofT Collaborative Specialization in Robotics, co-Faculty Advisor of UofT's self-driving car team that won the SAE Autodrivecompetition several times, Chair of the UofT Engineering Science Robotics Major, and was a Faculty Affiliate of the Vector Institute. He wasa Visiting Professor at the University of Oxford (2013, 2024) and worked as Director of Autonomous Systems at Apple in California (2017-9).He holds the position of Distinguished Engineer at Oxa Autonomy Ltd (parttime). He is the Editor in Chief of the IEEE Transactions on Field Robotics (T-FR), deputy EiC of the International Journal of Robotics Research (IJRR), served on the Foundation Board of Robotics: Scienceand Systems (RSS), and served as the General Chair of Field and Service Robotics (FSR) 2015, which was held in Toronto. He is the author of State Estimation for Robotics (Cambridge 2017, 2024), which is free to download from his webpage, and co-editor/co-author of the SLAM Handbook (Cambridge 2026). Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Local Maps Are All You Need!",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4811:delta:0",
+    "guid": "ps_events:4811:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-04-16T19:00:00Z",
+    "endsAt": "2027-04-16T20:00:00Z",
+    "startTime": "2027-04-16T15:00:00",
+    "endTime": "2027-04-16T16:00:00",
+    "timezone": "America/New_York",
+    "title": "New Technology for New Astrophysics",
+    "speakers": [
+      {
+        "name": "John C. Mather",
+        "affiliation": "NASA: Goddard Space Flight Center"
+      }
+    ],
+    "speaker": "John C. Mather, NASA: Goddard Space Flight Center",
+    "affiliation": "NASA: Goddard Space Flight Center",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://mae.princeton.edu/events/2027/new-technology-new-astrophysics",
+    "content": "How is it possible that 1/4 of the Nobel Prizes in Physics since 2006 have been for astrophysics? All 5 of them came from new technologies, and two required space observatories. I\u2019ll review the breakthrough ideas that grew into discoveries, and suggest where future technologies might go.The JWST is working brilliantly, and has found Little Red Dots, the current mystery object. But there\u2019s still no Earth 2.0. The DKIST solar telescope with adaptive optics is working beautifully. The Vera Rubin Telescope is online, the Nancy Grace Roman Space Telescope will be launched just before this",
+    "rawEventDetails": "Details Event Description How is it possible that 1/4 of the Nobel Prizes in Physics since 2006 have been for astrophysics? All 5 of them came from new technologies, and two required space observatories. I\u2019ll review the breakthrough ideas that grew into discoveries, and suggest where future technologies might go.The JWST is working brilliantly, and has found Little Red Dots, the current mystery object. But there\u2019s still no Earth 2.0. The DKIST solar telescope with adaptive optics is working beautifully. The Vera Rubin Telescope is online, the Nancy Grace Roman Space Telescope will be launched just before this colloquium to study dark matter, dark energy, and exoplanets, and the 39 m diameter Extremely Large Telescope will be doing science around 2030. Among the new possibilities: the Habitable Worlds Observatory, a workhorse UV-near IR observatory with a coronagraph for exoplanets, and X-ray and far IR observatories from Probe class ($1B) to flagships. New detector and mirror technologies are making both exciting. The NAUTILUS concept will use molded glass lenses up to 8 m in diameter in space to collect light for spectroscopy. We\u2019re also developing hybrid observatories combining telescopes and interferometers on the ground with satellites. The Landolt absolute photometric calibrator beacon will fly in 2029, and the CELESTE mission is a proposed Small Explorer to offer a laser beacon for adaptive optics to the ELT, giving it diffraction-limited image quality at visible wavelengths where the sky is darkest. An orbiting starshade could cast a star shadow on the ELT and enable imaging of another Earth in one minute. The Black Hole Explorer would extend the Event Horizon Telescope with an orbiting antenna could measure the spin of a black hole. If you can imagine it, you can build it. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "New Technology for New Astrophysics",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

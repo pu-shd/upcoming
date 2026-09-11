@@ -1,0 +1,953 @@
+[
+  {
+    "id": "quantum:ps_events:3941:delta:0",
+    "guid": "ps_events:3941:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-11T16:00:00Z",
+    "endsAt": "2026-09-11T18:00:00Z",
+    "startTime": "2026-09-11T12:00:00",
+    "endTime": "2026-09-11T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Local Autonomous Inference Machines For Quantum Error Correcting Codes",
+    "speakers": [
+      {
+        "name": "Sid Midha",
+        "affiliation": "Gopalakrishnan Group"
+      }
+    ],
+    "speaker": "Sid Midha, Gopalakrishnan Group",
+    "affiliation": "Gopalakrishnan Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-local-autonomous-inference-machines-quantum-error-correcting-codes-sid",
+    "content": "Title: Local autonomous inference machines for quantum error correcting codesAbstract: Quantum error correction is the central ingredient in making large-scale quantum computers work. Over the last three decades, we have found increasingly powerful ways of redundantly encoding quantum information so that it can survive physical errors. Yet, a central challenge remains decoding: the task of inferring which errors have occurred from syndrome measurements, and determining how they should be corrected. As quantum processors grow in size,",
+    "rawEventDetails": "Details Event Description Title: Local autonomous inference machines for quantum error correcting codes Abstract: Quantum error correction is the central ingredient in making large-scale quantum computers work. Over the last three decades, we have found increasingly powerful ways of redundantly encoding quantum information so that it can survive physical errors. Yet, a central challenge remains decoding: the task of inferring which errors have occurred from syndrome measurements, and determining how they should be corrected. As quantum processors grow in size, this quantum-classical feedback loop must remain fast and scalable. In this talk, I will discuss an approach to decoding based on a local and distributed framework of measurement, computation and feedback. This perspective naturally gives rise to a family of decoding algorithms built entirely from local information processing and communication. Such decoders are designed to be scalable, while realizing error-correction as a nonequilibrium phase of noise-robust matter. Bio : Sid is a Ph.D. student at Princeton University working at the intersection of many-body physics, quantum information, and algorithms. His research develops mathematical and computational tools for understanding complex quantum systems. Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: \"Local Autonomous Inference Machines For Quantum Error Correcting Codes\" - Sid Midha (Gopalakrishnan Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-quoted-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3796:delta:0",
+    "guid": "ps_events:3796:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-14T16:10:00Z",
+    "endsAt": "2026-09-14T17:10:00Z",
+    "startTime": "2026-09-14T12:10:00",
+    "endTime": "2026-09-14T13:10:00",
+    "timezone": "America/New_York",
+    "title": "An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation",
+    "speakers": [
+      {
+        "name": "Jainendra Jain",
+        "affiliation": "Penn State University"
+      }
+    ],
+    "speaker": "Jainendra Jain, Penn State University",
+    "affiliation": "Penn State University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-astonishing-quantum-universe-two-dimensions-fundamental-physics",
+    "content": "Title: An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation Abstract: When electrons are confined to two dimensions and subjected to a magnetic field, they enter an astonishing quantum world that defies our everyday intuition. Here, electrons capture quanta of magnetic field and transform into exotic particles known as composite fermions, which reveal a remarkably rich landscape of strongly-correlated quantum states and phenomena, including the fractional quantum Hall",
+    "rawEventDetails": "Details Event Description Title: An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation Abstract: When electrons are confined to two dimensions and subjected to a magnetic field, they enter an astonishing quantum world that defies our everyday intuition. Here, electrons capture quanta of magnetic field and transform into exotic particles known as composite fermions, which reveal a remarkably rich landscape of strongly-correlated quantum states and phenomena, including the fractional quantum Hall effects, strange metals, paired states and crystals. This quantum universe is also thought to harbor emergent particles with non-Abelian statistics, which have inspired proposals for fault tolerant topological quantum computation. I will recount the discoveries and surprises that led to this physics, touch upon the latest developments and discuss how curiosity-driven research into fundamental quantum states may help shape future quantum technologies. The talk is intended for a broad audience and requires no specialized knowledge of condensed-matter physics. A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Mansour Shayegan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation, Jainendra Jain (Penn State University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3831:delta:0",
+    "guid": "ps_events:3831:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-21T16:10:00Z",
+    "endsAt": "2026-09-21T17:10:00Z",
+    "startTime": "2026-09-21T12:10:00",
+    "endTime": "2026-09-21T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Francesca Ferlaino, University of Innsbruck",
+    "speakers": [
+      {
+        "name": "Francesca Ferlaino",
+        "affiliation": "University of Innsbruck"
+      }
+    ],
+    "speaker": "Francesca Ferlaino, University of Innsbruck",
+    "affiliation": "University of Innsbruck",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-francesca-ferlaino-university-innsbruck",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsors Sarang Gopalakrishnan Waseem Bakr",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Francesca Ferlaino (University of Innsbruck)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3946:delta:0",
+    "guid": "ps_events:3946:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T16:00:00Z",
+    "endsAt": "2026-09-25T18:00:00Z",
+    "startTime": "2026-09-25T12:00:00",
+    "endTime": "2026-09-25T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Quantum signatures in molecular polaritonics and other emerging photonic platforms.",
+    "speakers": [
+      {
+        "name": "Arghadip Koner",
+        "affiliation": "Scholes Group"
+      }
+    ],
+    "speaker": "Arghadip Koner, Scholes Group",
+    "affiliation": "Scholes Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-quantum-signatures-molecular-polaritonics-and-other-emerging-photonic",
+    "content": "Title: Quantum signatures in molecular polaritonics and other emerging photonic platforms. Abstract: Molecular polaritons emerge when ensembles of molecules strongly couple to confined electromagnetic modes, enabling repeated energy exchange between light and matter. Such interactions are expected to activate nonlinear optical processes, yet many experimental observations remain accurately described by classical optics. We address this paradox from a spectroscopic perspective. We derive a general expression for the polaritonic linear response,",
+    "rawEventDetails": "Details Event Description Title: Quantum signatures in molecular polaritonics and other emerging photonic platforms. Abstract: Molecular polaritons emerge when ensembles of molecules strongly couple to confined electromagnetic modes, enabling repeated energy exchange between light and matter. Such interactions are expected to activate nonlinear optical processes, yet many experimental observations remain accurately described by classical optics. We address this paradox from a spectroscopic perspective. We derive a general expression for the polaritonic linear response, showing that widely used classical-optics-based descriptions include a hierarchy of finite-size quantum corrections that encode signatures of nonlinear optical processes, such as Raman scattering mediated by cavity vacuum fluctuations in the linear response. An emergent timescale separation in polaritonic dynamics explains the absence of spectroscopic fingerprints of these nonlinearities in commonly used low-Q cavities; they are expected to emerge in high-Q, discrete-mode cavities like microresonators, where enhanced spectral resolution allows these rare events to manifest. Understanding these nonlinear effects is crucial for harnessing genuine cavity-induced quantum processes for new-generation quantum technologies. References [1] A. Koner\u271d, J. Yuen-Zhou\u271d*, \u201cHidden nonlinear optical susceptibilities in linear polaritonic spectra,\u201d Optica 12, 1625-1631 (2025) [2] J. Yuen-Zhou\u271d*, A. Koner\u271d*, \u201cLinear response of molecular polaritons,\u201d J. Chem. Phys. 160, 154107 (2024) [equal contribution]. [3] J. Perez-Sanchez, A. Koner, N. Stern, J. Yuen-Zhou*, \u201cSimulating molecular polaritons in the collective regime using few-molecule models,\u201d Proc. Nat. Acad. Sc., 120 (15) e2219223120 (2023) [4] K. Schwennicke\u271d, A. Koner\u271d, J. Perez-Sanchez\u271d, W. Xiong, N. C. Giebink, M.L. Weichman, J. Yuen-Zhou, \u201cWhen do molecular polaritons behave like optical filters?\u201d Chem. Soc. Rev., 2025,54, 6482-6504 [5] S. Raghavan-Chitra, A. Koner*, J. Yuen-Zhou*, \u201cHigh-Q microresonators unveil quantum rare events\u201d, Science Advances, 12(28), eaed7827 Lunch will be provided at 12:00 PM in EQuad J401. Fig. 1: A schematic of a typical polaritonic linear response setup",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: Quantum signatures in molecular polaritonics and other emerging photonic platforms. - Arghadip Koner (Scholes Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3776:delta:0",
+    "guid": "ps_events:3776:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-05T16:10:00Z",
+    "endsAt": "2026-10-05T17:10:00Z",
+    "startTime": "2026-10-05T12:10:00",
+    "endTime": "2026-10-05T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Rahul Nandkishore, University of Colorado, Boulder",
+    "speakers": [
+      {
+        "name": "Rahul Nandkishore",
+        "affiliation": "University of Colorado, Boulder"
+      }
+    ],
+    "speaker": "Rahul Nandkishore, University of Colorado, Boulder",
+    "affiliation": "University of Colorado, Boulder",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-rahul-nandkishore-university-colorado-boulder",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Rahul Nandkishore (University of Colorado, Boulder)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3951:delta:0",
+    "guid": "ps_events:3951:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T16:00:00Z",
+    "endsAt": "2026-10-09T18:00:00Z",
+    "startTime": "2026-10-09T12:00:00",
+    "endTime": "2026-10-09T14:00:00",
+    "timezone": "America/New_York",
+    "title": "A Quantum Group Meeting Talk by Chengyu Wang, Shayegan Group",
+    "speakers": [
+      {
+        "name": "Chengyu Wang",
+        "affiliation": "Shayegan Group"
+      }
+    ],
+    "speaker": "Chengyu Wang, Shayegan Group",
+    "affiliation": "Shayegan Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-chengyu-wang-shayegan-group",
+    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: TBD - Chengyu Wang (Shayegan Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3811:delta:0",
+    "guid": "ps_events:3811:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-12T16:10:00Z",
+    "endsAt": "2026-10-12T17:10:00Z",
+    "startTime": "2026-10-12T12:10:00",
+    "endTime": "2026-10-12T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Aleksander Kubica, Yale University",
+    "speakers": [
+      {
+        "name": "Aleksander Kubica",
+        "affiliation": "Yale University"
+      }
+    ],
+    "speaker": "Aleksander Kubica, Yale University",
+    "affiliation": "Yale University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-aleksander-kubica-yale-university",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Aleksander Kubica (Yale University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3741:delta:0",
+    "guid": "ps_events:3741:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-22T12:30:00Z",
+    "endsAt": "2026-10-23T19:00:00Z",
+    "startTime": "2026-10-22T08:30:00",
+    "endTime": "2026-10-23T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Quantum Technology Conference 2026",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Other Seminars,Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium",
+      "seminar"
+    ],
+    "rawCategories": [
+      "Other Seminars",
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton University Commons",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/pqtc2026",
+    "content": "The Princeton Quantum Technology Conference (PQTC) aims to bring together visionary speakers from disparate fields that are pushing the frontiers of quantum technology by seriously tackling challenges in quantum hardware and materials, system architecture and scaling, and error correction. The event structure will be designed to allow ample time for discussion and interaction, with the hope of catalyzing new ideas and collaborations.This event is supported by the Princeton Quantum Initiative.Event details",
+    "rawEventDetails": "Details Event Description The Princeton Quantum Technology Conference (PQTC) aims to bring together visionary speakers from disparate fields that are pushing the frontiers of quantum technology by seriously tackling challenges in quantum hardware and materials, system architecture and scaling, and error correction. The event structure will be designed to allow ample time for discussion and interaction, with the hope of catalyzing new ideas and collaborations. This event is supported by the Princeton Quantum Initiative. Event details When: October 22-23, 2026 Location: The Commons , Princeton University Contacts: Ana Ferrari ( [email protected] ) Katie Gallagher ( [email protected] ) Sarang Gopalakrishnan ( [email protected] ) Registration Registration is now closed. We have reached our in-person capacity and are no longer accepting registrations for onsite attendance. We will soon offer the opportunity to request virtual attendance via livestream. Please check back shortly for more information and the virtual registration request form. Invited Speakers Trond Anderson (Google), Ryan Babbush (Google), Anthony Chen (Oratomic), Jake Covey (Chicago), Henrik Dreyer (Quantinuum), Stephen Jordan (Google Quantum AI), Lin Lin (Caltech and UC Berkeley), Shayan Majidy (Harvard), Greg Meyer (MIT), Adam Paetznick (Microsoft), Natalie Parham (Columbia), Ewin Tang (Princeton), Hong Tang (Yale), Vladan Vuletic (MIT), Nathan Wiebe (U Toronto), Henry Yuen (Columbia), Bichen Zhang (Yale) Agenda Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Technology Conference 2026",
+    "locationRaw": "Princeton University Commons",
+    "mappingRules": [
+      "quantum:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3956:delta:0",
+    "guid": "ps_events:3956:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-23T16:00:00Z",
+    "endsAt": "2026-10-23T18:00:00Z",
+    "startTime": "2026-10-23T12:00:00",
+    "endTime": "2026-10-23T14:00:00",
+    "timezone": "America/New_York",
+    "title": "A Quantum Group Meeting Talk by Nadine Bradbury, Subotnik Group",
+    "speakers": [
+      {
+        "name": "Nadine Bradbury",
+        "affiliation": "Subotnik Group"
+      }
+    ],
+    "speaker": "Nadine Bradbury, Subotnik Group",
+    "affiliation": "Subotnik Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-nadine-bradbury-subotnik-group",
+    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: TBD - Nadine Bradbury (Subotnik Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3781:delta:0",
+    "guid": "ps_events:3781:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-26T16:10:00Z",
+    "endsAt": "2026-10-26T17:10:00Z",
+    "startTime": "2026-10-26T12:10:00",
+    "endTime": "2026-10-26T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Aram Harrow, MIT",
+    "speakers": [
+      {
+        "name": "Aram Harrow",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Aram Harrow, MIT",
+    "affiliation": "MIT",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-aram-harrow-mit",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Aram Harrow (MIT)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3786:delta:0",
+    "guid": "ps_events:3786:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-02T17:10:00Z",
+    "endsAt": "2026-11-02T18:10:00Z",
+    "startTime": "2026-11-02T12:10:00",
+    "endTime": "2026-11-02T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Zohreh Davoudi, University of Maryland",
+    "speakers": [
+      {
+        "name": "Zohreh Davoudi",
+        "affiliation": "University of Maryland"
+      }
+    ],
+    "speaker": "Zohreh Davoudi, University of Maryland",
+    "affiliation": "University of Maryland",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-zohreh-davoudi-university-maryland",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Zohreh Davoudi (University of Maryland)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3961:delta:0",
+    "guid": "ps_events:3961:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-06T17:00:00Z",
+    "endsAt": "2026-11-06T19:00:00Z",
+    "startTime": "2026-11-06T12:00:00",
+    "endTime": "2026-11-06T14:00:00",
+    "timezone": "America/New_York",
+    "title": "A Quantum Group Meeting Talk by Laura Futamura, Bakr Group",
+    "speakers": [
+      {
+        "name": "Laura Futamura",
+        "affiliation": "Bakr Group"
+      }
+    ],
+    "speaker": "Laura Futamura, Bakr Group",
+    "affiliation": "Bakr Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-laura-futamura-bakr-group",
+    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: TBD - Laura Futamura (Bakr Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3816:delta:0",
+    "guid": "ps_events:3816:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-09T17:10:00Z",
+    "endsAt": "2026-11-09T18:10:00Z",
+    "startTime": "2026-11-09T12:10:00",
+    "endTime": "2026-11-09T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Andrew Potter, Quantinuum",
+    "speakers": [
+      {
+        "name": "Andrew Potter",
+        "affiliation": "Quantinuum"
+      }
+    ],
+    "speaker": "Andrew Potter, Quantinuum",
+    "affiliation": "Quantinuum",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-andrew-potter-quantinuum",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Andrew Potter (Quantinuum)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3791:delta:0",
+    "guid": "ps_events:3791:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-16T17:10:00Z",
+    "endsAt": "2026-11-16T18:10:00Z",
+    "startTime": "2026-11-16T12:10:00",
+    "endTime": "2026-11-16T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by James Thompson, University of Colorado, Boulder",
+    "speakers": [
+      {
+        "name": "James Thompson",
+        "affiliation": "University of Colorado, Boulder"
+      }
+    ],
+    "speaker": "James Thompson, University of Colorado, Boulder",
+    "affiliation": "University of Colorado, Boulder",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-james-thompson-university-colorado-boulder",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, James Thompson (University of Colorado, Boulder)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3966:delta:0",
+    "guid": "ps_events:3966:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-20T17:00:00Z",
+    "endsAt": "2026-11-20T19:00:00Z",
+    "startTime": "2026-11-20T12:00:00",
+    "endTime": "2026-11-20T14:00:00",
+    "timezone": "America/New_York",
+    "title": "A Quantum Group Meeting Talk by Faranak Bahrami, De Leon Group",
+    "speakers": [
+      {
+        "name": "Faranak Bahrami",
+        "affiliation": "De Leon Group"
+      }
+    ],
+    "speaker": "Faranak Bahrami, De Leon Group",
+    "affiliation": "De Leon Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-faranak-bahrami-de-leon-group",
+    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: TBD - Faranak Bahrami (De Leon Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3821:delta:0",
+    "guid": "ps_events:3821:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T17:10:00Z",
+    "endsAt": "2026-11-23T18:10:00Z",
+    "startTime": "2026-11-23T12:10:00",
+    "endTime": "2026-11-23T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Xing Fan, Harvard University",
+    "speakers": [
+      {
+        "name": "Xing Fan",
+        "affiliation": "Harvard University"
+      }
+    ],
+    "speaker": "Xing Fan, Harvard University",
+    "affiliation": "Harvard University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-xing-fan-harvard-university",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Xing Fan (Harvard University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3971:delta:0",
+    "guid": "ps_events:3971:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T17:00:00Z",
+    "endsAt": "2026-12-04T19:00:00Z",
+    "startTime": "2026-12-04T12:00:00",
+    "endTime": "2026-12-04T14:00:00",
+    "timezone": "America/New_York",
+    "title": "A Quantum Group Meeting Talk by Ray Su, Yazdani Group",
+    "speakers": [
+      {
+        "name": "Ray Su",
+        "affiliation": "Yazdani Group"
+      }
+    ],
+    "speaker": "Ray Su, Yazdani Group",
+    "affiliation": "Yazdani Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-ray-su-yazdani-group",
+    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: TBD - Ray Su (Yazdani Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3931:delta:0",
+    "guid": "ps_events:3931:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-07T17:10:00Z",
+    "endsAt": "2026-12-07T18:10:00Z",
+    "startTime": "2026-12-07T12:10:00",
+    "endTime": "2026-12-07T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Marko Loncar, Harvard University",
+    "speakers": [
+      {
+        "name": "Marko Loncar",
+        "affiliation": "Harvard University"
+      }
+    ],
+    "speaker": "Marko Loncar, Harvard University",
+    "affiliation": "Harvard University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-marko-loncar-harvard-university",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Marko Loncar (Harvard University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  }
+]

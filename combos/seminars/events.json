@@ -1,0 +1,2984 @@
+[
+  {
+    "id": "materials:ps_events:4076:delta:0",
+    "guid": "ps_events:4076:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-02T16:05:00Z",
+    "endsAt": "2026-09-02T17:05:00Z",
+    "startTime": "2026-09-02T12:05:00",
+    "endTime": "2026-09-02T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Sean Roberts, University of Texas at Austin",
+    "speakers": [
+      {
+        "name": "Sean Roberts",
+        "affiliation": "University of Texas at Austin"
+      }
+    ],
+    "speaker": "Sean Roberts, University of Texas at Austin",
+    "affiliation": "University of Texas at Austin",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-sean-roberts-university-texas-austin",
+    "content": "Reshaping Light via Photon Up- and Down-ConversionAbstract: Due to its ability to transmit energy and information through space, light plays a central role in nearly all aspects of human society. However, light has a peculiar property as its energy content is transmitted by photons, discrete particles whose energy must be matched to their intended application. Materials that reshape light, by combining the energy of multiple low-energy photons or by using single high-energy photons to produce multiple lower energy ones, can enable new light-driven",
+    "rawEventDetails": "Details Event Description Reshaping Light via Photon Up- and Down-Conversion Abstract : Due to its ability to transmit energy and information through space, light plays a central role in nearly all aspects of human society. However, light has a peculiar property as its energy content is transmitted by photons, discrete particles whose energy must be matched to their intended application. Materials that reshape light, by combining the energy of multiple low-energy photons or by using single high-energy photons to produce multiple lower energy ones, can enable new light-driven technologies and optoelectronics. In this presentation, I will highlight work by my group to design hybrid structures that interface organic molecules with inorganic nanocrystals and bulk solids for the purpose of reshaping light\u2019s energy content. When properly assembled, these materials can facilitate photon upconversion, the creation of higher energy photons from pairs of low-energy ones, which has applications for bioimaging, light detection, and additive manufacturing. With some small design changes, energy can be made to flow in the opposite direction in these structures, achieving photon downconversion which can be used for solar energy harvesting, quantum information science, and catalysis. Much of the work that I will feature will focus on using ultrafast microscopy methods to track energy flow within these materials with femtosecond time-resolution and sub-micron spatial resolution. Website: www.RobertsGroupUT.org Biography: Sean T. Roberts received a BS in Chemistry from the University of California Los Angeles in 2003, a PhD in Chemistry from the Massachusetts Institute in Technology in 2010, and worked as a National Science Foundation postdoctoral fellow at the University of Southern California from 2010 to 2013. In 2014, Dr. Roberts started his independent career at the University of Texas at Austin where he leads a research group that develops ultrafast spectroscopic techniques to visualize the transport of charge, energy, and spin in nanoscale materials designed for applications in solar energy, 3D printing, imaging, and optoelectronics. Dr. Roberts was named a Fellow of the W. T. Doherty Professorship in Chemistry in 2025 and received the Richard Van Duyne Early Career Award in Experimental Physical Chemistry from the American Chemical Society in 2026. In 2024, Dr. Roberts received the Partners in Progress & Prosperity Award, also from the American Chemical Society, for his work in education and he currently serves as the education and outreach faculty director for the Center for Dynamics and Control of Materials, a National Science Foundation Materials Research Science and Engineering Center (MRSEC) based at UT Austin.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts, University of Texas at Austin",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5276:delta:0",
+    "guid": "ps_events:5276:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-02T20:00:00Z",
+    "endsAt": "2026-09-02T21:00:00Z",
+    "startTime": "2026-09-02T16:00:00",
+    "endTime": "2026-09-02T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Beyond the Monomer: Designing Sequence, Patterns, Composition, and Architecture in Macromolecules",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/beyond-monomer-designing-sequence-patterns-composition-and-architecture-macromolecules",
+    "content": "Polymers are essential to a wide range of technologies, yet designing them with targeted structural and functional properties remains a grand challenge. Moreover, the products and technology only exploit a fraction of the prospective design space availed by macromolecules. A major opportunity lies in applying machine learning to help navigate the vast combinatorial design space\u2014spanning sequence, composition, architecture, morphology, processing, and more\u2014to discover new formulations or replace existing ones with more sustainable alternatives. However, this complexity, combined with data",
+    "rawEventDetails": "Speaker Michael Webb Affiliation Princeton University Details Event Description Polymers are essential to a wide range of technologies, yet designing them with targeted structural and functional properties remains a grand challenge. Moreover, the products and technology only exploit a fraction of the prospective design space availed by macromolecules. A major opportunity lies in applying machine learning to help navigate the vast combinatorial design space\u2014spanning sequence, composition, architecture, morphology, processing, and more\u2014to discover new formulations or replace existing ones with more sustainable alternatives. However, this complexity, combined with data scarcity and characterization challenges, limits the effectiveness of purely rational design and/or high-throughput screening. In this talk, I will describe some of our recent efforts to integrate molecular simulation, machine learning, and theory to map and navigate structure\u2013function relationships in chemically and topologically diverse polymeric materials. I will describe strategies that we have employed across a range of applications to overcome data limitations in polymer science by developing physics-informed (or guided) models as well as other algorithmic innovations. Specific examples of our approach will be drawn from the characterization of single-chain nanoparticle morphologies, the design of enzyme-stabilizing copolymers, and the formulation of architecturally complex polymer additives that tune solution rheology. These examples will showcase utility, limitations, and opportunities for data-driven approaches in modern-day science and how coupling them with (or using them to develop) physical insight can accelerate innovation and deepen materials understanding.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Beyond the Monomer: Designing Sequence, Patterns, Composition, and Architecture in Macromolecules",
+    "locationRaw": "E105 SEAS-BioE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2761:delta:0",
+    "guid": "ps_events:2761:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-03T20:00:00Z",
+    "endsAt": "2026-09-03T21:30:00Z",
+    "startTime": "2026-09-03T16:00:00",
+    "endTime": "2026-09-03T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Rising Stars in Bioengineering Symposium 2026",
+    "speakers": [
+      {
+        "name": "Jacqueline Bliley",
+        "affiliation": ""
+      },
+      {
+        "name": "Andr\u00e9 Forjaz",
+        "affiliation": ""
+      },
+      {
+        "name": "Helena Hu",
+        "affiliation": ""
+      },
+      {
+        "name": "Felix Radford",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Jacqueline Bliley; Andr\u00e9 Forjaz; Helena Hu; Felix Radford",
+    "affiliation": "",
+    "series": "Rising Stars Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Rising Stars Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bioengineering",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/rising-stars-bioengineering-symposium-2026",
+    "content": "",
+    "rawEventDetails": "Speakers Jacqueline Bliley Affiliation Additional Ventures Presentation FRESH Bioprinting to Build Contractile Cardiac Pumps and Model Early Cardiac Development Andr\u00e9 Forjaz Affiliation Johns Hopkins School of Medicine Presentation 3D Tissue Mapping of Whole Organs and Organisms to Deconvolve Fundamental Growth Laws and Identify Rare Precancers Helena Hu Affiliation MIT Presentation Thousandfold Expansion Microscopy: Toward a Complete Molecular Map of Life Felix Radford Affiliation Harvard Medical School Presentation Redesigning Translation Systems for Bioproduction of New Catalysts, Therapeutics and Materials",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Rising Stars in Bioengineering Symposium 2026",
+    "locationRaw": "Bioengineering E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12756:delta:0",
+    "guid": "ps_events:12756:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-08T16:15:00Z",
+    "endsAt": "2026-09-08T17:15:00Z",
+    "startTime": "2026-09-08T12:15:00",
+    "endTime": "2026-09-08T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Uncovering Latent Stock Risk Linkages: Financial Graph Learning via Mixed Membership Co-jump Networks",
+    "speakers": [
+      {
+        "name": "Yingying Li",
+        "affiliation": "Hong Kong University of Science and Technology"
+      }
+    ],
+    "speaker": "Yingying Li, Hong Kong University of Science and Technology",
+    "affiliation": "Hong Kong University of Science and Technology",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Memorial Seminar in Statistics"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/yingying-li-hong-kong-university-science-and-technology",
+    "content": "Abstract: Traditional hard clustering methods fail to capture the complex, overlapping risk linkages present in modern markets. While recent work (Ding et al., 2024) identifies broad block structures in stock co-jumps, we demonstrate that this framework can be significantly enhanced by incorporating mixed membership. Specifically, we propose a Degree Corrected Mixed Membership network model with Dependent Multivariate Poisson edges that allows stocks to belong to multiple latent risk communities simultaneously and a corresponding estimation algorithm. We prove that our",
+    "rawEventDetails": "Details Event Description Abstract: Traditional hard clustering methods fail to capture the complex, overlapping risk linkages present in modern markets. While recent work (Ding et al., 2024) identifies broad block structures in stock co-jumps, we demonstrate that this framework can be significantly enhanced by incorporating mixed membership. Specifically, we propose a Degree Corrected Mixed Membership network model with Dependent Multivariate Poisson edges that allows stocks to belong to multiple latent risk communities simultaneously and a corresponding estimation algorithm. We prove that our estimator is asymptotically consistent. Empirically, we show that: (1) the mixed membership framework reveals a more informative and granular risk structure than rigid classifications; (2) peer groups defined by our model generate momentum strategies that significantly outperform benchmarks such as selfmomentum, or momentum based on GICS or analyst coverage; and (3) a \"purity\" measure derived from our model predicts stock volatility and Sharpe ratios, offering a new dimension for risk profiling. Bio: Yingying Li is Fung Term Professor of Business (\u99ae\u6c0f\u5546\u5b78\u6559\u6388) and Chair Professor at the Department of Information System, Business Statistics and Operations Management (ISOM) and the Department of Finance at Hong Kong University of Science and Technology (HKUST). She served as acting head of the FinTech Thrust at HKUST(GZ) at its initial stage. Before joining HKUST, she also held positions as lecturer and postdoctoral fellow at the Bendheim Center for Finance and the Operations Research and Financial Engineering department at Princeton University. Dr. Li received her Ph. D in Statistics from the University of Chicago. Prof. Li's research focuses on statistical learning for financial big data, large portfolio optimization, individualized financial decision making, volatility estimation and prediction etc. Prof. Li has published in top journals in statistics, finance and economics, such as Econometrica , Review of Financial Studies , Journal of Financial Economics , Annals of Statistics , Journal of American Statistical Association , and Journal of Econometrics . Prof. Li is an RGC Senior Research Fellow, elected Fellow of the Society for Financial Econometrics (SoFiE), Fellow of Journal of Econometrics, NSFC YSF Cat-A awardee, and NSFC Excellent Young Scientist. She served or is serving as an Associate Editor for the Journal of American Statistical Association , Management Science , Journal of Econometrics , Journal of Business & Economic Statistics and Journal of Financial Econometrics ; a council member for the Society for Financial Econometrics, and a panel member of the Hong Kong Research Grants Council (RGC) and the University Grants Committee (UGC). https://yyli.finstar.hk/bio Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Yingying Li, Hong Kong University of Science and Technology",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4081:delta:0",
+    "guid": "ps_events:4081:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T16:05:00Z",
+    "endsAt": "2026-09-09T17:05:00Z",
+    "startTime": "2026-09-09T12:05:00",
+    "endTime": "2026-09-09T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Rafael Gomez-Bombarelli, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Rafael Gomez-Bombarelli",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Rafael Gomez-Bombarelli, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-rafael-gomez-bombarelli-massachusetts-institute",
+    "content": "The Bittersweet Lesson of Scaling in AI for MaterialsAbstract: AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton's 'bitter lesson' states that \"general methods that leverage computation are ultimately the most effective\" in AI. The corollaries are bittersweet in chemistry and materials. The lesson permeates",
+    "rawEventDetails": "Details Event Description The Bittersweet Lesson of Scaling in AI for Materials Abstract : AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton's 'bitter lesson' states that \"general methods that leverage computation are ultimately the most effective\" in AI. The corollaries are bittersweet in chemistry and materials. The lesson permeates through the use of AI in chemistry and materials. The tremendous success of universal ML interatomic potentials (MLIPs) as surrogate for quantum-mechanical energies and forces is unarguable. Trained on 100-million-count datasets, they reflect scaling laws similar to the ones in language or vision models, generalizing to new scientific questions and enabling simulations that were intractable a few years ago. Generative models, trained mostly on the same synthetic data, are currently being used to propose novel materials at machine speed. The discussion around the power of inductive bias (energy conservation, equivariance) and whether it is better reflected in model architecture or in training strategy is very much ongoing. The physical sciences may well be the last holdout for domain knowledge and inductive bias, or maybe they will ultimately follow the same trends as other domains. But MLIPs are surrogates for physics-based simulators, and arguably, materials only truly matter if they are made in the lab and then scaled up industrially and commercially. This is the truly bitter scaling lesson in materials. The promise of AI for chemistry and materials needs to be realized through very traditional, expensive and slow channels. In this talk, I will describe our group's work both in the highly scalable fusion of simulations and machine learning, and in the \"high-contact\" and lower throughput effort of translating AI designs into tangible, scalable products, in areas like heterogeneous catalysis, battery materials or sustainable polymers Bio: Rafael Gomez-Bombarelli is the Paul M Cook Associate Professor in MIT's Department of Materials Science and Engineering; and co-founder and Chief Scientific Officer at Lila Sciences. He earned his undergraduate and graduate degrees in chemistry from the University of Salamanca, Spain, and conducted postdoctoral research at Heriot-Watt University and Harvard University, under Alan Aspuru-Guzik. Rafa's research integrates machine learning with atomistic simulations to expedite the discovery and design of novel materials for applications in energy, sustainability, and healthcare.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Rafael Gomez-Bombarelli, Massachusetts Institute of Technology",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5281:delta:0",
+    "guid": "ps_events:5281:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T20:00:00Z",
+    "endsAt": "2026-09-09T21:00:00Z",
+    "startTime": "2026-09-09T16:00:00",
+    "endTime": "2026-09-09T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/structure-function-relationships-sustainable-feedstock-upgrading-lessons-oxidation-chemistry",
+    "content": "Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other",
+    "rawEventDetails": "Speaker Gina Noh Affiliation The Pennsylvania State University Details Event Description Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other functions, and their consequences for catalysis. In this seminar, I will present two vignettes: (1) dry reforming of methane over Ni-CeO 2 materials and (2) ethanol oxidative dehydrogenation to form acetaldehyde over M1-MoVO x catalysts. The role of elementary steps involving oxygen and oxygen-transport reactions in reactivity, selectivity, and stability will be clarified.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3796:delta:0",
+    "guid": "ps_events:3796:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-14T16:10:00Z",
+    "endsAt": "2026-09-14T17:10:00Z",
+    "startTime": "2026-09-14T12:10:00",
+    "endTime": "2026-09-14T13:10:00",
+    "timezone": "America/New_York",
+    "title": "An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation",
+    "speakers": [
+      {
+        "name": "Jainendra Jain",
+        "affiliation": "Penn State University"
+      }
+    ],
+    "speaker": "Jainendra Jain, Penn State University",
+    "affiliation": "Penn State University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-astonishing-quantum-universe-two-dimensions-fundamental-physics",
+    "content": "Title: An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation Abstract: When electrons are confined to two dimensions and subjected to a magnetic field, they enter an astonishing quantum world that defies our everyday intuition. Here, electrons capture quanta of magnetic field and transform into exotic particles known as composite fermions, which reveal a remarkably rich landscape of strongly-correlated quantum states and phenomena, including the fractional quantum Hall",
+    "rawEventDetails": "Details Event Description Title: An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation Abstract: When electrons are confined to two dimensions and subjected to a magnetic field, they enter an astonishing quantum world that defies our everyday intuition. Here, electrons capture quanta of magnetic field and transform into exotic particles known as composite fermions, which reveal a remarkably rich landscape of strongly-correlated quantum states and phenomena, including the fractional quantum Hall effects, strange metals, paired states and crystals. This quantum universe is also thought to harbor emergent particles with non-Abelian statistics, which have inspired proposals for fault tolerant topological quantum computation. I will recount the discoveries and surprises that led to this physics, touch upon the latest developments and discuss how curiosity-driven research into fundamental quantum states may help shape future quantum technologies. The talk is intended for a broad audience and requires no specialized knowledge of condensed-matter physics. A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Mansour Shayegan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: An Astonishing Quantum Universe in Two Dimensions: From Fundamental Physics to (Possibly) Quantum Computation, Jainendra Jain (Penn State University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12691:delta:0",
+    "guid": "ps_events:12691:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-15T20:30:00Z",
+    "endsAt": "2026-09-15T21:30:00Z",
+    "startTime": "2026-09-15T16:30:00",
+    "endTime": "2026-09-15T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Finding Stationary Points in Stochastic Convex Optimization: Why and How",
+    "speakers": [
+      {
+        "name": "John Duchi",
+        "affiliation": "Stanford University"
+      }
+    ],
+    "speaker": "John Duchi, Stanford University",
+    "affiliation": "Stanford University",
+    "series": "Optimization Seminar,ORFE Department Colloquia",
+    "tags": [
+      "colloquium",
+      "seminar"
+    ],
+    "rawCategories": [
+      "Optimization Seminar",
+      "ORFE Department Colloquia"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/john-duchi-stanford-university",
+    "content": "Abstract: In this talk, I will discuss finding stationary points of possibly non-differentiable stochastic convex functions. Motivation for solving such problems arises in modern \u201cdistribution free\u201d statistical learning problems. We will highlight some of the challenges of solving such problems, including that subgradients of stochastic convex functions do not converge uniformly, and also demonstrate some new geometric tools to show that solving the problem is in fact possible.Based on the paper \u201cFinding a stationary point",
+    "rawEventDetails": "Details Event Description Abstract: In this talk, I will discuss finding stationary points of possibly non-differentiable stochastic convex functions. Motivation for solving such problems arises in modern \u201cdistribution free\u201d statistical learning problems. We will highlight some of the challenges of solving such problems, including that subgradients of stochastic convex functions do not converge uniformly, and also demonstrate some new geometric tools to show that solving the problem is in fact possible. Based on the paper \u201c Finding a stationary point of a stochastic convex problem \u201d, a joint work with Felipe Areces and Malo Sommers. Bio: John Duchi is an associate professor of Statistics and Electrical Engineering at Stanford University. His work spans statistical learning, optimization, information theory, and computation, with a few driving goals. (1) To discover statistical learning procedures that optimally trade between real-world resources \u2014 computation, communication, privacy provided to study participants \u2014 while maintaining statistical efficiency. (2) To build efficient large-scale optimization methods that address the spectrum of optimization, machine learning, and data analysis problems we face, allowing us to move beyond bespoke solutions to methods that robustly work. (3) To develop tools to assess and guarantee the validity of \u2014 and confidence we should have in \u2014 machine-learned systems. Event Category Optimization Seminar ORFE Department Colloquia",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "John Duchi, Stanford University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4086:delta:0",
+    "guid": "ps_events:4086:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-16T16:05:00Z",
+    "endsAt": "2026-09-16T17:05:00Z",
+    "startTime": "2026-09-16T12:05:00",
+    "endTime": "2026-09-16T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Nuh Gedik, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Nuh Gedik",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Nuh Gedik, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-nuh-gedik-massachusetts-institute-technology",
+    "content": "Capturing Light Induced Phase Transitions with Femtosecond MoviesAbstract: Materials typically undergo phase changes as a function of external parameters such as temperature, pressure or magnetic field. Light can also be used to both switch between equilibrium phases and to create new photo-induced states that may have no equilibrium counterparts. Even though there are fascinating examples of photoinduced phase transitions, the detailed microscopic mechanisms and overarching principles that govern these are still not known. In this talk, I will",
+    "rawEventDetails": "Details Event Description Capturing Light Induced Phase Transitions with Femtosecond Movies Abstract : Materials typically undergo phase changes as a function of external parameters such as temperature, pressure or magnetic field. Light can also be used to both switch between equilibrium phases and to create new photo-induced states that may have no equilibrium counterparts. Even though there are fascinating examples of photoinduced phase transitions, the detailed microscopic mechanisms and overarching principles that govern these are still not known. In this talk, I will present two recent examples of this phenomena. First, I will describe how we used ultrashort laser pulses to capture light induced melting and recovery of a charge density wave phase with femtosecond time resolution. During this process, a new state that does not exist in equilibrium is also transiently created. Secondly, I will show experiments in which high field THz pulses are used to induce metastable magnetization in a layered antiferromagnet. Understanding light induced phase transitions could pave the way for optical engineering of new quantum states of matter. Bio : Professor Gedik received his B.S. in Physics in 1998 from Bogazici University, Istanbul, Turkey and his Ph.D in Physics in 2004 from University of California, Berkeley. After his Ph.D, he moved to Caltech where he worked as a postdoctoral scholar till January 2008. He joined MIT Physics Department as an assistant professor in January 2008 and was promoted to Full Professor of Physics in 2018. His reserach centers on developing advanced ultrafast spectroscopies to study quantum materials. His awards include National Science Foundation CAREER Award, Department of Energy Early Career Award, Sloan fellowship, DARPA Young Faculty Award, Moore Experimental Investigator award and National Brown Investigator Award.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Nuh Gedik, Massachusetts Institute of Technology",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5286:delta:0",
+    "guid": "ps_events:5286:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-16T20:00:00Z",
+    "endsAt": "2026-09-16T21:00:00Z",
+    "startTime": "2026-09-16T16:00:00",
+    "endTime": "2026-09-16T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Network Phases in Block Polymers",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/network-phases-block-polymers",
+    "content": "This presentation will explore our recent computational research self-assembled network phases in block copolymers, which can serve as templates for creating metallic metamaterials. In the first part of the presentation, I will describe routes to produce single-gyroid phases, chiral network with three-fold connectors. While single gyroid is metastable in simple AB diblock copolymers, blends of linear diblock polymers and neat melts of nonlinear copolymer architectures expose stability windows for alternating gyroid and single gyroid, respectively, in experimentally accessible systems. The",
+    "rawEventDetails": "Speaker Kevin Dorfman Affiliation University of Minnesota Details Event Description This presentation will explore our recent computational research self-assembled network phases in block copolymers, which can serve as templates for creating metallic metamaterials. In the first part of the presentation, I will describe routes to produce single-gyroid phases, chiral network with three-fold connectors. While single gyroid is metastable in simple AB diblock copolymers, blends of linear diblock polymers and neat melts of nonlinear copolymer architectures expose stability windows for alternating gyroid and single gyroid, respectively, in experimentally accessible systems. The second part of the presentation will discuss a new principle, known as boundary frustration, that guides termination plane selection between two non-preferential surfaces. Finally, I will describe a new approach known as \u201cgenerative SCFT\u201d that leverages generative adversarial networks to learn from self-consistent field theory (SCFT) solution trajectories to propose new initial guesses for subsequent SCFT calculations. This approach not only identified all known block polymer network phases but also uncovered a vast library of candidate network phases.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Network Phases in Block Polymers",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2756:delta:0",
+    "guid": "ps_events:2756:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-17T20:00:00Z",
+    "endsAt": "2026-09-17T21:00:00Z",
+    "startTime": "2026-09-17T16:00:00",
+    "endTime": "2026-09-17T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Generative Biology - Learning to Program Cellular Machines and Systems",
+    "speakers": [
+      {
+        "name": "Wendell Lim",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Wendell Lim",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bioengineering",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/generative-biology-learning-program-cellular-machines-and-systems",
+    "content": "Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular",
+    "rawEventDetails": "Speaker Wendell Lim Affiliation University of California San Francisco Details Event Description Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular systems to understand the principles that drive multi-cellular self-organization, such as the development of tissues and organs. These synthetic biology tools and approaches are helping to define the fundamental logic underlying complex biological behaviors and provide new avenues to create useful synthetic cellular devices and living materials. Refreshments available 15 minutes before indicated time of seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Generative Biology - Learning to Program Cellular Machines and Systems",
+    "locationRaw": "Bioengineering E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3831:delta:0",
+    "guid": "ps_events:3831:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-21T16:10:00Z",
+    "endsAt": "2026-09-21T17:10:00Z",
+    "startTime": "2026-09-21T12:10:00",
+    "endTime": "2026-09-21T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Francesca Ferlaino, University of Innsbruck",
+    "speakers": [
+      {
+        "name": "Francesca Ferlaino",
+        "affiliation": "University of Innsbruck"
+      }
+    ],
+    "speaker": "Francesca Ferlaino, University of Innsbruck",
+    "affiliation": "University of Innsbruck",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-francesca-ferlaino-university-innsbruck",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsors Sarang Gopalakrishnan Waseem Bakr",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Francesca Ferlaino (University of Innsbruck)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12731:delta:0",
+    "guid": "ps_events:12731:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-21T16:15:00Z",
+    "endsAt": "2026-09-21T17:15:00Z",
+    "startTime": "2026-09-21T12:15:00",
+    "endTime": "2026-09-21T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Interpolation - based learning under data heterogeneity",
+    "speakers": [
+      {
+        "name": "Sohom Bhattacharya",
+        "affiliation": "University of Florida"
+      }
+    ],
+    "speaker": "Sohom Bhattacharya, University of Florida",
+    "affiliation": "University of Florida",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Memorial Seminar in Statistics"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/sohom-bhattacharya-university-florida",
+    "content": "Abstract: Min-norm interpolators naturally arise as implicitly regularized limits of modern neural networks and other widely used algorithms. While their out-of-distribution risk has recently been analyzed in settings where test samples are unavailable during training, many practical applications allow partial access to target data. The behavior of min-norm interpolation in such settings remains poorly understood. In this talk, I will present a sharp characterization of the risk of min-norm interpolators under both covariate and model shifts. Our results yield",
+    "rawEventDetails": "Details Event Description Abstract: Min-norm interpolators naturally arise as implicitly regularized limits of modern neural networks and other widely used algorithms. While their out-of-distribution risk has recently been analyzed in settings where test samples are unavailable during training, many practical applications allow partial access to target data. The behavior of min-norm interpolation in such settings remains poorly understood. In this talk, I will present a sharp characterization of the risk of min-norm interpolators under both covariate and model shifts. Our results yield several important insights. For instance, in the presence of model shift, incorporating additional data can actually harm prediction performance when the signal-to-noise ratio is low. Conversely, for higher signal-to-noise ratios, transfer learning is beneficial, provided the shift-to-signal ratio remains below a precise threshold, which I will define. To reach these conclusions, we develop novel anisotropic local laws, representing new advances in random matrix theory for heterogeneous data problems. I will also discuss applications of our results to the challenge of combining real data with synthetic data generated by AI models. This talk is based on joint works with Anvit Garg, Kenny Gu, Yanke Song, Debarghya Mukherjee, and Pragya Sur. Bio: Sohom Bhattacharya is an Assistant Professor in the Department of Statistics at the University of Florida. Before joining UF, he was a Postdoctoral Research Associate in the Department of Operations Research and Financial Engineering at Princeton University. He received his Ph.D. in Statistics from Stanford University in 2022. His research interests lie at the intersection of high-dimensional statistics and statistical machine learning. He has also worked in applied probability, focusing on random graphs and inference in networks. Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Sohom Bhattacharya, University of Florida",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4091:delta:0",
+    "guid": "ps_events:4091:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-23T16:05:00Z",
+    "endsAt": "2026-09-23T17:05:00Z",
+    "startTime": "2026-09-23T12:05:00",
+    "endTime": "2026-09-23T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Ryan Lively, Georgia Institute of Technology",
+    "speakers": [
+      {
+        "name": "Ryan Lively",
+        "affiliation": "Georgia Institute of Technology"
+      }
+    ],
+    "speaker": "Ryan Lively, Georgia Institute of Technology",
+    "affiliation": "Georgia Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-ryan-lively-georgia-institute-technology",
+    "content": "Organic Solvent Reverse Osmosis Membranes for Complex Mixture Separations Abstract: In this talk, the potential for membrane materials to reduce energy and carbon requirements for the separation of hydrocarbon feedstocks and products will be discussed. We developed a series of polymer materials that feature rigid polymer backbones with engineered mobility and functionality. We imbue the polymers with resistance to dilation induced by hydrocarbon immersion without the loss of solution-based membrane fabrication",
+    "rawEventDetails": "Details Event Description Organic Solvent Reverse Osmosis Membranes for Complex Mixture Separations Abstract : In this talk, the potential for membrane materials to reduce energy and carbon requirements for the separation of hydrocarbon feedstocks and products will be discussed. We developed a series of polymer materials that feature rigid polymer backbones with engineered mobility and functionality. We imbue the polymers with resistance to dilation induced by hydrocarbon immersion without the loss of solution-based membrane fabrication techniques. These materials exhibit good separation of liquid phase hydrocarbon mixtures at ambient temperatures via a hydraulic permeation technique known as organic solvent reverse osmosis. The integration of these polymeric membranes into fuel and chemical feedstock separation processes was investigated in a series of experiments. Technoeconomic analyses based on these experiments indicate that the best-performing membrane materials can substantially reduce the energy costs and associated carbon emissions of hydrocarbon separations (two to ten fold, depending on product specifications). Bio : Ryan Lively is the Thomas C. DeLoach Professor in the School of Chemical & Biomolecular Engineering at the Georgia Institute of Technology. His current research seeks to revolutionize fluid separation processes critical to the global energy and carbon infrastructure. He has a specific focus on membrane- and adsorbent-based science and technology aimed at addressing some of the world\u2019s most difficult chemical separations. His group\u2019s research activities range from fundamental material science and discovery to translational engineering applications focusing on making and testing separation devices. He has received a variety of awards for his research efforts including the 2020 Allan P. Colburn Award from AIChE, and the 2022 Curtis W. McGraw Award from ASEE and a 2025 Finalist for the Blavatnik Young Scientist Award. He is currently an Editor for the Journal of Membrane Science, the Secretary of the North American Membrane Society, and an ACS Industrial & Engineering Chemistry Division Fellow. He is the Director of the Center forUnderstanding & Controlling Accelerated and Gradual Evolution of Materials for Energy (UNCAGE-ME), an Energy Frontier Research Center of the US Department of Energy. He has over 240 publications in the field of separations including articles in Science , Nature , and other impactful venues.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Ryan Lively, Georgia Institute of Technology",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5291:delta:0",
+    "guid": "ps_events:5291:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-23T20:00:00Z",
+    "endsAt": "2026-09-23T21:00:00Z",
+    "startTime": "2026-09-23T16:00:00",
+    "endTime": "2026-09-23T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Crystal Engineering in the Pharmaceutical Industry: Opportunities for Further Innovation",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/crystal-engineering-pharmaceutical-industry-opportunities-further-innovation",
+    "content": "Crystal engineering has been used within the pharmaceutical industry for multiple decades, primarily applied to batch processes. Crystal engineering is employed for the control of crystal attributes such as crystal form, particle size, particle morphology as well as impurity rejection. While applied across intermediate steps, crystal engineering is often utilized for the isolation of the active pharmaceutical ingredient, as these particle attributes can directly impact the bioavailability of the drug when used in solid oral dosage forms. Concurrent with the increased utilization of particle",
+    "rawEventDetails": "Speaker Christopher Burcham Affiliation University of Illinois Urbana-Champaign Details Event Description Crystal engineering has been used within the pharmaceutical industry for multiple decades, primarily applied to batch processes. Crystal engineering is employed for the control of crystal attributes such as crystal form, particle size, particle morphology as well as impurity rejection. While applied across intermediate steps, crystal engineering is often utilized for the isolation of the active pharmaceutical ingredient, as these particle attributes can directly impact the bioavailability of the drug when used in solid oral dosage forms. Concurrent with the increased utilization of particle engineering techniques, the pharmaceutical industry has also rediscovered continuous processing and as a natural result there has been an increased interest in continuous crystallization and isolation of pharmaceutical intermediates and APIs. Continuous crystallization presents unique challenges to the control of physical properties of active pharmaceutical ingredients by direct crystallization when compared to batch crystallization processes. These limitations can be overcome to some extent by the implementation of in-situ milling and other process intensification technologies. Development of these processes has historically been experiential through trial-and-error experimentation \u2013 which leads to long development cycles, and the need for significant quantities of materials to fund the development studies. Application and utilization of population balance models (PBM) significantly decrease both the development cycle time and the material needs \u2013 a case study demonstrating the efficiency gains of using PBMs will be presented. While the utilization of PBMs greatly decreases the development timeframe, the overall process development cycle is quite linear, such that the development of the process cannot begin until many other activities are completed, all of which rely on the selection of the crystal form that will be carried forward \u2013 which until recently has been done through extensive crystal screening studies. Innovations in ab-initio crystal structure predictions (CSP) offer the promise of transforming polymorph screening and selection by predicting all possible polymorphs of a given organic molecule along with the associated free energies of each predicted form. These advances in the ability to predict crystal form as well as crystal growth have progressed to such a point where one can ask \u2013 can the linear process development workflow be replaced through in-silico simulations? (Burcham et al, 2024). An in-silico workflow for the digital design of crystallization processes starting from the chemical structure of the active pharmaceutical ingredient (API) through to process development will be presented. The opportunities, current limitations and prospects for future innovation of this approach will be discussed. 1. Burcham, C. L., et al. (2024). \"PharmaceuScal Digital Design: From Chemical Structure through Crystal Polymorph to Conceptual Crystallization Process.\" Crystal Growth & Design 24(13): 5417\u20135438.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Crystal Engineering in the Pharmaceutical Industry: Opportunities for Further Innovation",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4746:delta:0",
+    "guid": "ps_events:4746:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T19:00:00Z",
+    "endsAt": "2026-09-25T20:00:00Z",
+    "startTime": "2026-09-25T15:00:00",
+    "endTime": "2026-09-25T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Industrial Electrification: Technologies and Interactions with the Energy System",
+    "speakers": [
+      {
+        "name": "Dr. Rebecca Ciez",
+        "affiliation": "Purdue University"
+      }
+    ],
+    "speaker": "Dr. Rebecca Ciez, Purdue University",
+    "affiliation": "Purdue University",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/industrial-electrification-technologies-and-interactions-energy-system",
+    "content": "Abstract: Electrifying energy-intensive industries is a key component of reducing fossil fuel consumption and meeting decarbonization goals, but these end uses have been slower to transition than other sectors of the economy because of the diversity of industrial processes, the heat and temperature requirements involved, and the capital-intensive nature of existing infrastructure. The scale of transitioning this sector of the economy will also have significant impacts on the broader electricity sector, including changes in demand patterns, grid capacity requirements, and",
+    "rawEventDetails": "Details Event Description Abstract: Electrifying energy-intensive industries is a key component of reducing fossil fuel consumption and meeting decarbonization goals, but these end uses have been slower to transition than other sectors of the economy because of the diversity of industrial processes, the heat and temperature requirements involved, and the capital-intensive nature of existing infrastructure. The scale of transitioning this sector of the economy will also have significant impacts on the broader electricity sector, including changes in demand patterns, grid capacity requirements, and infrastructure investment needs, all of which need to be taken into account in order to evaluate the impact of industrial technologies. This seminar will introduce multiscale modeling frameworks used to analyze the impact of industrial electrification on the broader electricity system, from individual process-level changes up to system-wide effects, as well as the lifecycle analysis methods used to assess the environmental impacts of these electrified alternatives across their full value chain. In addition to the environmental impacts of industrial electrification, these methods also consider the impacts on energy prices and the cost of producing goods via electrified alternatives, offering a more complete picture of the economic trade-offs involved in this transition. Examples of industrial electrification pathways at different scales will be presented, including individual facilities with small and large energy demand, as well as broader scenarios considering the electrification of entire industrial sectors like the steel industry, illustrating how these modeling approaches can inform decision-making at both the facility and sector level. Bio: Dr. Rebecca Ciez is an Assistant Professor in Mechanical Engineering and Sustainability Engineering and Environmental Engineering at Purdue University. Prior to Purdue, she was a postdoctoral researcher at the Andlinger Center for Energy and the Environment. Her research combines methods from engineering, quantitative policy analysis, and economics to consider the economic and environmental impacts of energy systems and technologies. Her research group uses these methods to consider both electrochemical energy storage technologies and industrial electrification technologies. Dr. Ciez was a Negative Emissions Science Scialog Fellow, and was named a 40 under 40 rising star in Environmental Engineering and Science by the American Academy of Environmental Engineers & Scientists. Dr. Ciez\u2019s work has been published in journals including ACS Energy Letters, Energy and Environmental Science, Joule, and Nature Sustainability. She holds a bachelor\u2019s degree in mechanical engineering from Columbia University and a Ph.D. in Engineering and Public Policy from Carnegie Mellon University. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Industrial Electrification: Technologies and Interactions with the Energy System",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12736:delta:0",
+    "guid": "ps_events:12736:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-28T16:15:00Z",
+    "endsAt": "2026-09-28T17:15:00Z",
+    "startTime": "2026-09-28T12:15:00",
+    "endTime": "2026-09-28T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Transfer Treatment Effects Across Heterogeneous Sites via Distributional Causal Inference",
+    "speakers": [
+      {
+        "name": "Annie Qu, University of California, Santa Barbara",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Annie Qu, University of California, Santa Barbara",
+    "affiliation": "",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Memorial Seminar in Statistics"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/annie-qu-university-california-santa-barbara",
+    "content": "Abstract: We study distributional transportability of treatment effects in a \u201ccross-site, one-armed target\u201d design, where both treated and control units are observed in a source site, but only control units are observed in a target site. Our object of interest is not estimating the average treatment effect, but recovering the full treated distribution in the target site using transfer knowledge from the source site, while allowing cross-site heterogeneity in measurement systems, observed features, outcome reporting, population composition, and latent contextual factors. We",
+    "rawEventDetails": "Details Event Description Abstract: We study distributional transportability of treatment effects in a \u201ccross-site, one-armed target\u201d design, where both treated and control units are observed in a source site, but only control units are observed in a target site. Our object of interest is not estimating the average treatment effect, but recovering the full treated distribution in the target site using transfer knowledge from the source site, while allowing cross-site heterogeneity in measurement systems, observed features, outcome reporting, population composition, and latent contextual factors. We model cross-site heterogeneity through a transformation between the sites that transports the joint feature-outcome distributions. This transformation is learned from comparing the observed control samples in the source and target sites, using an optimal transport criterion. The learned transformation is then applied to the source treated sample to construct a synthetic sample from the target treated distribution. We establish consistency of the learned transformation and convergence of the resulting synthetic empirical distribution to the target treated distribution. Simulation studies across multiple data-generating scenarios and a real-world application to patient-derived xenograft (PDX) data demonstrate that our framework recovers the full distributional properties of the target treated population. Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Annie Qu, University of California, Santa Barbara",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12696:delta:0",
+    "guid": "ps_events:12696:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T20:30:00Z",
+    "endsAt": "2026-09-29T21:30:00Z",
+    "startTime": "2026-09-29T16:30:00",
+    "endTime": "2026-09-29T17:30:00",
+    "timezone": "America/New_York",
+    "title": "An ORFE Department Colloquia Talk by Ankur Moitra, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Ankur Moitra",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Ankur Moitra, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "ORFE Department Colloquia",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "ORFE Department Colloquia"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/ankur-moitra-massachusetts-institute-technology",
+    "content": "",
+    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Ankur Moitra, Massachusetts Institute of Technology",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4101:delta:0",
+    "guid": "ps_events:4101:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-30T16:05:00Z",
+    "endsAt": "2026-09-30T17:05:00Z",
+    "startTime": "2026-09-30T12:05:00",
+    "endTime": "2026-09-30T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Amrit Venkatesh, University of Virginia",
+    "speakers": [
+      {
+        "name": "Amrit Venkatesh",
+        "affiliation": "University of Virginia"
+      }
+    ],
+    "speaker": "Amrit Venkatesh, University of Virginia",
+    "affiliation": "University of Virginia",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-amrit-venkatesh-university-virginia",
+    "content": "Atomic-Level Characterization of Materials using Advanced Solid-State NMRAbstract: Establishing atomic-level structure-property relationships is essential for understanding and designing functional materials. Solid-state NMR spectroscopy is uniquely suited to probe local structure and dynamics in complex materials, but its application is often constrained by inherently low sensitivity. The Venkatesh group develops and applies dynamic nuclear polarization (DNP) and fast magic-angle spinning (MAS) methods that dramatically enhance the sensitivity and",
+    "rawEventDetails": "Details Event Description Atomic-Level Characterization of Materials using Advanced Solid-State NMR Abstract : Establishing atomic-level structure-property relationships is essential for understanding and designing functional materials. Solid-state NMR spectroscopy is uniquely suited to probe local structure and dynamics in complex materials, but its application is often constrained by inherently low sensitivity. The Venkatesh group develops and applies dynamic nuclear polarization (DNP) and fast magic-angle spinning (MAS) methods that dramatically enhance the sensitivity and resolution of solid-state NMR experiments. These advances enable high-resolution studies of nuclei across the Periodic Table and facilitate multidimensional investigations of heterogeneous materials, including surfaces, interfaces, and nanostructured systems. In this seminar, we will highlight recent efforts to characterize complex materials relevant to catalysis and energy, demonstrating how advanced solid-state NMR methodologies provide atomic-level insights that are inaccessible by conventional approaches. Bio : Dr. Amrit Venkatesh is an Assistant Professor of Chemistry at the University of Virginia (UVA), where he leads a research program focused on developing dynamic nuclear polarization (DNP) enhanced and advanced solid-state NMR methods for characterizing complex materials. He received his Ph.D. in Chemistry from Iowa State University, earning the Zaffarano Award in 2021 for outstanding doctoral research. He subsequently held a Marie Sk\u0142odowska-Curie Postdoctoral Fellowship at the \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne (EPFL), Switzerland, and later served as Research Faculty at the National High Magnetic Field Laboratory at Florida State University. At UVA, his research combines methodological innovation in magnetic resonance with applications to heterogeneous materials, surfaces, catalysts, and energy-relevant systems, with the goal of establishing atomic-level structure-property relationships that guide materials design.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Amrit Venkatesh, University of Virginia",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5296:delta:0",
+    "guid": "ps_events:5296:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-30T20:00:00Z",
+    "endsAt": "2026-09-30T21:00:00Z",
+    "startTime": "2026-09-30T16:00:00",
+    "endTime": "2026-09-30T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Flow, Structure, and Motion Correlation in Nearly-jammed Suspensions",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/flow-structure-and-motion-correlation-nearly-jammed-suspensions",
+    "content": "Some general introductory ideas about suspensions of particles in liquids as well as a set of new findings will be developed in this talk. Suspensions are found in many forms and settings, and the compositions and properties can vary widely. However, certain issues prevail: one is the influence of the liquid through hydrodynamic interactions, and a second is the importance of the solid fraction and interparticle forces in controlling the flow properties, which we usually call the rheology of the material. Suspensions include colloidal dispersions of nanoparticles as well as cases",
+    "rawEventDetails": "Speaker Jeffrey Morris Affiliation The City College of New York Details Event Description Some general introductory ideas about suspensions of particles in liquids as well as a set of new findings will be developed in this talk. Suspensions are found in many forms and settings, and the compositions and properties can vary widely. However, certain issues prevail: one is the influence of the liquid through hydrodynamic interactions, and a second is the importance of the solid fraction and interparticle forces in controlling the flow properties, which we usually call the rheology of the material. Suspensions include colloidal dispersions of nanoparticles as well as cases involving somewhat larger particles such as cement, ceramics, and mud. The last three are all examples of dense suspensions, with solid fraction approaching the limit of flowability known as jamming. Because the rheology most often depends on the magnitude of the applied forces (e.g. pressure gradient in a pipe flow), suspensions are complex fluids \u2013 or they may be unyielded soft solids that can be caused to flow by enough force, as seen in the examples of cement mortars or muds. Here, we will present results based on simulations of suspensions approaching jamming to illustrate the unique features of these materials. These include discontinuous shear thickening (DST) as well as shear-induced jamming. The role of interparticle forces, including conservative and frictional contact forces, and the imposed stress in this process will be briefly reviewed, followed by our current examination of structures that are found to be related to the abrupt flow transitions. On approach to jamming, these structures develop as a result of the progressive reduction of the particle degrees of freedom in their motion as networks of contacts are formed. These networks rapidly break and reform during flow, but give rise to strongly correlated near-rigid motions of identifiable domains or \u201ctransient clusters.\u201d The resulting fluctuations in motion become dominant as jamming is approached. In the DST regime, the contact number is found to fluctuate very strongly, but can result in highly connected but once again transient structures; system-spanning, or percolating, structures of frictionally-contacting particles are found to have important influence on the observed rheology.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Flow, Structure, and Motion Correlation in Nearly-jammed Suspensions",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2411:delta:0",
+    "guid": "ps_events:2411:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T16:15:00Z",
+    "endsAt": "2026-10-02T17:15:00Z",
+    "startTime": "2026-10-02T12:15:00",
+    "endTime": "2026-10-02T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Civil and Environmental Engineering,Special Seminar",
+    "tags": [
+      "civil-environmental",
+      "seminar"
+    ],
+    "rawCategories": [
+      "Civil and Environmental Engineering",
+      "Special Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Maeder Hall Auditorium",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://cee.princeton.edu/events/peculiarities-heat-driven-and-light-driven-evaporation",
+    "content": "Joint CEE/MAE Distinguished SeminarAbstract:This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular",
+    "rawEventDetails": "Details Event Description Joint CEE/MAE Distinguished Seminar Abstract: This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular evaporation process may exist widely in nature. Our studies on photomolecular evaporation also led us to investigate peculiarities in thermal evaporation. At an evaporating interface, a temperature discontinuity exists between the liquid and the vapor sides, which was predicted by theories and observed in some experiments. However, the existing theories cannot explain experiments. We develop a new interfacial condition that can be used to couple transport on both sides of the interface, leading to agreements between theory and experiments. Our modeling reveals the existence of a new refrigeration effect: the vapor temperature can drop below that of the liquid film and in fact, lower than even the condensing surface temperature. This effect has yet to be confirmed experimentally and may find applications in air-conditioning and refrigeration. Biography: Gang Chen is the Carl Richard Soderberg Professor of Power Engineering at Massachusetts Institute of Technology (MIT). He served as the Department Head of the Department of Mechanical Engineering at MIT from 2013 to 2018. He obtained his PhD degree from the Mechanical Engineering Department at UC Berkeley under the supervision of then UC Berkeley Chancellor Chang-Lin Tien. He was a faculty member at Duke University and UCLA, before joining MIT in 2001. He received an NSF Young Investigator Award, an R&D 100 award, an ASME Heat Transfer Memorial Award, an ASME Frank Kreith Award in Energy, a Nukiyama Memorial Award by the Japan Heat Transfer Society, a World Technology Network Award in Energy, an Eringen medal from the Society of Engineering Science, the Capers and Marion McDonald Award for Excellences in Mentoring and Advising from MIT, a Steven Chu medal from the Asian American Academy of Science and Engineering, and an American Courage Award from Asian American Advancing Justice. He serves on the board of the Asian American Scholar Forum. He is a fellow of the American Association for the Advancement of Science, the American Physical Society, The American Society of Mechanical Engineers, and the Guggenheim Foundation. He is a foreign member of the Chinese Academy of Sciences, an academician of Academy Sinica, a fellow of the American Academy of Arts and Sciences, and a member of the US National Academy of Engineering and a member of the US National Academy of Science.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "locationRaw": "Maeder Hall Auditorium",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4846:delta:0",
+    "guid": "ps_events:4846:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T16:15:00Z",
+    "endsAt": "2026-10-02T17:15:00Z",
+    "startTime": "2026-10-02T12:15:00",
+    "endTime": "2026-10-02T13:15:00",
+    "timezone": "America/New_York",
+    "title": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "speakers": [
+      {
+        "name": "Dr. Gang Chen",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Dr. Gang Chen, MIT",
+    "affiliation": "MIT",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/peculiarities-heat-driven-and-light-driven-evaporation",
+    "content": "Joint CEE/MAE Distinguished SeminarAbstract:This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular",
+    "rawEventDetails": "Details Event Description Joint CEE/MAE Distinguished Seminar Abstract: This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular evaporation process may exist widely in nature. Our studies on photomolecular evaporation also led us to investigate peculiarities in thermal evaporation. At an evaporating interface, a temperature discontinuity exists between the liquid and the vapor sides, which was predicted by theories and observed in some experiments. However, the existing theories cannot explain experiments. We develop a new interfacial condition that can be used to couple transport on both sides of the interface, leading to agreements between theory and experiments. Our modeling reveals the existence of a new refrigeration effect: the vapor temperature can drop below that of the liquid film and in fact, lower than even the condensing surface temperature. This effect has yet to be confirmed experimentally and may find applications in air-conditioning and refrigeration. Biography: Gang Chen is the Carl Richard Soderberg Professor of Power Engineering at Massachusetts Institute of Technology (MIT). He served as the Department Head of the Department of Mechanical Engineering at MIT from 2013 to 2018. He obtained his PhD degree from the Mechanical Engineering Department at UC Berkeley under the supervision of then UC Berkeley Chancellor Chang-Lin Tien. He was a faculty member at Duke University and UCLA, before joining MIT in 2001. He received an NSF Young Investigator Award, an R&D 100 award, an ASME Heat Transfer Memorial Award, an ASME Frank Kreith Award in Energy, a Nukiyama Memorial Award by the Japan Heat Transfer Society, a World Technology Network Award in Energy, an Eringen medal from the Society of Engineering Science, the Capers and Marion McDonald Award for Excellences in Mentoring and Advising from MIT, a Steven Chu medal from the Asian American Academy of Science and Engineering, and an American Courage Award from Asian American Advancing Justice. He serves on the board of the Asian American Scholar Forum. He is a fellow of the American Association for the Advancement of Science, the American Physical Society, The American Society of Mechanical Engineers, and the Guggenheim Foundation. He is a foreign member of the Chinese Academy of Sciences, an academician of Academy Sinica, a fellow of the American Academy of Arts and Sciences, and a member of the US National Academy of Engineering and a member of the US National Academy of Science. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
+    "locationRaw": "TBD",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3776:delta:0",
+    "guid": "ps_events:3776:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-05T16:10:00Z",
+    "endsAt": "2026-10-05T17:10:00Z",
+    "startTime": "2026-10-05T12:10:00",
+    "endTime": "2026-10-05T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Rahul Nandkishore, University of Colorado, Boulder",
+    "speakers": [
+      {
+        "name": "Rahul Nandkishore",
+        "affiliation": "University of Colorado, Boulder"
+      }
+    ],
+    "speaker": "Rahul Nandkishore, University of Colorado, Boulder",
+    "affiliation": "University of Colorado, Boulder",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-rahul-nandkishore-university-colorado-boulder",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Rahul Nandkishore (University of Colorado, Boulder)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2766:delta:0",
+    "guid": "ps_events:2766:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-05T20:00:00Z",
+    "endsAt": "2026-10-05T21:00:00Z",
+    "startTime": "2026-10-05T16:00:00",
+    "endTime": "2026-10-05T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Refocusing Mammalian Synbio to Speak the Same Language as Biology",
+    "speakers": [
+      {
+        "name": "Ron Weiss",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Ron Weiss",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/refocusing-mammalian-synbio-speak-same-language-biology",
+    "content": "Refreshments will be available 15 minutes prior to the start of the seminar.",
+    "rawEventDetails": "Speaker Ron Weiss Affiliation Massachusetts Institute of Technology Details Event Description Refreshments will be available 15 minutes prior to the start of the seminar.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Refocusing Mammalian Synbio to Speak the Same Language as Biology",
+    "locationRaw": "TBD",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4096:delta:0",
+    "guid": "ps_events:4096:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-07T16:05:00Z",
+    "endsAt": "2026-10-07T17:05:00Z",
+    "startTime": "2026-10-07T12:05:00",
+    "endTime": "2026-10-07T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Yuriy Roman, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Yuriy Roman",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Yuriy Roman, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-yuriy-roman-massachusetts-institute-technology",
+    "content": "Reimagining Thermochemical Catalysis: Promoting Reactions with Electric FieldsAbstract: Catalysis has long relied on conventional handles such as temperature, pressure, and concentration to accelerate chemical reactions. Across biology and electrochemistry, electric fields provide an additional parameter to control rates. Enzymes exploit strong, oriented fields within their active sites to stabilize intermediates and accelerate turnover, while in electrochemistry, interfacial polarization dictates electron and proton transfer rates. In heterogeneous",
+    "rawEventDetails": "Details Event Description Reimagining Thermochemical Catalysis: Promoting Reactions with Electric Fields Abstract : Catalysis has long relied on conventional handles such as temperature, pressure, and concentration to accelerate chemical reactions. Across biology and electrochemistry, electric fields provide an additional parameter to control rates. Enzymes exploit strong, oriented fields within their active sites to stabilize intermediates and accelerate turnover, while in electrochemistry, interfacial polarization dictates electron and proton transfer rates. In heterogeneous thermochemical catalysis, however, little is known about these effects, yet they may offer new opportunities to control reactivity. In this talk, I will describe our group\u2019s efforts to harness electric fields to promote thermochemical reactions. For many electrochemical half-reactions, varying the applied potential accelerates rates by driving rate-controlling proton-coupled electron transfer (PCET) steps. We hypothesized that if an elementary PCET step were embedded within a thermochemical reaction, its strong potential dependence could be leveraged to enhance the overall rate. Because interfacial PCET involves proton exchange across the electric double layer, we anticipated that Br\u00f8nsted acid catalysis, governed by proton transfer, would be particularly susceptible to polarization. First, I will show how spontaneous interfacial fields at conductive particles dispersed in liquid media can measurably modulate turnover rates. Next, I will discuss how applied potentials produce reversible, exponential rate promotion in acid-catalyzed alcohol dehydration, accelerating rates by up to five orders of magnitude while the overall catalytic cycle remains non-Faradaic. Our kinetic analyses reveal that this acceleration arises from a field-driven increase in the population of reactive intermediates prior to the rate-determining step, providing a mechanistic basis for log-linear rate scaling with potential. I will then examine how electrolyte concentration and solvent properties set the interfacial potential profile and the fraction of the potential drop sampled by proton transfer, which separates electrostatic promotion from conventional solvent effects. In highly polar solvents, even trace ionic species can place nominally electrolyte-free reactions in a strongly suppressed regime through the catalyst's native open-circuit potential. Finally, I will highlight our development of polarized slurry reactors, which extend these principles from 2D electrodes to 3D catalyst slurries and enable rate enhancements under conditions more suitable for scale-up. These results establish interfacial electric fields and catalyst potential as design variables for controlling thermochemical reactivity and developing scalable catalytic processes. Bio : Yuriy Rom\u00e1n-Leshkov is the Robert T. Haslam Professor of Chemical Engineering at MIT, where he joined the faculty in 2010 and holds a joint appointment in the Department of Chemistry. His research group works at the intersection of heterogeneous catalysis, materials science, and sustainable chemical processes. His research group designs heterogeneous catalysts and functional materials to tackle sustainability challenges in energy and chemicals. His group pioneered the use of electric fields to promote thermochemical reactions, developed catalytic routes to convert lignin into drop-in sustainable aviation fuel components, established the analytical and reactor engineering foundations for the chemical recycling of polyolefins, and created data-driven tools to predict zeolite synthesis. Several of these technologies are on a path to commercialization. Together, these efforts build the foundation for a circular, low-carbon chemical industry. From 2023 to 2025 he served as Chief Scientist of Solugen, where he led catalyst development for the production of bio-based chemicals at the ton scale. A native of Mexico City, he earned his B.S. at the University of Pennsylvania and his Ph.D. at the University of Wisconsin-Madison under the supervision of Prof. Jim Dumesic, followed by postdoctoral research at Caltech under the guidance of Prof. Mark Davis. He has authored more than 200 peer-reviewed articles and holds 28 patents. His work has been recognized with the Paul H. Emmett Award in Fundamental Catalysis, the International Catalysis Award from the International Association of Catalysis Societies, the NSF CAREER Award, the ACS Early Career in Catalysis Award, the AIChE Catalysis and Reaction Engineering Division Young Investigator Award, among other honors.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Yuriy Roman, Massachusetts Institute of Technology",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5301:delta:0",
+    "guid": "ps_events:5301:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-07T20:00:00Z",
+    "endsAt": "2026-10-07T21:00:00Z",
+    "startTime": "2026-10-07T16:00:00",
+    "endTime": "2026-10-07T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Selective Ion Transport in Hydration-limited Sub-nm Pores of Polymer Membranes",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/selective-ion-transport-hydration-limited-sub-nm-pores-polymer-membranes",
+    "content": "Ion transport under nanoscale confinement and in the presence of charge is poorly understood from a fundamental perspective. Under the conditions of dielectric saturation that arise in nanoscale pores, the classical ideas that guide our understanding of electrostatic interactions break down, and new principles that account for the role of pore geometry and chemistry on water structure and ion interactions are needed. At the same time, our ability to develop such principles is hindered by the challenge of generating relevant well-defined geometries that enable experimental studies over",
+    "rawEventDetails": "Speaker Chinedum Osuji Affiliation University of Pennsylvania Details Event Description Ion transport under nanoscale confinement and in the presence of charge is poorly understood from a fundamental perspective. Under the conditions of dielectric saturation that arise in nanoscale pores, the classical ideas that guide our understanding of electrostatic interactions break down, and new principles that account for the role of pore geometry and chemistry on water structure and ion interactions are needed. At the same time, our ability to develop such principles is hindered by the challenge of generating relevant well-defined geometries that enable experimental studies over statistically meaningful volumes such that experimental data can be more confidently considered alongside data from computational efforts. Beyond the fundamental implications, new understanding is needed to drive the rational design of materials for ion separations in critical minerals production and resource recovery, among other examples, where the need to distinguish between ions of the same valency and charge imposes a severe challenge. Here, we examine transport of ions in polymer membranes with well-defined sub-1 nm pores. The membranes are charged, modestly hydrated nanoporous polymers produced by crosslinking self-assembled lyotropic mesophases with direct hexagonal and gyroid nanostructures. This work addresses the roles of hydration, pore geometry and ion identity on transport using a combination of electrochemical and NMR measurements, and molecular simulation. Our results highlight the roles of hydration, solubility, pore size, and ion-pore wall interactions in dictating transport in the pores. They provide new insight regarding transport under nanoscale confinement in the presence of charge and that we suggest could be relevant for the development of materials for challenging ion separations.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Selective Ion Transport in Hydration-limited Sub-nm Pores of Polymer Membranes",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4751:delta:0",
+    "guid": "ps_events:4751:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T19:00:00Z",
+    "endsAt": "2026-10-09T20:00:00Z",
+    "startTime": "2026-10-09T15:00:00",
+    "endTime": "2026-10-09T16:00:00",
+    "timezone": "America/New_York",
+    "title": "The Mechanics of Asteroid Exploration: Recent Missions and Future Plans",
+    "speakers": [
+      {
+        "name": "Dr. Daniel Scheeres",
+        "affiliation": "University of Colorado"
+      }
+    ],
+    "speaker": "Dr. Daniel Scheeres, University of Colorado",
+    "affiliation": "University of Colorado",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/mechanics-asteroid-exploration-recent-missions-and-future-plans",
+    "content": "Abstract:The exploration of primitive bodies in the solar system, such as asteroids and comets, is driven by scientific questions about the early solar system, long-term goals of utilizing primitive body resources in space, and the protection of the planet from hazardous impacts. Motivated by these concerns, there have been many missions to these small bodies over the last few decades, with each one uncovering new details about these bodies that further motivate their exploration, while identifying new technologies that are needed to continue our progress. Despite past success, there",
+    "rawEventDetails": "Details Event Description Abstract: The exploration of primitive bodies in the solar system, such as asteroids and comets, is driven by scientific questions about the early solar system, long-term goals of utilizing primitive body resources in space, and the protection of the planet from hazardous impacts. Motivated by these concerns, there have been many missions to these small bodies over the last few decades, with each one uncovering new details about these bodies that further motivate their exploration, while identifying new technologies that are needed to continue our progress. Despite past success, there still remain significant challenges across a range of scientific and technical issues associated with small body exploration. Several recent missions have opened up new possibilities for their exploration, and some current and planned missions will continue our progress in the exploration and characterization of these bodies. These missions, both from NASA and from international agencies, are pushing boundaries by exploring new classes of asteroids and improving our ability to interact with them. This talk will introduce the motivations for exploring these primitive bodies, discuss recent progress made by a range of missions, and outline their future exploration, identifying what new questions can and are being pursued. Bio: Daniel J. Scheeres is a University of Colorado Distinguished Professor and holds the A. Richard Seebass Endowed Chair in the Smead Department of Aerospace Engineering Sciences. Before this, he held faculty positions at the University of Michigan and Iowa State, and was a senior member of the technical staff at NASA\u2019s Jet Propulsion Laboratory. Scheeres is a member of the National Academy of Engineering and the International Academy of Astronautics, an Honorary Fellow of the American Institute of Aeronautics and Astronautics, and a Fellow of the American Astronautical Society. Asteroid 8887 is named \u201cScheeres\u201d to recognize his contributions to the scientific understanding of the dynamical environment about asteroids. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "The Mechanics of Asteroid Exploration: Recent Missions and Future Plans",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3811:delta:0",
+    "guid": "ps_events:3811:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-12T16:10:00Z",
+    "endsAt": "2026-10-12T17:10:00Z",
+    "startTime": "2026-10-12T12:10:00",
+    "endTime": "2026-10-12T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Aleksander Kubica, Yale University",
+    "speakers": [
+      {
+        "name": "Aleksander Kubica",
+        "affiliation": "Yale University"
+      }
+    ],
+    "speaker": "Aleksander Kubica, Yale University",
+    "affiliation": "Yale University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-aleksander-kubica-yale-university",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Aleksander Kubica (Yale University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12761:delta:0",
+    "guid": "ps_events:12761:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-12T16:15:00Z",
+    "endsAt": "2026-10-12T17:15:00Z",
+    "startTime": "2026-10-12T12:15:00",
+    "endTime": "2026-10-12T13:15:00",
+    "timezone": "America/New_York",
+    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Debarghya Mukherjee, Boston University",
+    "speakers": [
+      {
+        "name": "Debarghya Mukherjee",
+        "affiliation": "Boston University"
+      }
+    ],
+    "speaker": "Debarghya Mukherjee, Boston University",
+    "affiliation": "Boston University",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Memorial Seminar in Statistics"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/debarghya-mukherjee-boston-university",
+    "content": "",
+    "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Debarghya Mukherjee, Boston University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4106:delta:0",
+    "guid": "ps_events:4106:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-14T16:05:00Z",
+    "endsAt": "2026-10-14T17:05:00Z",
+    "startTime": "2026-10-14T12:05:00",
+    "endTime": "2026-10-14T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Alan West, Columbia University",
+    "speakers": [
+      {
+        "name": "Alan West",
+        "affiliation": "Columbia University"
+      }
+    ],
+    "speaker": "Alan West, Columbia University",
+    "affiliation": "Columbia University",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-alan-west-columbia-university",
+    "content": "Critical Materials Processing via Closed-Loop Redox-Mediated LeachingAbstract: Electrification can transform the way chemical reagents are produced, regenerated, and integrated into industrial processes. In hydrometallurgy, electrochemical regeneration of redox carriers enables closed-loop redox-mediated leaching (CL-RML), changing the relationship between reagent selection, process performance, and sustainability. Rather than treating oxidants or reductants as consumable reagents, CL-RML allows redox carriers to be selected primarily for their",
+    "rawEventDetails": "Details Event Description Critical Materials Processing via Closed-Loop Redox-Mediated Leaching Abstract: Electrification can transform the way chemical reagents are produced, regenerated, and integrated into industrial processes. In hydrometallurgy, electrochemical regeneration of redox carriers enables closed-loop redox-mediated leaching (CL-RML), changing the relationship between reagent selection, process performance, and sustainability. Rather than treating oxidants or reductants as consumable reagents, CL-RML allows redox carriers to be selected primarily for their extraction performance and selectivity. This seminar will discuss a framework of closed-loop redox chemistry and discuss how it expands the design space for critical-materials extraction. Recent studies of nickel and copper extraction from sulfide minerals will be presented to illustrate how electrochemically regenerated redox carriers enable new opportunities to control mineral transformations, improve selectivity, and rethink process architecture. These examples demonstrate how regeneration influences not only leaching chemistry, but also upstream and downstream processes. By leveraging scalable industrial electrochemical technologies, closed-loop redox chemistry offers a pathway toward more modular, flexible extraction processes capable of treating increasingly complex mineral resources. Together, these concepts suggest that the greatest opportunity of CL-RML may be to expand the chemical and process design space available for future critical-minerals supply chains while simultaneously improving sustainability. Bio: Alan West is the Samuel Ruben\u2013Peter G. Viele Professor of Electrochemistry at Columbia University, with appointments in the Department of Chemical Engineering, the Department of Earth and Environmental Engineering, and the Columbia Climate School. He is also Co-Director of the Columbia Electrochemical Energy Center, which has grown to 14 core faculty from five departments. Professor West received his B.S. in Chemical Engineering from Case Western Reserve University and his Ph.D. in Chemical Engineering from the University of California, Berkeley. His research integrates electrochemistry, reaction engineering, and hydrometallurgy to develop sustainable technologies for critical materials production, resource recovery, batteries, electrochemical synthesis, and electrodeposition. His recent work focuses on electrochemically regenerated redox carriers and closed-loop redox-mediated leaching for the selective extraction of critical metals from sulfide minerals and other complex resources.Professor West previously served as Chair of Columbia's Department of Chemical Engineering for eight years, during a period of significant growth and expansion. He is a Fellow of The Electrochemical Society.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Alan West, Columbia University",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5306:delta:0",
+    "guid": "ps_events:5306:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-14T20:00:00Z",
+    "endsAt": "2026-10-14T21:00:00Z",
+    "startTime": "2026-10-14T16:00:00",
+    "endTime": "2026-10-14T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Material Chemistry Approaches to the Design of Electrocatalyst for Sustainability",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/material-chemistry-approaches-design-electrocatalyst-sustainability",
+    "content": "Meeting the growing demand for energy requires the development of innovative energy conversion and storage processes beyond conventional thermal technologies and electrocatalysis plays a central role in this transition. While electrocatalysis shares a number of common design principles with thermal catalysis, they also differ greatly. Besides reactivity and selectivity, durability and stability under electrochemical reaction conditions are required for an electrocatalyst. In addition, electrochemical processes often occur at liquid-solid interface under potential, posting new challenges in",
+    "rawEventDetails": "Speaker Hong Yang Affiliation University of Illinois Urbana-Champaign Details Event Description Meeting the growing demand for energy requires the development of innovative energy conversion and storage processes beyond conventional thermal technologies and electrocatalysis plays a central role in this transition. While electrocatalysis shares a number of common design principles with thermal catalysis, they also differ greatly. Besides reactivity and selectivity, durability and stability under electrochemical reaction conditions are required for an electrocatalyst. In addition, electrochemical processes often occur at liquid-solid interface under potential, posting new challenges in design. In this presentation, I will discuss our research effort, aiming at uncovering structural design for electrocatalysts. Specifically, I will present the studies on structural and interfacial control of metal oxide and alloy electrocatalysts for oxygen evolution reaction (OER) which occurs in a range of chemical processes, such as hydrogen production from water splitting. Our finding suggests defect engineering is often central in the design of high-performance electrocatalysts for site and crystalline phase tunable complex oxides (i.e., rutile, pyrochlore, and perovskite) and for strained alloys. Flexibility in lattice of complex oxides (A x B y O z ) and tunability of surface strain of alloys often provide the controls of surface and lattice structures that affect the electrocatalytic reaction pathways and performance. Notably, unlike thermal catalysts, proper design of structural defects could simultaneously enhance both activity and stability of electrocatalysts. Valence band analysis, in situ Raman spectroscopy, X-ray photoelectron spectroscopy, molecular probe and isotope kinetic studies, together with electrochemical characterizations, have been used to identify reactive intermediates and to understand reaction mechanisms.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Material Chemistry Approaches to the Design of Electrocatalyst for Sustainability",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3741:delta:0",
+    "guid": "ps_events:3741:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-22T12:30:00Z",
+    "endsAt": "2026-10-23T19:00:00Z",
+    "startTime": "2026-10-22T08:30:00",
+    "endTime": "2026-10-23T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Quantum Technology Conference 2026",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Other Seminars,Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium",
+      "seminar"
+    ],
+    "rawCategories": [
+      "Other Seminars",
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton University Commons",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/pqtc2026",
+    "content": "The Princeton Quantum Technology Conference (PQTC) aims to bring together visionary speakers from disparate fields that are pushing the frontiers of quantum technology by seriously tackling challenges in quantum hardware and materials, system architecture and scaling, and error correction. The event structure will be designed to allow ample time for discussion and interaction, with the hope of catalyzing new ideas and collaborations.This event is supported by the Princeton Quantum Initiative.Event details",
+    "rawEventDetails": "Details Event Description The Princeton Quantum Technology Conference (PQTC) aims to bring together visionary speakers from disparate fields that are pushing the frontiers of quantum technology by seriously tackling challenges in quantum hardware and materials, system architecture and scaling, and error correction. The event structure will be designed to allow ample time for discussion and interaction, with the hope of catalyzing new ideas and collaborations. This event is supported by the Princeton Quantum Initiative. Event details When: October 22-23, 2026 Location: The Commons , Princeton University Contacts: Ana Ferrari ( [email protected] ) Katie Gallagher ( [email protected] ) Sarang Gopalakrishnan ( [email protected] ) Registration Registration is now closed. We have reached our in-person capacity and are no longer accepting registrations for onsite attendance. We will soon offer the opportunity to request virtual attendance via livestream. Please check back shortly for more information and the virtual registration request form. Invited Speakers Trond Anderson (Google), Ryan Babbush (Google), Anthony Chen (Oratomic), Jake Covey (Chicago), Henrik Dreyer (Quantinuum), Stephen Jordan (Google Quantum AI), Lin Lin (Caltech and UC Berkeley), Shayan Majidy (Harvard), Greg Meyer (MIT), Adam Paetznick (Microsoft), Natalie Parham (Columbia), Ewin Tang (Princeton), Hong Tang (Yale), Vladan Vuletic (MIT), Nathan Wiebe (U Toronto), Henry Yuen (Columbia), Bichen Zhang (Yale) Agenda Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Technology Conference 2026",
+    "locationRaw": "Princeton University Commons",
+    "mappingRules": [
+      "quantum:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3781:delta:0",
+    "guid": "ps_events:3781:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-26T16:10:00Z",
+    "endsAt": "2026-10-26T17:10:00Z",
+    "startTime": "2026-10-26T12:10:00",
+    "endTime": "2026-10-26T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Aram Harrow, MIT",
+    "speakers": [
+      {
+        "name": "Aram Harrow",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Aram Harrow, MIT",
+    "affiliation": "MIT",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-aram-harrow-mit",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Aram Harrow (MIT)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12716:delta:0",
+    "guid": "ps_events:12716:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-27T20:30:00Z",
+    "endsAt": "2026-10-27T21:30:00Z",
+    "startTime": "2026-10-27T16:30:00",
+    "endTime": "2026-10-27T17:30:00",
+    "timezone": "America/New_York",
+    "title": "An ORFE Department Colloquia Talk by Tim Roughgarden, Columbia University",
+    "speakers": [
+      {
+        "name": "Tim Roughgarden",
+        "affiliation": "Columbia University"
+      }
+    ],
+    "speaker": "Tim Roughgarden, Columbia University",
+    "affiliation": "Columbia University",
+    "series": "ORFE Department Colloquia",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "ORFE Department Colloquia"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/tim-roughgarden-columbia-university",
+    "content": "",
+    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Tim Roughgarden, Columbia University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4166:delta:0",
+    "guid": "ps_events:4166:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-28T16:05:00Z",
+    "endsAt": "2026-10-28T17:05:00Z",
+    "startTime": "2026-10-28T12:05:00",
+    "endTime": "2026-10-28T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by Joseph Fedeyko, Johnson Matthey",
+    "speakers": [
+      {
+        "name": "Joseph Fedeyko",
+        "affiliation": "Johnson Matthey"
+      }
+    ],
+    "speaker": "Joseph Fedeyko, Johnson Matthey",
+    "affiliation": "Johnson Matthey",
+    "series": "",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-joseph-fedeyko-johnson-matthey",
+    "content": "Creating Abundance through CatalysisAbstract: Humanity is at a crossroads trying to drive future advancements in science and quality of life with significant challenges related to global climate change, economic insecurity, and natural resource constraints. The evolution of the energy landscape is one challenge that must be addressed to ensure that we continue to thrive. The centralized model to power generation is starting to fray; and whether that\u2019s related to supporting the rising need for data storage, electrification for mobility or the",
+    "rawEventDetails": "Details Event Description Creating Abundance through Catalysis Abstract : Humanity is at a crossroads trying to drive future advancements in science and quality of life with significant challenges related to global climate change, economic insecurity, and natural resource constraints. The evolution of the energy landscape is one challenge that must be addressed to ensure that we continue to thrive. The centralized model to power generation is starting to fray; and whether that\u2019s related to supporting the rising need for data storage, electrification for mobility or the technologies needed to combat climate change, a decentralized model needs to grow to replace it. This model creates new challenges with regards to emissions and efficiency, but potentially creates opportunities for new technologies and new fuels often driven by catalysis. Johnson Matthey\u2019s Clean Air Solutions team has been supporting a diverse range of industries from data centers to coal mines through these challenges leveraging our core competencies of platinum group metal refining and emission control as well as our growing strengths in fuel cells, carbon capture and methane removal. Here we will discuss some of those challenges and how as scientists we identify markets, partners and potential products, creating opportunities for ourselves as well as the partners we support. We will discuss some of the pitfalls product designers can face and share our insights into where new developments can make a meaningful difference toward designing a bright future. Bio : Joseph Fedeyko is currently the Business Development Manager for Johnson Matthey\u2019s Clean Air Solutions Team. He holds a Ph. D. in Chemical Engineering from the University of Delaware. Since joining Johnson Matthey in 2006, he has been the driving force for innovative technologies across catalysis, material development, process development, and system design, resulting in 50 granted patent families and significant product launches. In addition, he has dedicated his time to serving in several leadership roles in both the Catalysis Club of Philadelphia and the North-East Corridor Zeolite Association. His current role coordinates product development, engineering, sales and business development for existing stationary emission markets and the development of new market opportunities to support decarbonization and the energy transition.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Joseph Fedeyko, Johnson Matthey",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5311:delta:0",
+    "guid": "ps_events:5311:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-28T20:00:00Z",
+    "endsAt": "2026-10-28T21:00:00Z",
+    "startTime": "2026-10-28T16:00:00",
+    "endTime": "2026-10-28T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Understanding, Simulating, and Designing Catalysts with Machine Learning",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/understanding-simulating-and-designing-catalysts-machine-learning",
+    "content": "Machine learning is transforming catalysis by enabling researchers not only to predict catalyst behavior but also to extract scientific understanding, model catalytic materials across previously inaccessible time and length scales, and increasingly accelerate scientific discovery. In this talk, I will present recent advances spanning interpretable machine learning for uncovering the physical origins of chemisorption, machine-learning-driven simulations of catalyst dynamics and the design of catalytic materials, and AI agents for accelerating reaction mechanism discovery. By integrating",
+    "rawEventDetails": "Speaker Bryan Goldsmith Affiliation University of Michigan Details Event Description Machine learning is transforming catalysis by enabling researchers not only to predict catalyst behavior but also to extract scientific understanding, model catalytic materials across previously inaccessible time and length scales, and increasingly accelerate scientific discovery. In this talk, I will present recent advances spanning interpretable machine learning for uncovering the physical origins of chemisorption, machine-learning-driven simulations of catalyst dynamics and the design of catalytic materials, and AI agents for accelerating reaction mechanism discovery. By integrating machine learning with electronic structure theory and atomistic simulations, these approaches reveal fundamental structure\u2013property relationships while accelerating catalyst development. Together, these studies illustrate how machine learning is evolving from a predictive tool into a framework for generating scientific insight and enabling the next generation of catalyst discovery.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Understanding, Simulating, and Designing Catalysts with Machine Learning",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3786:delta:0",
+    "guid": "ps_events:3786:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-02T17:10:00Z",
+    "endsAt": "2026-11-02T18:10:00Z",
+    "startTime": "2026-11-02T12:10:00",
+    "endTime": "2026-11-02T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Zohreh Davoudi, University of Maryland",
+    "speakers": [
+      {
+        "name": "Zohreh Davoudi",
+        "affiliation": "University of Maryland"
+      }
+    ],
+    "speaker": "Zohreh Davoudi, University of Maryland",
+    "affiliation": "University of Maryland",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-zohreh-davoudi-university-maryland",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Zohreh Davoudi (University of Maryland)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12766:delta:0",
+    "guid": "ps_events:12766:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-02T17:15:00Z",
+    "endsAt": "2026-11-02T18:15:00Z",
+    "startTime": "2026-11-02T12:15:00",
+    "endTime": "2026-11-02T13:15:00",
+    "timezone": "America/New_York",
+    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Koulik Khamaru, Rutgers University",
+    "speakers": [
+      {
+        "name": "Koulik Khamaru",
+        "affiliation": "Rutgers University"
+      }
+    ],
+    "speaker": "Koulik Khamaru, Rutgers University",
+    "affiliation": "Rutgers University",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Memorial Seminar in Statistics"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/koulik-khamaru-rutgers-university",
+    "content": "",
+    "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Koulik Khamaru, Rutgers University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4116:delta:0",
+    "guid": "ps_events:4116:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-04T17:05:00Z",
+    "endsAt": "2026-11-04T18:05:00Z",
+    "startTime": "2026-11-04T12:05:00",
+    "endTime": "2026-11-04T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Dimitris Lagoudas, Texas A&M University",
+    "speakers": [
+      {
+        "name": "Dimitris Lagoudas",
+        "affiliation": "Texas A&M University"
+      }
+    ],
+    "speaker": "Dimitris Lagoudas, Texas A&M University",
+    "affiliation": "Texas A&M University",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-dimitris-lagoudas-texas-am-university",
+    "content": "Abstract and bio TBA",
+    "rawEventDetails": "Details Event Description Abstract and bio TBA",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Dimitris Lagoudas, Texas A&M University",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12721:delta:0",
+    "guid": "ps_events:12721:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-05T21:30:00Z",
+    "endsAt": "2026-11-05T22:30:00Z",
+    "startTime": "2026-11-05T16:30:00",
+    "endTime": "2026-11-05T17:30:00",
+    "timezone": "America/New_York",
+    "title": "An Optimization Seminar Talk by Andre Wibisono, Yale University",
+    "speakers": [
+      {
+        "name": "Andre Wibisono",
+        "affiliation": "Yale University"
+      }
+    ],
+    "speaker": "Andre Wibisono, Yale University",
+    "affiliation": "Yale University",
+    "series": "Optimization Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Optimization Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/andre-wibisono-yale-university",
+    "content": "",
+    "rawEventDetails": "Event Category Optimization Seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Andre Wibisono, Yale University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4756:delta:0",
+    "guid": "ps_events:4756:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-06T20:00:00Z",
+    "endsAt": "2026-11-06T21:00:00Z",
+    "startTime": "2026-11-06T15:00:00",
+    "endTime": "2026-11-06T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials",
+    "speakers": [
+      {
+        "name": "Dr. David Cahill",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      }
+    ],
+    "speaker": "Dr. David Cahill, University of Illinois Urbana-Champaign",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/current-understanding-and-unsolved-problems-thermal-conductivity-materials",
+    "content": "Abstract:Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and",
+    "rawEventDetails": "Details Event Description Abstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and high accuracy. Theory and computation are playing an increasingly importantrole in guiding and interpreting experiments. In this lecture, I will highlight recent discoveries of extremes of thermal conductivity of materials using examples from hard and soft matter (cubic boron arsenide, ultra-high molecular weight polyethylene, disordered layered 2D materials, functionalized fullerenes) and our work on expanding the upper and lower limits of the thermal conductivity ofcommon polymers (polyurethanes, epoxies, polyesters, and polyimides). Bio: Dr. David Cahill is the Grainger Distinguished Chair in Engineering, and Professor of Materials Science and Engineering at the University of Illinois Urbana-Champaign. He served as department head from 2010 to 2018. His research program advances physical insights on thermal transport at the nanoscale; extremes of low and high thermal conductivity in polymers; thermal metrology for microelectronics;the thermal science of electrochemical cells and battery materials; and materials for quantum computing. Cahill received the 2018 Innovation in Materials Characterization Award of the Materials Research Society, the 2015 Touloukian Award of the American Society of Mechanical Engineers, and the Klemens Award from the International Conference on Phonon Scattering in Condensed Matter. He is a fellow of the MRS, the American Physical Society, the AAAS, and is an elected member of the American Academy of Arts and Sciences. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3816:delta:0",
+    "guid": "ps_events:3816:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-09T17:10:00Z",
+    "endsAt": "2026-11-09T18:10:00Z",
+    "startTime": "2026-11-09T12:10:00",
+    "endTime": "2026-11-09T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Andrew Potter, Quantinuum",
+    "speakers": [
+      {
+        "name": "Andrew Potter",
+        "affiliation": "Quantinuum"
+      }
+    ],
+    "speaker": "Andrew Potter, Quantinuum",
+    "affiliation": "Quantinuum",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-andrew-potter-quantinuum",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Andrew Potter (Quantinuum)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12776:delta:0",
+    "guid": "ps_events:12776:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-09T17:15:00Z",
+    "endsAt": "2026-11-09T18:15:00Z",
+    "startTime": "2026-11-09T12:15:00",
+    "endTime": "2026-11-09T13:15:00",
+    "timezone": "America/New_York",
+    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Zhonghua Liu, Columbia University",
+    "speakers": [
+      {
+        "name": "Zhonghua Liu",
+        "affiliation": "Columbia University"
+      }
+    ],
+    "speaker": "Zhonghua Liu, Columbia University",
+    "affiliation": "Columbia University",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Memorial Seminar in Statistics"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/zhonghua-liu-columbia-university",
+    "content": "",
+    "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Zhonghua Liu, Columbia University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12781:delta:0",
+    "guid": "ps_events:12781:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-10T21:30:00Z",
+    "endsAt": "2026-11-10T22:30:00Z",
+    "startTime": "2026-11-10T16:30:00",
+    "endTime": "2026-11-10T17:30:00",
+    "timezone": "America/New_York",
+    "title": "An ORFE Department Colloquia Talk by Lydia Liu, Princeton University",
+    "speakers": [
+      {
+        "name": "Lydia Liu",
+        "affiliation": "Princeton University"
+      }
+    ],
+    "speaker": "Lydia Liu, Princeton University",
+    "affiliation": "Princeton University",
+    "series": "ORFE Department Colloquia",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "ORFE Department Colloquia"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/lydia-liu-princeton-university",
+    "content": "",
+    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Lydia Liu, Princeton University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4111:delta:0",
+    "guid": "ps_events:4111:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-11T17:05:00Z",
+    "endsAt": "2026-11-11T18:05:00Z",
+    "startTime": "2026-11-11T12:05:00",
+    "endTime": "2026-11-11T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Makhsud Saidaminov, University of Victoria",
+    "speakers": [
+      {
+        "name": "Makhsud Saidaminov",
+        "affiliation": "University of Victoria"
+      }
+    ],
+    "speaker": "Makhsud Saidaminov, University of Victoria",
+    "affiliation": "University of Victoria",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-makhsud-saidaminov-university-victoria",
+    "content": "Beyond Conventional Silicon: Perovskite Solar Cells and X-ray DetectorsAbstract: Silicon underpins modern electronics, yet its technological dominance and geographically concentrated supply chains present growing concerns. In this talk, I will introduce halide perovskites, a class of high-performance semiconductors that can be synthesized and processed at relatively simple conditions. I will describe our progress in scalable perovskite solar cells fabricated in ambient air using green solvents, followed by the automated growth of single crystals for",
+    "rawEventDetails": "Details Event Description Beyond Conventional Silicon: Perovskite Solar Cells and X-ray Detectors Abstract : Silicon underpins modern electronics, yet its technological dominance and geographically concentrated supply chains present growing concerns. In this talk, I will introduce halide perovskites, a class of high-performance semiconductors that can be synthesized and processed at relatively simple conditions. I will describe our progress in scalable perovskite solar cells fabricated in ambient air using green solvents, followed by the automated growth of single crystals for emerging X-ray photon-counting medical imaging. These examples will illustrate how solution chemistry and automation can enable new semiconductors beyond conventional silicon. Bio: Makhsud Saidaminov is a Canada Research Chair in Advanced Functional Materials and Associate Professor at the University of Victoria. His research focuses on solution-processed materials and their applications, guided by the vision that technologies should not be luxuries but broadly accessible. Raised in Tajikistan, he received his PhD from Lomonosov Moscow State University and held postdoctoral fellowships at KAUST and the University of Toronto. He has been recognized as a Highly Cited Researcher since 2021, received the Canadian Society for Chemistry\u2019s Keith Laidler Award, and serves as an Associate Editor of ACS Photonics. He is also a co-founder of AY Sensors, which develops perovskite X-ray photon-counting detectors for medical imaging.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Makhsud Saidaminov, University of Victoria",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4761:delta:0",
+    "guid": "ps_events:4761:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T20:00:00Z",
+    "endsAt": "2026-11-13T21:00:00Z",
+    "startTime": "2026-11-13T15:00:00",
+    "endTime": "2026-11-13T16:00:00",
+    "timezone": "America/New_York",
+    "title": "An MAE Departmental Seminars Talk by Dr. Maruthi Akella, UT Austin",
+    "speakers": [
+      {
+        "name": "Dr. Maruthi Akella, UT Austin",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Dr. Maruthi Akella, UT Austin",
+    "affiliation": "",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/tbd",
+    "content": "Abstract:TBDBio:Dr. Maruthi Akella is a professor in Aerospace Engineering and Engineering Mechanics at UT Austin where he holds the Cockrell Family Endowed Chair in Engineering. His research encompasses coordinated systems, learning, adaptation, and vision-based sensing. His research group contributed the onboard guidance algorithm for the Intuitive Machines IM-1 mission \u2013 the first U.S. moon landing in more than 50 years since the Apollo era. The major impacts of Dr. Akella\u2019s work have been recognized through the AIAA Mechanics and Control of Flight Award, the AAS",
+    "rawEventDetails": "Details Event Description Abstract: TBD Bio: Dr. Maruthi Akella is a professor in Aerospace Engineering and Engineering Mechanics at UT Austin where he holds the Cockrell Family Endowed Chair in Engineering. His research encompasses coordinated systems, learning, adaptation, and vision-based sensing. His research group contributed the onboard guidance algorithm for the Intuitive Machines IM-1 mission \u2013 the first U.S. moon landing in more than 50 years since the Apollo era. The major impacts of Dr. Akella\u2019s work have been recognized through the AIAA Mechanics and Control of Flight Award, the AAS Dirk Brouwer Award, the IEEE-CSS Award for Excellence in Aerospace Control, the Judith Resnik Space Award from the IEEE Aerospace and Electronic Systems Society, and the AIAA von K\u00e1rm\u00e1n Lecture Award in Astronautics. In October 2024, the International Astronomical Union designated asteroid number 5376 \u2013 a nearly 5-mile diameter-sized minor planet from the main asteroid belt as \u201cMaruthiakella\u201d honoring Dr. Akella\u2019s contributions to many successful applications in astrodynamics. Dr. Akella is Editor-in Chief for the Journal of the Astronautical Sciences, a Fellow of the AIAA, IEEE, and AAS, and holds the Academician rank with the International Academy of Astronautics. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "TBD",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3791:delta:0",
+    "guid": "ps_events:3791:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-16T17:10:00Z",
+    "endsAt": "2026-11-16T18:10:00Z",
+    "startTime": "2026-11-16T12:10:00",
+    "endTime": "2026-11-16T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by James Thompson, University of Colorado, Boulder",
+    "speakers": [
+      {
+        "name": "James Thompson",
+        "affiliation": "University of Colorado, Boulder"
+      }
+    ],
+    "speaker": "James Thompson, University of Colorado, Boulder",
+    "affiliation": "University of Colorado, Boulder",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-james-thompson-university-colorado-boulder",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, James Thompson (University of Colorado, Boulder)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4126:delta:0",
+    "guid": "ps_events:4126:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-18T17:05:00Z",
+    "endsAt": "2026-11-18T18:05:00Z",
+    "startTime": "2026-11-18T12:05:00",
+    "endTime": "2026-11-18T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Mahesh Mahanthappa, University of Minnesota",
+    "speakers": [
+      {
+        "name": "Mahesh Mahanthappa",
+        "affiliation": "University of Minnesota"
+      }
+    ],
+    "speaker": "Mahesh Mahanthappa, University of Minnesota",
+    "affiliation": "University of Minnesota",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-mahesh-mahanthappa-university-minnesota",
+    "content": "Abstract and bio TBA",
+    "rawEventDetails": "Details Event Description Abstract and bio TBA",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Mahesh Mahanthappa, University of Minnesota",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12786:delta:0",
+    "guid": "ps_events:12786:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T21:30:00Z",
+    "endsAt": "2026-11-19T22:30:00Z",
+    "startTime": "2026-11-19T16:30:00",
+    "endTime": "2026-11-19T17:30:00",
+    "timezone": "America/New_York",
+    "title": "An Optimization Seminar Talk by Sinho Chewi, Yale University",
+    "speakers": [
+      {
+        "name": "Sinho Chewi",
+        "affiliation": "Yale University"
+      }
+    ],
+    "speaker": "Sinho Chewi, Yale University",
+    "affiliation": "Yale University",
+    "series": "Optimization Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Optimization Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/sinho-chewi-yale-university",
+    "content": "",
+    "rawEventDetails": "Event Category Optimization Seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Sinho Chewi, Yale University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4801:delta:0",
+    "guid": "ps_events:4801:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-20T20:00:00Z",
+    "endsAt": "2026-11-20T21:00:00Z",
+    "startTime": "2026-11-20T15:00:00",
+    "endTime": "2026-11-20T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Nuclear Electric Propulsion: Progress, Challenges, and the Path to High-Power Space Systems",
+    "speakers": [
+      {
+        "name": "Dr. Kurt Polzin",
+        "affiliation": "NASA"
+      }
+    ],
+    "speaker": "Dr. Kurt Polzin, NASA",
+    "affiliation": "NASA",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/nuclear-electric-propulsion-progress-challenges-and-path-high-power-space-systems",
+    "content": "Abstract:Nuclear electric propulsion (NEP) offers the potential to fundamentally expand the capability and reach of spacecraft, but realizing that potential requires overcoming significant challenges in reactor technology, power conversion and distribution, thermal management, electric propulsion, and system integration. This seminar will examine the current state of NEP development, highlighting recent progress while exploring the demanding requirements associated with operating high-power systems continuously for years or even decades in the space environment.",
+    "rawEventDetails": "Details Event Description Abstract: Nuclear electric propulsion (NEP) offers the potential to fundamentally expand the capability and reach of spacecraft, but realizing that potential requires overcoming significant challenges in reactor technology, power conversion and distribution, thermal management, electric propulsion, and system integration. This seminar will examine the current state of NEP development, highlighting recent progress while exploring the demanding requirements associated with operating high-power systems continuously for years or even decades in the space environment. Particular attention will be given to high-power electric propulsion, lightweight high-temperature radiators, radiation-tolerant power electronics, and the testing and evaluation infrastructure needed to mature these technologies and demonstrate integrated systems. The discussion will also consider an evolutionary path toward increasingly capable NEP systems, beginning with lower-power long-duration missions and building toward higher-power systems for human exploration and deep-space science. Finally, the seminar will examine the technology investments and national test and evaluation capabilities needed to turn this vision into a sustained spaceflight capability. BIO : Dr. Kurt Polzin is a senior aerospace engineer and internationally recognized expert in advanced space propulsion. He is from the George C. Marshall Space Flight Center and currently serves as NASA\u2019s Capability Manager for Advanced Propulsion within the Space Transportation Program, where he leads technology development activities spanning electric propulsion, green propellants, solar sails, and other advanced propulsion technologies. Previously, he served as Chief Engineer for NASA\u2019s Space Nuclear Propulsion portfolio as the engineering technical authority for a national, multi-agency effort to advance nuclear thermal and nuclear electric propulsion systems. Dr. Polzin has authored more than 150 technical publications and has conducted research and development in electric propulsion, plasma physics, nuclear propulsion, spacecraft power systems, and advanced space transportation. He is an AIAA Fellow and recipient of the AIAA Engineer of the Year and Plasmadynamics & Lasers Awards. Dr. Polzin received his B.S. in Aerospace Engineering from The Ohio State University and his M.A. and Ph.D. in Mechanical and Aerospace Engineering from Princeton University. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Nuclear Electric Propulsion: Progress, Challenges, and the Path to High-Power Space Systems",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3821:delta:0",
+    "guid": "ps_events:3821:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T17:10:00Z",
+    "endsAt": "2026-11-23T18:10:00Z",
+    "startTime": "2026-11-23T12:10:00",
+    "endTime": "2026-11-23T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Xing Fan, Harvard University",
+    "speakers": [
+      {
+        "name": "Xing Fan",
+        "affiliation": "Harvard University"
+      }
+    ],
+    "speaker": "Xing Fan, Harvard University",
+    "affiliation": "Harvard University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-xing-fan-harvard-university",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Xing Fan (Harvard University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4121:delta:0",
+    "guid": "ps_events:4121:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-02T17:05:00Z",
+    "endsAt": "2026-12-02T18:05:00Z",
+    "startTime": "2026-12-02T12:05:00",
+    "endTime": "2026-12-02T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM Seminar Series Talk by Piran Kidambi, University of Florida",
+    "speakers": [
+      {
+        "name": "Piran Kidambi",
+        "affiliation": "University of Florida"
+      }
+    ],
+    "speaker": "Piran Kidambi, University of Florida",
+    "affiliation": "University of Florida",
+    "series": "PMI/PCCM Seminar Series",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "PMI/PCCM Seminar Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-piran-kidambi-university-florida",
+    "content": "Atomically Thin Membranes: Opportunities and Challenges Abstract: Two-dimensional (2D) nanomaterials offer fundamentally new opportunities to study mass transport at sub-atomic and molecular length scales. Their atomic thickness enables transport phenomena such as quantum tunneling, while their ability to host atomically precise defects that function as nanopores enables highly size-selective ionic and molecular sieving. Together, these unique characteristics open new frontiers in membrane science and molecular separations.In this talk, I",
+    "rawEventDetails": "Details Event Description Atomically Thin Membranes: Opportunities and Challenges Abstract: Two-dimensional (2D) nanomaterials offer fundamentally new opportunities to study mass transport at sub-atomic and molecular length scales. Their atomic thickness enables transport phenomena such as quantum tunneling, while their ability to host atomically precise defects that function as nanopores enables highly size-selective ionic and molecular sieving. Together, these unique characteristics open new frontiers in membrane science and molecular separations. In this talk, I will discuss our recent advances in the synthesis, fundamental transport characterization, scalable processing, and device integration of 2D materials. I will highlight their application as next-generation proton exchange membranes for fuel cells and redox flow batteries, where atomically thin selective layers can overcome the long-standing permeability\u2013selectivity trade-off that limits conventional membrane technologies. Finally, I will present emerging opportunities for 2D materials to enable entirely new separation processes, including highly energy-efficient hydrogen isotope separation. Bio : Piran R. Kidambi is an Associate Professor at the University of Florida. After receiving his PhD from the University of Cambridge, he pursued postdoctoral research at MIT through a Lindemann Trust Fellowship. Kidambi's research leverages the intersection between (i) nanomaterial synthesis, (ii) process engineering, and (iii) in situ metrology, to enable bottom-up materials design and synthesis for energy, separations, and healthcare applications. His research has been recognized via several awards and honors. Related documents Atomically Thin Membranes",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Piran Kidambi, University of Florida",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cbe:ps_events:5316:delta:0",
+    "guid": "ps_events:5316:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-02T21:00:00Z",
+    "endsAt": "2026-12-02T22:00:00Z",
+    "startTime": "2026-12-02T16:00:00",
+    "endTime": "2026-12-02T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Decoding Repetitive Proteins to Design Stimuli-Responsive Biopolymers",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/decoding-repetitive-proteins-design-stimuli-responsive-biopolymers",
+    "content": "Evolution allows organisms to adapt to their environments, yet some molecular patterns stay constant through billions of years of evolution. These patterns encode the secrets of biological materials, such that similar patterns often emerge in different materials with similar functions. For example, a family of elastin proteins form stretchable fibers, which allow the constant movement of human skin, blood vessels, and lungs. We aim to decode the secrets of biological materials by investigating sequence patterns in repetitive proteins, towards establishing systematic protein sequence",
+    "rawEventDetails": "Speaker Danielle Mai Affiliation Stanford University Details Event Description Evolution allows organisms to adapt to their environments, yet some molecular patterns stay constant through billions of years of evolution. These patterns encode the secrets of biological materials, such that similar patterns often emerge in different materials with similar functions. For example, a family of elastin proteins form stretchable fibers, which allow the constant movement of human skin, blood vessels, and lungs. We aim to decode the secrets of biological materials by investigating sequence patterns in repetitive proteins, towards establishing systematic protein sequence\u2013biomaterial property relationships. This talk explores two classes of repetitive proteins as stimuli-responsive biopolymers. First, we investigate bacterial proteins that undergo conformational changes in response to calcium ions. We modify hydrophobicity, electrostatics, and sequence heterogeneity to demonstrate sequence-dependent, reversible folding and domain size changes in response to calcium ions. We also identify structural features that give rise to ion selectivity, which is not yet well-predicted by AI/ML tools. Second, we introduce enzymatic stimuli to drive isothermal phase separation of elastin-like polypeptides (ELPs). ELPs have drawn interest as heat-responsive biopolymers, such that ELPs undergo reversible phase separation from water upon heating. However, temperature is not always a convenient trigger, especially in biological environments that maintain near-constant temperature, pH, and ionic composition. To expand ELP function, we program a mechanism for isothermal phase separation upon proteolytic cleavage of a di-block ELP. This mechanism presents a new opportunity to exploit biological triggers for ELP phase behavior and self-assembly processes. Overall, we demonstrate repetitive proteins as tunable and modular building blocks for functional biomaterials.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Decoding Repetitive Proteins to Design Stimuli-Responsive Biopolymers",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4766:delta:0",
+    "guid": "ps_events:4766:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T20:00:00Z",
+    "endsAt": "2026-12-04T21:00:00Z",
+    "startTime": "2026-12-04T15:00:00",
+    "endTime": "2026-12-04T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Local Maps Are All You Need!",
+    "speakers": [
+      {
+        "name": "Timothy Barfoot",
+        "affiliation": "University of Toronto Institute for Aerospace Studies"
+      }
+    ],
+    "speaker": "Timothy Barfoot, University of Toronto Institute for Aerospace Studies",
+    "affiliation": "University of Toronto Institute for Aerospace Studies",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/local-maps-are-all-you-need",
+    "content": "Abstract: In robotics, we have spent a lot of time building really good maps from noisy sensor data. Who doesn\u2019t like a nice, crisp, globally consistent map? Over the last 20 years, I have been exploring a paradigm to robot navigation that eschews such globally consistent maps in favour of graphs of local maps, which are cheaper to construct, store, and query. These topometric maps enable so-called teach-and-repeat (T&R) navigation. In this talk, I will give a progress update on some of the new things we are doing with T&R including using different primary sensors,",
+    "rawEventDetails": "Details Event Description Abstract: In robotics, we have spent a lot of time building really good maps from noisy sensor data. Who doesn\u2019t like a nice, crisp, globally consistent map? Over the last 20 years, I have been exploring a paradigm to robot navigation that eschews such globally consistent maps in favour of graphs of local maps, which are cheaper to construct, store, and query. These topometric maps enable so-called teach-and-repeat (T&R) navigation. In this talk, I will give a progress update on some of the new things we are doing with T&R including using different primary sensors, teaching with one robot and repeating with another, repeating with multiple robots together, and enabling end-user applications such as Arctic patrol and lunar cargo transport. Hopefully I will convince you that local maps are all you need (i.e.,sufficient) for a lot of common robotics scenarios. I will also try to convince you that local maps are necessary! Bio: Timothy Barfoot (University of Toronto Institute for Aerospace Studies \u2013 UTIAS) works in the area of autonomy for mobile robots targeting a variety of applications. He develops methods (localization, mapping, planning, control) to allow robots to operate over long periods of time in large-scale, unstructured, three-dimensional environments, using rich onboard sensing (e.g., cameras, laser rangefinders, radar) and computation. Timothy holds a BASc (9T6+PEY, Aerospace Option) from the UofT Engineering Science program and a PhD from UTIAS in robotics. He took up his academic position at UTIAS in May 2007, after spending four years at MDA Space (builder of the well-known Canadarm space manipulators), where he developed autonomous vehicle navigation technologies for both planetary rovers and terrestrial applications such as underground mining. He is a Fellow of the IEEE, a Fellow of the Canadian Academy of Engineering, held a Canada Research Chair for the full 10 years, was an Early Researcher Awardee in the Province of Ontario, and has received three paper awards at the IEEE International Conference on Robotics and Automation (ICRA 2010, 2021, 2025) as well as four at the Conference on Robots and Vision (CRV 2014, 2016, 2023, 2025). Timothy began serving as Director (Dept. Head) of UTIAS on 1 July 2026, and previously served as Director of the UofT Robotics Institute,Director of the UofT Collaborative Specialization in Robotics, co-Faculty Advisor of UofT's self-driving car team that won the SAE Autodrivecompetition several times, Chair of the UofT Engineering Science Robotics Major, and was a Faculty Affiliate of the Vector Institute. He wasa Visiting Professor at the University of Oxford (2013, 2024) and worked as Director of Autonomous Systems at Apple in California (2017-9).He holds the position of Distinguished Engineer at Oxa Autonomy Ltd (parttime). He is the Editor in Chief of the IEEE Transactions on Field Robotics (T-FR), deputy EiC of the International Journal of Robotics Research (IJRR), served on the Foundation Board of Robotics: Scienceand Systems (RSS), and served as the General Chair of Field and Service Robotics (FSR) 2015, which was held in Toronto. He is the author of State Estimation for Robotics (Cambridge 2017, 2024), which is free to download from his webpage, and co-editor/co-author of the SLAM Handbook (Cambridge 2026). Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Local Maps Are All You Need!",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:3931:delta:0",
+    "guid": "ps_events:3931:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-07T17:10:00Z",
+    "endsAt": "2026-12-07T18:10:00Z",
+    "startTime": "2026-12-07T12:10:00",
+    "endTime": "2026-12-07T13:10:00",
+    "timezone": "America/New_York",
+    "title": "A Princeton Quantum Colloquium Talk by Marko Loncar, Harvard University",
+    "speakers": [
+      {
+        "name": "Marko Loncar",
+        "affiliation": "Harvard University"
+      }
+    ],
+    "speaker": "Marko Loncar, Harvard University",
+    "affiliation": "Harvard University",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-marko-loncar-harvard-university",
+    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: TBD, Marko Loncar (Harvard University)",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12821:delta:0",
+    "guid": "ps_events:12821:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-07T17:15:00Z",
+    "endsAt": "2026-12-07T18:15:00Z",
+    "startTime": "2026-12-07T12:15:00",
+    "endTime": "2026-12-07T13:15:00",
+    "timezone": "America/New_York",
+    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Guang Cheng, University of California Los Angeles",
+    "speakers": [
+      {
+        "name": "Guang Cheng",
+        "affiliation": "University of California Los Angeles"
+      }
+    ],
+    "speaker": "Guang Cheng, University of California Los Angeles",
+    "affiliation": "University of California Los Angeles",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Memorial Seminar in Statistics"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/guang-cheng-university-california-los-angeles",
+    "content": "",
+    "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Guang Cheng, University of California Los Angeles",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4811:delta:0",
+    "guid": "ps_events:4811:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-04-16T19:00:00Z",
+    "endsAt": "2027-04-16T20:00:00Z",
+    "startTime": "2027-04-16T15:00:00",
+    "endTime": "2027-04-16T16:00:00",
+    "timezone": "America/New_York",
+    "title": "New Technology for New Astrophysics",
+    "speakers": [
+      {
+        "name": "John C. Mather",
+        "affiliation": "NASA: Goddard Space Flight Center"
+      }
+    ],
+    "speaker": "John C. Mather, NASA: Goddard Space Flight Center",
+    "affiliation": "NASA: Goddard Space Flight Center",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://mae.princeton.edu/events/2027/new-technology-new-astrophysics",
+    "content": "How is it possible that 1/4 of the Nobel Prizes in Physics since 2006 have been for astrophysics? All 5 of them came from new technologies, and two required space observatories. I\u2019ll review the breakthrough ideas that grew into discoveries, and suggest where future technologies might go.The JWST is working brilliantly, and has found Little Red Dots, the current mystery object. But there\u2019s still no Earth 2.0. The DKIST solar telescope with adaptive optics is working beautifully. The Vera Rubin Telescope is online, the Nancy Grace Roman Space Telescope will be launched just before this",
+    "rawEventDetails": "Details Event Description How is it possible that 1/4 of the Nobel Prizes in Physics since 2006 have been for astrophysics? All 5 of them came from new technologies, and two required space observatories. I\u2019ll review the breakthrough ideas that grew into discoveries, and suggest where future technologies might go.The JWST is working brilliantly, and has found Little Red Dots, the current mystery object. But there\u2019s still no Earth 2.0. The DKIST solar telescope with adaptive optics is working beautifully. The Vera Rubin Telescope is online, the Nancy Grace Roman Space Telescope will be launched just before this colloquium to study dark matter, dark energy, and exoplanets, and the 39 m diameter Extremely Large Telescope will be doing science around 2030. Among the new possibilities: the Habitable Worlds Observatory, a workhorse UV-near IR observatory with a coronagraph for exoplanets, and X-ray and far IR observatories from Probe class ($1B) to flagships. New detector and mirror technologies are making both exciting. The NAUTILUS concept will use molded glass lenses up to 8 m in diameter in space to collect light for spectroscopy. We\u2019re also developing hybrid observatories combining telescopes and interferometers on the ground with satellites. The Landolt absolute photometric calibrator beacon will fly in 2029, and the CELESTE mission is a proposed Small Explorer to offer a laser beacon for adaptive optics to the ELT, giving it diffraction-limited image quality at visible wavelengths where the sky is darkest. An orbiting starshade could cast a star shadow on the ELT and enable imaging of another Earth in one minute. The Black Hole Explorer would extend the Event Horizon Telescope with an orbiting antenna could measure the spin of a black hole. If you can imagine it, you can build it. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "New Technology for New Astrophysics",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]

@@ -1,0 +1,266 @@
+[
+  {
+    "id": "bioengineering:ps_events:2741:delta:0",
+    "guid": "ps_events:2741:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-08-17T14:00:00Z",
+    "endsAt": "2026-08-17T21:45:00Z",
+    "startTime": "2026-08-17T10:00:00",
+    "endTime": "2026-08-17T17:45:00",
+    "timezone": "America/New_York",
+    "title": "Agentic Biolab Workshop",
+    "speakers": [
+      {
+        "name": "Steve Finkbeiner",
+        "affiliation": ""
+      },
+      {
+        "name": "Mengdi Wang",
+        "affiliation": ""
+      },
+      {
+        "name": "Manu Prakash",
+        "affiliation": ""
+      },
+      {
+        "name": "Vivek Natarajan",
+        "affiliation": ""
+      },
+      {
+        "name": "Le Cong",
+        "affiliation": ""
+      },
+      {
+        "name": "Sanfeng Wu",
+        "affiliation": ""
+      },
+      {
+        "name": "Pietro Perona",
+        "affiliation": ""
+      },
+      {
+        "name": "Shunzhi Wang",
+        "affiliation": ""
+      },
+      {
+        "name": "Nico Stuurman",
+        "affiliation": ""
+      },
+      {
+        "name": "Anna Marie Wagner",
+        "affiliation": ""
+      },
+      {
+        "name": "Dan Acker",
+        "affiliation": ""
+      },
+      {
+        "name": "Alexander Tarashansky",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Steve Finkbeiner; Mengdi Wang; Manu Prakash; Vivek Natarajan; Le Cong; Sanfeng Wu; Pietro Perona; Shunzhi Wang; Nico Stuurman; Anna Marie Wagner; Dan Acker; Alexander Tarashansky",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Briger Hall Auditorium",
+      "id": "",
+      "detail": "C112"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/agentic-biolab-workshop",
+    "content": "WorkshopMonday, August 17, 202610:00am \u2013 5:45pmThis event has reached capacity. Registration is closed.AgendaThe full agenda is now available. Location",
+    "rawEventDetails": "Speakers Steve Finkbeiner Affiliation University of California at San Francisco/Gladstone Mengdi Wang Affiliation Princeton University Manu Prakash Affiliation Stanford University Vivek Natarajan Affiliation Google DeepMind Le Cong Affiliation Stanford University Sanfeng Wu Affiliation Princeton University Pietro Perona Affiliation California Institute of Technology (Caltech) Shunzhi Wang Affiliation New York University Nico Stuurman Affiliation University of California at San Francisco Anna Marie Wagner Affiliation Transfyr Dan Acker Affiliation Flagship Pioneering Alexander Tarashansky Affiliation Anthropic Details Event Description Workshop Monday, August 17, 2026 10:00am \u2013 5:45pm This event has reached capacity. Registration is closed. Agenda The full agenda is now available. Location Google Maps Briger Hall, Auditorium C112, Princeton University. Between Ivy Lane and Prospect Avenue, Princeton, NJ 08540 Directions and Access: Directions for visiting Princeton University\u2019s campus View the Princeton Interactive map . Parking There is limited metered township parking along Olden Street and Prospect Avenue. It is best to download the mobile app before visiting to complete payment or you can locate a kiosk along the street to pay for parking. Prospect Avenue metered parking is limited, please allow ample time to find parking. Additional parking for visitors is in the Stadium Drive Garage, located on Fitzrandolph Road . Visitors parking in the garage are asked to register for a daily visitor permit. Registration can be done online in advance or at the garage during arrival.(Note: Once the start date is added, the permit will automatically expire after 5 days. No need to select End Date.) There is a short walk to Briger Hall (5-7 minutes). We look forward to welcoming you to Princeton University and the Omenn-Darling Bioengineering Institute.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Agentic Biolab Workshop",
+    "locationRaw": "Briger Hall Auditorium, C112",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2761:delta:0",
+    "guid": "ps_events:2761:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-03T20:00:00Z",
+    "endsAt": "2026-09-03T21:30:00Z",
+    "startTime": "2026-09-03T16:00:00",
+    "endTime": "2026-09-03T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Rising Stars in Bioengineering Symposium 2026",
+    "speakers": [
+      {
+        "name": "Jacqueline Bliley",
+        "affiliation": ""
+      },
+      {
+        "name": "Andr\u00e9 Forjaz",
+        "affiliation": ""
+      },
+      {
+        "name": "Helena Hu",
+        "affiliation": ""
+      },
+      {
+        "name": "Felix Radford",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Jacqueline Bliley; Andr\u00e9 Forjaz; Helena Hu; Felix Radford",
+    "affiliation": "",
+    "series": "Rising Stars Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Rising Stars Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bioengineering",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/rising-stars-bioengineering-symposium-2026",
+    "content": "",
+    "rawEventDetails": "Speakers Jacqueline Bliley Affiliation Additional Ventures Presentation FRESH Bioprinting to Build Contractile Cardiac Pumps and Model Early Cardiac Development Andr\u00e9 Forjaz Affiliation Johns Hopkins School of Medicine Presentation 3D Tissue Mapping of Whole Organs and Organisms to Deconvolve Fundamental Growth Laws and Identify Rare Precancers Helena Hu Affiliation MIT Presentation Thousandfold Expansion Microscopy: Toward a Complete Molecular Map of Life Felix Radford Affiliation Harvard Medical School Presentation Redesigning Translation Systems for Bioproduction of New Catalysts, Therapeutics and Materials",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Rising Stars in Bioengineering Symposium 2026",
+    "locationRaw": "Bioengineering E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2756:delta:0",
+    "guid": "ps_events:2756:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-17T20:00:00Z",
+    "endsAt": "2026-09-17T21:00:00Z",
+    "startTime": "2026-09-17T16:00:00",
+    "endTime": "2026-09-17T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Generative Biology - Learning to Program Cellular Machines and Systems",
+    "speakers": [
+      {
+        "name": "Wendell Lim",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Wendell Lim",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bioengineering",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/generative-biology-learning-program-cellular-machines-and-systems",
+    "content": "Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular",
+    "rawEventDetails": "Speaker Wendell Lim Affiliation University of California San Francisco Details Event Description Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular systems to understand the principles that drive multi-cellular self-organization, such as the development of tissues and organs. These synthetic biology tools and approaches are helping to define the fundamental logic underlying complex biological behaviors and provide new avenues to create useful synthetic cellular devices and living materials. Refreshments available 15 minutes before indicated time of seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Generative Biology - Learning to Program Cellular Machines and Systems",
+    "locationRaw": "Bioengineering E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2766:delta:0",
+    "guid": "ps_events:2766:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-05T20:00:00Z",
+    "endsAt": "2026-10-05T21:00:00Z",
+    "startTime": "2026-10-05T16:00:00",
+    "endTime": "2026-10-05T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Refocusing Mammalian Synbio to Speak the Same Language as Biology",
+    "speakers": [
+      {
+        "name": "Ron Weiss",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Ron Weiss",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/refocusing-mammalian-synbio-speak-same-language-biology",
+    "content": "Refreshments will be available 15 minutes prior to the start of the seminar.",
+    "rawEventDetails": "Speaker Ron Weiss Affiliation Massachusetts Institute of Technology Details Event Description Refreshments will be available 15 minutes prior to the start of the seminar.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Refocusing Mammalian Synbio to Speak the Same Language as Biology",
+    "locationRaw": "TBD",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  }
+]
