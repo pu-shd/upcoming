@@ -25,6 +25,7 @@ from collections.abc import Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 
+from . import upstream
 from .build import BuildResult, build_from_file, load_pronunciation, render
 from .clock import now as clock_now
 from .combine import combine, load_combos
@@ -148,6 +149,14 @@ def _build_parser() -> argparse.ArgumentParser:
         help=(
             "refetch every source regardless of its declared cadence. Without this a "
             "source is only refetched once its own cadence has elapsed."
+        ),
+    )
+    publish.add_argument(
+        "--rescrape",
+        action="store_true",
+        help=(
+            "re-read every event page, ignoring each source's rebuild_after_hours. Use "
+            "after changing a selector, when the carried values are the old ones."
         ),
     )
     publish.add_argument(
@@ -367,6 +376,9 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
 
     out_root = Path(args.out)
     feeds_root = Path(args.feeds)
+    moment = clock_now()
+    remembered = upstream.read(out_root)
+    state: dict[str, upstream.SourceState] = {}
 
     # Fetching is opt-in so the default run stays offline and reproducible from the
     # committed fixtures. CI passes --fetch; a developer reproducing a published tree
@@ -376,7 +388,6 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
     if args.fetch:
         feeds_root.mkdir(parents=True, exist_ok=True)
         published = previous_status(out_root)
-        moment = clock_now()
 
         # Each source declares its own cadence, and honouring it is the difference between
         # asking a quiet departmental server twelve times a day and seventy-two. A source
@@ -393,27 +404,67 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
             else:
                 skipped[source.slug] = why
 
+        # Conditional requests: with a validator held and a capture on disk, a server
+        # that has not changed answers 304 with no body at all.
         fetched = fetch_feeds(
-            wanted, feeds_root, HttpTransport(retries=registry.live[0].http.retries)
+            wanted,
+            feeds_root,
+            HttpTransport(retries=registry.live[0].http.retries),
+            {slug: entry.validators for slug, entry in remembered.items()},
         )
         if skipped:
             print(
                 f"not due, serving the current capture: {', '.join(sorted(skipped))}",
                 file=sys.stderr,
             )
+        if unchanged := sorted(s for s, o in fetched.items() if o.unchanged):
+            print(f"upstream reports unchanged (304): {', '.join(unchanged)}", file=sys.stderr)
 
     results: dict[str, BuildResult] = {}
     by_source: dict[str, tuple[Event, ...]] = {}
     failed: list[str] = []
+    scrape_notes: dict[str, str] = {}
 
     for source in registry.live:
         feed = feeds_root / source.slug / "feed.ics"
+
+        # Enrichment reuses the previous run's scraped values until the source's own
+        # `rebuild_after_hours` window elapses. Events new since that scrape are absent
+        # from `held` and so are fetched anyway -- without that, a seminar added this
+        # morning would publish untitled until the window turned over.
+        rescrape, why = (
+            (True, "forced")
+            if args.rescrape
+            else upstream.due_for_enrichment(source, remembered, now=moment)
+        )
+        held: dict[str, Event] = {}
+        if args.enrich and source.enrich and not rescrape:
+            carried = previous_payload(
+                out_root,
+                f"feeds/{source.slug}/events.json",
+                wire_format_for(source.escape_fields),
+            )
+            held = {str(r["guid"]): from_wire(r) for r in carried or [] if r.get("guid")}
+            scrape_notes[source.slug] = why
+
+        state[source.slug] = upstream.advance(
+            remembered,
+            source.slug,
+            outcome=fetched.get(source.slug),
+            enriched_at=(
+                upstream.stamp_now(moment) if (args.enrich and source.enrich and rescrape) else None
+            ),
+        )
 
         # A fetch failure is reported as a failure of this source, not swallowed by
         # falling back to whatever ICS happens to be on disk. Building yesterday's capture
         # and publishing it as current is the silent staleness this design exists to
         # prevent -- the failure path already serves the last good feed, and says so.
         outcome = fetched.get(source.slug)
+        if outcome is not None and outcome.unchanged:
+            # 304: the capture on disk is confirmed current, so build from it exactly as
+            # if we had just downloaded it. Not a failure, not stale.
+            outcome = None
         if outcome is not None and not outcome.ok:
             detail = outcome.error or f"HTTP {outcome.code}"
             results[source.slug] = BuildResult(
@@ -441,6 +492,7 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
             cache,
             previous=previous_payload(out_root, f"feeds/{source.slug}/events.json"),
             allow_large_diff=args.allow_large_diff,
+            held=held,
         )
         results[source.slug] = result
         if result.ok:
@@ -474,7 +526,19 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
         root=out_root,
         generated_at=tree_stamp,
     )
+    # Carry forward the state of any source this run did not touch, so a disabled or
+    # unbuilt source does not lose its validators.
+    for slug, entry in remembered.items():
+        state.setdefault(slug, entry)
+    tree.files[upstream.UPSTREAM_PATH] = upstream.document(state, generated_at=tree_stamp)
+
     written = write(tree, out_root)
+    if scrape_notes:
+        print(
+            "reused the previous scrape (inside rebuild_after_hours): "
+            + ", ".join(f"{s} [{w}]" for s, w in sorted(scrape_notes.items())),
+            file=sys.stderr,
+        )
     if args.summary:
         Path(args.summary).write_text(
             markdown_summary(tree, generated_at=tree_stamp), encoding="utf-8"

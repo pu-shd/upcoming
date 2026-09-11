@@ -126,7 +126,10 @@ def select(events: Sequence[Event], source: SourceConfig) -> tuple[tuple[Event, 
 
 
 def build_events_with_stats(
-    text: str, source: SourceConfig, cache: PageCache | None = None
+    text: str,
+    source: SourceConfig,
+    cache: PageCache | None = None,
+    held: Mapping[str, Event] | None = None,
 ) -> tuple[tuple[Event, ...], dict[str, ScrapeStats], int]:
     """The pipeline, what enrichment did, and how many events the source declined to publish.
 
@@ -138,7 +141,7 @@ def build_events_with_stats(
     events, declined = select(events, source)
     stats: dict[str, ScrapeStats] = {}
     if cache is not None:
-        events, stats = enrich(events, source, cache)
+        events, stats = enrich(events, source, cache, held)
     events, _ = fill_titles_for(events, source)
     return events, stats, declined
 
@@ -165,6 +168,7 @@ def build_from_text(
     previous: Sequence[Mapping[str, Any]] | None = None,
     allow_large_diff: bool = False,
     schema_dir: str | Path = "schema",
+    held: Mapping[str, Event] | None = None,
 ) -> BuildResult:
     """Build one source, attributing any failure to it rather than raising onward.
 
@@ -173,7 +177,7 @@ def build_from_text(
     """
     enrich_stats: dict[str, ScrapeStats] = {}
     try:
-        events, enrich_stats, declined = build_events_with_stats(text, source, cache)
+        events, enrich_stats, declined = build_events_with_stats(text, source, cache, held)
     except SourceFatal as exc:
         return BuildResult(source=source.slug, status="failed", diagnostics=(exc.message,))
     except Exception as exc:
@@ -213,6 +217,11 @@ def build_from_text(
         counts[f"enriched_{field_name}"] = stat.filled
         if stat.rejected:
             counts[f"rejected_{field_name}"] = stat.rejected
+        # Reuse is reported, not assumed. A run that fetched nothing and a run that
+        # fetched everything and found nothing produce the same `enriched_` count, and
+        # only one of them is working as designed.
+        if stat.carried:
+            counts[f"carried_{field_name}"] = stat.carried
     return BuildResult(
         source=source.slug,
         status="ok",
@@ -257,6 +266,7 @@ def build_from_file(
     previous: Sequence[Mapping[str, Any]] | None = None,
     allow_large_diff: bool = False,
     schema_dir: str | Path = "schema",
+    held: Mapping[str, Event] | None = None,
 ) -> BuildResult:
     """Build one source from an ICS file on disk."""
     try:
@@ -272,6 +282,7 @@ def build_from_file(
         previous=previous,
         allow_large_diff=allow_large_diff,
         schema_dir=schema_dir,
+        held=held,
     )
 
 

@@ -239,6 +239,7 @@ A page that loads and simply has no abstract is not a failure, and is counted se
 feeds/<source>/events.json   one per live source, faithful to its upstream
 combos/<name>/events.json    the declared combinations
 schema/events.schema.json    the contract, served so a validator can $ref it
+state/upstream.json          internal bookkeeping, not a contract (see below)
 status.json                  what succeeded, what failed, and how stale anything is
 index.html                   the landing page, which reads status.json at load time
 ```
@@ -301,6 +302,40 @@ The limit it cannot cover, stated rather than implied: if *every* scheduled work
 disabled at once, the heartbeat is disabled too and cannot rescue itself. That is inherent
 to running your own monitoring inside the thing being monitored, and only a check from
 outside the repository answers it.
+
+## Not doing the same work twice
+
+A run rebuilds every feed unconditionally, and that is cheap and deliberate: the feeds
+carry no timestamp, so an unchanged source re-renders byte-identically and the published
+branch records no change. What is *not* cheap is asking twelve departmental web servers for
+things they have already given us. Measured before this existed: about **4,244 requests a
+day**, of which ~4,100 were event-page scrapes returning identical markup.
+
+Two mechanisms, both keyed off `state/upstream.json` — internal bookkeeping, published
+rather than cached because an Actions cache expires after a week and losing it silently
+would restore the old behaviour with nothing reporting the regression.
+
+**Conditional requests.** Each source's `ETag` and `Last-Modified` are remembered and
+replayed as `If-None-Match` / `If-Modified-Since`. Eleven of the twelve sources answer
+`304` with no body when nothing has changed. A 304 is deliberately neither `ok` nor
+`failed`: as `ok` we would build a feed from an empty body, and as `failed` a healthy
+source would be marked stale every time it answered correctly.
+
+**Reusing the last scrape.** `rebuild_after_hours` decides how long enrichment results
+stay good — 24 by default, **6 for the two sources with a 30-minute cadence**. Inside the
+window, scraped values are carried forward from the previously published feed and no page
+is fetched at all. ORFE goes from 960 requests a day to about 80.
+
+Two properties keep that safe. Events new since the last scrape are absent from the carried
+set and so are fetched anyway — otherwise a seminar added this morning would publish
+untitled for hours. And carrying a value carries its **provenance**: copying a title
+without `titleSource` would republish it as synthesized, and since feeds are compared
+byte-for-byte that disagreement would read as a change on every run. A test asserts a warm
+run fetches nothing and emits bytes identical to a cold one.
+
+The cost is stated rather than hidden: a title edited on an event page takes up to
+`rebuild_after_hours` to appear. That number is per source in config, which is where a
+freshness-versus-politeness trade belongs.
 
 ## Cadence and the watchdog
 

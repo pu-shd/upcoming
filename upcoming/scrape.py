@@ -52,6 +52,11 @@ class ScrapeStats:
     network_errors: int = 0
     #: Events with no URL at all.
     no_url: int = 0
+    #: Values taken from the previously published feed instead of refetched, because the
+    #: source's `rebuild_after_hours` window had not elapsed. Counted separately from
+    #: `filled` so a run that scraped nothing is distinguishable from one that scraped
+    #: everything and found nothing -- the second is a problem and the first is the design.
+    carried: int = 0
 
     @property
     def reachable(self) -> int:
@@ -78,6 +83,7 @@ class ScrapeStats:
         return {
             "attempted": self.attempted,
             "filled": self.filled,
+            "carried": self.carried,
             "selector_misses": self.selector_misses,
             "rejected": self.rejected,
             "http_errors": self.http_errors,

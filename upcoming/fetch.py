@@ -43,6 +43,10 @@ class FetchOutcome:
     code: int | None = None
     body: str = ""
     error: str = ""
+    #: Cache validators the server sent, to be replayed on the next request. Stored rather
+    #: than acted on here, because deciding what to do with them is the caller's business.
+    etag: str = ""
+    last_modified: str = ""
 
     @property
     def ok(self) -> bool:
@@ -52,6 +56,17 @@ class FetchOutcome:
     def failed(self) -> bool:
         """A request that did not reach the content. Never merely an empty page."""
         return self.status in {"http_error", "network_error"}
+
+    @property
+    def unchanged(self) -> bool:
+        """The server said what we already have is current.
+
+        Deliberately neither ``ok`` nor ``failed``: there is no body to build from, and
+        nothing is wrong. Folding it into either would be a bug -- into ``ok`` and we would
+        publish an empty feed, into ``failed`` and a healthy source would be marked stale
+        every time it answered correctly.
+        """
+        return self.status == "not_modified"
 
 
 class Transport(Protocol):
@@ -69,6 +84,9 @@ class HttpTransport:
     A 403 on these hosts is a bot challenge, not a transient fault: retrying burns the
     request budget while the actual fix is a credential. The predecessor has no retry at
     all, so a single 502 loses an event's title until the next scheduled run.
+
+    304 is returned immediately too, since ``retry_on`` does not name it -- retrying a
+    conditional request that answered correctly would be absurd.
     """
 
     retries: int = 2
@@ -88,8 +106,24 @@ class HttpTransport:
             except Exception as exc:
                 last = FetchOutcome("network_error", url, error=f"{type(exc).__name__}: {exc}")
             else:
+                etag = response.headers.get("ETag", "")
+                modified = response.headers.get("Last-Modified", "")
                 if response.status_code == 200:
-                    return FetchOutcome("ok", url, code=200, body=response.text)
+                    return FetchOutcome(
+                        "ok",
+                        url,
+                        code=200,
+                        body=response.text,
+                        etag=etag,
+                        last_modified=modified,
+                    )
+                if response.status_code == 304:
+                    # A conditional request answered: what we hold is current. The
+                    # validators are echoed back so the next request can replay them even
+                    # though this response carried no body.
+                    return FetchOutcome(
+                        "not_modified", url, code=304, etag=etag, last_modified=modified
+                    )
                 last = FetchOutcome(
                     "http_error",
                     url,
@@ -184,8 +218,37 @@ __all__ = [
 ]
 
 
-def fetch_feed(source: SourceConfig, transport: Transport) -> FetchOutcome:
-    """Fetch one source's ICS.
+@dataclass(frozen=True)
+class Validators:
+    """What a server told us last time, replayed to ask "has it changed?"
+
+    Sending these turns a full download into a 304 with no body on the common case, which
+    is every run where a department has not touched its calendar. Politeness with a
+    measurable number attached: these twelve feeds are fetched a few hundred times a day
+    between them.
+    """
+
+    etag: str = ""
+    last_modified: str = ""
+
+    @property
+    def empty(self) -> bool:
+        return not (self.etag or self.last_modified)
+
+    def headers(self) -> dict[str, str]:
+        """The conditional request headers, omitting whichever validator we lack."""
+        out: dict[str, str] = {}
+        if self.etag:
+            out["If-None-Match"] = self.etag
+        if self.last_modified:
+            out["If-Modified-Since"] = self.last_modified
+        return out
+
+
+def fetch_feed(
+    source: SourceConfig, transport: Transport, validators: Validators | None = None
+) -> FetchOutcome:
+    """Fetch one source's ICS, conditionally when we hold validators for it.
 
     The source's own HTTP policy applies -- its headers, its timeouts, its retry count --
     because the departments differ: some sit behind the bot challenge that needs the bypass
@@ -196,15 +259,23 @@ def fetch_feed(source: SourceConfig, transport: Transport) -> FetchOutcome:
     """
     if not source.feed_url:
         return FetchOutcome("network_error", "", error=f"{source.slug} declares no feed_url")
+    headers = dict(source.http.headers)
+    if validators is not None:
+        # The source's own headers win a collision: a hand-set If-None-Match in config
+        # would be deliberate, and silently overwriting it would be the surprising choice.
+        headers = {**validators.headers(), **headers}
     return transport(
         source.feed_url,
-        headers=source.http.headers,
+        headers=headers,
         timeout=(source.http.connect_timeout, source.http.read_timeout),
     )
 
 
 def fetch_feeds(
-    sources: Sequence[SourceConfig], dest: Path, transport: Transport
+    sources: Sequence[SourceConfig],
+    dest: Path,
+    transport: Transport,
+    validators: Mapping[str, Validators] | None = None,
 ) -> dict[str, FetchOutcome]:
     """Fetch every source into ``dest/<slug>/feed.ics``, returning what happened to each.
 
@@ -212,13 +283,21 @@ def fetch_feeds(
     can tell "we got new bytes" from "there are bytes here". Overwriting with a partial
     body, or deleting on failure, would both turn a transient upstream blip into a data
     loss -- and the build layer already knows how to serve a source's last good feed.
+
+    A ``not_modified`` writes nothing for the same reason and for a better one: the server
+    has just confirmed that what is on disk is current.
     """
     outcomes: dict[str, FetchOutcome] = {}
     for source in sources:
-        outcome = fetch_feed(source, transport)
+        held = (validators or {}).get(source.slug)
+        # Only ask conditionally when there is actually a capture to validate. Sending
+        # If-None-Match with no local copy invites a 304 we cannot build from.
+        capture = dest / source.slug / "feed.ics"
+        ask_conditionally = held if (held and capture.is_file()) else None
+
+        outcome = fetch_feed(source, transport, ask_conditionally)
         outcomes[source.slug] = outcome
         if outcome.ok:
-            target = dest / source.slug / "feed.ics"
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_text(outcome.body, encoding="utf-8")
+            capture.parent.mkdir(parents=True, exist_ok=True)
+            capture.write_text(outcome.body, encoding="utf-8")
     return outcomes

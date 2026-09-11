@@ -13,7 +13,7 @@ misleading one.
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from dataclasses import replace
 
 from .fetch import PageCache
@@ -74,22 +74,65 @@ def _apply(event: Event, target: EnrichTarget, values: Sequence[str]) -> Event:
     return event
 
 
+def carry(event: Event, held: Event, targets: Sequence[EnrichTarget]) -> Event:
+    """Copy an earlier run's scraped values onto this run's event.
+
+    Writes exactly the fields ``_apply`` writes, provenance included. Copying ``title``
+    without ``title_source`` and ``title_is_placeholder`` would republish the same title
+    while claiming it was synthesized -- and because the feeds are compared byte-for-byte
+    to detect drift, that disagreement would show up as a change on every run.
+    """
+    out = event
+    for target in targets:
+        field = target.field_name
+        if field == "speakers":
+            if held.speakers:
+                out = replace(out, speakers=held.speakers)
+        elif field == "title":
+            if held.title_source == TitleSource.ENRICHED.value:
+                out = replace(
+                    out,
+                    title=held.title,
+                    title_source=held.title_source,
+                    title_is_placeholder=False,
+                )
+        elif value := getattr(held, field, ""):
+            out = _apply(out, target, [value])
+    return out
+
+
 def enrich(
-    events: Sequence[Event], source: SourceConfig, cache: PageCache
+    events: Sequence[Event],
+    source: SourceConfig,
+    cache: PageCache,
+    held: Mapping[str, Event] | None = None,
 ) -> tuple[tuple[Event, ...], dict[str, ScrapeStats]]:
     """Scrape every declared target for every event, and report what happened per target.
 
     Stats are kept **per target** rather than pooled. A source whose raw-details scrape
     succeeds everywhere and whose speaker scrape fails everywhere has a real problem that a
     combined rate would average away.
+
+    ``held`` maps guid to an event from the previously published feed. Any event found
+    there is satisfied from it and **not fetched**; anything else is scraped as usual. So a
+    run inside a source's ``rebuild_after_hours`` window still enriches events that are new
+    since the last scrape -- which is the case that makes an all-or-nothing window wrong,
+    since a seminar added this morning would otherwise publish with no title until the
+    window elapsed.
     """
     if not source.enrich:
         return tuple(events), {}
 
     stats = {target.field_name: ScrapeStats() for target in source.enrich}
     out = list(events)
+    remembered = held or {}
 
     for index, event in enumerate(out):
+        if previous := remembered.get(event.guid):
+            out[index] = carry(event, previous, source.enrich)
+            for target in source.enrich:
+                stats[target.field_name].carried += 1
+            continue
         for target in source.enrich:
             values = scrape_target(event.url, target, cache, stats[target.field_name])
             if values:

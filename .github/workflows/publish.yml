@@ -52,6 +52,10 @@ on:
         description: 'Refetch every source, ignoring its declared cadence'
         type: boolean
         default: false
+      rescrape:
+        description: 'Re-read every event page, ignoring rebuild_after_hours'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -108,6 +112,7 @@ jobs:
           ENRICH: ${{ inputs.enrich }}
           ALLOW_LARGE_DIFF: ${{ inputs.allow_large_diff }}
           IGNORE_CADENCE: ${{ inputs.ignore_cadence }}
+          RESCRAPE: ${{ inputs.rescrape }}
         run: |
           set -uo pipefail
           if [ -z "${BOT_BYPASS_HEADER}" ]; then
@@ -120,6 +125,7 @@ jobs:
           if [ "${ENRICH:-true}" != "false" ]; then args+=(--enrich); fi
           if [ "${ALLOW_LARGE_DIFF:-false}" = "true" ]; then args+=(--allow-large-diff); fi
           if [ "${IGNORE_CADENCE:-false}" = "true" ]; then args+=(--ignore-cadence); fi
+          if [ "${RESCRAPE:-false}" = "true" ]; then args+=(--rescrape); fi
 
           # `|| code=$?` rather than a bare `$?`, because the default shell is `bash -e`
           # and `set -uo pipefail` does not clear that. A source failing must still publish

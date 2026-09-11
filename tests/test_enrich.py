@@ -227,6 +227,9 @@ def test_a_403_is_never_retried() -> None:
     class Blocked:
         status_code = 403
         text = ""
+        # A real requests.Response always carries headers; the transport reads cache
+        # validators off every response, so a stub without them models nothing real.
+        headers: dict[str, str] = {}
 
     def fake_get(url, headers, timeout):  # type: ignore[no-untyped-def]
         attempts.append(url)
@@ -255,6 +258,7 @@ def test_a_transient_status_is_retried() -> None:
         def __init__(self, code: int) -> None:
             self.status_code = code
             self.text = "body" if code == 200 else ""
+            self.headers: dict[str, str] = {}
 
     def fake_get(url, headers, timeout):  # type: ignore[no-untyped-def]
         attempts.append(url)
