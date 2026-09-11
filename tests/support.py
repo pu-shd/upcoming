@@ -11,6 +11,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
-#: A working credential value for tests. Never a real token: these tests assert that
-#: config *loads*, not that anything authenticates.
-TEST_ENV = {"BOT_BYPASS_TOKEN": "test-token"}
+#: A working credential for tests. The secret's body is a whole header line, "Name: value",
+#: so the header name lives in the secret rather than in this repository. Never a real
+#: value: these tests assert that config *loads*, not that anything authenticates.
+TEST_HEADER_SECRET = "x-test-bypass: test-value"
+TEST_ENV = {"BOT_BYPASS_HEADER": TEST_HEADER_SECRET}

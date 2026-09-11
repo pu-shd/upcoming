@@ -45,15 +45,17 @@ install: $(VENV)
 	$(PY) -m pip install --quiet -e '.[dev]'
 	@echo "installed; run 'make check' to validate the registry"
 
-# BOT_BYPASS_TOKEN has no default anywhere in this project: a placeholder credential is
-# how the predecessor's pipeline came to 403 on every event page while reporting success.
-# These targets pass a visibly fake value because they only prove that config *loads*.
+# BOT_BYPASS_HEADER holds a WHOLE header line, "Name: value", so the header name lives in
+# the secret rather than in this repository. It has no default anywhere: a placeholder
+# credential is how the predecessor's pipeline came to 403 on every event page while
+# reporting success. These targets pass a visibly fake line because they only prove that
+# config *loads*.
 sources: $(VENV)
-	@BOT_BYPASS_TOKEN=$${BOT_BYPASS_TOKEN:-make-target-placeholder} \
+	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) sources
 
 check: $(VENV)
-	@BOT_BYPASS_TOKEN=$${BOT_BYPASS_TOKEN:-make-target-placeholder} \
+	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) check
 
 test: $(VENV)

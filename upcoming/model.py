@@ -87,6 +87,36 @@ class Location:
         return not (self.name or self.detail)
 
 
+#: Separator for the back-compatible scalar ``speaker`` string.
+#:
+#: Semicolon rather than comma on purpose. These feeds already use a comma *within* one
+#: speaker to separate name from affiliation -- ``Elynn Chen, New York University`` -- so
+#: joining several speakers with commas would produce ``A, B, C`` that no consumer could
+#: tell apart from one speaker with two affiliations.
+SPEAKER_JOIN = "; "
+
+
+@dataclass(frozen=True, slots=True)
+class Speaker:
+    """One speaker, with the affiliation that belongs to *them*.
+
+    Modelled as a pair rather than two parallel scalars because several of these feeds
+    carry the affiliation inline with the name -- ``Sean Roberts, University of Texas at
+    Austin``, ``Francesca Ferlaino (University of Innsbruck)`` -- and an event can carry
+    more than one speaker. Measured: bioengineering's Rising Stars symposium lists four
+    (Jacqueline Bliley, André Forjaz, Helena Hu, Felix Radford). Flattening that to one
+    scalar would silently drop three people.
+    """
+
+    name: str
+    affiliation: str = ""
+
+    @property
+    def display(self) -> str:
+        """``Name, Affiliation`` when there is one, else just the name."""
+        return f"{self.name}, {self.affiliation}" if self.affiliation else self.name
+
+
 @dataclass(frozen=True, slots=True)
 class Event:
     """One event, after mapping and before serialization."""
@@ -118,8 +148,9 @@ class Event:
     title: str
     url: str
     location: Location = field(default_factory=Location)
-    speaker: str = ""
-    affiliation: str = ""
+    #: Every speaker, in the order the feed or the page listed them. The canonical form;
+    #: the scalar ``speaker`` and ``affiliation`` below are derived from it.
+    speakers: tuple[Speaker, ...] = ()
     #: Raw categories joined for the predecessor's consumers.
     series: str = ""
     #: Canonical tags -- what combo predicates match on. Sorted for stable output.
@@ -165,6 +196,26 @@ class Event:
         return f"{source}:{guid}"
 
     @property
+    def speaker(self) -> str:
+        """The speakers as one string, for the existing campus ingest.
+
+        Derived rather than stored, so it can never disagree with ``speakers``. Joined with
+        ``SPEAKER_JOIN`` -- see that constant for why not a comma.
+        """
+        return SPEAKER_JOIN.join(s.name for s in self.speakers if s.name)
+
+    @property
+    def affiliation(self) -> str:
+        """The affiliation, when exactly one applies to the whole event.
+
+        Empty when the speakers disagree, because there is no single answer and picking
+        the first would attribute one person's institution to everyone. A consumer that
+        needs per-speaker affiliations reads ``speakers``.
+        """
+        distinct = {s.affiliation for s in self.speakers if s.affiliation}
+        return distinct.pop() if len(distinct) == 1 else ""
+
+    @property
     def source(self) -> str:
         """The first source, for a single-source feed.
 
@@ -206,6 +257,9 @@ WIRE_FIELDS: tuple[tuple[str, str], ...] = (
     ("endTime", "end_time"),
     ("timezone", "timezone"),
     ("title", "title"),
+    # `speakers` is canonical; `speaker` and `affiliation` are derived properties published
+    # alongside it so the existing campus ingest keeps working unchanged.
+    ("speakers", "speakers"),
     ("speaker", "speaker"),
     ("affiliation", "affiliation"),
     ("series", "series"),
@@ -245,7 +299,12 @@ def to_wire(event: Event) -> dict[str, Any]:
         if isinstance(value, Location):
             out[wire_key] = {"name": value.name, "id": value.id, "detail": value.detail}
         elif isinstance(value, tuple):
-            out[wire_key] = list(value)
+            out[wire_key] = [
+                {"name": item.name, "affiliation": item.affiliation}
+                if isinstance(item, Speaker)
+                else item
+                for item in value
+            ]
         else:
             out[wire_key] = value
     return out

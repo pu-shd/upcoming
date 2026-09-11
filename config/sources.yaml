@@ -32,12 +32,19 @@ defaults:
     headers:
       User-Agent: "pu-shd-upcoming/0.1 (+https://github.com/pu-shd/upcoming)"
       Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-      # Load-bearing on every Site Builder host, not just one: measured, every event page
-      # returns 403 to every client without this header, while every ICS endpoint answers
-      # a bare request. So a missing value degrades enrichment ONLY -- the feed still
-      # publishes, green, with nothing scraped. No literal and no fallback default: the
-      # loader fails for any source with enrichment enabled when the secret is unset.
-      x-wdsoit-bot-bypass: "${secret:BOT_BYPASS_TOKEN}"
+
+    # Each named secret holds a WHOLE header line, "Name: value". The header name is not
+    # written here either, because it is a detail of someone else's bot-protection
+    # arrangement -- and a config file naming it invites the next reader to hardcode a
+    # plausible value beside it, which is exactly how the predecessors ended up sending
+    # "1" and 403ing on every page.
+    #
+    # Load-bearing on every Site Builder host, not just one: measured, every event page
+    # returns 403 to every client without this header, while every ICS endpoint answers a
+    # bare request. So an absent credential degrades enrichment ONLY -- the feed still
+    # publishes, green, with nothing scraped. There is no default: the loader fails for
+    # any source with enrichment enabled when the secret is unset.
+    secret_headers: [BOT_BYPASS_HEADER]
 
   # Ordered chain. Order is load-bearing: `detail_dash_name` must precede the room-token
   # rules, or "125 - Sherrerd Hall" mis-splits. Each rule declines rather than guessing,
@@ -143,7 +150,7 @@ sources:
     # LOCATION:TBD, so sentinel detection is exercised from the first source built.
     location_rules: [slash_room, room_token, whole]
     enrich:
-      - field: speaker
+      - field: speakers
         selectors:
           - "div.field--name-field-ps-event-speaker-name"
           - "div.event-subtitle"
@@ -173,9 +180,17 @@ sources:
   - slug: bioengineering
     label: Omenn-Darling Bioengineering Institute
     host: bioengineering.princeton.edu
-    # One event page carries 12 speaker-name fields (a multi-speaker symposium), which the
-    # scalar speaker field cannot represent. Enrichment stays off until that is decided.
+    # The Rising Stars symposium page lists four speakers (Jacqueline Bliley, André
+    # Forjaz, Helena Hu, Felix Radford). The model carries `speakers[]`, so all four
+    # survive; a scalar field would have published one and dropped three silently.
     location_rules: [comma_room, room_token, whole]
+    enrich:
+      - field: speakers
+        selectors: ["div.field--name-field-ps-event-speaker-name"]
+        mode: fill
+        # No provenance: this targets speakers, not the title.
+      - field: raw_details
+        selectors: ["div.events-detail-main", "div.event-details-main"]
     expectations:
       summary_role: title
       min_events: 1

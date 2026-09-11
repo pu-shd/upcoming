@@ -21,11 +21,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      # A visibly fake value. The registry refuses to load a source with enrichment
-      # enabled when this is unset -- which is the intended behaviour -- so CI supplies a
-      # placeholder to prove config loading, never to authenticate. The suite reaches no
-      # network: an autouse fixture makes any real socket connection raise.
-      BOT_BYPASS_TOKEN: ci-placeholder-not-a-credential
+      # A whole header line, "Name: value": the real secret carries the header name as
+      # well as its value, so neither is written in this repository. This is a visibly
+      # fake one. The registry refuses to load a source with enrichment enabled when the
+      # secret is unset, which is the intended behaviour, so CI supplies a placeholder to
+      # prove config loading and never to authenticate. The suite reaches no network --
+      # an autouse fixture makes any real socket connection raise.
+      BOT_BYPASS_HEADER: "x-ci-placeholder: not-a-credential"
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7

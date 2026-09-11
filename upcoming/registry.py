@@ -51,7 +51,14 @@ SUMMARY_ROLES = frozenset({"speaker", "title", "composite", "mixed"})
 #: possible.
 ENV_OVERRIDABLE = frozenset({"feed_url", "status", "enrich_enabled", "cadence"})
 
-_SECRET_RE = re.compile(r"^\$\{secret:(?P<name>[A-Z][A-Z0-9_]*)\}$")
+#: Fields a scrape may write. Validated at load, so a typo is a config error rather than a
+#: target that silently matches nothing.
+ENRICHABLE_FIELDS = frozenset({"title", "speakers", "content", "raw_details", "abstract", "bio"})
+
+#: Published but computed from another field, so scraping into them would be writing to a
+#: value that is recomputed on read. Maps the wrong target to the right one.
+DERIVED_FIELDS = {"speaker": "speakers", "affiliation": "speakers"}
+
 _SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 
 
@@ -224,36 +231,56 @@ def _merge(base: Mapping[str, Any], overlay: Mapping[str, Any]) -> dict[str, Any
     return out
 
 
-def _resolve_secrets(payload: Any, env: Mapping[str, str], *, where: str) -> Any:
-    """Replace ``${secret:NAME}`` references with values from ``env``.
+def parse_header_secret(body: str, *, secret_name: str, where: str) -> tuple[str, str]:
+    """Parse a secret whose body is a whole header line, ``Name: value``.
+
+    The secret carries the header *name* as well as its value, so neither appears in this
+    repository. That is stricter than holding just the value: the header name
+    ``x-wdsoit-bot-bypass`` is itself a detail of someone else's bot-protection
+    arrangement, and a config file naming it invites a reader to hardcode a plausible
+    value beside it -- which is exactly how the predecessors ended up sending ``1``.
+
+    Accepts ``Name: value`` and ``Name:value``. Splits on the first colon only, since a
+    header value may legitimately contain one.
+    """
+    text = body.strip()
+    name, separator, value = text.partition(":")
+    name, value = name.strip(), value.strip()
+    if not separator or not name or not value:
+        raise ConfigFatal(
+            f"{where}: secret {secret_name} must hold a whole header line as "
+            f'"Name: value" (for example "x-wdsoit-bot-bypass: true"). Got '
+            f"{len(text)} character(s) that do not parse as one."
+        )
+    return name, value
+
+
+def _resolve_secret_headers(names: Any, env: Mapping[str, str], *, where: str) -> dict[str, str]:
+    """Resolve each named secret into one request header.
 
     A missing secret is an error, never an empty string and never a default. The
     predecessors ship ``os.getenv("BOT_BYPASS_HEADER_VALUE", "1")`` and an inline
     ``|| '1'`` in CI, so when the secret is absent the pipeline sends a placeholder, gets
-    403 on every event page, and reports success. Failing here is the whole point.
+    403 on every event page, scrapes nothing, and reports success. Failing here is the
+    whole point.
     """
-    if isinstance(payload, dict):
-        return {k: _resolve_secrets(v, env, where=f"{where}.{k}") for k, v in payload.items()}
-    if isinstance(payload, list):
-        return [_resolve_secrets(v, env, where=f"{where}[{i}]") for i, v in enumerate(payload)]
-    if isinstance(payload, str):
-        match = _SECRET_RE.match(payload.strip())
-        if match:
-            name = match.group("name")
-            value = env.get(name)
-            if not value:
-                raise ConfigFatal(
-                    f"{where} needs secret {name}, which is unset or empty. It has no "
-                    f"default on purpose: a placeholder value would let every page fetch "
-                    f"403 while the run reported success."
-                )
-            return value
-        if "${secret:" in payload:
+    if isinstance(names, str) or not isinstance(names, list | tuple):
+        raise ConfigFatal(f"{where} must be a list of secret names, got {names!r}")
+
+    headers: dict[str, str] = {}
+    for entry in names:
+        if not isinstance(entry, str) or not entry:
+            raise ConfigFatal(f"{where}: {entry!r} is not a secret name")
+        body = env.get(entry)
+        if not body:
             raise ConfigFatal(
-                f"{where}: malformed secret reference {payload!r}; expected exactly "
-                f'"${{secret:NAME}}"'
+                f"{where} needs secret {entry}, which is unset or empty. It has no "
+                f"default on purpose: a placeholder value would let every event page "
+                f"fetch 403 while the run reported success."
             )
-    return payload
+        name, value = parse_header_secret(body, secret_name=entry, where=where)
+        headers[name] = value
+    return headers
 
 
 def _env_overrides(slug: str, env: Mapping[str, str]) -> dict[str, Any]:
@@ -313,11 +340,17 @@ def _build_expectations(raw: Mapping[str, Any], slug: str, status: str) -> Expec
     )
 
 
-def _build_http(raw: Mapping[str, Any]) -> HttpPolicy:
+def _build_http(
+    raw: Mapping[str, Any], extra_headers: Mapping[str, str] | None = None
+) -> HttpPolicy:
     http = dict(raw.get("http") or {})
     timeout = dict(http.get("timeout") or {})
+    headers = dict(http.get("headers") or {})
+    # Secret-derived headers are merged last so a config file cannot shadow one with a
+    # literal of the same name.
+    headers.update(extra_headers or {})
     return HttpPolicy(
-        headers=dict(http.get("headers") or {}),
+        headers=headers,
         connect_timeout=float(timeout.get("connect", 5.0)),
         read_timeout=float(timeout.get("read", 15.0)),
         retries=int(http.get("retries", 2)),
@@ -333,6 +366,18 @@ def _build_enrich(raw: Mapping[str, Any], slug: str) -> tuple[EnrichTarget, ...]
         field_name = entry.get("field")
         if not field_name:
             raise ConfigFatal(f"{slug}: enrich[{index}] has no field")
+        if field_name in DERIVED_FIELDS:
+            raise ConfigFatal(
+                f"{slug}: enrich[{index}] targets {field_name!r}, which is derived from "
+                f"{DERIVED_FIELDS[field_name]!r} rather than stored. Scraping into the "
+                f"scalar would keep one value and drop the rest -- bioengineering lists "
+                f"four speakers on one page. Target {DERIVED_FIELDS[field_name]!r}."
+            )
+        if field_name not in ENRICHABLE_FIELDS:
+            raise ConfigFatal(
+                f"{slug}: enrich[{index}] targets unknown field {field_name!r}. "
+                f"One of: {', '.join(sorted(ENRICHABLE_FIELDS))}."
+            )
         selectors = tuple(entry.get("selectors") or ())
         if not selectors:
             raise ConfigFatal(
@@ -454,17 +499,18 @@ def load_registry(
         merged = _merge(merged, _env_overrides(str(slug), env))
         source = _build_source(str(slug), merged)
 
-        # Resolve secrets only for sources that actually scrape, and only over the HTTP
-        # section that uses them. The bypass credential is needed for event *pages*, not
-        # for the feed -- measured: every ICS endpoint answers a bare request, every event
-        # page 403s without the header. So a source with no enrichment must load fine
-        # without the credential, while a source that scrapes must refuse to start without
-        # it rather than sending a placeholder and reporting success.
-        if source.enrichment_enabled and source.is_live:
-            resolved_http = _resolve_secrets(
-                merged.get("http") or {}, env, where=f"sources.{slug}.http"
+        # Resolve secret headers only for sources that actually scrape. The bypass
+        # credential is needed for event *pages*, not for the feed -- measured: every ICS
+        # endpoint answers a bare request, every event page 403s without the header. So a
+        # source with no enrichment must load fine without the credential, while a source
+        # that scrapes must refuse to start rather than send a placeholder and report
+        # success.
+        secret_header_names = (merged.get("http") or {}).get("secret_headers")
+        if secret_header_names and source.enrichment_enabled and source.is_live:
+            resolved = _resolve_secret_headers(
+                secret_header_names, env, where=f"sources.{slug}.http.secret_headers"
             )
-            source = replace(source, http=_build_http({"http": resolved_http}))
+            source = replace(source, http=_build_http(merged, resolved))
 
         sources.append(source)
 

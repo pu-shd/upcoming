@@ -34,10 +34,11 @@ and it is the failure this project is built to make impossible:
 `make sources` prints the one table that makes a copy-paste onboarding error visible:
 
 ```
-SOURCE          STATUS       SUMMARY IS  CADENCE  ENRICH               FEED
-orfe            live         speaker     30m      title,raw_details    https://orfe.princeton.edu/…
-mae             live         title       1h       speaker,raw_details  https://mae.princeton.edu/…
-ai              live         mixed       1h       -                    https://ai.princeton.edu/…
+SOURCE          STATUS       SUMMARY IS  CADENCE  ENRICH                FEED
+orfe            live         speaker     30m      title,raw_details     https://orfe.princeton.e…
+mae             live         title       1h       speakers,raw_details  https://mae.princeton.ed…
+ai              live         mixed       1h       -                     https://ai.princeton.edu…
+bioengineering  live         title       1h       speakers,raw_details  https://bioengineering.p…
 ```
 
 ## Sources
@@ -61,6 +62,11 @@ Four shapes the design has to accommodate, each drawn from the live data:
   18** events; `mae` has one event whose entire `SUMMARY` is the string `TBD`. `TBD` is
   treated as absence — publishing it would satisfy the schema's `minLength: 1` and be
   wrong.
+- **An event can have several speakers.** `bioengineering`'s Rising Stars symposium lists
+  four. `speakers[]` is canonical, and the scalar `speaker` and `affiliation` are derived
+  properties published alongside it so the existing ingest keeps working. `affiliation` is
+  empty when the speakers disagree, because picking the first would attribute one person's
+  institution to the whole panel.
 - **Empty is not the same as broken.** `kellercenter` is legitimately empty. Only its
   `allow_empty` declaration knows that, because the two payloads are identical.
 
@@ -73,22 +79,34 @@ to unauthenticated REST.
 
 ## The bypass credential
 
-Every Site Builder **event page** returns `403` to every client without the
-`x-wdsoit-bot-bypass` header. Every **ICS endpoint** answers a bare request. That asymmetry
-is the trap: with no credential the feed still publishes, green, having scraped nothing.
+Every Site Builder **event page** returns `403` to every client without a bot-bypass
+header. Every **ICS endpoint** answers a bare request. That asymmetry is the trap: with no
+credential the feed still publishes, green, having scraped nothing.
 
-So `BOT_BYPASS_TOKEN` has **no literal value and no default anywhere**. A source with
-enrichment enabled refuses to load without it:
+The repository secret **`BOT_BYPASS_HEADER` holds a whole header line**, `Name: value` — so
+the header *name* is not written here either. Holding only the value would still leave the
+header named in a config file, and a named header with no value beside it invites the next
+reader to supply a plausible one. That is exactly how the predecessors came to send `1`.
+
+There is no default anywhere. A source with enrichment enabled refuses to load without it:
 
 ```
 $ make check
-configuration error: sources.orfe.http.headers.x-wdsoit-bot-bypass needs secret
-BOT_BYPASS_TOKEN, which is unset or empty. It has no default on purpose: a placeholder
-value would let every page fetch 403 while the run reported success.
+configuration error: sources.orfe.http.secret_headers needs secret BOT_BYPASS_HEADER,
+which is unset or empty. It has no default on purpose: a placeholder value would let
+every event page fetch 403 while the run reported success.
+```
+
+The registry references it by name only, and only sources that actually scrape require it:
+
+```yaml
+http:
+  secret_headers: [BOT_BYPASS_HEADER]
 ```
 
 Keep it a secret rather than a repository variable — variable values are not masked in
-Actions logs.
+Actions logs. A secret whose body is not a parseable header line is refused, and the
+refusal never echoes the body.
 
 ## Usage
 
@@ -125,6 +143,11 @@ placeholder against a named speaker.
 
 **`sources` is always an array**, length 1 in a per-source feed and length N in a combined
 one, so consumers parse both identically.
+
+**Derived fields are computed, never stored.** `speaker` and `affiliation` are properties
+over `speakers[]`, so they cannot fall out of step with it — and the loader refuses an
+enrichment target that names one of them, since scraping into the scalar would keep one
+speaker and silently drop the rest.
 
 **Environment access lives in exactly one module.** A test enforces it. The predecessor
 reads `os.getenv` inside leaf functions — 21 call sites in its enrichment module alone —

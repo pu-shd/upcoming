@@ -17,7 +17,7 @@ from tests.support import REPO_ROOT, TEST_ENV
 #: would otherwise leak into assertions and make a failure look like a code regression --
 #: the predecessor hit this and had to scrub nine names by hand.
 _ISOLATED_PREFIXES = ("UPCOMING_",)
-_ISOLATED_NAMES = ("BOT_BYPASS_TOKEN",)
+_ISOLATED_NAMES = ("BOT_BYPASS_HEADER",)
 
 
 class NetworkAccessInTests(RuntimeError):

@@ -14,10 +14,11 @@ services:
     working_dir: /app
     environment:
       TZ: America/New_York
-      # A value, not a real credential. The registry refuses to load a source with
-      # enrichment enabled when this is unset, which is the intended behaviour -- so the
+      # A whole header line, "Name: value" -- the secret carries the header name too, so
+      # neither appears in this repository. The registry refuses to load a source with
+      # enrichment enabled when this is unset, which is the intended behaviour, so the
       # test run supplies a placeholder to prove config loading, never to authenticate.
-      BOT_BYPASS_TOKEN: docker-test-token
+      BOT_BYPASS_HEADER: "x-compose-placeholder: not-a-credential"
     # Bind-mount so iterating needs no rebuild.
     volumes:
       - .:/app
@@ -45,5 +46,5 @@ services:
       service: tests
     environment:
       TZ: America/New_York
-      BOT_BYPASS_TOKEN: docker-test-token
+      BOT_BYPASS_HEADER: "x-compose-placeholder: not-a-credential"
     command: python -m upcoming.cli sources

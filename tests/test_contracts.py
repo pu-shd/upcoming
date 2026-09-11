@@ -111,8 +111,8 @@ def test_no_workflow_gives_the_bypass_credential_a_plausible_default(path: Path)
     text = path.read_text(encoding="utf-8")
     assert "|| '1'" not in text and '|| "1"' not in text
     for line in text.splitlines():
-        if "BOT_BYPASS_TOKEN:" in line:
-            value = line.split("BOT_BYPASS_TOKEN:", 1)[1].strip()
+        if "BOT_BYPASS_HEADER:" in line:
+            value = line.split("BOT_BYPASS_HEADER:", 1)[1].strip()
             assert value not in {"1", "'1'", '"1"'}, (
                 f"{path.name} gives the bypass credential the value {value}, which is what "
                 f"makes a total scrape failure look like success"
@@ -128,7 +128,7 @@ def test_the_registry_is_validated_before_anything_uses_it(
     """`upcoming check` is the cheapest gate; it must stay reachable from the CLI."""
     from upcoming.cli import EXIT_OK, main
 
-    monkeypatch.setenv("BOT_BYPASS_TOKEN", "contract-test-token")
+    monkeypatch.setenv("BOT_BYPASS_HEADER", "x-contract-test: placeholder")
     registry = str(REPO_ROOT / "config" / "sources.yaml")
     assert main(["--registry", registry, "check"]) == EXIT_OK
 
@@ -143,10 +143,10 @@ def test_check_fails_loudly_when_the_credential_is_absent(
     """
     from upcoming.cli import EXIT_CONFIG, main
 
-    monkeypatch.delenv("BOT_BYPASS_TOKEN", raising=False)
+    monkeypatch.delenv("BOT_BYPASS_HEADER", raising=False)
     registry = str(REPO_ROOT / "config" / "sources.yaml")
     assert main(["--registry", registry, "check"]) == EXIT_CONFIG
-    assert "BOT_BYPASS_TOKEN" in capsys.readouterr().err
+    assert "BOT_BYPASS_HEADER" in capsys.readouterr().err
 
 
 # --------------------------------------------------------------------------------------

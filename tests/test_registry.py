@@ -13,9 +13,14 @@ from pathlib import Path
 
 import pytest
 
-from tests.support import TEST_ENV
+from tests.support import REPO_ROOT, TEST_ENV
 from upcoming.errors import ConfigFatal
-from upcoming.registry import STATUS_LIVE, STATUS_UNAVAILABLE, load_registry
+from upcoming.registry import (
+    STATUS_LIVE,
+    STATUS_UNAVAILABLE,
+    load_registry,
+    parse_header_secret,
+)
 
 MINIMAL = """
 defaults:
@@ -160,10 +165,27 @@ def test_provenance_is_only_claimed_for_the_title_field(registry) -> None:
                 assert target.field_name == "title"
 
 
-def test_mae_scrapes_the_speaker_without_claiming_title_provenance(registry) -> None:
+def test_mae_scrapes_speakers_without_claiming_title_provenance(registry) -> None:
     targets = {t.field_name: t for t in registry.by_slug("mae").enrich}
-    assert "speaker" in targets
-    assert targets["speaker"].provenance is None
+    assert "speakers" in targets
+    assert targets["speakers"].provenance is None
+
+
+def test_speaker_enrichment_targets_the_plural_field(registry) -> None:
+    """The model carries `speakers[]`; a scalar target would drop every speaker but one.
+
+    Measured: bioengineering's Rising Stars symposium lists four.
+    """
+    for source in registry.sources:
+        for target in source.enrich:
+            assert target.field_name != "speaker", (
+                f"{source.slug} enriches the derived scalar `speaker`; target `speakers`"
+            )
+
+
+def test_bioengineering_scrapes_its_multi_speaker_pages(registry) -> None:
+    targets = {t.field_name for t in registry.by_slug("bioengineering").enrich}
+    assert "speakers" in targets
 
 
 def test_403_is_not_retryable(registry) -> None:
@@ -249,8 +271,7 @@ def test_a_missing_secret_fails_the_load_rather_than_defaulting(tmp_path: Path) 
           url_template: "https://{host}/feeds/events/ical.ics"
           location_rules: [whole]
           http:
-            headers:
-              x-wdsoit-bot-bypass: "${secret:BOT_BYPASS_TOKEN}"
+            secret_headers: [BOT_BYPASS_HEADER]
         sources:
           - slug: alpha
             host: alpha.example.edu
@@ -261,7 +282,7 @@ def test_a_missing_secret_fails_the_load_rather_than_defaulting(tmp_path: Path) 
               summary_role: title
         """,
     )
-    with pytest.raises(ConfigFatal, match="BOT_BYPASS_TOKEN"):
+    with pytest.raises(ConfigFatal, match="BOT_BYPASS_HEADER"):
         load_registry(path, env={})
 
 
@@ -273,8 +294,7 @@ def test_an_empty_secret_is_treated_as_missing(tmp_path: Path) -> None:
           url_template: "https://{host}/feeds/events/ical.ics"
           location_rules: [whole]
           http:
-            headers:
-              x-wdsoit-bot-bypass: "${secret:BOT_BYPASS_TOKEN}"
+            secret_headers: [BOT_BYPASS_HEADER]
         sources:
           - slug: alpha
             host: alpha.example.edu
@@ -285,8 +305,8 @@ def test_an_empty_secret_is_treated_as_missing(tmp_path: Path) -> None:
               summary_role: title
         """,
     )
-    with pytest.raises(ConfigFatal, match="BOT_BYPASS_TOKEN"):
-        load_registry(path, env={"BOT_BYPASS_TOKEN": ""})
+    with pytest.raises(ConfigFatal, match="BOT_BYPASS_HEADER"):
+        load_registry(path, env={"BOT_BYPASS_HEADER": ""})
 
 
 def test_a_source_without_enrichment_loads_without_the_secret(tmp_path: Path) -> None:
@@ -303,8 +323,7 @@ def test_a_source_without_enrichment_loads_without_the_secret(tmp_path: Path) ->
           url_template: "https://{host}/feeds/events/ical.ics"
           location_rules: [whole]
           http:
-            headers:
-              x-wdsoit-bot-bypass: "${secret:BOT_BYPASS_TOKEN}"
+            secret_headers: [BOT_BYPASS_HEADER]
         sources:
           - slug: alpha
             host: alpha.example.edu
@@ -324,8 +343,7 @@ def test_the_resolved_secret_reaches_the_http_headers(tmp_path: Path) -> None:
           url_template: "https://{host}/feeds/events/ical.ics"
           location_rules: [whole]
           http:
-            headers:
-              x-wdsoit-bot-bypass: "${secret:BOT_BYPASS_TOKEN}"
+            secret_headers: [BOT_BYPASS_HEADER]
         sources:
           - slug: alpha
             host: alpha.example.edu
@@ -336,8 +354,8 @@ def test_the_resolved_secret_reaches_the_http_headers(tmp_path: Path) -> None:
               summary_role: title
         """,
     )
-    source = load_registry(path, env={"BOT_BYPASS_TOKEN": "real-value"}).by_slug("alpha")
-    assert source.http.headers["x-wdsoit-bot-bypass"] == "real-value"
+    source = load_registry(path, env={"BOT_BYPASS_HEADER": "x-real: real-value"}).by_slug("alpha")
+    assert source.http.headers["x-real"] == "real-value"
 
 
 def test_the_fingerprint_hashes_the_reference_not_the_secret_value(tmp_path: Path) -> None:
@@ -355,8 +373,7 @@ def test_the_fingerprint_hashes_the_reference_not_the_secret_value(tmp_path: Pat
           url_template: "https://{host}/feeds/events/ical.ics"
           location_rules: [whole]
           http:
-            headers:
-              x-wdsoit-bot-bypass: "${secret:BOT_BYPASS_TOKEN}"
+            secret_headers: [BOT_BYPASS_HEADER]
         sources:
           - slug: alpha
             host: alpha.example.edu
@@ -367,8 +384,8 @@ def test_the_fingerprint_hashes_the_reference_not_the_secret_value(tmp_path: Pat
               summary_role: title
         """,
     )
-    first = load_registry(path, env={"BOT_BYPASS_TOKEN": "one"}).by_slug("alpha")
-    second = load_registry(path, env={"BOT_BYPASS_TOKEN": "two"}).by_slug("alpha")
+    first = load_registry(path, env={"BOT_BYPASS_HEADER": "x-h: one"}).by_slug("alpha")
+    second = load_registry(path, env={"BOT_BYPASS_HEADER": "x-h: two"}).by_slug("alpha")
     assert first.fingerprint() == second.fingerprint()
     assert "one" not in str(first.raw) and "two" not in str(second.raw)
 
@@ -457,7 +474,7 @@ def test_claiming_title_provenance_for_another_field_is_refused(tmp_path: Path) 
           - slug: alpha
             host: alpha.example.edu
             enrich:
-              - field: speaker
+              - field: speakers
                 selectors: ["div.speaker"]
                 provenance: enriched
             expectations:
@@ -627,3 +644,199 @@ def test_env_cannot_change_selectors(tmp_path: Path) -> None:
     env = dict(TEST_ENV, UPCOMING_ALPHA_ENRICH_SELECTORS="div.anything")
     with pytest.raises(ConfigFatal, match="not an overridable key"):
         load_registry(path, env=env)
+
+
+# --------------------------------------------------------------------------------------
+# Secret-as-header-line
+# --------------------------------------------------------------------------------------
+
+
+def test_a_secret_supplies_the_header_name_as_well_as_its_value(tmp_path: Path) -> None:
+    """Neither the header name nor its value is written in this repository.
+
+    Holding only the value would still leave ``x-wdsoit-bot-bypass`` in a config file, and
+    a named header with no value beside it invites the next reader to supply a plausible
+    one -- which is precisely how the predecessors came to send ``1``.
+    """
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+          location_rules: [whole]
+          http:
+            secret_headers: [BOT_BYPASS_HEADER]
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            enrich:
+              - field: title
+                selectors: ["div.event-subtitle"]
+            expectations:
+              summary_role: title
+        """,
+    )
+    headers = (
+        load_registry(path, env={"BOT_BYPASS_HEADER": "x-wdsoit-bot-bypass: true"})
+        .by_slug("alpha")
+        .http.headers
+    )
+    assert headers["x-wdsoit-bot-bypass"] == "true"
+    # Nothing about the header appears in the committed registry.
+    assert "x-wdsoit-bot-bypass" not in path.read_text(encoding="utf-8")
+
+
+@pytest.mark.parametrize(
+    "body,name,value",
+    [
+        ("x-wdsoit-bot-bypass: true", "x-wdsoit-bot-bypass", "true"),
+        # No space after the colon -- the form the secret is actually set to.
+        ("x-wdsoit-bot-bypass:true", "x-wdsoit-bot-bypass", "true"),
+        ("  x-wdsoit-bot-bypass :  true  ", "x-wdsoit-bot-bypass", "true"),
+        # A value may legitimately contain a colon, so only the first one splits.
+        ("x-trace: a:b:c", "x-trace", "a:b:c"),
+    ],
+)
+def test_header_secret_shapes_that_parse(body: str, name: str, value: str) -> None:
+    assert parse_header_secret(body, secret_name="S", where="w") == (name, value)
+
+
+@pytest.mark.parametrize(
+    "body",
+    [
+        "",
+        "   ",
+        "just-a-token",  # the old value-only form; now a hard error
+        "x-only-a-name:",
+        ": only-a-value",
+        ":",
+    ],
+)
+def test_a_secret_that_is_not_a_header_line_is_refused(body: str) -> None:
+    """Silently accepting a bare token would send a header named after the whole secret.
+
+    The error also avoids echoing the body, since it may be a real credential.
+    """
+    with pytest.raises(ConfigFatal, match="whole header line"):
+        parse_header_secret(body, secret_name="BOT_BYPASS_HEADER", where="w")
+
+
+def test_the_refusal_does_not_echo_the_secret_body() -> None:
+    """Error text reaches logs; a credential must not ride along."""
+    try:
+        parse_header_secret("s3cr3t-value-no-colon", secret_name="S", where="w")
+    except ConfigFatal as exc:
+        assert "s3cr3t-value-no-colon" not in str(exc)
+    else:  # pragma: no cover
+        pytest.fail("expected a refusal")
+
+
+def test_a_secret_header_cannot_be_shadowed_by_a_config_literal(tmp_path: Path) -> None:
+    """Otherwise a committed literal could quietly override the credential."""
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+          location_rules: [whole]
+          http:
+            secret_headers: [BOT_BYPASS_HEADER]
+            headers:
+              x-shadow: "1"
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            enrich:
+              - field: title
+                selectors: ["div.event-subtitle"]
+            expectations:
+              summary_role: title
+        """,
+    )
+    source = load_registry(path, env={"BOT_BYPASS_HEADER": "x-shadow: real"}).by_slug("alpha")
+    assert source.http.headers["x-shadow"] == "real"
+
+
+def test_secret_headers_must_be_a_list(tmp_path: Path) -> None:
+    """A bare string would iterate character by character and ask for one-letter secrets."""
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+          location_rules: [whole]
+          http:
+            secret_headers: BOT_BYPASS_HEADER
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            enrich:
+              - field: title
+                selectors: ["div.event-subtitle"]
+            expectations:
+              summary_role: title
+        """,
+    )
+    with pytest.raises(ConfigFatal, match="list of secret names"):
+        load_registry(path, env=TEST_ENV)
+
+
+def test_the_committed_registry_names_no_header_at_all() -> None:
+    """The repository must not carry the header name or a value for it."""
+    body = (REPO_ROOT / "config" / "sources.yaml").read_text(encoding="utf-8")
+    assert "secret_headers" in body, "the registry should reference the secret by name"
+    # The name appears only inside an explanatory comment, never as a config key or value.
+    for line in body.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("#") or not stripped:
+            continue
+        assert "wdsoit" not in stripped, f"header name appears in config: {stripped!r}"
+
+
+def test_enriching_the_derived_speaker_scalar_is_refused(tmp_path: Path) -> None:
+    """Scraping into the scalar would keep one speaker and drop the rest.
+
+    Enforced in the loader rather than only in a review guideline, because the plural and
+    singular names differ by one character and the failure would be silent: four speakers
+    scraped, one published.
+    """
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+          location_rules: [whole]
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            enrich:
+              - field: speaker
+                selectors: ["div.speaker"]
+            expectations:
+              summary_role: title
+        """,
+    )
+    with pytest.raises(ConfigFatal, match="derived from 'speakers'"):
+        load_registry(path, env=TEST_ENV)
+
+
+def test_an_unknown_enrichment_target_is_refused(tmp_path: Path) -> None:
+    """A typo'd target would scrape and write nowhere, reporting success."""
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+          location_rules: [whole]
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            enrich:
+              - field: titel
+                selectors: ["div.event-subtitle"]
+            expectations:
+              summary_role: title
+        """,
+    )
+    with pytest.raises(ConfigFatal, match="unknown field 'titel'"):
+        load_registry(path, env=TEST_ENV)

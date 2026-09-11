@@ -17,6 +17,7 @@ from upcoming.model import (
     WIRE_FIELDS,
     Event,
     Location,
+    Speaker,
     normalize_instant,
     to_wire,
 )
@@ -193,11 +194,33 @@ def test_wire_keys_follow_the_declared_order_exactly() -> None:
     assert list(wire) == [wire_key for wire_key, _ in WIRE_FIELDS]
 
 
-def test_every_model_field_has_a_wire_key() -> None:
+def test_every_stored_field_has_a_wire_key() -> None:
     """A field added to the model without a wire key would silently never publish."""
     mapped = {attr for _, attr in WIRE_FIELDS}
     declared = {f.name for f in fields(Event)}
-    assert declared == mapped, f"unmapped model fields: {sorted(declared - mapped)}"
+    assert not declared - mapped, f"stored but never published: {sorted(declared - mapped)}"
+
+
+def test_every_wire_key_resolves_on_an_event() -> None:
+    """The other direction: a typo'd attribute name would raise at serialization time.
+
+    Cannot be an equality check against the dataclass fields, because `speaker` and
+    `affiliation` are deliberately derived properties rather than stored state.
+    """
+    event = make_event()
+    for wire_key, attr in WIRE_FIELDS:
+        assert hasattr(event, attr), f"{wire_key} maps to missing attribute {attr!r}"
+
+
+def test_the_wire_keys_beyond_the_stored_fields_are_derived_properties() -> None:
+    """Anything published but not stored must be computed, never a second copy of state.
+
+    Two copies of the speaker list is how they come to disagree.
+    """
+    extra = {attr for _, attr in WIRE_FIELDS} - {f.name for f in fields(Event)}
+    assert extra == {"speaker", "affiliation"}
+    for attr in extra:
+        assert isinstance(getattr(Event, attr), property)
 
 
 def test_sources_serializes_as_an_array_even_for_one_source() -> None:
@@ -248,3 +271,95 @@ def test_with_sources_preserves_everything_else() -> None:
     assert merged.sources == ("cee", "mae")
     assert merged.title == original.title
     assert merged.id == original.id
+
+
+# --------------------------------------------------------------------------------------
+# Speakers
+# --------------------------------------------------------------------------------------
+
+
+def test_one_speaker_reads_as_a_scalar_for_the_existing_ingest() -> None:
+    event = make_event(speakers=(Speaker("Elynn Chen", "New York University"),))
+    assert event.speaker == "Elynn Chen"
+    assert event.affiliation == "New York University"
+
+
+def test_four_speakers_all_survive() -> None:
+    """Measured: bioengineering's Rising Stars symposium lists four speakers.
+
+    Flattening to one scalar would silently drop three people -- valid output, wrong, and
+    nothing anywhere reporting it.
+    """
+    names = ["Jacqueline Bliley", "André Forjaz", "Helena Hu", "Felix Radford"]
+    event = make_event(speakers=tuple(Speaker(n) for n in names))
+
+    assert [s.name for s in event.speakers] == names
+    assert event.speaker == "Jacqueline Bliley; André Forjaz; Helena Hu; Felix Radford"
+    wire = to_wire(event)
+    assert [s["name"] for s in wire["speakers"]] == names
+
+
+def test_speakers_are_joined_with_a_semicolon_not_a_comma() -> None:
+    """A comma is already taken.
+
+    These feeds use a comma *within* one speaker to separate name from affiliation
+    (``Elynn Chen, New York University``), so comma-joining several speakers would produce
+    a string no consumer could tell from one speaker with two affiliations.
+    """
+    event = make_event(speakers=(Speaker("A Person"), Speaker("B Person")))
+    assert event.speaker == "A Person; B Person"
+    assert ", " not in event.speaker
+
+
+def test_the_scalar_affiliation_is_empty_when_speakers_disagree() -> None:
+    """There is no single answer, and picking the first would attribute one person's
+    institution to everyone else on the panel."""
+    event = make_event(
+        speakers=(Speaker("A", "Princeton University"), Speaker("B", "MIT")),
+    )
+    assert event.affiliation == ""
+    # The per-speaker truth is still available.
+    assert [s.affiliation for s in event.speakers] == ["Princeton University", "MIT"]
+
+
+def test_a_shared_affiliation_still_reads_as_a_scalar() -> None:
+    event = make_event(speakers=(Speaker("A", "Princeton"), Speaker("B", "Princeton")))
+    assert event.affiliation == "Princeton"
+
+
+def test_no_speakers_yields_empty_scalars() -> None:
+    """ORFE's FPO events and quantum's TBD entries both reach here."""
+    event = make_event()
+    assert event.speakers == ()
+    assert event.speaker == ""
+    assert event.affiliation == ""
+
+
+def test_a_nameless_speaker_is_not_joined_into_the_scalar() -> None:
+    """Guards against a stray empty scrape producing "A Person; " with a trailing joiner."""
+    event = make_event(speakers=(Speaker("A Person"), Speaker("")))
+    assert event.speaker == "A Person"
+
+
+def test_the_derived_scalars_cannot_disagree_with_the_speakers() -> None:
+    """They are properties, not stored fields, so there is no state to fall out of step.
+
+    The predecessor stores a single scalar, which is why a second speaker had nowhere to go.
+    """
+    assert isinstance(type(make_event()).speaker, property)
+    assert isinstance(type(make_event()).affiliation, property)
+
+
+def test_speaker_display_pairs_name_with_affiliation() -> None:
+    assert Speaker("Sean Roberts", "University of Texas at Austin").display == (
+        "Sean Roberts, University of Texas at Austin"
+    )
+    assert Speaker("Sean Roberts").display == "Sean Roberts"
+
+
+def test_speakers_serialize_as_objects_with_both_keys() -> None:
+    wire = to_wire(make_event(speakers=(Speaker("A", "Princeton"),)))
+    assert wire["speakers"] == [{"name": "A", "affiliation": "Princeton"}]
+    # The scalars are published alongside, so the existing ingest needs no change.
+    assert wire["speaker"] == "A"
+    assert wire["affiliation"] == "Princeton"
