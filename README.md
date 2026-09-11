@@ -1,39 +1,25 @@
-# upcoming
+# Upcoming
 
-Campus event feeds for SHD — at Sherrerd Hall, and Beyond.
+Campus event feeds pulled from what departments, units, and centers advertise.
 
-One `events.json` per data source, plus combined feeds composed from them by declared set
-algebra. A refactor of [pu-orfe/upcoming](https://github.com/pu-orfe/upcoming), informed by
+This project is a heavy refactor of [pu-orfe/upcoming](https://github.com/pu-orfe/upcoming), informed by
 [pubino/mae-upcoming](https://github.com/pubino/mae-upcoming).
 
-> **Status: all twelve live sources build, and four enrich from their event pages.**
-> Every source produces `events.json` from committed fixtures, offline; `orfe` and `mae`
-> are additionally checked field-by-field against the predecessor's own expected output.
+## Implementation
 
-## The important section
+This project attempts to satisfy a consistent schema from event publishers' practice of putting **the same information in different fields**.
 
-These feeds put **the same information in different fields**, and they all satisfy the same
-schema. `orfe` writes the *speaker* into the ICS `SUMMARY` and puts the talk title on the
-event page; `mae` does the exact reverse. So running one department's mapping against the
-other's feed produces output that is schema-valid, error-free, and useless — the title
-sitting in `speaker` and the speaker sitting in `title`, with nothing anywhere reporting a
-problem.
+For example, `orfe` writes the *speaker* into the ICS `SUMMARY` and puts the talk title on the event page; `mae` does the exact reverse.
 
-That is why `mae-upcoming` exists as a *fork* rather than a second source in one pipeline,
-and it is the failure this project is built to make impossible:
+So running one department's mapping against the other's feed produces output that is schema-valid and error-free but incorrect.
 
-- **`expectations.summary_role` has no default.** A source that does not declare what its
-  `SUMMARY` field means fails to load. Every possible default is wrong for roughly half
-  these feeds, and wrong invisibly, so the only fix is to refuse to have one. Three values:
-  `speaker`, `title`, and `rules` for the four feeds where it varies event by event.
-- **Every mapping decision is recorded on the event** (`mappingRules`, `locationRule`,
-  `titleSource`, `summaryRaw`), so "which field did `SUMMARY` go to?" is answerable from
-  published output alone.
-- **Declining to guess is a first-class outcome.** An unsplittable venue keeps its whole
-  string as `location.name` rather than being guessed apart; text a rule cannot classify is
-  parked in `summaryRest` and counted, never assigned to a plausible-looking field.
+To address this:
 
-`make sources` prints the one table that makes a copy-paste onboarding error visible:
+- **`expectations.summary_role` has no default.** The role the `SUMMARY` field plays must be configured per-source, otherwise the feed fails to load with options for `speaker`, `title`, and `rules` for defining how to interpret more complex usage.
+- **Mapping decisions are recorded on the event.** Fields like `mappingRules`, `locationRule`, `titleSource`, `summaryRaw` help answer questions like "which field did `SUMMARY` go to?"
+- **If a decision cannot be made, the code gives up.** Text a rule cannot classify is parked in `summaryRest` and counted, never assigned to a plausible-looking but potentially incorrect field.
+
+Run `make sources` to print a table to see how a source feed is configured:
 
 ```
 SOURCE          STATUS       SUMMARY IS  CADENCE  ENRICH                FEED
@@ -45,7 +31,7 @@ bioengineering  live         title       1h       speakers,raw_details  https://
 
 ## Sources
 
-17 declared: 12 live, 5 recorded as unavailable. All of it measured, not assumed.
+17 total: 12 live, 5 recorded as unavailable.
 
 | | |
 |---|---|
@@ -53,62 +39,21 @@ bioengineering  live         title       1h       speakers,raw_details  https://
 | **Live, different platform** | `kellercenter` — `PRODID:-//Drupal iCal API//EN`, currently a well-formed calendar with **zero events** |
 | **Declared unavailable** | `nextg`, `cs`, `acee`, `decenter`, `metro` |
 
-Four shapes the design has to accommodate, each drawn from the live data:
+The design accommodates 4 main inconsistencies:
 
-- **`SUMMARY` is not consistent even within one feed.** `ai` carries a bare speaker name, a
-  full talk title, *and* a series label across different events, so it is declared `mixed`.
-- **Location conventions mix within one feed.** `cbe` writes both `E105 SEAS-BioE` and
-  `SEAS-CBE F212`, so the room rule splits only when exactly one end of the string looks
+- **`SUMMARY` is not consistent, even within one feed.** For example, `ai` carries a bare speaker name, a
+  full talk title, *and* a series label across different events, so it is declared as a `mixed` field.
+- **Location conventions mix within one feed.** `cbe` writes both `E105 SEAS-BioE` and `SEAS-CBE F212`, so the room rule splits only when exactly one end of the string looks
   like a room, and declines otherwise.
-- **`TBD` is common, not exceptional.** `quantum` carries a placeholder title in **14 of
-  18** events; `mae` has one event whose entire `SUMMARY` is the string `TBD`. `TBD` is
-  treated as absence — publishing it would satisfy the schema's `minLength: 1` and be
-  wrong.
-- **An event can have several speakers.** `bioengineering`'s Rising Stars symposium lists
-  four. `speakers[]` is canonical, and the scalar `speaker` and `affiliation` are derived
+- **`TBD` is common, not exceptional.** `TBD` is treated as absence — publishing it would satisfy the schema's `minLength: 1` and be wrong.
+- **An event can have several speakers.** `speakers[]` is canonical, and the scalar `speaker` and `affiliation` are derived
   properties published alongside it so the existing ingest keeps working. `affiliation` is
-  empty when the speakers disagree, because picking the first would attribute one person's
-  institution to the whole panel.
+  empty when the speakers disagree.
 - **Empty is not the same as broken.** `kellercenter` is legitimately empty. Only its
   `allow_empty` declaration knows that, because the two payloads are identical.
 
 Each unavailable source records *why*, so nobody repeats the investigation — run
-`make check` to read them. Short version: `nextg` has no feed of its own and no
-discriminator in `ece`'s data to filter on; `cs` is Drupal without an iCal view (and
-`cs.princeton.edu` just redirects to `www.cs.princeton.edu`, so it is not a second host);
-`acee`, `decenter`, and `metro` are WordPress with no ICS export and no event dates exposed
-to unauthenticated REST.
-
-## The bypass credential
-
-Every Site Builder **event page** returns `403` to every client without a bot-bypass
-header. Every **ICS endpoint** answers a bare request. That asymmetry is the trap: with no
-credential the feed still publishes, green, having scraped nothing.
-
-The repository secret **`BOT_BYPASS_HEADER` holds a whole header line**, `Name: value` — so
-the header *name* is not written here either. Holding only the value would still leave the
-header named in a config file, and a named header with no value beside it invites the next
-reader to supply a plausible one. That is exactly how the predecessors came to send `1`.
-
-There is no default anywhere. A source with enrichment enabled refuses to load without it:
-
-```
-$ make check
-configuration error: sources.orfe.http.secret_headers needs secret BOT_BYPASS_HEADER,
-which is unset or empty. It has no default on purpose: a placeholder value would let
-every event page fetch 403 while the run reported success.
-```
-
-The registry references it by name only, and only sources that actually scrape require it:
-
-```yaml
-http:
-  secret_headers: [BOT_BYPASS_HEADER]
-```
-
-Keep it a secret rather than a repository variable — variable values are not masked in
-Actions logs. A secret whose body is not a parseable header line is refused, and the
-refusal never echoes the body.
+`make check` to read them.
 
 ## Usage
 
@@ -125,14 +70,9 @@ make lint typecheck    # ruff + mypy
 make docker-test       # the suite in the container (the path CI runs)
 ```
 
-Building and publishing reach no network by default: they read the committed fixtures, so a
-developer runs the same code path over known bytes that CI runs over live ones. `make
-publish FETCH=1` and `make publish ENRICH=1` are the opt-ins. The suite enforces the same
-thing at the socket layer.
+Requires Python 3.12+. Docker Compose is invoked as `docker-compose` (Homebrew).
 
-Requires Python 3.12+. Docker Compose is invoked as `docker-compose`.
-
-## When one field means several things
+## The Worst Case: When one field means several things
 
 Four feeds pack more than one field into `SUMMARY`, or mean different things by it on
 different events of the same feed. They declare an ordered rule chain instead of a single
@@ -188,10 +128,6 @@ make build SOURCE=orfe            # feed only; reaches no network
 make build SOURCE=orfe ENRICH=1   # also scrapes the event pages
 ```
 
-Against the live site that takes ORFE from 14 synthesized titles to 3, with 14 pages
-fetched for 28 field reads — each page is fetched and parsed once per run, however many
-fields read it.
-
 The layering matches the rule chains. **One target is harmonized**: `div.events-detail-main`
 is present on all 11 live hosts and means the same thing on each, so it is written once in
 `defaults:`. **Everything semantic is per source**, because `div.event-subtitle` carries
@@ -214,24 +150,6 @@ Three things a target can declare:
 real person, correctly scraped, and the wrong one. Publishing it as the speaker would be
 schema-valid and false. The decline is counted, so a selector that always rejects surfaces
 rather than quietly yielding nothing.
-
-### Telling a blocked scrape from an empty page
-
-Every Site Builder event page returns 403 without the bypass header. The predecessor's
-fetch helper catches its own `raise_for_status` and returns `""`, so a run where *every*
-page is blocked reports `attempted=125 updated=0 errors=0` — byte-identical to a clean run
-that found nothing, and it publishes a green feed with every enrichment empty.
-
-So fetching returns a typed outcome, and the health gate reads a **success rate** rather
-than an error count:
-
-```
-orfe: title: reached 0 of 14 pages (0%, floor 80%); 14 HTTP error(s), 0 network error(s).
-Every request failed, which is the shape of a bot challenge rather than a content problem
--- check the bypass credential for this host.
-```
-
-A page that loads and simply has no abstract is not a failure, and is counted separately.
 
 ## What gets published
 
@@ -267,9 +185,8 @@ The feeds deliberately carry **no timestamp**, which is what lets published byte
 compared byte-for-byte to detect drift — so `status.json` is the only file with a clock,
 and the only way a consumer can tell fresh from frozen. It names every feed, its status
 (`ok` / `empty` / `failed` / `disabled`), its event count, whether it is stale, why, and
-`lastSuccessAt` — when its content was last built from a live fetch. That last field is
-carried forward across failures, which is what makes staleness a **duration** rather than
-a yes/no: without it, every run of a week-long outage would look like its first.
+`lastSuccessAt`, e.g., when its content was last built from a live fetch. That last field is
+carried forward across failures, which is how we measure staleness.
 
 `empty` is first-class rather than a kind of failure: `kellercenter` serves a well-formed
 calendar with no events, and that payload is byte-identical to a broken source's. Only the
@@ -277,15 +194,9 @@ source's own declaration separates them.
 
 ### A failure is never silent
 
-A source that fails **keeps serving its last good feed**, because a blank departmental
-listing is worse than one a few hours old — and an unannounced stale one is worse than
-both, so the staleness and its reason are published. Every combined feed that includes a
+A source that fails **keeps serving its last good feed**. Every combined feed that includes a
 failed source is built from that source's last good copy rather than omitting it, and
-records which input it fell back to. Omitting it would quietly shrink a feed a consumer
-relies on, which is the failure mode this whole layer exists to prevent.
-
-One source failing still publishes the other eleven, still deploys, and still ends the run
-red.
+records which input it fell back to.
 
 ## Keeping it running
 
