@@ -6,9 +6,9 @@ One `events.json` per data source, plus combined feeds composed from them by dec
 algebra. A refactor of [pu-orfe/upcoming](https://github.com/pu-orfe/upcoming), informed by
 [pubino/mae-upcoming](https://github.com/pubino/mae-upcoming).
 
-> **Status: all twelve live sources build.** Every one produces `events.json` from
-> committed fixtures, offline, with `orfe` and `mae` additionally checked field-by-field
-> against the predecessor's own expected output. Enrichment and fetching are next.
+> **Status: all twelve live sources build, and four enrich from their event pages.**
+> Every source produces `events.json` from committed fixtures, offline; `orfe` and `mae`
+> are additionally checked field-by-field against the predecessor's own expected output.
 
 ## The important section
 
@@ -174,6 +174,61 @@ Fundamental Physics to (Possibly) Quantum Computation, Jainendra Jain (Penn Stat
 The series ends at the first colon; the title keeps its own colon and its own
 parenthetical; the speaker and affiliation come from the last one. Elsewhere in the same
 feed, `University of Colorado, Boulder` survives its comma intact.
+
+## Reading the event pages
+
+Some fields live on the event page rather than in the feed — ORFE's talk titles, MAE's
+speakers. `--enrich` scrapes the targets a source declares:
+
+```sh
+make build SOURCE=orfe            # feed only; reaches no network
+make build SOURCE=orfe ENRICH=1   # also scrapes the event pages
+```
+
+Against the live site that takes ORFE from 14 synthesized titles to 3, with 14 pages
+fetched for 28 field reads — each page is fetched and parsed once per run, however many
+fields read it.
+
+The layering matches the rule chains. **One target is harmonized**: `div.events-detail-main`
+is present on all 11 live hosts and means the same thing on each, so it is written once in
+`defaults:`. **Everything semantic is per source**, because `div.event-subtitle` carries
+the talk title on orfe, the speaker on mae, and the host on materials — one selector,
+three meanings. A source overriding `enrich` replaces the list wholesale rather than
+appending, for the same reason rule chains do: selector order is priority order.
+
+Three things a target can declare:
+
+```yaml
+- field: speakers
+  selectors:                                            # tried left to right
+    - "div.field--name-field-ps-event-speaker-name"     # MAE's FPO pages: a bare name
+    - "div.event-subtitle"                              # MAE's seminar pages: name + affiliation
+  split_affiliation: true
+  reject: ['^hosted by']                              # materials' host line
+```
+
+`reject` is the one worth explaining. materials' subtitle reads "Hosted by Alice Kunin" — a
+real person, correctly scraped, and the wrong one. Publishing it as the speaker would be
+schema-valid and false. The decline is counted, so a selector that always rejects surfaces
+rather than quietly yielding nothing.
+
+### Telling a blocked scrape from an empty page
+
+Every Site Builder event page returns 403 without the bypass header. The predecessor's
+fetch helper catches its own `raise_for_status` and returns `""`, so a run where *every*
+page is blocked reports `attempted=125 updated=0 errors=0` — byte-identical to a clean run
+that found nothing, and it publishes a green feed with every enrichment empty.
+
+So fetching returns a typed outcome, and the health gate reads a **success rate** rather
+than an error count:
+
+```
+orfe: title: reached 0 of 14 pages (0%, floor 80%); 14 HTTP error(s), 0 network error(s).
+Every request failed, which is the shape of a bot challenge rather than a content problem
+-- check the bypass credential for this host.
+```
+
+A page that loads and simply has no abstract is not a failure, and is counted separately.
 
 ## Checked against the predecessor
 

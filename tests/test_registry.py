@@ -150,16 +150,52 @@ def test_no_two_sources_share_a_feed_url(registry) -> None:
     assert len(urls) == len(set(urls))
 
 
-def test_enrichment_is_opt_in(registry) -> None:
-    """A source starts with no enrichment and is switched on once selectors are verified.
+def test_only_the_uniform_selector_is_harmonized(registry) -> None:
+    """Raw details are shared; anything reading a *semantic* field is per source.
 
-    Measured: `event-subtitle` exists on only 5 of 11 hosts and the speaker-name field on
-    only 4, so a shared default would scrape with selectors nobody checked and silently
-    populate nothing.
+    `div.events-detail-main` is present on all 11 live hosts and means the same thing on
+    each, so it is written once in `defaults:`. `div.event-subtitle` is not: it carries the
+    talk title on orfe, the speaker on mae and the host on materials. A shared default for
+    that would scrape with selectors nobody checked and publish the wrong field.
     """
-    enriching = [s.slug for s in registry.live if s.enrichment_enabled]
-    assert enriching, "at least one source should have verified selectors by now"
-    assert len(enriching) < len(registry.live), "enrichment should not be on by default"
+    for source in registry.live:
+        fields = {t.field_name for t in source.enrich}
+        assert "raw_details" in fields, f"{source.slug} should inherit the raw-details target"
+
+    semantic = {s.slug for s in registry.live if {t.field_name for t in s.enrich} - {"raw_details"}}
+    assert semantic, "at least one source should have verified semantic selectors"
+    assert len(semantic) < len(registry.live), (
+        "a semantic target must be opted into per source, never inherited"
+    )
+
+
+def test_a_source_overriding_enrich_replaces_the_whole_list(registry) -> None:
+    """Lists replace rather than append, as with rule chains and for the same reason.
+
+    Selector order is priority order, so an inherited target landing at an arbitrary
+    position would change which selector answers first. Sources that want the inherited
+    raw-details target restate it, and the diff shows that they did.
+    """
+    orfe = registry.by_slug("orfe")
+    assert [t.field_name for t in orfe.enrich] == ["title", "raw_details"]
+
+
+def test_a_target_may_declare_what_to_reject(registry) -> None:
+    """materials' subtitle reads "Hosted by Alice Kunin" -- correctly scraped, wrong person."""
+    speakers = next(t for t in registry.by_slug("materials").enrich if t.field_name == "speakers")
+    assert speakers.reject_patterns
+    assert any(p.search("Hosted by Alice Kunin") for p in speakers.reject_patterns)
+    assert not any(p.search("Sean Roberts") for p in speakers.reject_patterns)
+
+
+def test_mae_lists_both_of_its_page_shapes_in_priority_order(registry) -> None:
+    """Its FPO pages carry the speaker field; its seminar pages carry the subtitle."""
+    speakers = next(t for t in registry.by_slug("mae").enrich if t.field_name == "speakers")
+    assert speakers.selectors == (
+        "div.field--name-field-ps-event-speaker-name",
+        "div.event-subtitle",
+    )
+    assert speakers.split_affiliation is True
 
 
 def test_provenance_is_only_claimed_for_the_title_field(registry) -> None:

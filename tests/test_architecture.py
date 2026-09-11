@@ -19,9 +19,18 @@ PACKAGE = REPO_ROOT / "upcoming"
 #: The one module allowed to read the environment.
 ENV_OWNER = "registry.py"
 
-#: Modules allowed to catch bare ``Exception``: the per-source build boundary, once it
-#: exists. Listed by name so adding a second catch site is a deliberate edit to this list.
-BARE_EXCEPT_ALLOWED = {"build.py"}
+#: Modules allowed to catch bare ``Exception``. Listed by name so adding a third is a
+#: deliberate edit to this list rather than a habit.
+#:
+#: ``build.py`` is the per-source boundary: one source's failure must be attributable to
+#: that source and must not reach any other.
+#:
+#: ``fetch.py`` is the same thing for network I/O. Every way a request can fail --
+#: DNS, TLS, timeout, a malformed response -- becomes one typed ``FetchOutcome`` with
+#: ``status="network_error"``. That is attribution, not absorption: the caller can still
+#: tell a failed request from a page that simply had nothing on it, which is precisely
+#: the distinction the predecessor loses.
+BARE_EXCEPT_ALLOWED = {"build.py", "fetch.py"}
 
 
 def package_modules() -> list[Path]:

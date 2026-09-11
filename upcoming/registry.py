@@ -89,17 +89,28 @@ class HttpPolicy:
 
 @dataclass(frozen=True)
 class EnrichTarget:
-    """One scrape: which field, from which selectors, and whether it proves provenance."""
+    """One scrape: which field, from which selectors, and what to refuse."""
 
     field_name: str
     #: Tried **left to right**, not handed to CSS as one comma group -- a group would
-    #: resolve in document order instead of the priority order written here.
+    #: resolve in document order instead of the priority order written here. mae needs
+    #: this: its FPO pages and its seminar pages carry different elements.
     selectors: tuple[str, ...]
     mode: str = "fill"
     #: Only ever ``"enriched"`` when ``field_name`` is ``"title"``. A value scraped into
     #: ``speaker`` says nothing about where the title came from, and stamping it would
     #: report a still-unknown title as real.
     provenance: str | None = None
+    #: Values this target refuses. materials' subtitle reads "Hosted by Alice Kunin" -- a
+    #: real person, correctly scraped, and the wrong one. A decline is counted, so a
+    #: selector that always rejects surfaces rather than quietly yielding nothing.
+    reject_patterns: tuple[re.Pattern[str], ...] = ()
+    #: Whether every match is wanted rather than the first. bioengineering lists four
+    #: speakers in four elements; taking one would drop three silently.
+    plural: bool = False
+    #: Whether a scraped value may carry an inline affiliation. mae's seminar pages give
+    #: "Dr. Rebecca Ciez, Purdue University" while its FPO pages give a bare "Jun Eshima".
+    split_affiliation: bool = False
 
 
 @dataclass(frozen=True)
@@ -412,6 +423,18 @@ def _build_enrich(raw: Mapping[str, Any], slug: str) -> tuple[EnrichTarget, ...]
                 f"opt-in per source precisely so an unverified selector cannot silently "
                 f"yield empty fields."
             )
+        reject_patterns = []
+        for raw_pattern in entry.get("reject") or ():
+            try:
+                # Case-insensitive always: these match page prose, where the
+                # capitalisation is the publisher's and not worth encoding.
+                reject_patterns.append(re.compile(str(raw_pattern), re.IGNORECASE))
+            except re.error as exc:
+                raise ConfigFatal(
+                    f"{slug}: enrich[{index}] reject pattern {raw_pattern!r} does not "
+                    f"compile: {exc}"
+                ) from exc
+
         provenance = entry.get("provenance")
         if provenance is not None and field_name != "title":
             raise ConfigFatal(
@@ -425,6 +448,9 @@ def _build_enrich(raw: Mapping[str, Any], slug: str) -> tuple[EnrichTarget, ...]
                 selectors=selectors,
                 mode=entry.get("mode", "fill"),
                 provenance=provenance,
+                reject_patterns=tuple(reject_patterns),
+                plural=bool(entry.get("plural", field_name == "speakers")),
+                split_affiliation=bool(entry.get("split_affiliation", False)),
             )
         )
     return tuple(targets)

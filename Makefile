@@ -27,6 +27,7 @@ help:
 	@echo ""
 	@echo "Build"
 	@echo "  make build SOURCE=orfe    build one source from its committed fixture"
+	@echo "  make build SOURCE=orfe ENRICH=1   also scrape its event pages (network)"
 	@echo "  make build-fixtures       build orfe and mae -- the inversion, both ways"
 	@echo ""
 	@echo "Verify"
@@ -70,7 +71,8 @@ build: $(VENV)
 	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) build \
 			--source "$(SOURCE)" \
-			--feed "$${FEED:-tests/fixtures/feeds/$(SOURCE)/feed.ics}"
+			--feed "$${FEED:-tests/fixtures/feeds/$(SOURCE)/feed.ics}" \
+			$(if $(ENRICH),--enrich,)
 
 # The two sources whose SUMMARY means opposite things. Building both from one codebase
 # with nothing differing but config is the proof the refactor exists to deliver.

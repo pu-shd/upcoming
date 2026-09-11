@@ -44,12 +44,31 @@ defaults:
     # bare request. So an absent credential degrades enrichment ONLY -- the feed still
     # publishes, green, with nothing scraped. There is no default: the loader fails for
     # any source with enrichment enabled when the secret is unset.
+    #
+    # Measured 2026-09-11: the hosts check the header's PRESENCE with a non-empty value,
+    # not its contents -- "true", "wrong-value" and "0" all return 200, while an empty
+    # value or no header at all returns 403. So the realistic failure is the header going
+    # missing or being renamed, which the loader refuses outright; the enrichment
+    # success-rate gate is what catches it if a host starts validating the value, or if
+    # the header name changes upstream.
     secret_headers: [BOT_BYPASS_HEADER]
 
   # Ordered chain. Order is load-bearing: `detail_dash_name` must precede the room-token
   # rules, or "125 - Sherrerd Hall" mis-splits. Each rule declines rather than guessing,
   # and `whole` puts an unsplittable venue in `name` entire.
   location_rules: [sentinel, detail_dash_name, comma_room, parenthetical, slash_room, unambiguous_room, whole]
+
+  # Enrichment defaults. Opt-in still: a source that wants none sets `enrich: []`.
+  #
+  # Only the raw-details container is harmonized, because it is the one selector whose
+  # meaning is the same everywhere -- measured, present on all 11 live hosts. Anything
+  # reading a *semantic* field stays per source, because `div.event-subtitle` carries the
+  # talk title on orfe, the speaker on mae and the host on materials. A source overriding
+  # `enrich` replaces this list wholesale rather than appending, exactly as with rule
+  # chains and for the same reason: order is priority order.
+  enrich:
+    - field: raw_details
+      selectors: ["div.events-detail-main", "div.event-details-main"]
 
   # How a title is synthesized when the feed carries none. Harmonized here so the shape is
   # consistent across departments; a source needing different wording overrides it.
@@ -86,6 +105,8 @@ sources:
     # No ORFE event carries a title: its SUMMARY is the speaker, so every event is
     # synthesized from the inherited template and published with
     # titleSource/titleIsPlaceholder so a consumer can tell.
+    # Restates the inherited raw-details target because a source's list replaces rather
+    # than extends. Verified on the real pages: the subtitle here is the talk title.
     enrich:
       - field: title
         selectors: ["div.event-subtitle"]
@@ -190,6 +211,21 @@ sources:
     # Also carries "Briger Hall (C112 + Atrium C102)", hence the parenthetical rule, and
     # two events with no LOCATION property at all.
     location_rules: [sentinel, parenthetical, unambiguous_room, whole]
+    # The subtitle here reads "Hosted by Alice Kunin" -- a real person, correctly scraped,
+    # and the wrong one. Scraping it into `speakers` would publish the host as the speaker:
+    # schema-valid and false. The reject pattern declines it and the decline is counted, so
+    # a selector that always rejects shows up instead of quietly yielding nothing.
+    enrich:
+      - field: speakers
+        selectors: ["div.event-subtitle"]
+        # Matched case-insensitively; the capitalisation is the publisher's, not a rule.
+        reject:
+          - '^hosted by\b'
+          - '^organi[sz]ed by\b'
+          - '^moderated by\b'
+        split_affiliation: true
+      - field: raw_details
+        selectors: ["div.events-detail-main", "div.event-details-main"]
     # 12 of 16 are "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts, University of Texas
     # at Austin" -- the series and the speaker, with no title anywhere in the feed. The
     # other 4 are plain titles for symposia.
@@ -240,13 +276,17 @@ sources:
     # orfe. One event's entire SUMMARY is the literal string "TBD" and one has
     # LOCATION:TBD, so sentinel detection is exercised from the first source built.
     location_rules: [sentinel, slash_room, unambiguous_room, whole]
+    # Two selectors because MAE's own pages differ: FPO pages carry the speaker field with
+    # a bare name ("Jun Eshima"), seminar pages carry the subtitle with name and
+    # affiliation ("Dr. Rebecca Ciez, Purdue University"). Tried in that order.
     enrich:
       - field: speakers
         selectors:
           - "div.field--name-field-ps-event-speaker-name"
           - "div.event-subtitle"
         mode: fill
-        # No provenance: this targets `speaker`, and claiming the title was "enriched"
+        split_affiliation: true
+        # No provenance: this targets the speaker, and claiming the title was "enriched"
         # because a speaker was scraped would report a still-unknown title as real.
       - field: raw_details
         selectors: ["div.events-detail-main", "div.event-details-main"]

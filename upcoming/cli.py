@@ -25,7 +25,9 @@ from pathlib import Path
 
 from .build import build_from_file, load_pronunciation, render
 from .errors import ConfigFatal
+from .fetch import HttpTransport
 from .registry import load_registry
+from .scrape import build_cache
 
 EXIT_OK = 0
 EXIT_USAGE = 2
@@ -70,8 +72,9 @@ def _build_parser() -> argparse.ArgumentParser:
         "build",
         help="build one source's events.json",
         description=(
-            "Build a source from a local ICS file. Fetching is not wired yet, so --feed "
-            "is required; that also means this command reaches no network."
+            "Build a source from a local ICS file. --feed is required, so the ICS never "
+            "comes off the network here. --enrich additionally scrapes the source's "
+            "declared page targets, which does."
         ),
     )
     build.add_argument("--source", required=True, help="source slug, e.g. orfe")
@@ -83,6 +86,15 @@ def _build_parser() -> argparse.ArgumentParser:
     build.add_argument(
         "--out",
         help="write here instead of feeds/<source>/events.json; '-' writes to stdout",
+    )
+    build.add_argument(
+        "--enrich",
+        action="store_true",
+        help=(
+            "also scrape the source's declared targets from its event pages. Off by "
+            "default so a build reaches no network unless asked; requires the bypass "
+            "credential, and fails the source if too few pages can be reached."
+        ),
     )
     return parser
 
@@ -164,7 +176,12 @@ def _cmd_build(registry_path: str, args: argparse.Namespace) -> int:
         return EXIT_CONFIG
 
     load_pronunciation()
-    result = build_from_file(args.feed, source)
+    cache = None
+    if args.enrich:
+        if not source.enrich:
+            print(f"{source.slug} declares no enrichment targets", file=sys.stderr)
+        cache = build_cache(source, HttpTransport(retries=source.http.retries))
+    result = build_from_file(args.feed, source, cache)
     if not result.ok:
         for problem in result.diagnostics:
             print(f"{source.slug}: {problem}", file=sys.stderr)
@@ -187,6 +204,16 @@ def _cmd_build(registry_path: str, args: argparse.Namespace) -> int:
         )
     if counts["locations_declined"]:
         print(f"  {counts['locations_declined']} location(s) left empty rather than guessed")
+    for key, value in sorted(counts.items()):
+        if key.startswith("enriched_") and value:
+            print(f"  {value} {key.removeprefix('enriched_')} value(s) scraped from event pages")
+        if key.startswith("rejected_") and value:
+            print(
+                f"  {value} {key.removeprefix('rejected_')} value(s) declined by a reject "
+                f"pattern rather than published"
+            )
+    if cache is not None:
+        print(f"  {cache.requests_made} page(s) fetched")
     return EXIT_OK
 
 

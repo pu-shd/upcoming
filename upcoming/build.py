@@ -21,10 +21,13 @@ from pathlib import Path
 import yaml
 
 from . import fallback
+from .enrich import breaches, enrich
 from .errors import SourceFatal
+from .fetch import PageCache
 from .model import Event
 from .parse import parse_ics, prodid
 from .registry import SourceConfig
+from .scrape import ScrapeStats
 from .serialize import dump_feed, wire_format_for
 from .transform import transform
 
@@ -59,25 +62,50 @@ def load_pronunciation(path: str | Path = DEFAULT_PRONUNCIATION) -> None:
     fallback.set_word_acronyms(data.get("word_acronyms") or ())
 
 
-def build_events(text: str, source: SourceConfig) -> tuple[Event, ...]:
+def build_events(
+    text: str, source: SourceConfig, cache: PageCache | None = None
+) -> tuple[Event, ...]:
     """ICS text to finished events for one source.
 
-    Deliberately pure: text in, events out, no I/O. That is what lets the differential
-    tests run the real pipeline against committed fixtures with the network blocked.
+    The only I/O is enrichment, and only when a ``cache`` is supplied -- so the differential
+    tests run the real pipeline against committed fixtures with nothing to stub.
+
+    Stage order is fixed here rather than left to a caller. Enrichment runs **after**
+    mapping and **before** the fallback, so a title scraped off the page wins over a
+    synthesized one and the fallback only fills what is still missing. The predecessor
+    leaves this ordering implicit across two entry points that have twice drifted apart.
+    """
+    events, _stats = build_events_with_stats(text, source, cache)
+    return events
+
+
+def check_platform(text: str, source: SourceConfig) -> None:
+    """Refuse a feed that is not the platform its source declares.
+
+    A platform swap under a stable URL is exactly kellercenter's situation -- a Drupal iCal
+    feed served from a path that looks like every Site Builder one -- and it changes what
+    every field means.
     """
     found = prodid(text)
     if source.platform == "princeton-site-builder" and found and found != source.platform:
         raise SourceFatal(
             source.slug,
-            f"feed reports PRODID {found!r} but the source declares platform "
-            f"{source.platform!r}. A platform swap under a stable URL is exactly "
-            f"kellercenter's situation, and it changes what every field means.",
+            f"feed reports PRODID {found!r} but the source declares platform {source.platform!r}.",
         )
 
-    raw_events = parse_ics(text)
-    events = transform(raw_events, source)
+
+def build_events_with_stats(
+    text: str, source: SourceConfig, cache: PageCache | None = None
+) -> tuple[tuple[Event, ...], dict[str, ScrapeStats]]:
+    """The pipeline, and what enrichment did. One implementation, used by every caller."""
+    check_platform(text, source)
+
+    events = transform(parse_ics(text), source)
+    stats: dict[str, ScrapeStats] = {}
+    if cache is not None:
+        events, stats = enrich(events, source, cache)
     events, _ = fill_titles_for(events, source)
-    return events
+    return events, stats
 
 
 def fill_titles_for(events: Sequence[Event], source: SourceConfig) -> tuple[tuple[Event, ...], int]:
@@ -94,14 +122,15 @@ def render(events: Sequence[Event], source: SourceConfig) -> str:
     return dump_feed(events, wire_format_for(source.escape_fields))
 
 
-def build_from_text(text: str, source: SourceConfig) -> BuildResult:
+def build_from_text(text: str, source: SourceConfig, cache: PageCache | None = None) -> BuildResult:
     """Build one source, attributing any failure to it rather than raising onward.
 
     The single bare-``Exception`` boundary. A source that fails leaves the others alone,
     and the reason travels with the result instead of being printed and lost.
     """
+    enrich_stats: dict[str, ScrapeStats] = {}
     try:
-        events = build_events(text, source)
+        events, enrich_stats = build_events_with_stats(text, source, cache)
     except SourceFatal as exc:
         return BuildResult(source=source.slug, status="failed", diagnostics=(exc.message,))
     except Exception as exc:
@@ -111,21 +140,26 @@ def build_from_text(text: str, source: SourceConfig) -> BuildResult:
             diagnostics=(f"unexpected {type(exc).__name__}: {exc}",),
         )
 
-    placeholders = sum(1 for e in events if e.title_is_placeholder)
-    declined = sum(1 for e in events if e.location.is_empty)
-    return BuildResult(
-        source=source.slug,
-        status="ok",
-        events=events,
-        counts={
-            "events": len(events),
-            "placeholder_titles": placeholders,
-            "locations_declined": declined,
-        },
-    )
+    # A scrape that reached almost no pages is the failure the predecessor cannot see,
+    # so it fails the source rather than publishing a feed with everything unenriched.
+    if problems := breaches(enrich_stats, source):
+        return BuildResult(source=source.slug, status="failed", diagnostics=problems)
+
+    counts = {
+        "events": len(events),
+        "placeholder_titles": sum(1 for e in events if e.title_is_placeholder),
+        "locations_declined": sum(1 for e in events if e.location.is_empty),
+    }
+    for field_name, stat in enrich_stats.items():
+        counts[f"enriched_{field_name}"] = stat.filled
+        if stat.rejected:
+            counts[f"rejected_{field_name}"] = stat.rejected
+    return BuildResult(source=source.slug, status="ok", events=events, counts=counts)
 
 
-def build_from_file(path: str | Path, source: SourceConfig) -> BuildResult:
+def build_from_file(
+    path: str | Path, source: SourceConfig, cache: PageCache | None = None
+) -> BuildResult:
     """Build one source from an ICS file on disk."""
     try:
         text = Path(path).read_text(encoding="utf-8")
@@ -133,7 +167,7 @@ def build_from_file(path: str | Path, source: SourceConfig) -> BuildResult:
         return BuildResult(
             source=source.slug, status="failed", diagnostics=(f"cannot read {path}: {exc}",)
         )
-    return build_from_text(text, source)
+    return build_from_text(text, source, cache)
 
 
 __all__: list[str] = [
