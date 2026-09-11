@@ -5,60 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Upcoming — Princeton event feeds</title>
 <meta name="description" content="JSON event feeds for Princeton departments, centers and units, with a published health manifest.">
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #fbfbfa; --fg: #17181c; --dim: #5c6169; --line: #e2e2df;
-    --card: #ffffff; --accent: #e77500; --ok: #1a7f37; --warn: #9a6700; --bad: #cf222e;
-    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #16171a; --fg: #e8e8e6; --dim: #9aa0a8; --line: #2b2d31;
-      --card: #1c1e22; --accent: #f5942e; --ok: #3fb950; --warn: #d29922; --bad: #f85149;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 0 1.25rem 5rem; background: var(--bg); color: var(--fg);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main { max-width: 62rem; margin: 0 auto; }
-  header { padding: 3.5rem 0 2rem; border-bottom: 3px solid var(--accent); margin-bottom: 2.5rem; }
-  h1 { margin: 0 0 .4rem; font-size: 2.1rem; letter-spacing: -.02em; }
-  h2 { margin: 3rem 0 .75rem; font-size: 1.15rem; letter-spacing: -.01em; }
-  h3 { margin: 1.75rem 0 .5rem; font-size: .95rem; color: var(--dim); font-weight: 600; }
-  p  { margin: 0 0 1rem; max-width: 46rem; }
-  .lede { font-size: 1.05rem; color: var(--dim); max-width: 44rem; }
-  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 2px; }
-  code, .mono { font-family: var(--mono); font-size: .87em; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
-  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
-  th, td { text-align: left; padding: .55rem .8rem; border-bottom: 1px solid var(--line); }
-  th { font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); }
-  tbody tr:last-child td { border-bottom: 0; }
-  td.n { text-align: right; font-variant-numeric: tabular-nums; }
-  .pill {
-    display: inline-block; padding: .08rem .5rem; border-radius: 999px;
-    font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
-    border: 1px solid currentColor;
-  }
-  .ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); }
-  .dim { color: var(--dim); }
-  .beat { display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; align-items: baseline; margin-bottom: 1rem; }
-  .beat b { font-size: 1.6rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-  .beat span { color: var(--dim); font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
-  .note { font-size: .85rem; color: var(--dim); max-width: 46rem; }
-  .reason { font-size: .82rem; color: var(--dim); }
-  pre { margin: 0; padding: 1rem; overflow-x: auto; font-family: var(--mono); font-size: .82rem; line-height: 1.55; }
-  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--dim); }
-  #error { display: none; padding: 1rem; color: var(--bad); }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
+
+<nav aria-label="Pages">
+  <ul class="nav">
+    <li><a href="index.html" aria-current="page">Feeds</a></li>
+    <li><a href="simulator.html">Newsletter simulator</a></li>
+  </ul>
+</nav>
 
 <header>
   <h1>Upcoming</h1>
