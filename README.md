@@ -118,14 +118,17 @@ make sources           # the resolved registry: what each SUMMARY field means
 make check             # validate the registry; non-zero on any problem
 make build SOURCE=orfe # build one source from its committed fixture
 make build-fixtures    # build orfe and mae -- the inversion, both ways
+make publish           # the whole tree into dist/: every source, every combo, status.json
+make verify            # check what the published site is actually serving
 make test              # pytest
 make lint typecheck    # ruff + mypy
 make docker-test       # the suite in the container (the path CI runs)
 ```
 
-Building reaches no network: `--feed` is required until fetching is wired, so the offline
-guarantee is structural rather than a convention. The suite enforces the same thing at the
-socket layer.
+Building and publishing reach no network by default: they read the committed fixtures, so a
+developer runs the same code path over known bytes that CI runs over live ones. `make
+publish FETCH=1` and `make publish ENRICH=1` are the opt-ins. The suite enforces the same
+thing at the socket layer.
 
 Requires Python 3.12+. Docker Compose is invoked as `docker-compose`.
 
@@ -229,6 +232,82 @@ Every request failed, which is the shape of a bot challenge rather than a conten
 ```
 
 A page that loads and simply has no abstract is not a failure, and is counted separately.
+
+## What gets published
+
+```
+feeds/<source>/events.json   one per live source, faithful to its upstream
+combos/<name>/events.json    the declared combinations
+status.json                  what succeeded, what failed, and how stale anything is
+```
+
+Five combined feeds are declared in `config/combos.yaml` as set algebra over the
+per-source feeds: `all` (115), `sherrerd-hall` (40), `engineering` (35), `all-no-fpo`
+(105), `seminars` (56). A sixth, `nextg`, is declared **disabled with its reason** — ECE's
+feed carries no NextG discriminator, so a guessed predicate would publish an unfiltered ECE
+feed under NextG's name. Every unavailable source and every disabled combo appears in
+`status.json` with its reason, so "we chose not to" and "we forgot" never read alike.
+
+`all-no-fpo` removes exactly the ten final public orals across three departments. That is
+what the canonical tag vocabulary in `config/tags.yaml` exists for: the four upstream
+spellings of the same thing map to one tag. The predecessor excludes the literal string
+`FPO` and so publishes a "filtered" feed identical to the unfiltered one.
+
+### `status.json` is the contract for "is this current"
+
+The feeds deliberately carry **no timestamp**, which is what lets published bytes be
+compared byte-for-byte to detect drift — so `status.json` is the only file with a clock,
+and the only way a consumer can tell fresh from frozen. It names every feed, its status
+(`ok` / `empty` / `failed` / `disabled`), its event count, whether it is stale, and why.
+
+`empty` is first-class rather than a kind of failure: `kellercenter` serves a well-formed
+calendar with no events, and that payload is byte-identical to a broken source's. Only the
+source's own declaration separates them.
+
+### A failure is never silent
+
+A source that fails **keeps serving its last good feed**, because a blank departmental
+listing is worse than one a few hours old — and an unannounced stale one is worse than
+both, so the staleness and its reason are published. Every combined feed that includes a
+failed source is built from that source's last good copy rather than omitting it, and
+records which input it fell back to. Omitting it would quietly shrink a feed a consumer
+relies on, which is the failure mode this whole layer exists to prevent.
+
+One source failing still publishes the other eleven, still deploys, and still ends the run
+red.
+
+## Cadence and the watchdog
+
+`publish.yml` runs every 20 minutes on weekday daytime Eastern and hourly otherwise —
+departmental calendars are edited by people during working hours, so a uniform cadence
+spends most of its runs proving nothing changed overnight while still being slower than it
+needs to be when someone posts a seminar. The three crons do not overlap; a test proves it.
+
+Every run deploys, including runs where no feed changed, because `status.json` is the
+site's liveness beacon. A consumer must be able to tell "we checked eleven minutes ago and
+ORFE is stale" from "nothing has run in three days".
+
+`verify.yml` is a **separate** workflow on its own schedule that checks the live origin and
+knows nothing about the run that produced it. That separation is the whole point. The
+predecessor's pipeline job died before its Pages steps, so those steps were *skipped*
+rather than failed — and a skipped step is green. The site went stale and nothing reported
+it. A check living inside that job would have been skipped by the same failure.
+
+It fetches `status.json`, checks its age, fetches every path the manifest promises, and
+compares the served event counts against the promised ones — which is what catches a
+**partial deploy**, where some paths updated and some did not and neither file alone looks
+wrong. A stale source warns rather than fails: the site is working, and a watchdog that
+stays red for the length of an upstream outage trains everyone to ignore it. It opens one
+issue when something is wrong and closes it on recovery, so a problem outlives the run that
+found it.
+
+The watchdog gets **no bypass credential**, deliberately — it must see exactly what an
+ordinary consumer sees.
+
+The logic is in `upcoming/verify.py` with 19 tests rather than in a YAML step, and
+`.github/workflows/` is itself covered by `tests/test_workflows.py`: that the crons do not
+collide, that the deploy is its own job rather than a step, that it runs even when a source
+failed, that every job has a timeout, and that lint can never block a publish.
 
 ## Checked against the predecessor
 

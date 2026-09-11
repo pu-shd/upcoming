@@ -21,17 +21,26 @@ from __future__ import annotations
 import argparse
 import sys
 from collections.abc import Sequence
+from datetime import UTC, datetime
 from pathlib import Path
 
 from .build import BuildResult, build_from_file, load_pronunciation, render
 from .combine import combine, load_combos
 from .errors import ConfigFatal
-from .fetch import HttpTransport
+from .fetch import FetchOutcome, HttpTransport, fetch_feeds
 from .model import Event, from_wire
-from .publish import STATUS_DISABLED, assemble, previous_payload, utc_now, write
+from .publish import (
+    STATUS_DISABLED,
+    assemble,
+    markdown_summary,
+    previous_payload,
+    utc_now,
+    write,
+)
 from .registry import load_registry
 from .scrape import build_cache
 from .serialize import wire_format_for
+from .verify import FAIL, failures, verify, warnings
 
 EXIT_OK = 0
 EXIT_USAGE = 2
@@ -119,12 +128,49 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     publish.add_argument("--enrich", action="store_true", help="also scrape event pages")
     publish.add_argument(
+        "--summary",
+        help="write a markdown run summary to this path (CI writes it to the job page)",
+    )
+    publish.add_argument(
+        "--fetch",
+        action="store_true",
+        help=(
+            "fetch each source's ICS into --feeds first. Without this the run is offline "
+            "and reproducible from whatever is already there."
+        ),
+    )
+    publish.add_argument(
         "--allow-large-diff",
         action="store_true",
         help=(
             "skip the guard that refuses a build losing most of a feed. Use after "
             "confirming upstream really did shrink."
         ),
+    )
+    verify_cmd = sub.add_parser(
+        "verify",
+        help="check what the published site is actually serving",
+        description=(
+            "A watchdog that knows nothing about the run that produced the site. It runs "
+            "on its own schedule for a reason: the predecessor's pipeline died before its "
+            "Pages steps, so those steps were skipped rather than failed, and a skipped "
+            "step is green. A check inside that job would have been skipped too."
+        ),
+    )
+    verify_cmd.add_argument("--base-url", required=True, help="origin serving the tree")
+    verify_cmd.add_argument(
+        "--max-age-minutes",
+        type=int,
+        default=90,
+        help=(
+            "how stale status.json may be before it is a failure (default: 90, three "
+            "missed runs at the 30-minute cadence)"
+        ),
+    )
+    verify_cmd.add_argument(
+        "--warnings-are-failures",
+        action="store_true",
+        help="exit non-zero on warnings too, for a stricter gate",
     )
     return parser
 
@@ -251,13 +297,21 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
     """Build everything and assemble one publishable tree."""
     registry = load_registry(registry_path)
     tag_vocabulary = registry.sources[0].tags
-    combo_list = load_combos(
-        known_sources=[s.slug for s in registry.sources], tags=tag_vocabulary
-    )
+    combo_list = load_combos(known_sources=[s.slug for s in registry.sources], tags=tag_vocabulary)
     load_pronunciation()
 
     out_root = Path(args.out)
     feeds_root = Path(args.feeds)
+
+    # Fetching is opt-in so the default run stays offline and reproducible from the
+    # committed fixtures. CI passes --fetch; a developer reproducing a published tree
+    # locally does not, and gets the same code path over known bytes.
+    fetched: dict[str, FetchOutcome] = {}
+    if args.fetch:
+        feeds_root.mkdir(parents=True, exist_ok=True)
+        fetched = fetch_feeds(
+            registry.live, feeds_root, HttpTransport(retries=registry.live[0].http.retries)
+        )
 
     results: dict[str, BuildResult] = {}
     by_source: dict[str, tuple[Event, ...]] = {}
@@ -265,6 +319,28 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
 
     for source in registry.live:
         feed = feeds_root / source.slug / "feed.ics"
+
+        # A fetch failure is reported as a failure of this source, not swallowed by
+        # falling back to whatever ICS happens to be on disk. Building yesterday's capture
+        # and publishing it as current is the silent staleness this design exists to
+        # prevent -- the failure path already serves the last good feed, and says so.
+        outcome = fetched.get(source.slug)
+        if outcome is not None and not outcome.ok:
+            detail = outcome.error or f"HTTP {outcome.code}"
+            results[source.slug] = BuildResult(
+                source.slug, "failed", diagnostics=(f"could not fetch the feed: {detail}",)
+            )
+            failed.append(source.slug)
+            print(f"{source.slug}: could not fetch the feed: {detail}", file=sys.stderr)
+            restore = previous_payload(
+                out_root,
+                f"feeds/{source.slug}/events.json",
+                wire_format_for(source.escape_fields),
+            )
+            if restore:
+                by_source[source.slug] = tuple(from_wire(r) for r in restore)
+            continue
+
         cache = (
             build_cache(source, HttpTransport(retries=source.http.retries))
             if args.enrich and source.enrich
@@ -298,19 +374,22 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
     # Combined feeds are built from whatever succeeded. A combo whose input failed is
     # built from that source's last good copy, and status.json names the substitution --
     # never silently dropped, which would quietly shrink a feed a consumer relies on.
-    combos_built = {
-        combo.name: combine(combo, by_source) for combo in combo_list if combo.enabled
-    }
+    combos_built = {combo.name: combine(combo, by_source) for combo in combo_list if combo.enabled}
 
+    tree_stamp = utc_now()
     tree = assemble(
         registry,
         results,
         combos_built,
         {c.name: c for c in combo_list},
         root=out_root,
-        generated_at=utc_now(),
+        generated_at=tree_stamp,
     )
     written = write(tree, out_root)
+    if args.summary:
+        Path(args.summary).write_text(
+            markdown_summary(tree, generated_at=tree_stamp), encoding="utf-8"
+        )
 
     print(f"wrote {len(written)} file(s) to {out_root}")
     for record in sorted(tree.feeds, key=lambda f: f.path):
@@ -331,6 +410,36 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
     return EXIT_OK
 
 
+def _cmd_verify(args: argparse.Namespace) -> int:
+    """Report on what the live origin serves. No registry, no config, no build."""
+    findings, document = verify(
+        args.base_url,
+        HttpTransport(),
+        now=datetime.now(UTC),
+        max_age_minutes=args.max_age_minutes,
+    )
+
+    if document is not None:
+        summary = document.get("summary")
+        print(f"{args.base_url}  generated {document.get('generatedAt')}  {summary}")
+
+    for finding in findings:
+        stream = sys.stderr if finding.level == FAIL else sys.stdout
+        print(f"{finding.level:4} {finding.path:42} {finding.message}", file=stream)
+
+    bad = failures(findings)
+    soft = warnings(findings)
+    if not findings:
+        print("the site is serving everything it promises")
+    if bad or (soft and args.warnings_are_failures):
+        print(
+            f"\n{len(bad)} failure(s), {len(soft)} warning(s)",
+            file=sys.stderr,
+        )
+        return EXIT_SOURCE_FAILED
+    return EXIT_OK
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = _build_parser()
     args = parser.parse_args(argv if argv is not None else sys.argv[1:])
@@ -340,6 +449,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             return _cmd_build(args.registry, args)
         if args.command == "publish":
             return _cmd_publish(args.registry, args)
+        if args.command == "verify":
+            return _cmd_verify(args)
         handlers = {"sources": _cmd_sources, "check": _cmd_check}
         handler = handlers.get(args.command)
         if handler is None:  # pragma: no cover - argparse enforces the choice

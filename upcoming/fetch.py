@@ -18,11 +18,14 @@ predecessor's one genuinely good testing decision, carried forward.
 from __future__ import annotations
 
 import time
-from collections.abc import Callable, Mapping
+from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Literal, Protocol
+from typing import TYPE_CHECKING, Literal, Protocol
 from urllib.parse import urlparse
+
+if TYPE_CHECKING:
+    from .registry import SourceConfig
 
 FetchStatus = Literal["ok", "http_error", "network_error", "not_modified"]
 
@@ -179,3 +182,43 @@ __all__ = [
     "Transport",
     "file_transport",
 ]
+
+
+def fetch_feed(source: SourceConfig, transport: Transport) -> FetchOutcome:
+    """Fetch one source's ICS.
+
+    The source's own HTTP policy applies -- its headers, its timeouts, its retry count --
+    because the departments differ: some sit behind the bot challenge that needs the bypass
+    header, others do not, and one has been slow enough to need a longer read timeout.
+
+    A source with no ``feed_url`` is a configuration error rather than a fetch failure, and
+    says so, because the two have different fixes.
+    """
+    if not source.feed_url:
+        return FetchOutcome("network_error", "", error=f"{source.slug} declares no feed_url")
+    return transport(
+        source.feed_url,
+        headers=source.http.headers,
+        timeout=(source.http.connect_timeout, source.http.read_timeout),
+    )
+
+
+def fetch_feeds(
+    sources: Sequence[SourceConfig], dest: Path, transport: Transport
+) -> dict[str, FetchOutcome]:
+    """Fetch every source into ``dest/<slug>/feed.ics``, returning what happened to each.
+
+    A failed fetch writes nothing and leaves any previous capture untouched, so the caller
+    can tell "we got new bytes" from "there are bytes here". Overwriting with a partial
+    body, or deleting on failure, would both turn a transient upstream blip into a data
+    loss -- and the build layer already knows how to serve a source's last good feed.
+    """
+    outcomes: dict[str, FetchOutcome] = {}
+    for source in sources:
+        outcome = fetch_feed(source, transport)
+        outcomes[source.slug] = outcome
+        if outcome.ok:
+            target = dest / source.slug / "feed.ics"
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(outcome.body, encoding="utf-8")
+    return outcomes

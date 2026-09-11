@@ -105,8 +105,12 @@ def test_no_workflow_gives_the_bypass_credential_a_plausible_default(path: Path)
 
     The predecessors ship ``os.getenv("BOT_BYPASS_HEADER_VALUE", "1")`` and an inline
     ``|| '1'`` in CI, so with the secret unset the pipeline sends ``1``, gets 403 on every
-    event page, scrapes nothing, and reports success. A CI placeholder is fine only when it
-    is obviously not a credential.
+    event page, scrapes nothing, and reports success.
+
+    So a workflow may assign this only two ways: from the secret store, which is the real
+    credential and reaches real hosts, or as a visibly fake placeholder, which is fine
+    precisely because the job using it reaches no network. Anything in between -- a value
+    that might be a credential and might not -- is the failure above.
     """
     text = path.read_text(encoding="utf-8")
     assert "|| '1'" not in text and '|| "1"' not in text
@@ -117,8 +121,11 @@ def test_no_workflow_gives_the_bypass_credential_a_plausible_default(path: Path)
                 f"{path.name} gives the bypass credential the value {value}, which is what "
                 f"makes a total scrape failure look like success"
             )
-            assert "placeholder" in value or "not-a-credential" in value, (
-                f"{path.name}: name the CI value so it is visibly not a real credential"
+            from_secret_store = "secrets.BOT_BYPASS_HEADER" in value
+            visibly_fake = "placeholder" in value or "not-a-credential" in value
+            assert from_secret_store or visibly_fake, (
+                f"{path.name}: read the credential from the secret store, or name the CI "
+                f"value so it is visibly not a real one"
             )
 
 

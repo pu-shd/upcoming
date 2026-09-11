@@ -14,7 +14,8 @@ COMPOSE     ?= docker-compose
 #   * no `sed -i` without a backup suffix
 # A test asserts these stay absent from the Makefile.
 
-.PHONY: help venv install sources check build build-fixtures test test-cov lint typecheck fmt \
+.PHONY: help venv install sources check build build-fixtures publish verify test test-cov \
+        lint typecheck fmt \
         docker-build docker-test docker-lint docker-sources clean
 
 help:
@@ -29,6 +30,11 @@ help:
 	@echo "  make build SOURCE=orfe    build one source from its committed fixture"
 	@echo "  make build SOURCE=orfe ENRICH=1   also scrape its event pages (network)"
 	@echo "  make build-fixtures       build orfe and mae -- the inversion, both ways"
+	@echo "  make publish              build every live source and every combo into dist/"
+	@echo "  make publish FETCH=1      fetch each source's ICS first (network)"
+	@echo ""
+	@echo "Watch"
+	@echo "  make verify               check what the published site is actually serving"
 	@echo ""
 	@echo "Verify"
 	@echo "  make test           pytest"
@@ -79,6 +85,23 @@ build: $(VENV)
 build-fixtures: $(VENV)
 	@$(MAKE) --no-print-directory build SOURCE=orfe
 	@$(MAKE) --no-print-directory build SOURCE=mae
+
+# The whole tree: twelve live sources, five combined feeds, and a status.json saying what
+# succeeded and how stale anything is. Offline by default -- it builds from the committed
+# fixtures, so a developer gets the same code path over known bytes that CI runs over live
+# ones. FETCH=1 pulls each source's ICS first, which is what CI does.
+publish: $(VENV)
+	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
+		$(PY) -m upcoming.cli --registry $(REGISTRY) publish \
+			--out "$${OUT:-dist}" \
+			--feeds "$${FEEDS:-tests/fixtures/feeds}" \
+			$(if $(FETCH),--fetch,) \
+			$(if $(ENRICH),--enrich,)
+
+# The watchdog, run by hand. It takes no credential on purpose: it must see exactly what a
+# consumer sees, and a credential would let it pass where a consumer fails.
+verify: $(VENV)
+	$(PY) -m upcoming.cli verify --base-url "$${SITE:-https://pu-shd.github.io/upcoming}"
 
 test: $(VENV)
 	$(PY) -m pytest

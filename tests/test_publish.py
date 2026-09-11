@@ -9,19 +9,25 @@ equivalent: a consumer polling its feed cannot tell fresh from frozen.
 from __future__ import annotations
 
 import json
+import re
+from collections.abc import Mapping
+from dataclasses import dataclass, field
 
 import pytest
 
 from tests.support import FIXTURES, REPO_ROOT
 from upcoming.build import BuildResult, build_from_file, load_pronunciation
 from upcoming.combine import combine, load_combos
+from upcoming.fetch import FetchOutcome, fetch_feed, fetch_feeds
 from upcoming.model import Event, from_wire
 from upcoming.publish import (
     STATUS_DISABLED,
     STATUS_EMPTY,
     STATUS_FAILED,
     STATUS_OK,
+    PublishedFeed,
     assemble,
+    markdown_summary,
     previous_payload,
     status_document,
     utc_now,
@@ -426,3 +432,135 @@ def test_escaping_is_idempotent_so_a_republish_does_not_compound_it() -> None:
     """
     once = escape_ics_text("A, B")
     assert escape_ics_text(once) == once
+
+
+# --------------------------------------------------------------------------------------
+# Fetching the ICS
+# --------------------------------------------------------------------------------------
+
+
+@dataclass
+class _FeedTransport:
+    """Answers each source's feed_url from the committed fixtures, or fails on demand."""
+
+    fail: Mapping[str, FetchOutcome] = field(default_factory=dict)
+    by_url: dict[str, str] = field(default_factory=dict)
+    calls: list[tuple[str, Mapping[str, str]]] = field(default_factory=list)
+
+    def __call__(self, url, *, headers, timeout):  # type: ignore[no-untyped-def]
+        self.calls.append((url, dict(headers)))
+        if url in self.fail:
+            return self.fail[url]
+        return FetchOutcome("ok", url, code=200, body=self.by_url[url])
+
+
+def _feed_transport(registry, **fail):  # type: ignore[no-untyped-def]
+    bodies = {
+        s.feed_url: (FIXTURES / "feeds" / s.slug / "feed.ics").read_text(encoding="utf-8")
+        for s in registry.live
+    }
+    failures = {
+        next(s.feed_url for s in registry.live if s.slug == slug): outcome
+        for slug, outcome in fail.items()
+    }
+    return _FeedTransport(fail=failures, by_url=bodies)
+
+
+def test_fetch_feeds_writes_each_source_to_its_own_path(registry, tmp_path):  # type: ignore[no-untyped-def]
+    outcomes = fetch_feeds(registry.live, tmp_path, _feed_transport(registry))
+    assert set(outcomes) == {s.slug for s in registry.live}
+    for source in registry.live:
+        assert (tmp_path / source.slug / "feed.ics").is_file()
+        assert outcomes[source.slug].ok
+
+
+def test_fetch_uses_the_sources_own_headers(registry, tmp_path):  # type: ignore[no-untyped-def]
+    """The bypass header is per-source, resolved from the secret, and must reach the wire.
+
+    The predecessor's pipeline 403'd on every page while reporting success because the
+    credential never arrived. Asserting the header is sent is the cheap half of not
+    repeating that.
+    """
+    transport = _feed_transport(registry)
+    fetch_feeds(registry.live, tmp_path, transport)
+    orfe = next(s for s in registry.live if s.slug == "orfe")
+    sent = dict(next(headers for url, headers in transport.calls if url == orfe.feed_url))
+    assert sent == dict(orfe.http.headers)
+
+
+def test_a_failed_fetch_writes_nothing_and_leaves_the_previous_capture(registry, tmp_path):  # type: ignore[no-untyped-def]
+    """Neither a partial body nor a deletion. A blip must not become data loss.
+
+    The build layer already knows how to serve a source's last good feed; overwriting or
+    removing the capture here would take that option away.
+    """
+    fetch_feeds(registry.live, tmp_path, _feed_transport(registry))
+    before = (tmp_path / "orfe" / "feed.ics").read_bytes()
+
+    outcomes = fetch_feeds(
+        registry.live,
+        tmp_path,
+        _feed_transport(registry, orfe=FetchOutcome("http_error", "u", code=503, error="HTTP 503")),
+    )
+    assert outcomes["orfe"].failed
+    assert (tmp_path / "orfe" / "feed.ics").read_bytes() == before
+
+
+def test_fetch_reports_a_missing_feed_url_as_configuration_not_network(registry):  # type: ignore[no-untyped-def]
+    """The two have different fixes, so they must not read alike."""
+    unavailable = next(s for s in registry.sources if not s.is_live and not s.feed_url)
+    outcome = fetch_feed(unavailable, _FeedTransport())
+    assert outcome.failed
+    assert "declares no feed_url" in outcome.error
+
+
+# --------------------------------------------------------------------------------------
+# The run summary
+# --------------------------------------------------------------------------------------
+
+
+def test_the_summary_names_every_feed_and_its_state(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    tree = build_tree(registry, built, tmp_path)
+    body = markdown_summary(tree, generated_at=FIXED_TIME)
+    assert FIXED_TIME in body
+    for record in tree.feeds:
+        assert f"`{record.path}`" in body
+
+
+def test_the_summary_makes_a_stale_feed_impossible_to_skim_past(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """A stale source among sixteen healthy rows is exactly what a reader misses."""
+    write(build_tree(registry, built, tmp_path), tmp_path)
+    results, combos, config = built
+    broken = dict(results)
+    broken["orfe"] = BuildResult("orfe", "failed", diagnostics=("upstream returned 503",))
+    tree = assemble(registry, broken, combos, config, root=tmp_path, generated_at=FIXED_TIME)
+
+    body = markdown_summary(tree, generated_at=FIXED_TIME)
+    assert "**5 stale**" in body
+    assert "| `feeds/orfe/events.json` | **stale** |" in body
+    assert "upstream returned 503" in body
+
+
+def test_the_summary_cell_survives_a_reason_containing_a_pipe(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """An unescaped pipe silently splits a row into extra columns."""
+    tree = build_tree(registry, built, tmp_path)
+    tree.feeds.append(
+        PublishedFeed(path="feeds/x/events.json", status="failed", events=0, detail="a | b\nc")
+    )
+    row = next(
+        line
+        for line in markdown_summary(tree, generated_at=FIXED_TIME).splitlines()
+        if "feeds/x" in line
+    )
+    # Only unescaped pipes delimit, so counting those is what proves the row keeps its
+    # four columns. The escaped one is content.
+    assert len(re.findall(r"(?<!\\)\|", row)) == 5
+    assert "\\|" in row
+    assert "\n" not in row
+
+
+def test_the_summary_truncates_a_long_reason_rather_than_wrapping(registry, built, tmp_path):  # type: ignore[no-untyped-def]
+    """The disabled sources carry paragraph-long reasons; a table must stay readable."""
+    tree = build_tree(registry, built, tmp_path)
+    for line in markdown_summary(tree, generated_at=FIXED_TIME).splitlines():
+        assert len(line) < 400

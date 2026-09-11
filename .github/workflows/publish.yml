@@ -1,0 +1,172 @@
+# Build every live source, materialize the combined feeds, and deploy the tree.
+#
+# Cadence. Every 20 minutes on weekday daytime Eastern, hourly otherwise. Departmental
+# calendars are edited by people during working hours, so a uniform */30 spends most of its
+# runs proving that nothing changed overnight while still being slower than it needs to be
+# when someone actually posts a seminar. The three crons below do not overlap, so a
+# scheduled tick is never a duplicate run.
+#
+# Every run deploys, including the ones where no feed changed. That is deliberate:
+# status.json is the site's liveness beacon, and a consumer must be able to tell "we
+# checked eleven minutes ago and ORFE is stale" from "nothing has run in three days". The
+# predecessor cannot make that distinction, which is how it went stale unnoticed. The feeds
+# themselves carry no timestamp, so an unchanged feed redeploys byte-identical and the
+# published branch's history shows only what really moved.
+
+name: Publish
+
+on:
+  schedule:
+    # 08:00-19:40 ET weekdays. ET is UTC-4 in summer and UTC-5 in winter; the window is
+    # widened rather than switched, because a cron cannot follow a timezone and an hour of
+    # extra coverage costs far less than an hour of missed coverage.
+    - cron: '0,20,40 12-23 * * 1-5'
+    # Overnight on weekdays, and every hour at weekends.
+    - cron: '0 0-11 * * 1-5'
+    - cron: '0 * * * 0,6'
+  push:
+    branches: [main]
+    # Only things that can change the output. A README edit must not redeploy.
+    paths:
+      - 'config/**'
+      - 'schema/**'
+      - 'upcoming/**'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+    inputs:
+      allow_large_diff:
+        description: 'Publish even if a feed loses most of its events'
+        type: boolean
+        default: false
+      enrich:
+        description: 'Scrape event pages for the fields the ICS omits'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Never cancel a publish in flight. A cancelled run can leave the published branch and the
+# Pages deployment disagreeing, and a cancellation is not a failure that anything reports.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      status: ${{ steps.build.outputs.status }}
+    steps:
+      - name: Check out the source
+        uses: actions/checkout@v7
+
+      # The previously published tree is an input, not only an output. A source that fails
+      # serves its last good feed from here; the diff gate compares against it; and every
+      # combined feed that includes a failed source is built from its copy here rather than
+      # silently shrinking. Restored from a branch rather than from a cache or a Pages
+      # artifact because both of those expire, and losing this would turn a brief upstream
+      # outage into a blank departmental listing.
+      - name: Restore the previously published tree
+        id: restore
+        uses: actions/checkout@v7
+        continue-on-error: true
+        with:
+          ref: published
+          path: dist
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - run: pip install -e '.'
+
+      - name: Build and publish
+        id: build
+        env:
+          # A whole header line, "Name: value". The header's name lives in the secret too,
+          # so neither half is written in this repository. There is no default anywhere: a
+          # placeholder credential is how the predecessor came to 403 on every event page
+          # while reporting a clean run.
+          BOT_BYPASS_HEADER: ${{ secrets.BOT_BYPASS_HEADER }}
+          ENRICH: ${{ inputs.enrich }}
+          ALLOW_LARGE_DIFF: ${{ inputs.allow_large_diff }}
+        run: |
+          set -uo pipefail
+          if [ -z "${BOT_BYPASS_HEADER}" ]; then
+            echo "::error::BOT_BYPASS_HEADER is unset; enrichment would 403 on every page"
+            exit 1
+          fi
+
+          args=(publish --out dist --feeds .feeds --fetch --summary "$GITHUB_STEP_SUMMARY")
+          # Unset on a schedule or a push, which is when enrichment should be on.
+          if [ "${ENRICH:-true}" != "false" ]; then args+=(--enrich); fi
+          if [ "${ALLOW_LARGE_DIFF:-false}" = "true" ]; then args+=(--allow-large-diff); fi
+
+          # The exit code is recorded rather than allowed to end the job here. A source
+          # failing must still publish the other eleven and the combined feeds -- and must
+          # also end the run red, which the last step does. Ending it here would skip the
+          # deploy, and a skipped step is green: the predecessor's exact failure.
+          python -m upcoming.cli publish "${args[@]}"
+          code=$?
+          echo "status=$code" >> "$GITHUB_OUTPUT"
+
+          # 4 means "a source failed, and the tree is complete because that source is
+          # serving its last good feed". Anything else means the tree was never written --
+          # a config error, a crash -- and deploying the stale one under a fresh
+          # status.json would publish a lie about how current the site is.
+          if [ "$code" != "0" ] && [ "$code" != "4" ]; then
+            echo "::error::the build did not produce a tree (exit $code); nothing will be deployed"
+            exit "$code"
+          fi
+
+      - name: Commit the published tree
+        working-directory: dist
+        run: |
+          set -euo pipefail
+          if [ ! -d .git ]; then
+            # First ever run: the branch does not exist yet.
+            git init -q
+            git checkout -q -b published
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # status.json changes every run, so there is normally something to commit.
+          # --allow-empty only so a byte-identical run cannot fail the job.
+          git commit -q --allow-empty -m "Publish $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push -q "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" HEAD:published
+
+      - name: Upload the Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Report any source that failed
+        if: steps.build.outputs.status != '0'
+        run: |
+          echo "::error::a source failed; the tree published with its last good copy — see the job summary"
+          exit 1
+
+  deploy:
+    # A separate job so a deploy failure reads as a deploy failure. Folded into the build
+    # job it would be a step, and a step that does not run because an earlier one failed is
+    # reported as skipped, which reads as green.
+    needs: publish
+    # always(), because the point is to deploy what was built even when a source failed.
+    # Without it one department's upstream outage would stop the whole site updating.
+    if: always() && needs.publish.result != 'cancelled' && needs.publish.result != 'skipped'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

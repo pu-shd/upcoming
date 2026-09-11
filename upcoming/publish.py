@@ -273,6 +273,40 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
     return json.dumps(document, indent=2, ensure_ascii=True) + "\n"
 
 
+def markdown_summary(tree: Tree, *, generated_at: str) -> str:
+    """A run summary for a CI job page.
+
+    Lives here rather than in a workflow step so it is covered by tests and so a developer
+    can see exactly what a run will report without triggering one. The predecessor's
+    equivalent is a shell heredoc inside YAML, which can only be exercised by pushing.
+    """
+    counts: dict[str, int] = {}
+    for feed in tree.feeds:
+        counts[feed.status] = counts.get(feed.status, 0) + 1
+    headline = ", ".join(f"{n} {status}" for status, n in sorted(counts.items()))
+    stale = sum(1 for f in tree.feeds if f.stale)
+
+    lines = [
+        f"### Published {generated_at}",
+        "",
+        f"{headline}" + (f" — **{stale} stale**" if stale else ""),
+        "",
+        "| feed | status | events | note |",
+        "| --- | --- | ---: | --- |",
+    ]
+    for feed in sorted(tree.feeds, key=lambda f: f.path):
+        mark = "**stale**" if feed.stale else feed.status
+        note = " ".join((feed.detail, *feed.notes)).strip()
+        lines.append(f"| `{feed.path}` | {mark} | {feed.events} | {_cell(note)} |")
+    return "\n".join(lines) + "\n"
+
+
+def _cell(text: str, limit: int = 140) -> str:
+    """One table cell: no pipes, no newlines, and short enough to read."""
+    flat = " ".join(text.split()).replace("|", "\\|")
+    return flat if len(flat) <= limit else flat[: limit - 1] + "\u2026"
+
+
 def write(tree: Tree, root: str | os.PathLike[str]) -> list[str]:
     """Write the tree, returning the paths written, sorted."""
     base = Path(root)
@@ -296,6 +330,7 @@ __all__ = [
     "PublishedFeed",
     "Tree",
     "assemble",
+    "markdown_summary",
     "previous_payload",
     "status_document",
     "utc_now",

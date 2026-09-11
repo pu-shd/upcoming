@@ -1,0 +1,107 @@
+# What the site actually serves, checked from outside.
+#
+# This exists because of a specific failure in the predecessor, recorded in its own
+# handover: its pipeline job died before its Pages steps, so those steps were *skipped*
+# rather than failed. A skipped step is green. The site went stale and nothing said so.
+#
+# A check inside the publishing workflow would have been skipped by the same failure, so
+# this one runs on its own schedule, against the live origin, knowing nothing about the run
+# that produced it. Its only inputs are bytes the public can fetch. It opens an issue when
+# something is wrong and closes it when the site recovers, so a problem outlives the run
+# that found it -- a red workflow in a list of green ones is easy to miss for a week.
+
+name: Verify
+
+on:
+  schedule:
+    # Offset from the publish crons so a fresh deploy has time to land, and less frequent
+    # than publishing: this answers "is the site healthy", which does not need to be asked
+    # three times an hour.
+    - cron: '25 * * * *'
+  workflow_dispatch:
+    inputs:
+      max_age_minutes:
+        description: 'How stale status.json may be before it is a failure'
+        type: string
+        default: '90'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: verify
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SITE_BASE_URL: https://pu-shd.github.io/upcoming
+      # 90 minutes is three missed ticks at the daytime cadence and one and a half
+      # overnight. Tight enough to notice a stuck pipeline within the hour, loose enough
+      # that a single delayed scheduled run -- which GitHub does routinely under load --
+      # is not a page.
+      MAX_AGE: ${{ inputs.max_age_minutes || '90' }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: pip install -e '.'
+
+      - name: Check the live origin
+        id: check
+        run: |
+          set -uo pipefail
+          # No BOT_BYPASS_HEADER here, deliberately: this fetches our own published site,
+          # not a departmental page, and it must see exactly what an ordinary consumer
+          # sees. Granting this job a credential would let it pass where a consumer fails.
+          python -m upcoming.cli verify \
+            --base-url "$SITE_BASE_URL" \
+            --max-age-minutes "$MAX_AGE" 2>&1 | tee report.txt
+          echo "status=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          {
+            echo '### `'"$SITE_BASE_URL"'`'
+            echo
+            echo '```'
+            cat report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update the issue
+        if: steps.check.outputs.status != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          title="The published feeds are not healthy"
+          existing=$(gh issue list --state open --label watchdog --json number --jq '.[0].number // empty')
+          body=$(printf '%s\n\n```\n%s\n```\n\n[the run](%s/%s/actions/runs/%s)\n' \
+            "Checked $SITE_BASE_URL and it is not serving what it promises." \
+            "$(cat report.txt)" \
+            "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")
+          if [ -n "$existing" ]; then
+            # Comment rather than open a second issue: one problem, one thread, however
+            # many hours it lasts.
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --label watchdog --body "$body"
+          fi
+
+      - name: Close the issue once the site recovers
+        if: steps.check.outputs.status == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          existing=$(gh issue list --state open --label watchdog --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "The site is serving everything it promises again."
+          fi
+
+      - name: Fail the run if the site is unhealthy
+        if: steps.check.outputs.status != '0'
+        run: exit 1

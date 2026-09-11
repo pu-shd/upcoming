@@ -316,8 +316,7 @@ def from_wire(record: Mapping[str, Any]) -> Event:
             )
         elif attr == "speakers":
             values[attr] = tuple(
-                Speaker(name=s.get("name", ""), affiliation=s.get("affiliation", ""))
-                for s in raw
+                Speaker(name=s.get("name", ""), affiliation=s.get("affiliation", "")) for s in raw
             )
         elif isinstance(raw, list):
             values[attr] = tuple(raw)

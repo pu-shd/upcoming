@@ -27,7 +27,10 @@ out/
 CLAUDE.md
 .claude/
 
-# Generated feeds -- published via release and Pages, never committed to main
+# Generated feeds -- published to the `published` branch and Pages, never to main
 /feeds/
 /combos/
 /build/
+# Fetched ICS captures. `make publish FETCH=1` writes here; the committed fixtures under
+# tests/fixtures/feeds are the ones under version control.
+/.feeds/
