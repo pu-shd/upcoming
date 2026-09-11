@@ -117,3 +117,51 @@ def test_the_fpo_tag_reaches_events_from_three_different_sources(registry) -> No
         if any("fpo" in e.tags for e in result.events):
             sources_with_fpo.add(source.slug)
     assert len(sources_with_fpo) >= 3, f"only {sources_with_fpo} reached the fpo tag"
+
+
+# --------------------------------------------------------------------------------------
+# Spellings the warning gate caught in production
+# --------------------------------------------------------------------------------------
+
+
+def test_a_renamed_series_maps_under_both_spellings() -> None:
+    """ORFE renamed this series, and exact-alias matching does not follow a rename.
+
+    Found in the published output, not in review: the unmapped-tags gate warned, and four
+    ORFE seminars had been silently absent from the seminars feed because only the old
+    spelling was listed. Both are kept, because feeds published months apart carry both.
+    """
+    vocabulary = load_tags(REPO_ROOT / "config" / "tags.yaml")
+    for spelling in (
+        "Stochastic Analysis Seminar",
+        "Stochastic Analysis and Financial Mathematics Seminar",
+    ):
+        tags, unmapped = vocabulary.normalize([spelling])
+        assert tags == ("seminar",), spelling
+        assert unmapped == ()
+
+
+def test_a_named_lecture_series_is_its_own_concept() -> None:
+    """Endowed one-off lectures are promoted differently from a weekly seminar.
+
+    A department that wants only its named lectures has to be able to ask for them, so
+    this is not folded into `seminar` -- but the `seminars` combo includes it, because a
+    consumer building a talks listing wants both.
+    """
+    vocabulary = load_tags(REPO_ROOT / "config" / "tags.yaml")
+    tags, unmapped = vocabulary.normalize(["S. S. Wilks Distinguished Lecture Series"])
+    assert tags == ("lecture",)
+    assert unmapped == ()
+
+
+def test_the_seminars_combo_asks_for_every_talk_shaped_tag() -> None:
+    """Adding a canonical tag for a kind of talk must not quietly shrink this feed.
+
+    `lecture` was added after the gate found it; a future `workshop` or `panel` should
+    force a decision here rather than defaulting to exclusion.
+    """
+    import yaml
+
+    combos = yaml.safe_load((REPO_ROOT / "config" / "combos.yaml").read_text())["combos"]
+    seminars = next(c for c in combos if c["name"] == "seminars")
+    assert set(seminars["where"]["tags"]["in"]) == {"seminar", "colloquium", "lecture"}

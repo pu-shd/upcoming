@@ -50,11 +50,11 @@ combos:
     key: [starts_at, title]
 
   - name: seminars
-    label: Seminars and colloquia
+    label: Seminars, colloquia and named lectures
     include: ["*"]
     where:
       tags:
-        in: [seminar, colloquium]
+        in: [seminar, colloquium, lecture]
     key: [starts_at, title]
 
   # ---------------------------------------------------------------------------------

@@ -37,12 +37,25 @@ tags:
       - Departmental Seminars
       - MAE Departmental Seminars        # mae
       - Optimization Seminar             # orfe
-      - Stochastic Analysis Seminar      # orfe
+      # ORFE renamed this series; both spellings appear in feeds published months apart,
+      # so both are kept. The unmapped-tags gate is what surfaced the new one -- it had
+      # been silently excluding four seminars from the seminars feed.
+      - Stochastic Analysis Seminar      # orfe, the older spelling
+      - Stochastic Analysis and Financial Mathematics Seminar   # orfe, current
       - Special Seminar                  # cee
       - Other Seminars                   # quantum
       - Rising Stars Seminars            # bioengineering
       - S. S. Wilks Memorial Seminar in Statistics   # orfe
       - PMI/PCCM Seminar Series          # materials
+
+  lecture:
+    label: Named lecture
+    # Distinct from `seminar` because these are endowed, one-off, and promoted differently
+    # -- a department that wants only its named lectures must be able to ask for them. The
+    # `seminars` combo includes this tag, since a consumer building a talks listing wants
+    # both.
+    aliases:
+      - S. S. Wilks Distinguished Lecture Series   # orfe
 
   colloquium:
     label: Colloquium
