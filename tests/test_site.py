@@ -60,14 +60,29 @@ def test_site_files_absent_is_not_an_error(tmp_path):  # type: ignore[no-untyped
 # --------------------------------------------------------------------------------------
 
 
-def test_the_page_reaches_no_external_host() -> None:
+def test_the_page_loads_no_external_resource() -> None:
     """Self-contained, so it cannot break because someone else's CDN did.
 
-    It also means the page works from a local `make publish` tree with no network.
+    Resources only. A hyperlink to another site is navigation the reader chooses, and the
+    page still renders fully offline without it -- the newsletter this feed is gathered for
+    is linked precisely so a reader can get to it.
     """
-    for url in re.findall(r'(?:src|href)\s*=\s*["\']([^"\']+)', INDEX):
+    resources = re.findall(r'src\s*=\s*["\']([^"\']+)', INDEX)
+    resources += re.findall(r'<link[^>]+href\s*=\s*["\']([^"\']+)', INDEX)
+    for url in resources:
+        assert not url.startswith(("http://", "https://", "//")), f"external resource: {url}"
+
+
+def test_every_outbound_link_is_somewhere_we_meant_to_send_people() -> None:
+    """Navigation is allowed, but not to anywhere at all.
+
+    A stray absolute URL in a published page is how a typo becomes a link to somebody
+    else's site, so the hosts are enumerated rather than merely permitted.
+    """
+    allowed = ("github.com/pu-shd/upcoming",)
+    for url in re.findall(r'<a[^>]+href\s*=\s*["\']([^"\']+)', INDEX):
         if url.startswith(("http://", "https://")):
-            assert "github.com/pu-shd/upcoming" in url, f"external resource: {url}"
+            assert any(host in url for host in allowed), f"unexpected outbound link: {url}"
 
 
 def test_the_page_reads_the_manifest_rather_than_being_generated_with_it() -> None:

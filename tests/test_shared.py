@@ -156,7 +156,7 @@ def test_every_config_loader_goes_through_the_shared_reader() -> None:
 @pytest.mark.parametrize(
     ("path", "allowed"),
     [
-        ("config/sources.yaml", {"defaults", "sources"}),
+        ("config/sources.yaml", {"defaults", "sources", "purposes"}),
         ("config/tags.yaml", {"tags"}),
         ("config/combos.yaml", {"combos"}),
         ("config/patterns.yaml", {"patterns", "not_a_person"}),

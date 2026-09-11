@@ -158,6 +158,10 @@ class Event:
     series: str = ""
     #: Canonical tags -- what combo predicates match on. Sorted for stable output.
     tags: tuple[str, ...] = ()
+    #: Downstream publications this event is gathered for, inherited from its source. On a
+    #: merged record it is the union, so an event two units both publish stays eligible for
+    #: everything either of them feeds.
+    purposes: tuple[str, ...] = ()
     #: Categories exactly as the feed spelled them, so an unmapped vocabulary is visible
     #: rather than dropped.
     raw_categories: tuple[str, ...] = ()
@@ -274,6 +278,7 @@ WIRE_FIELDS: tuple[tuple[str, str], ...] = (
     ("affiliation", "affiliation"),
     ("series", "series"),
     ("tags", "tags"),
+    ("purposes", "purposes"),
     ("rawCategories", "raw_categories"),
     ("unmappedTags", "unmapped_tags"),
     ("location", "location"),

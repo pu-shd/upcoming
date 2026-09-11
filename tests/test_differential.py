@@ -310,6 +310,9 @@ def test_this_build_adds_fields_the_predecessor_has_no_concept_of(orfe) -> None:
         "rawExtractAbstract",
         "rawExtractBio",
         "unmappedTags",  # categories no canonical tag recognised, published not dropped
+        # Which downstream publications gathered this feed. The predecessor serves one
+        # department into one newsletter, so the question could not arise for it.
+        "purposes",
     }
 
 

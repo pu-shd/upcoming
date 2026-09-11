@@ -61,6 +61,10 @@ class PublishedFeed:
     detail: str = ""
     sources: tuple[str, ...] = ()
     notes: tuple[str, ...] = ()
+    #: Downstream publications this feed is gathered for. Published so "which feeds does
+    #: the newsletter draw on" is answerable from the manifest, including for the sources
+    #: that are declared but unavailable.
+    purposes: tuple[str, ...] = ()
     #: When this feed's content was last built from a live fetch. Carried forward across
     #: failures, so ``stale`` stops being a yes/no and becomes a duration: the watchdog can
     #: then tell a twenty-minute blip from a week-long outage, which the two need, because
@@ -202,6 +206,7 @@ def assemble(
                     events=0,
                     detail=" ".join(source.reason.split())[:300],
                     sources=(source.slug,),
+                    purposes=source.purposes,
                 )
             )
             continue
@@ -219,6 +224,7 @@ def assemble(
                     events=len(result.events),
                     sources=(source.slug,),
                     notes=result.notes,
+                    purposes=source.purposes,
                     last_success=generated_at,
                 ),
             )
@@ -237,6 +243,7 @@ def assemble(
                     events=0,
                     detail=f"{detail}. Never published, so nothing is served at this path.",
                     sources=(source.slug,),
+                    purposes=source.purposes,
                 )
             )
             degraded[source.slug] = f"{source.slug} failed and has never been published"
@@ -252,6 +259,7 @@ def assemble(
                 stale=True,
                 detail=detail,
                 sources=(source.slug,),
+                purposes=source.purposes,
                 last_success=str(was.get(path, {}).get("lastSuccessAt", "")),
             ),
         )
@@ -356,6 +364,7 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
                 **({"detail": feed.detail} if feed.detail else {}),
                 **({"lastSuccessAt": feed.last_success} if feed.last_success else {}),
                 **({"sources": list(feed.sources)} if feed.sources else {}),
+                **({"purposes": list(feed.purposes)} if feed.purposes else {}),
                 **({"notes": list(feed.notes)} if feed.notes else {}),
             }
             for feed in sorted(tree.feeds, key=lambda f: f.path)

@@ -179,6 +179,45 @@ What that approach does not survive is a second department: `mae` publishes
 `Final Public Oral Examinations,Final Public Orals`, so a literal match finds neither. The
 vocabulary exists for the scale, not because the predecessor was wrong within its own.
 
+### Purpose
+
+A feed may declare what its events can be put toward, and every event carries it as
+`purposes`. The names are a small vocabulary declared under `purposes:` in
+`config/sources.yaml`, each with a label:
+
+```yaml
+purposes:
+  engineering-newsletter:
+    label: Engineering events newsletter
+
+sources:
+  - slug: orfe
+    purposes: [engineering-newsletter]
+    # A feed mostly destined somewhere, with a class of events that is not. First match
+    # wins, and `purposes: []` means these events serve none.
+    purpose_overrides:
+      - when: { tags: { contains: fpo } }
+        purposes: []
+```
+
+Optional, and nothing is inherited from `defaults:` — a feed added for some other reason
+serves no purpose until it says so, because a source silently joining a publication is a
+worse failure than one left out and noticed.
+
+The vocabulary is controlled because a purpose is matched by name: a misspelled one selects
+nothing and reports success, which is indistinguishable from a filter that is simply
+strict. So an undeclared name is a load error, whether it appears on a source, in an
+override, or in a predicate that selects on it.
+
+Overrides resolve **after** mapping, since their predicates read `tags` and `series` —
+values that do not exist until mapping has run. A merged record carries the **union** of
+its sources' purposes: intersecting would drop an event from a purpose precisely because a
+second unit also listed it. And `purposes` is not part of the merge comparison, so two
+records differing only in it are still the same event rather than a published duplicate.
+
+`status.json` names each feed's purposes too, the unavailable ones included, so the
+question is answerable per feed as well as per event.
+
 ### `status.json` is the contract for "is this current"
 
 The feeds deliberately carry **no timestamp**, which is what lets published bytes be

@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
-from collections.abc import Mapping
+from collections.abc import Collection, Mapping
 from typing import Any
 
 from .errors import ConfigFatal
@@ -101,7 +101,20 @@ def matches(event: Event, predicate: Mapping[str, Any]) -> bool:
     return True
 
 
-def validate(node: Any, tags: TagVocabulary, *, where: str) -> None:
+def validate(
+    node: Any,
+    tags: TagVocabulary,
+    *,
+    where: str,
+    purposes: Collection[str] = (),
+) -> None:
+    """Refuse a predicate that could never match.
+
+    The two controlled vocabularies -- canonical tags and declared purposes -- are checked
+    by name, because a predicate on a value nothing produces filters to nothing and reports
+    success. That is indistinguishable from a filter that is simply strict, which is why it
+    has to be a load error rather than something noticed later in a suspiciously short feed.
+    """
     if not isinstance(node, dict):
         raise ConfigFatal(f"{where}: a predicate must be a mapping")
     for field_name, test in node.items():
@@ -123,6 +136,18 @@ def validate(node: Any, tags: TagVocabulary, *, where: str) -> None:
                     f"{where}.tags: {value!r} is not a canonical tag. A predicate on a "
                     f"tag nothing produces filters to nothing and reports success. "
                     f"Available: {', '.join(sorted(tags.canonical))}."
+                )
+            if (
+                field_name == "purposes"
+                and op in {"contains", "not_contains"}
+                and str(value) not in purposes
+            ):
+                raise ConfigFatal(
+                    f"{where}.purposes: {value!r} is not a declared purpose. A predicate "
+                    f"on a publication nobody defined selects no events and reports "
+                    f"success. Declared: "
+                    f"{', '.join(sorted(purposes)) or 'none'} (see `purposes:` in "
+                    f"config/sources.yaml)."
                 )
 
 

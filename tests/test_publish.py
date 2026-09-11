@@ -55,7 +55,11 @@ def built(registry):  # type: ignore[no-untyped-def]
         for source in registry.live
     }
     tags = load_tags(REPO_ROOT / "config" / "tags.yaml")
-    combos = load_combos(known_sources=[s.slug for s in registry.sources], tags=tags)
+    combos = load_combos(
+        known_sources=[s.slug for s in registry.sources],
+        tags=tags,
+        purposes=tuple(registry.purposes),
+    )
     by_source = {slug: r.events for slug, r in results.items() if r.ok}
     return (
         results,

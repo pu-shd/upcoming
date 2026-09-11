@@ -12,6 +12,18 @@
 #
 # All counts and shapes in the comments below were measured on 2026-09-11, not assumed.
 
+# What the events from a feed may be put toward. A declared vocabulary, because a purpose
+# is matched by name: a misspelled one would select nothing and report success, which is
+# indistinguishable from a filter that is simply strict.
+#
+# A feed names the purposes it serves and every event inherits them, with an optional
+# per-event override below. Nothing is inherited from `defaults:` -- a feed added for some
+# other reason serves no purpose until it says so, because a source silently joining a
+# publication is a worse failure than one left out and noticed.
+purposes:
+  engineering-newsletter:
+    label: Engineering events newsletter
+
 defaults:
   platform: princeton-site-builder
   url_template: "https://{host}/feeds/events/ical.ics"
@@ -94,6 +106,7 @@ sources:
 
   - slug: orfe
     label: Operations Research and Financial Engineering
+    purposes: [engineering-newsletter]
     host: orfe.princeton.edu
     cadence: 30m
     rebuild_after_hours: 6
@@ -140,6 +153,7 @@ sources:
 
   - slug: citp
     label: Center for Information Technology Policy
+    purposes: [engineering-newsletter]
     host: citp.princeton.edu
     cadence: 30m
     rebuild_after_hours: 6
@@ -171,6 +185,7 @@ sources:
 
   - slug: quantum
     label: Princeton Quantum Initiative
+    purposes: [engineering-newsletter]
     host: quantum.princeton.edu
     # Two composite shapes:
     #   'Quantum Group Meeting: "…title…" - Sid Midha (Gopalakrishnan Group)'
@@ -223,6 +238,7 @@ sources:
 
   - slug: materials
     label: Princeton Materials Institute
+    purposes: [engineering-newsletter]
     host: materials.princeton.edu
     # "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts\, University of Texas at Austin"
     # Also carries "Briger Hall (C112 + Atrium C102)", hence the parenthetical rule, and
@@ -267,6 +283,7 @@ sources:
 
   - slug: ece
     label: Electrical and Computer Engineering
+    purposes: [engineering-newsletter]
     host: ece.princeton.edu
     # Not in the original host list: discovered because nextg.princeton.edu has no feed of
     # its own and its events page links here.
@@ -277,6 +294,7 @@ sources:
 
   - slug: cbe
     label: Chemical and Biological Engineering
+    purposes: [engineering-newsletter]
     host: cbe.princeton.edu
     # Writes BOTH "E105 SEAS-BioE" (room first) and "SEAS-CBE F212" (building first) in one
     # feed, which is why the room rule splits only when exactly one end looks like a room
@@ -288,6 +306,7 @@ sources:
 
   - slug: mae
     label: Mechanical and Aerospace Engineering
+    purposes: [engineering-newsletter]
     host: mae.princeton.edu
     # SUMMARY is the talk title and the event page carries the speaker -- the inverse of
     # orfe. One event's entire SUMMARY is the literal string "TBD" and one has
@@ -313,6 +332,7 @@ sources:
 
   - slug: ai
     label: Princeton AI Lab
+    purposes: [engineering-newsletter]
     host: ai.princeton.edu
     # MIXED WITHIN ONE FEED -- the case a single per-source mapping cannot express:
     #   "Rafael Gomez-Bombarelli"                                    -> a speaker
@@ -351,6 +371,7 @@ sources:
 
   - slug: bioengineering
     label: Omenn-Darling Bioengineering Institute
+    purposes: [engineering-newsletter]
     host: bioengineering.princeton.edu
     # The Rising Stars symposium page lists four speakers (Jacqueline Bliley, André
     # Forjaz, Helena Hu, Felix Radford). The model carries `speakers[]`, so all four
@@ -369,6 +390,7 @@ sources:
 
   - slug: cee
     label: Civil and Environmental Engineering
+    purposes: [engineering-newsletter]
     host: cee.princeton.edu
     cadence: 6h
     # Legitimately tiny: 1 event. A relative count floor would read that as a collapse, so
@@ -380,6 +402,7 @@ sources:
 
   - slug: robotics
     label: Princeton Robotics
+    purposes: [engineering-newsletter]
     host: robotics.princeton.edu
     cadence: 6h
     # 1 event, and "Commons" has no room component -- the location chain must decline
@@ -395,6 +418,7 @@ sources:
 
   - slug: kellercenter
     label: Keller Center for Innovation in Engineering Education
+    purposes: [engineering-newsletter]
     host: kellercenter.princeton.edu
     platform: drupal-ical-api
     feed_url: "https://kellercenter.princeton.edu/events.ics"
@@ -422,6 +446,7 @@ sources:
 
   - slug: nextg
     label: NextG Initiative
+    purposes: [engineering-newsletter]
     host: nextg.princeton.edu
     status: unavailable
     reason: >
@@ -435,6 +460,7 @@ sources:
 
   - slug: cs
     label: Computer Science
+    purposes: [engineering-newsletter]
     host: www.cs.princeton.edu
     status: unavailable
     reason: >
@@ -447,6 +473,7 @@ sources:
 
   - slug: acee
     label: Andlinger Center for Energy and the Environment
+    purposes: [engineering-newsletter]
     host: acee.princeton.edu
     status: unavailable
     reason: >
@@ -457,6 +484,7 @@ sources:
 
   - slug: decenter
     label: DeCenter for Decentralization
+    purposes: [engineering-newsletter]
     host: decenter.princeton.edu
     status: unavailable
     reason: >
@@ -466,6 +494,7 @@ sources:
 
   - slug: metro
     label: Metropolis Project
+    purposes: [engineering-newsletter]
     host: metro.princeton.edu
     status: unavailable
     reason: >

@@ -34,6 +34,7 @@ from .config import read_mapping
 from .errors import ConfigFatal
 from .model import PLATFORM_SITE_BUILDER
 from .patterns import Vocabulary, load_vocabulary
+from .predicate import matches
 from .predicate import validate as validate_predicate
 from .rules import load_chain
 from .tags import TagVocabulary, load_tags
@@ -188,6 +189,26 @@ class SourceConfig:
     #: notice by subtracting.
     publish_where: Mapping[str, Any] | None = None
     publish_unless: Mapping[str, Any] | None = None
+    #: Downstream publications this source is gathered for. Opt-in and never inherited: a
+    #: feed added for some other reason is out of every publication until it says
+    #: otherwise, because a new source silently joining a school-wide newsletter is a worse
+    #: failure than one left out and noticed.
+    purposes: tuple[str, ...] = ()
+    #: Event-level exceptions to ``purposes``, in order. The feed's declaration is the
+    #: default and these are the departures from it, which is the way round that keeps the
+    #: common case to one line of config.
+    purpose_overrides: tuple[PurposeOverride, ...] = ()
+
+    def purposes_for(self, event: Any) -> tuple[str, ...]:
+        """The purposes one event actually serves.
+
+        Resolved per event rather than stamped once, because the override predicates read
+        fields -- tags, series -- that only exist after mapping has run.
+        """
+        for override in self.purpose_overrides:
+            if matches(event, override.when):
+                return override.purposes
+        return self.purposes
 
     @property
     def publishes_everything(self) -> bool:
@@ -264,10 +285,27 @@ class SourceConfig:
 
 
 @dataclass(frozen=True)
+class PurposeOverride:
+    """One event-level exception to a feed's declared purposes.
+
+    First match wins, as with ``location_rules`` and ``summary.rules``. An empty
+    ``purposes`` means the matching events serve none -- a feed that is mostly destined
+    for a publication but has a class of events that is not, which is the common shape.
+    """
+
+    when: Mapping[str, Any]
+    purposes: tuple[str, ...]
+
+
+@dataclass(frozen=True)
 class Registry:
     """Every source, resolved."""
 
     sources: tuple[SourceConfig, ...]
+    #: Downstream publications these feeds are gathered for: name -> declared details.
+    #: Carried on the registry so a combined feed can be refused at load time for naming a
+    #: publication nobody defined, rather than quietly selecting nothing.
+    purposes: Mapping[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         seen: dict[str, str] = {}
@@ -517,6 +555,7 @@ def _build_source(
     raw: Mapping[str, Any],
     vocabulary: Vocabulary,
     tag_vocabulary: TagVocabulary,
+    known_purposes: Mapping[str, Any] | None = None,
 ) -> SourceConfig:
     if not _SLUG_RE.match(slug):
         raise ConfigFatal(f"source slug {slug!r} must be lowercase alphanumeric with hyphens")
@@ -585,11 +624,49 @@ def _build_source(
             f"to {ROLE_RULES!r} or remove the rules."
         )
 
+    purposes = tuple(raw.get("purposes") or ())
+    if undeclared := [name for name in purposes if name not in (known_purposes or {})]:
+        raise ConfigFatal(
+            f"{slug}: purposes names {undeclared} which nothing declares. A publication "
+            f"nobody defined selects no events and reports success. "
+            f"Known: {sorted(known_purposes or {}) or 'none declared'}."
+        )
+
+    overrides: list[PurposeOverride] = []
+    for index, entry in enumerate(raw.get("purpose_overrides") or ()):
+        where = f"{slug}.purpose_overrides[{index}]"
+        if not isinstance(entry, dict) or "when" not in entry:
+            raise ConfigFatal(f"{where}: needs a `when` predicate")
+        if "purposes" not in entry:
+            raise ConfigFatal(
+                f"{where}: needs `purposes`. An override with no purposes is ambiguous "
+                f"between 'serves none' and 'unfinished'; write `purposes: []` for the "
+                f"first so the intent is on the page."
+            )
+        validate_predicate(
+            entry["when"],
+            tag_vocabulary,
+            where=f"{where}.when",
+            purposes=tuple(known_purposes or ()),
+        )
+        assigned = tuple(entry["purposes"] or ())
+        if missing := [name for name in assigned if name not in (known_purposes or {})]:
+            raise ConfigFatal(
+                f"{where}: purposes names {missing} which nothing declares. "
+                f"Known: {sorted(known_purposes or {}) or 'none declared'}."
+            )
+        overrides.append(PurposeOverride(when=entry["when"], purposes=assigned))
+
     publish_where = raw.get("publish_where") or None
     publish_unless = raw.get("publish_unless") or None
     for clause, node in (("publish_where", publish_where), ("publish_unless", publish_unless)):
         if node is not None:
-            validate_predicate(node, tag_vocabulary, where=f"{slug}.{clause}")
+            validate_predicate(
+                node,
+                tag_vocabulary,
+                where=f"{slug}.{clause}",
+                purposes=tuple(known_purposes or ()),
+            )
 
     escape_fields = tuple((raw.get("wire") or {}).get("escape") or ())
     if unknown_escape := set(escape_fields) - serialize.ESCAPABLE_FIELDS:
@@ -611,6 +688,8 @@ def _build_source(
         cadence=str(raw.get("cadence", "1h")),
         publish_where=publish_where,
         publish_unless=publish_unless,
+        purposes=purposes,
+        purpose_overrides=tuple(overrides),
         location_rules=location_rules,
         enrich=_build_enrich(raw, slug),
         http=_build_http(raw),
@@ -644,16 +723,29 @@ def load_registry(
     vocabulary = load_vocabulary(patterns)
     tag_vocabulary = load_tags(tags)
     config_path = Path(path)
-    document = read_mapping(config_path, what="source registry", allow={"defaults", "sources"})
+    document = read_mapping(
+        config_path, what="source registry", allow={"defaults", "sources", "purposes"}
+    )
+
+    known_purposes = document.get("purposes") or {}
+    if not isinstance(known_purposes, dict):
+        raise ConfigFatal(f"{config_path}: `purposes` must be a mapping of name to details")
+    for name, entry in known_purposes.items():
+        if not _SLUG_RE.match(str(name)):
+            raise ConfigFatal(
+                f"purpose {name!r} must be lowercase alphanumeric with hyphens, so it can "
+                f"be published in a record and matched by a predicate"
+            )
+        if not isinstance(entry, dict) or not entry.get("label"):
+            raise ConfigFatal(
+                f"purpose {name!r} needs a `label`. A publication nobody can name is one "
+                f"nobody can tell you whether a feed belongs in."
+            )
 
     defaults = document.get("defaults") or {}
     entries = document.get("sources")
     if not entries:
         raise ConfigFatal(f"{config_path} declares no sources")
-
-    known = {"defaults", "sources"}
-    if unknown := set(document) - known:
-        raise ConfigFatal(f"{config_path}: unknown top-level keys {sorted(unknown)}")
 
     sources: list[SourceConfig] = []
     seen: set[str] = set()
@@ -669,7 +761,7 @@ def load_registry(
 
         merged = _merge(defaults, entry)
         merged = _merge(merged, _env_overrides(str(slug), env))
-        source = _build_source(str(slug), merged, vocabulary, tag_vocabulary)
+        source = _build_source(str(slug), merged, vocabulary, tag_vocabulary, known_purposes)
 
         # Resolve secret headers only for sources that actually scrape. The bypass
         # credential is needed for event *pages*, not for the feed -- measured: every ICS
@@ -686,4 +778,4 @@ def load_registry(
 
         sources.append(source)
 
-    return Registry(sources=tuple(sources))
+    return Registry(sources=tuple(sources), purposes=known_purposes)

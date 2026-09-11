@@ -61,6 +61,7 @@ def combos(registry):  # type: ignore[no-untyped-def]
         REPO_ROOT / "config" / "combos.yaml",
         known_sources=[s.slug for s in registry.sources],
         tags=TAGS,
+        purposes=tuple(registry.purposes),
     )
 
 
@@ -293,14 +294,24 @@ def test_keying_on_a_bare_identifier_is_refused(tmp_path, registry) -> None:
     """
     path = write(tmp_path, "combos:\n  - name: c\n    include: ['*']\n    key: [guid]\n")
     with pytest.raises(ConfigFatal, match="per-site sequences"):
-        load_combos(path, known_sources=[s.slug for s in registry.sources], tags=TAGS)
+        load_combos(
+            path,
+            known_sources=[s.slug for s in registry.sources],
+            tags=TAGS,
+            purposes=tuple(registry.purposes),
+        )
 
 
 def test_an_unknown_source_is_refused(tmp_path, registry) -> None:
     """A combo over a source that does not exist silently produces fewer events."""
     path = write(tmp_path, "combos:\n  - name: c\n    include: [nosuchsource]\n")
     with pytest.raises(ConfigFatal, match="unknown source"):
-        load_combos(path, known_sources=[s.slug for s in registry.sources], tags=TAGS)
+        load_combos(
+            path,
+            known_sources=[s.slug for s in registry.sources],
+            tags=TAGS,
+            purposes=tuple(registry.purposes),
+        )
 
 
 def test_a_predicate_on_a_tag_nothing_produces_is_refused(tmp_path, registry) -> None:
@@ -311,19 +322,34 @@ def test_a_predicate_on_a_tag_nothing_produces_is_refused(tmp_path, registry) ->
         "    exclude_where:\n      tags:\n        contains: FPO\n",
     )
     with pytest.raises(ConfigFatal, match="not a canonical tag"):
-        load_combos(path, known_sources=[s.slug for s in registry.sources], tags=TAGS)
+        load_combos(
+            path,
+            known_sources=[s.slug for s in registry.sources],
+            tags=TAGS,
+            purposes=tuple(registry.purposes),
+        )
 
 
 def test_an_unknown_key_field_is_refused(tmp_path, registry) -> None:
     path = write(tmp_path, "combos:\n  - name: c\n    include: ['*']\n    key: [startsat]\n")
     with pytest.raises(ConfigFatal, match="unknown field"):
-        load_combos(path, known_sources=[s.slug for s in registry.sources], tags=TAGS)
+        load_combos(
+            path,
+            known_sources=[s.slug for s in registry.sources],
+            tags=TAGS,
+            purposes=tuple(registry.purposes),
+        )
 
 
 def test_a_disabled_combo_must_record_why(tmp_path, registry) -> None:
     path = write(tmp_path, "combos:\n  - name: c\n    include: ['*']\n    enabled: false\n")
     with pytest.raises(ConfigFatal, match="records no reason"):
-        load_combos(path, known_sources=[s.slug for s in registry.sources], tags=TAGS)
+        load_combos(
+            path,
+            known_sources=[s.slug for s in registry.sources],
+            tags=TAGS,
+            purposes=tuple(registry.purposes),
+        )
 
 
 def test_the_committed_combos_load(combos) -> None:

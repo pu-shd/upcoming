@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import collections
 import os
-from collections.abc import Mapping, Sequence
+from collections.abc import Collection, Mapping, Sequence
 from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
@@ -140,8 +140,16 @@ def load_combos(
     *,
     known_sources: Sequence[str],
     tags: TagVocabulary,
+    purposes: Collection[str],
 ) -> tuple[Combo, ...]:
-    """Load and validate every declared combined feed."""
+    """Load and validate every declared combined feed.
+
+    ``purposes`` has no default on purpose. It is the set of publications
+    ``config/sources.yaml`` declares, and a caller that omitted it would get a combo
+    refused for naming a purpose "nobody defined" when the real fault was the caller --
+    a confusing failure a long way from its cause. Required, so forgetting is a signature
+    error instead.
+    """
     config = Path(path)
     document = read_mapping(config, what="combo configuration", allow={"combos"})
     combos: list[Combo] = []
@@ -189,7 +197,7 @@ def load_combos(
         )
         for clause, node in clauses:
             if node:
-                validate_predicate(node, tags, where=f"{name}.{clause}")
+                validate_predicate(node, tags, where=f"{name}.{clause}", purposes=purposes)
 
         enabled = bool(entry.get("enabled", True))
         if not enabled and not str(entry.get("reason") or "").strip():
@@ -274,7 +282,11 @@ def combine(combo: Combo, by_source: Mapping[str, Sequence[Event]]) -> ComboResu
             # Every detail agrees, so merging is safe by construction -- there is nothing
             # to choose between. The collision becomes a fact the record carries.
             sources = tuple(sorted({s for e in identical for s in e.sources}))
-            out.append(replace(identical[0], sources=sources))
+            # Purposes union rather than intersect. An event two units both publish stays
+            # eligible for everything either of them feeds -- intersecting would drop a
+            # talk out of a newsletter precisely because a second unit also listed it.
+            purposes = tuple(sorted({p for e in identical for p in e.purposes}))
+            out.append(replace(identical[0], sources=sources, purposes=purposes))
             merged += len(identical) - 1
 
     return ComboResult(

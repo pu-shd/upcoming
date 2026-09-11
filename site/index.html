@@ -122,6 +122,14 @@
     parse identically.
   </p>
 
+  <h3>Events carry the purposes they may serve</h3>
+  <p class="note">
+    Each record carries <code>purposes</code>, naming what its feed's events may be put
+    toward. It is optional: a feed that declares none publishes none, and an event may
+    override its feed's default. On a merged record it is the union, so an event two units
+    both list stays eligible for everything either of them serves.
+  </p>
+
   <h3>Identity is source-scoped</h3>
   <p class="note">
     <code>guid</code> is the upstream UID, published verbatim, but those are

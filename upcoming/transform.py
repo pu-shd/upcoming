@@ -253,6 +253,9 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         series=_series(raw.categories),
         tags=tuple(dict.fromkeys((*tags, *canonical))),
         unmapped_tags=unmapped,
+        # The feed's declaration. Any per-event override is applied afterwards, since its
+        # predicates read tags and series, which do not exist until this call returns.
+        purposes=source.purposes,
         raw_categories=tuple(raw.categories),
         content=decode_entities(raw.description),
         summary_raw=raw.summary,

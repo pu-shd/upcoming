@@ -371,7 +371,11 @@ def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
     """Build everything and assemble one publishable tree."""
     registry = load_registry(registry_path)
     tag_vocabulary = registry.sources[0].tags
-    combo_list = load_combos(known_sources=[s.slug for s in registry.sources], tags=tag_vocabulary)
+    combo_list = load_combos(
+        known_sources=[s.slug for s in registry.sources],
+        tags=tag_vocabulary,
+        purposes=tuple(registry.purposes),
+    )
     load_pronunciation()
 
     out_root = Path(args.out)

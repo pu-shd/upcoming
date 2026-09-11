@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import json
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -100,6 +100,18 @@ def check_platform(text: str, source: SourceConfig) -> None:
         )
 
 
+def resolve_purposes(events: Sequence[Event], source: SourceConfig) -> tuple[Event, ...]:
+    """Apply any event-level purpose overrides over the feed's declaration.
+
+    A separate pass rather than part of mapping, because the override predicates read
+    ``tags`` and ``series`` -- values that do not exist until mapping has finished. Runs
+    before ``select`` so a predicate there can filter on the resolved purposes.
+    """
+    if not source.purpose_overrides:
+        return tuple(events)
+    return tuple(replace(e, purposes=source.purposes_for(e)) for e in events)
+
+
 def select(events: Sequence[Event], source: SourceConfig) -> tuple[tuple[Event, ...], int]:
     """Apply the source's own publish predicates, returning what survives and what did not.
 
@@ -138,6 +150,7 @@ def build_events_with_stats(
     check_platform(text, source)
 
     events = transform(parse_ics(text), source)
+    events = resolve_purposes(events, source)
     events, declined = select(events, source)
     stats: dict[str, ScrapeStats] = {}
     if cache is not None:
