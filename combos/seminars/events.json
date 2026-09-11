@@ -320,6 +320,59 @@
     "mappingConflict": false
   },
   {
+    "id": "orfe:ps_events:12686:delta:0",
+    "guid": "ps_events:12686:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T20:30:00Z",
+    "endsAt": "2026-09-09T21:30:00Z",
+    "startTime": "2026-09-09T16:30:00",
+    "endTime": "2026-09-09T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Harnessing Synthetic Data from Generative AI for Statistical Inference",
+    "speakers": [
+      {
+        "name": "Xihong Lin",
+        "affiliation": "Harvard University"
+      }
+    ],
+    "speaker": "Xihong Lin, Harvard University",
+    "affiliation": "Harvard University",
+    "series": "S. S. Wilks Distinguished Lecture Series",
+    "tags": [
+      "lecture"
+    ],
+    "rawCategories": [
+      "S. S. Wilks Distinguished Lecture Series"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science",
+      "id": "",
+      "detail": "104"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/xihong-lin-harvard-university-0",
+    "content": "Abstract: Integration of statistics and generative AI plays a pivotal role for accelerating trustworthy cross-domain scientific discovery. Recent advances in generative models have dramatically increased the availability and use of synthetic data across scientific domains. While these developments create exciting opportunities for empowering data analysis, they also raise fundamental statistical challenges regarding how synthetic data can be used in a valid, reliable, and principled manner. In this talk, we first discuss the current landscape of high-fidelity high",
+    "rawEventDetails": "Details Event Description Abstract: Integration of statistics and generative AI plays a pivotal role for accelerating trustworthy cross-domain scientific discovery. Recent advances in generative models have dramatically increased the availability and use of synthetic data across scientific domains. While these developments create exciting opportunities for empowering data analysis, they also raise fundamental statistical challenges regarding how synthetic data can be used in a valid, reliable, and principled manner. In this talk, we first discuss the current landscape of high-fidelity high-dimensional synthetic data generation using generative AI models such as transformer, diffusion, and flow matching based models. More importantly, we present a principled framework for incorporating synthetic data in downstream statistical analysis that ensures valid statistical inference even when generative AI models are misspecified. We show that the proposed synthetic data assisted and augmented methods for continuous and discreate outcomes that integrate observed and synthetic data are robust to misspecified black-box generative models and can improve statistical inferential power when the generative AI models are informative. We demonstrate the utility of these synthetic data assisted methods to the analysis of the UK biobank data, by performing genome-wide association studies (GWAS) of proteomic data and whole-genome sequencing (WGS) analyses of brain imaging phenotypes, and binary mental health survey data both characterized by substantial missingness (about 70-90%). Event Category S. S. Wilks Distinguished Lecture Series",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Xihong Lin, Harvard University",
+    "locationRaw": "104 - Computer Science",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3796:delta:0",
     "guid": "ps_events:3796:delta:0",
     "sources": [
@@ -525,6 +578,59 @@
     "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12726:delta:0",
+    "guid": "ps_events:12726:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-16T20:30:00Z",
+    "endsAt": "2026-09-16T21:30:00Z",
+    "startTime": "2026-09-16T16:30:00",
+    "endTime": "2026-09-16T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Quantitative propagation of chaos and fluctuations for non-exchangeable diffusions",
+    "speakers": [
+      {
+        "name": "Lane Chun Yeung",
+        "affiliation": "Illinois Institute of Technology"
+      }
+    ],
+    "speaker": "Lane Chun Yeung, Illinois Institute of Technology",
+    "affiliation": "Illinois Institute of Technology",
+    "series": "Stochastic Analysis and Financial Mathematics Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Stochastic Analysis and Financial Mathematics Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/lane-chun-yeung-illinois-institute-technology",
+    "content": "Abstract: We study a system of interacting diffusions with heterogeneous pairwise interactions, so the particle system is non-exchangeable. In the first part of the talk, we develop a quantitative, non-asymptotic approach to mean field approximation by comparing the law of any subcollection of particles with a suitably chosen product measure and proving sharp relative entropy bounds. The proof uses a BBGKY hierarchy adapted to the non-exchangeable setting and an unexpected connection with first-passage percolation.In the second part, we establish a universal",
+    "rawEventDetails": "Details Event Description Abstract: We study a system of interacting diffusions with heterogeneous pairwise interactions, so the particle system is non-exchangeable. In the first part of the talk, we develop a quantitative, non-asymptotic approach to mean field approximation by comparing the law of any subcollection of particles with a suitably chosen product measure and proving sharp relative entropy bounds. The proof uses a BBGKY hierarchy adapted to the non-exchangeable setting and an unexpected connection with first-passage percolation. In the second part, we establish a universal central limit theorem for the global fluctuation field around the McKean-Vlasov limit. Under suitable structural and denseness conditions on the interaction matrix, the fluctuations converge to the same Gaussian SPDE as in the classical exchangeable mean field case. For $m_n$-regular graphs, this holds when $m_n/\\sqrt n\\to\\infty$, and a spatial interaction model shows that the $n^{-1/2}$ denseness threshold is sharp. The proof builds on the sharp propagation of chaos estimates developed in the first part, together with functional inequalities and an analysis in negative Sobolev spaces. Based on joint work with Daniel Lacker and Fuzhong Zhou, and on joint work with Mykhaylo Shkolnikov. Short Bio : Lane Chun Yeung is a postdoctoral research associate at Carnegie Mellon University, mentored by Mykhaylo Shkolnikov. He received his Ph.D. in Operations Research from Columbia University, where he was advised by Daniel Lacker and Ioannis Karatzas. His research interests include interacting particle systems, mean field models, mathematical finance, and stochastic control and games. Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Lane Chun Yeung, Illinois Institute of Technology",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
     "titleIsPlaceholder": false,
     "mappingConflict": false
   },
@@ -785,6 +891,59 @@
     "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12701:delta:0",
+    "guid": "ps_events:12701:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-23T20:30:00Z",
+    "endsAt": "2026-09-23T21:30:00Z",
+    "startTime": "2026-09-23T16:30:00",
+    "endTime": "2026-09-23T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Particle systems with singular interaction through local times: breakdown and metastability",
+    "speakers": [
+      {
+        "name": "Graeme Baker",
+        "affiliation": "Columbia University"
+      }
+    ],
+    "speaker": "Graeme Baker, Columbia University",
+    "affiliation": "Columbia University",
+    "series": "Stochastic Analysis and Financial Mathematics Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Stochastic Analysis and Financial Mathematics Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/graeme-baker-columbia-university",
+    "content": "Abstract: We study systems of reflected Brownian motions on the half-line in which each particle is pulled toward the origin by the local times at zero of all the particles. When the interaction is too strong, the system breaks down in finite time. We characterize the breakdown completely through a dynamic graph structure, construct the mean-field limit, and describe how the system continues past breakdown as a solution of the extended Skorokhod problem. At criticality, the finite system survives for a time of order N while its mean-field limit survives forever; we explain",
+    "rawEventDetails": "Details Event Description Abstract: We study systems of reflected Brownian motions on the half-line in which each particle is pulled toward the origin by the local times at zero of all the particles. When the interaction is too strong, the system breaks down in finite time. We characterize the breakdown completely through a dynamic graph structure, construct the mean-field limit, and describe how the system continues past breakdown as a solution of the extended Skorokhod problem. At criticality, the finite system survives for a time of order N while its mean-field limit survives forever; we explain this metastability through an exact skew-product decomposition. Based on joint work with Ben Hambly and Philipp Jettkant, and ongoing work with Kevin Hu. Bio: Graeme Baker is a Term Assistant Professor in the Department of Statistics at Columbia University, where he also teaches in the M.A. in Mathematical Finance program. He received his PhD in Applied and Computational Mathematics from Princeton University, advised by Mykhaylo Shkolnikov. His research concerns interacting particle systems with singular interactions, probabilistic solutions of free boundary problems, and the calibration of stochastic models to financial data. Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Graeme Baker, Columbia University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
     "titleIsPlaceholder": false,
     "mappingConflict": false
   },
@@ -2033,6 +2192,59 @@
     "mappingConflict": false
   },
   {
+    "id": "orfe:ps_events:12771:delta:0",
+    "guid": "ps_events:12771:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-04T21:30:00Z",
+    "endsAt": "2026-11-04T22:30:00Z",
+    "startTime": "2026-11-04T16:30:00",
+    "endTime": "2026-11-04T17:30:00",
+    "timezone": "America/New_York",
+    "title": "A Stochastic Analysis and Financial Mathematics Seminar Talk by Alejandra Quintos, University of Wisconsin\u2013Madison",
+    "speakers": [
+      {
+        "name": "Alejandra Quintos",
+        "affiliation": "University of Wisconsin\u2013Madison"
+      }
+    ],
+    "speaker": "Alejandra Quintos, University of Wisconsin\u2013Madison",
+    "affiliation": "University of Wisconsin\u2013Madison",
+    "series": "Stochastic Analysis and Financial Mathematics Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Stochastic Analysis and Financial Mathematics Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/alejandra-quintos-university%C2%A0%C2%A0wisconsin%E2%80%93madison",
+    "content": "",
+    "rawEventDetails": "Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Alejandra Quintos, University\u00a0of\u00a0Wisconsin\u2013Madison",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "orfe:ps_events:12721:delta:0",
     "guid": "ps_events:12721:delta:0",
     "sources": [
@@ -2767,6 +2979,59 @@
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "orfe:ps_events:12791:delta:0",
+    "guid": "ps_events:12791:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-02T21:30:00Z",
+    "endsAt": "2026-12-02T22:30:00Z",
+    "startTime": "2026-12-02T16:30:00",
+    "endTime": "2026-12-02T17:30:00",
+    "timezone": "America/New_York",
+    "title": "A Stochastic Analysis and Financial Mathematics Seminar Talk by Felipe Verastegui-Gruenewald, Columbia University",
+    "speakers": [
+      {
+        "name": "Felipe Verastegui-Gruenewald",
+        "affiliation": "Columbia University"
+      }
+    ],
+    "speaker": "Felipe Verastegui-Gruenewald, Columbia University",
+    "affiliation": "Columbia University",
+    "series": "Stochastic Analysis and Financial Mathematics Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "rawCategories": [
+      "Stochastic Analysis and Financial Mathematics Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/felipe-verastegui-gruenewald-columbia-university",
+    "content": "",
+    "rawEventDetails": "Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Felipe Verastegui-Gruenewald, Columbia University",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
     "mappingConflict": false
   },
   {

@@ -282,13 +282,13 @@
     "speaker": "Xihong Lin\\, Harvard University",
     "affiliation": "Harvard University",
     "series": "S. S. Wilks Distinguished Lecture Series",
-    "tags": [],
+    "tags": [
+      "lecture"
+    ],
     "rawCategories": [
       "S. S. Wilks Distinguished Lecture Series"
     ],
-    "unmappedTags": [
-      "S. S. Wilks Distinguished Lecture Series"
-    ],
+    "unmappedTags": [],
     "location": {
       "name": "Computer Science",
       "id": "",
@@ -390,13 +390,13 @@
     "speaker": "Lane Chun Yeung\\, Illinois Institute of Technology",
     "affiliation": "Illinois Institute of Technology",
     "series": "Stochastic Analysis and Financial Mathematics Seminar",
-    "tags": [],
+    "tags": [
+      "seminar"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
-    "unmappedTags": [
-      "Stochastic Analysis and Financial Mathematics Seminar"
-    ],
+    "unmappedTags": [],
     "location": {
       "name": "Sherrerd Hall",
       "id": "",
@@ -549,13 +549,13 @@
     "speaker": "Graeme Baker\\, Columbia University",
     "affiliation": "Columbia University",
     "series": "Stochastic Analysis and Financial Mathematics Seminar",
-    "tags": [],
+    "tags": [
+      "seminar"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
-    "unmappedTags": [
-      "Stochastic Analysis and Financial Mathematics Seminar"
-    ],
+    "unmappedTags": [],
     "location": {
       "name": "Sherrerd Hall",
       "id": "",
@@ -867,13 +867,13 @@
     "speaker": "Alejandra Quintos\\, University of Wisconsin\u2013Madison",
     "affiliation": "University of Wisconsin\u2013Madison",
     "series": "Stochastic Analysis and Financial Mathematics Seminar",
-    "tags": [],
+    "tags": [
+      "seminar"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
-    "unmappedTags": [
-      "Stochastic Analysis and Financial Mathematics Seminar"
-    ],
+    "unmappedTags": [],
     "location": {
       "name": "Sherrerd Hall",
       "id": "",
@@ -1132,13 +1132,13 @@
     "speaker": "Felipe Verastegui-Gruenewald\\, Columbia University",
     "affiliation": "Columbia University",
     "series": "Stochastic Analysis and Financial Mathematics Seminar",
-    "tags": [],
+    "tags": [
+      "seminar"
+    ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
     ],
-    "unmappedTags": [
-      "Stochastic Analysis and Financial Mathematics Seminar"
-    ],
+    "unmappedTags": [],
     "location": {
       "name": "Sherrerd Hall",
       "id": "",
