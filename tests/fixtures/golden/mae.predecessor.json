@@ -1,0 +1,178 @@
+[
+  {
+    "guid": "ps_events:4741:delta:0",
+    "startTime": "2026-08-24T09:00:00",
+    "endTime": "2026-08-24T11:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/influence-surfactants-air-liquid-air-sheets-and-bubble-bursting",
+    "series": "Final Public Oral Exam",
+    "title": "The influence of surfactants on air-liquid-air sheets and bubble bursting",
+    "location": {
+      "name": "Engineering Quad J Wing",
+      "id": "",
+      "detail": "J223"
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  },
+  {
+    "guid": "ps_events:4786:delta:0",
+    "startTime": "2026-08-31T14:00:00",
+    "endTime": "2026-08-31T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/winds-waves-and-wakes-investigating-impact-ocean-waves-large-eddy-simulations-marine",
+    "series": "Final Public Oral Exam",
+    "title": "Winds, Waves, and Wakes: Investigating the impact of ocean waves in large eddy simulations of marine atmospheric boundary layers and offshore wind farms",
+    "location": {
+      "name": "Engineering Quad J Wing",
+      "id": "",
+      "detail": "J223"
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  },
+  {
+    "guid": "ps_events:4746:delta:0",
+    "startTime": "2026-09-25T15:00:00",
+    "endTime": "2026-09-25T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/industrial-electrification-technologies-and-interactions-energy-system",
+    "series": "MAE Departmental Seminars",
+    "content": "Abstract:&nbsp\\;Electrifying energy-intensive industries is a key component of reducing fossil fuel consumption and meeting decarbonization goals\\, but these end uses have been slower to transition than other sectors of the economy because of the diversity of industrial processes\\, the heat and temperature requirements involved\\, and the capital-intensive nature of existing infrastructure. The scale of transitioning this sector of the economy will also have significant impacts on the broader electricity sector\\, including changes in demand patterns\\, grid capacity requirements\\, and",
+    "title": "Industrial Electrification: Technologies and Interactions with the Energy System",
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  },
+  {
+    "guid": "ps_events:4751:delta:0",
+    "startTime": "2026-10-09T15:00:00",
+    "endTime": "2026-10-09T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/mechanics-asteroid-exploration-recent-missions-and-future-plans",
+    "series": "MAE Departmental Seminars",
+    "content": "Abstract:The exploration of primitive bodies in the solar system\\, such as asteroids and comets\\, is driven by scientific questions about the early solar system\\, long-term goals of utilizing primitive body resources in space\\, and the protection of the planet from hazardous impacts. Motivated by these concerns\\, there have been many missions to these small bodies over the last few decades\\, with each one uncovering new details about these bodies that further motivate their exploration\\, while identifying new technologies that are needed to continue our progress. Despite past success\\, there",
+    "title": "The Mechanics of Asteroid Exploration: Recent Missions and Future Plans",
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  },
+  {
+    "guid": "ps_events:4756:delta:0",
+    "startTime": "2026-11-06T15:00:00",
+    "endTime": "2026-11-06T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/current-understanding-and-unsolved-problems-thermal-conductivity-materials",
+    "series": "MAE Departmental Seminars",
+    "content": "Abstract:Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years\\, the combined efforts of materials scientists\\, engineers\\, physicists\\, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and",
+    "title": "Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials",
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  },
+  {
+    "guid": "ps_events:4761:delta:0",
+    "startTime": "2026-11-13T15:00:00",
+    "endTime": "2026-11-13T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/tbd",
+    "series": "MAE Departmental Seminars",
+    "content": "Abstract:TBDBio:Dr. Maruthi Akella is a professor in Aerospace Engineering and Engineering Mechanics at UT Austin where he holds the Cockrell Family Endowed Chair in Engineering. His research encompasses coordinated systems\\, learning\\, adaptation\\, and vision-based sensing. His research group contributed the onboard guidance algorithm for the Intuitive Machines IM-1 mission \u2013 the first U.S. moon landing in more than 50 years since the Apollo era. The major impacts of Dr. Akella\u2019s work have been recognized through the AIAA Mechanics and Control of Flight Award\\, the AAS",
+    "title": "TBD",
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:4801:delta:0",
+    "startTime": "2026-11-20T15:00:00",
+    "endTime": "2026-11-20T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/nuclear-electric-propulsion-progress-challenges-and-path-high-power-space-systems",
+    "series": "MAE Departmental Seminars",
+    "content": "Abstract:Nuclear electric propulsion (NEP) offers the potential to fundamentally expand the capability and reach of spacecraft\\, but realizing that potential requires overcoming significant challenges in reactor technology\\, power conversion and distribution\\, thermal management\\, electric propulsion\\, and system integration. This seminar will examine the current state of NEP development\\, highlighting recent progress while exploring the demanding requirements associated with operating high-power systems continuously for years or even decades in the space environment.",
+    "title": "Nuclear Electric Propulsion: Progress, Challenges, and the Path to High-Power Space Systems",
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  },
+  {
+    "guid": "ps_events:4766:delta:0",
+    "startTime": "2026-12-04T15:00:00",
+    "endTime": "2026-12-04T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2026/local-maps-are-all-you-need",
+    "series": "MAE Departmental Seminars",
+    "content": "Abstract:&nbsp\\;In robotics\\, we have spent a lot of time building really good maps from noisy sensor data. Who doesn\u2019t like a nice\\, crisp\\, globally consistent map? Over the last 20 years\\, I have been exploring a paradigm to robot navigation that eschews such globally consistent maps in favour of graphs of local maps\\, which are cheaper to construct\\, store\\, and query. These topometric maps enable so-called teach-and-repeat (T&amp\\;R) navigation. In this talk\\, I will give a progress update on some of the new things we are doing with T&amp\\;R including using different primary sensors\\,",
+    "title": "Local Maps Are All You Need!",
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  },
+  {
+    "guid": "ps_events:4811:delta:0",
+    "startTime": "2027-04-16T15:00:00",
+    "endTime": "2027-04-16T16:00:00",
+    "urlRef": "https://mae.princeton.edu/events/2027/new-technology-new-astrophysics",
+    "series": "MAE Departmental Seminars",
+    "content": "How is it possible that 1/4 of the Nobel Prizes in Physics since 2006 have been for astrophysics? All 5 of them came from new technologies\\, and two required space observatories. I\u2019ll review the breakthrough ideas that grew into discoveries\\, and suggest where future technologies might go.The JWST is working brilliantly\\, and has found Little Red Dots\\, the current mystery object. But there\u2019s still no Earth 2.0. The DKIST solar telescope with adaptive optics is working beautifully. &nbsp\\;The Vera Rubin Telescope is online\\, the Nancy Grace Roman Space Telescope will be launched just before this",
+    "title": "New Technology for New Astrophysics",
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "speaker": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false
+  }
+]

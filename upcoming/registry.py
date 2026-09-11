@@ -31,6 +31,7 @@ from typing import Any
 
 import yaml
 
+from . import locate, serialize
 from .errors import ConfigFatal
 from .model import PLATFORM_SITE_BUILDER
 
@@ -143,6 +144,17 @@ class SourceConfig:
     #: that re-runs enrichment when an abstract is posted to the event page *after* the
     #: feed settles -- a defect both predecessors have and neither documents.
     rebuild_after_hours: int = 24
+    #: Fields whose commas and semicolons are re-escaped on output. Per field rather than
+    #: one per-source boolean: ORFE's ingest wants an escaped speaker, and the same
+    #: boolean in the predecessor also governs MAE's title, where it mangles
+    #: "Winds, Waves, and Wakes".
+    escape_fields: tuple[str, ...] = ()
+    #: Template for a synthesized title, e.g. "{a_an} {series} Talk by". Empty means fall
+    #: straight through to the speaker, then the series.
+    title_template: str = ""
+    #: Whether a synthesized title may name the speaker. ORFE wants it; a source whose
+    #: speaker field is unreliable can turn it off.
+    fallback_include_speaker: bool = True
     raw: Mapping[str, Any] = field(default_factory=dict)
 
     @property
@@ -430,6 +442,42 @@ def _build_source(slug: str, raw: Mapping[str, Any]) -> SourceConfig:
     location_rules = tuple(raw.get("location_rules") or ())
     if status == STATUS_LIVE and not location_rules:
         raise ConfigFatal(f"{slug} is live but declares no location_rules")
+    if unknown := locate.unknown_rules(location_rules):
+        raise ConfigFatal(
+            f"{slug} names unknown location rule(s) {list(unknown)}. A typo here fires no "
+            f"rule and silently degrades every location. Available: "
+            f"{', '.join(sorted(locate.RULES))}."
+        )
+    # A chain may deliberately omit `whole` -- a source can prefer publishing no location
+    # to publishing an unsplit venue -- but `whole` always matches, so listing it early
+    # makes every later rule dead.
+    if location_rules[:-1].count("whole"):
+        raise ConfigFatal(
+            f"{slug} lists `whole` before the end of its location chain, so every "
+            f"later rule is unreachable: `whole` always matches."
+        )
+    if "unambiguous_room" in location_rules:
+        index = location_rules.index("unambiguous_room")
+        misordered = [
+            name
+            for name in locate.MUST_PRECEDE_UNAMBIGUOUS
+            if name in location_rules and location_rules.index(name) > index
+        ]
+        if misordered:
+            raise ConfigFatal(
+                f"{slug} lists {misordered} after `unambiguous_room`, which would claim "
+                f"their values first. '101 - Sherrerd Hall' has a room token in its "
+                f"leading position, so the room rule matches it and leaves "
+                f"'- Sherrerd Hall' as the venue."
+            )
+
+    escape_fields = tuple((raw.get("wire") or {}).get("escape") or ())
+    if unknown_escape := set(escape_fields) - serialize.ESCAPABLE_FIELDS:
+        raise ConfigFatal(
+            f"{slug}: wire.escape names unknown field(s) {sorted(unknown_escape)}. An escaping "
+            f"rule on a field that does not exist never applies. Available: "
+            f"{', '.join(sorted(serialize.ESCAPABLE_FIELDS))}."
+        )
 
     return SourceConfig(
         slug=slug,
@@ -447,6 +495,9 @@ def _build_source(slug: str, raw: Mapping[str, Any]) -> SourceConfig:
         uid_pattern=raw.get("uid_pattern"),
         reason=reason,
         rebuild_after_hours=int(raw.get("rebuild_after_hours", 24)),
+        escape_fields=escape_fields,
+        title_template=str((raw.get("fallback") or {}).get("title_template", "")),
+        fallback_include_speaker=bool((raw.get("fallback") or {}).get("include_speaker", True)),
         raw=raw,
     )
 

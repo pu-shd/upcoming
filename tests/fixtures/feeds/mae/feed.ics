@@ -1,0 +1,196 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Mechanical and Aerospace Engineering
+BEGIN:VEVENT
+UID:ps_events:4741:delta:0
+DTSTART:20260824T130000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260824T150000Z
+URL:https://mae.princeton.edu/events/2026/influence-surfactants-air-liquid-
+ air-sheets-and-bubble-bursting
+LOCATION:Engineering Quad J Wing/J223
+SUMMARY:The influence of surfactants on air-liquid-air sheets and bubble bu
+ rsting
+CLASS:PUBLIC
+CATEGORIES:Final Public Oral Exam
+DTSTAMP:20260806T190729Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4786:delta:0
+DTSTART:20260831T180000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260831T200000Z
+URL:https://mae.princeton.edu/events/2026/winds-waves-and-wakes-investigati
+ ng-impact-ocean-waves-large-eddy-simulations-marine
+LOCATION:Engineering Quad J Wing/J223
+SUMMARY:Winds\, Waves\, and Wakes: Investigating the impact of ocean waves 
+ in large eddy simulations of marine atmospheric boundary layers and offsho
+ re wind farms
+CLASS:PUBLIC
+CATEGORIES:Final Public Oral Exam
+DTSTAMP:20260820T152109Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4746:delta:0
+DTSTART:20260925T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260925T200000Z
+URL:https://mae.princeton.edu/events/2026/industrial-electrification-techno
+ logies-and-interactions-energy-system
+LOCATION:Bowen Hall 222
+SUMMARY:Industrial Electrification: Technologies and Interactions with the 
+ Energy System
+CLASS:PUBLIC
+DESCRIPTION:Abstract:&nbsp\;Electrifying energy-intensive industries is a k
+ ey component of reducing fossil fuel consumption and meeting decarbonizati
+ on goals\, but these end uses have been slower to transition than other se
+ ctors of the economy because of the diversity of industrial processes\, th
+ e heat and temperature requirements involved\, and the capital-intensive n
+ ature of existing infrastructure. The scale of transitioning this sector o
+ f the economy will also have significant impacts on the broader electricit
+ y sector\, including changes in demand patterns\, grid capacity requiremen
+ ts\, and
+CATEGORIES:MAE Departmental Seminars
+DTSTAMP:20260812T160139Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4751:delta:0
+DTSTART:20261009T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261009T200000Z
+URL:https://mae.princeton.edu/events/2026/mechanics-asteroid-exploration-re
+ cent-missions-and-future-plans
+LOCATION:Bowen Hall 222
+SUMMARY:The Mechanics of Asteroid Exploration: Recent Missions and Future P
+ lans
+CLASS:PUBLIC
+DESCRIPTION:Abstract:The exploration of primitive bodies in the solar syste
+ m\, such as asteroids and comets\, is driven by scientific questions about
+  the early solar system\, long-term goals of utilizing primitive body reso
+ urces in space\, and the protection of the planet from hazardous impacts. 
+ Motivated by these concerns\, there have been many missions to these small
+  bodies over the last few decades\, with each one uncovering new details a
+ bout these bodies that further motivate their exploration\, while identify
+ ing new technologies that are needed to continue our progress. Despite pas
+ t success\, there
+CATEGORIES:MAE Departmental Seminars
+DTSTAMP:20260812T172356Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4756:delta:0
+DTSTART:20261106T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261106T210000Z
+URL:https://mae.princeton.edu/events/2026/current-understanding-and-unsolve
+ d-problems-thermal-conductivity-materials
+LOCATION:Bowen Hall 222
+SUMMARY:Current Understanding and Unsolved Problems in the Thermal Conducti
+ vity of Materials
+CLASS:PUBLIC
+DESCRIPTION:Abstract:Thermal conductivity is a basic and familiar property 
+ of materials: silver spoons conduct heat well and plastic does not. High t
+ hermal conductivity is desirable for heat exchangers and thermal managemen
+ t while low thermal conductivity is needed for thermal insulation. In rece
+ nt years\, the combined efforts of materials scientists\, engineers\, phys
+ icists\, and chemists have succeeded in pushing-back long-established limi
+ ts in the thermal conductivity of materials. Advances in experimental meth
+ ods have expanded the range of materials that can be studied with high thr
+ oughput and
+CATEGORIES:MAE Departmental Seminars
+DTSTAMP:20260814T223254Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4761:delta:0
+DTSTART:20261113T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261113T210000Z
+URL:https://mae.princeton.edu/events/2026/tbd
+LOCATION:Bowen Hall 222
+SUMMARY:TBD
+CLASS:PUBLIC
+DESCRIPTION:Abstract:TBDBio:Dr. Maruthi Akella is a professor in Aerospace 
+ Engineering and Engineering Mechanics at UT Austin where he holds the Cock
+ rell Family Endowed Chair in Engineering. His research encompasses coordin
+ ated systems\, learning\, adaptation\, and vision-based sensing. His resea
+ rch group contributed the onboard guidance algorithm for the Intuitive Mac
+ hines IM-1 mission – the first U.S. moon landing in more than 50 years s
+ ince the Apollo era. The major impacts of Dr. Akella’s work have been re
+ cognized through the AIAA Mechanics and Control of Flight Award\, the AAS
+CATEGORIES:MAE Departmental Seminars
+DTSTAMP:20260812T162500Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4801:delta:0
+DTSTART:20261120T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261120T210000Z
+URL:https://mae.princeton.edu/events/2026/nuclear-electric-propulsion-progr
+ ess-challenges-and-path-high-power-space-systems
+LOCATION:Bowen Hall
+SUMMARY:Nuclear Electric Propulsion: Progress\, Challenges\, and the Path t
+ o High-Power Space Systems
+CLASS:PUBLIC
+DESCRIPTION:Abstract:Nuclear electric propulsion (NEP) offers the potential
+  to fundamentally expand the capability and reach of spacecraft\, but real
+ izing that potential requires overcoming significant challenges in reactor
+  technology\, power conversion and distribution\, thermal management\, ele
+ ctric propulsion\, and system integration. This seminar will examine the c
+ urrent state of NEP development\, highlighting recent progress while explo
+ ring the demanding requirements associated with operating high-power syste
+ ms continuously for years or even decades in the space environment.
+CATEGORIES:MAE Departmental Seminars
+DTSTAMP:20260824T163808Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4766:delta:0
+DTSTART:20261204T200000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261204T210000Z
+URL:https://mae.princeton.edu/events/2026/local-maps-are-all-you-need
+LOCATION:Bowen Hall 222
+SUMMARY:Local Maps Are All You Need!
+CLASS:PUBLIC
+DESCRIPTION:Abstract:&nbsp\;In robotics\, we have spent a lot of time build
+ ing really good maps from noisy sensor data. Who doesn’t like a nice\, c
+ risp\, globally consistent map? Over the last 20 years\, I have been explo
+ ring a paradigm to robot navigation that eschews such globally consistent 
+ maps in favour of graphs of local maps\, which are cheaper to construct\, 
+ store\, and query. These topometric maps enable so-called teach-and-repeat
+  (T&amp\;R) navigation. In this talk\, I will give a progress update on so
+ me of the new things we are doing with T&amp\;R including using different 
+ primary sensors\,
+CATEGORIES:MAE Departmental Seminars
+DTSTAMP:20260812T171816Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4811:delta:0
+DTSTART:20270416T190000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20270416T200000Z
+URL:https://mae.princeton.edu/events/2027/new-technology-new-astrophysics
+LOCATION:Bowen Hall
+SUMMARY:New Technology for New Astrophysics
+CLASS:PUBLIC
+DESCRIPTION:How is it possible that 1/4 of the Nobel Prizes in Physics sinc
+ e 2006 have been for astrophysics? All 5 of them came from new technologie
+ s\, and two required space observatories. I’ll review the breakthrough i
+ deas that grew into discoveries\, and suggest where future technologies mi
+ ght go.The JWST is working brilliantly\, and has found Little Red Dots\, t
+ he current mystery object. But there’s still no Earth 2.0. The DKIST sol
+ ar telescope with adaptive optics is working beautifully. &nbsp\;The Vera 
+ Rubin Telescope is online\, the Nancy Grace Roman Space Telescope will be 
+ launched just before this
+CATEGORIES:MAE Departmental Seminars
+DTSTAMP:20260828T191025Z
+END:VEVENT
+END:VCALENDAR

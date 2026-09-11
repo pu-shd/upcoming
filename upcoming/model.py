@@ -199,10 +199,14 @@ class Event:
     def speaker(self) -> str:
         """The speakers as one string, for the existing campus ingest.
 
-        Derived rather than stored, so it can never disagree with ``speakers``. Joined with
-        ``SPEAKER_JOIN`` -- see that constant for why not a comma.
+        Derived rather than stored, so it can never disagree with ``speakers``.
+
+        Each speaker renders as ``Name, Affiliation`` when one is known, which is the exact
+        form the predecessor publishes -- so splitting the affiliation into structure does
+        not silently change the scalar a consumer already parses. Several speakers join
+        with ``SPEAKER_JOIN``; see that constant for why not a comma.
         """
-        return SPEAKER_JOIN.join(s.name for s in self.speakers if s.name)
+        return SPEAKER_JOIN.join(s.display for s in self.speakers if s.name)
 
     @property
     def affiliation(self) -> str:

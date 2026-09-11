@@ -1,0 +1,232 @@
+[
+  {
+    "guid": "ps_events:11876:delta:0",
+    "startTime": "2025-09-08T12:15:00",
+    "endTime": "2025-09-08T13:15:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/elynn-chen-new-york-university",
+    "location": {
+      "name": "Sherrerd",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Elynn Chen\\, New York University",
+    "content": "Abstract: Most learning-and-decision systems assume a single\\, \rhomogeneous response to actions. In practice—marketing\\, healthcare\\, operations—outcomes vary across unobserved segments. This talk develops adata-driven framework for decision making under latent heterogeneity\\, where each individual belongs to an unknown group and group membership is probabilistic and feature-driven. I will focus on a linear contextual banditmodel with a logistic “gating” rule for membership and group-specificlinear rewards\\, and present an exploration-free\\, phased algorithm that jointly learns the gate and the",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11856:delta:0",
+    "startTime": "2025-09-11T16:30:00",
+    "endTime": "2025-09-11T17:30:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/navid-azizan-mit",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Navid Azizan\\, MIT",
+    "content": "AbstractIncorporating prior knowledge and domain-specific input\r-output requirements\\, such as safety or stability\\, as hard constraints into neural networks is a key enabler for their deployment in high-stakes applications. However\\, existing methods often rely on soft penalties\\, which are insufficient. In this talk\\, I will introduce hard-constrained neural networks (HardNet)\\, a general framework for enforcing hard\\, input-dependent constraints by appending a differentiable enforcement layer to anyneural network. This approach enables end-to-end training and\\, crucially\\, is",
+    "series": "Optimization Seminar",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11861:delta:0",
+    "startTime": "2025-09-15T12:15:00",
+    "endTime": "2025-09-15T13:15:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/zhuoran-yang-22-yale-university",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Zhuoran Yang *22\\, Yale University",
+    "content": "AbstractWe study how multi-head softmax attention models are tr\rained to perform in-context learning on linear data. Through extensive empirical experiments and rigorous theoretical analysis\\, we demystify the emergence of elegant attention patterns: a diagonal and homogeneous patternin the key-query weights\\, and a last-entry-only and zero-sum pattern in the output-value weights.Remarkably\\, these patterns consistently appear from gradient-based training starting from random initialization.Our analysis reveals that such emergent structures enable multi-head attention to",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11891:delta:0",
+    "startTime": "2025-09-22T12:15:00",
+    "endTime": "2025-09-22T13:15:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/xinghua-zheng-hong-kong-university-science-and-technology",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Xinghua Zheng\\, Hong Kong University of Science and Technology",
+    "content": "AbstractWe develop a statistical learning framework for constru\rcting the stochastic discount factor (SDF) portfolio. To address the dimensionality challenge\\, we extend the MAXSER method (Ao\\, Li\\, and Zheng\\, 2019\\, RFS) to allow for N >\\;>\\; T\\; prove that it surely screens foruseful characteristics\\; and establish asymptotic normality for the SDF loading estimates. Using 153 characteristics returns from cross-sectional regressions\\, our framework not only constructs an SDF with a high out-of-sample Sharpe ratio that successfully prices the cross-section of expected returns\\, but also",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11826:delta:0",
+    "startTime": "2025-09-23T16:30:00",
+    "endTime": "2025-09-23T17:30:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/dimitris-bertsimas-mit",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Dimitris Bertsimas\\, MIT",
+    "series": "Optimization Seminar,ORFE Department Colloquia",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11886:delta:0",
+    "startTime": "2025-09-29T12:15:00",
+    "endTime": "2025-09-29T13:15:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/zhimei-ren-university-pennsylvania",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Zhimei Ren\\, University of Pennsylvania",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11931:delta:0",
+    "startTime": "2025-10-01T16:30:00",
+    "endTime": "2025-10-01T17:30:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/benjamin-zhang-university-north-carolina-chapel-hill",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Benjamin Zhang\\, University of North Carolina\\, Chapel Hill",
+    "content": "AbstractParticle exchange methods such as parallel tempering (a\rlso known as replica exchange) are arguably the most effective computational tools for approximating integrals with respect to high-dimensional Gibbs measures with complex structure. In particular\\, exchange between replicas with different temperatures can greatly mitigate the so-called rare event sampling problem. One can consider the Gibbs measure as the solution toan eigenvalue problem with known (zero) eigenvalue. We describe how thesemethods can be generalized to problems where the eigenvalue is not known \\;",
+    "series": "Stochastic Analysis Seminar",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11841:delta:0",
+    "startTime": "2025-10-07T16:30:00",
+    "endTime": "2025-10-07T17:30:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/milind-tambe-harvard-university",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Milind Tambe\\, Harvard University",
+    "content": "AbstractFor nearly two decades\\, my team’s work on AI for Soc\rial Impact (AI4SI) has focused on optimizing limited resources in criticalareas like public health\\, conservation\\, and public safety. In this talk\\, I will highlight field test results from our deployed work in India\\, demonstrating measurable improvements in effectiveness for the world's twolargest mobile health programs for maternal and child care. We have leveraged innovative restless and collaborative bandit algorithms to achieve these gains\\, revealing new technical directions in the process. Additionally\\, I will",
+    "series": "ORFE Department Colloquia",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11866:delta:0",
+    "startTime": "2025-10-09T16:30:00",
+    "endTime": "2025-10-09T17:30:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/antoine-deza-mcmaster-university",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Antoine Deza\\, McMaster University",
+    "content": "A lattice $(d\\,k)$-polytope is the convex hull of a set of poin\rts in dimension $d$ \\;whose coordinates are \\;integers ranging from $0$ to $k$. \\;We investigate the \\;smallest possible distance between two disjoint lattice $(d\\,k)$-polytopes. A pair \\;of polytopes \\;achieving \\;this \\;minimal distance are called kissing polytopes. \\;This question arises \\;in various contexts where the minimal distance between such polytopes \\;appears in complexity bounds for optimization algorithms. \\;We provide \\;nearly matching lower \\;and upper bounds for this",
+    "series": "Optimization Seminar",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11871:delta:0",
+    "startTime": "2025-10-27T12:15:00",
+    "endTime": "2025-10-27T13:15:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/xuming-he-washington-university",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Xuming He\\, Washington University",
+    "content": "AbstractExpected \\;shortfall\\, measuring the average outcom\re (e.g.\\, portfolio loss) above a given quantile of its probability distribution\\, is a common financial risk measure. The same measure can be usedto characterize treatment effects in the tail of an outcome distribution\\,with applications ranging from policy evaluation in economics and publichealth to biomedical investigations. Expected \\;shortfall \\;regression is a natural approach of modeling covariate-adjusted \\;expected \\;shortfalls. Because the \\;expected \\;shortfall \\;cannot be written as a",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11896:delta:0",
+    "startTime": "2025-11-11T12:15:00",
+    "endTime": "2025-11-11T13:15:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/yang-feng-new-york-university",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Yang Feng\\, New York University",
+    "series": "S. S. Wilks Memorial Seminar in Statistics",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11831:delta:0",
+    "startTime": "2025-11-11T16:30:00",
+    "endTime": "2025-11-11T17:30:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/vijay-vazirani-university-california-irvine",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Vijay Vazirani\\, University of California\\, Irvine",
+    "content": "AbstractFor a mechanism to be truly impactful\\, it must combine\rstrong game-theoretic properties with computational efficiency -- a \\;classic example is the Gale–Shapley (1962) stable matching algorithm. This talk focuses on cardinal-utility matching markets\\, for which the most \\;well \\;known mechanism is the pricing-based approach of Hyllandand Zeckhauser (1979). While this mechanism satisfies several desirable game-theoretic properties\\, recent work has shown it to be computationallyintractable\\, both in theory and in practice.This talk will review a series of",
+    "series": "ORFE Department Colloquia",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  },
+  {
+    "guid": "ps_events:11906:delta:0",
+    "startTime": "2025-11-18T16:30:00",
+    "endTime": "2025-11-18T17:30:00",
+    "urlRef": "https://orfe.princeton.edu/events/2025/yann-lecun-new-york-university",
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "speaker": "Yann LeCun\\, New York University",
+    "series": "ORFE Department Colloquia",
+    "title": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement"
+  }
+]

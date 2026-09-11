@@ -26,7 +26,7 @@ MINIMAL = """
 defaults:
   platform: princeton-site-builder
   url_template: "https://{host}/feeds/events/ical.ics"
-  location_rules: [room_token, whole]
+  location_rules: [unambiguous_room, whole]
 sources:
   - slug: alpha
     host: alpha.example.edu
@@ -110,7 +110,7 @@ def test_quantum_declares_a_wide_placeholder_band(registry) -> None:
     assert quantum.expectations.max_placeholder_title_rate >= 0.9
 
 
-def test_location_rule_order_puts_the_dash_rule_before_room_tokens(registry) -> None:
+def test_location_rule_order_puts_the_dash_rule_before_unambiguous_rooms(registry) -> None:
     """Order is load-bearing, not cosmetic.
 
     ORFE writes "125 - Sherrerd Hall". A room-token rule seeing that string first would
@@ -119,7 +119,7 @@ def test_location_rule_order_puts_the_dash_rule_before_room_tokens(registry) -> 
     """
     rules = registry.by_slug("orfe").location_rules
     assert "detail_dash_name" in rules
-    assert rules.index("detail_dash_name") < rules.index("room_token")
+    assert rules.index("detail_dash_name") < rules.index("unambiguous_room")
 
 
 def test_every_location_chain_ends_by_declining(registry) -> None:
@@ -398,7 +398,7 @@ def test_editing_a_rule_changes_the_fingerprint(tmp_path: Path) -> None:
     """
     before = load_registry(write(tmp_path, MINIMAL), env=TEST_ENV).by_slug("alpha")
     after = load_registry(
-        write(tmp_path, MINIMAL.replace("[room_token, whole]", "[comma_room, whole]")),
+        write(tmp_path, MINIMAL.replace("[unambiguous_room, whole]", "[comma_room, whole]")),
         env=TEST_ENV,
     ).by_slug("alpha")
     assert before.fingerprint() != after.fingerprint()
@@ -581,13 +581,13 @@ def test_lists_replace_rather_than_append(tmp_path: Path) -> None:
         sources:
           - slug: alpha
             host: alpha.example.edu
-            location_rules: [room_token, whole]
+            location_rules: [unambiguous_room, whole]
             expectations:
               summary_role: title
         """,
     )
     assert load_registry(path, env=TEST_ENV).by_slug("alpha").location_rules == (
-        "room_token",
+        "unambiguous_room",
         "whole",
     )
 
@@ -840,3 +840,90 @@ def test_an_unknown_enrichment_target_is_refused(tmp_path: Path) -> None:
     )
     with pytest.raises(ConfigFatal, match="unknown field 'titel'"):
         load_registry(path, env=TEST_ENV)
+
+
+# --------------------------------------------------------------------------------------
+# Location chain validation
+# --------------------------------------------------------------------------------------
+
+
+def test_an_unknown_location_rule_is_refused(tmp_path: Path) -> None:
+    """A typo'd rule name fires nothing and silently degrades every location."""
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            location_rules: [sentinel, room_tokne, whole]
+            expectations:
+              summary_role: title
+        """,
+    )
+    with pytest.raises(ConfigFatal, match="unknown location rule"):
+        load_registry(path, env=TEST_ENV)
+
+
+def test_whole_before_the_end_of_a_chain_is_refused(tmp_path: Path) -> None:
+    """`whole` always matches, so anything after it is unreachable."""
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            location_rules: [whole, unambiguous_room]
+            expectations:
+              summary_role: title
+        """,
+    )
+    with pytest.raises(ConfigFatal, match="unreachable"):
+        load_registry(path, env=TEST_ENV)
+
+
+def test_the_dash_rule_after_the_room_rule_is_refused(tmp_path: Path) -> None:
+    """The ordering hazard, caught at load rather than discovered in output.
+
+    "101 - Sherrerd Hall" carries a room token in its leading position, so
+    `unambiguous_room` matches it first and leaves "- Sherrerd Hall" as the venue.
+    """
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            location_rules: [unambiguous_room, detail_dash_name, whole]
+            expectations:
+              summary_role: title
+        """,
+    )
+    with pytest.raises(ConfigFatal, match="after `unambiguous_room`"):
+        load_registry(path, env=TEST_ENV)
+
+
+def test_a_chain_that_deliberately_omits_whole_is_allowed(tmp_path: Path) -> None:
+    """A source may prefer publishing no location to publishing an unsplit venue."""
+    path = write(
+        tmp_path,
+        """
+        defaults:
+          url_template: "https://{host}/feeds/events/ical.ics"
+        sources:
+          - slug: alpha
+            host: alpha.example.edu
+            location_rules: [sentinel, detail_dash_name]
+            expectations:
+              summary_role: title
+        """,
+    )
+    assert load_registry(path, env=TEST_ENV).by_slug("alpha").location_rules == (
+        "sentinel",
+        "detail_dash_name",
+    )

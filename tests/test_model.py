@@ -279,9 +279,15 @@ def test_with_sources_preserves_everything_else() -> None:
 
 
 def test_one_speaker_reads_as_a_scalar_for_the_existing_ingest() -> None:
+    """The scalar renders "Name, Affiliation" -- exactly the predecessor's published form.
+
+    So splitting the affiliation out into structure does not silently change the string a
+    consumer already parses. Verified against ORFE's golden in tests/test_differential.py.
+    """
     event = make_event(speakers=(Speaker("Elynn Chen", "New York University"),))
-    assert event.speaker == "Elynn Chen"
+    assert event.speaker == "Elynn Chen, New York University"
     assert event.affiliation == "New York University"
+    assert event.speakers[0].name == "Elynn Chen"
 
 
 def test_four_speakers_all_survive() -> None:
@@ -361,5 +367,5 @@ def test_speakers_serialize_as_objects_with_both_keys() -> None:
     wire = to_wire(make_event(speakers=(Speaker("A", "Princeton"),)))
     assert wire["speakers"] == [{"name": "A", "affiliation": "Princeton"}]
     # The scalars are published alongside, so the existing ingest needs no change.
-    assert wire["speaker"] == "A"
+    assert wire["speaker"] == "A, Princeton"
     assert wire["affiliation"] == "Princeton"

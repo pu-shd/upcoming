@@ -1,0 +1,17 @@
+# Vocabulary for choosing "A" or "An" by sound rather than spelling.
+#
+# The algorithm lives in upcoming/fallback.py; only the data that varies by department
+# lives here. The predecessor hardcodes `frozenset({"ORFE"})` and its README instructs
+# editing that set whenever a new acronym appears in a feed -- a per-department code edit,
+# which is the pattern this project exists to remove.
+
+# All-caps tokens read as words rather than spelled out letter by letter, so the ordinary
+# word rule applies. ORFE reads "or-fee", hence "an ORFE colloquium" -- whereas MAE is
+# spelled out and takes "an" from the name of the letter M ("em").
+#
+# Anything all-caps and absent from this list is judged on its first letter's name, which
+# is right for ECE ("ee-see-ee"), FPO ("ef"), CBE ("see") and PMI ("pee").
+word_acronyms:
+  - ORFE      # "or-fee"
+  - NASA      # "nah-sah"
+  - CERN      # "sern"

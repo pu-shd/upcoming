@@ -6,8 +6,10 @@ One `events.json` per data source, plus combined feeds composed from them by dec
 algebra. A refactor of [pu-orfe/upcoming](https://github.com/pu-orfe/upcoming), informed by
 [pubino/mae-upcoming](https://github.com/pubino/mae-upcoming).
 
-> **Status: early.** The source registry, the event model, and the quality gates are in
-> place and tested. Nothing fetches a feed yet.
+> **Status: two sources build end to end.** `orfe` and `mae` produce real `events.json`
+> from committed fixtures, offline, and are checked field-by-field against the
+> predecessor's own expected output. Enrichment and fetching are next; the ten remaining
+> sources follow.
 
 ## The important section
 
@@ -111,15 +113,40 @@ refusal never echoes the body.
 ## Usage
 
 ```sh
-make install        # create .venv and install with dev extras
-make sources        # the resolved registry: what each SUMMARY field means
-make check          # validate the registry; non-zero on any problem
-make test           # pytest
-make lint typecheck # ruff + mypy
-make docker-test    # the suite in the container (the path CI runs)
+make install           # create .venv and install with dev extras
+make sources           # the resolved registry: what each SUMMARY field means
+make check             # validate the registry; non-zero on any problem
+make build SOURCE=orfe # build one source from its committed fixture
+make build-fixtures    # build orfe and mae -- the inversion, both ways
+make test              # pytest
+make lint typecheck    # ruff + mypy
+make docker-test       # the suite in the container (the path CI runs)
 ```
 
+Building reaches no network: `--feed` is required until fetching is wired, so the offline
+guarantee is structural rather than a convention. The suite enforces the same thing at the
+socket layer.
+
 Requires Python 3.12+. Docker Compose is invoked as `docker-compose`.
+
+## Checked against the predecessor
+
+`tests/test_differential.py` runs this pipeline against the two golden pairs shipped in
+`pubino/mae-upcoming` — real ICS in, a real department's expected JSON out. Shared fields
+must agree exactly, including ORFE's `Elynn Chen\, New York University` escaping and every
+location split, with none of the swapped-name-and-detail tolerance the predecessor's own
+test allows.
+
+Every divergence is a named test that states its reason and first asserts the golden
+really contains what it diverges from. Four of them are defects found in the predecessor's
+published output:
+
+| finding | this build |
+|---|---|
+| ORFE's golden has 13 records; its feed has 14 | emits all 14 — the missing one is a second Drupal node for the same talk, and de-duplicating is the consumer's call |
+| MAE's golden publishes the literal `"TBD"` as a title, with `titleSource` and `titleIsPlaceholder` **absent** | synthesizes a title and flags it, so a consumer can tell |
+| ORFE's abstracts have words glued together — `adata-driven`, `banditmodel`, `anyneural`, `publichealth`, 15 times in one fixture | unfolds per RFC 5545, so the words survive |
+| HTML entities half-decode: `&gt\;` becomes `>\;`, leaving a stray semicolon, and MAE's golden leaves `&amp\;` untouched | decodes once, consistently |
 
 ## Design notes
 

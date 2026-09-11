@@ -14,7 +14,7 @@ COMPOSE     ?= docker-compose
 #   * no `sed -i` without a backup suffix
 # A test asserts these stay absent from the Makefile.
 
-.PHONY: help venv install sources check test test-cov lint typecheck fmt \
+.PHONY: help venv install sources check build build-fixtures test test-cov lint typecheck fmt \
         docker-build docker-test docker-lint docker-sources clean
 
 help:
@@ -24,6 +24,10 @@ help:
 	@echo "Inspect"
 	@echo "  make sources        print the resolved registry: what each SUMMARY field means"
 	@echo "  make check          validate the registry and exit non-zero on any problem"
+	@echo ""
+	@echo "Build"
+	@echo "  make build SOURCE=orfe    build one source from its committed fixture"
+	@echo "  make build-fixtures       build orfe and mae -- the inversion, both ways"
 	@echo ""
 	@echo "Verify"
 	@echo "  make test           pytest"
@@ -57,6 +61,22 @@ sources: $(VENV)
 check: $(VENV)
 	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) check
+
+# Builds from committed fixtures, so it reaches no network. Fetching arrives with the
+# enrichment layer; until then --feed is required, which keeps the offline guarantee
+# structural rather than a convention.
+build: $(VENV)
+	@if [ -z "$(SOURCE)" ]; then echo "usage: make build SOURCE=<slug> [FEED=<path>]" >&2; exit 2; fi
+	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
+		$(PY) -m upcoming.cli --registry $(REGISTRY) build \
+			--source "$(SOURCE)" \
+			--feed "$${FEED:-tests/fixtures/feeds/$(SOURCE)/feed.ics}"
+
+# The two sources whose SUMMARY means opposite things. Building both from one codebase
+# with nothing differing but config is the proof the refactor exists to deliver.
+build-fixtures: $(VENV)
+	@$(MAKE) --no-print-directory build SOURCE=orfe
+	@$(MAKE) --no-print-directory build SOURCE=mae
 
 test: $(VENV)
 	$(PY) -m pytest

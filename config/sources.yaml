@@ -49,7 +49,7 @@ defaults:
   # Ordered chain. Order is load-bearing: `detail_dash_name` must precede the room-token
   # rules, or "125 - Sherrerd Hall" mis-splits. Each rule declines rather than guessing,
   # and `whole` puts an unsplittable venue in `name` entire.
-  location_rules: [detail_dash_name, comma_room, parenthetical, slash_room, room_token, whole]
+  location_rules: [sentinel, detail_dash_name, comma_room, parenthetical, slash_room, unambiguous_room, whole]
 
   expectations:
     min_events: 1
@@ -69,7 +69,19 @@ sources:
     rebuild_after_hours: 6
     # SUMMARY is the speaker ("FPO\, Aaradhya Pandey"); the talk title lives on the event
     # page. The exact inverse of mae, and the pair that proves the registry works.
-    location_rules: [detail_dash_name, room_token, whole]
+    location_rules: [sentinel, detail_dash_name, unambiguous_room, whole]
+    # Per field, not one boolean per source. ORFE's downstream ingest expects
+    # "Elynn Chen\, New York University" with the comma escaped. The predecessor has a
+    # single `escape_name_commas` governing whatever SUMMARY maps to, which is the speaker
+    # here and the title on MAE -- where it mangles "Winds\, Waves\, and Wakes". One
+    # boolean, two incompatible right answers.
+    wire:
+      escape: [speaker, speakers, content]
+    # No ORFE event carries a title: its SUMMARY is the speaker. Every one of the 23 is
+    # synthesized, and published with titleSource/titleIsPlaceholder so a consumer can
+    # tell an invented title from one a department wrote.
+    fallback:
+      title_template: "{a_an} {series} Talk by"
     enrich:
       - field: title
         selectors: ["div.event-subtitle"]
@@ -90,7 +102,7 @@ sources:
     cadence: 30m
     rebuild_after_hours: 6
     # Composite: "Arvind Narayanan - AI Agents and the Augmentation Agenda".
-    location_rules: [room_token, whole]
+    location_rules: [sentinel, unambiguous_room, whole]
     expectations:
       summary_role: composite
       min_events: 5
@@ -105,7 +117,7 @@ sources:
     # 14 of 18 events carry a TBD title -- series and speaker known, title genuinely
     # unset. That is normal here, so the placeholder band is wide on purpose; what should
     # alert is a change in the rate, not the rate itself.
-    location_rules: [room_token, whole]
+    location_rules: [sentinel, unambiguous_room, whole]
     expectations:
       summary_role: composite
       max_placeholder_title_rate: 0.95
@@ -116,7 +128,7 @@ sources:
     # "PMI/PCCM SEMINAR SERIES Fall 2026: Sean Roberts\, University of Texas at Austin"
     # Also carries "Briger Hall (C112 + Atrium C102)", hence the parenthetical rule, and
     # two events with no LOCATION property at all.
-    location_rules: [parenthetical, room_token, whole]
+    location_rules: [sentinel, parenthetical, unambiguous_room, whole]
     expectations:
       summary_role: composite
       max_location_declined_rate: 0.4
@@ -126,7 +138,7 @@ sources:
     host: ece.princeton.edu
     # Not in the original host list: discovered because nextg.princeton.edu has no feed of
     # its own and its events page links here.
-    location_rules: [room_token, whole]
+    location_rules: [sentinel, unambiguous_room, whole]
     expectations:
       summary_role: title
       max_placeholder_title_rate: 0.2
@@ -137,7 +149,7 @@ sources:
     # Writes BOTH "E105 SEAS-BioE" (room first) and "SEAS-CBE F212" (building first) in one
     # feed, which is why the room rule splits only when exactly one end looks like a room
     # and declines otherwise.
-    location_rules: [room_token, whole]
+    location_rules: [sentinel, unambiguous_room, whole]
     expectations:
       summary_role: title
       max_placeholder_title_rate: 0.2
@@ -148,7 +160,7 @@ sources:
     # SUMMARY is the talk title and the event page carries the speaker -- the inverse of
     # orfe. One event's entire SUMMARY is the literal string "TBD" and one has
     # LOCATION:TBD, so sentinel detection is exercised from the first source built.
-    location_rules: [slash_room, room_token, whole]
+    location_rules: [sentinel, slash_room, unambiguous_room, whole]
     enrich:
       - field: speakers
         selectors:
@@ -172,7 +184,7 @@ sources:
     #   "ORFE Talks & Seminars Flyers Fall 2026 Colloquium"          -> a series listing
     # Also carries all three location conventions: "Bowen Hall 222",
     # "Aaron Burr Hall\, Room 216", "101 Sherrerd Hall".
-    location_rules: [comma_room, room_token, whole]
+    location_rules: [sentinel, comma_room, unambiguous_room, whole]
     expectations:
       summary_role: mixed
       max_placeholder_title_rate: 0.6
@@ -183,7 +195,7 @@ sources:
     # The Rising Stars symposium page lists four speakers (Jacqueline Bliley, André
     # Forjaz, Helena Hu, Felix Radford). The model carries `speakers[]`, so all four
     # survive; a scalar field would have published one and dropped three silently.
-    location_rules: [comma_room, room_token, whole]
+    location_rules: [sentinel, comma_room, unambiguous_room, whole]
     enrich:
       - field: speakers
         selectors: ["div.field--name-field-ps-event-speaker-name"]
@@ -201,7 +213,7 @@ sources:
     cadence: 6h
     # Legitimately tiny: 1 event. A relative count floor would read that as a collapse, so
     # the floor stays absolute here.
-    location_rules: [room_token, whole]
+    location_rules: [sentinel, unambiguous_room, whole]
     expectations:
       summary_role: title
       min_events: 1
@@ -212,7 +224,7 @@ sources:
     cadence: 6h
     # 1 event, and "Commons" has no room component -- the location chain must decline
     # rather than invent a split.
-    location_rules: [room_token, whole]
+    location_rules: [sentinel, unambiguous_room, whole]
     expectations:
       summary_role: title
       min_events: 1
@@ -237,7 +249,7 @@ sources:
     # platform's UID scheme is unknown, and a UID that fails a declared pattern should
     # surface as an anomaly instead of being assumed to fit.
     uid_pattern: null
-    location_rules: [comma_room, room_token, whole]
+    location_rules: [sentinel, comma_room, unambiguous_room, whole]
     expectations:
       summary_role: title
       min_events: 0

@@ -1,0 +1,281 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Operations Research & Financial Engineering
+BEGIN:VEVENT
+UID:ps_events:11876:delta:0
+DTSTART:20250908T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20250908T171500Z
+URL:https://orfe.princeton.edu/events/2025/elynn-chen-new-york-university
+LOCATION:101 - Sherrerd
+SUMMARY:Elynn Chen\, New York University
+CLASS:PUBLIC
+DESCRIPTION:Abstract: Most learning-and-decision systems assume a single\, 
+ homogeneous response to actions. In practice—marketing\, healthcare\, op
+ erations—outcomes vary across unobserved segments. This talk develops a 
+ data-driven framework for decision making under latent heterogeneity\, whe
+ re each individual belongs to an unknown group and group membership is pro
+ babilistic and feature-driven. I will focus on a linear contextual bandit 
+ model with a logistic “gating” rule for membership and group-specific 
+ linear rewards\, and present an exploration-free\, phased algorithm that j
+ ointly learns the gate and the
+CATEGORIES:S. S. Wilks Memorial Seminar in Statistics
+DTSTAMP:20250905T185131Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11856:delta:0
+DTSTART:20250911T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20250911T213000Z
+URL:https://orfe.princeton.edu/events/2025/navid-azizan-mit
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Navid Azizan\, MIT
+CLASS:PUBLIC
+DESCRIPTION:AbstractIncorporating prior knowledge and domain-specific input
+ -output requirements\, such as safety or stability\, as hard constraints i
+ nto neural networks is a key enabler for their deployment in high-stakes a
+ pplications. However\, existing methods often rely on soft penalties\, whi
+ ch are insufficient. In this talk\, I will introduce hard-constrained neur
+ al networks (HardNet)\, a general framework for enforcing hard\, input-dep
+ endent constraints by appending a differentiable enforcement layer to any 
+ neural network. This approach enables end-to-end training and\, crucially\
+ , is
+CATEGORIES:Optimization Seminar
+DTSTAMP:20250909T184229Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11861:delta:0
+DTSTART:20250915T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20250915T171500Z
+URL:https://orfe.princeton.edu/events/2025/zhuoran-yang-22-yale-university
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Zhuoran Yang *22\, Yale University
+CLASS:PUBLIC
+DESCRIPTION:AbstractWe study how multi-head softmax attention models are tr
+ ained to perform in-context learning on linear data. Through extensive emp
+ irical experiments and rigorous theoretical analysis\, we demystify the em
+ ergence of elegant attention patterns: a diagonal and homogeneous pattern 
+ in the key-query weights\, and a last-entry-only and zero-sum pattern in t
+ he output-value weights.Remarkably\, these patterns consistently appear fr
+ om gradient-based training starting from random initialization.Our analysi
+ s reveals that such emergent structures enable multi-head attention to
+CATEGORIES:S. S. Wilks Memorial Seminar in Statistics
+DTSTAMP:20250910T185544Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11891:delta:0
+DTSTART:20250922T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20250922T171500Z
+URL:https://orfe.princeton.edu/events/2025/xinghua-zheng-hong-kong-universi
+ ty-science-and-technology
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Xinghua Zheng\, Hong Kong University of Science and Technology
+CLASS:PUBLIC
+DESCRIPTION:AbstractWe develop a statistical learning framework for constru
+ cting the stochastic discount factor (SDF) portfolio. To address the dimen
+ sionality challenge\, we extend the MAXSER method (Ao\, Li\, and Zheng\, 2
+ 019\, RFS) to allow for N &gt\;&gt\; T\; prove that it surely screens for 
+ useful characteristics\; and establish asymptotic normality for the SDF lo
+ ading estimates. Using 153 characteristics returns from cross-sectional re
+ gressions\, our framework not only constructs an SDF with a high out-of-sa
+ mple Sharpe ratio that successfully prices the cross-section of expected r
+ eturns\, but also
+CATEGORIES:S. S. Wilks Memorial Seminar in Statistics
+DTSTAMP:20250909T182714Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11826:delta:0
+DTSTART:20250923T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20250923T213000Z
+URL:https://orfe.princeton.edu/events/2025/dimitris-bertsimas-mit
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Dimitris Bertsimas\, MIT
+CLASS:PUBLIC
+CATEGORIES:Optimization Seminar,ORFE Department Colloquia
+DTSTAMP:20250827T195814Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11886:delta:0
+DTSTART:20250929T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20250929T171500Z
+URL:https://orfe.princeton.edu/events/2025/zhimei-ren-university-pennsylvan
+ ia
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Zhimei Ren\, University of Pennsylvania
+CLASS:PUBLIC
+CATEGORIES:S. S. Wilks Memorial Seminar in Statistics
+DTSTAMP:20250905T185419Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11931:delta:0
+DTSTART:20251001T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251001T213000Z
+URL:https://orfe.princeton.edu/events/2025/benjamin-zhang-university-north-
+ carolina-chapel-hill
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Benjamin Zhang\, University of North Carolina\, Chapel Hill
+CLASS:PUBLIC
+DESCRIPTION:AbstractParticle exchange methods such as parallel tempering (a
+ lso known as replica exchange) are arguably the most effective computation
+ al tools for approximating integrals with respect to high-dimensional Gibb
+ s measures with complex structure. In particular\, exchange between replic
+ as with different temperatures can greatly mitigate the so-called rare eve
+ nt sampling problem. One can consider the Gibbs measure as the solution to
+  an eigenvalue problem with known (zero) eigenvalue. We describe how these
+  methods can be generalized to problems where the eigenvalue is not known&
+ nbsp\;
+CATEGORIES:Stochastic Analysis Seminar
+DTSTAMP:20250909T182755Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11941:delta:0
+DTSTART:20251001T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251001T213000Z
+URL:https://orfe.princeton.edu/events/2025/benjamin-zhang-university-north-
+ carolina-chapel-hill-0
+LOCATION:101 - Sherrerd Hal
+SUMMARY:Benjamin Zhang\, University of North Carolina Chapel Hill
+CLASS:PUBLIC
+DESCRIPTION:Abstract: Particle exchange methods such as parallel tempering 
+ (also known as replica exchange) are arguably the most effective computati
+ onal tools for approximating integrals with respect to high-dimensional Gi
+ bbs measures with complex structure. In particular\, exchange between repl
+ icas with different temperatures can greatly mitigate the so-called rare e
+ vent sampling problem. One can consider the Gibbs measure as the solution 
+ to an eigenvalue problem with known (zero) eigenvalue. We describe how the
+ se methods can be generalized to problems where the eigenvalue is not know
+ n&nbsp\;a
+CATEGORIES:Stochastic Analysis Seminar
+DTSTAMP:20250915T142043Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11841:delta:0
+DTSTART:20251007T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251007T213000Z
+URL:https://orfe.princeton.edu/events/2025/milind-tambe-harvard-university
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Milind Tambe\, Harvard University
+CLASS:PUBLIC
+DESCRIPTION:AbstractFor nearly two decades\, my team’s work on AI for Soc
+ ial Impact (AI4SI) has focused on optimizing limited resources in critical
+  areas like public health\, conservation\, and public safety. In this talk
+ \, I will highlight field test results from our deployed work in India\, d
+ emonstrating measurable improvements in effectiveness for the world's two 
+ largest mobile health programs for maternal and child care. We have levera
+ ged innovative restless and collaborative bandit algorithms to achieve the
+ se gains\, revealing new technical directions in the process. Additionally
+ \, I will
+CATEGORIES:ORFE Department Colloquia
+DTSTAMP:20250909T182808Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11866:delta:0
+DTSTART:20251009T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251009T213000Z
+URL:https://orfe.princeton.edu/events/2025/antoine-deza-mcmaster-university
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Antoine Deza\, McMaster University
+CLASS:PUBLIC
+DESCRIPTION:A lattice $(d\,k)$-polytope is the convex hull of a set of poin
+ ts in dimension $d$&nbsp\;whose coordinates are&nbsp\;integers ranging fro
+ m $0$ to $k$.&nbsp\;We investigate the&nbsp\;smallest possible distance be
+ tween two disjoint lattice $(d\,k)$-polytopes. A pair&nbsp\;of polytopes&n
+ bsp\;achieving&nbsp\;this&nbsp\;minimal distance are called kissing polyto
+ pes.&nbsp\;This question arises&nbsp\;in various contexts where the minima
+ l distance between such polytopes&nbsp\;appears in complexity bounds for o
+ ptimization algorithms.&nbsp\;We provide&nbsp\;nearly matching lower&nbsp\
+ ;and upper bounds for this
+CATEGORIES:Optimization Seminar
+DTSTAMP:20250827T195752Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11871:delta:0
+DTSTART:20251027T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251027T171500Z
+URL:https://orfe.princeton.edu/events/2025/xuming-he-washington-university
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Xuming He\, Washington University
+CLASS:PUBLIC
+DESCRIPTION:AbstractExpected&nbsp\;shortfall\, measuring the average outcom
+ e (e.g.\, portfolio loss) above a given quantile of its probability distri
+ bution\, is a common financial risk measure. The same measure can be used 
+ to characterize treatment effects in the tail of an outcome distribution\,
+  with applications ranging from policy evaluation in economics and public 
+ health to biomedical investigations. Expected&nbsp\;shortfall&nbsp\;regres
+ sion is a natural approach of modeling covariate-adjusted&nbsp\;expected&n
+ bsp\;shortfalls. Because the&nbsp\;expected&nbsp\;shortfall&nbsp\;cannot b
+ e written as a
+CATEGORIES:S. S. Wilks Memorial Seminar in Statistics
+DTSTAMP:20250909T182841Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11896:delta:0
+DTSTART:20251111T171500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251111T181500Z
+URL:https://orfe.princeton.edu/events/2025/yang-feng-new-york-university
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Yang Feng\, New York University
+CLASS:PUBLIC
+CATEGORIES:S. S. Wilks Memorial Seminar in Statistics
+DTSTAMP:20250821T135429Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11831:delta:0
+DTSTART:20251111T213000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251111T223000Z
+URL:https://orfe.princeton.edu/events/2025/vijay-vazirani-university-califo
+ rnia-irvine
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Vijay Vazirani\, University of California\, Irvine
+CLASS:PUBLIC
+DESCRIPTION:AbstractFor a mechanism to be truly impactful\, it must combine
+  strong game-theoretic properties with computational efficiency -- a&nbsp\
+ ;classic example is the Gale–Shapley (1962) stable matching algorithm. T
+ his talk focuses on cardinal-utility matching markets\, for which the most
+ &nbsp\;well&nbsp\;known mechanism is the pricing-based approach of Hylland
+  and Zeckhauser (1979). While this mechanism satisfies several desirable g
+ ame-theoretic properties\, recent work has shown it to be computationally 
+ intractable\, both in theory and in practice.This talk will review a serie
+ s of
+CATEGORIES:ORFE Department Colloquia
+DTSTAMP:20250909T183818Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:11906:delta:0
+DTSTART:20251118T213000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20251118T223000Z
+URL:https://orfe.princeton.edu/events/2025/yann-lecun-new-york-university
+LOCATION:101 - Sherrerd Hall
+SUMMARY:Yann LeCun\, New York University
+CLASS:PUBLIC
+CATEGORIES:ORFE Department Colloquia
+DTSTAMP:20250905T185401Z
+END:VEVENT
+END:VCALENDAR
