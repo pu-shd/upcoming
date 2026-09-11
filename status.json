@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-11T18:08:15Z",
+  "generatedAt": "2026-09-11T18:24:08Z",
   "summary": {
     "ok": 16,
     "empty": 1,
     "disabled": 6,
-    "events": 127,
+    "events": 123,
     "stale": 0
   },
   "feeds": [
@@ -12,7 +12,7 @@
       "path": "combos/all-no-fpo/events.json",
       "status": "ok",
       "events": 113,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "orfe",
         "citp",
@@ -34,8 +34,8 @@
     {
       "path": "combos/all/events.json",
       "status": "ok",
-      "events": 127,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "events": 123,
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "orfe",
         "citp",
@@ -58,7 +58,7 @@
       "path": "combos/engineering/events.json",
       "status": "ok",
       "events": 37,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "cbe",
         "cee",
@@ -80,7 +80,7 @@
       "path": "combos/seminars/events.json",
       "status": "ok",
       "events": 62,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "orfe",
         "citp",
@@ -102,8 +102,8 @@
     {
       "path": "combos/sherrerd-hall/events.json",
       "status": "ok",
-      "events": 48,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "events": 44,
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "orfe",
         "citp",
@@ -132,7 +132,7 @@
       "path": "feeds/ai/events.json",
       "status": "ok",
       "events": 7,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "ai"
       ]
@@ -141,7 +141,7 @@
       "path": "feeds/bioengineering/events.json",
       "status": "ok",
       "events": 4,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "bioengineering"
       ]
@@ -150,7 +150,7 @@
       "path": "feeds/cbe/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "cbe"
       ]
@@ -159,7 +159,7 @@
       "path": "feeds/cee/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "cee"
       ]
@@ -168,7 +168,7 @@
       "path": "feeds/citp/events.json",
       "status": "ok",
       "events": 25,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "citp"
       ]
@@ -195,7 +195,7 @@
       "path": "feeds/ece/events.json",
       "status": "ok",
       "events": 12,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "ece"
       ]
@@ -204,7 +204,7 @@
       "path": "feeds/kellercenter/events.json",
       "status": "empty",
       "events": 0,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "kellercenter"
       ]
@@ -213,7 +213,7 @@
       "path": "feeds/mae/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "mae"
       ]
@@ -222,7 +222,7 @@
       "path": "feeds/materials/events.json",
       "status": "ok",
       "events": 16,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "materials"
       ]
@@ -248,17 +248,20 @@
     {
       "path": "feeds/orfe/events.json",
       "status": "ok",
-      "events": 23,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "events": 19,
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "orfe"
+      ],
+      "notes": [
+        "declined: 4 event(s) present in the upstream feed are deliberately not published here, per this source's publish_unless (tags contains 'fpo')."
       ]
     },
     {
       "path": "feeds/quantum/events.json",
       "status": "ok",
       "events": 18,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "quantum"
       ]
@@ -267,7 +270,7 @@
       "path": "feeds/robotics/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-11T18:08:15Z",
+      "lastSuccessAt": "2026-09-11T18:24:08Z",
       "sources": [
         "robotics"
       ]
