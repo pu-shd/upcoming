@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upcoming — Princeton event feeds</title>
+<meta name="description" content="JSON event feeds for Princeton departments, centers and units, with a published health manifest.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa; --fg: #17181c; --dim: #5c6169; --line: #e2e2df;
+    --card: #ffffff; --accent: #e77500; --ok: #1a7f37; --warn: #9a6700; --bad: #cf222e;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a; --fg: #e8e8e6; --dim: #9aa0a8; --line: #2b2d31;
+      --card: #1c1e22; --accent: #f5942e; --ok: #3fb950; --warn: #d29922; --bad: #f85149;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 1.25rem 5rem; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 62rem; margin: 0 auto; }
+  header { padding: 3.5rem 0 2rem; border-bottom: 3px solid var(--accent); margin-bottom: 2.5rem; }
+  h1 { margin: 0 0 .4rem; font-size: 2.1rem; letter-spacing: -.02em; }
+  h2 { margin: 3rem 0 .75rem; font-size: 1.15rem; letter-spacing: -.01em; }
+  h3 { margin: 1.75rem 0 .5rem; font-size: .95rem; color: var(--dim); font-weight: 600; }
+  p  { margin: 0 0 1rem; max-width: 46rem; }
+  .lede { font-size: 1.05rem; color: var(--dim); max-width: 44rem; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 2px; }
+  code, .mono { font-family: var(--mono); font-size: .87em; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { text-align: left; padding: .55rem .8rem; border-bottom: 1px solid var(--line); }
+  th { font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .pill {
+    display: inline-block; padding: .08rem .5rem; border-radius: 999px;
+    font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+    border: 1px solid currentColor;
+  }
+  .ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); }
+  .dim { color: var(--dim); }
+  .beat { display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; align-items: baseline; margin-bottom: 1rem; }
+  .beat b { font-size: 1.6rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .beat span { color: var(--dim); font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
+  .note { font-size: .85rem; color: var(--dim); max-width: 46rem; }
+  .reason { font-size: .82rem; color: var(--dim); }
+  pre { margin: 0; padding: 1rem; overflow-x: auto; font-family: var(--mono); font-size: .82rem; line-height: 1.55; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--dim); }
+  #error { display: none; padding: 1rem; color: var(--bad); }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Upcoming</h1>
+  <p class="lede">
+    JSON event feeds for Princeton departments, centers and units — one feed per source,
+    plus combined feeds built from them. Everything here is generated from each unit's
+    own published calendar.
+  </p>
+</header>
+
+<!-- The page reads status.json rather than being generated alongside the feeds, so it
+     cannot drift out of step with them and can be edited without a pipeline run. -->
+<section>
+  <h2>Status</h2>
+  <div class="beat" id="beat"><span>loading…</span></div>
+  <p class="note" id="stamp"></p>
+  <div class="card scroll">
+    <table>
+      <thead>
+        <tr><th>Feed</th><th>Status</th><th class="n">Events</th><th>Note</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div id="error" class="card">
+    Could not read <code>status.json</code>. The site is serving this page but not its
+    manifest, which is itself a fault worth reporting.
+  </div>
+  <p class="note">
+    The feeds carry no timestamp — that is what lets published bytes be compared
+    byte-for-byte to detect drift — so
+    <a href="status.json"><code>status.json</code></a> is the only file with a clock, and
+    the only way to tell a current feed from a frozen one. A source that fails keeps
+    serving its last good feed and is marked <b>stale</b> here, because a blank
+    departmental listing is worse than one a few hours old, and an unannounced stale one
+    is worse than both.
+  </p>
+</section>
+
+<section>
+  <h2>Using a feed</h2>
+  <p>
+    Every path below is a JSON array of event objects, served over HTTPS with no
+    authentication and no rate limit. Fetch the one you need directly.
+  </p>
+
+  <h3>Per-source feeds never de-duplicate</h3>
+  <p class="note">
+    Each is a faithful representation of one upstream calendar. If you read two of them
+    and they collide — two units listing the same talk — resolving that is yours to do,
+    because only you know which unit's wording you want to show.
+  </p>
+
+  <h3>Combined feeds de-duplicate only when every detail matches</h3>
+  <p class="note">
+    When they do, the records collapse into one whose <code>sources</code> array names
+    every feed that carried it. When the start time and title match but something else
+    differs, <b>both records are kept</b> and the divergence is counted — merging would
+    mean picking a winner, and picking a winner means guessing.
+    <code>sources</code> is always an array, length 1 in a per-source feed, so both kinds
+    parse identically.
+  </p>
+
+  <h3>Identity is source-scoped</h3>
+  <p class="note">
+    <code>guid</code> is the upstream UID, published verbatim, but those are
+    <em>per-site sequences</em> rather than global identifiers: the same value names
+    unrelated events on different sites. Key on <code>id</code>, which is
+    <code>"{source}:{guid}"</code>.
+  </p>
+</section>
+
+<section>
+  <h2>A record</h2>
+  <div class="card scroll"><pre id="sample">loading…</pre></div>
+  <p class="note">
+    Fields beyond these carry provenance — <code>mappingRules</code>,
+    <code>locationRule</code>, <code>titleSource</code>,
+    <code>titleIsPlaceholder</code>, <code>summaryRaw</code> — so you can see how any
+    value was derived, and tell a real title from a synthesized placeholder. The full
+    shape is in <a href="https://github.com/pu-shd/upcoming/blob/main/schema/event.schema.json">the schema</a>.
+  </p>
+</section>
+
+<section>
+  <h2>Not available</h2>
+  <p class="note">
+    These are recorded rather than omitted, so &ldquo;we chose not to&rdquo; and
+    &ldquo;we forgot&rdquo; never read alike.
+  </p>
+  <div class="card scroll">
+    <table>
+      <thead><tr><th>Source</th><th>Why</th></tr></thead>
+      <tbody id="disabled"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  Built from <a href="https://github.com/pu-shd/upcoming">pu-shd/upcoming</a>.
+  MIT © The Trustees of Princeton University.
+</footer>
+
+</main>
+
+<script>
+(function () {
+  var pill = function (text, kind) {
+    return '<span class="pill ' + kind + '">' + text + '</span>';
+  };
+  var esc = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  };
+
+  fetch('status.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) { throw new Error(r.status); } return r.json(); })
+    .then(function (doc) {
+      var feeds = doc.feeds || [];
+      var live = feeds.filter(function (f) { return f.status !== 'disabled'; });
+      var gone = feeds.filter(function (f) { return f.status === 'disabled'; });
+      var s = doc.summary || {};
+
+      document.getElementById('beat').innerHTML =
+        '<div><b>' + (s.events || 0) + '</b> <span>events</span></div>' +
+        '<div><b>' + live.length + '</b> <span>feeds</span></div>' +
+        '<div class="' + (s.stale ? 'warn' : 'ok') + '"><b>' + (s.stale || 0) +
+        '</b> <span>stale</span></div>' +
+        '<div class="' + (s.failed ? 'bad' : 'ok') + '"><b>' + (s.failed || 0) +
+        '</b> <span>failed</span></div>';
+
+      // Rendered from the published stamp rather than from the browser's clock, so what
+      // this line claims is exactly what the manifest says.
+      var when = doc.generatedAt;
+      var age = Math.round((Date.now() - Date.parse(when)) / 60000);
+      document.getElementById('stamp').textContent =
+        'Last published ' + when + (isFinite(age) ? ' — ' + age + ' minutes ago.' : '.');
+
+      document.getElementById('rows').innerHTML = live.map(function (f) {
+        var kind = f.stale ? 'warn' : (f.status === 'ok' ? 'ok' :
+                   f.status === 'empty' ? 'dim' : 'bad');
+        var label = f.stale ? 'stale' : f.status;
+        var note = [f.detail].concat(f.notes || []).filter(Boolean).join(' ');
+        return '<tr><td><a class="mono" href="' + esc(f.path) + '">' + esc(f.path) +
+               '</a></td><td>' + pill(esc(label), kind) + '</td><td class="n">' +
+               f.events + '</td><td class="reason">' + esc(note) + '</td></tr>';
+      }).join('');
+
+      document.getElementById('disabled').innerHTML = gone.map(function (f) {
+        var name = f.path.replace(/^(feeds|combos)\//, '').replace(/\/events\.json$/, '');
+        return '<tr><td class="mono">' + esc(name) + '</td><td class="reason">' +
+               esc(f.detail) + '</td></tr>';
+      }).join('');
+
+      // A real record from a real feed, so the example cannot describe a shape we do not
+      // actually publish.
+      var first = live.filter(function (f) { return f.events > 0; })[0];
+      return first ? fetch(first.path).then(function (r) { return r.json(); }) : null;
+    })
+    .then(function (events) {
+      if (!events || !events.length) { return; }
+      var e = events[0];
+      var keep = ['id', 'sources', 'startsAt', 'endsAt', 'timezone', 'title', 'speakers',
+                  'series', 'tags', 'location', 'urlRef'];
+      var trimmed = {};
+      keep.forEach(function (k) { if (k in e) { trimmed[k] = e[k]; } });
+      document.getElementById('sample').textContent = JSON.stringify(trimmed, null, 2);
+    })
+    .catch(function () {
+      document.getElementById('beat').innerHTML = '';
+      document.getElementById('stamp').textContent = '';
+      document.getElementById('error').style.display = 'block';
+      document.getElementById('sample').textContent =
+        'Could not load a sample record.';
+    });
+})();
+</script>
+</body>
+</html>
