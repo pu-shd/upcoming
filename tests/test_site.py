@@ -162,3 +162,51 @@ def test_the_watchdog_accepts_the_real_page() -> None:
     from tests.test_verify import BASE, SiteTransport
 
     assert check_landing_page(BASE, SiteTransport(files={"": INDEX})) == []
+
+
+# --------------------------------------------------------------------------------------
+# The schema, served rather than only committed
+# --------------------------------------------------------------------------------------
+
+
+def test_both_schemas_are_published(registry, tmp_path):  # type: ignore[no-untyped-def]
+    """Shipping them in the repository only is half a contract.
+
+    A validator cannot resolve a path in somebody else's git tree, and
+    events.schema.json $refs its sibling — so both are served or neither resolves.
+    """
+    load_pronunciation()
+    results = {
+        s.slug: build_from_file(FIXTURES / "feeds" / s.slug / "feed.ics", s) for s in registry.live
+    }
+    tree = assemble(registry, results, {}, {}, root=tmp_path, generated_at="2026-09-11T12:00:00Z")
+    assert "schema/event.schema.json" in tree.files
+    assert "schema/events.schema.json" in tree.files
+
+
+def test_the_published_schema_validates_the_published_feeds(registry, tmp_path):  # type: ignore[no-untyped-def]
+    """The loop that matters: the served contract accepts the served data.
+
+    Validating against the repository copy would prove the repository is consistent with
+    itself. This proves a consumer fetching both over HTTPS gets an agreeing pair.
+    """
+    from jsonschema import Draft202012Validator
+    from referencing import Registry, Resource
+    from referencing.jsonschema import DRAFT202012
+
+    load_pronunciation()
+    results = {
+        s.slug: build_from_file(FIXTURES / "feeds" / s.slug / "feed.ics", s) for s in registry.live
+    }
+    tree = assemble(registry, results, {}, {}, root=tmp_path, generated_at="2026-09-11T12:00:00Z")
+
+    event = json.loads(tree.files["schema/event.schema.json"])
+    feed = json.loads(tree.files["schema/events.schema.json"])
+    store = Registry().with_resource(
+        event["$id"], Resource.from_contents(event, default_specification=DRAFT202012)
+    )
+    validator = Draft202012Validator(feed, registry=store)
+
+    for path, body in tree.files.items():
+        if path.startswith(("feeds/", "combos/")):
+            assert list(validator.iter_errors(json.loads(body))) == [], path

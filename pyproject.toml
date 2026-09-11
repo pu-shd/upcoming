@@ -8,16 +8,19 @@ version = "0.1.0"
 description = "Multi-source campus event feeds: one events.json per source, plus composable combined feeds."
 requires-python = ">=3.12"
 license = { text = "MIT" }
+# Every entry here is imported somewhere. Four were not and are gone: `ics`, whose
+# Calendar this package deliberately does not use because its `events` is a set and loses
+# feed order; `tatsu` and `arrow`, which only existed to satisfy `ics`; and `markdownify`,
+# inherited from the predecessor and never called. The `tatsu>=4.2,<5.16` ceiling went with
+# them -- an upper bound carried for a library we do not import is a future upgrade blocked
+# for no reason.
 dependencies = [
   "requests",
-  "ics",
-  # ics 0.7.3 requires tatsu <5.16.0; 5.17.0 also shipped with a broken rich dependency.
-  "tatsu>=4.2,<5.16",
-  "arrow",
   "beautifulsoup4",
-  "markdownify",
-  "jsonschema>=4.18",  # 4.18 ships `referencing`, which replaces the deprecated RefResolver
-  "PyYAML",            # the registry and combos are YAML; workflow-contract tests parse CI YAML
+  "soupsieve",         # scrape.py catches SelectorSyntaxError from it by name
+  "jsonschema>=4.18",
+  "referencing",       # arrives via jsonschema >=4.18, but validate.py imports it directly
+  "PyYAML",            # the registry, tags and combos are YAML; contract tests parse CI YAML
   # zoneinfo fallback: Windows ships no IANA tz database and slim base images may drop theirs.
   "tzdata",
 ]

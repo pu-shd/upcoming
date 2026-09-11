@@ -238,7 +238,9 @@ A page that loads and simply has no abstract is not a failure, and is counted se
 ```
 feeds/<source>/events.json   one per live source, faithful to its upstream
 combos/<name>/events.json    the declared combinations
+schema/events.schema.json    the contract, served so a validator can $ref it
 status.json                  what succeeded, what failed, and how stale anything is
+index.html                   the landing page, which reads status.json at load time
 ```
 
 Five combined feeds are declared in `config/combos.yaml` as set algebra over the

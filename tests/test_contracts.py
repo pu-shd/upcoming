@@ -213,3 +213,40 @@ def test_compose_keeps_the_version_key() -> None:
 def test_compose_runs_the_suite_by_default() -> None:
     document = yaml.safe_load(COMPOSE.read_text(encoding="utf-8"))
     assert "pytest" in document["services"]["tests"]["command"]
+
+
+def test_every_declared_dependency_is_actually_imported() -> None:
+    """A dependency nobody imports is weight, and its version pins are live constraints.
+
+    Four were found declared and unused, inherited from the predecessor: `ics` -- whose
+    Calendar this package deliberately does not use, because its `events` is a set and
+    loses feed order -- plus `tatsu` and `arrow`, which existed only to satisfy `ics`, and
+    `markdownify`, never called. The worst part was the `tatsu>=4.2,<5.16` ceiling: an
+    upper bound carried for a library we do not import, blocking a future upgrade for no
+    reason at all.
+    """
+    import ast
+    import re
+    import tomllib
+
+    manifest = tomllib.loads((REPO_ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+    declared = {
+        re.split(r"[><=!\[;]", entry)[0].strip().lower()
+        for entry in manifest["project"]["dependencies"]
+    }
+
+    #: Distribution name -> the module it is imported as, where they differ.
+    module_of = {"beautifulsoup4": "bs4", "pyyaml": "yaml", "tzdata": "zoneinfo"}
+
+    imported: set[str] = set()
+    for path in (REPO_ROOT / "upcoming").glob("*.py"):
+        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
+            if isinstance(node, ast.Import):
+                imported.update(alias.name.split(".")[0] for alias in node.names)
+            elif isinstance(node, ast.ImportFrom) and node.module and node.level == 0:
+                imported.add(node.module.split(".")[0])
+
+    unused = {
+        name for name in declared if module_of.get(name, name.replace("-", "_")) not in imported
+    }
+    assert unused == set(), f"declared but never imported: {sorted(unused)}"

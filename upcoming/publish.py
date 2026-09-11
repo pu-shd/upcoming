@@ -322,6 +322,8 @@ def assemble(
     # after the feeds so it can never overwrite one either.
     for path, body in site_files().items():
         tree.files.setdefault(path, body)
+    for path, body in site_files(SCHEMA_ROOT).items():
+        tree.files.setdefault(f"schema/{path}", body)
 
     tree.files["status.json"] = status_document(tree, generated_at=generated_at)
     return tree
@@ -367,6 +369,12 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
 #: with the feeds, and it can be edited without running the pipeline -- which is why the
 #: predecessor ended up with a second workflow just to republish its landing page.
 SITE_ROOT = Path("site")
+
+#: The schemas, published under ``schema/`` so a consumer can ``$ref`` them over HTTPS.
+#: Shipping them in the repository only is half a contract: a validator cannot resolve a
+#: path in somebody else's git tree, and ``events.schema.json`` ``$ref``s its sibling, so
+#: both must be served or neither resolves.
+SCHEMA_ROOT = Path("schema")
 
 
 def site_files(root: Path = SITE_ROOT) -> dict[str, str]:
@@ -434,6 +442,7 @@ def utc_now() -> str:
 
 
 __all__ = [
+    "SCHEMA_ROOT",
     "STATUS_DISABLED",
     "STATUS_EMPTY",
     "STATUS_FAILED",
