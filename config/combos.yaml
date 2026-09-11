@@ -1,0 +1,75 @@
+# Combined feeds: set algebra over the per-source feeds, materialized at build time.
+#
+# A per-source feed never de-duplicates -- it reproduces one upstream feed faithfully, and a
+# consumer reading two of ours that collide resolves that itself. A combined feed does,
+# because we are the ones combining, but only when EVERY compared detail matches. The merged
+# record then names every source that carried it in `sources`, so the collision is a fact
+# the record carries rather than something a consumer has to infer.
+#
+# When the key matches but the details differ, both records are emitted and the divergence
+# is counted. Merging would mean picking a winner, and picking a winner means guessing.
+#
+# A key may not name `guid` or `id`. ps_events UIDs are per-site sequences: measured,
+# ps_events:4056:delta:0 is ai's "ORFE Colloquium" AND materials' "Materials Institute
+# Symposium", two unrelated events six months apart. The loader refuses such a key outright.
+
+combos:
+  - name: all
+    label: Every live source
+    include: ["*"]
+    # Content-keyed, because that is the only thing that can find one event published by
+    # two different units. Start time plus title is strict enough that two genuinely
+    # different talks do not collide, and loose enough to group the same one.
+    key: [starts_at, title]
+
+  - name: sherrerd-hall
+    label: Events in Sherrerd Hall
+    # The building SHD is named for. orfe and citp are both housed there, and ai schedules
+    # into 101 Sherrerd Hall as well -- which is why this filters on the resolved venue
+    # rather than assuming a source's events are all in one place.
+    include: ["*"]
+    where:
+      location.name:
+        matches: 'sherrerd'
+    key: [starts_at, title]
+
+  - name: engineering
+    label: SEAS departments
+    include: [cbe, cee, ece, mae, bioengineering]
+    key: [starts_at, title]
+
+  - name: all-no-fpo
+    label: Every live source, without final public orals
+    # This is the filter the canonical tag vocabulary exists for. "fpo" covers four upstream
+    # spellings across three departments; the predecessor excludes the literal string "FPO"
+    # and so produces a "filtered" feed identical to the unfiltered one.
+    include: ["*"]
+    exclude_where:
+      tags:
+        contains: fpo
+    key: [starts_at, title]
+
+  - name: seminars
+    label: Seminars and colloquia
+    include: ["*"]
+    where:
+      tags:
+        in: [seminar, colloquium]
+    key: [starts_at, title]
+
+  # ---------------------------------------------------------------------------------
+  # Declared but not built. Recorded so the gap is visible and reviewable.
+  # ---------------------------------------------------------------------------------
+
+  - name: nextg
+    label: NextG Initiative
+    enabled: false
+    include: [ece]
+    reason: >
+      nextg.princeton.edu has no feed of its own and its events page links to
+      ece.princeton.edu, so a derived view is the right shape. But ece's feed carries
+      exactly one CATEGORIES value across all 12 events -- "Final Public Oral
+      Examinations,Final Public Orals" on 7, and no CATEGORIES at all on the other 5 --
+      so there is no NextG discriminator in the data to filter on. Enable once ECE tags
+      NextG events, or once NextG supplies a curated list. A guessed predicate here would
+      publish an unfiltered ECE feed under NextG's name.

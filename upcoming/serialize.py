@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import json
 import re
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -32,6 +32,27 @@ _SEMICOLON_RE = re.compile(r"(?<!\\);")
 def escape_ics_text(value: str) -> str:
     """Re-escape commas and semicolons, the way the campus ingest expects them."""
     return _COMMA_RE.sub(r"\\,", _SEMICOLON_RE.sub(r"\\;", value))
+
+
+#: The inverse. ``\\,`` and ``\\;`` become bare again.
+_ESCAPED_RE = re.compile(r"\\([,;])")
+
+
+def unescape_ics_text(value: str) -> str:
+    """Strip RFC 5545 TEXT escaping, recovering the value the model held.
+
+    Needed to read a published feed back in: a source that fails keeps serving its last
+    good bytes, and a combined feed built from those must hold the same events a live
+    build would, not escaped lookalikes. Without this, ``content`` returns carrying
+    backslashes, and two records that are the same event compare as different -- which
+    would suppress a merge and, worse, count as a divergence.
+
+    Not a perfect inverse in theory: a source whose text genuinely contained ``\\,``
+    would come back as ``,``. No feed measured here does, and the alternative -- a
+    reversible encoding the campus ingest does not expect -- would break the consumer this
+    escaping exists for.
+    """
+    return _ESCAPED_RE.sub(r"\1", value)
 
 
 def collapse_whitespace(value: str) -> str:
@@ -82,12 +103,42 @@ class WireFormat:
                 out[key] = [_escape_item(item) for item in value]
         return out
 
+    def unapply(self, wire: dict[str, Any]) -> dict[str, Any]:
+        """Reverse ``apply``'s escaping, for reading a published feed back in."""
+        out = dict(wire)
+        for key in self.escape_fields:
+            value = out.get(key)
+            if isinstance(value, str) and value:
+                out[key] = unescape_ics_text(value)
+            elif isinstance(value, list):
+                out[key] = [_unescape_item(item) for item in value]
+        return out
+
+
+def _unescape_item(item: Any) -> Any:
+    """Unescape the strings inside one `speakers[]` object."""
+    if not isinstance(item, dict):
+        return item
+    return {k: unescape_ics_text(v) if isinstance(v, str) and v else v for k, v in item.items()}
+
 
 def _escape_item(item: Any) -> Any:
     """Escape the strings inside one `speakers[]` object."""
     if not isinstance(item, dict):
         return item
     return {k: escape_ics_text(v) if isinstance(v, str) and v else v for k, v in item.items()}
+
+
+def load_feed(
+    payload: Sequence[Mapping[str, Any]], wire_format: WireFormat
+) -> list[dict[str, Any]]:
+    """Undo ``WireFormat.apply`` on a published payload, yielding model-shaped records.
+
+    Only escaping is reversed. ``collapse_fields`` is deliberately not inverted, because
+    it cannot be -- and need not be: collapsing is idempotent, so a value that has been
+    through it once is already at its fixed point.
+    """
+    return [wire_format.unapply(dict(record)) for record in payload]
 
 
 def render_events(events: Sequence[Event], wire_format: WireFormat) -> list[dict[str, Any]]:

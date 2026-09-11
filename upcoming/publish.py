@@ -1,0 +1,303 @@
+"""Assembling everything a run produced into one publishable tree.
+
+Three artifacts, and the third is the one that makes a partial publish honest:
+
+* ``feeds/<source>/events.json`` -- one per source, faithful to its upstream
+* ``combos/<name>/events.json`` -- the declared combinations
+* ``status.json`` -- what succeeded, what failed, and how stale anything is
+
+A source that fails keeps serving its **last good feed**, because a departmental listing
+going blank is worse than being a few hours old, and one bad feed must not block the other
+eleven. But a silent partial publish is worse than either, so the staleness is stated in
+``status.json`` and in the per-source ``status.json`` beside the feed. The predecessor has
+no equivalent: a consumer polling its feed cannot distinguish fresh from frozen, and its own
+handover names that as the worst shape a failure can take.
+
+``status.json`` is deliberately the only file carrying a wall clock. Keeping timestamps out
+of the feeds is what lets the published bytes be compared byte-for-byte to detect drift.
+"""
+
+from __future__ import annotations
+
+import json
+import os
+from collections.abc import Mapping
+from dataclasses import dataclass, field
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+
+from .build import BuildResult, render
+from .combine import Combo, ComboResult
+from .registry import Registry
+from .serialize import WireFormat, dump_feed, load_feed, wire_format_for
+
+#: Status values a source can end a run with. ``empty`` is first-class rather than a kind
+#: of failure: kellercenter serves a well-formed calendar with no events, and the payload
+#: is identical to a broken one -- only the source's declaration separates them.
+STATUS_OK = "ok"
+STATUS_EMPTY = "empty"
+STATUS_FAILED = "failed"
+STATUS_DISABLED = "disabled"
+
+
+@dataclass(frozen=True)
+class PublishedFeed:
+    """One file in the tree, and what a consumer needs to know about it."""
+
+    path: str
+    status: str
+    events: int
+    stale: bool = False
+    detail: str = ""
+    sources: tuple[str, ...] = ()
+    notes: tuple[str, ...] = ()
+
+
+@dataclass
+class Tree:
+    """The assembled output, in memory until written."""
+
+    files: dict[str, str] = field(default_factory=dict)
+    feeds: list[PublishedFeed] = field(default_factory=list)
+
+    def add(self, path: str, body: str, record: PublishedFeed) -> None:
+        self.files[path] = body
+        self.feeds.append(record)
+
+
+def _last_good(root: Path, path: str) -> str | None:
+    """The previously published bytes for a path, if any.
+
+    What a failed source keeps serving. Read from the tree rather than from a cache, so
+    "what is live" and "what we would republish" are the same thing by construction.
+    """
+    candidate = root / path
+    return candidate.read_text(encoding="utf-8") if candidate.is_file() else None
+
+
+def previous_payload(
+    root: Path, path: str, wire_format: WireFormat | None = None
+) -> list[Mapping[str, Any]] | None:
+    """The previously published feed, parsed.
+
+    With a ``wire_format``, the source's escaping is reversed so the records are
+    model-shaped and can be rebuilt into events. Without one the records are returned as
+    published, which is what the diff gate wants -- it compares identity, and reversing
+    escaping to count ids would be wasted work.
+    """
+    body = _last_good(root, path)
+    if body is None:
+        return None
+    try:
+        parsed = json.loads(body)
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(parsed, list):
+        return None
+    records: list[Mapping[str, Any]] = list(parsed)
+    if wire_format is None:
+        return records
+    return list(load_feed(records, wire_format))
+
+
+def assemble(
+    registry: Registry,
+    results: Mapping[str, BuildResult],
+    combos: Mapping[str, ComboResult],
+    combo_config: Mapping[str, Combo],
+    *,
+    root: Path,
+    generated_at: str,
+) -> Tree:
+    """Build the tree from what this run produced plus what is already published.
+
+    ``generated_at`` is passed in rather than read from the clock here, so a caller can
+    make a run reproducible and so nothing in this module reaches for the time.
+    """
+    tree = Tree()
+    #: slug -> why a combined feed built from it is not fully current. Recorded during the
+    #: per-source pass and read during the combo pass, so a combo never has to guess at the
+    #: state of its inputs by inspecting sibling records.
+    degraded: dict[str, str] = {}
+
+    for source in registry.sources:
+        path = f"feeds/{source.slug}/events.json"
+
+        if not source.is_live:
+            tree.feeds.append(
+                PublishedFeed(
+                    path=path,
+                    status=STATUS_DISABLED,
+                    events=0,
+                    detail=" ".join(source.reason.split())[:300],
+                    sources=(source.slug,),
+                )
+            )
+            continue
+
+        result = results.get(source.slug)
+        if result is not None and result.ok:
+            body = render(result.events, source)
+            status = STATUS_EMPTY if not result.events else STATUS_OK
+            tree.add(
+                path,
+                body,
+                PublishedFeed(
+                    path=path,
+                    status=status,
+                    events=len(result.events),
+                    sources=(source.slug,),
+                    notes=result.notes,
+                ),
+            )
+            continue
+
+        # Failed. Keep serving the last good bytes, and say so -- a blank departmental
+        # listing is worse than a stale one, and an unannounced stale one is worse than
+        # both.
+        detail = "; ".join(result.diagnostics) if result else "not built in this run"
+        previous = _last_good(root, path)
+        if previous is None:
+            tree.feeds.append(
+                PublishedFeed(
+                    path=path,
+                    status=STATUS_FAILED,
+                    events=0,
+                    detail=f"{detail}. Never published, so nothing is served at this path.",
+                    sources=(source.slug,),
+                )
+            )
+            degraded[source.slug] = f"{source.slug} failed and has never been published"
+            continue
+
+        tree.add(
+            path,
+            previous,
+            PublishedFeed(
+                path=path,
+                status=STATUS_FAILED,
+                events=len(json.loads(previous)),
+                stale=True,
+                detail=detail,
+                sources=(source.slug,),
+            ),
+        )
+        degraded[source.slug] = f"the last good copy of {source.slug}"
+
+    for name, combo in combo_config.items():
+        path = f"combos/{name}/events.json"
+        if not combo.enabled:
+            tree.feeds.append(
+                PublishedFeed(
+                    path=path,
+                    status=STATUS_DISABLED,
+                    events=0,
+                    detail=" ".join(combo.reason.split())[:300],
+                )
+            )
+            continue
+
+        built = combos.get(name)
+        if built is None:
+            continue
+
+        # A combined feed is only as current as its least current input. Read from the
+        # per-source pass rather than inferred from sibling records, so a combo cannot
+        # pick up the staleness of another combo that happens to share a slug.
+        reasons = tuple(sorted({degraded[s] for s in built.inputs if s in degraded}))
+
+        notes: list[str] = []
+        if built.merged:
+            notes.append(
+                f"{built.merged} event(s) were published by more than one source with "
+                f"every compared detail matching, and were merged into one record naming "
+                f"all of them"
+            )
+        if built.divergences:
+            notes.append(
+                f"{len(built.divergences)} group(s) matched on {', '.join(combo.key)} "
+                f"but differed in detail, so every record was kept rather than picking a "
+                f"winner"
+            )
+
+        tree.add(
+            path,
+            dump_feed(built.events, wire_format_for(())),
+            PublishedFeed(
+                path=path,
+                status=STATUS_OK,
+                events=len(built.events),
+                stale=bool(reasons),
+                sources=built.inputs,
+                detail=f"built from {', '.join(reasons)}" if reasons else "",
+                notes=tuple(notes),
+            ),
+        )
+
+    tree.files["status.json"] = status_document(tree, generated_at=generated_at)
+    return tree
+
+
+def status_document(tree: Tree, *, generated_at: str) -> str:
+    """The health manifest, and the published contract for "is this feed current".
+
+    A consumer fetching only ``events.json`` cannot tell fresh from frozen -- GitHub Pages
+    sets no header we control, and the feeds deliberately carry no timestamp. This file is
+    the answer, and the README says so rather than leaving it a debugging artifact.
+    """
+    summary: dict[str, int] = {}
+    for feed in tree.feeds:
+        summary[feed.status] = summary.get(feed.status, 0) + 1
+
+    document = {
+        "generatedAt": generated_at,
+        "summary": {
+            **summary,
+            "events": sum(f.events for f in tree.feeds if f.path.startswith("feeds/")),
+            "stale": sum(1 for f in tree.feeds if f.stale),
+        },
+        "feeds": [
+            {
+                "path": feed.path,
+                "status": feed.status,
+                "events": feed.events,
+                **({"stale": True} if feed.stale else {}),
+                **({"detail": feed.detail} if feed.detail else {}),
+                **({"sources": list(feed.sources)} if feed.sources else {}),
+                **({"notes": list(feed.notes)} if feed.notes else {}),
+            }
+            for feed in sorted(tree.feeds, key=lambda f: f.path)
+        ],
+    }
+    return json.dumps(document, indent=2, ensure_ascii=True) + "\n"
+
+
+def write(tree: Tree, root: str | os.PathLike[str]) -> list[str]:
+    """Write the tree, returning the paths written, sorted."""
+    base = Path(root)
+    for path, body in sorted(tree.files.items()):
+        target = base / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(body, encoding="utf-8")
+    return sorted(tree.files)
+
+
+def utc_now() -> str:
+    """The one place this package reads the clock."""
+    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+__all__ = [
+    "STATUS_DISABLED",
+    "STATUS_EMPTY",
+    "STATUS_FAILED",
+    "STATUS_OK",
+    "PublishedFeed",
+    "Tree",
+    "assemble",
+    "previous_payload",
+    "status_document",
+    "utc_now",
+    "write",
+]

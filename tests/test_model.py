@@ -18,6 +18,7 @@ from upcoming.model import (
     Event,
     Location,
     Speaker,
+    from_wire,
     normalize_instant,
     to_wire,
 )
@@ -369,3 +370,74 @@ def test_speakers_serialize_as_objects_with_both_keys() -> None:
     # The scalars are published alongside, so the existing ingest needs no change.
     assert wire["speaker"] == "A, Princeton"
     assert wire["affiliation"] == "Princeton"
+
+
+# --------------------------------------------------------------------------------------
+# Reading a published record back
+# --------------------------------------------------------------------------------------
+
+
+def test_from_wire_round_trips_every_stored_field() -> None:
+    event = make_event(
+        speakers=(Speaker("Elynn Chen", "New York University"), Speaker("A. Guess")),
+        location=Location(name="Sherrerd", detail="101"),
+        tags=("seminar", "colloquium"),
+    )
+    assert from_wire(to_wire(event)) == event
+
+
+def test_from_wire_recomputes_the_derived_scalars() -> None:
+    """``speaker`` and ``affiliation`` are read from ``speakers``, never from the record.
+
+    A hand-edited or half-migrated file could carry a scalar that disagrees with the list.
+    Deriving on read makes that disagreement impossible rather than merely unlikely.
+    """
+    record = to_wire(make_event(speakers=(Speaker("Elynn Chen", "New York University"),)))
+    record["speaker"] = "Somebody Else"
+    record["affiliation"] = "Nowhere"
+    restored = from_wire(record)
+    assert restored.speaker == "Elynn Chen, New York University"
+    assert restored.affiliation == "New York University"
+
+
+def test_from_wire_defaults_the_fields_a_sparse_event_omits() -> None:
+    """Most events carry no speaker, location or tags. Their absence is not corruption."""
+    minimal = from_wire(
+        {
+            "id": "orfe:1",
+            "guid": "1",
+            "sources": ["orfe"],
+            "platform": PLATFORM_SITE_BUILDER,
+            "startsAt": "2026-10-02T16:15:00Z",
+            "endsAt": "2026-10-02T17:15:00Z",
+            "startTime": "2026-10-02T12:15:00",
+            "endTime": "2026-10-02T13:15:00",
+            "timezone": "America/New_York",
+            "title": "A Talk",
+            "urlRef": "https://example.edu/e/1",
+        }
+    )
+    assert minimal.id == "orfe:1"
+    assert minimal.speakers == ()
+    assert minimal.tags == ()
+    assert minimal.location == Location()
+
+
+def test_from_wire_refuses_a_record_missing_a_required_field() -> None:
+    """A truncated or corrupt published file must fail loudly.
+
+    This runs when a failed source's last good feed is read back to keep the combined
+    feeds whole. Restoring a half-formed event there would put a malformed record into
+    every combo that includes the source -- strictly worse than the source being absent,
+    because it would publish rather than report.
+    """
+    with pytest.raises(TypeError):
+        from_wire({"id": "orfe:1", "guid": "1", "sources": ["orfe"]})
+
+
+def test_from_wire_restores_tuples_not_lists() -> None:
+    """The model is frozen and hashable; a list would make a restored event unhashable."""
+    restored = from_wire(to_wire(make_event(tags=("seminar",), sources=("orfe", "citp"))))
+    assert isinstance(restored.tags, tuple)
+    assert isinstance(restored.sources, tuple)
+    assert hash(restored)

@@ -23,11 +23,15 @@ import sys
 from collections.abc import Sequence
 from pathlib import Path
 
-from .build import build_from_file, load_pronunciation, render
+from .build import BuildResult, build_from_file, load_pronunciation, render
+from .combine import combine, load_combos
 from .errors import ConfigFatal
 from .fetch import HttpTransport
+from .model import Event, from_wire
+from .publish import STATUS_DISABLED, assemble, previous_payload, utc_now, write
 from .registry import load_registry
 from .scrape import build_cache
+from .serialize import wire_format_for
 
 EXIT_OK = 0
 EXIT_USAGE = 2
@@ -94,6 +98,32 @@ def _build_parser() -> argparse.ArgumentParser:
             "also scrape the source's declared targets from its event pages. Off by "
             "default so a build reaches no network unless asked; requires the bypass "
             "credential, and fails the source if too few pages can be reached."
+        ),
+    )
+    publish = sub.add_parser(
+        "publish",
+        help="build every live source and every combined feed into one tree",
+        description=(
+            "Build all twelve live sources, materialize the declared combined feeds, and "
+            "write the tree with a status.json saying what succeeded and what is stale. A "
+            "source that fails keeps serving its last good feed and is marked stale -- a "
+            "departmental listing going blank is worse than one a few hours old, and an "
+            "unannounced stale one is worse than both."
+        ),
+    )
+    publish.add_argument("--out", default="dist", help="output directory (default: dist)")
+    publish.add_argument(
+        "--feeds",
+        default="tests/fixtures/feeds",
+        help="directory of <slug>/feed.ics files to build from",
+    )
+    publish.add_argument("--enrich", action="store_true", help="also scrape event pages")
+    publish.add_argument(
+        "--allow-large-diff",
+        action="store_true",
+        help=(
+            "skip the guard that refuses a build losing most of a feed. Use after "
+            "confirming upstream really did shrink."
         ),
     )
     return parser
@@ -217,6 +247,90 @@ def _cmd_build(registry_path: str, args: argparse.Namespace) -> int:
     return EXIT_OK
 
 
+def _cmd_publish(registry_path: str, args: argparse.Namespace) -> int:
+    """Build everything and assemble one publishable tree."""
+    registry = load_registry(registry_path)
+    tag_vocabulary = registry.sources[0].tags
+    combo_list = load_combos(
+        known_sources=[s.slug for s in registry.sources], tags=tag_vocabulary
+    )
+    load_pronunciation()
+
+    out_root = Path(args.out)
+    feeds_root = Path(args.feeds)
+
+    results: dict[str, BuildResult] = {}
+    by_source: dict[str, tuple[Event, ...]] = {}
+    failed: list[str] = []
+
+    for source in registry.live:
+        feed = feeds_root / source.slug / "feed.ics"
+        cache = (
+            build_cache(source, HttpTransport(retries=source.http.retries))
+            if args.enrich and source.enrich
+            else None
+        )
+        result = build_from_file(
+            feed,
+            source,
+            cache,
+            previous=previous_payload(out_root, f"feeds/{source.slug}/events.json"),
+            allow_large_diff=args.allow_large_diff,
+        )
+        results[source.slug] = result
+        if result.ok:
+            by_source[source.slug] = result.events
+        else:
+            failed.append(source.slug)
+            for problem in result.diagnostics:
+                print(f"{source.slug}: {problem}", file=sys.stderr)
+            # Feed the combined feeds this source's last good copy rather than nothing.
+            # Omitting it would quietly shrink every combo that includes it, which is the
+            # silent partial publish this whole layer exists to prevent.
+            restore = previous_payload(
+                out_root,
+                f"feeds/{source.slug}/events.json",
+                wire_format_for(source.escape_fields),
+            )
+            if restore:
+                by_source[source.slug] = tuple(from_wire(r) for r in restore)
+
+    # Combined feeds are built from whatever succeeded. A combo whose input failed is
+    # built from that source's last good copy, and status.json names the substitution --
+    # never silently dropped, which would quietly shrink a feed a consumer relies on.
+    combos_built = {
+        combo.name: combine(combo, by_source) for combo in combo_list if combo.enabled
+    }
+
+    tree = assemble(
+        registry,
+        results,
+        combos_built,
+        {c.name: c for c in combo_list},
+        root=out_root,
+        generated_at=utc_now(),
+    )
+    written = write(tree, out_root)
+
+    print(f"wrote {len(written)} file(s) to {out_root}")
+    for record in sorted(tree.feeds, key=lambda f: f.path):
+        if record.status == STATUS_DISABLED:
+            continue
+        mark = "stale" if record.stale else record.status
+        print(f"  {record.path:42} {mark:8} {record.events:4} events")
+
+    if failed:
+        print(
+            f"\n{len(failed)} source(s) failed and are serving their last good feed: "
+            f"{', '.join(failed)}",
+            file=sys.stderr,
+        )
+        # Published first, then red. Both halves matter: a consumer keeps a working feed,
+        # and the run still reports a problem rather than passing quietly.
+        return EXIT_SOURCE_FAILED
+    return EXIT_OK
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = _build_parser()
     args = parser.parse_args(argv if argv is not None else sys.argv[1:])
@@ -224,6 +338,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         if args.command == "build":
             return _cmd_build(args.registry, args)
+        if args.command == "publish":
+            return _cmd_publish(args.registry, args)
         handlers = {"sources": _cmd_sources, "check": _cmd_check}
         handler = handlers.get(args.command)
         if handler is None:  # pragma: no cover - argparse enforces the choice

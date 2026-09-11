@@ -23,6 +23,7 @@ name (where re-escaping is right) and a talk title (where it mangles
 from __future__ import annotations
 
 import re
+from collections.abc import Mapping
 from dataclasses import dataclass, field, replace
 from datetime import UTC, datetime
 from typing import Any
@@ -291,6 +292,38 @@ WIRE_FIELDS: tuple[tuple[str, str], ...] = (
     ("titleIsPlaceholder", "title_is_placeholder"),
     ("mappingConflict", "mapping_conflict"),
 )
+
+
+def from_wire(record: Mapping[str, Any]) -> Event:
+    """Rebuild an ``Event`` from a published record.
+
+    Needed to read a feed back: a source that failed keeps serving its last good bytes, and
+    a combined feed must be built from those rather than silently omitting the source --
+    which would shrink a feed a consumer relies on with nothing reporting it.
+
+    The derived scalars (``speaker``, ``affiliation``) are recomputed from ``speakers``
+    rather than read, so a hand-edited file cannot introduce a disagreement.
+    """
+    stored = {attr for _, attr in WIRE_FIELDS} - {"speaker", "affiliation"}
+    values: dict[str, Any] = {}
+    for wire_key, attr in WIRE_FIELDS:
+        if attr not in stored or wire_key not in record:
+            continue
+        raw = record[wire_key]
+        if attr == "location":
+            values[attr] = Location(
+                name=raw.get("name", ""), id=raw.get("id", ""), detail=raw.get("detail", "")
+            )
+        elif attr == "speakers":
+            values[attr] = tuple(
+                Speaker(name=s.get("name", ""), affiliation=s.get("affiliation", ""))
+                for s in raw
+            )
+        elif isinstance(raw, list):
+            values[attr] = tuple(raw)
+        else:
+            values[attr] = raw
+    return Event(**values)
 
 
 def to_wire(event: Event) -> dict[str, Any]:
