@@ -65,7 +65,7 @@ def site(
     document: Mapping | None = None, overrides: Mapping[str, str] | None = None
 ) -> SiteTransport:
     document = status() if document is None else document
-    files = {"status.json": json.dumps(document)}
+    files = {"status.json": json.dumps(document), "": "<!doctype html><html></html>"}
     for record in document.get("feeds", []):
         if record.get("status") != "disabled":
             files[record["path"]] = json.dumps([{"id": f"x:{i}"} for i in range(record["events"])])
@@ -92,6 +92,7 @@ def test_every_non_disabled_path_is_actually_fetched() -> None:
         "status.json",
         "feeds/orfe/events.json",
         "combos/all/events.json",
+        "",  # the landing page, which nothing else would notice missing
     ]
 
 
@@ -101,7 +102,7 @@ def test_a_disabled_feed_is_not_fetched() -> None:
     transport = site(document)
     findings, _ = verify(BASE, transport, now=NOW)
     assert findings == []
-    assert transport.calls == ["status.json"]
+    assert transport.calls == ["status.json", ""]
 
 
 # --------------------------------------------------------------------------------------

@@ -168,6 +168,31 @@ def _check_one(path: str, record: Mapping[str, object], outcome: FetchOutcome) -
     return []
 
 
+def check_landing_page(
+    base_url: str,
+    transport: Transport,
+    *,
+    headers: Mapping[str, str] | None = None,
+) -> list[Finding]:
+    """Is the root serving a page rather than a 404?
+
+    Checked because it is the one path a person reaches by hand, and because nothing else
+    would notice: every feed can be served perfectly while the root 404s, which is the
+    state this site was in for its first three deploys. A warning rather than a failure --
+    no consumer's ingest depends on it.
+    """
+    outcome = transport(
+        f"{base_url.rstrip('/')}/", headers=dict(headers or {}), timeout=(5.0, 15.0)
+    )
+    if not outcome.ok:
+        return [
+            Finding(WARN, "/", f"the landing page is not served: {outcome.error or outcome.status}")
+        ]
+    if "<html" not in outcome.body[:2000].lower():
+        return [Finding(WARN, "/", "the root is served but is not an HTML page")]
+    return []
+
+
 def verify(
     base_url: str,
     transport: Transport,
@@ -200,6 +225,7 @@ def verify(
         *check_freshness(document, now=now, max_age_minutes=max_age_minutes),
         *check_declared_feeds(document),
         *check_served(document, base_url, transport, headers=headers),
+        *check_landing_page(base_url, transport, headers=headers),
     ]
     return findings, document
 
@@ -218,6 +244,7 @@ __all__ = [
     "Finding",
     "check_declared_feeds",
     "check_freshness",
+    "check_landing_page",
     "check_served",
     "failures",
     "parse_stamp",

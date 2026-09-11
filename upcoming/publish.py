@@ -235,6 +235,11 @@ def assemble(
             ),
         )
 
+    # Written before status.json so a static file can never overwrite the manifest, and
+    # after the feeds so it can never overwrite one either.
+    for path, body in site_files().items():
+        tree.files.setdefault(path, body)
+
     tree.files["status.json"] = status_document(tree, generated_at=generated_at)
     return tree
 
@@ -271,6 +276,28 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
         ],
     }
     return json.dumps(document, indent=2, ensure_ascii=True) + "\n"
+
+
+#: Static files copied into the tree verbatim. The landing page reads ``status.json`` at
+#: load time rather than being generated here, for two reasons: it cannot drift out of step
+#: with the feeds, and it can be edited without running the pipeline -- which is why the
+#: predecessor ended up with a second workflow just to republish its landing page.
+SITE_ROOT = Path("site")
+
+
+def site_files(root: Path = SITE_ROOT) -> dict[str, str]:
+    """The static files to serve alongside the feeds, keyed by published path.
+
+    Absent is not an error: a build that only produces data is a valid build, and the
+    watchdog reports a missing index separately rather than failing the publish.
+    """
+    if not root.is_dir():
+        return {}
+    return {
+        str(path.relative_to(root)): path.read_text(encoding="utf-8")
+        for path in sorted(root.rglob("*"))
+        if path.is_file() and not path.name.startswith(".")
+    }
 
 
 def markdown_summary(tree: Tree, *, generated_at: str) -> str:
@@ -332,6 +359,7 @@ __all__ = [
     "assemble",
     "markdown_summary",
     "previous_payload",
+    "site_files",
     "status_document",
     "utc_now",
     "write",

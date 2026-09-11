@@ -122,10 +122,10 @@ def test_an_empty_feed_is_not_a_failure(registry, built, tmp_path):  # type: ign
 
 def test_published_feeds_are_valid_json_arrays(registry, built, tmp_path):  # type: ignore[no-untyped-def]
     tree = build_tree(registry, built, tmp_path)
-    for path, body in tree.files.items():
-        if path == "status.json":
-            continue
-        assert isinstance(json.loads(body), list), path
+    feeds = [p for p in tree.files if p.startswith(("feeds/", "combos/"))]
+    assert len(feeds) == 17  # twelve live sources, five enabled combos
+    for path in feeds:
+        assert isinstance(json.loads(tree.files[path]), list), path
 
 
 # --------------------------------------------------------------------------------------

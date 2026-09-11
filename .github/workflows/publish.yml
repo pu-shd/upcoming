@@ -30,6 +30,7 @@ on:
     paths:
       - 'config/**'
       - 'schema/**'
+      - 'site/**'
       - 'upcoming/**'
       - '.github/workflows/publish.yml'
   workflow_dispatch:

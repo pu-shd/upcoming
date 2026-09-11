@@ -14,7 +14,8 @@ COMPOSE     ?= docker-compose
 #   * no `sed -i` without a backup suffix
 # A test asserts these stay absent from the Makefile.
 
-.PHONY: help venv install sources check build build-fixtures publish verify test test-cov \
+.PHONY: help venv install sources check build build-fixtures publish serve verify test \
+        test-cov \
         lint typecheck fmt \
         docker-build docker-test docker-lint docker-sources clean
 
@@ -31,6 +32,7 @@ help:
 	@echo "  make build SOURCE=orfe ENRICH=1   also scrape its event pages (network)"
 	@echo "  make build-fixtures       build orfe and mae -- the inversion, both ways"
 	@echo "  make publish              build every live source and every combo into dist/"
+	@echo "  make serve               publish, then serve dist/ at http://localhost:8000"
 	@echo "  make publish FETCH=1      fetch each source's ICS first (network)"
 	@echo ""
 	@echo "Watch"
@@ -97,6 +99,12 @@ publish: $(VENV)
 			--feeds "$${FEEDS:-tests/fixtures/feeds}" \
 			$(if $(FETCH),--fetch,) \
 			$(if $(ENRICH),--enrich,)
+
+# The landing page reads status.json over fetch(), which file:// will not allow, so
+# previewing it needs a real origin. Same tree the deploy uploads.
+serve: $(VENV) publish
+	@echo "serving dist/ at http://localhost:8000 -- ctrl-c to stop"
+	@$(PY) -m http.server 8000 --directory "$${OUT:-dist}"
 
 # The watchdog, run by hand. It takes no credential on purpose: it must see exactly what a
 # consumer sees, and a credential would let it pass where a consumer fails.
