@@ -59,10 +59,17 @@ jobs:
           # No BOT_BYPASS_HEADER here, deliberately: this fetches our own published site,
           # not a departmental page, and it must see exactly what an ordinary consumer
           # sees. Granting this job a credential would let it pass where a consumer fails.
+          # Redirected to a file rather than piped to tee, and `|| code=$?` rather than a
+          # bare `$?`. Two reasons, both of which have bitten this file: the default shell
+          # is `bash -e`, which `set -uo pipefail` does not clear, so an unhealthy site
+          # would end the step and skip the steps that file the issue -- and the left side
+          # of a pipe runs in a subshell, so a code captured there never reaches here.
+          code=0
           python -m upcoming.cli verify \
             --base-url "$SITE_BASE_URL" \
-            --max-age-minutes "$MAX_AGE" 2>&1 | tee report.txt
-          echo "status=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+            --max-age-minutes "$MAX_AGE" > report.txt 2>&1 || code=$?
+          cat report.txt
+          echo "status=$code" >> "$GITHUB_OUTPUT"
           {
             echo '### `'"$SITE_BASE_URL"'`'
             echo

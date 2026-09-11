@@ -8,6 +8,8 @@ decision the rest of the codebase is built around.
 
 from __future__ import annotations
 
+import re
+
 import pytest
 import yaml
 
@@ -186,3 +188,64 @@ def test_lint_cannot_block_a_publish() -> None:
     for job in load("publish.yml")["jobs"].values():
         assert "ruff" not in str(job)
         assert "mypy" not in str(job)
+
+
+# --------------------------------------------------------------------------------------
+# Shell, which is where the subtle failures live
+# --------------------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize("name", ALL)
+def test_an_exit_code_is_never_read_from_a_bare_dollar_question(name: str) -> None:
+    """The default shell is ``bash -e``, and ``set -uo pipefail`` does not clear it.
+
+    A step that runs a command and then reads ``$?`` has already been killed by ``-e`` if
+    the command failed -- so the branch handling the failure never runs. This shipped once
+    in publish.yml, where it would have skipped the deploy whenever a source failed: the
+    exact predecessor failure the whole design is built to avoid, reproduced in its fix.
+
+    ``|| code=$?`` is the form that works, because the ``||`` makes the command succeed.
+    """
+    for job in load(name)["jobs"].values():
+        for step in job.get("steps", []):
+            script = step.get("run", "")
+            for line in script.splitlines():
+                stripped = line.strip()
+                if stripped.startswith("#") or "$?" not in stripped:
+                    continue
+                assert "|| code=$?" in stripped or "||" in stripped, (
+                    f"{name}: `{stripped}` reads $? after a command that -e already ended"
+                )
+
+
+@pytest.mark.parametrize("name", ALL)
+def test_no_step_captures_a_variable_on_the_left_of_a_pipe(name: str) -> None:
+    """The left side of a pipeline runs in a subshell, so an assignment there is lost.
+
+    ``cmd || code=$? | tee log`` looks like it records the failure and does not.
+    """
+    for job in load(name)["jobs"].values():
+        for step in job.get("steps", []):
+            for line in step.get("run", "").splitlines():
+                stripped = line.strip()
+                if stripped.startswith("#"):
+                    continue
+                before = stripped.split("|", 1)[0] if "|" in stripped else ""
+                assert not re.search(r"\bcode=\$\?", before) or "||" in stripped, stripped
+
+
+@pytest.mark.parametrize("name", ALL)
+def test_no_heredoc_terminator_is_indented(name: str) -> None:
+    """An indented terminator does not close a plain heredoc; the rest of the step is eaten.
+
+    Only ``<<-`` strips leading whitespace, and only tabs. This is invisible in review and
+    only shows up as a shell syntax error on a real run.
+    """
+    for job in load(name)["jobs"].values():
+        for step in job.get("steps", []):
+            script = step.get("run", "")
+            for marker in re.findall(r"<<-?\s*'?([A-Za-z_][A-Za-z0-9_]*)'?", script):
+                if f"<<-{marker}" in script or f"<<- {marker}" in script:
+                    continue
+                closers = [ln for ln in script.splitlines() if ln.rstrip() == marker]
+                assert closers, f"{name}: heredoc <<{marker} is never closed at column 0"

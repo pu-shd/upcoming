@@ -104,17 +104,18 @@ jobs:
             exit 1
           fi
 
-          args=(publish --out dist --feeds .feeds --fetch --summary "$GITHUB_STEP_SUMMARY")
+          args=(--out dist --feeds .feeds --fetch --summary "$GITHUB_STEP_SUMMARY")
           # Unset on a schedule or a push, which is when enrichment should be on.
           if [ "${ENRICH:-true}" != "false" ]; then args+=(--enrich); fi
           if [ "${ALLOW_LARGE_DIFF:-false}" = "true" ]; then args+=(--allow-large-diff); fi
 
-          # The exit code is recorded rather than allowed to end the job here. A source
-          # failing must still publish the other eleven and the combined feeds -- and must
-          # also end the run red, which the last step does. Ending it here would skip the
-          # deploy, and a skipped step is green: the predecessor's exact failure.
-          python -m upcoming.cli publish "${args[@]}"
-          code=$?
+          # `|| code=$?` rather than a bare `$?`, because the default shell is `bash -e`
+          # and `set -uo pipefail` does not clear that. A source failing must still publish
+          # the other eleven and the combined feeds -- and must also end the run red, which
+          # the last step does. Letting -e end the step here would skip the deploy, and a
+          # skipped step is green: the predecessor's exact failure, reproduced.
+          code=0
+          python -m upcoming.cli publish "${args[@]}" || code=$?
           echo "status=$code" >> "$GITHUB_OUTPUT"
 
           # 4 means "a source failed, and the tree is complete because that source is
