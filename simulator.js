@@ -766,6 +766,73 @@
 
     /* ---------------------------------------------------------- discovery ------- */
 
+    /**
+     * When the feeds were last gathered, and whether anything is wrong.
+     *
+     * `generatedAt` is when the Publish workflow last ran; a feed's own `lastSuccessAt`
+     * is when its content last came off a live fetch. Those differ whenever a source was
+     * inside its cadence and deliberately not refetched, so both are reported -- saying
+     * only the first would imply every feed had just been read.
+     */
+    function renderFeedHealth(manifest) {
+      var host = $("feed-health");
+      host.replaceChildren();
+
+      var summary = manifest.summary || {};
+      var when = manifest.generatedAt;
+      /* `generatedAt` ends in Z, so it is an unambiguous instant and `Date` reads it
+         correctly -- unlike the feeds' own wall-clock times, which must never go near a
+         Date because that would apply the reader's timezone. */
+      var at = when ? new Date(when) : null;
+      var minutes = at && !isNaN(at.getTime())
+        ? Math.round((Date.now() - at.getTime()) / 60000)
+        : null;
+
+      var say = function (text, kind) {
+        var span = document.createElement("span");
+        if (kind) span.className = kind;
+        span.textContent = text;
+        host.appendChild(span);
+      };
+      var dot = function () { host.appendChild(document.createTextNode("  ·  ")); };
+
+      say("Checked " + (minutes === null ? when
+        : minutes < 1 ? "less than a minute ago"
+        : minutes === 1 ? "1 minute ago"
+        : minutes < 90 ? minutes + " minutes ago"
+        : Math.round(minutes / 60) + " hours ago") + " by the Publish workflow");
+
+      dot();
+      say((summary.ok || 0) + " feeds ok");
+      if (summary.empty) { dot(); say(summary.empty + " empty"); }
+
+      if (summary.stale) {
+        dot();
+        say(summary.stale + " stale", "warn");
+      }
+      if (summary.failed) {
+        dot();
+        say(summary.failed + " failed", "bad");
+      }
+      if (!summary.stale && !summary.failed) {
+        dot();
+        say("none stale or failed", "ok");
+      }
+
+      // A feed inside its cadence was not refetched this run, which is by design and
+      // worth saying rather than letting the run time imply otherwise.
+      var stamps = (manifest.feeds || [])
+        .filter(function (f) {
+          return f.path.indexOf("feeds/") === 0 && f.status !== "disabled" && f.lastSuccessAt;
+        })
+        .map(function (f) { return f.lastSuccessAt; })
+        .sort();
+      if (stamps.length && stamps[0] !== when) {
+        dot();
+        say("oldest feed content " + prettyStamp(stamps[0]));
+      }
+    }
+
     function buildSourceList(manifest) {
       var records = (manifest.feeds || []).filter(function (f) {
         return typeof f.path === "string" && f.path.indexOf("feeds/") === 0;
@@ -1434,6 +1501,7 @@
         return r.json();
       })
       .then(function (manifest) {
+        renderFeedHealth(manifest);
         buildSourceList(manifest);
         resetToNextEdition();
         applyQueryState();
