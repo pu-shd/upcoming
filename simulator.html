@@ -134,6 +134,13 @@
       Untick an event to leave it out of the export below. The table itself is what the
       editorial system would ingest, which does not change either way.
     </p>
+    <p class="note">
+      <span class="pill ok">ready</span> nothing to chase &nbsp;
+      <span class="pill warn">fix first</span> no announced title, or nowhere to say it is
+      &nbsp;
+      <span class="pill bad">check</span> cancelled, or something we could not read.
+      A blank cell is a field the feed does not carry; hover a badge for the detail.
+    </p>
 
     <div class="card scroll">
       <table>
@@ -144,12 +151,13 @@
               <input type="checkbox" id="pick-all" checked
                      aria-label="Include every event in the export">
             </th>
+            <th scope="col">Ready?</th>
             <th scope="col">Starts</th>
             <th scope="col">Title the editors would see</th>
             <th scope="col">Series</th>
             <th scope="col">Speaker</th>
             <th scope="col">Location</th>
-            <th scope="col">Source</th>
+            <th scope="col">Sponsor</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
@@ -165,7 +173,7 @@
               <th scope="col">Starts</th>
               <th scope="col">Title</th>
               <th scope="col">Series</th>
-              <th scope="col">Source</th>
+              <th scope="col">Sponsor</th>
               <th scope="col">Why it is out</th>
             </tr>
           </thead>

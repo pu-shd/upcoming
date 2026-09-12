@@ -216,6 +216,50 @@
   }
 
   /**
+   * How ready one event is to go into an edition, and what is missing.
+   *
+   * Three tiers, graded by what an editor would have to do about it:
+   *
+   * - `check`  something is wrong or unread -- cancelled, a mapping conflict, a category
+   *            nothing recognises. Rare, and exactly when somebody needs telling.
+   * - `fix`    publishable but not sendable as it stands: the title is a synthesized
+   *            placeholder, or there is no location to print.
+   * - `ready`  nothing to chase.
+   *
+   * A missing **speaker** deliberately does not force `fix`. Two events in five have
+   * none, and most legitimately so -- a reading group or a workshop has no one speaker.
+   * Grading on it would put two fifths of an edition in amber, and a signal that fires
+   * that often is one everybody learns to scroll past. It is still reported as a gap.
+   */
+  function readiness(item) {
+    var raw = item.raw || {};
+    var wrong = [];
+    if (raw.cancelled) wrong.push("cancelled");
+    if (raw.mappingConflict) wrong.push("the mapping conflicted");
+    if ((raw.unmappedTags || []).length) {
+      wrong.push("a category nothing recognises: " + raw.unmappedTags.join(", "));
+    }
+
+    var blocking = [];
+    if (item.placeholder) blocking.push("no title announced yet");
+    if (!item.location) blocking.push("no location");
+
+    var gaps = [];
+    if (!item.speakers.length) gaps.push("no speaker");
+    if (!item.series) gaps.push("no series");
+    if (!(raw.content || "").trim()) gaps.push("no description");
+
+    var state = wrong.length ? "check" : blocking.length ? "fix" : "ready";
+    return {
+      state: state,
+      label: state === "check" ? "check" : state === "fix" ? "fix first" : "ready",
+      reasons: wrong.concat(blocking),
+      gaps: gaps
+    };
+  }
+
+
+  /**
    * A key two feeds would collide on if they are listing the same talk.
    *
    * Keyed on the speaker rather than the title when the title is a placeholder, because a
@@ -971,7 +1015,20 @@
         });
         picker.appendChild(box);
         row.appendChild(picker);
-        if (dropped[item.raw.id]) row.className = "dropped";
+
+        var grade = readiness(item);
+        var stateCell = document.createElement("td");
+        var pill = document.createElement("span");
+        pill.className = "pill " +
+          (grade.state === "ready" ? "ok" : grade.state === "fix" ? "warn" : "bad");
+        pill.textContent = grade.label;
+        // The detail lives in a tooltip rather than the cell: six columns of prose would
+        // bury the one thing this column exists to make scannable.
+        pill.title = grade.reasons.concat(grade.gaps).join("; ") || "nothing missing";
+        stateCell.appendChild(pill);
+        row.appendChild(stateCell);
+        row.classList.add("state-" + grade.state);
+        if (dropped[item.raw.id]) row.classList.add("dropped");
 
         cell(row, prettyStamp(item.startTime), "when");
         var title = cell(row, item.title || "(no title)");
@@ -984,7 +1041,7 @@
         cell(row, item.series);
         cell(row, item.speakers.join("; "));
         cell(row, item.location);
-        cell(row, item.sources.join(", "), "mono");
+        cell(row, item.sponsors.map(function (x) { return x.label; }).join(", "));
         body.appendChild(row);
       });
       syncPickAll(result);
@@ -1016,7 +1073,7 @@
         cell(row, item.malformedStart ? (item.startTime || "(missing)") : prettyStamp(item.startTime), "when");
         cell(row, item.title || "(no title)");
         cell(row, item.series);
-        cell(row, item.sources.join(", "), "mono");
+        cell(row, item.sponsors.map(function (x) { return x.label; }).join(", "));
         cell(row, item.malformedStart ? "Unreadable start time" : item.reason, "reason");
         body.appendChild(row);
       });
@@ -1032,8 +1089,10 @@
         : kept.length + " of " + result.included.length + " event(s); " +
           (result.included.length - kept.length) + " left out above";
       // Marked on the rows too, so the two views cannot disagree about what is in.
+      // `classList` rather than `className`: assigning would wipe the readiness class.
       Array.prototype.forEach.call($("rows").children, function (row, index) {
-        row.className = dropped[(result.included[index] || {raw: {}}).raw.id] ? "dropped" : "";
+        var item = result.included[index] || { raw: {} };
+        row.classList.toggle("dropped", Boolean(dropped[item.raw.id]));
       });
     }
 
@@ -1290,6 +1349,7 @@
       prettyDate: prettyDate, locationText: locationText, speakerText: speakerText,
       speakerNames: speakerNames,
       collisionKey: collisionKey, groupByDay: groupByDay, plural: plural,
+      readiness: readiness,
       buildListing: buildListing, decorate: decorate, exportDocument: exportDocument,
       inlineStyles: inlineStyles, exportStylesheet: exportStylesheet, readable: readable,
       zonedToUTC: zonedToUTC, utcStamp: utcStamp, deadlineEvent: deadlineEvent,

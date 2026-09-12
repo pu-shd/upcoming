@@ -196,6 +196,17 @@ th.pick, td.pick { width: 1%; padding-right: .4rem; text-align: center; }
 th.pick input, td.pick input { margin: 0; accent-color: var(--accent); }
 tr.dropped td:not(.pick) { opacity: .45; text-decoration: line-through; }
 
+/* A left stripe as well as the badge. Colour alone is not a signal everyone receives, so
+   the state is carried by position and by the badge's own word too. */
+tr.state-fix   td:first-child { box-shadow: inset 3px 0 0 var(--warn); }
+tr.state-check td:first-child { box-shadow: inset 3px 0 0 var(--bad); }
+tr.state-ready td:first-child { box-shadow: inset 3px 0 0 var(--ok); }
+tbody td .pill { cursor: help; }
+
+/* An empty cell is a field the feed does not carry, which is worth reading as absence
+   rather than as a rendering fault. */
+tbody td:empty::after { content: "—"; color: var(--dim); }
+
 /* The deadline, which is a button that offers to put itself in a calendar. */
 .deadline { position: relative; display: inline-block; }
 .deadline-toggle { font-size: inherit; color: var(--fg); }
