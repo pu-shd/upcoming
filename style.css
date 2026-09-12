@@ -11,24 +11,29 @@
   --bg: #fbfbfa; --fg: #17181c; --dim: #5c6169; --line: #e2e2df;
   --card: #ffffff; --accent: #e77500; --ok: #1a7f37; --warn: #9a6700; --bad: #cf222e;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  /* The face orfe.princeton.edu loads. Fallbacks are real rather than decorative: if the
+     stylesheet does not arrive, the menu still sets in something close. */
+  --sans: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --menu-line: #a0a0a0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #16171a; --fg: #e8e8e6; --dim: #9aa0a8; --line: #2b2d31;
     --card: #1c1e22; --accent: #f5942e; --ok: #3fb950; --warn: #d29922; --bad: #f85149;
+    --menu-line: #3d434c;
   }
 }
 
 * { box-sizing: border-box; }
 
 body {
-  margin: 0; padding: 0 1.25rem 5rem; background: var(--bg); color: var(--fg);
+  margin: 0; padding: 0 0 5rem; background: var(--bg); color: var(--fg);
   font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-main { max-width: 62rem; margin: 0 auto; }
+main { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
 header { padding: 2rem 0 2rem; border-bottom: 3px solid var(--accent); margin-bottom: 2.5rem; }
 h1 { margin: 0 0 .4rem; font-size: 2.1rem; letter-spacing: -.02em; }
 h2 { margin: 3rem 0 .75rem; font-size: 1.15rem; letter-spacing: -.01em; }
@@ -68,19 +73,49 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line
 
 /* ------------------------------------------------------------------ navigation ----- */
 
+/* Princeton Site Builder's horizontal menu, as orfe.princeton.edu wears it: a sticky
+   full-width band with a hairline above and below, a small uppercase label, and links
+   carrying a 5px transparent bottom border that fills in on hover and for the current
+   page. Values taken from ps_base/css/styles.css rather than estimated -- the padding,
+   the border width, the 600 weight and the .85rem uppercase title are theirs. */
+
+/* Outside `main` rather than inside it. A full-bleed from within a centred column needs
+   `100vw` plus negative margins, and suppressing the horizontal scrollbar that causes
+   means `overflow-x: hidden` on an ancestor -- which silently kills `position: sticky`. */
+.menubar {
+  position: sticky; top: 0; z-index: 99;
+  margin: 0 0 2rem;
+  background: var(--card);
+  border-top: 1px solid var(--menu-line);
+  border-bottom: 1px solid var(--menu-line);
+}
+.menubar-inner {
+  display: flex; justify-content: center; align-items: center;
+  gap: 1rem; max-width: 1440px; margin: 0 auto; padding: 0 1.25rem;
+}
+.menubar-title {
+  font-family: var(--sans);
+  font-weight: 400; font-size: .85rem; text-transform: uppercase;
+  letter-spacing: .04em; color: var(--dim);
+  white-space: nowrap; margin: 0;
+}
 .nav {
-  display: flex; flex-wrap: wrap; gap: .35rem;
-  margin: 0 0 1.75rem; padding: 0; list-style: none;
-  font-size: .84rem;
+  display: flex; flex-wrap: nowrap; overflow-x: auto;
+  margin: 0; padding: 0; list-style: none;
+  scrollbar-width: none; -ms-overflow-style: none;
 }
+.nav::-webkit-scrollbar { display: none; }
 .nav a {
-  display: block; padding: .3rem .7rem; border-radius: 999px;
-  border: 1px solid var(--line); color: var(--dim); text-decoration: none;
+  display: block;
+  font-family: var(--sans);
+  font-size: .95rem; font-weight: 600;
+  padding: .625rem .5rem .5rem;
+  margin: 0 .5rem 0 0;
+  border-bottom: 5px solid transparent;
+  color: var(--fg); text-decoration: none; white-space: nowrap;
 }
-.nav a:hover { border-color: var(--accent); color: var(--fg); }
-.nav a[aria-current="page"] {
-  border-color: var(--accent); color: var(--fg); font-weight: 600;
-}
+.nav a:hover { border-bottom-color: var(--menu-line); }
+.nav a[aria-current="page"] { border-bottom-color: var(--accent); }
 
 /* ------------------------------------------------------------------- controls ------ */
 
@@ -164,6 +199,10 @@ tr.dropped td:not(.pick) { opacity: .45; text-decoration: line-through; }
 /* The deadline, which is a button that offers to put itself in a calendar. */
 .deadline { position: relative; display: inline-block; }
 .deadline-toggle { font-size: inherit; color: var(--fg); }
+/* `display: flex` beats the browser's `[hidden] { display: none }`, so without this the
+   menu is permanently open however carefully the script sets the attribute. */
+.deadline-menu[hidden] { display: none; }
+
 .deadline-menu {
   position: absolute; left: 0; top: calc(100% + .35rem); z-index: 5;
   display: flex; flex-direction: column; gap: .1rem;
