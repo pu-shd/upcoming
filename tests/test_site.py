@@ -66,9 +66,17 @@ def test_site_files_absent_is_not_an_error(tmp_path):  # type: ignore[no-untyped
 # --------------------------------------------------------------------------------------
 
 
+#: The one external origin a page may load from. The menu is set in Libre Franklin to
+#: match orfe.princeton.edu, which loads it from here -- a self-hosted copy would be more
+#: self-contained but would also drift from the face the site it matches is actually
+#: using. The trade is acceptable only because it is *decorative*: the stack falls back to
+#: the system sans and every page renders completely without it.
+FONT_HOSTS = ("fonts.googleapis.com", "fonts.gstatic.com")
+
+
 @pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
 def test_no_page_loads_an_external_resource(page: str) -> None:
-    """Self-contained, so a page cannot break because someone else's CDN did.
+    """Self-contained apart from the webfont, so a page cannot break because a CDN did.
 
     Resources only. A hyperlink to another site is navigation the reader chooses, and the
     page still renders fully offline without it.
@@ -77,7 +85,28 @@ def test_no_page_loads_an_external_resource(page: str) -> None:
     resources = re.findall(r'src\s*=\s*["\']([^"\']+)', body)
     resources += re.findall(r'<link[^>]+href\s*=\s*["\']([^"\']+)', body)
     for url in resources:
+        if any(host in url for host in FONT_HOSTS):
+            continue
         assert not url.startswith(("http://", "https://", "//")), f"{page}: external {url}"
+
+
+@pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
+def test_the_webfont_is_decorative_not_required(page: str) -> None:
+    """A font that fails to load must cost the page nothing but its face.
+
+    `display=swap` so text is never invisible while it loads, and a real fallback stack
+    so a blocked request leaves the menu set in the system sans rather than in whatever
+    the browser reaches for last.
+    """
+    body = PAGES[page]
+    if "fonts.googleapis.com" not in body:
+        return
+    assert "display=swap" in body
+    assert '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' in body
+    sans = re.search(r"--sans:\s*([^;]+);", STYLE)
+    assert sans, "expected a --sans stack"
+    assert sans.group(1).count(",") >= 3, f"fallbacks are thin: {sans.group(1)}"
+    assert sans.group(1).strip().endswith("sans-serif")
 
 
 @pytest.mark.parametrize("page", sorted(PAGES), ids=sorted(PAGES))
@@ -361,3 +390,43 @@ def test_one_download_helper_serves_both_files() -> None:
     code = (SITE / "simulator.js").read_text(encoding="utf-8")
     assert code.count("URL.createObjectURL") == 1
     assert code.count("URL.revokeObjectURL") == 1
+
+
+def test_the_menu_follows_princeton_site_builders_horizontal_pattern() -> None:
+    """Values taken from ps_base/css/styles.css, not estimated.
+
+    orfe.princeton.edu wears Site Builder's horizontal menu: a sticky band with a hairline
+    above and below, and links carrying a 5px transparent bottom border that fills in for
+    the current page. Pinned because "make it look like theirs" is otherwise a judgement
+    nobody can check.
+    """
+    assert "position: sticky" in STYLE
+    assert "border-bottom: 5px solid transparent" in STYLE
+    assert "font-weight: 600" in STYLE
+    for rule in (".menubar", ".menubar-inner", ".menubar-title"):
+        assert rule in STYLE, rule
+
+
+def test_the_menu_bar_is_not_trapped_inside_a_scroll_container() -> None:
+    """`overflow-x: hidden` on an ancestor silently kills `position: sticky`.
+
+    Which is why the bar sits outside `main` rather than full-bleeding out of it with
+    `100vw` and negative margins — that needs the hidden overflow, and the sticky then
+    stops working with nothing to show for it.
+    """
+    assert "overflow-x: hidden" not in STYLE.split(".scroll")[0]
+    for page in PAGES.values():
+        nav = page.index('class="menubar"')
+        assert nav < page.index("<main>"), "the bar must precede main, not sit inside it"
+
+
+def test_a_hidden_menu_stays_hidden() -> None:
+    """`display: flex` beats the browser's `[hidden] { display: none }`.
+
+    Without the explicit rule the calendar dropdown is permanently open, however
+    carefully the script sets the attribute — which is exactly what shipped.
+    """
+    assert ".deadline-menu[hidden] { display: none; }" in STYLE
+    flex_at = STYLE.index(".deadline-menu {")
+    hidden_at = STYLE.index(".deadline-menu[hidden]")
+    assert hidden_at < flex_at, "the override must not be outranked by source order"
