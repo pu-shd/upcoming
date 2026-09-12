@@ -189,6 +189,12 @@ A key may not name `guid` or `id`. Measured: `ps_events:4056:delta:0` is `ai`'s 
 
 `simulator.html` answers the question an editor has: *which of these events would my edition contain?* Pick a publication date; it shows what an editorial system would ingest, which titles are still unannounced, and the listing made up ready to compose.
 
+Each row is graded — `ready`, `fix first`, `check` — by what an editor would have to do
+about it: a synthesized title or a missing location is a blocker, while a missing speaker
+is reported as a gap rather than flagged, since two events in five have none and most
+legitimately so. The state is carried three ways, because colour alone is not a signal
+everyone receives: the badge's own word, a stripe, and a tooltip naming what is missing.
+
 Beyond what the predecessor sites do it adds **source selection**, **purpose selection**, and an export shaped like what the editors assemble in Mailchimp by hand — grouped by day, with their own field labels, titles linked to their event pages and sponsors to their units. Both the copy and the download carry their styling inline, because email clients strip `<style>` and honour only `style=""`.
 
 **Nothing about the feeds is written into the page.** Sources, names, sites and purposes all come from `status.json`, so a thirteenth source appears the moment it is registered. That is deliberate: ORFE's and MAE's `feed-simulator.js` are **byte-identical** (`md5 1f4aa8d0…`) with the department baked in, and both are a lossy mirror of ORFE's 750-line `newsletter.py`.

@@ -329,7 +329,7 @@ def test_the_received_table_has_a_column_for_including_an_event() -> None:
     assert 'id="pick-all"' in SIMULATOR
     assert 'class="pick"' in SIMULATOR
     header = re.search(r"<thead>.*?</thead>", SIMULATOR, re.S).group(0)
-    assert header.count("<th ") == 7, "six data columns plus the include box"
+    assert header.count("<th ") == 8, "seven data columns plus the include box"
     assert 'aria-label="Include every event in the export"' in header
 
 
@@ -430,3 +430,47 @@ def test_a_hidden_menu_stays_hidden() -> None:
     flex_at = STYLE.index(".deadline-menu {")
     hidden_at = STYLE.index(".deadline-menu[hidden]")
     assert hidden_at < flex_at, "the override must not be outranked by source order"
+
+
+def test_the_received_table_grades_each_row(page: str = "simulator.html") -> None:
+    """Colour alone is not a signal everyone receives.
+
+    So the state is carried three ways: the badge's own word, a left stripe, and a
+    tooltip naming what is missing.
+    """
+    assert '<th scope="col">Ready?</th>' in SIMULATOR
+    for state in ("state-ready", "state-fix", "state-check"):
+        assert f"tr.{state}" in STYLE, state
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert "readiness(item)" in code
+    assert "pill.title = " in code, "the detail belongs in a tooltip, not a seventh column"
+
+
+def test_the_grading_is_explained_where_it_is_used() -> None:
+    """A badge nobody can decode is decoration."""
+    for word in ("ready", "fix first", "check"):
+        assert f">{word}</span>" in SIMULATOR, word
+    assert "nothing to chase" in SIMULATOR
+
+
+def test_an_empty_cell_reads_as_absence() -> None:
+    """Rather than as a rendering fault, which is how a blank column otherwise looks."""
+    assert 'tbody td:empty::after { content: "—"' in STYLE
+
+
+def test_the_source_column_names_the_unit_not_its_slug() -> None:
+    """`citp` means nothing to an editor; "Center for Information Technology Policy" does.
+
+    It is the same string the export prints as Sponsor, so the table and the listing agree.
+    """
+    assert '<th scope="col">Sponsor</th>' in SIMULATOR
+    assert '<th scope="col">Source</th>' not in SIMULATOR
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert 'cell(row, item.sources.join(", "), "mono")' not in code
+
+
+def test_including_an_event_does_not_erase_its_grade() -> None:
+    """`className =` would wipe the state class the row was given when it was built."""
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert 'row.classList.toggle("dropped"' in code
+    assert "row.className = dropped" not in code

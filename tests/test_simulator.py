@@ -1054,3 +1054,151 @@ def test_the_link_back_is_included_so_the_reminder_can_be_acted_on(ics: str) -> 
     """Somebody opening this a week later wants the edition it came from."""
     assert "URL:https://x/y" in ics
     assert "https://x/y" in ics.replace("\r\n ", "")
+
+
+# --------------------------------------------------------------------------------------
+# How ready an event is to go into an edition
+# --------------------------------------------------------------------------------------
+
+GRADE = """
+const grade = (o) => S.readiness(S.decorate(
+  Object.assign({startTime: "2026-09-08T12:00:00", sources: ["x"]}, o),
+  {x: {label: "A Unit", home: "https://x.edu"}}
+));
+"""
+
+
+def test_a_complete_event_is_ready() -> None:
+    result = node(
+        GRADE
+        + """
+        console.log(JSON.stringify(grade({
+          title: "A Real Title", speakers: [{name: "A", affiliation: "B"}],
+          series: "A Series", content: "An abstract.",
+          location: {name: "Somewhere", detail: "101"}
+        })));
+    """
+    )
+    assert result["state"] == "ready"
+    assert result["label"] == "ready"
+    assert result["reasons"] == []
+    assert result["gaps"] == []
+
+
+@pytest.mark.parametrize(
+    ("event", "reason"),
+    [
+        (
+            {
+                "title": "A Talk by X",
+                "titleIsPlaceholder": True,
+                "location": {"name": "L", "detail": "1"},
+            },
+            "no title announced yet",
+        ),
+        ({"title": "Real"}, "no location"),
+    ],
+)
+def test_what_an_editor_must_fix_first(event: dict, reason: str) -> None:
+    """Not sendable as it stands: nothing to call it, or nowhere to say it is."""
+    result = node(GRADE + f"console.log(JSON.stringify(grade({json.dumps(event)})));")
+    assert result["state"] == "fix"
+    assert result["label"] == "fix first"
+    assert reason in result["reasons"]
+
+
+@pytest.mark.parametrize(
+    ("event", "reason"),
+    [
+        ({"title": "T", "cancelled": True, "location": {"name": "L"}}, "cancelled"),
+        (
+            {"title": "T", "mappingConflict": "x", "location": {"name": "L"}},
+            "the mapping conflicted",
+        ),
+        (
+            {"title": "T", "unmappedTags": ["Some Series"], "location": {"name": "L"}},
+            "a category nothing recognises: Some Series",
+        ),
+    ],
+)
+def test_what_needs_a_human_to_look(event: dict, reason: str) -> None:
+    """Rare, and exactly when somebody needs telling. All three sit at zero in today's
+    data, which is why they are graded rather than left to be noticed."""
+    result = node(GRADE + f"console.log(JSON.stringify(grade({json.dumps(event)})));")
+    assert result["state"] == "check"
+    assert reason in result["reasons"]
+
+
+def test_a_missing_speaker_is_a_gap_not_a_blocker() -> None:
+    """Two events in five have none, and most legitimately so — a reading group has no
+    one speaker. Grading on it would put two fifths of an edition in amber, and a signal
+    that fires that often is one everybody learns to scroll past.
+    """
+    result = node(
+        GRADE
+        + """
+        console.log(JSON.stringify(grade({
+          title: "Bias in AI Reading Group", series: "A Series",
+          content: "x", location: {name: "Sherrerd Hall", detail: "008"}
+        })));
+    """
+    )
+    assert result["state"] == "ready"
+    assert result["gaps"] == ["no speaker"]
+
+
+def test_something_wrong_outranks_something_missing() -> None:
+    """A cancelled event with no title is a cancellation first."""
+    result = node(
+        GRADE
+        + """
+        console.log(JSON.stringify(grade({
+          title: "A Talk by X", titleIsPlaceholder: true, cancelled: true
+        })));
+    """
+    )
+    assert result["state"] == "check"
+    assert result["reasons"][0] == "cancelled"
+
+
+def test_the_grading_discriminates_on_a_real_edition(tree) -> None:  # type: ignore[no-untyped-def]
+    """A grade that put everything in one tier would be decoration.
+
+    Measured against the committed feeds: most of an edition is ready, a substantial
+    minority needs a title, and nothing is currently wrong.
+    """
+    states = node(f"""
+        const fs = require("fs");
+        const root = {json.dumps(str(tree))};
+        const manifest = JSON.parse(fs.readFileSync(root + "/status.json"));
+        const feeds = {{}};
+        manifest.feeds.filter((f) => f.path.indexOf("feeds/") === 0)
+          .forEach((f) => {{ feeds[f.path.split("/")[1]] = f; }});
+        let events = [];
+        Object.keys(feeds).forEach((slug) => {{
+          if (feeds[slug].status === "disabled") return;
+          const file = root + "/feeds/" + slug + "/events.json";
+          events = events.concat(JSON.parse(fs.readFileSync(file)));
+        }});
+        const edition = S.resolveEdition({{publicationDate: "2026-09-08"}});
+        const r = S.partition(events, edition, "engineering-newsletter", feeds);
+        const out = {{}};
+        r.included.forEach((i) => {{
+          const g = S.readiness(i);
+          out[g.state] = (out[g.state] || 0) + 1;
+        }});
+        console.log(JSON.stringify(out));
+    """)
+    assert states.get("ready", 0) > 0, "nothing graded ready"
+    assert states.get("fix", 0) > 0, "nothing graded as needing a fix"
+    assert sum(states.values()) == 7
+
+
+def test_the_export_still_marks_a_placeholder_title(real_listing) -> None:  # type: ignore[no-untyped-def]
+    """The badge is additional to the decorator, not a replacement for it.
+
+    The listing leaves this site; a badge in a table does not travel with it.
+    """
+    flags = [n for n in real_listing if n["cls"] == "placeholder-flag"]
+    assert flags
+    assert "replace before sending" in flags[0]["text"]
