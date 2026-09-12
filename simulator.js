@@ -375,6 +375,21 @@
     return root;
   }
 
+  /**
+   * The standalone document the download produces, built from the element on the page.
+   *
+   * A named function rather than a few lines inside a click handler, because a click
+   * handler is the one place nothing can reach to test it -- and the first version of this
+   * shipped broken, emitting a title and an empty body, precisely because it lived there.
+   */
+  function exportDocument(el) {
+    var body = el ? el.innerHTML : "";
+    if (!body) return "";
+    var titleEl = el.querySelector("h2");
+    return "<!doctype html>\n<meta charset=\"utf-8\">\n<title>" +
+      (titleEl ? titleEl.textContent : "Events") + "</title>\n" + body + "\n";
+  }
+
   /* ----------------------------------------------------------------- the page ----- */
 
   function ready(fn) {
@@ -401,7 +416,11 @@
     var feeds = {};
     /** slug -> array of events, cached so toggling a checkbox off and on is free. */
     var loaded = {};
-    var lastListing = null;
+    /* No second copy of the listing is kept. An earlier version held the built tree in a
+       variable and then handed its children to the page with `replaceChildren`, which
+       *moves* nodes rather than copying them -- so the variable was left an empty div and
+       both export buttons silently produced nothing. The element on the page is the one
+       source of truth: what is shown is what is exported, and they cannot diverge. */
 
     function setStatus(text, kind) {
       statusEl.textContent = text || "";
@@ -590,8 +609,8 @@
     }
 
     function renderExport(edition, result) {
-      lastListing = buildListing(edition, result.included, document);
-      exportEl.replaceChildren.apply(exportEl, Array.prototype.slice.call(lastListing.childNodes));
+      var listing = buildListing(edition, result.included, document);
+      exportEl.replaceChildren.apply(exportEl, Array.prototype.slice.call(listing.childNodes));
       copyStateEl.textContent = "";
     }
 
@@ -752,9 +771,9 @@
     });
 
     $("copy").addEventListener("click", function () {
-      if (!lastListing) return;
-      var html = lastListing.innerHTML;
-      var text = lastListing.innerText || lastListing.textContent || "";
+      var html = exportEl.innerHTML;
+      var text = exportEl.innerText || exportEl.textContent || "";
+      if (!html) return;
       var done = function () { copyStateEl.textContent = "Copied."; };
       var failed = function () {
         copyStateEl.textContent = "Could not copy — select the listing and copy it by hand.";
@@ -776,10 +795,8 @@
     });
 
     $("download").addEventListener("click", function () {
-      if (!lastListing) return;
-      var doc = "<!doctype html>\n<meta charset=\"utf-8\">\n<title>" +
-        (lastListing.querySelector("h2") ? lastListing.querySelector("h2").textContent : "Events") +
-        "</title>\n" + lastListing.innerHTML + "\n";
+      var doc = exportDocument(exportEl);
+      if (!doc) return;
       var url = URL.createObjectURL(new Blob([doc], { type: "text/html;charset=utf-8" }));
       var link = document.createElement("a");
       link.href = url;
@@ -819,7 +836,7 @@
       prettyDate: prettyDate, locationText: locationText, speakerText: speakerText,
       speakerNames: speakerNames,
       collisionKey: collisionKey, groupByDay: groupByDay, plural: plural,
-      buildListing: buildListing, decorate: decorate,
+      buildListing: buildListing, decorate: decorate, exportDocument: exportDocument,
       partition: partition, hoursBetween: hoursBetween
     };
   }
