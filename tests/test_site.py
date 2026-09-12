@@ -510,3 +510,33 @@ def test_the_advanced_panel_carries_no_stale_worked_example() -> None:
 def test_the_column_is_wide_enough_for_eight_columns() -> None:
     """The received table grew a state column and full unit names."""
     assert "max-width: 72rem" in STYLE
+
+
+def test_the_source_panel_reports_when_the_feeds_were_last_gathered() -> None:
+    """Replaces a paragraph of theory with the one fact a reader wants there.
+
+    `generatedAt` is when the Publish workflow ran; a feed's own `lastSuccessAt` is when
+    its content last came off a live fetch. Those differ whenever a source was inside its
+    cadence and deliberately not refetched, so both are reported — saying only the first
+    would imply every feed had just been read.
+    """
+    assert 'id="feed-health"' in SIMULATOR
+    assert "de-duplicate" not in SIMULATOR, "the old explanatory note is gone"
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert "function renderFeedHealth(" in code
+    assert "Publish workflow" in code
+    assert "oldest feed content" in code
+
+
+def test_the_health_line_reads_the_manifest_clock_not_the_browsers() -> None:
+    """`generatedAt` ends in Z and is an unambiguous instant, so `Date` is correct for it.
+
+    The feeds' own times are wall-clock and must never go near a `Date`, which would apply
+    the reader's timezone and show a Californian editor a different edition.
+    """
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    health = code[
+        code.index("function renderFeedHealth(") : code.index("function buildSourceList(")
+    ]
+    assert "new Date(when)" in health
+    assert "isNaN" in health, "an unreadable stamp must not render as NaN minutes ago"

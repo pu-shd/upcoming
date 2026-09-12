@@ -63,6 +63,55 @@ Notes worth recording before adopting it:
 
 **Effort:** an hour, most of it choosing the period.
 
+### A Codespace, so a developer can tinker with their own instance
+
+Getting started currently means Python 3.12, Node 22, Docker, a virtualenv, and knowing
+that `BOT_BYPASS_HEADER` holds a whole header line. None of that is written down as a
+sequence; it is inferred from the Makefile and two workflows.
+
+A `.devcontainer/` makes the working setup the *default* one, and it suits this project
+better than most because **everything already runs offline**. A Codespace needs no
+credential and no network to be useful: `make build`, `make publish` and the whole suite
+work against committed fixtures, so a developer is looking at real output within a minute
+of the container coming up.
+
+What it needs:
+
+```jsonc
+// .devcontainer/devcontainer.json
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "make install",
+  "forwardPorts": [8000],
+  "containerEnv": {
+    // Visibly not a credential, and the suite reaches no network anyway.
+    "BOT_BYPASS_HEADER": "x-codespace-placeholder: not-a-credential"
+  }
+}
+```
+
+Three things worth getting right rather than accepting the defaults:
+
+- **Node belongs in it.** The simulator's logic is JavaScript and the suite drives it
+  through Node. A container without it turns 78 tests into an error a newcomer has to
+  diagnose on their first run.
+- **Docker-in-Docker earns its weight** only because `make docker-test` is the path CI
+  runs, and a developer who cannot run it locally will find out in CI instead. It is the
+  slowest feature to build, so it is a real trade rather than an obvious win.
+- **The placeholder credential should be visibly fake**, matching the Makefile's own. A
+  Codespace with a real one would be a credential on a machine nobody audits, and the
+  contract test that refuses a plausible-looking default exists for exactly this reason.
+
+Worth adding at the same time: `make serve` already publishes and serves the site on 8000,
+so forwarding that port means both pages and the simulator work in a Codespace with no
+extra step.
+
+**Effort:** an hour, plus however long the first container build takes to settle.
+
 ### Unify the last duplicated vocabulary
 
 `validate.py` defines `Severity` as `pass | warn | fail`; `verify.py` separately defines
