@@ -121,13 +121,31 @@ details > *:not(summary) { margin-top: .85rem; }
   gap: .3rem .9rem; margin: 0; padding: 1rem; list-style: none;
 }
 .sources li { margin: 0; }
-.sources label { display: flex; gap: .5rem; align-items: baseline; font-size: .89rem; }
+/* A three-column row -- box, name, count -- so the counts form a column of their own
+   instead of trailing each name at whatever width it happens to be. */
+.sources label {
+  display: grid; grid-template-columns: auto 1fr auto;
+  gap: .55rem; align-items: baseline; font-size: .89rem;
+}
 .sources input { margin: 0; accent-color: var(--accent); }
-.sources .count { color: var(--dim); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.sources .name { min-width: 0; overflow-wrap: anywhere; }
+.sources .count {
+  color: var(--dim); font-size: .8rem;
+  font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap;
+}
 .sources .off { color: var(--dim); }
 .sources .off label { cursor: not-allowed; }
 
-.derived { font-size: .9rem; margin: 1.25rem 0 0; }
+.derived {
+  display: flex; flex-wrap: wrap; gap: .5rem 2.5rem;
+  margin: 1.25rem 0 0; font-size: .9rem;
+}
+.derived div { display: flex; flex-direction: column; gap: .05rem; }
+.derived dt {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--dim);
+}
+.derived dd { margin: 0; font-variant-numeric: tabular-nums; }
+.derived .aside { color: var(--dim); }
 .status { font-size: .88rem; margin: 1.25rem 0 0; }
 .status.error { color: var(--bad); }
 .status.warn { color: var(--warn); }
@@ -162,3 +180,4 @@ details > *:not(summary) { margin-top: .85rem; }
 .export dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .1rem .6rem; }
 .export dt { font-weight: 600; }
 .export dd { margin: 0; }
+.export a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); }

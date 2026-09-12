@@ -197,8 +197,11 @@
       location: locationText(event),
       urlRef: event.urlRef || "",
       sources: sources,
+      /* Each sponsor keeps its own site, taken from the feed rather than from the
+         event's URL: a talk two units both list carries one URL and needs two links. */
       sponsors: sources.map(function (slug) {
-        return (feeds[slug] && feeds[slug].label) || slug;
+        var record = feeds[slug] || {};
+        return { label: record.label || slug, home: record.home || "" };
       }),
       purposes: Array.isArray(event.purposes) ? event.purposes : [],
       /* Our feeds always carry provenance, so unlike the predecessors' simulator there is
@@ -314,6 +317,7 @@
   function buildListing(edition, items, doc) {
     var root = doc.createElement("div");
     var heading = doc.createElement("h2");
+    heading.className = "edition";
     heading.textContent = "Events Newsletter: " +
       prettyDate(edition.coverageStart.slice(0, 10)).replace(/^\w+, /, "") + " - " +
       prettyDate(edition.coverageEnd.slice(0, 10)).replace(/^\w+, /, "") + ", " +
@@ -322,6 +326,7 @@
 
     if (!items.length) {
       var empty = doc.createElement("p");
+      empty.className = "empty";
       empty.textContent = "No events fall in this edition.";
       root.appendChild(empty);
       return root;
@@ -339,7 +344,18 @@
 
         var title = doc.createElement("p");
         title.className = "ev-title";
-        title.textContent = item.title || "(no title)";
+        /* The title links to the event's own page. An editor pasting this into Mailchimp
+           would otherwise have to find and attach every link by hand, which is the part
+           of composing an edition that takes the time. */
+        if (item.urlRef) {
+          var link = doc.createElement("a");
+          link.className = "ev-link";
+          link.setAttribute("href", item.urlRef);
+          link.textContent = item.title || "(no title)";
+          title.appendChild(link);
+        } else {
+          title.textContent = item.title || "(no title)";
+        }
         if (item.placeholder) {
           var flag = doc.createElement("span");
           flag.className = "placeholder-flag";
@@ -354,17 +370,50 @@
         block.appendChild(time);
 
         var dl = doc.createElement("dl");
-        var add = function (label, value) {
-          if (!value) return;
+        dl.className = "ev-fields";
+
+        var field = function (label) {
           var dt = doc.createElement("dt");
+          dt.className = "ev-label";
           dt.textContent = label;
-          var dd = doc.createElement("dd");
-          dd.textContent = value;
           dl.appendChild(dt);
+          var dd = doc.createElement("dd");
+          dd.className = "ev-value";
           dl.appendChild(dd);
+          return dd;
         };
+        var add = function (label, value) {
+          if (value) field(label).textContent = value;
+        };
+
         add(plural("Speaker", item.speakers), item.speakers.join("; "));
-        add(plural("Sponsor", item.sponsors), item.sponsors.join("; "));
+
+        /* Sponsors link to their own unit's site rather than to the event, so a merged
+           talk credits each publisher with somewhere of its own to go. */
+        if (item.sponsors.length) {
+          var dd = field(plural("Sponsor", item.sponsors));
+          item.sponsors.forEach(function (sponsor, index) {
+            if (index) {
+              var sep = doc.createElement("span");
+              sep.className = "sep";
+              sep.textContent = "; ";
+              dd.appendChild(sep);
+            }
+            if (sponsor.home) {
+              var anchor = doc.createElement("a");
+              anchor.className = "sponsor-link";
+              anchor.setAttribute("href", sponsor.home);
+              anchor.textContent = sponsor.label;
+              dd.appendChild(anchor);
+            } else {
+              var plain = doc.createElement("span");
+              plain.className = "sep";
+              plain.textContent = sponsor.label;
+              dd.appendChild(plain);
+            }
+          });
+        }
+
         add("Series:", item.series);
         add("Location:", item.location);
         block.appendChild(dl);
@@ -390,18 +439,22 @@
    * leaves this site, where nothing defines `--dim`.
    */
   var EXPORT_STYLES = {
-    "h2": "font: 700 20px/1.3 Georgia, 'Times New Roman', serif; margin: 0 0 20px;",
+    "h2.edition": "font: 700 20px/1.3 Georgia, 'Times New Roman', serif; margin: 0 0 20px;",
     "h3.day": "font: 700 15px/1.3 Helvetica, Arial, sans-serif; margin: 28px 0 10px; "
       + "padding-bottom: 4px; border-bottom: 1px solid #d8d8d8;",
     "div.ev": "margin: 0 0 20px;",
     "p.ev-title": "font: 700 15px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 2px;",
+    "a.ev-link": "color: #17181c; text-decoration: underline;",
     "p.ev-time": "font: 400 14px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 6px; "
       + "color: #555555;",
     "span.placeholder-flag": "font: 400 13px/1.4 Helvetica, Arial, sans-serif; "
       + "color: #9a6700;",
-    "dl": "margin: 0; font: 400 14px/1.5 Helvetica, Arial, sans-serif;",
-    "dt": "font-weight: 700; margin: 0;",
-    "dd": "margin: 0 0 4px;"
+    "dl.ev-fields": "margin: 0; font: 400 14px/1.5 Helvetica, Arial, sans-serif;",
+    "dt.ev-label": "font-weight: 700; margin: 0;",
+    "dd.ev-value": "margin: 0 0 4px;",
+    "a.sponsor-link": "color: #17181c; text-decoration: underline;",
+    "span.sep": "color: inherit;",
+    "p.empty": "font: 400 14px/1.5 Helvetica, Arial, sans-serif;"
   };
 
   /** The same rules as a stylesheet, for the file when it is simply opened in a browser. */
@@ -432,15 +485,14 @@
   function inlineStyles(html) {
     return Object.keys(EXPORT_STYLES).reduce(function (text, selector) {
       var parts = selector.split(".");
-      var tag = parts[0];
-      var cls = parts[1];
-      var pattern = cls
-        ? new RegExp("<" + tag + ' class="' + cls + '">', "g")
-        : new RegExp("<" + tag + ">", "g");
-      var open = cls
-        ? "<" + tag + ' class="' + cls + '" style="' + EXPORT_STYLES[selector] + '">'
-        : "<" + tag + ' style="' + EXPORT_STYLES[selector] + '">';
-      return text.replace(pattern, open);
+      // Matched on the class anywhere inside the opening tag, so an element that also
+      // carries an href is styled regardless of which attribute the DOM serialized first.
+      var pattern = new RegExp(
+        "<" + parts[0] + '(\\s[^>]*class="' + parts[1] + '"[^>]*)>', "g"
+      );
+      return text.replace(pattern, function (_match, attrs) {
+        return "<" + parts[0] + attrs + ' style="' + EXPORT_STYLES[selector] + '">';
+      });
     }, html);
   }
 
@@ -536,6 +588,7 @@
         label.appendChild(box);
 
         var name = document.createElement("span");
+        name.className = "name";
         name.textContent = record.label || slug;
         label.appendChild(name);
 
@@ -583,9 +636,17 @@
 
     /* ------------------------------------------------------------- rendering ---- */
 
+    /**
+     * The two facts the controls imply, as labelled values rather than a sentence.
+     *
+     * They were one run-on line ending "12:00 p.m.." -- a full stop after an abbreviation
+     * that already ends in one. Two labelled facts are also easier to check at a glance,
+     * which is what someone setting a date is actually doing.
+     */
     function renderDerived(edition, hours) {
+      var derived = $("derived");
+      derived.replaceChildren();
       if (!edition) {
-        $("derived").textContent = "";
         $("pubday").innerHTML = "&nbsp;";
         $("deadlineday").innerHTML = "&nbsp;";
         return;
@@ -593,11 +654,44 @@
       $("pubday").textContent = weekdayName(edition.publicationDate) +
         (edition.shifted ? " — shifted from this week's Monday" : "");
       $("deadlineday").textContent = weekdayName(edition.deadlineAt.slice(0, 10));
-      $("derived").textContent =
-        "Covers " + prettyDate(edition.coverageStart.slice(0, 10)) + " through " +
-        prettyDate(edition.coverageEnd.slice(0, 10)) + ". Submissions close " +
-        prettyStamp(edition.deadlineAt) +
-        (hours === null ? "." : ", " + Math.round(hours) + " hours from the time you are viewing as.");
+
+      var fact = function (label, value, extra) {
+        var wrap = document.createElement("div");
+        var dt = document.createElement("dt");
+        dt.textContent = label;
+        var dd = document.createElement("dd");
+        dd.textContent = value;
+        if (extra) {
+          var note = document.createElement("span");
+          note.className = "aside";
+          note.textContent = extra;
+          dd.appendChild(note);
+        }
+        wrap.appendChild(dt);
+        wrap.appendChild(dd);
+        derived.appendChild(wrap);
+      };
+
+      fact(
+        "Covers",
+        prettyDate(edition.coverageStart.slice(0, 10)) + " – " +
+          prettyDate(edition.coverageEnd.slice(0, 10))
+      );
+      fact(
+        "Submissions close",
+        prettyStamp(edition.deadlineAt),
+        hours === null ? "" : "  " + relativeHours(hours)
+      );
+    }
+
+    /** "in 5 hours" / "3 days ago", from the "viewing as of" control. */
+    function relativeHours(hours) {
+      var ahead = hours >= 0;
+      var size = Math.abs(hours);
+      var amount = size < 48
+        ? Math.round(size) + (Math.round(size) === 1 ? " hour" : " hours")
+        : Math.round(size / 24) + " days";
+      return ahead ? "in " + amount : amount + " ago";
     }
 
     function entry(list, term, value) {

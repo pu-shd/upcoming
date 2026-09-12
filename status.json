@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T02:01:35Z",
+  "generatedAt": "2026-09-12T02:32:23Z",
   "summary": {
     "ok": 16,
     "empty": 1,
@@ -12,7 +12,7 @@
       "path": "combos/all-no-fpo/events.json",
       "status": "ok",
       "events": 115,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "sources": [
         "orfe",
         "citp",
@@ -35,7 +35,7 @@
       "path": "combos/all/events.json",
       "status": "ok",
       "events": 125,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "sources": [
         "orfe",
         "citp",
@@ -58,7 +58,7 @@
       "path": "combos/engineering/events.json",
       "status": "ok",
       "events": 37,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "sources": [
         "cbe",
         "cee",
@@ -80,7 +80,7 @@
       "path": "combos/seminars/events.json",
       "status": "ok",
       "events": 62,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "sources": [
         "orfe",
         "citp",
@@ -103,7 +103,7 @@
       "path": "combos/sherrerd-hall/events.json",
       "status": "ok",
       "events": 44,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "sources": [
         "orfe",
         "citp",
@@ -125,6 +125,7 @@
       "events": 0,
       "detail": "WordPress 7.1. REST exposes an `events` post type but its ACF fields are empty to an unauthenticated client, so no start or end time is available. /events/feed/ 404s and /events/?ical=1 returns HTML. Needs an ICS export plugin, or ACF date fields exposed to REST.",
       "label": "Andlinger Center for Energy and the Environment",
+      "home": "https://acee.princeton.edu",
       "sources": [
         "acee"
       ],
@@ -136,8 +137,9 @@
       "path": "feeds/ai/events.json",
       "status": "ok",
       "events": 9,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Princeton AI Lab",
+      "home": "https://ai.princeton.edu",
       "sources": [
         "ai"
       ],
@@ -149,8 +151,9 @@
       "path": "feeds/bioengineering/events.json",
       "status": "ok",
       "events": 4,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Omenn-Darling Bioengineering Institute",
+      "home": "https://bioengineering.princeton.edu",
       "sources": [
         "bioengineering"
       ],
@@ -162,8 +165,9 @@
       "path": "feeds/cbe/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Chemical and Biological Engineering",
+      "home": "https://cbe.princeton.edu",
       "sources": [
         "cbe"
       ],
@@ -175,8 +179,9 @@
       "path": "feeds/cee/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Civil and Environmental Engineering",
+      "home": "https://cee.princeton.edu",
       "sources": [
         "cee"
       ],
@@ -188,8 +193,9 @@
       "path": "feeds/citp/events.json",
       "status": "ok",
       "events": 25,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Center for Information Technology Policy",
+      "home": "https://citp.princeton.edu",
       "sources": [
         "citp"
       ],
@@ -203,6 +209,7 @@
       "events": 0,
       "detail": "Drupal, but not Princeton Site Builder and with no iCal view enabled. Checked the bare apex too: cs.princeton.edu 301s to www.cs.princeton.edu, so it is the same host rather than a second one. /feeds/events/ical.ics, /events/ical, /ical, /calendar/ical and /events/export/ical all 404 on both spellin",
       "label": "Computer Science",
+      "home": "https://www.cs.princeton.edu",
       "sources": [
         "cs"
       ],
@@ -216,6 +223,7 @@
       "events": 0,
       "detail": "WordPress 7.1. REST exposes `conference` and `eng_event` post types; `eng_event` carries an `acf` object that is empty unauthenticated, so no event dates are available. /events/feed/ 404s and /events/?ical=1 returns HTML.",
       "label": "DeCenter for Decentralization",
+      "home": "https://decenter.princeton.edu",
       "sources": [
         "decenter"
       ],
@@ -227,8 +235,9 @@
       "path": "feeds/ece/events.json",
       "status": "ok",
       "events": 12,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Electrical and Computer Engineering",
+      "home": "https://ece.princeton.edu",
       "sources": [
         "ece"
       ],
@@ -240,8 +249,9 @@
       "path": "feeds/kellercenter/events.json",
       "status": "empty",
       "events": 0,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Keller Center for Innovation in Engineering Education",
+      "home": "https://kellercenter.princeton.edu",
       "sources": [
         "kellercenter"
       ],
@@ -253,8 +263,9 @@
       "path": "feeds/mae/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Mechanical and Aerospace Engineering",
+      "home": "https://mae.princeton.edu",
       "sources": [
         "mae"
       ],
@@ -266,8 +277,9 @@
       "path": "feeds/materials/events.json",
       "status": "ok",
       "events": 16,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Princeton Materials Institute",
+      "home": "https://materials.princeton.edu",
       "sources": [
         "materials"
       ],
@@ -281,6 +293,7 @@
       "events": 0,
       "detail": "WordPress 7.1. /events/feed/ does return RSS with 10 items, but its pubDate is the post publication date rather than the event date, so it cannot produce a calendar. REST exposes a `metroevents` type (rest_base `event`) whose ACF fields are empty unauthenticated.",
       "label": "Metropolis Project",
+      "home": "https://metro.princeton.edu",
       "sources": [
         "metro"
       ],
@@ -294,6 +307,7 @@
       "events": 0,
       "detail": "No feed of its own; its events page links to ece.princeton.edu, so it is correctly a derived view rather than a second fetch. But ece's feed carries exactly one CATEGORIES value across all 12 events -- \"Final Public Oral Examinations,Final Public Orals\" on 7, and no CATEGORIES at all on the other 5 ",
       "label": "NextG Initiative",
+      "home": "https://nextg.princeton.edu",
       "sources": [
         "nextg"
       ],
@@ -305,8 +319,9 @@
       "path": "feeds/orfe/events.json",
       "status": "ok",
       "events": 19,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Operations Research and Financial Engineering",
+      "home": "https://orfe.princeton.edu",
       "sources": [
         "orfe"
       ],
@@ -321,8 +336,9 @@
       "path": "feeds/quantum/events.json",
       "status": "ok",
       "events": 18,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Princeton Quantum Initiative",
+      "home": "https://quantum.princeton.edu",
       "sources": [
         "quantum"
       ],
@@ -334,8 +350,9 @@
       "path": "feeds/robotics/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-12T02:01:35Z",
+      "lastSuccessAt": "2026-09-12T02:32:23Z",
       "label": "Princeton Robotics",
+      "home": "https://robotics.princeton.edu",
       "sources": [
         "robotics"
       ],

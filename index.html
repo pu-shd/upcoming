@@ -20,9 +20,9 @@
 <header>
   <h1>Upcoming</h1>
   <p class="lede">
-    JSON event feeds for Princeton departments, centers and units — one feed per source,
-    plus combined feeds built from them. Everything here is generated from each unit's
-    own published calendar.
+    JSON event feeds created from Princeton University departments, centers and units —
+    one feed per source, with combined feeds built from them. All event data is drawn from
+    each unit's published calendar and events web pages.
   </p>
 </header>
 
@@ -45,82 +45,10 @@
     manifest, which is itself a fault worth reporting.
   </div>
   <p class="note">
-    The feeds carry no timestamp — that is what lets published bytes be compared
-    byte-for-byte to detect drift — so
-    <a href="status.json"><code>status.json</code></a> is the only file with a clock, and
-    the only way to tell a current feed from a frozen one. A source that fails keeps
-    serving its last good feed and is marked <b>stale</b> here, because a blank
-    departmental listing is worse than one a few hours old, and an unannounced stale one
-    is worse than both.
+    The <a href="status.json"><code>status.json</code></a> carries the timestamp and status
+    for individual feed sources. A failing source is marked as <b>stale</b> but continues to
+    be served using last known good data.
   </p>
-</section>
-
-<section>
-  <h2>Using a feed</h2>
-  <p>
-    Every path below is a JSON array of event objects, served over HTTPS with no
-    authentication and no rate limit. Fetch the one you need directly.
-  </p>
-
-  <h3>Per-source feeds never de-duplicate</h3>
-  <p class="note">
-    Each is a faithful representation of one upstream calendar. If you read two of them
-    and they collide — two units listing the same talk — resolving that is yours to do,
-    because only you know which unit's wording you want to show.
-  </p>
-
-  <h3>Combined feeds de-duplicate only when every detail matches</h3>
-  <p class="note">
-    When they do, the records collapse into one whose <code>sources</code> array names
-    every feed that carried it. When the start time and title match but something else
-    differs, <b>both records are kept</b> and the divergence is counted — merging would
-    mean picking a winner, and picking a winner means guessing.
-    <code>sources</code> is always an array, length 1 in a per-source feed, so both kinds
-    parse identically.
-  </p>
-
-  <h3>Events carry the purposes they may serve</h3>
-  <p class="note">
-    Each record carries <code>purposes</code>, naming what its feed's events may be put
-    toward. It is optional: a feed that declares none publishes none, and an event may
-    override its feed's default. On a merged record it is the union, so an event two units
-    both list stays eligible for everything either of them serves.
-  </p>
-
-  <h3>Identity is source-scoped</h3>
-  <p class="note">
-    <code>guid</code> is the upstream UID, published verbatim, but those are
-    <em>per-site sequences</em> rather than global identifiers: the same value names
-    unrelated events on different sites. Key on <code>id</code>, which is
-    <code>"{source}:{guid}"</code>.
-  </p>
-</section>
-
-<section>
-  <h2>A record</h2>
-  <div class="card scroll"><pre id="sample">loading…</pre></div>
-  <p class="note">
-    Fields beyond these carry provenance — <code>mappingRules</code>,
-    <code>locationRule</code>, <code>titleSource</code>,
-    <code>titleIsPlaceholder</code>, <code>summaryRaw</code> — so you can see how any
-    value was derived, and tell a real title from a synthesized placeholder. The full
-    shape is in <a href="schema/events.schema.json">the schema</a>, served here so a
-    validator can <code>$ref</code> it.
-  </p>
-</section>
-
-<section>
-  <h2>Not available</h2>
-  <p class="note">
-    These are recorded rather than omitted, so &ldquo;we chose not to&rdquo; and
-    &ldquo;we forgot&rdquo; never read alike.
-  </p>
-  <div class="card scroll">
-    <table>
-      <thead><tr><th>Source</th><th>Why</th></tr></thead>
-      <tbody id="disabled"></tbody>
-    </table>
-  </div>
 </section>
 
 <footer>
@@ -146,7 +74,6 @@
     .then(function (doc) {
       var feeds = doc.feeds || [];
       var live = feeds.filter(function (f) { return f.status !== 'disabled'; });
-      var gone = feeds.filter(function (f) { return f.status === 'disabled'; });
       var s = doc.summary || {};
 
       document.getElementById('beat').innerHTML =
@@ -174,32 +101,11 @@
                f.events + '</td><td class="reason">' + esc(note) + '</td></tr>';
       }).join('');
 
-      document.getElementById('disabled').innerHTML = gone.map(function (f) {
-        var name = f.path.replace(/^(feeds|combos)\//, '').replace(/\/events\.json$/, '');
-        return '<tr><td class="mono">' + esc(name) + '</td><td class="reason">' +
-               esc(f.detail) + '</td></tr>';
-      }).join('');
-
-      // A real record from a real feed, so the example cannot describe a shape we do not
-      // actually publish.
-      var first = live.filter(function (f) { return f.events > 0; })[0];
-      return first ? fetch(first.path).then(function (r) { return r.json(); }) : null;
-    })
-    .then(function (events) {
-      if (!events || !events.length) { return; }
-      var e = events[0];
-      var keep = ['id', 'sources', 'startsAt', 'endsAt', 'timezone', 'title', 'speakers',
-                  'series', 'tags', 'location', 'urlRef'];
-      var trimmed = {};
-      keep.forEach(function (k) { if (k in e) { trimmed[k] = e[k]; } });
-      document.getElementById('sample').textContent = JSON.stringify(trimmed, null, 2);
     })
     .catch(function () {
       document.getElementById('beat').innerHTML = '';
       document.getElementById('stamp').textContent = '';
       document.getElementById('error').style.display = 'block';
-      document.getElementById('sample').textContent =
-        'Could not load a sample record.';
     });
 })();
 </script>
