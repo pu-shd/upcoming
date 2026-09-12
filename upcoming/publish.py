@@ -66,6 +66,10 @@ class PublishedFeed:
     #: "Center for Information Technology Policy" from the slug `citp` is not something a
     #: consumer can do -- the newsletter's editors write exactly this string by hand today.
     label: str = ""
+    #: The unit's own site. Published so a generated listing can credit the publisher with
+    #: a link rather than a bare name -- and per source rather than taken from an event's
+    #: own URL, because an event two units both list carries one URL and needs both.
+    home: str = ""
     #: Downstream publications this feed is gathered for. Published so "which feeds does
     #: the newsletter draw on" is answerable from the manifest, including for the sources
     #: that are declared but unavailable.
@@ -213,6 +217,7 @@ def assemble(
                     sources=(source.slug,),
                     purposes=source.purposes,
                     label=source.label,
+                    home=f"https://{source.host}" if source.host else "",
                 )
             )
             continue
@@ -232,6 +237,7 @@ def assemble(
                     notes=result.notes,
                     purposes=source.purposes,
                     label=source.label,
+                    home=f"https://{source.host}" if source.host else "",
                     last_success=generated_at,
                 ),
             )
@@ -252,6 +258,7 @@ def assemble(
                     sources=(source.slug,),
                     purposes=source.purposes,
                     label=source.label,
+                    home=f"https://{source.host}" if source.host else "",
                 )
             )
             degraded[source.slug] = f"{source.slug} failed and has never been published"
@@ -269,6 +276,7 @@ def assemble(
                 sources=(source.slug,),
                 purposes=source.purposes,
                 label=source.label,
+                home=f"https://{source.host}" if source.host else "",
                 last_success=str(was.get(path, {}).get("lastSuccessAt", "")),
             ),
         )
@@ -373,6 +381,7 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
                 **({"detail": feed.detail} if feed.detail else {}),
                 **({"lastSuccessAt": feed.last_success} if feed.last_success else {}),
                 **({"label": feed.label} if feed.label else {}),
+                **({"home": feed.home} if feed.home else {}),
                 **({"sources": list(feed.sources)} if feed.sources else {}),
                 **({"purposes": list(feed.purposes)} if feed.purposes else {}),
                 **({"notes": list(feed.notes)} if feed.notes else {}),

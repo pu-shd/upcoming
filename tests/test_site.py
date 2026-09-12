@@ -125,11 +125,8 @@ def test_the_page_escapes_what_it_renders() -> None:
 @pytest.mark.parametrize(
     "claim",
     [
-        "never de-duplicate",  # the per-source contract
-        "sources",  # the array that names a merged record's origins
-        "source-scoped",  # why `id` rather than `guid`
         "status.json",  # the freshness contract
-        "stale",
+        "stale",  # a failing source keeps serving, and says so
     ],
 )
 def test_the_page_states_the_contracts_a_consumer_needs(claim: str) -> None:

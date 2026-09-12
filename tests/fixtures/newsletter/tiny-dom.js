@@ -25,6 +25,17 @@ function makeElement(tag) {
     textContent: "",
     childNodes: [],
     parentNode: null,
+    attributes: {},
+
+    setAttribute: function (name, value) {
+      this.attributes[name] = String(value);
+    },
+
+    getAttribute: function (name) {
+      return Object.prototype.hasOwnProperty.call(this.attributes, name)
+        ? this.attributes[name]
+        : null;
+    },
 
     appendChild: function (child) {
       // A node has one parent. Attaching it somewhere else detaches it from here first.
@@ -70,7 +81,12 @@ function makeElement(tag) {
     },
 
     get outerHTML() {
+      // class first, then anything set explicitly -- the order a real DOM serializes them
+      // in, since both follow attribute insertion order and className is assigned first.
       var attrs = this.className ? ' class="' + this.className + '"' : "";
+      Object.keys(this.attributes).forEach(function (name) {
+        attrs += " " + name + '="' + escapeText(this.attributes[name]).replace(/"/g, "&quot;") + '"';
+      }, this);
       var tag = this.tagName.toLowerCase();
       return "<" + tag + attrs + ">" + this.innerHTML + "</" + tag + ">";
     },

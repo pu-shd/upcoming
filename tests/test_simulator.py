@@ -331,7 +331,8 @@ def edition_result(tree: Path, publication: str, purpose: str | None = None) -> 
             title: i.title,
             series: i.series,
             location: i.location,
-            sponsors: i.sponsors,
+            sponsors: i.sponsors.map(function (x) {{ return x.label; }}),
+            sponsorLinks: i.sponsors.map(function (x) {{ return x.home; }}),
             speakers: i.speakers,
             sources: i.sources,
             placeholder: i.placeholder
@@ -380,14 +381,30 @@ def test_the_sponsor_of_every_event_is_its_feeds_declared_name(real_edition, tre
     """Sponsor is derived, not transcribed. Deriving it from the slug is impossible --
     nothing turns `citp` into "Center for Information Technology Policy" but the registry."""
     manifest = json.loads((tree / "status.json").read_text(encoding="utf-8"))
-    labels = {
-        f["path"].split("/")[1]: f.get("label")
+    feeds = {
+        f["path"].split("/")[1]: f for f in manifest["feeds"] if f["path"].startswith("feeds/")
+    }
+    assert feeds["citp"]["label"] == "Center for Information Technology Policy"
+    for event in real_edition["included"]:
+        assert event["sponsors"] == [feeds[s]["label"] for s in event["sources"]]
+
+
+def test_each_sponsor_links_to_its_own_unit(real_edition, tree) -> None:  # type: ignore[no-untyped-def]
+    """Taken from the feed, not from the event's URL.
+
+    A talk two units both list carries one URL and needs two links, so a sponsor's site
+    cannot be derived from the event it appears on.
+    """
+    manifest = json.loads((tree / "status.json").read_text(encoding="utf-8"))
+    homes = {
+        f["path"].split("/")[1]: f.get("home")
         for f in manifest["feeds"]
         if f["path"].startswith("feeds/")
     }
-    assert labels["citp"] == "Center for Information Technology Policy"
+    assert homes["citp"] == "https://citp.princeton.edu"
     for event in real_edition["included"]:
-        assert event["sponsors"] == [labels[s] for s in event["sources"]]
+        assert event["sponsorLinks"] == [homes[s] for s in event["sources"]]
+        assert all(link.startswith("https://") for link in event["sponsorLinks"])
 
 
 def test_the_talk_two_units_both_list_is_counted_as_a_repeat(real_edition) -> None:
@@ -436,17 +453,18 @@ def test_dropping_the_purpose_filter_can_only_widen_the_edition(tree) -> None:
 # The listing an editor actually pastes
 # --------------------------------------------------------------------------------------
 
-#: A document just rich enough for `buildListing`. It takes its document as a parameter
-#: precisely so the export -- the part that leaves this repository and goes into a
-#: newsletter -- is not the one thing nothing checks.
+#: One DOM for every test here. An earlier second stub could not set an attribute, so it
+#: broke the moment the listing grew links -- two shims is the same duplication this page
+#: exists to argue against.
 DOC_STUB = """
-const doc = { createElement: (tag) => ({
-  tagName: tag, className: "", textContent: "", children: [],
-  appendChild(c) { this.children.push(c); return c; }
-}) };
+const D = require("./tests/fixtures/newsletter/tiny-dom.js");
+const doc = D.document;
 const flat = (n, out) => {
-  out.push({tag: n.tagName, cls: n.className, text: n.textContent});
-  (n.children || []).forEach((c) => flat(c, out));
+  out.push({
+    tag: (n.tagName || "").toLowerCase(), cls: n.className, text: n.textContent,
+    href: n.getAttribute ? n.getAttribute("href") : null
+  });
+  (n.childNodes || []).forEach((c) => flat(c, out));
   return out;
 };
 """
@@ -548,10 +566,14 @@ RENDER = (
     TINY_DOM
     + """
 const edition = S.resolveEdition({publicationDate: "2026-09-08"});
-const feeds = {citp: {label: "Center for Information Technology Policy"}};
+const feeds = {citp: {
+  label: "Center for Information Technology Policy",
+  home: "https://citp.princeton.edu"
+}};
 const items = [S.decorate({
   startTime: "2026-09-08T12:15:00", title: "AI Agents and the Augmentation Agenda",
   sources: ["citp"], series: "CITP Seminars",
+  urlRef: "https://citp.princeton.edu/events/2026/ai-agents",
   speakers: [{name: "Arvind Narayanan", affiliation: "Princeton University"}],
   location: {name: "Sherrerd Hall", detail: "306"}
 }, feeds)];
@@ -764,3 +786,127 @@ def test_text_from_a_feed_is_escaped_in_the_export() -> None:
     assert "<script>" not in doc
     assert "&lt;script&gt;" in doc
     assert "Unit &amp; Co" in doc
+
+
+# --------------------------------------------------------------------------------------
+# Links in the generated listing
+# --------------------------------------------------------------------------------------
+
+
+def test_every_event_title_links_to_its_own_page(real_listing) -> None:  # type: ignore[no-untyped-def]
+    """Attaching these by hand is the part of composing an edition that takes the time."""
+    links = [n for n in real_listing if n["cls"] == "ev-link"]
+    titles = [n for n in real_listing if n["cls"] == "ev-title"]
+    assert len(links) == len(titles)
+    for link in links:
+        assert link["href"].startswith("https://")
+        assert link["text"]
+
+
+def test_every_sponsor_links_to_its_unit_not_to_the_event(real_listing) -> None:  # type: ignore[no-untyped-def]
+    """A talk two units both list carries one URL and needs two links, so a sponsor's
+    site comes from its feed rather than from the event it appears on."""
+    sponsors = [n for n in real_listing if n["cls"] == "sponsor-link"]
+    assert sponsors
+    events = {n["href"] for n in real_listing if n["cls"] == "ev-link"}
+    for sponsor in sponsors:
+        assert sponsor["href"].startswith("https://")
+        # A unit's home, not a deep link into one of its events.
+        assert sponsor["href"].count("/") == 2, sponsor["href"]
+        assert sponsor["href"] not in events
+
+
+def test_a_merged_event_credits_each_sponsor_separately() -> None:
+    """The editors merged one talk into a single entry with three sponsors. Whenever we
+    have several, each gets its own link rather than one link over the joined string."""
+    nodes = node(
+        DOC_STUB
+        + """
+        const edition = S.resolveEdition({publicationDate: "2026-09-08"});
+        const feeds = {
+          ai: {label: "Princeton AI Lab", home: "https://ai.princeton.edu"},
+          materials: {label: "Princeton Materials Institute",
+                      home: "https://materials.princeton.edu"}
+        };
+        const items = [S.decorate({
+          startTime: "2026-09-09T12:05:00", title: "One Talk",
+          sources: ["ai", "materials"], urlRef: "https://ai.princeton.edu/events/1",
+          location: {name: "Bowen Hall", detail: "222"}
+        }, feeds)];
+        console.log(JSON.stringify(flat(S.buildListing(edition, items, doc), [])));
+    """
+    )
+    sponsors = [n for n in nodes if n["cls"] == "sponsor-link"]
+    assert [n["href"] for n in sponsors] == [
+        "https://ai.princeton.edu",
+        "https://materials.princeton.edu",
+    ]
+    labels = [n["text"] for n in nodes if n["cls"] == "ev-label"]
+    assert "Sponsors:" in labels, "the label pluralises when there are several"
+
+
+def test_an_event_with_no_url_still_renders_its_title() -> None:
+    """A missing URL is a feed's problem, not a reason to drop the title."""
+    nodes = node(
+        DOC_STUB
+        + """
+        const edition = S.resolveEdition({publicationDate: "2026-09-08"});
+        const items = [S.decorate({
+          startTime: "2026-09-08T12:15:00", title: "No Link Here", sources: ["x"],
+          location: {name: "A", detail: "1"}
+        }, {x: {label: "Unit"}})];
+        console.log(JSON.stringify(flat(S.buildListing(edition, items, doc), [])));
+    """
+    )
+    assert not [n for n in nodes if n["cls"] == "ev-link"]
+    title = next(n for n in nodes if n["cls"] == "ev-title")
+    assert title["text"] == "No Link Here"
+
+
+def test_a_sponsor_with_no_site_is_named_without_a_link() -> None:
+    nodes = node(
+        DOC_STUB
+        + """
+        const edition = S.resolveEdition({publicationDate: "2026-09-08"});
+        const items = [S.decorate({
+          startTime: "2026-09-08T12:15:00", title: "T", sources: ["x"],
+          location: {name: "A", detail: "1"}
+        }, {x: {label: "Unit With No Site"}})];
+        console.log(JSON.stringify(flat(S.buildListing(edition, items, doc), [])));
+    """
+    )
+    assert not [n for n in nodes if n["cls"] == "sponsor-link"]
+    assert "Unit With No Site" in [n["text"] for n in nodes]
+
+
+def test_the_links_survive_into_the_exported_document() -> None:
+    """The export is a string rewrite, so a link that renders on the page but is lost on
+    the way out would be the easy failure here."""
+    doc = node(RENDER + "console.log(JSON.stringify(S.exportDocument(exportEl)));")
+    assert 'class="ev-link"' in doc
+    assert 'href="https://citp.princeton.edu' in doc
+    assert 'class="sponsor-link"' in doc
+    # And they are styled inline, like everything else that has to survive a paste.
+    assert re.search(r'<a class="ev-link"[^>]*style="', doc)
+    assert re.search(r'<a class="sponsor-link"[^>]*style="', doc)
+
+
+def test_a_url_from_a_feed_is_escaped_into_the_href() -> None:
+    """The URL comes from someone else's calendar and lands in an attribute."""
+    doc = node(
+        DOC_STUB
+        + """
+        const edition = S.resolveEdition({publicationDate: "2026-09-08"});
+        const items = [S.decorate({
+          startTime: "2026-09-08T12:15:00", title: "T", sources: ["x"],
+          urlRef: 'https://x.edu/e?a=1&b=2"><script>alert(1)</script>',
+          location: {name: "A", detail: "1"}
+        }, {x: {label: "U", home: "https://x.edu"}})];
+        const listing = S.buildListing(edition, items, doc);
+        const el = D.makeElement("div");
+        el.replaceChildren.apply(el, listing.childNodes.slice());
+        console.log(JSON.stringify(S.exportDocument(el)));
+    """
+    )
+    assert "<script>" not in doc
+    assert "&quot;" in doc or "&lt;script&gt;" in doc

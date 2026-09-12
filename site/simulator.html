@@ -25,13 +25,6 @@
   </p>
 </header>
 
-<p class="note">
-  Runs entirely in your browser against the published feeds. Nothing is sent anywhere and
-  nothing is changed. The feeds and their labels are discovered from
-  <a href="status.json"><code>status.json</code></a>, so a source added to the registry
-  appears here without this page being edited.
-</p>
-
 <!-- ============================================================ the edition ======= -->
 <section>
   <h2>Edition</h2>
@@ -59,7 +52,7 @@
       <button type="button" class="linkbtn" id="reset">Reset to the next edition</button>
     </div>
 
-    <p class="derived" id="derived" aria-live="polite"></p>
+    <dl class="derived" id="derived" aria-live="polite"></dl>
 
     <details id="advanced">
       <summary>Advanced</summary>
@@ -99,7 +92,7 @@
 
 <!-- ============================================================ the sources ======= -->
 <section>
-  <h2>Sources</h2>
+  <h2>Event Sources</h2>
   <p class="note">
     Each feed reproduces one unit's calendar faithfully and none of them de-duplicate, so
     selecting two units that both list the same talk shows it twice — which is what an
@@ -174,7 +167,7 @@
 
   <!-- ========================================================== the export ======== -->
   <section>
-    <h2>Listing to compose</h2>
+    <h2>Email and Events Page</h2>
     <p class="note">
       Shaped like the edition the editors assemble by hand: grouped by day, with their own
       field labels. <strong>Sponsor</strong> is each feed's declared name for itself.
