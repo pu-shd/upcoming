@@ -533,3 +533,132 @@ def test_an_empty_edition_says_so_rather_than_rendering_nothing(tree) -> None:  
     texts = [n["text"] for n in nodes]
     assert "No events fall in this edition." in texts
     assert not [n for n in nodes if n["cls"] == "ev"]
+
+
+# --------------------------------------------------------------------------------------
+# The export buttons, which shipped broken
+# --------------------------------------------------------------------------------------
+
+#: A DOM that models the one thing the bug turned on: appendChild and replaceChildren
+#: *move* a node rather than copying it. The earlier stub could not reparent anything, so
+#: it could not have caught this -- see tests/fixtures/newsletter/tiny-dom.js.
+TINY_DOM = 'const D = require("./tests/fixtures/newsletter/tiny-dom.js");'
+
+RENDER = (
+    TINY_DOM
+    + """
+const edition = S.resolveEdition({publicationDate: "2026-09-08"});
+const feeds = {citp: {label: "Center for Information Technology Policy"}};
+const items = [S.decorate({
+  startTime: "2026-09-08T12:15:00", title: "AI Agents and the Augmentation Agenda",
+  sources: ["citp"], series: "CITP Seminars",
+  speakers: [{name: "Arvind Narayanan", affiliation: "Princeton University"}],
+  location: {name: "Sherrerd Hall", detail: "306"}
+}, feeds)];
+
+// Exactly what renderExport does: build a tree, then hand its children to the page.
+const listing = S.buildListing(edition, items, D.document);
+const exportEl = D.makeElement("div");
+exportEl.replaceChildren.apply(exportEl, listing.childNodes.slice());
+"""
+)
+
+
+def test_handing_the_listing_to_the_page_empties_the_tree_it_came_from() -> None:
+    """The mechanism behind the bug, pinned so the fix cannot be undone by accident.
+
+    `replaceChildren` moves nodes. Anything that keeps a second reference to the built
+    tree and reads from it afterwards gets an empty document -- which is what both export
+    buttons did: a `<title>Events</title>` and nothing else.
+    """
+    result = node(
+        RENDER
+        + """
+        console.log(JSON.stringify({
+          movedFrom: listing.innerHTML.length,
+          arrivedAt: exportEl.innerHTML.length,
+          headingGone: listing.querySelector("h2") === null,
+          headingHere: exportEl.querySelector("h2") !== null
+        }));
+    """
+    )
+    assert result["movedFrom"] == 0, "the source tree is emptied -- this is the trap"
+    assert result["arrivedAt"] > 0
+    assert result["headingGone"] is True
+    assert result["headingHere"] is True
+
+
+def test_the_download_carries_the_listing_and_not_just_a_title() -> None:
+    """The exact failure reported: a file containing a doctype, a charset and nothing."""
+    doc = node(RENDER + "console.log(JSON.stringify(S.exportDocument(exportEl)));")
+    assert doc.startswith("<!doctype html>")
+    assert "<title>Events Newsletter: September 8 - September 13, 2026</title>" in doc
+    assert "AI Agents and the Augmentation Agenda" in doc
+    assert "Center for Information Technology Policy" in doc
+    assert "Sherrerd Hall, Room 306" in doc
+    # The title must come from the listing, never the fallback, when a heading exists.
+    assert "<title>Events</title>" not in doc
+
+
+def test_the_download_is_read_from_the_element_the_reader_can_see() -> None:
+    """One tree, in the page. What is shown is what is exported, so they cannot diverge."""
+    doc = node(
+        RENDER
+        + """
+        console.log(JSON.stringify({
+          fromPage: S.exportDocument(exportEl).length,
+          fromTheEmptiedTree: S.exportDocument(listing).length
+        }));
+    """
+    )
+    assert doc["fromPage"] > 200
+    assert doc["fromTheEmptiedTree"] == 0
+
+
+def test_nothing_is_downloaded_when_there_is_nothing_to_download() -> None:
+    """An empty string, so the handler returns before offering an empty file."""
+    assert (
+        node(
+            TINY_DOM
+            + """
+        console.log(JSON.stringify(S.exportDocument(D.makeElement("div"))));
+    """
+        )
+        == ""
+    )
+    assert node("console.log(JSON.stringify(S.exportDocument(null)));") == ""
+
+
+def test_the_copy_payload_is_the_same_content_as_the_download() -> None:
+    """Copy reads `innerHTML` and `innerText` off the same element, so a fix to one path
+    cannot leave the other silently empty -- which is how this went unnoticed at all."""
+    payload = node(
+        RENDER
+        + """
+        console.log(JSON.stringify({
+          html: exportEl.innerHTML,
+          text: exportEl.innerText
+        }));
+    """
+    )
+    assert "AI Agents and the Augmentation Agenda" in payload["html"]
+    assert "AI Agents and the Augmentation Agenda" in payload["text"]
+    assert "Sponsor:" in payload["text"]
+
+
+def test_both_export_buttons_read_from_the_element_on_the_page() -> None:
+    """The guard that actually catches this bug, and the only one that does.
+
+    Everything above tests the payload builders against an element a test constructs. The
+    defect was never in those -- it was in the *wiring*, in a click handler that read from
+    a variable instead of the page, and a handler inside `start()` is not reachable from
+    here. So the wiring is checked structurally: duplicate state was the bug, and the
+    durable fix is that there is none.
+
+    Verified by reintroducing the holding variable, which fails this and nothing else.
+    """
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert "lastListing" not in code, "a second copy of the listing is the trap itself"
+    assert "exportDocument(exportEl)" in code, "download must read from the page"
+    assert "exportEl.innerHTML" in code, "copy must read from the page"
+    assert "exportEl.innerText" in code
