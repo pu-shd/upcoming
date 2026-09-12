@@ -375,6 +375,75 @@
     return root;
   }
 
+  /* ------------------------------------------------------------ export styling ---- */
+
+  /**
+   * How the exported listing is styled, by the tag and class the builder emits.
+   *
+   * Written for **email**, not for this site: no grid, no flex, no custom properties, no
+   * class selectors relied on. Mailchimp and the clients it sends to strip `<style>` and
+   * honour only `style=""` attributes, so anything that has to survive the trip is applied
+   * per element. Where grid is dropped, a `dl` falls back to ordinary block flow -- label
+   * on one line, value on the next -- which is how the editors' own edition already reads.
+   *
+   * The colours are literal rather than tokens for the same reason: the exported file
+   * leaves this site, where nothing defines `--dim`.
+   */
+  var EXPORT_STYLES = {
+    "h2": "font: 700 20px/1.3 Georgia, 'Times New Roman', serif; margin: 0 0 20px;",
+    "h3.day": "font: 700 15px/1.3 Helvetica, Arial, sans-serif; margin: 28px 0 10px; "
+      + "padding-bottom: 4px; border-bottom: 1px solid #d8d8d8;",
+    "div.ev": "margin: 0 0 20px;",
+    "p.ev-title": "font: 700 15px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 2px;",
+    "p.ev-time": "font: 400 14px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 6px; "
+      + "color: #555555;",
+    "span.placeholder-flag": "font: 400 13px/1.4 Helvetica, Arial, sans-serif; "
+      + "color: #9a6700;",
+    "dl": "margin: 0; font: 400 14px/1.5 Helvetica, Arial, sans-serif;",
+    "dt": "font-weight: 700; margin: 0;",
+    "dd": "margin: 0 0 4px;"
+  };
+
+  /** The same rules as a stylesheet, for the file when it is simply opened in a browser. */
+  function exportStylesheet() {
+    return Object.keys(EXPORT_STYLES).map(function (selector) {
+      return selector + " { " + EXPORT_STYLES[selector] + " }";
+    }).join("\n");
+  }
+
+  /**
+   * Apply the rules above as `style` attributes on the markup we emit.
+   *
+   * A string rewrite rather than a walk over the DOM, deliberately. The alternative is to
+   * traverse and mutate, and the tags and classes here are a closed set this file
+   * generates itself -- there is no arbitrary HTML to parse, and no user content reaches
+   * a tag name or an attribute. Doing it on the string also means the preview keeps using
+   * the site's stylesheet and only the exported copy carries the weight.
+   */
+  /** Break the markup onto lines so a downloaded file can be read and diffed. */
+  function readable(html) {
+    return html
+      .replace(/<h3 /g, "\n<h3 ")
+      .replace(/<div class="ev"/g, "\n<div class=\"ev\"")
+      .replace(/<\/div>/g, "</div>\n")
+      .trim();
+  }
+
+  function inlineStyles(html) {
+    return Object.keys(EXPORT_STYLES).reduce(function (text, selector) {
+      var parts = selector.split(".");
+      var tag = parts[0];
+      var cls = parts[1];
+      var pattern = cls
+        ? new RegExp("<" + tag + ' class="' + cls + '">', "g")
+        : new RegExp("<" + tag + ">", "g");
+      var open = cls
+        ? "<" + tag + ' class="' + cls + '" style="' + EXPORT_STYLES[selector] + '">'
+        : "<" + tag + ' style="' + EXPORT_STYLES[selector] + '">';
+      return text.replace(pattern, open);
+    }, html);
+  }
+
   /**
    * The standalone document the download produces, built from the element on the page.
    *
@@ -387,7 +456,10 @@
     if (!body) return "";
     var titleEl = el.querySelector("h2");
     return "<!doctype html>\n<meta charset=\"utf-8\">\n<title>" +
-      (titleEl ? titleEl.textContent : "Events") + "</title>\n" + body + "\n";
+      (titleEl ? titleEl.textContent : "Events") + "</title>\n" +
+      "<style>\n" + exportStylesheet() + "\n</style>\n" +
+      '<div style="max-width: 640px; margin: 24px auto; padding: 0 16px; color: #17181c;">\n' +
+      readable(inlineStyles(body)) + "\n</div>\n";
   }
 
   /* ----------------------------------------------------------------- the page ----- */
@@ -771,7 +843,7 @@
     });
 
     $("copy").addEventListener("click", function () {
-      var html = exportEl.innerHTML;
+      var html = inlineStyles(exportEl.innerHTML);
       var text = exportEl.innerText || exportEl.textContent || "";
       if (!html) return;
       var done = function () { copyStateEl.textContent = "Copied."; };
@@ -837,6 +909,8 @@
       speakerNames: speakerNames,
       collisionKey: collisionKey, groupByDay: groupByDay, plural: plural,
       buildListing: buildListing, decorate: decorate, exportDocument: exportDocument,
+      inlineStyles: inlineStyles, exportStylesheet: exportStylesheet, readable: readable,
+      EXPORT_STYLES: EXPORT_STYLES,
       partition: partition, hoursBetween: hoursBetween
     };
   }
