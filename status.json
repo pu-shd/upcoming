@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T00:56:04Z",
+  "generatedAt": "2026-09-12T01:11:11Z",
   "summary": {
     "ok": 16,
     "empty": 1,
@@ -12,7 +12,7 @@
       "path": "combos/all-no-fpo/events.json",
       "status": "ok",
       "events": 115,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "sources": [
         "orfe",
         "citp",
@@ -35,7 +35,7 @@
       "path": "combos/all/events.json",
       "status": "ok",
       "events": 125,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "sources": [
         "orfe",
         "citp",
@@ -58,7 +58,7 @@
       "path": "combos/engineering/events.json",
       "status": "ok",
       "events": 37,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "sources": [
         "cbe",
         "cee",
@@ -80,7 +80,7 @@
       "path": "combos/seminars/events.json",
       "status": "ok",
       "events": 62,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "sources": [
         "orfe",
         "citp",
@@ -103,7 +103,7 @@
       "path": "combos/sherrerd-hall/events.json",
       "status": "ok",
       "events": 44,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "sources": [
         "orfe",
         "citp",
@@ -136,7 +136,7 @@
       "path": "feeds/ai/events.json",
       "status": "ok",
       "events": 9,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Princeton AI Lab",
       "sources": [
         "ai"
@@ -149,7 +149,7 @@
       "path": "feeds/bioengineering/events.json",
       "status": "ok",
       "events": 4,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Omenn-Darling Bioengineering Institute",
       "sources": [
         "bioengineering"
@@ -162,7 +162,7 @@
       "path": "feeds/cbe/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Chemical and Biological Engineering",
       "sources": [
         "cbe"
@@ -175,7 +175,7 @@
       "path": "feeds/cee/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Civil and Environmental Engineering",
       "sources": [
         "cee"
@@ -188,7 +188,7 @@
       "path": "feeds/citp/events.json",
       "status": "ok",
       "events": 25,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Center for Information Technology Policy",
       "sources": [
         "citp"
@@ -227,7 +227,7 @@
       "path": "feeds/ece/events.json",
       "status": "ok",
       "events": 12,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Electrical and Computer Engineering",
       "sources": [
         "ece"
@@ -240,7 +240,7 @@
       "path": "feeds/kellercenter/events.json",
       "status": "empty",
       "events": 0,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Keller Center for Innovation in Engineering Education",
       "sources": [
         "kellercenter"
@@ -253,7 +253,7 @@
       "path": "feeds/mae/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Mechanical and Aerospace Engineering",
       "sources": [
         "mae"
@@ -266,7 +266,7 @@
       "path": "feeds/materials/events.json",
       "status": "ok",
       "events": 16,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Princeton Materials Institute",
       "sources": [
         "materials"
@@ -305,7 +305,7 @@
       "path": "feeds/orfe/events.json",
       "status": "ok",
       "events": 19,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Operations Research and Financial Engineering",
       "sources": [
         "orfe"
@@ -321,7 +321,7 @@
       "path": "feeds/quantum/events.json",
       "status": "ok",
       "events": 18,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Princeton Quantum Initiative",
       "sources": [
         "quantum"
@@ -334,7 +334,7 @@
       "path": "feeds/robotics/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-12T00:56:04Z",
+      "lastSuccessAt": "2026-09-12T01:11:11Z",
       "label": "Princeton Robotics",
       "sources": [
         "robotics"
