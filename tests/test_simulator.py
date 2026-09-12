@@ -662,3 +662,105 @@ def test_both_export_buttons_read_from_the_element_on_the_page() -> None:
     assert "exportDocument(exportEl)" in code, "download must read from the page"
     assert "exportEl.innerHTML" in code, "copy must read from the page"
     assert "exportEl.innerText" in code
+
+
+# --------------------------------------------------------------------------------------
+# Styling that survives leaving this site
+# --------------------------------------------------------------------------------------
+
+
+def test_the_download_carries_a_stylesheet_for_reading_it() -> None:
+    """So the file renders as a listing when opened, not as unstyled text."""
+    doc = node(RENDER + "console.log(JSON.stringify(S.exportDocument(exportEl)));")
+    assert "<style>" in doc
+    assert "h3.day {" in doc
+    assert "</style>" in doc
+
+
+def test_every_element_also_carries_the_style_inline() -> None:
+    """The stylesheet alone is not enough for the job this export exists for.
+
+    Mailchimp and the clients it sends to strip `<style>` and honour only `style=""`, so
+    anything that has to survive the paste is applied per element.
+    """
+    doc = node(RENDER + "console.log(JSON.stringify(S.exportDocument(exportEl)));")
+    unstyled = re.findall(r"<(h2|h3|dl|dt|dd|p|span|div)(?![^>]*style=)[^>]*>", doc)
+    assert unstyled == [], f"tags with no inline style: {unstyled}"
+
+
+def test_the_inline_rules_and_the_stylesheet_are_the_same_rules() -> None:
+    """One definition. Two renderings of it that disagreed would be worse than either."""
+    both = node("""
+        console.log(JSON.stringify({
+          sheet: S.exportStylesheet(),
+          styles: S.EXPORT_STYLES
+        }));
+    """)
+    for selector, declarations in both["styles"].items():
+        assert f"{selector} {{ {declarations} }}" in both["sheet"]
+
+
+def test_the_export_styling_is_email_safe() -> None:
+    """No grid, no flex, no custom properties.
+
+    Grid and flex are unsupported across most email clients, and a custom property
+    resolves to nothing once the file leaves this site, where `--dim` is defined. A `dl`
+    losing its grid falls back to label-then-value on separate lines, which is how the
+    editors' own edition already reads.
+    """
+    declarations = " ".join(node("console.log(JSON.stringify(S.EXPORT_STYLES));").values())
+    for banned in ("grid", "flex", "var(--", "currentColor"):
+        assert banned not in declarations, f"{banned} does not survive an email client"
+
+
+def test_the_page_itself_is_not_restyled_by_the_export() -> None:
+    """The preview keeps using the site's stylesheet; only the exported copy is weighed
+    down. A rewrite of the string rather than a mutation of the DOM is what keeps that
+    true, and it is why the preview still follows the reader's dark or light theme."""
+    result = node(
+        RENDER
+        + """
+        const before = exportEl.innerHTML;
+        S.exportDocument(exportEl);
+        console.log(JSON.stringify({unchanged: exportEl.innerHTML === before,
+                                    hadStyleAttr: before.indexOf('style="') !== -1}));
+    """
+    )
+    assert result["unchanged"] is True
+    assert result["hadStyleAttr"] is False
+
+
+def test_the_copied_markup_is_styled_too() -> None:
+    """Copy is the Mailchimp path, so it is the one that most needs the inline rules."""
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert "inlineStyles(exportEl.innerHTML)" in code
+
+
+def test_the_downloaded_file_is_readable_rather_than_one_long_line() -> None:
+    """Someone will open it in an editor; a single 8kB line helps nobody."""
+    doc = node(RENDER + "console.log(JSON.stringify(S.exportDocument(exportEl)));")
+    lines = doc.splitlines()
+    assert len(lines) > 8
+    assert max(len(line) for line in lines) < 3000
+
+
+def test_text_from_a_feed_is_escaped_in_the_export() -> None:
+    """Titles and series come from someone else's calendar and reach the markup as text."""
+    doc = node(
+        TINY_DOM
+        + """
+        const edition = S.resolveEdition({publicationDate: "2026-09-08"});
+        const items = [S.decorate({
+          startTime: "2026-09-08T12:15:00",
+          title: "Tags <script>alert(1)</script> & ampersands",
+          sources: ["x"], location: {name: "A", detail: "1"}
+        }, {x: {label: "Unit & Co"}})];
+        const listing = S.buildListing(edition, items, D.document);
+        const el = D.makeElement("div");
+        el.replaceChildren.apply(el, listing.childNodes.slice());
+        console.log(JSON.stringify(S.exportDocument(el)));
+    """
+    )
+    assert "<script>" not in doc
+    assert "&lt;script&gt;" in doc
+    assert "Unit &amp; Co" in doc

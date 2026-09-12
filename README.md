@@ -206,7 +206,15 @@ of ORFE's 750-line `newsletter.py`, missing its blackouts and exceptions entirel
 Shaped like the edition the editors assemble in Mailchimp by hand: grouped by day, only
 days with events, each entry carrying the time and their own field labels — `Speaker(s):`,
 `Sponsor(s):`, `Series:`, `Location:`. Copy for Mailchimp puts it on the clipboard as rich
-text so a paste keeps its structure.
+text so a paste keeps its structure, and the download is a standalone file.
+
+Both carry their styling **inline, on every element**, because Mailchimp and the clients it
+sends to strip `<style>` blocks and honour only `style=""`. The download also carries the
+same rules as a stylesheet so the file reads properly when simply opened. The rules are
+written for email — no grid, no flex, no custom properties, since a `--dim` resolves to
+nothing once the file has left this site. One definition produces both renderings, and a
+test fails if they disagree. The preview on the page is untouched by any of it and keeps
+following the reader's light or dark theme.
 
 **Sponsor** is the one field they write by hand that we can now generate: it is each feed's
 declared name for itself, which is why `label` joins every feed's record in `status.json`.
