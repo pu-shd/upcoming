@@ -19,6 +19,50 @@ a blocked transport against a live run for enrichment.
 
 **Effort:** an hour.
 
+### Close the monitoring gap with healthchecks.io
+
+The one failure nothing in this repository can catch: if GitHub disables every scheduled
+workflow at once, publishing stops, the watchdog stops with it, and the heartbeat that
+exists to prevent exactly that is disabled too. The site would serve its last deploy
+indefinitely with `generatedAt` receding into the past.
+
+A dead man's switch answers it, because it alerts on **absence** rather than on a signal.
+That is the right shape here: the failure is that nothing ran.
+
+Two checks, not one — they fail for different reasons and a single check would conflate
+them:
+
+| Check | Pinged by | Fires when |
+|---|---|---|
+| `upcoming-publish` | `publish.yml` on success | no publish completed inside its period |
+| `upcoming-verify` | `verify.yml` when the site is healthy | the site stopped being served correctly, or the watchdog itself stopped |
+
+```yaml
+# at the end of the publish job
+- name: Report to the dead man's switch
+  if: steps.build.outputs.status == '0'
+  run: curl -fsS -m 10 --retry 3 "${{ secrets.HEALTHCHECK_PUBLISH_URL }}"
+```
+
+Use the `/start` and `/fail` endpoints too, so a run that fails is reported as a failure
+rather than waiting out the grace period as silence.
+
+Set the period to the slowest cadence — hourly overnight, so 1 hour with a generous grace,
+or the weekend schedule will alert every Saturday. Getting that wrong makes the check cry
+wolf, which is worse than not having it.
+
+Notes worth recording before adopting it:
+
+- **The ping URL is the credential.** Anyone holding it can silence the alarm. It belongs
+  in repo secrets, and the same contract test that guards `BOT_BYPASS_HEADER` should refuse
+  a hardcoded one.
+- **It can be self-hosted** if an external dependency for monitoring is itself unacceptable
+  — which is a fair objection, since the monitor would then share a failure domain with
+  whatever hosts it.
+- **The free tier covers this** at two checks.
+
+**Effort:** an hour, most of it choosing the period.
+
 ### Unify the last duplicated vocabulary
 
 `validate.py` defines `Severity` as `pass | warn | fail`; `verify.py` separately defines
@@ -108,11 +152,99 @@ decision about who is actually on the hook.
 `purpose_overrides` on `ece` — but it is an editorial call, so it is visible rather than
 silently filtered.
 
-## Larger, if the project grows
+## Notifications
 
-**An external check.** The one gap no in-repo work closes: if every scheduled workflow is
-disabled at once, nothing notices. A scheduled fetch of `status.json` from anywhere else at
-all, asserting its age, is a few lines wherever you already run something on a timer.
+Today a failure is a red workflow run and a GitHub issue. That reaches whoever watches this
+repository and nobody else — not the maintainer who is not looking, and not the editors who
+depend on the output.
+
+Two audiences with almost nothing in common, and conflating them is the way this goes
+wrong. Maintainers want to know the machinery broke; editors want to know their edition is
+ready and their deadline is coming. An editor who receives "gate_diff_threshold failed on
+`cbe`" learns nothing and starts ignoring the sender.
+
+### Maintainers
+
+| Send when | Because |
+|---|---|
+| A source has been stale past its grade | The watchdog already computes this and files an issue; an issue nobody is subscribed to is a log entry |
+| A scheduled workflow was found stopped | The heartbeat already detects and re-enables it, and that is worth knowing about even when repaired |
+| The dead man's switch fired | healthchecks.io sends this itself, so it needs no work here beyond configuring the address |
+| A build failed for a reason no gate anticipated | The `check` tier exists precisely for what we did not foresee |
+
+Deliberately **not** on every red run. Publishing runs 48 times a day; a source failing for
+an hour would send 48 emails, and the second one is already noise.
+
+### Editors
+
+| Send when | Contents |
+|---|---|
+| The submission deadline approaches | The existing 24-hour reminder, but pushed rather than only offered as a calendar file. The simulator already composes the text. |
+| An edition closes | The listing as it stands, with the `fix first` rows called out — a title still unannounced is the editor's to chase, and the earlier they see it the better |
+| A source they rely on has been dark for days | Only for a sustained outage, and named in their terms: "Chemical and Biological Engineering has published nothing since Tuesday" |
+
+The listing is already generated with inline styling for exactly this — `exportDocument()`
+produces a standalone HTML document, and `workflowmail` takes an `html` input, so the body
+is a function call rather than new work.
+
+### Delivery: three options
+
+We have an Azure subscription appropriate for the purpose, and
+[`pu-shd/workflowmail`](https://github.com/pu-shd/workflowmail) already exists in this
+organisation.
+
+| | **workflowmail (ACS)** | **workflowmail (Graph)** | **Resend.com** |
+|---|---|---|---|
+| Credential | **None stored.** Azure OIDC + Managed Identity | OAuth refresh token, held in Azure | An API key in repo secrets |
+| Sender | `DoNotReply@<guid>.azurecomm.net` | **Any O365 mailbox** — a real princeton.edu address | A verified domain |
+| Setup | Automatic; deploy creates the ACS resources | One device-code login at deploy | Domain verification, DNS records |
+| Ongoing | None | Automatic weekly token heartbeat | Key rotation |
+| Guardrails | Recipient restrictions, rate limiting, subject validation, already built | Same | Ours to build |
+| Calling it | `uses: pu-shd/workflowmail/.github/workflows/email-reusable.yml@main` | Same | A `curl` and a secret |
+
+**Recommendation: `workflowmail`, on the Graph backend for editors and ACS for
+maintainers.**
+
+The reasoning is about credentials and about who the sender appears to be.
+
+**Secretless matters here more than usual.** This repository's central premise is that
+silence must never equate to success, and its worst historical failure was a credential
+with a plausible default that authenticated nothing while reporting a clean run. An OIDC
+flow with no stored key removes that class of failure rather than guarding against it. A
+Resend key is a fourth secret to rotate, and one whose absence would fail in exactly the
+quiet way we work to avoid.
+
+**The sender address matters for editors and not for maintainers.** A deadline reminder
+arriving from `DoNotReply@8f3a…azurecomm.net` looks like spam and will be filtered; from a
+real princeton.edu mailbox it does not. Maintainers will not care, so ACS is fine for them
+and needs no O365 consent.
+
+**The rate limiting is not incidental.** A notification loop is a way to mail an entire
+department a hundred times, and `workflowmail` has recipient restrictions and rate limiting
+already. Building those on top of Resend is the part of the work that would actually take
+time.
+
+Where Resend would win is if this ever needs to send to people **outside** the university,
+or wants delivery analytics. Neither is in scope, and adopting it for a future that may not
+arrive would mean carrying a secret for it in the meantime.
+
+### Order to build
+
+1. **healthchecks.io** first — smallest, closes a documented gap, and its own alerting
+   covers the maintainer case well enough to defer the rest.
+2. **Maintainer email** on the sustained-failure conditions above, via `workflowmail` on
+   ACS. One reusable-workflow call from `verify.yml` and `heartbeat.yml`.
+3. **A recipient list in config**, not in a workflow. Editors change; a workflow edit to
+   add one is a pull request nobody should need to make. `config/notify.yaml`, validated at
+   load like every other vocabulary, so a malformed address is a load error rather than a
+   silent non-delivery.
+4. **Editor email** last, on the Graph backend, once there is somebody to send it to and an
+   address to send it from.
+
+**Effort:** an hour for the switch; a day for maintainer mail; a second day for editors,
+most of it Azure configuration rather than code.
+
+## Larger, if the project grows
 
 **Curated series names.** `citp`'s `series` is its comma-joined `CATEGORIES` where the
 newsletter writes "CITP Seminars". Their names are editorial and not in the feed. A

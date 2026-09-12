@@ -29,15 +29,23 @@ on:
     # Overnight on weekdays, and every hour at weekends.
     - cron: '0 0-11 * * 1-5'
     - cron: '0 * * * 0,6'
-  push:
+  # After the tests, not alongside them. On a push these two used to start together and
+  # publishing finished first -- measured, 34 seconds before the suite it had not waited
+  # for -- so a commit could deploy and only then be found broken. The gates inside the
+  # build catch output that is *invalid*; nothing there catches output that is valid and
+  # wrong, which is exactly what a test suite is for.
+  #
+  # This also retires a path filter that had to be kept in step with the code by hand, and
+  # was already out of step: `pyproject.toml` was missing from it, so a dependency change
+  # never triggered a publish at all.
+  #
+  # CodeQL is deliberately not waited on. It is a security scan rather than a correctness
+  # gate, and blocking a departmental feed on it would trade a real delay for no
+  # correctness the suite does not already provide.
+  workflow_run:
+    workflows: ["Tests"]
+    types: [completed]
     branches: [main]
-    # Only things that can change the output. A README edit must not redeploy.
-    paths:
-      - 'config/**'
-      - 'schema/**'
-      - 'site/**'
-      - 'upcoming/**'
-      - '.github/workflows/publish.yml'
   workflow_dispatch:
     inputs:
       allow_large_diff:
@@ -70,7 +78,13 @@ concurrency:
 
 jobs:
   publish:
-    if: github.ref == 'refs/heads/main'
+    # A failed or cancelled suite must not publish. Scheduled and manual runs carry no
+    # `workflow_run` payload and are unaffected -- they publish whatever is on main, which
+    # is the point of a schedule.
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name != 'workflow_run' ||
+       github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     outputs:

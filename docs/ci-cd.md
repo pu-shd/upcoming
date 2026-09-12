@@ -6,7 +6,7 @@ departmental feed from updating.
 | Workflow | Trigger | Job |
 |---|---|---|
 | `tests.yml` | push, pull request | Correctness. Three jobs: `pytest`, `lint`, `container` |
-| `publish.yml` | schedule, push to config/code, dispatch | Builds and deploys the tree |
+| `publish.yml` | schedule, **after Tests passes**, dispatch | Builds and deploys the tree |
 | `verify.yml` | hourly at :25, dispatch | Checks the live origin from outside |
 | `heartbeat.yml` | daily at 05:47, dispatch | Keeps the schedules from being disabled |
 
@@ -57,6 +57,24 @@ The previously published tree is an **input**, not only an output:
 It is restored by checking out the `published` branch into `dist/`, not from a cache or a
 Pages artifact — both of those expire, and losing this would turn a brief upstream outage
 into a blank departmental listing.
+
+### Publishing waits for the suite
+
+On a push, `publish.yml` is triggered by `workflow_run` on **Tests completing
+successfully**, not by the push itself. The two used to start together and publishing
+finished first — measured, 34 seconds before the suite it had not waited for — so a commit
+could deploy and only then be found broken. The gates inside the build catch output that is
+*invalid*; nothing there catches output that is valid and wrong, which is what a suite is
+for.
+
+Scheduled and manual runs carry no `workflow_run` payload and are unaffected. They publish
+whatever is on `main`, which is the point of a schedule — and it is why this narrows the
+window rather than closing it. **The only thing that keeps broken code off `main` is
+branch protection**, which is a repository setting rather than anything in this tree.
+
+CodeQL is deliberately not waited on: it is a security scan rather than a correctness gate,
+and blocking a departmental feed on it would trade a real delay for no correctness the
+suite does not already provide.
 
 ### Why the deploy is its own job
 

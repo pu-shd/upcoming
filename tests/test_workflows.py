@@ -119,11 +119,32 @@ def test_the_deploy_is_its_own_job_not_a_step() -> None:
     assert "deploy-pages" not in build_steps
 
 
-def test_publishing_only_reruns_on_a_change_that_can_alter_the_output() -> None:
-    paths = load("publish.yml")["on"]["push"]["paths"]
-    assert "config/**" in paths
-    assert "upcoming/**" in paths
-    assert not any(p.startswith("README") for p in paths)
+def test_publishing_waits_for_the_test_suite() -> None:
+    """They used to start together, and publishing finished first.
+
+    Measured: 34 seconds before the suite it had not waited for, so a commit could deploy
+    and only then be found broken. The gates inside the build catch output that is
+    *invalid*; nothing there catches output that is valid and wrong.
+    """
+    triggers = load("publish.yml")["on"]
+    assert "push" not in triggers, "a push must reach publishing through the suite"
+    assert triggers["workflow_run"]["workflows"] == ["Tests"]
+    assert triggers["workflow_run"]["branches"] == ["main"]
+
+
+def test_a_failed_suite_does_not_publish() -> None:
+    """`types: [completed]` fires on failure too, so the conclusion has to be checked."""
+    condition = " ".join(load("publish.yml")["jobs"]["publish"]["if"].split())
+    assert "workflow_run.conclusion == 'success'" in condition
+    # Scheduled and manual runs carry no workflow_run payload and must still publish.
+    assert "github.event_name != 'workflow_run'" in condition
+
+
+def test_a_schedule_still_publishes_without_a_suite_run() -> None:
+    """The schedule is the dominant path and must not depend on a recent push."""
+    triggers = load("publish.yml")["on"]
+    assert triggers["schedule"]
+    assert "workflow_dispatch" in triggers
 
 
 # --------------------------------------------------------------------------------------
