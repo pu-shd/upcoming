@@ -62,14 +62,6 @@
 
     <details id="advanced">
       <summary>Advanced</summary>
-      <p class="note">
-        The deadline is derived from the publication date — the Tuesday of the week before,
-        at noon — and the window runs from the publication date to that week's Sunday.
-        Override any of these to model an exception. <strong>An edition that shifts for a
-        holiday is an exception:</strong> the week of 7 September 2026 publishes on the
-        Tuesday, so set the publication date to the 8th to reproduce it. Choosing a new
-        publication date derives the deadline again.
-      </p>
       <div class="controls">
         <div class="field">
           <label for="pubtime">Publication time</label>
@@ -117,6 +109,7 @@
 </section>
 
 <p class="status" id="status" role="status" aria-live="polite">Loading the feeds&hellip;</p>
+<div id="collisions" hidden></div>
 
 <!-- ============================================================ the result ======== -->
 <div id="results" hidden>

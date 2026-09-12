@@ -33,7 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-main { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+main { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
 header { padding: 2rem 0 2rem; border-bottom: 3px solid var(--accent); margin-bottom: 2.5rem; }
 h1 { margin: 0 0 .4rem; font-size: 2.1rem; letter-spacing: -.02em; }
 h2 { margin: 3rem 0 .75rem; font-size: 1.15rem; letter-spacing: -.01em; }
@@ -184,6 +184,16 @@ details > *:not(summary) { margin-top: .85rem; }
 .status { font-size: .88rem; margin: 1.25rem 0 0; }
 .status.error { color: var(--bad); }
 .status.warn { color: var(--warn); }
+
+.collisions { margin: .75rem 0 0; }
+.collisions > summary { color: var(--warn); }
+.collision { margin: .85rem 0 0; }
+.collision-when {
+  margin: 0 0 .2rem; font-size: .82rem; color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+.collision ul { margin: 0; padding-left: 1.1rem; font-size: .89rem; }
+.collision li { margin: .1rem 0; }
 
 .summary { display: flex; flex-wrap: wrap; gap: 1.25rem 2.5rem; margin: 1.5rem 0 0; }
 .summary div { display: flex; flex-direction: column; gap: .1rem; }
