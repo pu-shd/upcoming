@@ -5,6 +5,10 @@ Campus event feeds pulled from what departments, units, and centers advertise.
 This project is a heavy refactor of [pu-orfe/upcoming](https://github.com/pu-orfe/upcoming), informed by
 [pubino/mae-upcoming](https://github.com/pubino/mae-upcoming).
 
+Developer documentation is in [`docs/`](docs/) — [architecture](docs/architecture.md),
+[failure modes](docs/failure-modes.md), [testing](docs/testing.md),
+[CI/CD](docs/ci-cd.md), and a [roadmap](docs/roadmap.md).
+
 ## Implementation
 
 This project attempts to satisfy a consistent schema from event publishers' practice of putting **the same information in different fields**.
