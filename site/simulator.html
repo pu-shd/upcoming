@@ -124,11 +124,20 @@
       <dl class="summary detail" id="details-list"></dl>
     </details>
 
+    <p class="note">
+      Untick an event to leave it out of the export below. The table itself is what the
+      editorial system would ingest, which does not change either way.
+    </p>
+
     <div class="card scroll">
       <table>
         <caption class="note" id="caption"></caption>
         <thead>
           <tr>
+            <th scope="col" class="pick">
+              <input type="checkbox" id="pick-all" checked
+                     aria-label="Include every event in the export">
+            </th>
             <th scope="col">Starts</th>
             <th scope="col">Title the editors would see</th>
             <th scope="col">Series</th>
@@ -167,7 +176,7 @@
 
   <!-- ========================================================== the export ======== -->
   <section>
-    <h2>Email and Events Page</h2>
+    <h2>Email and Events Page Export</h2>
     <p class="note">
       Shaped like the edition the editors assemble by hand: grouped by day, with their own
       field labels. <strong>Sponsor</strong> is each feed's declared name for itself.
@@ -178,14 +187,16 @@
       than quietly passed through.
     </p>
 
+    <p class="note" id="export-count"></p>
+
+    <div class="card export" id="export"></div>
+
     <div class="btnrow">
       <button type="button" id="copy">Copy for Mailchimp</button>
       <button type="button" id="download">Download</button>
       <span class="note">Both carry their styling inline, so it survives the paste.</span>
       <span class="note" id="copy-state" aria-live="polite"></span>
     </div>
-
-    <div class="card export" id="export"></div>
   </section>
 </div>
 

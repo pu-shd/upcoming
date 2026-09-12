@@ -910,3 +910,147 @@ def test_a_url_from_a_feed_is_escaped_into_the_href() -> None:
     )
     assert "<script>" not in doc
     assert "&quot;" in doc or "&lt;script&gt;" in doc
+
+
+# --------------------------------------------------------------------------------------
+# The deadline, as something you can put in a calendar
+# --------------------------------------------------------------------------------------
+
+EDITION_JS = 'const e = S.resolveEdition({publicationDate: "2026-09-14"});'
+
+
+@pytest.mark.parametrize(
+    ("wall", "utc"),
+    [
+        ("2026-09-01T12:00:00", "20260901T160000Z"),  # EDT, four hours
+        ("2026-12-01T12:00:00", "20261201T170000Z"),  # EST, five
+        ("2026-03-07T12:00:00", "20260307T170000Z"),  # the day before spring forward
+        ("2026-03-09T12:00:00", "20260309T160000Z"),  # and the day after
+        ("2026-11-02T12:00:00", "20261102T170000Z"),  # the day after falling back
+    ],
+)
+def test_the_deadline_resolves_to_the_right_instant(wall: str, utc: str) -> None:
+    """The deadline is Eastern wall time and a calendar entry needs an instant.
+
+    Four hours in September, five in December -- hardcoding either is wrong for half the
+    year, and an hour out on a deadline is the kind of error nobody notices until it
+    matters.
+    """
+    assert (
+        node(f"""
+        console.log(JSON.stringify(
+          S.utcStamp(S.zonedToUTC("{wall}", "America/New_York"))
+        ));
+    """)
+        == utc
+    )
+
+
+def test_the_reminder_says_enough_to_be_useful_later() -> None:
+    """A bare "deadline" in a calendar a fortnight from now tells nobody anything."""
+    event = node(EDITION_JS + "console.log(JSON.stringify(S.deadlineEvent(e, 7)));")
+    assert event["title"] == "Newsletter submissions close"
+    assert "publishing Monday, September 14" in event["details"]
+    assert "covers Monday, September 14 through Sunday, September 20" in event["details"]
+    assert "7 event(s)" in event["details"]
+
+
+def test_the_reminder_does_not_end_a_sentence_in_two_full_stops() -> None:
+    """A time ends in "p.m." and the sentence would read "12:00 p.m..".
+
+    The same slip had to be fixed on the page itself, which is why it is a helper now
+    rather than care taken twice.
+    """
+    details = node(EDITION_JS + "console.log(JSON.stringify(S.deadlineEvent(e, 7).details));")
+    assert ".." not in details
+    assert node('console.log(JSON.stringify(S.sentence("ends at 12:00 p.m.")));') == (
+        "ends at 12:00 p.m."
+    )
+    assert node('console.log(JSON.stringify(S.sentence("no stop yet")));') == "no stop yet."
+
+
+def test_the_reminder_is_not_a_zero_length_event() -> None:
+    """Several clients render one oddly or drop it from an agenda view."""
+    span = node(
+        EDITION_JS
+        + """
+        const ev = S.deadlineEvent(e, 7);
+        console.log(JSON.stringify((ev.end - ev.start) / 60000));
+    """
+    )
+    assert span == 30
+
+
+# --------------------------------------------------------------------------------------
+# The calendar file, which leaves this site
+# --------------------------------------------------------------------------------------
+
+
+@pytest.fixture(scope="module")
+def ics() -> str:
+    return node(EDITION_JS + 'console.log(JSON.stringify(S.deadlineIcs(e, 7, "https://x/y")));')
+
+
+def test_the_calendar_file_is_a_well_formed_vcalendar(ics: str) -> None:
+    assert ics.startswith("BEGIN:VCALENDAR\r\n")
+    assert ics.endswith("END:VCALENDAR\r\n")
+    for required in ("VERSION:2.0", "PRODID:", "BEGIN:VEVENT", "UID:", "DTSTAMP:", "END:VEVENT"):
+        assert required in ics, required
+
+
+def test_every_line_ends_crlf(ics: str) -> None:
+    """RFC 5545 says CRLF, and a bare LF is the classic file some clients refuse."""
+    assert "\n" in ics
+    for line in ics.split("\r\n"):
+        assert "\n" not in line
+
+
+def test_no_line_exceeds_seventy_five_octets(ics: str) -> None:
+    """Folded per the spec. The description is long enough to need it, which is the point
+    of testing with a real one rather than a short stub."""
+    lines = ics.split("\r\n")
+    assert max(len(line.encode("utf-8")) for line in lines) <= 75
+    assert [line for line in lines if line.startswith(" ")], "expected a folded line"
+
+
+def test_the_times_are_the_deadline_not_the_publication(ics: str) -> None:
+    """Publication is Monday the 14th; submissions close the Tuesday before."""
+    assert "DTSTART:20260908T160000Z" in ics
+    assert "DTEND:20260908T163000Z" in ics
+
+
+def test_adding_the_same_deadline_twice_updates_one_entry(ics: str) -> None:
+    """A random UID would leave a duplicate behind every time somebody clicked."""
+    assert "UID:newsletter-deadline-2026-09-14@" in ics
+    again = node(EDITION_JS + 'console.log(JSON.stringify(S.deadlineIcs(e, 7, "https://x/y")));')
+    assert again == ics
+
+
+def test_text_is_escaped_per_rfc_5545() -> None:
+    """Commas and semicolons separate values in this format; an unescaped one splits the
+    field and the entry lands mangled or is rejected."""
+    assert node(r'console.log(JSON.stringify(S.icsText("a,b;c\\d\ne")));') == ("a\\,b\\;c\\\\d\\ne")
+    # Backslash first, or the escaping would escape its own output.
+    assert node(r'console.log(JSON.stringify(S.icsText("\\")));') == "\\\\"
+
+
+def test_the_reminder_fires_before_the_deadline_not_after(ics: str) -> None:
+    assert "BEGIN:VALARM" in ics
+    assert "TRIGGER:-PT24H" in ics
+
+
+def test_the_google_link_carries_the_same_instant_and_text() -> None:
+    """Two routes to one reminder; they must not disagree about when it is."""
+    url = node(
+        EDITION_JS + 'console.log(JSON.stringify(S.googleCalendarUrl(e, 7, "https://x/y")));'
+    )
+    assert url.startswith("https://calendar.google.com/calendar/render?")
+    assert "action=TEMPLATE" in url
+    assert "dates=20260908T160000Z%2F20260908T163000Z" in url
+    assert "Newsletter+submissions+close" in url
+
+
+def test_the_link_back_is_included_so_the_reminder_can_be_acted_on(ics: str) -> None:
+    """Somebody opening this a week later wants the edition it came from."""
+    assert "URL:https://x/y" in ics
+    assert "https://x/y" in ics.replace("\r\n ", "")

@@ -156,6 +156,27 @@ details > *:not(summary) { margin-top: .85rem; }
 .summary dd { margin: 0; font-size: 1.35rem; font-weight: 600; font-variant-numeric: tabular-nums; }
 .summary.detail dd { font-size: .92rem; font-weight: 400; }
 
+/* The include column. Narrow and centred so it reads as a control rather than data. */
+th.pick, td.pick { width: 1%; padding-right: .4rem; text-align: center; }
+th.pick input, td.pick input { margin: 0; accent-color: var(--accent); }
+tr.dropped td:not(.pick) { opacity: .45; text-decoration: line-through; }
+
+/* The deadline, which is a button that offers to put itself in a calendar. */
+.deadline { position: relative; display: inline-block; }
+.deadline-toggle { font-size: inherit; color: var(--fg); }
+.deadline-menu {
+  position: absolute; left: 0; top: calc(100% + .35rem); z-index: 5;
+  display: flex; flex-direction: column; gap: .1rem;
+  padding: .4rem; white-space: nowrap;
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 12%);
+}
+.deadline-choice {
+  display: block; padding: .25rem .6rem; border-radius: 5px;
+  font-size: .85rem; color: var(--fg); text-align: left; text-decoration: none;
+}
+.deadline-choice:hover { background: var(--bg); }
+
 .when { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .placeholder-flag { color: var(--warn); font-size: .78rem; white-space: nowrap; }
 

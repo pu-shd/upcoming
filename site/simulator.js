@@ -424,6 +424,141 @@
     return root;
   }
 
+  /* --------------------------------------------------------- the deadline event --- */
+
+  var ZONE = "America/New_York";
+
+  /**
+   * The UTC instant for a wall-clock time in `zone`.
+   *
+   * The deadline is Eastern wall time and a calendar file needs an unambiguous instant,
+   * so the offset has to be resolved for *that date* -- it is four hours in September and
+   * five in December, and hardcoding either is wrong for half the year.
+   *
+   * Two passes: read back what the guessed instant shows in the zone, correct by the
+   * difference, then confirm. The second pass is what handles a date near a transition,
+   * where the first correction can land on the other side of it.
+   */
+  function zonedToUTC(stamp, zone) {
+    var target = Date.UTC(
+      +stamp.slice(0, 4), +stamp.slice(5, 7) - 1, +stamp.slice(8, 10),
+      +stamp.slice(11, 13), +stamp.slice(14, 16), +stamp.slice(17, 19) || 0
+    );
+    var guess = target;
+    for (var pass = 0; pass < 2; pass += 1) {
+      guess = target - (shownAsUTC(guess, zone) - guess);
+    }
+    return new Date(guess);
+  }
+
+  /** What `instant` reads as on a clock in `zone`, expressed as a UTC timestamp. */
+  function shownAsUTC(instant, zone) {
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: zone, hour12: false,
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", second: "2-digit"
+    }).formatToParts(new Date(instant));
+    var at = {};
+    parts.forEach(function (part) { at[part.type] = part.value; });
+    return Date.UTC(+at.year, +at.month - 1, +at.day,
+                    +at.hour % 24, +at.minute, +at.second);
+  }
+
+  /** `20260901T160000Z`, the only stamp shape a calendar file and Google both accept. */
+  function utcStamp(date) {
+    return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  }
+
+  /**
+   * End a sentence without doubling a full stop.
+   *
+   * Times here end in "p.m." and a sentence ending in one reads "12:00 p.m..", which
+   * already had to be fixed once on the page itself.
+   */
+  function sentence(text) {
+    return /\.$/.test(text) ? text : text + ".";
+  }
+
+  /** What the reminder says, so it is useful on its own a week later. */
+  function deadlineEvent(edition, counts) {
+    return {
+      title: "Newsletter submissions close",
+      start: zonedToUTC(edition.deadlineAt, ZONE),
+      /* Half an hour. A zero-length event is legal and several clients render it oddly or
+         drop it from an agenda view, which would defeat the point of adding it. */
+      end: new Date(zonedToUTC(edition.deadlineAt, ZONE).getTime() + 1800000),
+      details: [
+        sentence("Submissions close for the edition publishing " +
+          prettyStamp(edition.publicationAt)),
+        sentence("That edition covers " + prettyDate(edition.coverageStart.slice(0, 10)) +
+          " through " + prettyDate(edition.coverageEnd.slice(0, 10))),
+        counts ? counts + " event(s) are in it as things stand." : "",
+        "Late additions go to the editor by email."
+      ].filter(Boolean).join("\n\n")
+    };
+  }
+
+  /** A one-event calendar file. CRLF and folding per RFC 5545, as every client expects. */
+  function deadlineIcs(edition, counts, url) {
+    var event = deadlineEvent(edition, counts);
+    var lines = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//pu-shd//upcoming newsletter simulator//EN",
+      "CALSCALE:GREGORIAN",
+      "BEGIN:VEVENT",
+      /* Deterministic rather than random: adding the same deadline twice should update
+         the one entry rather than leave a duplicate behind. */
+      "UID:newsletter-deadline-" + edition.id + "@pu-shd.github.io",
+      "DTSTAMP:" + utcStamp(event.start),
+      "DTSTART:" + utcStamp(event.start),
+      "DTEND:" + utcStamp(event.end),
+      "SUMMARY:" + icsText(event.title),
+      "DESCRIPTION:" + icsText(event.details + (url ? "\n\n" + url : "")),
+      url ? "URL:" + icsText(url) : "",
+      "BEGIN:VALARM",
+      "TRIGGER:-PT24H",
+      "ACTION:DISPLAY",
+      "DESCRIPTION:" + icsText(event.title),
+      "END:VALARM",
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ].filter(Boolean);
+    return lines.map(foldLine).join("\r\n") + "\r\n";
+  }
+
+  /** RFC 5545 TEXT escaping: backslash first, or it would escape its own output. */
+  function icsText(value) {
+    return String(value)
+      .replace(/\\/g, "\\\\")
+      .replace(/;/g, "\\;")
+      .replace(/,/g, "\\,")
+      .replace(/\n/g, "\\n");
+  }
+
+  /** Fold at 75 octets onto continuation lines beginning with a space. */
+  function foldLine(line) {
+    if (line.length <= 75) return line;
+    var out = line.slice(0, 75);
+    var rest = line.slice(75);
+    while (rest.length > 74) {
+      out += "\r\n " + rest.slice(0, 74);
+      rest = rest.slice(74);
+    }
+    return out + "\r\n " + rest;
+  }
+
+  function googleCalendarUrl(edition, counts, url) {
+    var event = deadlineEvent(edition, counts);
+    var params = new URLSearchParams({
+      action: "TEMPLATE",
+      text: event.title,
+      dates: utcStamp(event.start) + "/" + utcStamp(event.end),
+      details: event.details + (url ? "\n\n" + url : "")
+    });
+    return "https://calendar.google.com/calendar/render?" + params.toString();
+  }
+
   /* ------------------------------------------------------------ export styling ---- */
 
   /**
@@ -540,6 +675,15 @@
     var feeds = {};
     /** slug -> array of events, cached so toggling a checkbox off and on is free. */
     var loaded = {};
+    /** Event ids the editor has unticked. Ids, not indices: the set survives a change of
+        edition, and an event that comes back is still the one that was set aside. */
+    var dropped = {};
+    /** What the last render included, so the calendar reminder can say how many. */
+    var lastIncludedCount = 0;
+    /** The edition the table on screen belongs to, for handlers that fire after it. */
+    var lastEdition = null;
+    /** The partition the table on screen came from, for the same reason. */
+    var lastResult = { included: [] };
     /* No second copy of the listing is kept. An earlier version held the built tree in a
        variable and then handed its children to the page with `replaceChildren`, which
        *moves* nodes rather than copying them -- so the variable was left an empty div and
@@ -670,6 +814,7 @@
         wrap.appendChild(dt);
         wrap.appendChild(dd);
         derived.appendChild(wrap);
+        return dd;
       };
 
       fact(
@@ -677,11 +822,80 @@
         prettyDate(edition.coverageStart.slice(0, 10)) + " – " +
           prettyDate(edition.coverageEnd.slice(0, 10))
       );
-      fact(
+      var close = fact(
         "Submissions close",
-        prettyStamp(edition.deadlineAt),
+        "",
         hours === null ? "" : "  " + relativeHours(hours)
       );
+      close.insertBefore(deadlineControl(edition), close.firstChild);
+    }
+
+    /**
+     * The deadline, as a button offering to put it in a calendar.
+     *
+     * The date is the one thing on this page somebody wants to keep, and retyping it into
+     * a calendar is exactly the sort of transcription this project exists to remove.
+     */
+    function deadlineControl(edition) {
+      var wrap = document.createElement("span");
+      wrap.className = "deadline";
+
+      var toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "linkbtn deadline-toggle";
+      toggle.textContent = prettyStamp(edition.deadlineAt);
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.title = "Add this deadline to a calendar";
+
+      var menu = document.createElement("span");
+      menu.className = "deadline-menu";
+      menu.hidden = true;
+
+      var counts = lastIncludedCount;
+      var here = window.location.href;
+
+      var google = document.createElement("a");
+      google.className = "deadline-choice";
+      google.setAttribute("href", googleCalendarUrl(edition, counts, here));
+      google.setAttribute("target", "_blank");
+      google.setAttribute("rel", "noopener");
+      google.textContent = "Google Calendar";
+      menu.appendChild(google);
+
+      var ics = document.createElement("button");
+      ics.type = "button";
+      ics.className = "linkbtn deadline-choice";
+      ics.textContent = "Download .ics";
+      ics.addEventListener("click", function () {
+        download(
+          deadlineIcs(edition, counts, here),
+          "text/calendar;charset=utf-8",
+          "newsletter-deadline-" + edition.id + ".ics"
+        );
+        close();
+      });
+      menu.appendChild(ics);
+
+      function close() {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      }
+      toggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        menu.hidden = !menu.hidden;
+        toggle.setAttribute("aria-expanded", menu.hidden ? "false" : "true");
+      });
+      // Dismiss on a click elsewhere or on Escape, so the menu cannot be left stranded
+      // open over the rest of the page.
+      document.addEventListener("click", close);
+      wrap.addEventListener("click", function (e) { e.stopPropagation(); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") close();
+      });
+
+      wrap.appendChild(toggle);
+      wrap.appendChild(menu);
+      return wrap;
     }
 
     /** "in 5 hours" / "3 days ago", from the "viewing as of" control. */
@@ -738,6 +952,27 @@
 
       result.included.forEach(function (item) {
         var row = document.createElement("tr");
+
+        var picker = document.createElement("td");
+        picker.className = "pick";
+        var box = document.createElement("input");
+        box.type = "checkbox";
+        box.checked = !dropped[item.raw.id];
+        box.setAttribute("aria-label", "Include " + (item.title || "this event") +
+                                       " in the export");
+        box.addEventListener("change", function () {
+          if (box.checked) delete dropped[item.raw.id];
+          else dropped[item.raw.id] = true;
+          // Only the export changes. The table is what the editorial system receives,
+          // and unticking a row does not alter that.
+          renderExport(lastEdition, result);
+          syncPickAll(result);
+          syncQueryState();
+        });
+        picker.appendChild(box);
+        row.appendChild(picker);
+        if (dropped[item.raw.id]) row.className = "dropped";
+
         cell(row, prettyStamp(item.startTime), "when");
         var title = cell(row, item.title || "(no title)");
         if (item.placeholder) {
@@ -752,6 +987,19 @@
         cell(row, item.sources.join(", "), "mono");
         body.appendChild(row);
       });
+      syncPickAll(result);
+    }
+
+    /** Keep the header box showing the state of the rows under it. */
+    function syncPickAll(result) {
+      var all = $("pick-all");
+      var kept = keptOf(result).length;
+      all.checked = kept === result.included.length && kept > 0;
+      all.indeterminate = kept > 0 && kept < result.included.length;
+    }
+
+    function keptOf(result) {
+      return result.included.filter(function (item) { return !dropped[item.raw.id]; });
     }
 
     function renderExcluded(result) {
@@ -775,9 +1023,30 @@
     }
 
     function renderExport(edition, result) {
-      var listing = buildListing(edition, result.included, document);
+      var kept = keptOf(result);
+      var listing = buildListing(edition, kept, document);
       exportEl.replaceChildren.apply(exportEl, Array.prototype.slice.call(listing.childNodes));
       copyStateEl.textContent = "";
+      $("export-count").textContent = kept.length === result.included.length
+        ? kept.length + " event(s), all of them"
+        : kept.length + " of " + result.included.length + " event(s); " +
+          (result.included.length - kept.length) + " left out above";
+      // Marked on the rows too, so the two views cannot disagree about what is in.
+      Array.prototype.forEach.call($("rows").children, function (row, index) {
+        row.className = dropped[(result.included[index] || {raw: {}}).raw.id] ? "dropped" : "";
+      });
+    }
+
+    /** Hand the browser a file. One implementation, two callers. */
+    function download(body, type, name) {
+      var url = URL.createObjectURL(new Blob([body], { type: type }));
+      var link = document.createElement("a");
+      link.href = url;
+      link.download = name;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     }
 
     function syncQueryState() {
@@ -792,6 +1061,8 @@
       if (nowEl.value) params.set("now", nowEl.value);
       if (purposeEl.value) params.set("purpose", purposeEl.value);
       params.set("sources", selectedSlugs().join(","));
+      var out = Object.keys(dropped);
+      if (out.length) params.set("drop", out.join(","));
       window.history.replaceState(null, "", "?" + params.toString());
     }
 
@@ -838,11 +1109,15 @@
         var phase = nowStamp ? phaseAt(nowStamp, edition) : null;
         var hours = nowStamp ? hoursBetween(nowStamp, edition.deadlineAt) : null;
 
-        renderDerived(edition, hours);
+        lastEdition = edition;
+        lastResult = result;
+        lastIncludedCount = keptOf(result).length;
         renderSummary(edition, result, phase);
+        renderDerived(edition, hours);
         renderRows(result);
         renderExcluded(result);
         renderExport(edition, result);
+        lastIncludedCount = keptOf(result).length;
         $("json").textContent = JSON.stringify(
           result.included.map(function (item) {
             return Object.assign({}, item.raw, { newsletterEdition: edition.id });
@@ -894,6 +1169,11 @@
       if (params.has("deadlinetime")) deadlineTime.value = params.get("deadlinetime");
       if (params.has("now")) nowEl.value = params.get("now");
       if (params.has("purpose")) purposeEl.value = params.get("purpose");
+      if (params.has("drop")) {
+        params.get("drop").split(",").filter(Boolean).forEach(function (id) {
+          dropped[id] = true;
+        });
+      }
       if (params.has("sources")) {
         var wanted = params.get("sources").split(",").filter(Boolean);
         Array.prototype.forEach.call(sourcesEl.querySelectorAll("input"), function (box) {
@@ -909,6 +1189,20 @@
     });
 
     $("reset").addEventListener("click", function () { resetToNextEdition(); refresh(); });
+
+    $("pick-all").addEventListener("change", function () {
+      var keep = $("pick-all").checked;
+      Array.prototype.forEach.call($("rows").querySelectorAll("td.pick input"), function (box) {
+        box.checked = keep;
+      });
+      dropped = {};
+      if (!keep) {
+        lastResult.included.forEach(function (item) { dropped[item.raw.id] = true; });
+      }
+      renderExport(lastEdition, lastResult);
+      syncPickAll(lastResult);
+      syncQueryState();
+    });
 
     $("all-sources").addEventListener("click", function () {
       Array.prototype.forEach.call(sourcesEl.querySelectorAll("input"), function (box) {
@@ -963,14 +1257,8 @@
     $("download").addEventListener("click", function () {
       var doc = exportDocument(exportEl);
       if (!doc) return;
-      var url = URL.createObjectURL(new Blob([doc], { type: "text/html;charset=utf-8" }));
-      var link = document.createElement("a");
-      link.href = url;
-      link.download = "events-newsletter-" + (pubDate.value || "edition") + ".html";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+      download(doc, "text/html;charset=utf-8",
+               "events-newsletter-" + (pubDate.value || "edition") + ".html");
     });
 
     /* -------------------------------------------------------------- start up ---- */
@@ -1004,6 +1292,9 @@
       collisionKey: collisionKey, groupByDay: groupByDay, plural: plural,
       buildListing: buildListing, decorate: decorate, exportDocument: exportDocument,
       inlineStyles: inlineStyles, exportStylesheet: exportStylesheet, readable: readable,
+      zonedToUTC: zonedToUTC, utcStamp: utcStamp, deadlineEvent: deadlineEvent,
+      deadlineIcs: deadlineIcs, googleCalendarUrl: googleCalendarUrl,
+      icsText: icsText, foldLine: foldLine, sentence: sentence,
       EXPORT_STYLES: EXPORT_STYLES,
       partition: partition, hoursBetween: hoursBetween
     };

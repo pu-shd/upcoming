@@ -288,3 +288,76 @@ def test_the_published_schema_validates_the_published_feeds(registry, tmp_path):
     for path, body in tree.files.items():
         if path.startswith(("feeds/", "combos/")):
             assert list(validator.iter_errors(json.loads(body))) == [], path
+
+
+# --------------------------------------------------------------------------------------
+# The simulator's newer controls
+# --------------------------------------------------------------------------------------
+
+
+def test_the_received_table_has_a_column_for_including_an_event() -> None:
+    """The editor curates the export without changing what the feed says was ingested."""
+    assert 'id="pick-all"' in SIMULATOR
+    assert 'class="pick"' in SIMULATOR
+    header = re.search(r"<thead>.*?</thead>", SIMULATOR, re.S).group(0)
+    assert header.count("<th ") == 7, "six data columns plus the include box"
+    assert 'aria-label="Include every event in the export"' in header
+
+
+def test_the_include_column_only_changes_the_export() -> None:
+    """Stated on the page, because a control that silently changed both views would be
+    the natural misreading."""
+    assert "does not change either way" in SIMULATOR
+
+
+def test_the_export_buttons_sit_below_the_listing() -> None:
+    """You decide to copy after reading it, not before."""
+    preview = SIMULATOR.index('id="export"')
+    for control in ('id="copy"', 'id="download"'):
+        assert SIMULATOR.index(control) > preview, f"{control} is above the preview"
+
+
+def test_the_export_section_is_named_for_what_it_produces() -> None:
+    assert "<h2>Email and Events Page Export</h2>" in SIMULATOR
+
+
+def test_the_export_says_how_much_of_the_edition_it_holds() -> None:
+    """Otherwise a deselected event looks like a missing one."""
+    assert 'id="export-count"' in SIMULATOR
+
+
+def test_the_deadline_is_a_control_rather_than_a_dead_string() -> None:
+    """Retyping a date into a calendar is exactly the transcription this project removes.
+
+    Built by the script rather than written into the page, because the deadline changes
+    with every edition -- so the guard is that the styles it needs exist.
+    """
+    for rule in (".deadline-toggle", ".deadline-menu", ".deadline-choice"):
+        assert rule in STYLE, rule
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert "deadlineControl" in code
+    assert 'setAttribute("aria-expanded"' in code
+
+
+def test_the_deadline_menu_can_be_dismissed() -> None:
+    """A menu left stranded open over the page is worse than no menu."""
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert '"Escape"' in code
+    assert 'document.addEventListener("click", close)' in code
+
+
+def test_the_calendar_link_opens_safely() -> None:
+    """It leaves the site, so it gets `rel=noopener`."""
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert 'setAttribute("rel", "noopener")' in code
+
+
+def test_one_download_helper_serves_both_files() -> None:
+    """The listing and the calendar file take the same route out.
+
+    Two copies of blob-create/click/revoke is where one of them ends up leaking the URL
+    it made.
+    """
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert code.count("URL.createObjectURL") == 1
+    assert code.count("URL.revokeObjectURL") == 1
