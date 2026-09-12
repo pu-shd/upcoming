@@ -96,6 +96,19 @@
 
   /* ---------------------------------------------------------------- the edition --- */
 
+  /**
+   * The publication date of the next edition that has not gone out yet.
+   *
+   * Not simply this week's Monday, which is what the reset used to offer: on a Saturday
+   * that is an edition published five days ago covering a week that ends tomorrow. The
+   * useful default is the edition somebody is composing, which is the next one to publish.
+   */
+  function nextEditionDate(nowStamp, publicationTime) {
+    var monday = weekStartFor(nowStamp.slice(0, 10));
+    var publishesAt = monday + "T" + normalizeTime(publicationTime, "12:00:00");
+    return nowStamp >= publishesAt ? addDays(monday, 7) : monday;
+  }
+
   /** The deadline the standard schedule implies: the Tuesday before the week. */
   function defaultDeadlineDate(publicationDate) {
     return addDays(weekStartFor(publicationDate), -6);
@@ -308,19 +321,24 @@
     included.sort(byStart);
     excluded.sort(byStart);
 
-    var seen = {};
-    var collisions = 0;
+    /* Grouped rather than counted, so the note can show *which* events look alike. A
+       bare number tells an editor there is a duplicate and not where to look for it. */
+    var byKey = {};
     included.forEach(function (item) {
       var key = collisionKey(item);
-      if (seen[key]) collisions += 1;
-      seen[key] = true;
+      byKey[key] = byKey[key] || [];
+      byKey[key].push(item);
     });
+    var groups = Object.keys(byKey)
+      .map(function (key) { return byKey[key]; })
+      .filter(function (group) { return group.length > 1; });
 
     return {
       included: included,
       excluded: excluded,
       malformed: malformed,
-      collisions: collisions,
+      collisionGroups: groups,
+      collisions: groups.reduce(function (n, g) { return n + g.length - 1; }, 0),
       placeholders: included.filter(function (i) { return i.placeholder; }).length
     };
   }
@@ -979,6 +997,38 @@
       entry(details, "Coverage window", edition.coverageStart + " to " + edition.coverageEnd);
     }
 
+    /** An event's title, linked to its page when the feed carries one. */
+    function eventLink(item) {
+      if (!item.urlRef) {
+        return document.createTextNode(item.title || "(no title)");
+      }
+      var link = document.createElement("a");
+      link.href = item.urlRef;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = item.title || "(no title)";
+      return link;
+    }
+
+    /** The sponsors, each linked to its own unit, as the export does. */
+    function sponsorCell(item) {
+      var td = document.createElement("td");
+      item.sponsors.forEach(function (sponsor, index) {
+        if (index) td.appendChild(document.createTextNode(", "));
+        if (!sponsor.home) {
+          td.appendChild(document.createTextNode(sponsor.label));
+          return;
+        }
+        var link = document.createElement("a");
+        link.href = sponsor.home;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = sponsor.label;
+        td.appendChild(link);
+      });
+      return td;
+    }
+
     function cell(row, text, className) {
       var td = document.createElement("td");
       td.textContent = text;
@@ -1031,17 +1081,19 @@
         if (dropped[item.raw.id]) row.classList.add("dropped");
 
         cell(row, prettyStamp(item.startTime), "when");
-        var title = cell(row, item.title || "(no title)");
+        var title = document.createElement("td");
+        title.appendChild(eventLink(item));
         if (item.placeholder) {
           var flag = document.createElement("span");
           flag.className = "placeholder-flag";
           flag.textContent = " — no title yet";
           title.appendChild(flag);
         }
+        row.appendChild(title);
         cell(row, item.series);
         cell(row, item.speakers.join("; "));
         cell(row, item.location);
-        cell(row, item.sponsors.map(function (x) { return x.label; }).join(", "));
+        row.appendChild(sponsorCell(item));
         body.appendChild(row);
       });
       syncPickAll(result);
@@ -1071,12 +1123,69 @@
       rows.forEach(function (item) {
         var row = document.createElement("tr");
         cell(row, item.malformedStart ? (item.startTime || "(missing)") : prettyStamp(item.startTime), "when");
-        cell(row, item.title || "(no title)");
+        var exTitle = document.createElement("td");
+        exTitle.appendChild(eventLink(item));
+        row.appendChild(exTitle);
         cell(row, item.series);
-        cell(row, item.sponsors.map(function (x) { return x.label; }).join(", "));
+        row.appendChild(sponsorCell(item));
         cell(row, item.malformedStart ? "Unreadable start time" : item.reason, "reason");
         body.appendChild(row);
       });
+    }
+
+    /**
+     * The repeated-talk note, openable to show which events it means.
+     *
+     * A count on its own tells an editor a duplicate exists and not where to look, which
+     * leaves them scanning the table for it -- the work the note was meant to save.
+     */
+    function renderCollisions(result) {
+      var host = $("collisions");
+      host.replaceChildren();
+      var groups = result.collisionGroups || [];
+      host.hidden = groups.length === 0;
+      if (!groups.length) return;
+
+      var repeats = result.collisions;
+      var details = document.createElement("details");
+      details.className = "collisions";
+
+      var summary = document.createElement("summary");
+      summary.textContent =
+        repeats + " event" + (repeats === 1 ? "" : "s") + " look like the same talk listed " +
+        "by more than one selected source; the feeds do not de-duplicate, so each appears";
+      details.appendChild(summary);
+
+      groups.forEach(function (group) {
+        var wrap = document.createElement("div");
+        wrap.className = "collision";
+
+        var when = document.createElement("p");
+        when.className = "collision-when";
+        when.textContent = prettyStamp(group[0].startTime);
+        wrap.appendChild(when);
+
+        var list = document.createElement("ul");
+        group.forEach(function (item) {
+          var li = document.createElement("li");
+          li.appendChild(eventLink(item));
+          var who = document.createElement("span");
+          who.className = "reason";
+          // Named rather than slugged, and the *reason* they matched is spelled out: for
+          // a synthesized title that is the speaker, not the title, and saying so stops
+          // the match looking arbitrary.
+          who.textContent = " — " +
+            item.sponsors.map(function (x) { return x.label; }).join(", ") +
+            (item.placeholder && item.names.length
+              ? "; matched on the speaker, since neither title is announced yet"
+              : "");
+          li.appendChild(who);
+          list.appendChild(li);
+        });
+        wrap.appendChild(list);
+        details.appendChild(wrap);
+      });
+      host.appendChild(details);
     }
 
     function renderExport(edition, result) {
@@ -1191,12 +1300,9 @@
           notes.push(result.malformed.length + " event(s) have an unreadable start time " +
                      "and were left out of both lists rather than guessed at");
         }
-        if (result.collisions) {
-          notes.push(result.collisions + " event(s) look like the same talk listed by more " +
-                     "than one selected source; the feeds do not de-duplicate, so both appear");
-        }
         setStatus(notes.length ? "Note: " + notes.join("; ") + "." : "",
                   notes.length ? "warn" : null);
+        renderCollisions(result);
       });
     }
 
@@ -1209,11 +1315,11 @@
     }
 
     function resetToNextEdition() {
-      var today = new Date();
-      var iso = today.getFullYear() + "-" +
-        String(today.getMonth() + 1).padStart(2, "0") + "-" +
-        String(today.getDate()).padStart(2, "0");
-      pubDate.value = weekStartFor(iso);
+      var now = new Date();
+      var pad = function (n) { return String(n).padStart(2, "0"); };
+      var stamp = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" +
+        pad(now.getDate()) + "T" + pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":00";
+      pubDate.value = nextEditionDate(stamp);
       pubTime.value = "12:00";
       deadlineTime.value = "12:00";
       deriveDeadline();
@@ -1345,6 +1451,7 @@
     module.exports = {
       addDays: addDays, weekStartFor: weekStartFor, weekdayName: weekdayName,
       defaultDeadlineDate: defaultDeadlineDate, resolveEdition: resolveEdition,
+      nextEditionDate: nextEditionDate,
       phaseAt: phaseAt, inWindow: inWindow, prettyClock: prettyClock,
       prettyDate: prettyDate, locationText: locationText, speakerText: speakerText,
       speakerNames: speakerNames,

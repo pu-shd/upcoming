@@ -1202,3 +1202,100 @@ def test_the_export_still_marks_a_placeholder_title(real_listing) -> None:  # ty
     flags = [n for n in real_listing if n["cls"] == "placeholder-flag"]
     assert flags
     assert "replace before sending" in flags[0]["text"]
+
+
+# --------------------------------------------------------------------------------------
+# Which edition the reset offers
+# --------------------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    ("now", "expected", "why"),
+    [
+        ("2026-09-07T09:00:00", "2026-09-07", "Monday morning: today's edition is still to come"),
+        ("2026-09-07T11:59:00", "2026-09-07", "a minute before it publishes"),
+        ("2026-09-07T12:00:00", "2026-09-14", "the moment it publishes, the next one is next"),
+        ("2026-09-09T15:00:00", "2026-09-14", "midweek"),
+        ("2026-09-12T10:00:00", "2026-09-14", "Saturday"),
+        ("2026-09-13T23:59:00", "2026-09-14", "the last minute of the week"),
+        ("2026-12-28T09:00:00", "2026-12-28", "across a year boundary"),
+    ],
+)
+def test_the_reset_offers_the_next_edition_not_the_current_week(
+    now: str, expected: str, why: str
+) -> None:
+    """It used to offer this week's Monday.
+
+    On a Saturday that is an edition published five days ago covering a week that ends
+    tomorrow — the one edition nobody is composing.
+    """
+    assert node(f'console.log(JSON.stringify(S.nextEditionDate("{now}")));') == expected, why
+
+
+def test_the_reset_respects_a_different_publication_time() -> None:
+    """The hour it flips over is the publication hour, not a hardcoded noon."""
+    assert (
+        node('console.log(JSON.stringify(S.nextEditionDate("2026-09-07T10:30:00", "09:00")));')
+        == "2026-09-14"
+    )
+    assert (
+        node('console.log(JSON.stringify(S.nextEditionDate("2026-09-07T10:30:00", "16:00")));')
+        == "2026-09-07"
+    )
+
+
+# --------------------------------------------------------------------------------------
+# Saying which events look like the same talk
+# --------------------------------------------------------------------------------------
+
+
+def test_a_repeat_comes_back_as_the_events_not_just_a_count(real_edition, tree) -> None:  # type: ignore[no-untyped-def]
+    """A count tells an editor a duplicate exists and not where to look for it, which
+    leaves them scanning the table — the work the note was meant to save."""
+    groups = node(f"""
+        const fs = require("fs");
+        const root = {json.dumps(str(tree))};
+        const manifest = JSON.parse(fs.readFileSync(root + "/status.json"));
+        const feeds = {{}};
+        manifest.feeds.filter((f) => f.path.indexOf("feeds/") === 0)
+          .forEach((f) => {{ feeds[f.path.split("/")[1]] = f; }});
+        let events = [];
+        Object.keys(feeds).forEach((slug) => {{
+          if (feeds[slug].status === "disabled") return;
+          const file = root + "/feeds/" + slug + "/events.json";
+          events = events.concat(JSON.parse(fs.readFileSync(file)));
+        }});
+        const edition = S.resolveEdition({{publicationDate: "2026-09-08"}});
+        const r = S.partition(events, edition, "engineering-newsletter", feeds);
+        console.log(JSON.stringify(r.collisionGroups.map((g) => g.map((i) => ({{
+          startTime: i.startTime, title: i.title, placeholder: i.placeholder,
+          sponsors: i.sponsors.map((x) => x.label)
+        }})))));
+    """)
+    assert len(groups) == 1, "the ai/materials pair"
+    pair = groups[0]
+    assert len(pair) == 2
+    assert {s for item in pair for s in item["sponsors"]} == {
+        "Princeton AI Lab",
+        "Princeton Materials Institute",
+    }
+    assert len({item["startTime"] for item in pair}) == 1, "one time, two listings"
+    assert all(item["placeholder"] for item in pair), "both titles are synthesized"
+
+
+def test_the_repeat_count_and_the_groups_agree(real_edition) -> None:  # type: ignore[no-untyped-def]
+    """The count is derived from the groups rather than tallied separately, so the
+    summary cannot say two while the list shows three."""
+    assert real_edition["collisions"] == 1
+
+
+def test_an_edition_with_no_repeats_offers_nothing_to_expand(tree) -> None:  # type: ignore[no-untyped-def]
+    groups = node(f"""
+        const fs = require("fs");
+        const root = {json.dumps(str(tree))};
+        const events = JSON.parse(fs.readFileSync(root + "/feeds/orfe/events.json"));
+        const edition = S.resolveEdition({{publicationDate: "2026-09-08"}});
+        const r = S.partition(events, edition, null, {{orfe: {{label: "ORFE"}}}});
+        console.log(JSON.stringify({{groups: r.collisionGroups.length, count: r.collisions}}));
+    """)
+    assert groups == {"groups": 0, "count": 0}

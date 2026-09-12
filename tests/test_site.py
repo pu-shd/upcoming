@@ -474,3 +474,39 @@ def test_including_an_event_does_not_erase_its_grade() -> None:
     code = (SITE / "simulator.js").read_text(encoding="utf-8")
     assert 'row.classList.toggle("dropped"' in code
     assert "row.className = dropped" not in code
+
+
+def test_the_received_table_links_its_events_and_sponsors() -> None:
+    """The same links the export carries. Reading the table and reading the listing
+    should not be different experiences."""
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert "function eventLink(" in code
+    assert "function sponsorCell(" in code
+    # Used by both tables, so the excluded rows are navigable too.
+    assert code.count("eventLink(item)") >= 2
+    assert code.count("sponsorCell(item)") >= 2
+    assert 'link.rel = "noopener"' in code
+
+
+def test_the_repeat_note_can_be_opened() -> None:
+    """A count alone leaves an editor scanning the table for the duplicate."""
+    assert 'id="collisions"' in SIMULATOR
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert "function renderCollisions(" in code
+    assert 'document.createElement("details")' in code
+    assert ".collisions" in STYLE
+
+
+def test_the_advanced_panel_carries_no_stale_worked_example() -> None:
+    """It explained the schedule using a specific 2026 holiday week, which is the kind of
+    text that quietly goes wrong a year later."""
+    assert "the week of 7 September 2026" not in SIMULATOR
+    assert "Tuesday of the week before" not in SIMULATOR
+    # The controls it described are still there.
+    for control in ("pubtime", "deadlinedate", "deadlinetime", "now"):
+        assert f'id="{control}"' in SIMULATOR
+
+
+def test_the_column_is_wide_enough_for_eight_columns() -> None:
+    """The received table grew a state column and full unit names."""
+    assert "max-width: 72rem" in STYLE
