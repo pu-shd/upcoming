@@ -37,7 +37,7 @@ jobs:
       # dependency rather than a convenience. Installed here so the check runs for real:
       # a test that skips itself when a tool is missing reports green while checking
       # nothing, which is the failure this repository is built around.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: '22'
       - run: pip install -e '.[dev]'
