@@ -3480,59 +3480,6 @@
     "mappingConflict": false
   },
   {
-    "id": "citp:ps_events:5271:delta:0",
-    "guid": "ps_events:5271:delta:0",
-    "sources": [
-      "citp"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-15T20:30:00Z",
-    "endsAt": "2026-10-15T22:00:00Z",
-    "startTime": "2026-10-15T16:30:00",
-    "endTime": "2026-10-15T18:00:00",
-    "timezone": "America/New_York",
-    "title": "A.I. x Journalism: How to Report from the Digital Wild West",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Artificial Intelligence,Data Science & Society",
-    "tags": [
-      "ai",
-      "data-science"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Artificial Intelligence",
-      "Data Science & Society"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://citp.princeton.edu/events/2026/ai-x-journalism-how-report-digital-wild-west",
-    "content": "What can A.I. do for reporters and what are its limits? How has open-source investigation blown open some of the most essential stories of our time? What data sets can you trust, and how do reporters secure them? Please join the Program in Journalism and the Center for Information Technology Policy for this important conversation, a continuation of our AI x Journalism series.In this panel discussion, Arvind Narayanan (Computer Science and Center for Information Technology Policy), Visiting Ferris Professor Christo Grozev (",
-    "rawEventDetails": "Details Event Description What can A.I. do for reporters and what are its limits? How has open-source investigation blown open some of the most essential stories of our time? What data sets can you trust, and how do reporters secure them? Please join the Program in Journalism and the Center for Information Technology Policy for this important conversation, a continuation of our AI x Journalism series. In this panel discussion, Arvind Narayanan ( Computer Science and Center for Information Technology Policy ), Visiting Ferris Professor Christo Grozev ( investigative journalist and documentary filmmaker ), Dylan Freedman ( The New York Times ), and Madelyne Xiao ( Computer Science ) for a discussion of how to reliably use the tools available to reporters at the edge of technology. Moderated by Eliza Griswold ( Journalism ). Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsor Humanities Council's Program in Journalism",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "A.I. x Journalism: How to Report from the Digital Wild West",
-    "locationRaw": "TBA",
-    "mappingRules": [
-      "citp:title"
-    ],
-    "locationRule": "sentinel",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4181:delta:0",
     "guid": "ps_events:4181:delta:0",
     "sources": [
