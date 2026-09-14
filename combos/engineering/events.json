@@ -1,57 +1,5 @@
 [
   {
-    "id": "ece:ps_events:10876:delta:0",
-    "guid": "ps_events:10876:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-08-13T14:00:00Z",
-    "endsAt": "2026-08-13T16:00:00Z",
-    "startTime": "2026-08-13T10:00:00",
-    "endTime": "2026-08-13T12:00:00",
-    "timezone": "America/New_York",
-    "title": "Electrochemically Reconfigurable THz Metasurfaces",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Final Public Oral Examinations,Final Public Orals",
-    "tags": [
-      "fpo"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Final Public Oral Examinations",
-      "Final Public Orals"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "EQUAD",
-      "id": "",
-      "detail": "J323"
-    },
-    "urlRef": "https://ece.princeton.edu/events/electrochemically-reconfigurable-thz-metasurfaces",
-    "content": "The terahertz (THz) and sub-THz frequency bands are emerging as key components of next-generation wireless communications, sensing, and imaging technologies. These frequency ranges offer substantially increased bandwidth as well as enhanced spatial resolution for applications such as high bit-rate communications or high-resolution imaging and spectroscopy. Despite these advantages, the adoption of THz systems remains hindered by the lack of effective sources, modulators, and detectors. This gap stems largely from fundamental",
-    "rawEventDetails": "Speaker Jonathan Scott Details Event Description The terahertz (THz) and sub-THz frequency bands are emerging as key components of next-generation wireless communications, sensing, and imaging technologies. These frequency ranges offer substantially increased bandwidth as well as enhanced spatial resolution for applications such as high bit-rate communications or high-resolution imaging and spectroscopy. Despite these advantages, the adoption of THz systems remains hindered by the lack of effective sources, modulators, and detectors. This gap stems largely from fundamental materials and device challenges that prevent conventional silicon CMOS technologies from scaling effectively to THz frequencies. Although a variety of alternative approaches based on material platforms such as two-dimensional (2D) materials or phase-change materials have been demonstrated, these technologies typically suffer from limited modulation depth or fabrication and scalability challenges. This thesis addresses these limitations by introducing a novel class of reconfigurable THz devices based on electrochemically active metasurfaces. We first establish the capability of a class of materials known as organic mixed ionic-electronic conductors (OMIECs) to achieve substantial modulation of impinging THz radiation through electrochemical doping and dedoping via the injection of counterions. We then fabricate patterned OMIEC films into a variety of metasurface geometries that enable THz wave manipulation, including polarization control, broadband frequency-selective filtering, and beam steering. By dynamically tuning the conductivity of the OMIEC films through electrochemical ion injection, these metasurfaces exhibit ontinuous and reversible reconfigurability across multiple intermediate states. This thesis establishes a pathway toward large-area THz wave manipulation using electrochemically active metasurfaces. Adviser: Barry Rand",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Electrochemically Reconfigurable THz Metasurfaces",
-    "locationRaw": "EQUAD J323",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2741:delta:0",
     "guid": "ps_events:2741:delta:0",
     "sources": [
