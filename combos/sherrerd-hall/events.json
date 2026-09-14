@@ -1201,6 +1201,64 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5281:delta:0",
+    "guid": "ps_events:5281:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-27T16:15:00Z",
+    "endsAt": "2026-10-27T17:15:00Z",
+    "startTime": "2026-10-27T12:15:00",
+    "endTime": "2026-10-27T13:15:00",
+    "timezone": "America/New_York",
+    "title": "An Artificial Intelligence Talk by Eamon Duede",
+    "speakers": [
+      {
+        "name": "Eamon Duede",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Eamon Duede",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/eamon-duede-0",
+    "content": "Talk information: TBABio:Eamon Duede is an assistant professor of philosophy at Purdue University with a joint appointment in the Data Science and Learning division at Argonne National Laboratory. He is an epistemologist of science whose theoretical work in the philosophy of science focuses on the epistemology of emerging technologies, principally artificial intelligence (AI). His empirical work investigates and evaluates roles and capabilities of AI in enhancing the effectiveness and scalability of innovative, data-driven, and algorithm-assisted operational",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Eamon Duede is an assistant professor of philosophy at Purdue University with a joint appointment in the Data Science and Learning division at Argonne National Laboratory. He is an epistemologist of science whose theoretical work in the philosophy of science focuses on the epistemology of emerging technologies, principally artificial intelligence (AI). His empirical work investigates and evaluates roles and capabilities of AI in enhancing the effectiveness and scalability of innovative, data-driven, and algorithm-assisted operational frameworks for scientific discovery. Duede is also concerned with the dynamics of discovery across disciplines, geographic space, and time. Here, he uses the computational techniques of \u2018data science\u2019 to study the flow of knowledge and influence between communities of experts and other audiences, and studies how these can be catalyzed or stymied by institutional and technological factors. Prior to joining Purdue, Eamon was a postdoctoral fellow at Harvard University, affiliated with the Harvard Business School AI Institute and the Embedded EthiCS program in the philosophy and computer science departments. He earned a joint Ph.D. in philosophy and conceptual and historical studies of science from the University of Chicago, where he was also an NSF-funded fellow at the Pritzker School of Molecular Engineering. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Eamon Duede",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4066:delta:0",
     "guid": "ps_events:4066:delta:0",
     "sources": [
