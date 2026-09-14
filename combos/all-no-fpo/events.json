@@ -1113,6 +1113,59 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5286:delta:0",
+    "guid": "ps_events:5286:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-15T19:00:00Z",
+    "endsAt": "2026-09-15T20:00:00Z",
+    "startTime": "2026-09-15T15:00:00",
+    "endTime": "2026-09-15T16:00:00",
+    "timezone": "America/New_York",
+    "title": "TechSoc Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/techsoc-reading-group-0",
+    "content": "The TechSoc Reading Group intends to focus some of the fall 2026 sessions on AI & Safety. We will begin with a discussion of Sayash & Arvind's",
+    "rawEventDetails": "Details Event Description The TechSoc Reading Group intends to focus some of the fall 2026 sessions on AI & Safety. We will begin with a discussion of Sayash & Arvind's recent take on AI safety incidents. We'll pair that with Ted Chiang's 2017 essay on AI safety and a humorous piece in the New Yorker. Contact Mihir Kshirsagar at [email protected] with any questions. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "TechSoc Reading Group",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4056:delta:0",
     "guid": "ps_events:4056:delta:0",
     "sources": [
