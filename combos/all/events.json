@@ -2409,12 +2409,12 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "EQUAD",
+      "name": "Engineering Quadrangle",
       "id": "",
       "detail": "B205"
     },
     "urlRef": "https://ece.princeton.edu/events/synthetic-data-real-benefits-reliable-inference-and-principled-model-steering",
-    "content": "ECE KORHAMMER SEMINAR SERIESAbstractAI models are powerful, yet their use in practice raises two fundamental challenges. The first is trust: how can we make reliable inferences from black-box models when we only have a few reference examples to rely on? The second is steerability: how can we guide AI generation when we can recognize the outputs we prefer but cannot precisely quantify our preferences? In this talk, I will show how statistics and AI can empower one another to tackle both challenges.The first part",
+    "content": "AbstractAI models are powerful, yet their use in practice raises two fundamental challenges. The first is trust: how can we make reliable inferences from black-box models when we only have a few reference examples to rely on? The second is steerability: how can we guide AI generation when we can recognize the outputs we prefer but cannot precisely quantify our preferences? In this talk, I will show how statistics and AI can empower one another to tackle both challenges.The first part focuses on reliable inference under limited data. I'll introduce",
     "rawEventDetails": "Speaker Yaniv Romano Affiliation Technion- Israel Institute of Technology Details Event Description ECE KORHAMMER SEMINAR SERIES Abstract AI models are powerful, yet their use in practice raises two fundamental challenges. The first is trust: how can we make reliable inferences from black-box models when we only have a few reference examples to rely on? The second is steerability: how can we guide AI generation when we can recognize the outputs we prefer but cannot precisely quantify our preferences? In this talk, I will show how statistics and AI can empower one another to tackle both challenges. The first part focuses on reliable inference under limited data. I'll introduce General Synthetic-Powered Inference (GESPI), a framework that safely enhances the sample efficiency of any statistical inference procedure\u2014such as conformal prediction and hypothesis testing\u2014by adaptively leveraging synthetic data. GESPI provides distribution-free error control regardless of synthetic-data quality while improving utility when those data are informative. I'll demonstrate its applicability across domains ranging from predictive uncertainty quantification to principled win-rate evaluation of large reasoning models. I'll also discuss how these ideas can support large-scale scientific discovery with false discovery rate control. In the second part, I'll introduce Preference-based Metropolis-Hastings (Pref-MH): a model-steering framework that leverages pairwise votes from an LLM judge to generate data satisfying complex properties of interest. Pref-MH exploits a novel connection between MH and the Bradley-Terry preference model. This connection enables rigorous steering of a base AI generator toward a target distribution that favors outputs preferred by the judge, without ever needing to estimate the judge's latent reward. Finally, I'll demonstrate Pref-MH in molecular design and show how the resulting synthetic data improve downstream inference when incorporated into GESPI. Bio Yaniv Romano is an associate professor in the Departments of Electrical and Computer Engineering and Computer Science at the Technion. He is also affiliated with NVIDIA as a visiting professor. Previously, he was a postdoctoral scholar in the Department of Statistics at Stanford University. Yaniv holds a PhD, an MSc, and a BSc in electrical engineering, all from the Technion. His super-resolution technology, invented with Peyman Milanfar, has been integrated into Google\u2019s flagship products, including Pixel phones. His uncertainty quantification method, developed with Emmanuel Cand\u00e8s, was used by The Washington Post to estimate outstanding votes during the U.S. presidential election. Yaniv has received several honors and awards, including an ERC Starting Grant, the SIAG/IS Early Career Prize, the Sheila Samson Prime Minister\u2019s Prize (Researcher Recruitment Prize), the IEEE Signal Processing Society Best Paper Award, the Alon Scholarship, the Krill Prize for Excellence in Scientific Research, and the Henry Taub Prize for Academic Excellence. Yaniv is a member of the Young Israel Academy.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
@@ -2422,7 +2422,7 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Synthetic Data, Real Benefits: Reliable Inference and Principled Model Steering",
-    "locationRaw": "EQUAD B205",
+    "locationRaw": "B205 Engineering Quadrangle",
     "mappingRules": [
       "ece:summary-is-title"
     ],
@@ -3949,6 +3949,59 @@
       "cbe:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5246:delta:0",
+    "guid": "ps_events:5246:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-15T16:15:00Z",
+    "endsAt": "2026-10-15T17:15:00Z",
+    "startTime": "2026-10-15T12:15:00",
+    "endTime": "2026-10-15T13:15:00",
+    "timezone": "America/New_York",
+    "title": "William Pierson Field Lecture hosted by CITP",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center Convocation room",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/william-pierson-field-lecture-hosted-citp",
+    "content": "\u201cWe believe that excessive regulation of the AI sector could kill a transformative industry just as it\u2019s taking off,\u201d Vice President J.D. Vance told assembled heads of government in Paris, 2025. \u201cI'd like to see that deregulatory flavor making its way into a lot of these conversations.\u201dJust over a year later, the same Administration enforced export controls on a family of language models for the first time. It kicked off a summer of regulatory and legislative activity that culminated in frenzied efforts to nationalize, criminalize, condition, or pace the development of frontier",
+    "rawEventDetails": "Details Event Description \u201cWe believe that excessive regulation of the AI sector could kill a transformative industry just as it\u2019s taking off,\u201d Vice President J.D. Vance told assembled heads of government in Paris, 2025. \u201cI'd like to see that deregulatory flavor making its way into a lot of these conversations.\u201d Just over a year later, the same Administration enforced export controls on a family of language models for the first time. It kicked off a summer of regulatory and legislative activity that culminated in frenzied efforts to nationalize, criminalize, condition, or pace the development of frontier models\u2014and triggered a renewed culture war over access to the underlying model weights. A lot happened, but did it really change the contours of the debate? In this session, Ben Brooks will explore the deeper history of these proposals, asking what has changed, and what hasn\u2019t; how can we better assess the effects on development, distribution, or deployment of frontier capability; and are we still dodging the real question: how much risk is too much risk, and when will we know? Bio: Ben Brooks is an affiliate at the Berkman Klein Center, Harvard and the Head of Public Policy at Black Forest Labs, developer of the world\u2019s most popular open-weight AI models for pixels. Brooks scrutinizes the regulatory and legislative response to models, testifying on AI reform in federal, state, and international legislatures. Previously, Brooks championed the safe, open, and durable regulation of emerging technology at Stability AI, Uber, Coinbase, and Google's Wing\u2014America's first FAA-certified drone air carrier. He has worked with authorities on the ground in over 25 countries as they navigate complex reforms in high-stakes domains, from Washington to Mandalay. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "William Pierson Field Lecture hosted by CITP",
+    "locationRaw": "Friend Center Convocation room",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,

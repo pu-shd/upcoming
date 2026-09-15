@@ -659,6 +659,59 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5246:delta:0",
+    "guid": "ps_events:5246:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-15T16:15:00Z",
+    "endsAt": "2026-10-15T17:15:00Z",
+    "startTime": "2026-10-15T12:15:00",
+    "endTime": "2026-10-15T13:15:00",
+    "timezone": "America/New_York",
+    "title": "William Pierson Field Lecture hosted by CITP",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center Convocation room",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/william-pierson-field-lecture-hosted-citp",
+    "content": "\u201cWe believe that excessive regulation of the AI sector could kill a transformative industry just as it\u2019s taking off,\u201d Vice President J.D. Vance told assembled heads of government in Paris, 2025. \u201cI'd like to see that deregulatory flavor making its way into a lot of these conversations.\u201dJust over a year later, the same Administration enforced export controls on a family of language models for the first time. It kicked off a summer of regulatory and legislative activity that culminated in frenzied efforts to nationalize, criminalize, condition, or pace the development of frontier",
+    "rawEventDetails": "Details Event Description \u201cWe believe that excessive regulation of the AI sector could kill a transformative industry just as it\u2019s taking off,\u201d Vice President J.D. Vance told assembled heads of government in Paris, 2025. \u201cI'd like to see that deregulatory flavor making its way into a lot of these conversations.\u201d Just over a year later, the same Administration enforced export controls on a family of language models for the first time. It kicked off a summer of regulatory and legislative activity that culminated in frenzied efforts to nationalize, criminalize, condition, or pace the development of frontier models\u2014and triggered a renewed culture war over access to the underlying model weights. A lot happened, but did it really change the contours of the debate? In this session, Ben Brooks will explore the deeper history of these proposals, asking what has changed, and what hasn\u2019t; how can we better assess the effects on development, distribution, or deployment of frontier capability; and are we still dodging the real question: how much risk is too much risk, and when will we know? Bio: Ben Brooks is an affiliate at the Berkman Klein Center, Harvard and the Head of Public Policy at Black Forest Labs, developer of the world\u2019s most popular open-weight AI models for pixels. Brooks scrutinizes the regulatory and legislative response to models, testifying on AI reform in federal, state, and international legislatures. Previously, Brooks championed the safe, open, and durable regulation of emerging technology at Stability AI, Uber, Coinbase, and Google's Wing\u2014America's first FAA-certified drone air carrier. He has worked with authorities on the ground in over 25 countries as they navigate complex reforms in high-stakes domains, from Washington to Mandalay. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "William Pierson Field Lecture hosted by CITP",
+    "locationRaw": "Friend Center Convocation room",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:5",
     "guid": "ps_events:5261:delta:5",
     "sources": [
