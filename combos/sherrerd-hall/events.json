@@ -2032,7 +2032,7 @@
     "startTime": "2026-11-17T12:15:00",
     "endTime": "2026-11-17T13:15:00",
     "timezone": "America/New_York",
-    "title": "An Artificial Intelligence Talk by Eve Fleisig",
+    "title": "Crowdsourcing as Evaluation, Crowdsourcing as Intervention",
     "speakers": [
       {
         "name": "Eve Fleisig",
@@ -2059,23 +2059,23 @@
       "id": "",
       "detail": "306"
     },
-    "urlRef": "https://citp.princeton.edu/events/2026/eve-fleisig",
-    "content": "Talk information: TBABio:Eve Fleisig is a computer scientist whose work combines natural language processing (NLP) and AI ethics. She develops methods to ensure that language models benefit all users, when those users have diverse perspectives and varied needs. She holds a Ph.D. from Berkeley EECS, where she was advised by Dan Klein in the Berkeley NLP group; previously, she received a B.S.E. in computer science from Princeton University. Her research has been awarded an NSF Graduate Research Fellowship, Berkeley Chancellor\u2019s Fellowship, and Outstanding Paper",
+    "urlRef": "https://citp.princeton.edu/events/2026/eve-fleisig-crowdsourcing-evaluation-crowdsourcing-intervention",
+    "content": "AI chatbots personalize responses to users, but not all personalized responses are created equal. In this talk, Fleisig will introduce BIRDSEYE, a browser extension and research framework for evaluating issues in chatbot personalization. The BIRSDEYE browser extension facilitates crowdsourced data donation, allowing researchers to see what responses different chatbot users get to the same questions. We then use BIRDSEYE to evaluate issues that personalization can exacerbate, such as sycophancy, discrimination, and echo chambers. At the same time, the tool intervenes to expose the workings",
     "rawEventDetails": "Details Event Description Talk information: TBA Bio: Eve Fleisig is a computer scientist whose work combines natural language processing (NLP) and AI ethics. She develops methods to ensure that language models benefit all users, when those users have diverse perspectives and varied needs. She holds a Ph.D. from Berkeley EECS, where she was advised by Dan Klein in the Berkeley NLP group; previously, she received a B.S.E. in computer science from Princeton University. Her research has been awarded an NSF Graduate Research Fellowship, Berkeley Chancellor\u2019s Fellowship, and Outstanding Paper Awards at EMNLP and NAACL. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Eve Fleisig",
+    "summaryRaw": "Eve Fleisig - Crowdsourcing as Evaluation, Crowdsourcing as Intervention",
     "locationRaw": "Sherrerd Hall 306",
     "mappingRules": [
-      "citp:bare-person-name"
+      "citp:speaker-dash-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
