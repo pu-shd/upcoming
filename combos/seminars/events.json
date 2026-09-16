@@ -1880,6 +1880,62 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2771:delta:0",
+    "guid": "ps_events:2771:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-15T20:00:00Z",
+    "endsAt": "2026-10-15T21:00:00Z",
+    "startTime": "2026-10-15T16:00:00",
+    "endTime": "2026-10-15T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Control of Tissue Flows and Embryo Geometry in Avian Gastrulation",
+    "speakers": [
+      {
+        "name": "Mattia Serra",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Mattia Serra",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/control-tissue-flows-and-embryo-geometry-avian-gastrulation",
+    "content": "Embryonic tissues undergo coordinated flows during avian gastrulation to establish the body plan. Here, we elucidate how tens of thousands of cells coordinate their behaviors to sculpt the chick embryo\u2019s dynamic geometry (size and shape). Each of these two distinct geometric changes is associated with dynamic curves across which trajectories separate (kinematic repellers). Through physical modeling and experimental manipulations, we selectively eliminate either or both repellers in model and experiments, revealing their mechanistic origins. We find that embryo size is affected by the",
+    "rawEventDetails": "Speaker Mattia Serra Affiliation University of California, San Diego Details Event Description Embryonic tissues undergo coordinated flows during avian gastrulation to establish the body plan. Here, we elucidate how tens of thousands of cells coordinate their behaviors to sculpt the chick embryo\u2019s dynamic geometry (size and shape). Each of these two distinct geometric changes is associated with dynamic curves across which trajectories separate (kinematic repellers). Through physical modeling and experimental manipulations, we selectively eliminate either or both repellers in model and experiments, revealing their mechanistic origins. We find that embryo size is affected by the competition between extraembryonic epiboly and embryonic myosin-driven contraction\u2014which persists even when mesoderm induction is blocked. Instead, the characteristic shape change from circular to pear-shaped arises from myosin-driven cell intercalations in the mesendoderm, irrespective of epiboly. These findings elucidate modular mechanisms that independently regulate embryo size and shape during development. Refreshments available 15 minutes before indicated time of seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Control of Tissue Flows and Embryo Geometry in Avian Gastrulation",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3741:delta:0",
     "guid": "ps_events:3741:delta:0",
     "sources": [
