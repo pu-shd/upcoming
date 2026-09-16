@@ -2082,7 +2082,7 @@
     "startTime": "2026-09-21T12:10:00",
     "endTime": "2026-09-21T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by Francesca Ferlaino, University of Innsbruck",
+    "title": "When Crystals Flow: The Emergence of Supersolid Quantum States",
     "speakers": [
       {
         "name": "Francesca Ferlaino",
@@ -2107,23 +2107,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-francesca-ferlaino-university-innsbruck",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-when-crystals-flow-emergence-supersolid-quantum-states",
+    "content": "Title: When Crystals Flow: The Emergence of Supersolid Quantum States Abstract: The exploration of superfluidity has fascinated scientists for decades, spanning a wide range of systems\u2014from solids and liquids to gases, and even light. Traditionally, the study of superfluid order has been confined to spatially homogeneous systems, where uniform conditions provide a simpler framework for understanding this extraordinary quantum state. But what happens when superfluidity arises in systems with periodic density modulations? Can the",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsors Sarang Gopalakrishnan Waseem Bakr",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, Francesca Ferlaino (University of Innsbruck)",
+    "summaryRaw": "Princeton Quantum Colloquium: When Crystals Flow: The Emergence of Supersolid Quantum States, Francesca Ferlaino (University of Innsbruck)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
