@@ -252,9 +252,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "BioE",
       "id": "",
-      "detail": ""
+      "detail": "E105"
     },
     "urlRef": "https://bioengineering.princeton.edu/events/2026/refocusing-mammalian-synbio-speak-same-language-biology",
     "content": "Refreshments will be available 15 minutes prior to the start of the seminar.",
@@ -265,11 +265,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Refocusing Mammalian Synbio to Speak the Same Language as Biology",
-    "locationRaw": "TBD",
+    "locationRaw": "BioE E105",
     "mappingRules": [
       "bioengineering:summary-is-title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
