@@ -1258,8 +1258,8 @@
     "mappingConflict": false
   },
   {
-    "id": "citp:ps_events:5281:delta:0",
-    "guid": "ps_events:5281:delta:0",
+    "id": "citp:ps_events:4701:delta:0",
+    "guid": "ps_events:4701:delta:0",
     "sources": [
       "citp"
     ],
@@ -1269,7 +1269,7 @@
     "startTime": "2026-10-27T12:15:00",
     "endTime": "2026-10-27T13:15:00",
     "timezone": "America/New_York",
-    "title": "An Artificial Intelligence Talk by Eamon Duede",
+    "title": "Mathematical Communities in the Age of AI Generated Proof",
     "speakers": [
       {
         "name": "Eamon Duede",
@@ -1296,23 +1296,23 @@
       "id": "",
       "detail": "306"
     },
-    "urlRef": "https://citp.princeton.edu/events/2026/eamon-duede-0",
-    "content": "Talk information: TBABio:Eamon Duede is an assistant professor of philosophy at Purdue University with a joint appointment in the Data Science and Learning division at Argonne National Laboratory. He is an epistemologist of science whose theoretical work in the philosophy of science focuses on the epistemology of emerging technologies, principally artificial intelligence (AI). His empirical work investigates and evaluates roles and capabilities of AI in enhancing the effectiveness and scalability of innovative, data-driven, and algorithm-assisted operational",
-    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Eamon Duede is an assistant professor of philosophy at Purdue University with a joint appointment in the Data Science and Learning division at Argonne National Laboratory. He is an epistemologist of science whose theoretical work in the philosophy of science focuses on the epistemology of emerging technologies, principally artificial intelligence (AI). His empirical work investigates and evaluates roles and capabilities of AI in enhancing the effectiveness and scalability of innovative, data-driven, and algorithm-assisted operational frameworks for scientific discovery. Duede is also concerned with the dynamics of discovery across disciplines, geographic space, and time. Here, he uses the computational techniques of \u2018data science\u2019 to study the flow of knowledge and influence between communities of experts and other audiences, and studies how these can be catalyzed or stymied by institutional and technological factors. Prior to joining Purdue, Eamon was a postdoctoral fellow at Harvard University, affiliated with the Harvard Business School AI Institute and the Embedded EthiCS program in the philosophy and computer science departments. He earned a joint Ph.D. in philosophy and conceptual and historical studies of science from the University of Chicago, where he was also an NSF-funded fellow at the Pritzker School of Molecular Engineering. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "urlRef": "https://citp.princeton.edu/events/2026/eamon-duede-mathematical-communities-age-ai-generated-proof",
+    "content": "OpenAI's recent announcement of an AI-generated resolution of a Millennium Prize problem has prompted comparisons with AI\u2019s defeat of humans in other domains, and with them the worry that mathematics, like chess and Go, is about to be \"solved.\u201d This talk argues that this narrative rests on two mistaken assumptions: that AI has genuinely solved a mathematical problem, and that mathematics is only about solving problems. Against the first, we distinguish logical proof, which formal verification can certify, from intelligible proof, which conveys understanding. AI can pull these apart,",
+    "rawEventDetails": "Details Event Description OpenAI's recent announcement of an AI-generated resolution of a Millennium Prize problem has prompted comparisons with AI\u2019s defeat of humans in other domains, and with them the worry that mathematics, like chess and Go, is about to be \"solved.\u201d This talk argues that this narrative rests on two mistaken assumptions: that AI has genuinely solved a mathematical problem, and that mathematics is only about solving problems. Against the first, we distinguish logical proof, which formal verification can certify, from intelligible proof, which conveys understanding. AI can pull these apart, yielding certified answers that are not yet fruitful solutions. We present early empirical evidence that AI generated logical proofs erect formal mathematical edifices that are largely detached from those of the scholarly community, creating the possibility of wholly unintelligible and difficult or impossible to conceptually evaluate mathematical arguments. Against the second assumption, we argue that even genuine solutions would not exhaust mathematics. The discipline also aims at building concepts and theories, understanding, beauty, and sustaining a scholarly community. Rather than retreating to the view that mathematicians should simply \"keep playing,\" we reject the game framing altogether. The real question is not whether AI will defeat mathematicians, but which mathematical ends we want it to serve. Bio: Eamon Duede is assistant professor of philosophy at Purdue University with a joint appointment in the Data Science and Learning division at Argonne National Laboratory. He is an epistemologist of science whose theoretical work in the philosophy of science focuses on the epistemology of emerging technologies, principally artificial intelligence (AI). His empirical work investigates and evaluates roles and capabilities of AI in enhancing the effectiveness and scalability of innovative, data-driven, and algorithm-assisted operational frameworks for scientific discovery. Duede is also concerned with the dynamics of discovery across disciplines, geographic space, and time. Here, he uses the computational techniques of \u2018data science\u2019 to study the flow of knowledge and influence between communities of experts and other audiences, and studies how these can be catalyzed or stymied by institutional and technological factors. Prior to joining Purdue, Duede was a postdoctoral fellow at Harvard University, affiliated with the Harvard Business School AI Institute and the Embedded EthiCS program in the philosophy and computer science departments. He earned a joint Ph.D. in philosophy and conceptual and historical studies of science from the University of Chicago, where he was also an NSF-funded fellow at the Pritzker School of Molecular Engineering. This talk will be livestreamed and recorded. The recording will be posted to the CITP website, the CITP YouTube channel and the University Media Central channel. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Eamon Duede",
+    "summaryRaw": "Eamon Duede - Mathematical Communities in the Age of AI Generated Proof",
     "locationRaw": "Sherrerd Hall 306",
     "mappingRules": [
-      "citp:bare-person-name"
+      "citp:speaker-dash-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {

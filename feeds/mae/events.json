@@ -224,6 +224,58 @@
     "mappingConflict": false
   },
   {
+    "id": "mae:ps_events:4856:delta:0",
+    "guid": "ps_events:4856:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-05T21:00:00Z",
+    "endsAt": "2026-10-05T23:30:00Z",
+    "startTime": "2026-10-05T17:00:00",
+    "endTime": "2026-10-05T19:30:00",
+    "timezone": "America/New_York",
+    "title": "Space Cluster Fall (Kick-Off) Symposium",
+    "speakers": [
+      {
+        "name": "Carlos Westhelle",
+        "affiliation": "NASA Johnson Space Center"
+      }
+    ],
+    "speaker": "Carlos Westhelle, NASA Johnson Space Center",
+    "affiliation": "NASA Johnson Space Center",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Commons",
+      "id": "",
+      "detail": "D301"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/space-cluster-fall-kick-symposium",
+    "content": "Bio: Mr. Carlos Westhelle has more than 25 years of experience at NASA Johnson Space Center (JSC). He holds a Bachelor of Science in Aeronautical and Astronautical Engineering from the University of Illinois at Urbana-Champaign and an Executive MBA from the Naval Postgraduate School. He began his career in the Aeroscience and Flight Mechanics Division and later served as Technical Assistant for Strategic Integration in both the Engineering Directorate and the Exploration Integration and Science Directorate. In these roles, he led the development of domain implementation plans",
+    "rawEventDetails": "Details Event Description Bio: Mr. Carlos Westhelle has more than 25 years of experience at NASA Johnson Space Center (JSC). He holds a Bachelor of Science in Aeronautical and Astronautical Engineering from the University of Illinois at Urbana-Champaign and an Executive MBA from the Naval Postgraduate School. He began his career in the Aeroscience and Flight Mechanics Division and later served as Technical Assistant for Strategic Integration in both the Engineering Directorate and the Exploration Integration and Science Directorate. In these roles, he led the development of domain implementation plans and helped establish research and development priorities that enable exploration and science missions. He subsequently served as Manager of the Exploration Technology Office and as the JSC Chief Technologist, providing leadership, technical direction, and strategic planning for the Center\u2019s technology portfolio, including partnerships and technology transfer efforts. From September 2021 to July 2025, he served as the Engineering Directorate\u2019s Chief of the Aeroscience and Flight Mechanics Division. Following a brief break in government service, Mr. Westhelle worked within the local private space industry before returning to JSC. Over the course of his career, he has been recognized with numerous group achievement awards, JSC Director\u2019s Commendation, Exceptional Service Medal, Outstanding Leadership Medal, and the Silver Snoopy Award.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Space Cluster Fall (Kick-Off) Symposium",
+    "locationRaw": "D301 Commons",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4751:delta:0",
     "guid": "ps_events:4751:delta:0",
     "sources": [
