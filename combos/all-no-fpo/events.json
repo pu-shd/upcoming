@@ -2071,6 +2071,57 @@
     "mappingConflict": false
   },
   {
+    "id": "robotics:ps_events:541:delta:0",
+    "guid": "ps_events:541:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T15:00:00Z",
+    "endsAt": "2026-09-25T16:00:00Z",
+    "startTime": "2026-09-25T11:00:00",
+    "endTime": "2026-09-25T12:00:00",
+    "timezone": "America/New_York",
+    "title": "The Frankenstein Oscillator: Stabilizing the Impossible",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/frankenstein-oscillator-stabilizing-impossible",
+    "content": "Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an unstable average, and yet can be dynamically stabilized. Our impossible system is governed by a modified Meissner\u2019s model \u2013 a one-degree-of-freedom oscillator where both stiffness and damping are modulated through a",
+    "rawEventDetails": "Speaker Maurizio Porfiri Affiliation New York University Details Event Description Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an unstable average, and yet can be dynamically stabilized. Our impossible system is governed by a modified Meissner\u2019s model \u2013 a one-degree-of-freedom oscillator where both stiffness and damping are modulated through a square wave to switch between positive and negative values. We study the system through the lens of the theory of oscillations in a rapidly oscillating field by Landau and Lifshitz, providing insights into the physical underpinnings of \u201cdynamic stabilization 2.0\u201d. We validate the theory's predictions by computing Floquet exponents, yielding exact results on the emergence and topology of compact antiresonance windows where the system is stable. We provide experimental evidence of the feasibility of this new form of dynamic stabilization through a \u201cFrankenstein\u201d oscillator developed at Stony Brook University in collaboration with Prof. Paolo Celli and his student, David Xiedeng. The oscillator comprises a cantilever beam subject to magnetic and aerodynamic forcing, modulated in time to alternate between unstable configurations and retain an unstable mean. The prospect of dynamic stabilization in the absence of any stable feature has vast implications for network dynamical systems, structural mechanics, and robotics. Bio: Maurizio Porfiri is an Institute Professor at New York University Tandon School of Engineering (Departments of Mechanical and Aerospace Engineering, Biomedical Engineering, Center for Urban Science and Progress, CUSP, and Civil and Urban Engineering). He is presently the Director of CUSP and the founding Director of the Urban Institute. He received M.Sc. and Ph.D. degrees in Engineering Mechanics from Virginia Tech; a \u201cLaurea\u201d in Electrical Engineering and a Ph.D. in Theoretical and Applied Mechanics from Sapienza University of Rome and the University of Toulon. He conducts and supervises research on complex systems, with applications ranging from mechanics and robotics to urban science and behavioral biology. This seminar is supported with funds from the Korhammer Lecture Series.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "The Frankenstein Oscillator: Stabilizing the Impossible",
+    "locationRaw": "To be determined",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3946:delta:0",
     "guid": "ps_events:3946:delta:0",
     "sources": [
