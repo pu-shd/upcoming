@@ -1034,7 +1034,7 @@
       "detail": ""
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/frankenstein-oscillator-stabilizing-impossible",
-    "content": "Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an unstable average, and yet can be dynamically stabilized. Our impossible system is governed by a modified Meissner\u2019s model \u2013 a one-degree-of-freedom oscillator where both stiffness and damping are modulated through a",
+    "content": "Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an",
     "rawEventDetails": "Speaker Maurizio Porfiri Affiliation New York University Details Event Description Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an unstable average, and yet can be dynamically stabilized. Our impossible system is governed by a modified Meissner\u2019s model \u2013 a one-degree-of-freedom oscillator where both stiffness and damping are modulated through a square wave to switch between positive and negative values. We study the system through the lens of the theory of oscillations in a rapidly oscillating field by Landau and Lifshitz, providing insights into the physical underpinnings of \u201cdynamic stabilization 2.0\u201d. We validate the theory's predictions by computing Floquet exponents, yielding exact results on the emergence and topology of compact antiresonance windows where the system is stable. We provide experimental evidence of the feasibility of this new form of dynamic stabilization through a \u201cFrankenstein\u201d oscillator developed at Stony Brook University in collaboration with Prof. Paolo Celli and his student, David Xiedeng. The oscillator comprises a cantilever beam subject to magnetic and aerodynamic forcing, modulated in time to alternate between unstable configurations and retain an unstable mean. The prospect of dynamic stabilization in the absence of any stable feature has vast implications for network dynamical systems, structural mechanics, and robotics. Bio: Maurizio Porfiri is an Institute Professor at New York University Tandon School of Engineering (Departments of Mechanical and Aerospace Engineering, Biomedical Engineering, Center for Urban Science and Progress, CUSP, and Civil and Urban Engineering). He is presently the Director of CUSP and the founding Director of the Urban Institute. He received M.Sc. and Ph.D. degrees in Engineering Mechanics from Virginia Tech; a \u201cLaurea\u201d in Electrical Engineering and a Ph.D. in Theoretical and Applied Mechanics from Sapienza University of Rome and the University of Toulon. He conducts and supervises research on complex systems, with applications ranging from mechanics and robotics to urban science and behavioral biology. This seminar is supported with funds from the Korhammer Lecture Series.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
@@ -1176,7 +1176,7 @@
     "startTime": "2026-09-29T16:30:00",
     "endTime": "2026-09-29T17:30:00",
     "timezone": "America/New_York",
-    "title": "An ORFE Department Colloquia Talk by Ankur Moitra, Massachusetts Institute of Technology",
+    "title": "Honeycombs and Sums of Hermitian Matrices, Revisited",
     "speakers": [
       {
         "name": "Ankur Moitra",
@@ -1203,7 +1203,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/ankur-moitra-massachusetts-institute-technology",
     "content": "Abstract: Given the eigenvalues of Hermitian matrices A and B, can we determine all possible eigenvalues of A + B? The set of all possible eigenvalues turns out to be a polytope and a celebrated theorem of Knutson and Tao gives a complete characterization through geometric objects called honeycombs. The theorem can be explained to an undergraduate student in linear algebra, but can the proof be as well?We give a new proof. Instead of algebraic geometry, Schubert calculus and representation theory, we use induction and convexity and treat the problem from a polyhedral",
-    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawEventDetails": "Details Event Description Abstract: Given the eigenvalues of Hermitian matrices A and B, can we determine all possible eigenvalues of A + B? The set of all possible eigenvalues turns out to be a polytope and a celebrated theorem of Knutson and Tao gives a complete characterization through geometric objects called honeycombs. The theorem can be explained to an undergraduate student in linear algebra, but can the proof be as well? We give a new proof. Instead of algebraic geometry, Schubert calculus and representation theory, we use induction and convexity and treat the problem from a polyhedral perspective. In the process we give an intuitive explanation of how honeycombs arise as a type of model organism that distills the appropriate defining properties of Hermitian triples in more obvious ways. This is based on joint work with Alex Postnikov and Dora Woodruff. Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1216,8 +1216,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -1322,6 +1322,57 @@
       "cbe:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "robotics:ps_events:546:delta:0",
+    "guid": "ps_events:546:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T15:00:00Z",
+    "endsAt": "2026-10-02T16:00:00Z",
+    "startTime": "2026-10-02T11:00:00",
+    "endTime": "2026-10-02T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Vivan Amin",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/vivan-amin",
+    "content": "Talk title, abstract, and speaker biography to be posted.",
+    "rawEventDetails": "Speaker Vivan Amin Details Event Description Talk title, abstract, and speaker biography to be posted.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Vivan Amin",
+    "locationRaw": "To be determined",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "sentinel",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -1987,6 +2038,57 @@
     "mappingConflict": false
   },
   {
+    "id": "robotics:ps_events:551:delta:0",
+    "guid": "ps_events:551:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-16T15:00:00Z",
+    "endsAt": "2026-10-16T16:00:00Z",
+    "startTime": "2026-10-16T11:00:00",
+    "endTime": "2026-10-16T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Reuth Mirsky",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/reuth-mirsky",
+    "content": "Talk title, abstract, and speaker biography forthcoming.",
+    "rawEventDetails": "Speaker Reuth Mirsky Details Event Description Talk title, abstract, and speaker biography to be posted.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Reuth Mirsky",
+    "locationRaw": "To be determined",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3741:delta:0",
     "guid": "ps_events:3741:delta:0",
     "sources": [
@@ -2251,6 +2353,57 @@
       "cbe:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "robotics:ps_events:556:delta:0",
+    "guid": "ps_events:556:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-30T15:00:00Z",
+    "endsAt": "2026-10-30T16:00:00Z",
+    "startTime": "2026-10-30T11:00:00",
+    "endTime": "2026-10-30T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Stephanie Gil",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/stephanie-gil",
+    "content": "Talk title, abstract, and speaker biography forthcoming.",
+    "rawEventDetails": "Speaker Stephanie Gil Details Event Description Talk title, abstract, and speaker biography forthcoming.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Stephanie Gil",
+    "locationRaw": "To be determined",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "sentinel",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -2817,6 +2970,57 @@
     "mappingConflict": false
   },
   {
+    "id": "robotics:ps_events:561:delta:0",
+    "guid": "ps_events:561:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T16:00:00Z",
+    "endsAt": "2026-11-13T17:00:00Z",
+    "startTime": "2026-11-13T11:00:00",
+    "endTime": "2026-11-13T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Gioele Zardini",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/gioele-zardini",
+    "content": "Talk title, abstract, and speaker biography forthcoming.",
+    "rawEventDetails": "Speaker Gioele Zardini Details Event Description Talk title, abstract, and speaker biography forthcoming.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Gioele Zardini",
+    "locationRaw": "To be determined",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4761:delta:0",
     "guid": "ps_events:4761:delta:0",
     "sources": [
@@ -3372,6 +3576,57 @@
     "mappingConflict": false
   },
   {
+    "id": "robotics:ps_events:571:delta:0",
+    "guid": "ps_events:571:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T16:00:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T11:00:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Making Robots Learn Smarter, Not Harder: Aligning Interaction and Uncertainty for Targeted Data Collection",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/making-robots-learn-smarter-not-harder-aligning-interaction-and-uncertainty-targeted",
+    "content": "Abstract: As our expectations for robots' adaptive capacities grow, it will be increasingly important for them to reason about the novel objects, tasks, and interactions inherent to everyday life. Recent advances in foundation models have produced impressive general-purpose models for robots, but they still need extensive fine-tuning to behave reasonably in novel environments. I argue that we can develop more capable and robust robots by assuming they will inevitably encounter situations that they are initially unprepared to address.My work enables a robot to address",
+    "rawEventDetails": "Speaker Tesca Fitzgerald Affiliation Yale University Details Event Description Abstract: As our expectations for robots' adaptive capacities grow, it will be increasingly important for them to reason about the novel objects, tasks, and interactions inherent to everyday life. Recent advances in foundation models have produced impressive general-purpose models for robots, but they still need extensive fine-tuning to behave reasonably in novel environments. I argue that we can develop more capable and robust robots by assuming they will inevitably encounter situations that they are initially unprepared to address. My work enables a robot to address these novel situations by learning from a human teacher\u2019s domain knowledge of the task, such as the contextual use of an object or tool. Meeting this challenge requires robots to be flexible not only to novelty, but to different forms of novelty and their varying effects on the robot\u2019s task completion. In this talk, I will focus on (1) the implications of novelty, and its various causes, on the robot\u2019s learning goals, (2) methods for structuring its interaction with the human teacher in order to meet those learning goals, and (3) modeling and learning from interaction-derived training data to address novelty. Bio: Dr. Tesca Fitzgerald is an Assistant Professor in the Department of Computer Science at Yale University. Her research is centered around interactive robot learning, with the aim of developing robots that are adaptive, robust, and collaborative when faced with novel situations. Before joining Yale, Dr. Fitzgerald was a Postdoctoral Fellow at Carnegie Mellon University, received her PhD in Computer Science at Georgia Tech, and completed her B.Sc at Portland State University. She is an NSF Graduate Research Fellow (2014), Microsoft Graduate Women Scholar (2014), and IBM Ph.D. Fellow (2017).",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Making Robots Learn Smarter, Not Harder: Aligning Interaction and Uncertainty for Targeted Data Collection",
+    "locationRaw": "To be determined",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4766:delta:0",
     "guid": "ps_events:4766:delta:0",
     "sources": [
@@ -3537,6 +3792,57 @@
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "robotics:ps_events:566:delta:0",
+    "guid": "ps_events:566:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-11T16:00:00Z",
+    "endsAt": "2026-12-11T17:00:00Z",
+    "startTime": "2026-12-11T11:00:00",
+    "endTime": "2026-12-11T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Tinoosh Mohsenin",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/tinoosh-mohsenin",
+    "content": "Talk title, abstract, and speaker biography forthcoming.",
+    "rawEventDetails": "Speaker Tinoosh Mohsenin Details Event Description Talk title, abstract, and speaker biography forthcoming.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Tinoosh Mohsenin",
+    "locationRaw": "To be determined",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
