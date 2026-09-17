@@ -2083,6 +2083,62 @@
     "mappingConflict": false
   },
   {
+    "id": "orfe:ps_events:12856:delta:0",
+    "guid": "ps_events:12856:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-17T21:30:00Z",
+    "endsAt": "2026-11-17T22:30:00Z",
+    "startTime": "2026-11-17T16:30:00",
+    "endTime": "2026-11-17T17:30:00",
+    "timezone": "America/New_York",
+    "title": "An ORFE Department Colloquia Talk by Pablo Parrilo, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Pablo Parrilo",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Pablo Parrilo, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "ORFE Department Colloquia",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "ORFE Department Colloquia"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/pablo-parrilo-massachusetts-institute-technology",
+    "content": "",
+    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Pablo Parrilo, Massachusetts Institute of Technology",
+    "locationRaw": "101 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:9",
     "guid": "ps_events:5261:delta:9",
     "sources": [
