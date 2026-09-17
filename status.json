@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-17T14:31:00Z",
+  "generatedAt": "2026-09-17T14:44:27Z",
   "summary": {
     "ok": 16,
     "empty": 1,
     "disabled": 6,
-    "events": 130,
+    "events": 131,
     "stale": 0
   },
   "feeds": [
     {
       "path": "combos/all-no-fpo/events.json",
       "status": "ok",
-      "events": 121,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "events": 122,
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "sources": [
         "orfe",
         "citp",
@@ -28,14 +28,14 @@
         "kellercenter"
       ],
       "notes": [
-        "1 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
+        "2 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
       ]
     },
     {
       "path": "combos/all/events.json",
       "status": "ok",
-      "events": 130,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "events": 131,
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "sources": [
         "orfe",
         "citp",
@@ -51,14 +51,14 @@
         "kellercenter"
       ],
       "notes": [
-        "1 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
+        "2 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
       ]
     },
     {
       "path": "combos/engineering/events.json",
       "status": "ok",
       "events": 38,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "sources": [
         "cbe",
         "cee",
@@ -80,7 +80,7 @@
       "path": "combos/seminars/events.json",
       "status": "ok",
       "events": 63,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "sources": [
         "orfe",
         "citp",
@@ -103,7 +103,7 @@
       "path": "combos/sherrerd-hall/events.json",
       "status": "ok",
       "events": 46,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "sources": [
         "orfe",
         "citp",
@@ -136,8 +136,8 @@
     {
       "path": "feeds/ai/events.json",
       "status": "ok",
-      "events": 10,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "events": 11,
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Princeton AI Lab",
       "home": "https://ai.princeton.edu",
       "sources": [
@@ -147,6 +147,7 @@
         "engineering-newsletter"
       ],
       "notes": [
+        "location_declined: 4 of 11 locations left empty (36%), above the declared band of 30%. The chain may no longer fit this source.",
         "unmapped_tags: 1 category spelling(s) have no canonical tag: 'AI Alignment + Safety' (1). A combined feed filtering on that concept will miss these until an alias is added."
       ]
     },
@@ -154,7 +155,7 @@
       "path": "feeds/bioengineering/events.json",
       "status": "ok",
       "events": 5,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Omenn-Darling Bioengineering Institute",
       "home": "https://bioengineering.princeton.edu",
       "sources": [
@@ -168,7 +169,7 @@
       "path": "feeds/cbe/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Chemical and Biological Engineering",
       "home": "https://cbe.princeton.edu",
       "sources": [
@@ -182,7 +183,7 @@
       "path": "feeds/cee/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Civil and Environmental Engineering",
       "home": "https://cee.princeton.edu",
       "sources": [
@@ -196,7 +197,7 @@
       "path": "feeds/citp/events.json",
       "status": "ok",
       "events": 28,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Center for Information Technology Policy",
       "home": "https://citp.princeton.edu",
       "sources": [
@@ -238,7 +239,7 @@
       "path": "feeds/ece/events.json",
       "status": "ok",
       "events": 11,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Electrical and Computer Engineering",
       "home": "https://ece.princeton.edu",
       "sources": [
@@ -252,7 +253,7 @@
       "path": "feeds/kellercenter/events.json",
       "status": "empty",
       "events": 0,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Keller Center for Innovation in Engineering Education",
       "home": "https://kellercenter.princeton.edu",
       "sources": [
@@ -266,7 +267,7 @@
       "path": "feeds/mae/events.json",
       "status": "ok",
       "events": 11,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Mechanical and Aerospace Engineering",
       "home": "https://mae.princeton.edu",
       "sources": [
@@ -280,7 +281,7 @@
       "path": "feeds/materials/events.json",
       "status": "ok",
       "events": 16,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Princeton Materials Institute",
       "home": "https://materials.princeton.edu",
       "sources": [
@@ -322,7 +323,7 @@
       "path": "feeds/orfe/events.json",
       "status": "ok",
       "events": 19,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Operations Research and Financial Engineering",
       "home": "https://orfe.princeton.edu",
       "sources": [
@@ -339,7 +340,7 @@
       "path": "feeds/quantum/events.json",
       "status": "ok",
       "events": 18,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Princeton Quantum Initiative",
       "home": "https://quantum.princeton.edu",
       "sources": [
@@ -353,7 +354,7 @@
       "path": "feeds/robotics/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-17T14:31:00Z",
+      "lastSuccessAt": "2026-09-17T14:44:27Z",
       "label": "Princeton Robotics",
       "home": "https://robotics.princeton.edu",
       "sources": [
