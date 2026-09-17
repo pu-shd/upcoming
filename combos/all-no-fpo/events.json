@@ -1487,6 +1487,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4116:delta:0",
+    "guid": "ps_events:4116:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-17T04:00:00Z",
+    "endsAt": "2026-09-18T04:00:00Z",
+    "startTime": "2026-09-17T00:00:00",
+    "endTime": "2026-09-18T00:00:00",
+    "timezone": "America/New_York",
+    "title": "Open Questions in AI Benchmarking",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/open-questions-ai-benchmarking",
+    "content": "Video",
+    "rawEventDetails": "Details Event Description Video Abstract: In this talk I will lay out what I take to be some of the big open questions about AI capabilities. These questions govern the impact that AI will have on the world. I'll also discuss some of the work being done (at my company and by others) to build benchmarks that help answer these questions. Short bio : Greg Burnham is the head of benchmarks at Epoch AI. Prior to this, he worked at Elemental Cognition and Bridgewater Associates. He has a BA in mathematics from Princeton University. Website: https://epoch.ai/about/team/greg-burnham Sponsor Organized by PLI Special Event Seminar Lunch Series",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Open Questions in AI Benchmarking",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:1",
     "guid": "ps_events:5261:delta:1",
     "sources": [
