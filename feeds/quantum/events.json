@@ -235,7 +235,7 @@
     "startTime": "2026-10-05T12:10:00",
     "endTime": "2026-10-05T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by Rahul Nandkishore, University of Colorado, Boulder",
+    "title": "Many body quantum games",
     "speakers": [
       {
         "name": "Rahul Nandkishore",
@@ -260,23 +260,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-rahul-nandkishore-university-colorado-boulder",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-many-body-quantum-games-rahul-nandkishore-university-colorado",
+    "content": "Title: Many body quantum games Abstract: I will discuss co-ordinational games played on quantum devices from the perspective of many body physics. In the first half of the talk, I will discuss how concepts from many body physics may be used to secure robust and provable quantum advantage at concrete scalable tasks on already existing quantum devices. In the second part of my talk, I will discuss how already existing quantum devices may be used to learn new things about many body quantum physicsA light lunch will be served in the Bowen",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, Rahul Nandkishore (University of Colorado, Boulder)",
+    "summaryRaw": "Princeton Quantum Colloquium: Many body quantum games, Rahul Nandkishore (University of Colorado, Boulder)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
