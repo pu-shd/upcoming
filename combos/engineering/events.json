@@ -96,58 +96,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ece:ps_events:10601:delta:0",
-    "guid": "ps_events:10601:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-08-17T18:00:00Z",
-    "endsAt": "2026-08-17T20:00:00Z",
-    "startTime": "2026-08-17T14:00:00",
-    "endTime": "2026-08-17T16:00:00",
-    "timezone": "America/New_York",
-    "title": "From Theory to Practice: Reinforcement Learning Paradigms for Aligning Large Language and Diffusion Models",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Final Public Oral Examinations,Final Public Orals",
-    "tags": [
-      "fpo"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Final Public Oral Examinations",
-      "Final Public Orals"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "EQUAD",
-      "id": "",
-      "detail": "J401"
-    },
-    "urlRef": "https://ece.princeton.edu/events/theory-practice-reinforcement-learning-paradigms-aligning-large-language-and-diffusion",
-    "content": "This dissertation investigates the alignment and theoretical foundations of generative AI through reinforcement learning (RL).We bridge the gap between rigorous mathematical guarantees and practical alignment across two primary parts.In Part I (Alignment of Generative Systems), we first expose systematic vulnerability in the LLM-as-a-Judge framework, identifying \u201cmaster keys\u201d: non-informative adversarial patterns that consistently trigger high false-positive rates, and we propose a robust reward model to mitigate these",
-    "rawEventDetails": "Speaker Yulai Zhao Details Event Description This dissertation investigates the alignment and theoretical foundations of generative AI through reinforcement learning (RL).We bridge the gap between rigorous mathematical guarantees and practical alignment across two primary parts. In Part I (Alignment of Generative Systems), we first expose systematic vulnerability in the LLM-as-a-Judge framework, identifying \u201cmaster keys\u201d: non-informative adversarial patterns that consistently trigger high false-positive rates, and we propose a robust reward model to mitigate these exploits. Moreover, we enhance diffusion models by introducing a sample-efficient online fine-tuning algorithm that utilizes optimistic exploration. Furthermore, we develop a direct back-propagation framework that enables adding precise, conditional control to diffusion models with superior sample efficiency. In Part II (Reinforcement Learning Theory), we establish foundational guarantees for complex environments. We provide the first proof that local policy optimization achieves global optimality in cooperative multi-agent RL with function approximation. Finally, we develop the first provably efficient algorithm for CVaR (Conditional Value-at-Risk) RL in low-rank MDPs. Together, these contributions establish a principled framework for developing robust, efficient, and controllable generative systems, supported by both novel algorithmic Adviser: Sun-Yuan Kung",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "From Theory to Practice: Reinforcement Learning Paradigms for Aligning Large Language and Diffusion Models",
-    "locationRaw": "EQUAD J401",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ece:ps_events:10901:delta:0",
     "guid": "ps_events:10901:delta:0",
     "sources": [
