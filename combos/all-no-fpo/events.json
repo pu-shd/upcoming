@@ -3751,6 +3751,57 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4106:delta:0",
+    "guid": "ps_events:4106:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-19T04:00:00Z",
+    "endsAt": "2026-10-20T04:00:00Z",
+    "startTime": "2026-10-19T00:00:00",
+    "endTime": "2026-10-20T00:00:00",
+    "timezone": "America/New_York",
+    "title": "AI Alignment + Safety",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "AI Alignment + Safety",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "AI Alignment + Safety"
+    ],
+    "unmappedTags": [
+      "AI Alignment + Safety"
+    ],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/ai-alignment-safety",
+    "content": "A new initiative to make artificial intelligence safe and beneficial to humanity.Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate DirectorFeatured speakers include:Boaz Barak, Harvard University, Open AIPeter Henderson, Princeton University, Department of Computer ScienceAdam Tauman Kalai, Institute for Responsible SuperintelligenceLydia Liu, Princeton University, Department of Computer Science",
+    "rawEventDetails": "Details Event Description A new initiative to make artificial intelligence safe and beneficial to humanity. Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate Director Featured speakers include: Boaz Barak , Harvard University, Open AI Peter Henderson , Princeton University, Department of Computer Science Adam Tauman Kalai, Institute for Responsible Superintelligence Lydia Liu , Princeton University, Department of Computer Science Helen Qu , Flatiron Institute Aaron Roth , University of Pennsylvania Benjamin Van Roy , Stanford University, Google Deep Mind",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI Alignment + Safety",
+    "locationRaw": "",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "materials:ps_events:4181:delta:0",
     "guid": "ps_events:4181:delta:0",
     "sources": [
