@@ -2858,7 +2858,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/ankur-moitra-massachusetts-institute-technology",
-    "content": "",
+    "content": "Abstract: Given the eigenvalues of Hermitian matrices A and B, can we determine all possible eigenvalues of A + B? The set of all possible eigenvalues turns out to be a polytope and a celebrated theorem of Knutson and Tao gives a complete characterization through geometric objects called honeycombs. The theorem can be explained to an undergraduate student in linear algebra, but can the proof be as well?We give a new proof. Instead of algebraic geometry, Schubert calculus and representation theory, we use induction and convexity and treat the problem from a polyhedral",
     "rawEventDetails": "Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
