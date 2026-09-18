@@ -6934,6 +6934,59 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5301:delta:0",
+    "guid": "ps_events:5301:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-02-09T14:00:00Z",
+    "endsAt": "2027-02-10T22:00:00Z",
+    "startTime": "2027-02-09T09:00:00",
+    "endTime": "2027-02-10T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Digital Competition Conference 2027",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Washington, DC",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://citp.princeton.edu/events/2027/digital-competition-conference-2027",
+    "content": "The Knight-Georgetown Institute (KGI), the Yale Tobin Center\u2019s Digital Economy Project, and Princeton University\u2019s Center for Information Technology Policy (CITP) will co-host the Digital Competition Conference 2027 (DCC \u201827), an annual policy and research conference that explores the latest lessons, challenges, and opportunities in competition regulation and enforcement in digital markets. The conference brings together researchers, policymakers, regulators, businesses, litigators, technologists, and civil society experts for evidence-driven dialogue about business practices that pose",
+    "rawEventDetails": "Details Event Description The Knight-Georgetown Institute (KGI), the Yale Tobin Center\u2019s Digital Economy Project, and Princeton University\u2019s Center for Information Technology Policy (CITP) will co-host the Digital Competition Conference 2027 (DCC \u201827), an annual policy and research conference that explores the latest lessons, challenges, and opportunities in competition regulation and enforcement in digital markets. The conference brings together researchers, policymakers, regulators, businesses, litigators, technologists, and civil society experts for evidence-driven dialogue about business practices that pose competition risks or may generate other harms, possible remedies, and areas for future analysis. The rapid diffusion of AI and the emergence of AI agents capable of independently accessing tools, initiating processes, and acting on users\u2019 behalf may fundamentally reshape how information and economic activity are organized online. These developments are raising new questions about market power, entry, innovation, and control across the technology stack. At the same time, the regulatory and enforcement disputes that have defined competition policy in tech in recent years continue to evolve, as the implications of incumbent platform power become increasingly consequential. The DCC \u201827 will examine all of these developments through a broad inquiry into competition in digital markets. Building on the success of DCC \u201826 \u2013 which brought together participants from 37 countries \u2013 the conference will continue to serve as a forum for rigorous, interdisciplinary discussion on the future of competition in the digital economy across key sectors and jurisdictions. The conference aims to advance a shared understanding of competition in AI and digital markets among researchers, policymakers, regulators, business, litigators, technologists, and civil society experts. Discussion will center on research results and methods, what stakeholders know and still need to learn about competition challenges and remedies, and how to create a virtuous cycle where research more effectively informs policymaking and enforcement while regulation enables more effective research. The conference will feature research talks and policy discussions focused on a range of technology markets \u2013 as they have been traditionally offered, and as they are being reshaped by AI \u2013 including markets for search, chatbots, and AI assistants; consumer and enterprise software, including browsers, apps, harnesses, and cloud services; advertising; social media; messaging; and connected devices. Call for Submissions We are soliciting expressions of interest in researcher participation, including early-stage or draft research papers, prepublication papers, and recent or accepted publications. The program committee will select and curate research talks and poster presentations from the submissions received. With the authors\u2019 consent, we expect to post accepted submissions on our website prior to the conference. Research talks at the conference will be short and should illuminate competition issues, remedies, or research methods. Selected speakers will be asked to stimulate dialogue about the practical application of research findings to policymaking and enforcement. The conference is open to all disciplines, including economics, computer science, law, public policy, business, and behavioral sciences. Topics in Scope While we expect to emphasize AI-related work at the conference, we welcome submissions broadly related to competition in digital markets, including on the following topics: Effectiveness and impact of existing competition regulation of digital platforms How business practices affect competitors and consumers in digital markets, and how regulatory requirements or enforcement remedies would shift market outcomes The impacts of technology competition regulation and enforcement actions, including changes in firm behavior, market structure, and consumer experiences The effectiveness of and further opportunities for platform data sharing, access, transparency, or experimentation requirements Institutional implementation of and compliance with competition regulation Comparison of policy, regulation, and enforcement across jurisdictions, with associated learnings The role of interoperability, portability, open standards, defaults, and choices Open source, open models, and their interplay with competitive dynamics Competition and sustainable information production, including licensing, attribution, and compensation for content used by AI products Consumer protection issues where they intersect with competition, including personalized pricing, algorithmic misrepresentations, hidden fees, dark/deceptive patterns, and other practices that affect market power, entry, or competitive advantage This list is illustrative rather than exhaustive. We welcome work addressing other emerging questions in digital competition, especially where it can shed light on policy design, enforcement, or effectiveness, or market structure specifically in the information ecosystem. Selection priorities The program committee will evaluate submissions with attention to: Policy relevance, including the extent to which findings or ideas can inform real-world policy, regulation, or enforcement Novelty and contribution to the literature, policy debate, or measurement of digital competition issues Methodological rigor and clarity of research design Cross-jurisdictional comparison or broader applicability across institutional settings, where relevant Fit with the conference\u2019s 2027 emphasis on AI, which will receive additional weight but is not a prerequisite for acceptance Since rigorous empirical research on emerging AI markets remains limited, we also welcome well-developed research designs, early findings, measurement frameworks, and work from adjacent fields, provided that submitters are prepared to discuss how their methods and results could be applied or extended to competition challenges and remedies. Guidance for Early-Stage Work We welcome early-stage work, but submissions should be sufficiently developed to support serious discussion at the conference. Research that is qualitative in nature should include a content-complete draft, even if it is not publication-ready. Research that is quantitative in nature but involves complex data collection or analysis should at least have a fully specified research design and a credible plan for completion before the conference. Vague or high-level research proposals or outlines are unlikely to be accepted. Participation Expectations Because the conference is designed around active discussion, accepted submissions should be represented by an author who is prepared to participate substantively in the conference. For coauthored work, we strongly encourage at least one faculty coauthor or other senior lead author to commit to attending and participating. Submission Information Please submit your paper through the submission link by September 25, 2026 . Travel reimbursement will be available for invited conference speakers. Conference timeline Submissions due: September 25, 2026 Speakers notified: November 9, 2026 Speaker registrations due: November 23, 2026 Final paper submission due: January 15, 2027 Conference: February 9-10, 2027 Program committee Alissa Cooper, Knight-Georgetown Institute Filippo Lancieri, Georgetown University Fiona Scott Morton, Yale University Jonathan Mayer, Princeton University Andrew McLean, University of Edinburgh Leon Musolff, University of Pennsylvania Christian Peukert, University of Lausanne Christo Wilson, Northeastern University Tracy Xu, Knight-Georgetown Institute Previous DCCs DCC 2026 DMA and Beyond Contact Please contact the program committee at [email protected] with questions. Submit your paper here . The Center for Information Technology Policy acknowledges that our cosponsorship of this event is made possible by generous support from the Princeton University Jerome C. Blum Memorial Fund established by Ronald D. Lee \u201980 in honor of Jerome C. Blum, Professor of History, Princeton University (1947-1981). Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Digital Competition Conference 2027",
+    "locationRaw": "Washington, DC",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "materials:ps_events:4056:delta:0",
     "guid": "ps_events:4056:delta:0",
     "sources": [
