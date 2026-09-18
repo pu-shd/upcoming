@@ -1108,7 +1108,7 @@
     "startTime": "2026-11-10T12:15:00",
     "endTime": "2026-11-10T13:15:00",
     "timezone": "America/New_York",
-    "title": "An Artificial Intelligence Talk by Angel Hwang",
+    "title": "Toward Social-Ecosystem-Aware AI for Interpersonal Support",
     "speakers": [
       {
         "name": "Angel Hwang",
@@ -1135,23 +1135,23 @@
       "id": "",
       "detail": "306"
     },
-    "urlRef": "https://citp.princeton.edu/events/2026/angel-hwang",
-    "content": "Talk information: TBABio:Angel Hsing-Chi Hwang (she/her) is an assistant professor of communication and computer science at University of Southern California and a human-AI interaction (HAII) researcher. Her research explores the impact of artificial intelligence (AI) on social interaction in both professional and personal settings, as well as its downstream influences on people\u2019s mental health, wellbeing, and work practices. Her work aims to inform the design of more responsible and human-centered AI systems for the future of work and social life. Prior to",
+    "urlRef": "https://citp.princeton.edu/events/2026/angel-hwang-toward-social-ecosystem-aware-ai-interpersonal-support",
+    "content": "Millions of people now use AI for social purposes, from seeking support and companionship to consulting interpersonal advice. As AI participates in social lives, it can reshape how people navigate interpersonal decisions and form social expectations.This talk presents findings from a series of the Human-AI Ecosystem Lab's recent projects examining AI's role in social interaction:First, we examine the relational consequences of AI companionship. Through a systematic review spanning relationship science and AI safety",
     "rawEventDetails": "Details Event Description Talk information: TBA Bio: Angel Hsing-Chi Hwang (she/her) is an assistant professor of communication and computer science at University of Southern California and a human-AI interaction (HAII) researcher. Her research explores the impact of artificial intelligence (AI) on social interaction in both professional and personal settings, as well as its downstream influences on people\u2019s mental health, wellbeing, and work practices. Her work aims to inform the design of more responsible and human-centered AI systems for the future of work and social life. Prior to joining USC, Hwang received her Ph.D. in communication at Cornell University with a concentration in human-computer interaction and conducted her postdoctoral training at Cornell Bowers College of Computing and Information Science. Outside of academia, she also has extensive experience researching state-of-the-art AI across several world-class research organizations in the tech industry, including Microsoft Research, Google Research, Sony AI, Adobe, and Accenture Labs. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Angel Hwang",
+    "summaryRaw": "Angel Hwang - Toward Social-Ecosystem-Aware AI for Interpersonal Support",
     "locationRaw": "Sherrerd Hall 306",
     "mappingRules": [
-      "citp:bare-person-name"
+      "citp:speaker-dash-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
