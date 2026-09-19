@@ -1,10 +1,10 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-09-19T22:01:19Z",
+  "generatedAt": "2026-09-19T23:00:49Z",
   "sources": {
     "ai": {
-      "etag": "\"1789855264\"",
-      "lastModified": "Sat, 19 Sep 2026 22:01:04 GMT",
+      "etag": "\"1789858848\"",
+      "lastModified": "Sat, 19 Sep 2026 23:00:48 GMT",
       "lastEnrichedAt": "2026-09-19T21:00:59Z"
     },
     "bioengineering": {
