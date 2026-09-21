@@ -2337,6 +2337,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4126:delta:0",
+    "guid": "ps_events:4126:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T16:15:00Z",
+    "endsAt": "2026-09-29T17:15:00Z",
+    "startTime": "2026-09-29T12:15:00",
+    "endTime": "2026-09-29T13:15:00",
+    "timezone": "America/New_York",
+    "title": "DARK MANSIONS: AI, Innovation, and Fermat\u2019s Last Theorem",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science",
+      "id": "",
+      "detail": "105"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/dark-mansions-ai-innovation-and-fermat%E2%80%99s-last-theorem",
+    "content": "",
+    "rawEventDetails": "Details Event Description Yiu, Kosoy, and Gopnik (2024) argue that \u201cCultural evolution depends on a fine balance between imitation and innovation.\u201d Writing in a world prior to reasoning models, they argued that large language models fall squarely on the imitation side. This paper\u2014focused principally on formal and scientific innovation\u2014proposes a finer-grained, three-tier taxonomy: Tier 1 is transmission, Tier 2 is something new (invention) within a fixed problem formulation, and Tier 3 is framework-generating innovation. Tier 3 requires both historical novelty\u2014a new construction or framework\u2014and functional novelty\u2014a downstream dividend, where the apparatus introduced to solve a problem helps to reorganize later work. We explore Andrew Wiles\u2019s proof of Fermat\u2019s Last Theorem as a case of Tier 3 innovation. Core elements of the proof architecture\u2014especially the R = T modularity-lifting strategy and Taylor\u2013Wiles patching\u2014were not present in the prior mathematical literature. Moreover, the proof apparatus has had substantial downstream impact on number theory and the Langlands program. We consider whether a current frontier AI system trained on pre\u20111987 mathematical sources could have produced a Wiles-type proof strategy, and offer reasons for doubt. Broadening the argument beyond the Wiles proof, we analyze three current AI paradigms for AI in mathematics and argue that they do not yet offer clear mechanisms for Tier 3 innovation. We then assess the empirical record of AI-assisted mathematical discovery, including the refutation of the unit-distance conjecture and the proof of the existence of non-sofic groups. We find a growing number of striking Tier 2 achievements, but no evidence yet of Tier 3 innovation. Tier 3 innovation, we propose, depends on three capacities\u2014imagination, judgment, and tenacity, understood functionally as capacities for novel decomposition, structural evaluation, and sustained exploration. Current architectures have not shown these capacities at the scale required for Tier 3 innovation. The paper concludes with reflections on the architectural changes that may be needed for the innovation that comes from what Andrew Wiles vividly describes as stumbling around in \u201cdark mansions.\u201d Bio: Joshua Cohen is a political philosopher. He has written on issues of democratic theory, freedom of expression, religious freedom, political equality, democracy and digital technology, good jobs, and global justice. His books include On Democracy (with Joel Rogers); Democracy and Associations ( with Joel Rogers); Philosophy, Politics, Democracy ; Rousseau: A Free Community of Equals ; and The Arc of the Moral Universe and Other Essays . He is co-editor of the Norton Introduction to Philosophy , now in its third edition. Cohen taught at MIT (1977-2005), Stanford (2005-2014), is currently on the faculty at Apple University, and is Distinguished Senior Fellow in Law, Philosophy, and Political Science at University of California, Berkeley. Cohen held the Romanell-Phi Beta Kappa Professorship in 2002-3; gave the Tanner Lectures at UC Berkeley in 2007; the Comte Lectures at LSE in 2012; and the Annual Lecture on Ethics and AI at Oxford in 2024. He is co-editor-in-chief of Boston Review . This talk will be recorded and livestreamed. The recording will be posted to the CITP website, the CITP YouTube channel and the University Media Central channel. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsors Princeton Language and Intelligence Computer Science",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DARK MANSIONS: AI, Innovation, and Fermat\u2019s Last Theorem",
+    "locationRaw": "Computer Science 105",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5116:delta:0",
     "guid": "ps_events:5116:delta:0",
     "sources": [
