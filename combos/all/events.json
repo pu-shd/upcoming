@@ -96,58 +96,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ece:ps_events:10901:delta:0",
-    "guid": "ps_events:10901:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-08-18T19:00:00Z",
-    "endsAt": "2026-08-18T21:00:00Z",
-    "startTime": "2026-08-18T15:00:00",
-    "endTime": "2026-08-18T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Towards Physics-Guided Wireless Communication and Sensing Above 100 GHz",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Final Public Oral Examinations,Final Public Orals",
-    "tags": [
-      "fpo"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Final Public Oral Examinations",
-      "Final Public Orals"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "EQUAD",
-      "id": "",
-      "detail": "J323"
-    },
-    "urlRef": "https://ece.princeton.edu/events/towards-physics-guided-wireless-communication-and-sensing-above-100-ghz-0",
-    "content": "The sub-Terahertz (sub-THz) bands - frequencies above 100 GHz and up to 1 THz - are rapidly emerging as one of the accepted paradigms for future wireless networks. In principle, these frequencies can provide ultra-fast data transmission due to their large amount of available bandwidth. Nonetheless, several fundamental challenges stand in the way of their adoption. Instead of merely scaling the existing wireless system architecture, my thesis investigates how to leverage the physics of sub-THz signals to overcome these hurdles.",
-    "rawEventDetails": "Speaker Atsutse Kludze Details Event Description The sub-Terahertz (sub-THz) bands - frequencies above 100 GHz and up to 1 THz - are rapidly emerging as one of the accepted paradigms for future wireless networks. In principle, these frequencies can provide ultra-fast data transmission due to their large amount of available bandwidth. Nonetheless, several fundamental challenges stand in the way of their adoption. Instead of merely scaling the existing wireless system architecture, my thesis investigates how to leverage the physics of sub-THz signals to overcome these hurdles. One of the biggest obstacles is power consumption, since generating and amplifying signals above 100 GHz requires power-hungry circuitry. This issue is compounded by severe path loss, which demands highly directional links created by large antenna arrays. To address this, my thesis introduces LeakyScatter, a new passive architecture that enables wideband backscattering above 100 GHz. By exploiting leaky-wave antenna physics, LeakyScatter establishes retro-directive links without active components or power consumption. Power alone, however, does not determine scalability: sub-THz networks also demand devices that can be manufactured over large areas at low cost. To this end, I introduce a new class of broadband, electronically reconfigurable sub-THz metasurfaces whose active element is an organic electrochemical modulator. By electrochemically doping and de-doping large-area patterned organic films, these devices dynamically control the polarization, spectral response, and direction of sub-THz wavefronts at milliwatt-scale power, using fabrication processes compatible with large-area organic electronics. Next, given the emergence of high-frequency devices with electronically large aperture sizes, wireless users may fall into the near-field of an access point, where traditional far-field assumptions break down. I develop analytical and simulation frameworks to evaluate near-field beamforming performance and demonstrate how multiple coordinated arrays can overcome existing range and focusing limitations. Lastly, I explore how sub-THz signals can address pressing real-world challenges far beyond traditional wireless networking, enabling unprecedented sensing functionalities: non-coherent 3D localization from a single broadband transmission, and non-destructive fruit-quality monitoring that targets large-scale food waste where existing methods are invasive or economically impractical. Collectively, these efforts contribute foundational physical-layer architectures and device technologies for next-generation wireless networks. Adviser: Yasaman Ghasempour",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Towards Physics-Guided Wireless Communication and Sensing Above 100 GHz",
-    "locationRaw": "EQUAD J323",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4146:delta:0",
     "guid": "ps_events:4146:delta:0",
     "sources": [
