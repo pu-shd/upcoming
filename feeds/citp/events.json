@@ -1208,6 +1208,64 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5296:delta:0",
+    "guid": "ps_events:5296:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T21:30:00Z",
+    "endsAt": "2026-11-12T23:00:00Z",
+    "startTime": "2026-11-12T16:30:00",
+    "endTime": "2026-11-12T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Reboot \u2013 AI and the Race to Save Democracy by Beth Simone Noveck",
+    "speakers": [
+      {
+        "name": "Book Talk",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Book Talk",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Location: TBA",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/book-talk-reboot-%E2%80%93-ai-and-race-save-democracy-beth-simone-noveck",
+    "content": "Democracy is in retreat at home and abroad. Our institutions are more fragile than ever. At this delicate moment, artificial intelligence has burst onto the scene\u2014a powerful technology that holds as much potential to bolster democracy as to harm it.Yet we no longer treat democracy as a design challenge we can solve. We have built extraordinary tools without yet using them where they are needed most: to forge institutions that listen more closely, decide more wisely, and act more effectively.We stand at an inflection point. Will AI tighten the grip of power\u2014or help rebuild",
+    "rawEventDetails": "Details Event Description Democracy is in retreat at home and abroad. Our institutions are more fragile than ever. At this delicate moment, artificial intelligence has burst onto the scene\u2014a powerful technology that holds as much potential to bolster democracy as to harm it. Yet we no longer treat democracy as a design challenge we can solve. We have built extraordinary tools without yet using them where they are needed most: to forge institutions that listen more closely, decide more wisely, and act more effectively. We stand at an inflection point. Will AI tighten the grip of power\u2014or help rebuild public institutions that work for people? Reboot offers a bold and practical playbook for tipping the balance in favor of democracy. For technologists, public servants, researchers and civic leaders, Reboot offers a practical framework for governing AI\u2014and for governing with it. Join CITP director and professor of computer science Arvind Narayanan and Beth Noveck as they discuss her latest book, Reboot \u2013 AI and the Race to Save Democracy . Bio: Beth Simone Noveck's newest book is Reboot: AI and the Race to Save Democracy (Yale University Press, 2026). A professor at Northeastern University with appointments in law, engineering, policy, communications and computer science, she directs The Burnes Center for Social Change and The Governance Lab. She focuses on \u201cDemocratic AI\u201dor how to use AI to strengthen democratic institutions. She previously served in the White House, 10 Downing Street, the German Chancellery and as founding Chief AI Strategist and Chief Innovation Officer for the State of New Jersey. Noveck founded the White House Open Government Initiative . Today she leads InnovateUS , which supports free public sector learning, and its research initiative the Observatory of Public Sector AI , the largest collection of data on the public sector and its use of AI. She created AI for Impact , which designs and deploys open source AI tools to improve public outcomes and Solving Pulic Problems to train the next generation of leaders and problem solvers. In 2026, she joined the Australian Resilient Democracy Network as a Global Fellow and the Harvard Kennedy School as a Policy Fellow. Read more about her here and by her here . If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsor School of Public and International Affairs (SPIA)",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Book Talk - Reboot \u2013 AI and the Race to Save Democracy by Beth Simone Noveck",
+    "locationRaw": "Location: TBA",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5146:delta:0",
     "guid": "ps_events:5146:delta:0",
     "sources": [
