@@ -2974,6 +2974,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4136:delta:0",
+    "guid": "ps_events:4136:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-30T17:00:00Z",
+    "endsAt": "2026-09-30T19:45:00Z",
+    "startTime": "2026-09-30T13:00:00",
+    "endTime": "2026-09-30T15:45:00",
+    "timezone": "America/New_York",
+    "title": "DaIS Launch & Faculty Research Collaboration Symposium",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Frist Health Center - A78B McLain Pavilion",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/dais-launch-faculty-research-collaboration-symposium",
+    "content": "",
+    "rawEventDetails": "Details Event Description Join us for the official launch of Princeton\u2019s Data and Intelligent Systems (DaIS), an initiative dedicated to supporting and expanding AI, Data Science, and Statistics research and education across the university. This event will introduce the DaIS vision and host a collaborative faculty symposium designed to foster interdisciplinary research partnerships. Event Details Date: September 30, 2026 Location: Frist Health Center - A78B McLain Pavilion The Launch: Introducing DaIS The event begins with a university-wide introduction to DaIS. This session will feature: Provost Jen Rexford to provide opening remarks. Tom Griffiths, Director of DaIS, will share insights on Princeton AI. Arthur Spirling, Director of DaIS, will share insights on Princeton Statistics and Data Science, and the education efforts of DaIS Faculty Research Collaboration Symposium Following the introductory remarks, the Faculty Research Collaboration Symposium will commence. This portion of the event is specifically for faculty members to present their research ideas and seek guidance and feedback from across disciplines on how AI and data science can support their work. The aim is to help create new productive collaborations among colleagues across the university. In addition, faculty previously in receipt of DaIS seed grants will present work that flowed from those efforts. Reception The conclusion of the event invites all to a light reception to mingle and connect with peers.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DaIS Launch & Faculty Research Collaboration Symposium",
+    "locationRaw": "Frist Health Center - A78B McLain Pavilion",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cbe:ps_events:5296:delta:0",
     "guid": "ps_events:5296:delta:0",
     "sources": [
