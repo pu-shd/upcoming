@@ -486,6 +486,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4131:delta:0",
+    "guid": "ps_events:4131:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-02T17:00:00Z",
+    "endsAt": "2026-11-02T23:00:00Z",
+    "startTime": "2026-11-02T12:00:00",
+    "endTime": "2026-11-02T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Societal AI Launch Event",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Chancellor Green",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/princeton-societal-ai-launch-event",
+    "content": "",
+    "rawEventDetails": "Speakers Brian Merchant Affiliation Technology Journalist Audrey Watters Affiliation Writer on Education and Technology Alondra Nelson Affiliation Writer and Policy Adviser",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Societal AI Launch Event",
+    "locationRaw": "Chancellor Green",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4071:delta:0",
     "guid": "ps_events:4071:delta:0",
     "sources": [
