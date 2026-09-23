@@ -1,52 +1,5 @@
 [
   {
-    "id": "materials:ps_events:4146:delta:0",
-    "guid": "ps_events:4146:delta:0",
-    "sources": [
-      "materials"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-08-20T12:00:00Z",
-    "endsAt": "2026-08-21T17:30:00Z",
-    "startTime": "2026-08-20T08:00:00",
-    "endTime": "2026-08-21T13:30:00",
-    "timezone": "America/New_York",
-    "title": "Princeton Symposium on Advances in Optics and Ultrafast Science",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Briger Hall",
-      "id": "",
-      "detail": "C112 + Atrium C102"
-    },
-    "urlRef": "https://materials.princeton.edu/events/2026/princeton-symposium-advances-optics-and-ultrafast-science",
-    "content": "We are pleased to host the inaugural Princeton Symposium on Advances in Optics and Ultrafast Science, sponsored by the SEAS Cluster of Excellence on Advanced Optical Metrology and Ultrafast Dynamics. The symposium will bring together leading researchers from Princeton and institutions around the world to discuss recent advances across a broad range of topics, including ultrafast science, spectroscopy, time-resolved X-ray and electron scattering, and quantum materials. The two-day program will feature keynote and invited talks, a poster session, and opportunities for",
-    "rawEventDetails": "Details Event Description We are pleased to host the inaugural Princeton Symposium on Advances in Optics and Ultrafast Science , sponsored by the SEAS Cluster of Excellence on Advanced Optical Metrology and Ultrafast Dynamics. The symposium will bring together leading researchers from Princeton and institutions around the world to discuss recent advances across a broad range of topics, including ultrafast science, spectroscopy, time-resolved X-ray and electron scattering, and quantum materials. The two-day program will feature keynote and invited talks, a poster session, and opportunities for interdisciplinary discussion and collaboration. We welcome participants from both academia and industry. Agenda Schedule is subject to change. Thursday, August 20: Time Activity Speaker(s) 8:00 - 9:00 Breakfast and coffee 9:00 - 9:15 Welcome Remarks Aditya Sood (Princeton University) Andrew Houck (Dean, School of Engineering and Applied Sciences, Princeton University) 9:15 - 10:00 Keynote Tony Heinz (Stanford University) Light-Matter Interactions in 2D Materials 10:00 - 12:00 Session 1 Chair: Aditya Sood Libai Huang (Purdue University) Imaging the Transport Dynamics of Correlated Exciton Phases via Ultrafast Microscopy Sarah King (University of Chicago) Electron Nanoimaging of Hyperbolic Plasmon Polaritons in the Quasi 1D Metal MoOCl\u2082 Milan Delor (Columbia University) Electron, Phonon, and Light Dynamics in Asymmetric Quantum Media Daniel Adams (Colorado School of Mines) Ultrafast Single Shot Computational Imaging 12:00 - 1:30 Lunch + Posters 1:30 - 3:30 Session 2 Chair: Alice Kunin Roel Tempelaar (Northwestern University) Tuning Material Properties by Optical, Electronic, and Phononic Interferences Greg Scholes (Princeton University) Wavepackets as Probes of Ultrafast Dynamics Marissa Weichman (Princeton University) Molecules in Optical Cavities: New Platforms for Precision Spectroscopy and Strong Light-Matter Interactions Gerard Wysocki (Princeton University) Mid-infrared and THz Quantum Cascade Laser Frequency Combs for high resolution spectroscopic sensing 3:30 - 4:00 Coffee break 4:00 - 6:00 Session 3 Chair: Julia Mikhailova Paul Evans (University of Wisconsin) Few-nm-scale Dynamics of Ferroic Oxides at the Crossover Between Fundamental Excitations and Nanoscale Phenomena Venkat Gopalan (Pennsylvania State University) Metastable Polar Textures: Creation, Probing and Emergent Properties Jared Maxson (Cornell University) An Ultrafast Photoinduced Twist in Moir\u00e9 Materials Aditya Sood (Princeton University) Ultrafast Atomic Thermometry using MeV Electrons \u2013 Emergent Thermal Physics in Moire Materials Friday, August 21: Time Activity Speaker(s) 8:00 - 8:45 Breakfast and coffee 8:45 - 9:30 Keynote Paul Corkum (University of Ottawa) Tunnelling, Recollision and Core Dynamics -- Exploiting Plasmas for Attosecond Technology 9:30 - 12:00 Session 4 Chair: Marissa Weichman Shambhu Ghimire (SLAC, National Accelerator Laboratory) Ultrafast Spectroscopy Based on High-order Harmonic Generation Mechanism Julia Mikhailova (Princeton University) Plasma Optics for Ultrafast High-field Science Arvinder Sandhu (Arizona State University) Development of Compact X-ray Sources at ASU for Femtosecond and Attosecond Science Aleksei Zheltikov (Texas A&M University) The Nonlinear Susceptibility for Stimulated Light Scattering in Plasmas Alice Kunin (Princeton University) Tracking and Controlling Ultrafast Exciton Dynamics in Novel 2D Materials 12:00 - 12:05 Closing remarks Julia Mikhailova (Princeton University) Parking Visitor parking is available at Stadium Drive Garage . A parking permit is required; You may register ahead of time here . It\u2019s a 10-minute walk from Stadium Drive Garage to Briger Hall, or take the free University shuttle (Tiger Transit) #4 or #5. The shuttle stop nearest Briger Hall is Goheen Walk on Washington Road. See today\u2019s bus schedules and real-time bus location . Briger Hall is located between Ivy Lane and Prospect Avenue. Please see the campus map for more information. Questions? Please contact Aditya Sood . Organizing Committee Faculty of the SEAS Cluster of Excellence on Advanced Optical Metrology and Ultrafast Dynamics : Craig Arnold, Alice Kunin, Julia Mikhailova, Gregory Scholes, Aditya Sood, Marissa Weichman, and Gerard Wysocki",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Symposium on Advances in Optics and Ultrafast Science",
-    "locationRaw": "Briger Hall (C112 + Atrium C102)",
-    "mappingRules": [
-      "materials:title"
-    ],
-    "locationRule": "parenthetical",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4076:delta:0",
     "guid": "ps_events:4076:delta:0",
     "sources": [
@@ -2812,6 +2765,53 @@
       "mae:summary-is-title"
     ],
     "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4141:delta:0",
+    "guid": "ps_events:4141:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T17:30:00Z",
+    "endsAt": "2026-10-02T19:00:00Z",
+    "startTime": "2026-10-02T13:30:00",
+    "endTime": "2026-10-02T15:00:00",
+    "timezone": "America/New_York",
+    "title": "DDSS Workshop: Claude Code I",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/ddss-workshop-claude-code-i",
+    "content": "Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social ScienceA gentle introduction to Claude Code, Anthropic's coding agent. We'll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You'll leave ready to hit the ground running on your own projects.",
+    "rawEventDetails": "Details Event Description Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social Science A gentle introduction to Claude Code, Anthropic's coding agent. We'll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You'll leave ready to hit the ground running on your own projects.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DDSS Workshop: Claude Code I",
+    "locationRaw": "",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "declined",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,

@@ -437,6 +437,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4141:delta:0",
+    "guid": "ps_events:4141:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T17:30:00Z",
+    "endsAt": "2026-10-02T19:00:00Z",
+    "startTime": "2026-10-02T13:30:00",
+    "endTime": "2026-10-02T15:00:00",
+    "timezone": "America/New_York",
+    "title": "DDSS Workshop: Claude Code I",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/ddss-workshop-claude-code-i",
+    "content": "Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social ScienceA gentle introduction to Claude Code, Anthropic's coding agent. We'll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You'll leave ready to hit the ground running on your own projects.",
+    "rawEventDetails": "Details Event Description Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social Science A gentle introduction to Claude Code, Anthropic's coding agent. We'll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You'll leave ready to hit the ground running on your own projects.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DDSS Workshop: Claude Code I",
+    "locationRaw": "",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4111:delta:0",
     "guid": "ps_events:4111:delta:0",
     "sources": [
