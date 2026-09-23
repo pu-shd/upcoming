@@ -2565,6 +2565,57 @@
     "mappingConflict": false
   },
   {
+    "id": "cbe:ps_events:5466:delta:0",
+    "guid": "ps_events:5466:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T12:30:00Z",
+    "endsAt": "2026-09-29T14:00:00Z",
+    "startTime": "2026-09-29T08:30:00",
+    "endTime": "2026-09-29T10:00:00",
+    "timezone": "America/New_York",
+    "title": "Phase, Composition, and Structural Dynamics in Cesium Lead Halide Perovskite Thin Films",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations",
+    "tags": [
+      "fpo"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad A Wing -",
+      "id": "",
+      "detail": "A210"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/phase-composition-and-structural-dynamics-cesium-lead-halide-perovskite-thin-films",
+    "content": "Inorganic cesium lead halide perovskites (CsPbX3, where X = I, Br) possess superior thermochemical stability compared to hybrid organic\u2013inorganic perovskites, positioning them as highly promising candidates for long-term photovoltaic applications. However, their performance and commercial viability remain constrained by polymorphic instability, Pb-rich and Cs-rich defect formation, and challenging surface defect passivation. This dissertation systematically elucidates the processing\u2013structure\u2013property relationships that dictate polymorph stability, perovskite reaction kinetics,",
+    "rawEventDetails": "Speaker Trey Holley Details Event Description Inorganic cesium lead halide perovskites (CsPbX 3 , where X = I, Br) possess superior thermochemical stability compared to hybrid organic\u2013inorganic perovskites, positioning them as highly promising candidates for long-term photovoltaic applications. However, their performance and commercial viability remain constrained by polymorphic instability, Pb-rich and Cs-rich defect formation, and challenging surface defect passivation. This dissertation systematically elucidates the processing\u2013structure\u2013property relationships that dictate polymorph stability, perovskite reaction kinetics, and optoelectronic behavior in all-inorganic halide perovskite thin films. First, to address the rapid transformation of photoactive black CsPbI 3 ( \u03b1, \u03b2, \u03b3 polymorphs) into the non-photoactive yellow polymorph ( \u03b4 -CsPbI 3 ), this work quantitatively investigates the reconstructive polymorph transformation kinetics. Utilizing in situ isothermal X-ray diffraction (XRD) and time-resolved optical microscopy, the polymorph transformation is modeled via Johnson\u2013Mehl\u2013Avrami\u2013Kolmogorov (JMAK) kinetics, establishing that the transformation proceeds through an interface-controlled, thermally activated two-dimensional growth mechanism. The resulting Time-Temperature-Transformation (TTT) diagram serves as a predictive design framework to optimize processing windows and enable accelerated lifetime testing. Second, this work investigates compositional control and thermal evaporation in CsPbBr 3 thin films. Stepwise isothermal thermogravimetric analysis (TGA) on single-crystal standards establishes a thermodynamic vapor pressure hierarchy (PbBr 2 > CsPb 2 Br 5 > CsPbBr 3 > CsBr). Postdeposition annealing drives the preferential sublimation of unreacted Pb-rich species (PbBr 2 and CsPb 2 Br 5 ) from the film surface, restoring optimal band alignment and surface stoichiometry to yield photovoltaic devices that match stoichiometric controls despite the persistence of Pb-rich species in the bulk. Finally, post-evaporation film quality is enhanced through solvent vapor annealing (SVA) combined with amine functionalization. Exposing co-evaporated CsPbBr 3 thin films to dimethyl sulfoxide (DMSO) and volatile amine vapors (such as phenethylamine, PEA) induces controlled grain coarsening and passivates interfacial defects. Furthermore, interaction with ambient atmospheric species (CO 2 and H 2 O) mediates the formation of low-dimensional (2D/3D) perovskite heterostructures. Together, these fundamental insights into thermal processing, perovskite reaction kinetics, and chemical surface tailoring provide scalable engineering strategies for high-efficiency, durable all-inorganic perovskite photovoltaics.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Phase, Composition, and Structural Dynamics in Cesium Lead Halide Perovskite Thin Films",
+    "locationRaw": "Engineering Quad A Wing - A210",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4126:delta:0",
     "guid": "ps_events:4126:delta:0",
     "sources": [
