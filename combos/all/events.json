@@ -3216,9 +3216,9 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "Julis Romo Rabinowitz Building -",
       "id": "",
-      "detail": ""
+      "detail": "A01"
     },
     "urlRef": "https://ai.princeton.edu/events/2026/ddss-workshop-claude-code-i",
     "content": "Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social ScienceA gentle introduction to Claude Code, Anthropic's coding agent. We'll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You'll leave ready to hit the ground running on your own projects.",
@@ -3229,11 +3229,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "DDSS Workshop: Claude Code I",
-    "locationRaw": "",
+    "locationRaw": "Julis Romo Rabinowitz Building - A01",
     "mappingRules": [
       "ai:title"
     ],
-    "locationRule": "declined",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
