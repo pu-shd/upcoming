@@ -2002,9 +2002,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "CS",
       "id": "",
-      "detail": ""
+      "detail": "105"
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/frankenstein-oscillator-stabilizing-impossible",
     "content": "Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an",
@@ -2015,11 +2015,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "The Frankenstein Oscillator: Stabilizing the Impossible",
-    "locationRaw": "To be determined",
+    "locationRaw": "CS 105",
     "mappingRules": [
       "robotics:summary-is-title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -3172,9 +3172,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Bowen Hall",
+      "name": "Bowen",
       "id": "",
-      "detail": ""
+      "detail": "222"
     },
     "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-yuriy-roman-massachusetts-institute-technology",
     "content": "Reimagining Thermochemical Catalysis: Promoting Reactions with Electric FieldsAbstract: Catalysis has long relied on conventional handles such as temperature, pressure, and concentration to accelerate chemical reactions. Across biology and electrochemistry, electric fields provide an additional parameter to control rates. Enzymes exploit strong, oriented fields within their active sites to stabilize intermediates and accelerate turnover, while in electrochemistry, interfacial polarization dictates electron and proton transfer rates. In heterogeneous",
@@ -3185,11 +3185,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Yuriy Roman, Massachusetts Institute of Technology",
-    "locationRaw": "Bowen Hall",
+    "locationRaw": "Bowen 222",
     "mappingRules": [
       "materials:series-person-affiliation"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
@@ -3661,9 +3661,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Bowen Hall",
+      "name": "Bowen",
       "id": "",
-      "detail": ""
+      "detail": "222"
     },
     "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-alan-west-columbia-university",
     "content": "Critical Materials Processing via Closed-Loop Redox-Mediated LeachingAbstract: Electrification can transform the way chemical reagents are produced, regenerated, and integrated into industrial processes. In hydrometallurgy, electrochemical regeneration of redox carriers enables closed-loop redox-mediated leaching (CL-RML), changing the relationship between reagent selection, process performance, and sustainability. Rather than treating oxidants or reductants as consumable reagents, CL-RML allows redox carriers to be selected primarily for their",
@@ -3674,11 +3674,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Alan West, Columbia University",
-    "locationRaw": "Bowen Hall",
+    "locationRaw": "Bowen 222",
     "mappingRules": [
       "materials:series-person-affiliation"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
@@ -4887,9 +4887,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Bowen Hall",
+      "name": "Bowen",
       "id": "",
-      "detail": ""
+      "detail": "222"
     },
     "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-dimitris-lagoudas-texas-am-university",
     "content": "Recent Advances in the Modeling of Shape Memory AlloysAbstract: Shape memory alloys (SMAs) exhibit unique behavior due to reversible phase transformations that are strongly influenced by material composition, microstructure, and applied thermal and mechanical loads. Under complex loading conditions, including simultaneous and out-of-phase thermal and mechanical loading, SMAs can show transformation behavior that differs from that observed in traditional experiments. These observations highlight the need to better connect material behavior at the",
@@ -4900,11 +4900,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Dimitris Lagoudas, Texas A&M University",
-    "locationRaw": "Bowen Hall",
+    "locationRaw": "Bowen 222",
     "mappingRules": [
       "materials:series-person-affiliation"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
@@ -5548,9 +5548,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Bowen Hall",
+      "name": "Bowen",
       "id": "",
-      "detail": ""
+      "detail": "222"
     },
     "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-makhsud-saidaminov-university-victoria",
     "content": "Beyond Conventional Silicon: Perovskite Solar Cells and X-ray DetectorsAbstract: Silicon underpins modern electronics, yet its technological dominance and geographically concentrated supply chains present growing concerns. In this talk, I will introduce halide perovskites, a class of high-performance semiconductors that can be synthesized and processed at relatively simple conditions. I will describe our progress in scalable perovskite solar cells fabricated in ambient air using green solvents, followed by the automated growth of single crystals for",
@@ -5561,11 +5561,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Makhsud Saidaminov, University of Victoria",
-    "locationRaw": "Bowen Hall",
+    "locationRaw": "Bowen 222",
     "mappingRules": [
       "materials:series-person-affiliation"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
@@ -5992,9 +5992,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Bowen Hall",
+      "name": "Bowen",
       "id": "",
-      "detail": ""
+      "detail": "222"
     },
     "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-mahesh-mahanthappa-university-minnesota",
     "content": "Abstract and bio TBA",
@@ -6005,11 +6005,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Mahesh Mahanthappa, University of Minnesota",
-    "locationRaw": "Bowen Hall",
+    "locationRaw": "Bowen 222",
     "mappingRules": [
       "materials:series-person-affiliation"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
@@ -6430,9 +6430,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Bowen Hall",
+      "name": "Bowen",
       "id": "",
-      "detail": ""
+      "detail": "222"
     },
     "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-piran-kidambi-university-florida",
     "content": "Atomically Thin Membranes: Opportunities and Challenges Abstract: Two-dimensional (2D) nanomaterials offer fundamentally new opportunities to study mass transport at sub-atomic and molecular length scales. Their atomic thickness enables transport phenomena such as quantum tunneling, while their ability to host atomically precise defects that function as nanopores enables highly size-selective ionic and molecular sieving. Together, these unique characteristics open new frontiers in membrane science and molecular separations.In this talk, I",
@@ -6443,11 +6443,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Piran Kidambi, University of Florida",
-    "locationRaw": "Bowen Hall",
+    "locationRaw": "Bowen 222",
     "mappingRules": [
       "materials:series-person-affiliation"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,

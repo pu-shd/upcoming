@@ -27,9 +27,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "CS",
       "id": "",
-      "detail": ""
+      "detail": "105"
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/frankenstein-oscillator-stabilizing-impossible",
     "content": "Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an",
@@ -40,11 +40,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "The Frankenstein Oscillator: Stabilizing the Impossible",
-    "locationRaw": "To be determined",
+    "locationRaw": "CS 105",
     "mappingRules": [
       "robotics:summary-is-title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
