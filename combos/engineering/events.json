@@ -1074,9 +1074,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Maeder Hall Auditorium",
+      "name": "Briger Hall,",
       "id": "",
-      "detail": ""
+      "detail": "C102"
     },
     "urlRef": "https://cee.princeton.edu/events/peculiarities-heat-driven-and-light-driven-evaporation",
     "content": "Joint CEE/MAE Distinguished SeminarAbstract:This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular",
@@ -1087,11 +1087,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
-    "locationRaw": "Maeder Hall Auditorium",
+    "locationRaw": "Briger Hall, C102",
     "mappingRules": [
       "cee:summary-is-title"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
