@@ -1407,6 +1407,62 @@
     "mappingConflict": false
   },
   {
+    "id": "mae:ps_events:4866:delta:0",
+    "guid": "ps_events:4866:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-12T14:00:00Z",
+    "endsAt": "2026-10-12T16:00:00Z",
+    "startTime": "2026-10-12T10:00:00",
+    "endTime": "2026-10-12T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Nonlinear Opinion Dynamics for Perceptual Decision-Making",
+    "speakers": [
+      {
+        "name": "Giovanna Amorim",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Giovanna Amorim",
+    "affiliation": "",
+    "series": "Final Public Oral Exam",
+    "tags": [
+      "fpo"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Final Public Oral Exam"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad J Wing",
+      "id": "",
+      "detail": "J223"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/nonlinear-opinion-dynamics-perceptual-decision-making",
+    "content": "",
+    "rawEventDetails": "Speaker Giovanna Amorim Event Category Final Public Oral Exam",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Nonlinear Opinion Dynamics for Perceptual Decision-Making",
+    "locationRaw": "Engineering Quad J Wing/J223",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "slash_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cbe:ps_events:5306:delta:0",
     "guid": "ps_events:5306:delta:0",
     "sources": [
