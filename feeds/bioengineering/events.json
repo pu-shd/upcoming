@@ -180,6 +180,53 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2776:delta:0",
+    "guid": "ps_events:2776:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-08T19:30:00Z",
+    "endsAt": "2026-10-08T21:30:00Z",
+    "startTime": "2026-10-08T15:30:00",
+    "endTime": "2026-10-08T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Cell Engineering Facility Open House",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E140"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/cell-engineering-facility-open-house",
+    "content": "Join us for lab olympics, prizes, snacks, and a tour of the facility!Please note that the entrance to E140 is through the service corridor.",
+    "rawEventDetails": "Details Event Description Join us for lab olympics, prizes, snacks, and a tour of the facility! Please note that the entrance to E140 is through the service corridor.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Cell Engineering Facility Open House",
+    "locationRaw": "BioE E140",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "bioengineering:ps_events:2771:delta:0",
     "guid": "ps_events:2771:delta:0",
     "sources": [
