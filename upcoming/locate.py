@@ -68,6 +68,30 @@ def _is_room(token: str) -> bool:
     return bool(_ROOM_ONLY_RE.match(token))
 
 
+#: Characters that join a venue to a room rather than belonging to either.
+_SEPARATORS = frozenset("-\u2013\u2014,/")
+
+
+def _trim_separators(tokens: Sequence[str]) -> str:
+    """Join tokens, dropping any at either end that are only punctuation.
+
+    Taking the room out of ``Julis Romo Rabinowitz Building - A01`` otherwise leaves the
+    dash behind, and ``Julis Romo Rabinowitz Building -`` goes into the feed as the venue
+    name. `dais` is where this surfaced: its chain has no `detail_dash_name` -- that rule
+    encodes ORFE's room-first order and would invert DaIS's -- so a name-first dash
+    reaches `unambiguous_room` intact for the first time.
+
+    Only whole tokens are dropped, never characters inside one, so ``SEAS-CBE F212`` keeps
+    its building code.
+    """
+    kept = list(tokens)
+    while kept and all(character in _SEPARATORS for character in kept[0]):
+        kept.pop(0)
+    while kept and all(character in _SEPARATORS for character in kept[-1]):
+        kept.pop()
+    return " ".join(kept)
+
+
 def rule_sentinel(raw: str) -> Location | None:
     """``TBD`` and friends mean no location, not a venue called TBD."""
     return Location() if raw.strip().casefold() in _SENTINELS else None
@@ -145,8 +169,14 @@ def rule_unambiguous_room(raw: str) -> Location | None:
         return None
 
     if last_is_room:
-        return Location(name=" ".join(tokens[:-1]), detail=tokens[-1])
-    return Location(name=" ".join(tokens[1:]), detail=tokens[0])
+        name, detail = _trim_separators(tokens[:-1]), tokens[-1]
+    else:
+        name, detail = _trim_separators(tokens[1:]), tokens[0]
+    #: Nothing but a separator was left, so there is no venue to name. Declining hands the
+    #: value to `whole`, which keeps it entire rather than publishing a bare dash.
+    if not name:
+        return None
+    return Location(name=name, detail=detail)
 
 
 def rule_whole(raw: str) -> Location | None:
@@ -173,8 +203,12 @@ RULES: dict[str, Callable[[str], Location | None]] = {
 #: Rules that must run before ``unambiguous_room``, and why.
 #:
 #: ``101 - Sherrerd Hall`` has a room token at its first position, so ``unambiguous_room``
-#: would match it and leave ``- Sherrerd Hall`` as the venue. The dash rule has to see it
-#: first. Asserted by test rather than left to whoever edits a chain next.
+#: matches it too. Since ``_trim_separators`` the two agree on the split, so this is no
+#: longer about getting the venue right -- it is about which rule is *credited*. The
+#: matched rule name is the provenance a maintainer reads when a location looks wrong, and
+#: "the room rule happened to cope" is a worse answer than "ORFE's dash convention fired".
+#: The dash rule also handles a leading detail that is not room-shaped, which the room rule
+#: declines outright. Asserted by test rather than left to whoever edits a chain next.
 MUST_PRECEDE_UNAMBIGUOUS = ("sentinel", "detail_dash_name", "slash_room", "parenthetical")
 
 

@@ -13,6 +13,7 @@ import re
 from collections.abc import Mapping
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
+from typing import ClassVar
 
 import pytest
 
@@ -129,7 +130,7 @@ def test_an_empty_feed_is_not_a_failure(registry, built, tmp_path):  # type: ign
 def test_published_feeds_are_valid_json_arrays(registry, built, tmp_path):  # type: ignore[no-untyped-def]
     tree = build_tree(registry, built, tmp_path)
     feeds = [p for p in tree.files if p.startswith(("feeds/", "combos/"))]
-    assert len(feeds) == 17  # twelve live sources, five enabled combos
+    assert len(feeds) == 19  # fourteen live sources, five enabled combos
     for path in feeds:
         assert isinstance(json.loads(tree.files[path]), list), path
 
@@ -182,7 +183,7 @@ def test_one_failed_source_does_not_block_the_others(registry, built, tmp_path):
     tree = assemble(registry, broken, combos, config, root=tmp_path, generated_at=FIXED_TIME)
 
     healthy = [f for f in tree.feeds if f.path.startswith("feeds/") and f.status == STATUS_OK]
-    assert len(healthy) == 10  # the eleven non-empty live sources, less orfe
+    assert len(healthy) == 12  # the thirteen non-empty live sources, less orfe
     assert tree.files["feeds/mae/events.json"]
 
 
@@ -281,12 +282,12 @@ def test_status_counts_every_category(registry, built, tmp_path):  # type: ignor
     document = json.loads(tree.files["status.json"])
     assert document["generatedAt"] == FIXED_TIME
     summary = document["summary"]
-    assert summary["ok"] == 16  # 11 non-empty sources + 5 enabled combos
+    assert summary["ok"] == 18  # 13 non-empty sources + 5 enabled combos
     assert summary["empty"] == 1
     assert summary["disabled"] == 6  # 5 unavailable sources + nextg's combo
     assert summary["stale"] == 0
     # `events` counts sources only: summing the combos too would double-count every event.
-    assert summary["events"] == 115
+    assert summary["events"] == 143
 
 
 def test_status_is_the_only_file_carrying_a_clock(registry, built, tmp_path):  # type: ignore[no-untyped-def]
@@ -362,6 +363,7 @@ class _EmptyRegistry:
     """A registry with no sources, for testing the combo half of assemble in isolation."""
 
     sources: tuple[()] = ()
+    purposes: ClassVar[dict[str, object]] = {}
 
 
 # --------------------------------------------------------------------------------------

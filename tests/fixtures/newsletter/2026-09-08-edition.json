@@ -47,10 +47,11 @@
       "speakers": ["Multiple speakers"],
       "sponsors": ["Data and Intelligent Systems"],
       "location": "Maeder Hall, Room 002",
+      "ourLocation": "Maeder Hall, 002 Auditorium",
       "expect": {
-        "source": null,
-        "inFixtures": false,
-        "why": "Data and Intelligent Systems publishes no feed we have registered, so no configuration of the simulator can produce this event. It is recorded here so the gap is visible rather than looking like a simulator fault."
+        "source": "dais",
+        "inFixtures": true,
+        "why": "This was the one event no configuration of the simulator could produce: Data and Intelligent Systems published no feed we had registered. Registering `dais` for the DaIS newsletter closed it, and it declares `engineering-newsletter` too -- the evidence being this entry, with that sponsor, in this edition. The location differs: the editor wrote `Maeder Hall, Room 002` and the feed says `Maeder Hall, 002 Auditorium`, which is left unsplit because `002 Auditorium` is not room-shaped."
       }
     },
     {

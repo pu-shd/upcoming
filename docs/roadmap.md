@@ -303,7 +303,20 @@ per-source series alias map would close it, at the cost of another vocabulary to
 derivable from `rawEventDetails`, which we already capture — worth measuring before
 building.
 
-**Holiday handling in the simulator.** The edition rule is weekly-only by decision. the predecessor's
+**A speaker written into `DESCRIPTION`.** `nam` puts one there in a labelled field —
+`Speaker: Taylor Webb, Department of Psychology, Princeton University` — and nothing reads
+a speaker out of `DESCRIPTION`. The two routes that exist are a `SUMMARY` rule chain and
+page enrichment, and neither reaches it, so the DaIS newsletter's first entry loses a
+speaker line the hand-written edition has. The same suppression hides the blurb, since the
+content opens with that labelled field.
+
+Measure first: if this is one source's convention it is a per-source `enrich` selector
+against its event page, which is config. If several sources do it, it is a description
+rule chain — a third place a field can come from, and worth the weight only once it is
+paying for itself more than once.
+
+**Holiday handling in the simulator.** Each publication now declares its own weekday,
+window and layout, but the rule within a publication is still weekly-only by decision. the predecessor's
 `src/newsletter.py` models blackouts and exceptions; porting that would mean the simulator
 reproduces a shifted edition without a manual override. It would also mean either a Python
 model the page consumes, or a second implementation that can drift — which is the trade

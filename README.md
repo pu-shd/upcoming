@@ -35,11 +35,11 @@ bioengineering  live         title       1h       speakers,raw_details  https://
 
 ## Sources
 
-17 total: 12 live, 5 recorded as unavailable.
+19 total: 14 live, 5 recorded as unavailable.
 
 | | |
 |---|---|
-| **Live, Princeton Site Builder** | `orfe` (23 events), `citp` (24), `quantum` (18), `materials` (16), `ece` (12), `cbe` (10), `mae` (10), `ai` (7), `bioengineering` (3), `cee` (1), `robotics` (1) |
+| **Live, Princeton Site Builder** | `orfe` (23 events), `citp` (24), `dais` (22), `quantum` (18), `materials` (16), `ece` (12), `cbe` (10), `mae` (10), `ai` (7), `nam` (6), `bioengineering` (3), `cee` (1), `robotics` (1) |
 | **Live, different platform** | `kellercenter` — `PRODID:-//Drupal iCal API//EN`, currently a well-formed calendar with **zero events** |
 | **Declared unavailable** | `nextg`, `cs`, `acee`, `decenter`, `metro` |
 
@@ -197,9 +197,11 @@ everyone receives: the badge's own word, a stripe, and a tooltip naming what is 
 
 Beyond what the predecessor sites do it adds **source selection**, **purpose selection**, and an export shaped like what the editors assemble in Mailchimp by hand — grouped by day, with their own field labels, titles linked to their event pages and sponsors to their units. Both the copy and the download carry their styling inline, because email clients strip `<style>` and honour only `style=""`.
 
-**Nothing about the feeds is written into the page.** Sources, names, sites and purposes all come from `status.json`, so a thirteenth source appears the moment it is registered. That is deliberate: ORFE's and MAE's `feed-simulator.js` are **byte-identical** (`md5 1f4aa8d0…`) with the department baked in, and both are a lossy mirror of ORFE's 750-line `newsletter.py`.
+**Nothing about the feeds is written into the page.** Sources, names, sites and purposes all come from `status.json`, so a fifteenth source appears the moment it is registered. That is deliberate: ORFE's and MAE's `feed-simulator.js` are **byte-identical** (`md5 1f4aa8d0…`) with the department baked in, and both are a lossy mirror of ORFE's 750-line `newsletter.py`.
 
-It is checked against an edition that went out. `tests/fixtures/newsletter/2026-09-08-edition.json` is the real 7–14 September 2026 issue, transcribed from its Mailchimp export with every field verified against that file. The suite runs the simulator's own JavaScript through Node over the committed feeds and compares.
+It is checked against editions that went out — two of them, from different publications. `tests/fixtures/newsletter/2026-09-08-edition.json` is the engineering issue of 7–14 September 2026, transcribed from its Mailchimp export; `2026-09-24-dais-edition.json` is the DaIS issue of 24 September, transcribed from the email. Every field in both was verified against the source file. The suite runs the simulator's own JavaScript through Node over the committed feeds and compares.
+
+The DaIS edition reproduces line for line where its own edition is consistent — `4:30 — 6 p.m. Monday, Sept. 28, in Friend 006`, character for character. Where it is not, the generated listing picks one form and holds it: their edition writes a comma after the meridiem on some entries and not others, a hyphen on one line and an em dash on the next, and one of its *Learn More* links points at the wrong event. That last one is the whole argument.
 
 That comparison found a defect on first contact. `ai` and `materials` both list the same 12:05 talk and the editors merged it into one entry with three sponsors; both our titles were *synthesized placeholders* built from each unit's own template, so matching on the title found no duplicate where there plainly was one. The repeat check now keys on the speaker's name whenever the title is a placeholder.
 
@@ -245,20 +247,37 @@ sources:
         purposes: []
 ```
 
+**Give a purpose a publication.** A label is enough to select feeds. A purpose that is also a *publication* adds a `template` and a `schedule`, and the simulator reads both from `status.json` — so a third newsletter is config too.
+
+```yaml
+  dais-newsletter:
+    label: DAIS events newsletter
+    template: inline-date                     # or day-grouped
+    schedule:
+      publication: { weekday: THU, time: "14:00" }
+      coverage:                               # Thursday's edition is next week's events
+        start: { anchor: next_week_start }
+        end:   { anchor: next_week_start, offset_days: 6 }
+```
+
+`deadline` is optional and its absence is not a default: DaIS states none — its edition says only to send an email — so the page shows no deadline rather than inventing a date that would look authoritative beside everything else on it. Weekday, anchor, clock and template are all checked at load, because an unknown one resolves to *some* date or *some* layout and produces an edition that looks finished and is wrong.
+
+Two publications now exist, and they differ on both axes the mechanism claims to carry — Monday against Thursday, the current week against the next, day headings against one inline when-and-where line. That is the test of it: with one publication, nothing distinguishes a mechanism from a hardcoded shape behind a label.
+
 **Filter a source's own feed.** `publish_unless` drops matching events, `publish_where` keeps only matching ones — the same predicate vocabulary a combined feed uses. ORFE does this: the department does not list final public orals, so its feed carries 19 of the 23 events its calendar publishes. The count declined and the clause that did it go into `status.json`, because a filtered feed and a feed whose upstream went quiet look identical from outside.
 
 Every controlled vocabulary is checked by name at load. A misspelled tag, purpose, pattern, location rule or escape field is a load error — because a predicate on a value nothing produces filters to nothing and reports success, which is indistinguishable from a filter that is simply strict.
 
 ## Scale
 
-Twelve feeds, published every 20 minutes on weekday daytime Eastern and hourly otherwise. Three crons that do not overlap; a test proves it.
+Fourteen feeds, published every 20 minutes on weekday daytime Eastern and hourly otherwise. Three crons that do not overlap; a test proves it.
 
 That schedule is the *fastest* any source is polled, not the rate all of them are. Two mechanisms keep the load off other people's servers, both keyed off `state/upstream.json`:
 
 | | |
 |---|---|
 | **Per-source cadence** | Each source declares `30m`, `1h` or `6h` and is refetched only once it has elapsed. `cee` published one event this term; asking it 72 times a day is not something to do to somebody else's server. A source that is not due is reported **current**, not stale. |
-| **Conditional requests** | `ETag` and `Last-Modified` are remembered and replayed. Eleven of the twelve answer `304` with no body when nothing has changed. A 304 is neither `ok` nor `failed` — as `ok` we would build a feed from an empty body, as `failed` a healthy source would be marked stale for answering correctly. |
+| **Conditional requests** | `ETag` and `Last-Modified` are remembered and replayed. Eleven of the twelve measured in September answer `304` with no body when nothing has changed. A 304 is neither `ok` nor `failed` — as `ok` we would build a feed from an empty body, as `failed` a healthy source would be marked stale for answering correctly. |
 | **Enrichment windows** | `rebuild_after_hours` decides how long scraped values stay good — 24 by default, 6 for the two sources on a 30-minute cadence. Inside the window nothing is fetched; events new since the last scrape are fetched anyway, so a seminar added this morning is not untitled for hours. |
 
 Measured before these existed: about **4,244 requests a day**, of which ~4,100 were event-page scrapes returning identical markup. ORFE alone went from 960 a day to roughly 80.

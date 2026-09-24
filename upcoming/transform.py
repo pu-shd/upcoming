@@ -176,6 +176,7 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
     mapping_rule = f"{source.slug}:summary-is-{role}"
     summary_rest = ""
     extra_tags: tuple[str, ...] = ()
+    series_extra = ""
 
     summary = " ".join(decode_entities(raw.summary).split())
     if role == "speaker":
@@ -214,7 +215,10 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         # `series_extra` is the series the summary itself names, which the feed's
         # CATEGORIES may not. Kept as a tag rather than overwriting CATEGORIES, so the
         # publisher's own categorisation is never silently replaced.
-        if series_extra := assigned.get("series_extra"):
+        # An empty string rather than None when the rule did not assign one: this feeds a
+        # schema-required field, and `None` reaches it as a null.
+        series_extra = str(assigned.get("series_extra") or "")
+        if series_extra:
             extra_tags = (*extra_tags, series_extra)
 
     location, location_rule = locate.parse_location(
@@ -250,7 +254,12 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         url=raw.url,
         location=location,
         speakers=speakers,
-        series=_series(raw.categories),
+        # `series_extra` fills `series` only when the feed carries no CATEGORIES of its
+        # own. The rule against overwriting a publisher's categorisation is intact --
+        # there is nothing here to overwrite. `nam` is the case: no CATEGORIES at all, and
+        # a SUMMARY that is the series name, so without this its synthesized titles read
+        # "A Talk" instead of "A NAM Friday Talks Talk".
+        series=_series(raw.categories) or series_extra,
         tags=tuple(dict.fromkeys((*tags, *canonical))),
         unmapped_tags=unmapped,
         # The feed's declaration. Any per-event override is applied afterwards, since its

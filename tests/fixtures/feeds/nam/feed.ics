@@ -1,0 +1,110 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Natural and Artificial Minds
+BEGIN:VEVENT
+UID:ps_events:856:delta:0
+DTSTART:20260925T143000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260925T160000Z
+URL:https://nam.ai.princeton.edu/events/2026/nam-friday-talks-2
+LOCATION:Bendheim House\, 103
+SUMMARY:NAM Friday Talks
+CLASS:PUBLIC
+DESCRIPTION:The Consequences of Using Human Behavior to Train AILauren Trei
+ man\, NAM Postdoctoral Research Fellow&nbsp\;Artificial intelligence (AI) 
+ is now an integral part of everyday decision making. These systems not onl
+ y help us make choices but also learn from our behavior. Therefore\, it is
+  important to understand how our interactions with AI influence these syst
+ ems. Current approaches often assume that the behavior used to train AI ac
+ curately reflects how people would naturally behave. However\, people are 
+ often informed that their choices will be used for AI training\,
+DTSTAMP:20260921T120032Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:831:delta:0
+DTSTART:20260928T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260928T220000Z
+URL:https://nam.ai.princeton.edu/events/2026/emergent-symbol-processing-mec
+ hanistic-theory-human-cognition
+LOCATION:Friend 006
+SUMMARY:Emergent Symbol Processing as a Mechanistic Theory of Human Cogniti
+ on
+CLASS:PUBLIC
+DESCRIPTION:Speaker: Taylor Webb\, Department of Psychology\, Princeton Uni
+ versityTalk Abstract: There is a longstanding tension in cognitive science
+  between theories that emphasize the structured\, symbolic aspects of the 
+ mind — drawing an analogy to traditional computer programs — and the e
+ mergent properties of cognition that seem to be better explained by neural
+  networks. The rise of AI systems that are powered by neural networks\, bu
+ t that display many of the properties associated with symbolic cognitive m
+ odels (e.g.\, compositionality\, reasoning) has reinvigorated this debate\
+ , while leaving open
+DTSTAMP:20260918T115524Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:871:delta:0
+DTSTART:20261009T143000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261009T160000Z
+URL:https://nam.ai.princeton.edu/events/2026/nam-friday-talks-1
+LOCATION:Bendheim House\, 103
+SUMMARY:NAM Friday Talks
+CLASS:PUBLIC
+DESCRIPTION:Kim Stachenfeld\, Senior Research Scientist\, Google DeepMind
+DTSTAMP:20260917T152544Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:836:delta:0
+DTSTART:20261030T143000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261030T160000Z
+URL:https://nam.ai.princeton.edu/events/2026/do-neural-networks-have-world-
+ models
+LOCATION:Bendheim 103
+SUMMARY:Do Neural Networks Have World Models?
+CLASS:PUBLIC
+DESCRIPTION:Speaker: John Morrison\, Professor of Philosophy\, Barnard Coll
+ ege\, Columbia UniversityTalk Abstract: It is often claimed that neural ne
+ tworks build internal "world models." But the term is used in many conflic
+ ting ways\, and the evidence offered for it is rarely examined. This talk 
+ has two parts. First\, drawing on joint work with Raphaël Millière\, I p
+ ropose a minimal notion of a world model: a single\, unified representatio
+ n of a task that preserves its structural relations. I explain how this no
+ tion sits within a hierarchy of stronger ones\, and argue
+DTSTAMP:20260916T132425Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:876:delta:0
+DTSTART:20261113T153000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261113T170000Z
+URL:https://nam.ai.princeton.edu/events/2026/nam-friday-talks-0
+LOCATION:Bendheim House\, 103
+SUMMARY:NAM Friday Talks
+CLASS:PUBLIC
+DESCRIPTION:Anya Tsvetkov\, NAM Postdoctoral Research FellowAkshay Jagadish
+ \, NAM Postdoctoral Research Fellow&nbsp\;
+DTSTAMP:20260917T152520Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:881:delta:0
+DTSTART:20261204T153000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261204T170000Z
+URL:https://nam.ai.princeton.edu/events/2026/nam-friday-talks
+LOCATION:Bendheim House\, 103
+SUMMARY:NAM Friday Talks
+CLASS:PUBLIC
+DESCRIPTION:Marcelo Mattar\, Assistant Professor of Psychology and Neural S
+ cience\, New York University
+DTSTAMP:20260917T152506Z
+END:VEVENT
+END:VCALENDAR

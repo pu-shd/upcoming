@@ -118,6 +118,157 @@ def test_a_predicate_on_an_undeclared_purpose_is_a_load_error(registry, tmp_path
 
 
 # --------------------------------------------------------------------------------------
+# A purpose that carries behaviour
+# --------------------------------------------------------------------------------------
+#
+# `template` and `schedule` are what turn a purpose from a label into something a renderer
+# acts on, and every value reaches the published manifest before it reaches that renderer.
+# An unchecked one is not an error anywhere: an unknown template falls through to whichever
+# shape the dispatch defaults to, and an unknown weekday or anchor resolves to some date.
+# Both produce an edition that looks finished and is wrong, which is the failure this whole
+# repository is arranged against -- so each is a load error, and each refusal has a test.
+
+
+def test_each_purpose_that_declares_a_schedule_declares_a_template(registry) -> None:  # type: ignore[no-untyped-def]
+    """One without the other is half a publication: a window nothing renders, or a shape
+    with no edition to render for."""
+    for name, entry in registry.purposes.items():
+        if entry.get("schedule"):
+            assert entry.get("template"), f"{name} has a schedule and no template"
+
+
+def test_the_two_publications_do_not_share_a_shape(registry) -> None:  # type: ignore[no-untyped-def]
+    """The point of the mechanism. If both purposes named the same template and the same
+    weekday, nothing here would distinguish behaviour from decoration."""
+    declared = {
+        name: (entry.get("template"), entry["schedule"]["publication"]["weekday"])
+        for name, entry in registry.purposes.items()
+        if entry.get("schedule")
+    }
+    assert len(set(declared.values())) == len(declared), declared
+
+
+def _edit_purpose(name: str, **fields: object):  # type: ignore[no-untyped-def]
+    def mutate(document):  # type: ignore[no-untyped-def]
+        document["purposes"][name].update(fields)
+
+    return mutate
+
+
+@pytest.mark.parametrize(
+    ("fields", "complaint"),
+    [
+        pytest.param(
+            {"template": "day-grouped-v2"},
+            "not one the simulator implements",
+            id="a-template-nothing-renders",
+        ),
+        pytest.param(
+            {"schedule": {"publication": {"weekday": "WED"}, "coverage": {}}},
+            "needs both `start` and `end`",
+            id="a-window-with-no-bounds",
+        ),
+        pytest.param(
+            {
+                "schedule": {
+                    "publication": {"weekday": "WEDS"},
+                    "coverage": {
+                        "start": {"anchor": "publication"},
+                        "end": {"anchor": "publication"},
+                    },
+                }
+            },
+            "is not one of MON",
+            id="a-weekday-that-is-not-a-weekday",
+        ),
+        pytest.param(
+            {
+                "schedule": {
+                    "publication": {"weekday": "THU"},
+                    "coverage": {
+                        "start": {"anchor": "next_month_start"},
+                        "end": {"anchor": "publication"},
+                    },
+                }
+            },
+            "is not one of",
+            id="an-anchor-nothing-computes",
+        ),
+        pytest.param(
+            {
+                "schedule": {
+                    "publication": {"weekday": "THU", "time": "2pm"},
+                    "coverage": {
+                        "start": {"anchor": "publication"},
+                        "end": {"anchor": "publication"},
+                    },
+                }
+            },
+            "time",
+            id="a-clock-that-is-not-a-clock",
+        ),
+        pytest.param(
+            {
+                "schedule": {
+                    "publication": {"weekday": "THU"},
+                    "coverage": {
+                        "start": {"anchor": "publication"},
+                        "end": {"anchor": "publication", "offset_days": "six"},
+                    },
+                }
+            },
+            "whole number of days",
+            id="an-offset-that-is-not-a-number",
+        ),
+        pytest.param(
+            {
+                "schedule": {
+                    "publication": {"weekday": "THU"},
+                    "cadence": "weekly",
+                    "coverage": {
+                        "start": {"anchor": "publication"},
+                        "end": {"anchor": "publication"},
+                    },
+                }
+            },
+            "unknown key",
+            id="a-key-nobody-reads",
+        ),
+    ],
+)
+def test_a_schedule_the_simulator_could_not_act_on_is_refused(  # type: ignore[no-untyped-def]
+    tmp_path, fields, complaint
+) -> None:
+    config = registry_with(tmp_path, _edit_purpose("dais-newsletter", **fields))
+    with pytest.raises(ConfigFatal, match=complaint):
+        load_registry(config, env=TEST_ENV)
+
+
+def test_a_purpose_may_still_be_a_bare_label(tmp_path) -> None:  # type: ignore[no-untyped-def]
+    """Behaviour is opt-in too. A purpose used only to select feeds needs no schedule, and
+    demanding one would make the mechanism useless for its original job."""
+
+    def add(document):  # type: ignore[no-untyped-def]
+        document["purposes"]["internal-digest"] = {"label": "An internal digest"}
+
+    registry = load_registry(registry_with(tmp_path, add), env=TEST_ENV)
+    assert registry.purposes["internal-digest"] == {"label": "An internal digest"}
+
+
+def test_the_deadline_is_optional_and_its_absence_is_not_a_default(registry) -> None:  # type: ignore[no-untyped-def]
+    """DaIS states no submission deadline -- its edition says only to send an email.
+
+    An absent deadline has to stay absent all the way to the page. Filling it in from the
+    other publication's rule would put a date in front of an editor that nobody agreed to,
+    and it would look authoritative because everything else on the page is.
+    """
+    engineering = registry.purposes["engineering-newsletter"]["schedule"]
+    dais = registry.purposes["dais-newsletter"]["schedule"]
+    assert engineering["deadline"]["anchor"] == "week_start"
+    assert "deadline" not in dais
+
+
+# --------------------------------------------------------------------------------------
 # Optional, and never inherited
 # --------------------------------------------------------------------------------------
 
@@ -153,7 +304,14 @@ def test_nothing_is_inherited_from_defaults(tmp_path) -> None:  # type: ignore[n
 
 
 def test_a_declared_feed_stamps_every_one_of_its_events(orfe) -> None:  # type: ignore[no-untyped-def]
-    assert set(purposes_of(orfe)) == {("engineering-newsletter",)}
+    """Every purpose the feed declares, on every event it produces.
+
+    ORFE serves two publications, which is the ordinary case rather than the exception --
+    a talk can be of interest to more than one newsletter.
+    """
+    declared = tuple(orfe.purposes)
+    assert len(declared) > 1, "orfe is the multi-purpose example here"
+    assert set(purposes_of(orfe)) == {declared}
 
 
 # --------------------------------------------------------------------------------------
@@ -172,7 +330,7 @@ def test_an_override_replaces_the_feeds_declaration_for_matching_events(orfe) ->
     result = build_from_file(ORFE_FEED, source)
     assert result.ok
     for event in result.events:
-        expected = () if "colloquium" in event.tags else ("engineering-newsletter",)
+        expected = () if "colloquium" in event.tags else tuple(source.purposes)
         assert event.purposes == expected, event.title
 
 
@@ -283,7 +441,7 @@ def test_an_override_predicate_is_validated_like_any_other(tmp_path) -> None:  #
 
 def test_the_field_is_published_and_schema_described(orfe) -> None:  # type: ignore[no-untyped-def]
     result = build_from_file(ORFE_FEED, orfe)
-    assert to_wire(result.events[0])["purposes"] == ["engineering-newsletter"]
+    assert to_wire(result.events[0])["purposes"] == list(orfe.purposes)
 
     schema = json.loads((REPO_ROOT / "schema" / "event.schema.json").read_text())
     field = schema["properties"]["purposes"]
@@ -327,7 +485,8 @@ def test_the_manifest_names_each_feeds_purposes(registry, tmp_path) -> None:  # 
     tree = assemble(registry, results, {}, {}, root=tmp_path, generated_at="2026-09-11T12:00:00Z")
     document = json.loads(tree.files["status.json"])
     records = {f["path"]: f for f in document["feeds"]}
-    assert records["feeds/orfe/events.json"]["purposes"] == ["engineering-newsletter"]
+    orfe = next(s for s in registry.sources if s.slug == "orfe")
+    assert records["feeds/orfe/events.json"]["purposes"] == list(orfe.purposes)
     assert records["feeds/cs/events.json"]["status"] == "disabled"
     assert records["feeds/cs/events.json"]["purposes"] == ["engineering-newsletter"]
 

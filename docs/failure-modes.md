@@ -38,7 +38,7 @@ unannounced stale feed is worse than both. Combined feeds are built from the las
 rather than omitting the source, which would quietly shrink a feed a consumer relies on.
 
 **A source not due for a refetch is reported current, not stale.** It is serving exactly
-what its own configuration asked for. Conflating the two would report eight of twelve
+what its own configuration asked for. Conflating the two would report most
 departments as degraded on most ticks, and a signal that always fires is one everybody
 learns to ignore.
 

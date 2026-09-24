@@ -28,7 +28,7 @@ def feed_path(slug: str) -> Path:
 # --------------------------------------------------------------------------------------
 
 
-@pytest.mark.parametrize("slug", ["citp", "quantum", "materials", "ai"])
+@pytest.mark.parametrize("slug", ["citp", "quantum", "materials", "ai", "nam"])
 def test_the_declared_rule_sources_build(slug: str, registry) -> None:
     """The four that refused before Phase 3.
 
@@ -130,6 +130,39 @@ def test_the_result_reports_how_many_titles_were_invented(registry) -> None:
     mae = build_from_file(feed_path("mae"), registry.by_slug("mae"))
     assert mae.counts["events"] == 9
     assert mae.counts["placeholder_titles"] == 1, "only the TBD event"
+
+
+def test_nams_two_rules_divide_its_feed_the_way_they_are_meant_to(registry) -> None:
+    """Which rule fires is invisible in the output, so the split is pinned by count.
+
+    `nam` writes either a talk title or the bare series name into SUMMARY. Four of its six
+    events say "NAM Friday Talks", which is a title nobody has announced yet rather than a
+    listing page -- each is separately scheduled at its own `/events/2026/nam-friday-talks-N`.
+    The rule defers the title so it is synthesized and flagged, and the simulator grades
+    the row "fix first".
+
+    Reversing the rule order, or letting the `always` rule match first, leaves every event
+    schema-valid with "NAM Friday Talks" published as six different talks' titles. Nothing
+    else in the suite would notice, so this counts them.
+    """
+    load_pronunciation()
+    result = build_from_file(feed_path("nam"), registry.by_slug("nam"))
+    assert result.status == "ok", result.diagnostics
+    assert result.counts["events"] == 6
+    assert result.counts["placeholder_titles"] == 4
+
+    deferred = [e for e in result.events if e.title_is_placeholder]
+    assert {e.series for e in deferred} == {"NAM Friday Talks"}, (
+        "the summary moves to `series` wholesale, so the synthesized title can name it"
+    )
+    assert all("NAM Friday Talks" in e.title for e in deferred)
+    assert all(e.title != "NAM Friday Talks" for e in deferred), (
+        "the series name is named in the synthesized title, never published as the title"
+    )
+
+    announced = [e for e in result.events if not e.title_is_placeholder]
+    assert len(announced) == 2
+    assert all(e.title != "NAM Friday Talks" for e in announced)
 
 
 # --------------------------------------------------------------------------------------
@@ -257,7 +290,7 @@ def test_every_live_source_builds(registry) -> None:
         assert result.status == "ok", f"{source.slug}: {result.diagnostics}"
         built[source.slug] = result.counts["events"]
 
-    assert len(built) == 12, f"expected 12 live sources, built {sorted(built)}"
+    assert len(built) == 14, f"expected 14 live sources, built {sorted(built)}"
     assert sum(built.values()) >= 110
 
 

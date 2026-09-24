@@ -105,7 +105,7 @@ def test_the_table_covers_every_rule() -> None:
 
 
 def test_the_table_covers_every_live_source() -> None:
-    covered = {source for source, *_ in MEASURED}
+    covered = {source for source, *_ in MEASURED} | {source for source, *_ in PER_SOURCE}
     expected = {
         "orfe",
         "mae",
@@ -118,8 +118,82 @@ def test_the_table_covers_every_live_source() -> None:
         "bioengineering",
         "cee",
         "robotics",
+        "nam",
+        "dais",
     }
     assert covered == expected, f"uncovered sources: {expected - covered}"
+
+
+#: Measured values resolved through each source's **own** chain rather than the full one.
+#:
+#: They are kept apart from `MEASURED` because the chain is the thing under test. `dais`
+#: omits `detail_dash_name` deliberately -- that rule encodes ORFE's room-first order and
+#: inverts DaIS's name-first one -- so the same string has to split differently depending
+#: on which chain sees it, and a table resolved through `FULL` could not say that.
+PER_SOURCE = [
+    # --- nam: a comma form and two bare room forms, no dashes anywhere ---------------
+    ("nam", "Bendheim House, 103", "Bendheim House", "103", "comma_room"),
+    ("nam", "Bendheim 103", "Bendheim", "103", "unambiguous_room"),
+    ("nam", "Friend 006", "Friend", "006", "unambiguous_room"),
+    # --- dais: the widest vocabulary of any source here -----------------------------
+    ("dais", "Computer Science 105", "Computer Science", "105", "unambiguous_room"),
+    ("dais", "Chancellor Green", "Chancellor Green", "", "whole"),
+    # `002 Auditorium` is not room-only, so the comma rule declines rather than dropping
+    # the word "Auditorium" to make it fit.
+    ("dais", "Maeder Hall, 002 Auditorium", "Maeder Hall, 002 Auditorium", "", "whole"),
+    (
+        "dais",
+        "Julis Romo Rabinowitz Building - A01",
+        "Julis Romo Rabinowitz Building",
+        "A01",
+        "unambiguous_room",
+    ),
+    # Neither half is room-shaped, so it stays whole. Honest, and better than the split
+    # the next test shows.
+    (
+        "dais",
+        "Frist Health Center - A78B McLain Pavilion",
+        "Frist Health Center - A78B McLain Pavilion",
+        "",
+        "whole",
+    ),
+]
+
+
+@pytest.mark.parametrize(
+    "source,raw,name,detail,rule",
+    PER_SOURCE,
+    ids=[f"{s}:{r}" for s, r, _, _, _ in PER_SOURCE],
+)
+def test_each_new_feed_splits_through_its_own_chain(
+    registry,  # type: ignore[no-untyped-def]
+    source: str,
+    raw: str,
+    name: str,
+    detail: str,
+    rule: str,
+) -> None:
+    chain = registry.by_slug(source).location_rules
+    location, matched = parse_location(raw, chain)
+    assert (location.name, location.detail) == (name, detail)
+    assert matched == rule, f"{source}'s {raw!r} should match {rule}, matched {matched}"
+
+
+def test_orfes_chain_would_invert_a_dais_location(registry) -> None:  # type: ignore[no-untyped-def]
+    """Why `detail_dash_name` is absent from `dais`, written down where it can fail.
+
+    ORFE writes the room first (`101 - Sherrerd Hall`); DaIS writes it last. Running
+    DaIS's values through ORFE's chain produces the venue `A78B McLain Pavilion` and the
+    room `Frist Health Center` -- schema-valid, confidently wrong, and exactly the kind of
+    output nobody looks at twice. Adding the rule to that chain makes this test fail.
+    """
+    raw = "Frist Health Center - A78B McLain Pavilion"
+    inverted, rule = parse_location(raw, registry.by_slug("orfe").location_rules)
+    assert (inverted.name, inverted.detail) == ("A78B McLain Pavilion", "Frist Health Center")
+    assert rule == "detail_dash_name"
+
+    kept, _ = parse_location(raw, registry.by_slug("dais").location_rules)
+    assert kept.name == raw
 
 
 def test_the_venue_is_never_empty_when_a_room_was_found() -> None:
@@ -256,20 +330,76 @@ def test_a_chain_without_whole_can_decline() -> None:
 
 
 def test_the_dash_rule_must_precede_the_room_rule() -> None:
-    """Order is load-bearing, and this is the case that proves it.
+    """Order is still load-bearing, but for provenance rather than for the split.
 
     `101 - Sherrerd Hall` has a room token in its first position, so `unambiguous_room`
-    matches it and returns the venue `- Sherrerd Hall`, dash and all.
+    matches it as well. It used to return the venue `- Sherrerd Hall`, dash and all, which
+    is what made the ordering urgent; `_trim_separators` removed that, so both rules now
+    produce the same answer. What differs is the rule name recorded against the event --
+    the provenance a maintainer reads when a location looks wrong.
     """
-    wrong = rule_unambiguous_room("101 - Sherrerd Hall")
-    assert wrong is not None, "the room rule does match this, which is the hazard"
-    assert wrong.name == "- Sherrerd Hall", (
-        "documents what the wrong order produces, so nobody reorders the chain casually"
+    coped = rule_unambiguous_room("101 - Sherrerd Hall")
+    assert coped is not None, "the room rule does match this, which is why order matters"
+    assert (coped.name, coped.detail) == ("Sherrerd Hall", "101"), (
+        "no longer the dangling dash it used to produce"
     )
 
     location, rule = parse_location("101 - Sherrerd Hall", FULL)
     assert location.name == "Sherrerd Hall"
+    assert rule == "detail_dash_name", "ORFE's own convention is what gets credited"
+
+
+def test_the_dash_rule_still_does_something_the_room_rule_cannot() -> None:
+    """Otherwise the precedence list would be protecting nothing.
+
+    The room rule declines when neither end is room-shaped, so a dash with a descriptive
+    detail only splits because `detail_dash_name` is in the chain.
+    """
+    assert rule_unambiguous_room("Ground Floor - Friend Center") is None
+    location, rule = parse_location("Ground Floor - Friend Center", FULL)
+    assert (location.name, location.detail) == ("Friend Center", "Ground Floor")
     assert rule == "detail_dash_name"
+
+
+# --------------------------------------------------------------------------------------
+# A separator is not part of a name
+# --------------------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    ("raw", "name", "detail"),
+    [
+        # `dais`, and the value that found this: its chain has no `detail_dash_name`, so a
+        # name-first dash reaches `unambiguous_room` intact for the first time.
+        ("Julis Romo Rabinowitz Building - A01", "Julis Romo Rabinowitz Building", "A01"),
+        ("Bendheim House , 103", "Bendheim House", "103"),
+        ("Friend Center / 006", "Friend Center", "006"),
+    ],
+)
+def test_a_dangling_separator_does_not_become_part_of_the_venue(
+    raw: str, name: str, detail: str
+) -> None:
+    """Schema-valid and wrong: `Julis Romo Rabinowitz Building -` is a venue name nobody
+    would write, and it would have gone into the published feed and then into a newsletter
+    line reading "in Julis Romo Rabinowitz Building - A01"."""
+    location = rule_unambiguous_room(raw)
+    assert location is not None
+    assert (location.name, location.detail) == (name, detail)
+
+
+def test_an_internal_hyphen_is_not_a_separator() -> None:
+    """Only whole tokens are dropped. `SEAS-CBE` is a building code, not a join."""
+    location = rule_unambiguous_room("SEAS-CBE F212")
+    assert location is not None
+    assert location.name == "SEAS-CBE"
+
+
+def test_a_value_that_is_only_a_room_and_a_dash_declines() -> None:
+    """Trimming can leave nothing behind, and a venue named `-` is worse than an unsplit
+    one. Declining hands it to `whole`, which keeps it as written."""
+    assert rule_unambiguous_room("- 101") is None
+    location, rule = parse_location("- 101", FULL)
+    assert (location.name, rule) == ("- 101", "whole")
 
 
 def test_the_declared_precedence_list_matches_the_full_chain() -> None:

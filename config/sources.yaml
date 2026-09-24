@@ -23,6 +23,30 @@
 purposes:
   engineering-newsletter:
     label: Engineering events newsletter
+    template: day-grouped
+    schedule:
+      publication: { weekday: MON, time: "12:00" }
+      deadline: { anchor: week_start, offset_days: -6, time: "12:00" }
+      coverage:
+        start: { anchor: publication }
+        end: { anchor: week_start, offset_days: 6 }
+
+  dais-newsletter:
+    label: DAIS events newsletter
+    template: inline-date
+    schedule:
+      # Sent on the Thursday for the week that follows -- the edition is literally titled
+      # "Next Week's Events". Measured from the issue of 24 September 2026, which covered
+      # Monday the 28th onward.
+      publication: { weekday: THU, time: "14:00" }
+      # No deadline is stated anywhere in the edition; it says only to send an email. An
+      # invented one would be worse than none, so the panel shows none.
+      coverage:
+        start: { anchor: next_week_start }
+        end: { anchor: next_week_start, offset_days: 6 }
+      # Monday to Sunday is unconfirmed: the sample edition ran Monday to Friday but had
+      # no weekend events, so nothing distinguishes the two. Publishing one that should
+      # not be there is more visible than silently dropping one.
 
 defaults:
   platform: princeton-site-builder
@@ -106,7 +130,7 @@ sources:
 
   - slug: orfe
     label: Operations Research and Financial Engineering
-    purposes: [engineering-newsletter]
+    purposes: [engineering-newsletter, dais-newsletter]
     host: orfe.princeton.edu
     cadence: 30m
     rebuild_after_hours: 6
@@ -153,7 +177,7 @@ sources:
 
   - slug: citp
     label: Center for Information Technology Policy
-    purposes: [engineering-newsletter]
+    purposes: [engineering-newsletter, dais-newsletter]
     host: citp.princeton.edu
     cadence: 30m
     rebuild_after_hours: 6
@@ -402,12 +426,75 @@ sources:
 
   - slug: robotics
     label: Princeton Robotics
-    purposes: [engineering-newsletter]
+    purposes: [engineering-newsletter, dais-newsletter]
     host: robotics.princeton.edu
     cadence: 6h
     # 1 event, and "Commons" has no room component -- the location chain must decline
     # rather than invent a split.
     location_rules: [sentinel, unambiguous_room, whole]
+    expectations:
+      summary_role: title
+      min_events: 1
+
+  - slug: nam
+    label: Natural and Artificial Minds
+    # The DAIS newsletter draws on it; nothing shows it in the engineering edition, and a
+    # purpose is opt-in, so it is not claimed here. Add it if that turns out to be wrong.
+    purposes: [dais-newsletter]
+    host: nam.ai.princeton.edu
+    cadence: 6h
+    # "Bendheim House\, 103", "Bendheim 103", "Friend 006" -- a comma form and two bare
+    # room forms, no dashes and no parentheticals.
+    location_rules: [sentinel, comma_room, unambiguous_room, whole]
+    # SUMMARY is either the talk title or the series name. The four "NAM Friday Talks"
+    # entries are separately scheduled events at /events/2026/nam-friday-talks-0..2, so
+    # the series name is standing in for a title nobody has announced -- absence, not a
+    # listing page. Deferring the title is what gets it synthesized and flagged, so the
+    # simulator grades the row "fix first" and an editor knows to chase it.
+    summary:
+      on_no_match: fail
+      rules:
+        - id: series-awaiting-title
+          when: { equals: "NAM Friday Talks" }
+          then:
+            # The summary *is* the series name here, so it moves to `series_extra`
+            # wholesale and the title is left for the fallback to synthesize.
+            assign: { series_extra: summary }
+            defer: [title]
+        - id: title
+          when: { always: true }
+          then: { assign: { title: summary } }
+    expectations:
+      summary_role: rules
+      # Four of six carry no title yet, and the series runs fortnightly through the term,
+      # so the untitled share is the normal state of this feed rather than a fault.
+      max_placeholder_title_rate: 0.9
+      min_events: 1
+
+  - slug: dais
+    label: Data and Intelligent Systems
+    # Both: the engineering edition of 7-14 September carried DaIS's "AI Resource
+    # Workshop" with "Data and Intelligent Systems" as its sponsor, which is the evidence
+    # for the first, and it publishes its own newsletter, which is the second.
+    purposes: [engineering-newsletter, dais-newsletter]
+    host: dais.princeton.edu
+    cadence: 1h
+    # The widest location vocabulary of any source here: "Maeder Hall\, 002 Auditorium",
+    # "Frist Health Center - A78B McLain Pavilion", "Computer Science 105",
+    # "Chancellor Green".
+    #
+    # `detail_dash_name` is deliberately absent. It encodes ORFE's convention, where the
+    # room comes *first* ("101 - Sherrerd Hall"), and DaIS writes the reverse -- so it
+    # inverts them, yielding "A78B McLain Pavilion" as the venue. Neither side of those
+    # strings is cleanly room-shaped, so the honest outcome is to leave them whole rather
+    # than add a rule that has to guess which half is which.
+    location_rules: [sentinel, comma_room, unambiguous_room, whole]
+    # Plain titles throughout -- no speaker, no series packed into SUMMARY.
+    #
+    # DaIS substantially aggregates: measured, 8 of its 22 events are also published by
+    # `ai`, `ece` or `citp`, and one by all three. It keeps its own feed because the other
+    # 14 are its own, and the cross-source repeats are what the simulator's collision
+    # check exists to surface rather than something to resolve here.
     expectations:
       summary_role: title
       min_events: 1

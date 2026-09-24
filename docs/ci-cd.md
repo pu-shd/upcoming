@@ -37,7 +37,8 @@ servers, of which ~4,100 were event-page scrapes returning identical markup.
 
 1. **Cadence** decides whether to ask at all.
 2. **Conditional requests** — stored `ETag` and `Last-Modified`, replayed as
-   `If-None-Match` / `If-Modified-Since`. Eleven of twelve answer `304` with no body.
+   `If-None-Match` / `If-Modified-Since`. Eleven of the twelve measured in September
+   answer `304` with no body.
 3. **Enrichment windows** — `rebuild_after_hours` reuses the last scrape's values. ORFE
    went from 960 requests a day to roughly 80.
 

@@ -432,6 +432,53 @@ def test_a_hidden_menu_stays_hidden() -> None:
     assert hidden_at < flex_at, "the override must not be outranked by source order"
 
 
+#: Anything the script hides by setting `hidden`, found rather than listed.
+#:
+#: Listing them by hand is how the second one got missed: the fix for the calendar menu
+#: was a rule naming that one selector, so the deadline fields hit the identical problem
+#: the moment they were given the identical treatment.
+TOGGLED_IDS = sorted(
+    set(re.findall(r'\$\("([a-z0-9-]+)"\)\.hidden', (SITE / "simulator.js").read_text()))
+)
+
+#: A `display` that is not `none` outranks the browser's `[hidden] { display: none }`.
+_LAYOUT_DISPLAY = ("flex", "grid", "inline-block", "block", "inline-flex", "table")
+
+
+def _classes_of(element_id: str) -> set[str]:
+    """The classes on the element with this id, across both pages."""
+    found: set[str] = set()
+    for page in PAGES.values():
+        for tag in re.findall(r"<[^>]*\bid=\"" + re.escape(element_id) + r'"[^>]*>', page):
+            match = re.search(r'class="([^"]*)"', tag)
+            if match:
+                found.update(match.group(1).split())
+    return found
+
+
+def test_nothing_the_script_hides_is_kept_on_screen_by_a_display_rule() -> None:
+    """The bug that shipped once, generalized so it cannot ship again.
+
+    `[hidden]` is only a `display: none` rule in the user-agent stylesheet, so any
+    selector of ours that sets a display loses to nothing and wins over it. The symptom
+    is a panel that is permanently open however carefully the script sets the attribute,
+    and it is invisible to every other test here because the markup is correct.
+    """
+    assert TOGGLED_IDS, "the regex found nothing, which means it stopped matching"
+    for element_id in TOGGLED_IDS:
+        for name in _classes_of(element_id):
+            rule = re.search(r"\." + re.escape(name) + r"\s*\{([^}]*)\}", STYLE)
+            if not rule:
+                continue
+            display = re.search(r"display:\s*([a-z-]+)", rule.group(1))
+            if not display or display.group(1) not in _LAYOUT_DISPLAY:
+                continue
+            assert f".{name}[hidden]" in STYLE, (
+                f"#{element_id} is hidden by the script, but .{name} sets "
+                f"display: {display.group(1)} and nothing overrides it when hidden"
+            )
+
+
 def test_the_received_table_grades_each_row(page: str = "simulator.html") -> None:
     """Colour alone is not a signal everyone receives.
 

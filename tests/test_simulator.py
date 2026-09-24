@@ -303,23 +303,35 @@ def test_a_repeat_is_matched_on_the_speaker_when_the_title_is_synthesized() -> N
 # --------------------------------------------------------------------------------------
 
 
+#: Reading the manifest the way the page does, including the schedule.
+#:
+#: The schedule comes from `status.json`, never from a literal here, because that is the
+#: claim being tested: a publication's weekday, hour and coverage window are configuration
+#: the page is handed, not something either the page or this file knows.
+MANIFEST_STUB = """
+const fs = require("fs");
+const manifest = JSON.parse(fs.readFileSync(root + "/status.json"));
+const feeds = {};
+manifest.feeds.filter((f) => f.path.indexOf("feeds/") === 0)
+  .forEach((f) => { feeds[f.path.split("/")[1]] = f; });
+let events = [];
+Object.keys(feeds).forEach((slug) => {
+  if (feeds[slug].status === "disabled") return;
+  events = events.concat(JSON.parse(fs.readFileSync(root + "/feeds/" + slug + "/events.json")));
+});
+const declared = (manifest.purposes || {})[purpose] || {};
+const edition = S.resolveEdition({publicationDate: publication, schedule: declared.schedule});
+"""
+
+
 def edition_result(tree: Path, publication: str, purpose: str | None = None) -> dict:
     """What the simulator produces for one edition over the whole published tree."""
     purpose_arg = f'"{purpose}"' if purpose else "null"
     return node(f"""
-        const fs = require("fs");
         const root = {json.dumps(str(tree))};
-        const manifest = JSON.parse(fs.readFileSync(root + "/status.json"));
-        const feeds = {{}};
-        manifest.feeds.filter((f) => f.path.indexOf("feeds/") === 0)
-          .forEach((f) => {{ feeds[f.path.split("/")[1]] = f; }});
-        let events = [];
-        Object.keys(feeds).forEach((slug) => {{
-          if (feeds[slug].status === "disabled") return;
-          const file = root + "/feeds/" + slug + "/events.json";
-          events = events.concat(JSON.parse(fs.readFileSync(file)));
-        }});
-        const edition = S.resolveEdition({{publicationDate: "{publication}"}});
+        const publication = "{publication}";
+        const purpose = {purpose_arg};
+        {MANIFEST_STUB}
         const r = S.partition(events, edition, {purpose_arg}, feeds);
         console.log(JSON.stringify({{
           edition: edition,
@@ -358,10 +370,12 @@ def test_the_simulated_window_matches_the_real_edition(real_edition) -> None:  #
     ids=lambda e: e["expect"]["source"],
 )
 def test_each_event_the_fixtures_hold_is_predicted(real_edition, expected) -> None:  # type: ignore[no-untyped-def]
-    """Three of the real edition's seven events are in the committed feed snapshot.
+    """Four of the real edition's seven events are in the committed feed snapshot.
 
-    The other four are stated in the fixture with the reason: three are ORFE events absent
-    from its snapshot, and one is published by a unit we have no feed for at all.
+    The other three are ORFE events absent from its snapshot, stated in the fixture with
+    that reason. The fourth used to be there too, for a different reason -- "AI Resource
+    Workshop" was published by a unit we had no feed for at all. Registering `dais` closed
+    that gap, which is the only kind of progress this fixture can record.
     """
     slug = expected["expect"]["source"]
     ours = [e for e in real_edition["included"] if slug in e["sources"]]
@@ -407,13 +421,27 @@ def test_each_sponsor_links_to_its_own_unit(real_edition, tree) -> None:  # type
         assert all(link.startswith("https://") for link in event["sponsorLinks"])
 
 
-def test_the_talk_two_units_both_list_is_counted_as_a_repeat(real_edition) -> None:
+def test_the_talk_several_units_all_list_is_counted_as_a_repeat(real_edition) -> None:
     """The editors merged it into one entry with three sponsors; our feeds publish it
-    twice, because a per-source feed reproduces its own upstream. The simulator has to say
-    so rather than leaving an editor to notice."""
+    once per unit, because a per-source feed reproduces its own upstream. The simulator
+    has to say so rather than leaving an editor to notice.
+
+    Three units publish this talk and only two are paired, which is a real limit rather
+    than a tuning problem. `ai` and `materials` both synthesize a placeholder title and
+    both name the speaker, so they key on the speaker and match. `dais` carries the real
+    title -- "The Bittersweet Lesson of Scaling in AI for Materials" -- and **no speaker
+    at all**, so it shares no field with them: a title key misses it and a speaker key
+    misses it. Their locations disagree too ("Bowen Hall 222" against "Bowen").
+
+    Matching it would mean fuzzy entity resolution across sources, which this project
+    refuses on principle -- it never merges and never guesses. The note is a convenience
+    for an editor, not a guarantee, and the third row is visible in the table regardless.
+    """
     assert real_edition["collisions"] >= 1
-    pair = [e for e in real_edition["included"] if e["time"] == "12:05 p.m."]
-    assert {s for e in pair for s in e["sources"]} == {"ai", "materials"}
+    group = [e for e in real_edition["included"] if e["time"] == "12:05 p.m."]
+    assert {s for e in group for s in e["sources"]} == {"ai", "dais", "materials"}, (
+        "all three are in the edition; only two of them are paired as a repeat"
+    )
 
 
 def test_a_title_still_awaiting_announcement_is_flagged(real_edition) -> None:
@@ -471,24 +499,17 @@ const flat = (n, out) => {
 
 
 def listing(tree: Path, publication: str, purpose: str | None = None) -> list[dict]:
+    """The rendered listing, with the template taken from the manifest like the schedule."""
     purpose_arg = f'"{purpose}"' if purpose else "null"
     return node(f"""
-        const fs = require("fs");
         {DOC_STUB}
         const root = {json.dumps(str(tree))};
-        const manifest = JSON.parse(fs.readFileSync(root + "/status.json"));
-        const feeds = {{}};
-        manifest.feeds.filter((f) => f.path.indexOf("feeds/") === 0)
-          .forEach((f) => {{ feeds[f.path.split("/")[1]] = f; }});
-        let events = [];
-        Object.keys(feeds).forEach((slug) => {{
-          if (feeds[slug].status === "disabled") return;
-          const file = root + "/feeds/" + slug + "/events.json";
-          events = events.concat(JSON.parse(fs.readFileSync(file)));
-        }});
-        const edition = S.resolveEdition({{publicationDate: "{publication}"}});
+        const publication = "{publication}";
+        const purpose = {purpose_arg};
+        {MANIFEST_STUB}
         const r = S.partition(events, edition, {purpose_arg}, feeds);
-        console.log(JSON.stringify(flat(S.buildListing(edition, r.included, doc), [])));
+        const tree_ = S.buildListing(edition, r.included, doc, declared.template);
+        console.log(JSON.stringify(flat(tree_, [])));
     """)
 
 
@@ -1191,7 +1212,9 @@ def test_the_grading_discriminates_on_a_real_edition(tree) -> None:  # type: ign
     """)
     assert states.get("ready", 0) > 0, "nothing graded ready"
     assert states.get("fix", 0) > 0, "nothing graded as needing a fix"
-    assert sum(states.values()) == 7
+    # Pinned rather than derived, so a source silently dropping out of the edition fails
+    # here. It moves when sources are added, and that is a change worth looking at.
+    assert sum(states.values()) == 12
 
 
 def test_the_export_still_marks_a_placeholder_title(real_listing) -> None:  # type: ignore[no-untyped-def]
@@ -1232,16 +1255,46 @@ def test_the_reset_offers_the_next_edition_not_the_current_week(
     assert node(f'console.log(JSON.stringify(S.nextEditionDate("{now}")));') == expected, why
 
 
-def test_the_reset_respects_a_different_publication_time() -> None:
-    """The hour it flips over is the publication hour, not a hardcoded noon."""
+def plan_js(weekday: str, time: str) -> str:
+    """A schedule literal, for driving the model from a test."""
+    return (
+        '{publication: {weekday: "' + weekday + '", time: "' + time + '"}, '
+        'coverage: {start: {anchor: "publication"}, '
+        'end: {anchor: "week_start", offset_days: 6}}}'
+    )
+
+
+def test_the_reset_respects_the_publications_own_hour() -> None:
+    """The hour it flips over comes from the schedule, not a hardcoded noon.
+
+    Passing a schedule rather than a bare time is the point: the weekday comes from the
+    same place, so a Thursday publication resets to a Thursday.
+    """
+    early = plan_js("MON", "09:00")
+    late = plan_js("MON", "16:00")
     assert (
-        node('console.log(JSON.stringify(S.nextEditionDate("2026-09-07T10:30:00", "09:00")));')
+        node(f'console.log(JSON.stringify(S.nextEditionDate("2026-09-07T10:30:00", {early})));')
         == "2026-09-14"
-    )
+    ), "10:30 is past a 09:00 publication"
     assert (
-        node('console.log(JSON.stringify(S.nextEditionDate("2026-09-07T10:30:00", "16:00")));')
+        node(f'console.log(JSON.stringify(S.nextEditionDate("2026-09-07T10:30:00", {late})));')
         == "2026-09-07"
-    )
+    ), "10:30 is before a 16:00 one"
+
+
+def test_the_reset_follows_the_publications_weekday() -> None:
+    """Selecting the DAIS newsletter resets to the next Thursday, not the next Monday."""
+    thursday = plan_js("THU", "14:00")
+    for now, expected in (
+        ("2026-09-21T09:00:00", "2026-09-24"),  # Monday: Thursday is still to come
+        ("2026-09-24T13:59:00", "2026-09-24"),  # a minute before it publishes
+        ("2026-09-24T14:00:00", "2026-10-01"),  # the moment it does
+        ("2026-09-27T12:00:00", "2026-10-01"),  # Sunday
+    ):
+        assert (
+            node(f'console.log(JSON.stringify(S.nextEditionDate("{now}", {thursday})));')
+            == expected
+        ), now
 
 
 # --------------------------------------------------------------------------------------
@@ -1299,3 +1352,337 @@ def test_an_edition_with_no_repeats_offers_nothing_to_expand(tree) -> None:  # t
         console.log(JSON.stringify({{groups: r.collisionGroups.length, count: r.collisions}}));
     """)
     assert groups == {"groups": 0, "count": 0}
+
+
+# --------------------------------------------------------------------------------------
+# A second publication, with a different schedule and a different shape
+# --------------------------------------------------------------------------------------
+#
+# The engineering differential proves the simulator reproduces one edition. On its own
+# that is consistent with the engineering shape being hardcoded behind a label, which is
+# how the predecessor repositories ended up with one page maintained twice.
+#
+# `tests/fixtures/newsletter/2026-09-24-dais-edition.json` is the DaIS edition of
+# Thursday 24 September 2026, transcribed from the `.eml` with every quoted string
+# verified against it. It differs from the engineering edition in both axes the mechanism
+# claims to carry: a Thursday publication covering the *following* week, and a layout with
+# no day headings, prose attribution and one inline when-and-where line.
+
+DAIS = json.loads(
+    (FIXTURES / "newsletter" / "2026-09-24-dais-edition.json").read_text(encoding="utf-8")
+)
+
+#: Walks the rendered listing into one record per event block.
+#:
+#: `flat` is enough for the day-grouped listing, whose assertions are about the sequence.
+#: This layout's assertions are about what belongs together -- which line sits under which
+#: title -- so the block structure has to survive.
+BLOCKS_JS = """
+const pick = (node, cls) => {
+  const out = [];
+  const walk = (n) => {
+    if (n.className === cls) out.push(n);
+    (n.childNodes || []).forEach(walk);
+  };
+  walk(node);
+  return out;
+};
+/* Text of a whole subtree. `textContent` on the stub is only what was assigned to that
+   one node, and this layout builds its prose out of text nodes and links -- so reading it
+   directly returns "" for exactly the lines worth asserting. */
+const deepText = (node) =>
+  (node.textContent || "") +
+  (node.childNodes || []).map(deepText).join("");
+const textOf = (node, cls) => {
+  const found = pick(node, cls);
+  return found.length ? deepText(found[0]) : "";
+};
+const hrefs = (node) => {
+  const out = [];
+  const walk = (n) => {
+    if (n.getAttribute && n.getAttribute("href")) out.push(n.getAttribute("href"));
+    (n.childNodes || []).forEach(walk);
+  };
+  walk(node);
+  return out;
+};
+const blocks = (root) => pick(root, "ev").map((b) => ({
+  title: textOf(b, "ev-title"),
+  hosted: textOf(b, "ev-hosted"),
+  speaker: textOf(b, "ev-speaker"),
+  blurb: textOf(b, "ev-blurb"),
+  when: textOf(b, "ev-when"),
+  more: textOf(b, "ev-more"),
+  hrefs: hrefs(b)
+}));
+"""
+
+
+def dais_blocks(tree: Path, publication: str = "2026-09-24") -> dict:
+    """The DaIS listing as blocks, plus the headings that should not be there."""
+    return node(f"""
+        {DOC_STUB}
+        {BLOCKS_JS}
+        const root = {json.dumps(str(tree))};
+        const publication = "{publication}";
+        const purpose = "dais-newsletter";
+        {MANIFEST_STUB}
+        const r = S.partition(events, edition, purpose, feeds);
+        const rendered = S.buildListing(edition, r.included, doc, declared.template);
+        console.log(JSON.stringify({{
+          template: declared.template,
+          label: declared.label,
+          edition: edition,
+          collisions: r.collisions,
+          heading: (flat(rendered, []).filter((n) => n.tag === "h2")[0] || {{}}).text,
+          dayHeadings: flat(rendered, []).filter((n) => n.tag === "h3").map((n) => n.text),
+          blocks: blocks(rendered)
+        }}));
+    """)
+
+
+@pytest.fixture(scope="module")
+def dais(tree):  # type: ignore[no-untyped-def]
+    return dais_blocks(tree)
+
+
+# ---- the schedule -------------------------------------------------------------------
+
+
+def test_the_dais_window_is_the_week_after_a_thursday_publication(dais) -> None:  # type: ignore[no-untyped-def]
+    """The engineering edition covers the week it appears in; this one covers the next.
+
+    Both come from `status.json`, so a single hardcoded weekly rule cannot satisfy them
+    at once -- which is the property being asserted, more than the dates themselves.
+    """
+    assert dais["edition"]["publicationAt"] == "2026-09-24T14:00:00"
+    assert dais["edition"]["coverageStart"] == "2026-09-28T00:00:00"
+    assert dais["edition"]["coverageEnd"] == "2026-10-04T23:59:59"
+    assert dais["edition"]["coverageStart"] > dais["edition"]["publicationAt"]
+
+
+def test_the_dais_edition_is_not_reported_as_shifted(dais) -> None:  # type: ignore[no-untyped-def]
+    """A Thursday publication is not a shifted Monday one.
+
+    `shifted` is measured against the schedule's own weekday. Measuring it against Monday
+    would mark every DaIS edition as an exception to a rule it never followed, and the
+    page says so on screen.
+    """
+    assert dais["edition"]["shifted"] is False
+
+
+def test_no_deadline_is_invented_for_a_publication_that_states_none(dais) -> None:  # type: ignore[no-untyped-def]
+    """DaIS's edition says only to send an email. An empty string, not a date."""
+    assert dais["edition"]["deadlineAt"] == ""
+
+
+def test_the_window_matches_the_edition_that_went_out(dais) -> None:  # type: ignore[no-untyped-def]
+    assert dais["edition"]["coverageStart"] == DAIS["_edition"]["coverageStart"]
+    assert dais["edition"]["coverageEnd"] == DAIS["_edition"]["coverageEnd"]
+
+
+# ---- the events ---------------------------------------------------------------------
+
+
+def label_of(tree: Path, slug: str) -> str:
+    manifest = json.loads((tree / "status.json").read_text(encoding="utf-8"))
+    feeds = {
+        f["path"].split("/")[1]: f for f in manifest["feeds"] if f["path"].startswith("feeds/")
+    }
+    return str(feeds[slug]["label"])
+
+
+@pytest.mark.parametrize(
+    "expected",
+    [e for e in DAIS["events"] if e["expect"]["inFixtures"]],
+    ids=lambda e: e["theirTitle"][:40],
+)
+def test_each_dais_event_the_fixtures_hold_is_predicted(dais, tree, expected) -> None:  # type: ignore[no-untyped-def]
+    """Six of the edition's eight events, each from every source that publishes it.
+
+    The two absent ones are recorded in the fixture with their reasons: one is in the live
+    robotics feed but not the committed snapshot, and one is ORFE's colloquium, where the
+    editor wrote the series name and linked the flyers page while our feed carries the
+    actual talk.
+    """
+    title = expected.get("ourTitle", expected["theirTitle"])
+    lines = expected.get("ourLineBySource", {})
+    for slug in expected["expect"]["sources"]:
+        hosted = "Hosted by " + label_of(tree, slug)
+        mine = [b for b in dais["blocks"] if b["hosted"] == hosted and title in b["title"]]
+        assert mine, f"nothing from {slug} titled {title!r}"
+        assert lines.get(slug, expected["ourLine"]) in [b["when"] for b in mine], (
+            f"{slug} rendered {[b['when'] for b in mine]}"
+        )
+
+
+def test_the_when_and_where_line_is_reproduced_exactly(dais) -> None:  # type: ignore[no-untyped-def]
+    """The strongest single claim in this file: one line, character for character.
+
+    Their own edition is inconsistent -- a comma after the meridiem on some entries and
+    not others, the year on one, a hyphen where the next line has an em dash. This one
+    entry is written the same way in both, so it is the one that can be asserted whole
+    rather than modulo punctuation.
+    """
+    emergent = next(e for e in DAIS["events"] if e["theirTitle"].startswith("Emergent"))
+    assert emergent["theirLine"] == emergent["ourLine"], "the fixture's own claim"
+    assert emergent["ourLine"] in [b["when"] for b in dais["blocks"]]
+
+
+def test_the_talk_two_selected_units_both_publish_is_counted_as_a_repeat(dais) -> None:  # type: ignore[no-untyped-def]
+    """The editor credited DARK MANSIONS to CITP alone and Emergent Symbol Processing to
+    NAM alone. Our feeds publish each twice, because a per-source feed reproduces its own
+    upstream, and choosing between them is the editor's call rather than ours.
+
+    They also disagree about the venue -- citp writes `Computer Science Building`, dais
+    writes `Computer Science` -- and neither is corrected.
+    """
+    assert dais["collisions"] == 2
+    venues = {b["when"].split(" in ")[-1] for b in dais["blocks"] if "DARK MANSIONS" in b["title"]}
+    assert venues == {"Computer Science Building 105", "Computer Science 105"}
+
+
+def test_what_the_edition_left_out_is_still_offered(dais) -> None:  # type: ignore[no-untyped-def]
+    """The simulator offers what the feeds carry; it does not decide an edition.
+
+    Two events fall in the window and declare the purpose without appearing in the
+    edition. Filtering them out would mean encoding an editor's judgement as a rule, and
+    the per-row include checkboxes exist so it does not have to be.
+    """
+    titles = " | ".join(b["title"] for b in dais["blocks"])
+    assert "Bias in AI Reading Group" in titles
+    assert "Northeast Robotics Colloquium" in titles
+
+
+# ---- the shape ----------------------------------------------------------------------
+
+
+def test_the_two_purposes_render_different_shapes(dais, real_listing) -> None:  # type: ignore[no-untyped-def]
+    """Same events, same code path, different template -- the claim `purpose` makes."""
+    assert dais["template"] == "inline-date"
+    assert dais["dayHeadings"] == [], "chronological, with no day headings"
+    assert [n["text"] for n in real_listing if n["tag"] == "h3"], "the other one has them"
+
+
+def test_the_inline_listing_attributes_in_prose(dais) -> None:  # type: ignore[no-untyped-def]
+    """`Hosted by Data and Intelligent Systems`, not `Sponsor: ...`.
+
+    One verb, always. Their edition also writes "Co-sponsored by" and "Presented by", but
+    no feed carries a verb and choosing one per event would be asserting a fact about an
+    arrangement we cannot see.
+    """
+    hosted = [b["hosted"] for b in dais["blocks"] if b["hosted"]]
+    assert hosted, "every block in this edition has a sponsor"
+    assert all(line.startswith("Hosted by ") for line in hosted)
+    assert not any("Sponsor:" in line for line in hosted)
+
+
+def test_every_block_with_a_page_ends_in_a_learn_more_link(dais) -> None:  # type: ignore[no-untyped-def]
+    linked = [b for b in dais["blocks"] if b["hrefs"]]
+    assert linked
+    assert all(b["more"] == "Learn More" for b in linked)
+
+
+def test_an_event_with_no_location_says_so_rather_than_trailing_off() -> None:
+    """`location TBA`, which the engineering template omits entirely.
+
+    Two templates over the same data, differing on purpose. Their own edition writes these
+    words, so an empty location has a rendering here rather than a silent gap.
+    """
+    line = node("""
+        console.log(JSON.stringify(S.whenAndWhere({
+          startTime: "2026-10-02T11:00:00", endTime: "2026-10-02T12:00:00", place: ""
+        })));
+    """)
+    assert line == "11 a.m. — 12 p.m. Friday, Oct. 2, location TBA"
+
+
+def test_an_all_day_event_is_not_written_as_a_midnight_range(dais) -> None:  # type: ignore[no-untyped-def]
+    """`robotics`' Northeast Robotics Colloquium runs 3 October 00:00 to 4 October 00:00.
+
+    Put through the range arithmetic that produces `4:30 — 6 p.m.`, that reads
+    `12 — 12 a.m.` -- a zero-length midnight event, which is not what the feed says. The
+    model carries no all-day flag, so it is read off the stamps.
+    """
+    nerc = next(b for b in dais["blocks"] if "Northeast Robotics" in b["title"])
+    assert nerc["when"] == "All day Saturday, Oct. 3, in Commons"
+
+
+# ---- the format details their edition pins down --------------------------------------
+
+
+@pytest.mark.parametrize(
+    ("start", "end", "expected", "why"),
+    [
+        ("2026-09-28T16:30:00", "2026-09-28T18:00:00", "4:30 — 6 p.m.", "one shared meridiem"),
+        ("2026-10-02T09:00:00", "2026-10-02T10:00:00", "9 — 10 a.m.", "and in the morning"),
+        (
+            "2026-09-30T13:00:00",
+            "2026-09-30T15:45:00",
+            "1 — 3:45 p.m.",
+            "`:00` dropped at the open",
+        ),
+        (
+            "2026-10-02T11:00:00",
+            "2026-10-02T12:00:00",
+            "11 a.m. — 12 p.m.",
+            "crossing noon, so the meridiem is stated twice",
+        ),
+        (
+            "2026-09-29T23:30:00",
+            "2026-09-30T00:30:00",
+            "11:30 p.m. — 12:30 a.m.",
+            "and crossing midnight",
+        ),
+        ("2026-09-29T12:00:00", "", "12 p.m.", "noon is 12 p.m., not 0 p.m."),
+        ("2026-09-29T00:00:00", "", "12 a.m.", "and midnight is 12 a.m."),
+        ("2026-09-29T16:30:00", "", "4:30 p.m.", "no end time, so no range"),
+    ],
+)
+def test_a_time_range_is_written_the_way_their_edition_writes_one(
+    start: str, end: str, expected: str, why: str
+) -> None:
+    """Where this goes wrong is the shared meridiem, so noon and midnight are both here.
+
+    Taking the meridiem from the start time and printing it once gives `11 a.m. — 12 a.m.`
+    for a talk that ends at noon: readable, plausible and an hour wrong at one end.
+    """
+    got = node(f'console.log(JSON.stringify(S.timeRange("{start}", "{end}")));')
+    assert got == expected, why
+
+
+@pytest.mark.parametrize(
+    ("date", "expected"),
+    [
+        ("2026-09-28", "Monday, Sept. 28"),
+        ("2026-10-02", "Friday, Oct. 2"),
+        ("2026-03-09", "Monday, March 9"),
+        ("2026-07-01", "Wednesday, July 1"),
+    ],
+)
+def test_the_month_is_abbreviated_their_way(date: str, expected: str) -> None:
+    """`Sept.` rather than `Sep.`, and the short months are not abbreviated at all --
+    Princeton house style, and what their own edition writes. No leading zero on the day.
+    """
+    assert node(f'console.log(JSON.stringify(S.shortDate("{date}")));') == expected
+
+
+def test_the_reset_finds_the_next_thursday_for_this_publication(tree) -> None:  # type: ignore[no-untyped-def]
+    """The reset button has to offer the next *DaIS* edition when DaIS is selected, and
+    the weekday it rolls over on comes from the manifest rather than from the page."""
+    got = node(f"""
+        const fs = require("fs");
+        const root = {json.dumps(str(tree))};
+        const manifest = JSON.parse(fs.readFileSync(root + "/status.json"));
+        const plan = manifest.purposes["dais-newsletter"].schedule;
+        console.log(JSON.stringify({{
+          midweek: S.nextEditionDate("2026-09-22T09:00:00", plan),
+          onTheDayBefore: S.nextEditionDate("2026-09-24T13:59:00", plan),
+          onceItIsOut: S.nextEditionDate("2026-09-24T14:01:00", plan)
+        }}));
+    """)
+    assert got == {
+        "midweek": "2026-09-24",
+        "onTheDayBefore": "2026-09-24",
+        "onceItIsOut": "2026-10-01",
+    }

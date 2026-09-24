@@ -121,6 +121,9 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line
 
 .controls { display: flex; flex-wrap: wrap; gap: 1.25rem 1.75rem; align-items: flex-start; }
 .field { display: flex; flex-direction: column; gap: .3rem; }
+/* Same hazard as the calendar menu below: a publication that states no deadline
+   hides those two fields, and `display: flex` would keep them on screen. */
+.field[hidden] { display: none; }
 .field > label { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); font-weight: 600; }
 .field input, .field select {
   font: inherit; font-size: .92rem; padding: .4rem .55rem;

@@ -47,6 +47,11 @@ tags:
       - Rising Stars Seminars            # bioengineering
       - S. S. Wilks Memorial Seminar in Statistics   # orfe
       - PMI/PCCM Seminar Series          # materials
+      # Series names that dais and nam publish as categories. Mapped to `seminar` rather
+      # than to a topic because that is what a consumer filtering a talks listing wants;
+      # the series name itself survives verbatim in `series`.
+      - AI Alignment + Safety            # dais
+      - NAM Friday Talks                 # nam, via the summary rule
 
   lecture:
     label: Named lecture
@@ -78,6 +83,7 @@ tags:
       - Artificial Intelligence          # citp
       - Princeton AI                     # ai
       - AI for Accelerating Invention    # ai
+      - Natural and Artificial Minds     # dais -- the unit's name, used as a category
 
   civil-environmental:
     label: Civil and environmental engineering

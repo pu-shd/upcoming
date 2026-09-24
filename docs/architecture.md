@@ -96,8 +96,11 @@ which is explicit and reviewable in the diff. The alternative — appending — 
 a position nobody chose, and rule order decides which rule wins.
 
 Every vocabulary is closed and checked by name at load: tags, purposes, patterns, location
-rules, escapable fields, predicate operators. A misspelled one is a load error, because a
-predicate on a value nothing produces filters to nothing and reports success.
+rules, escapable fields, predicate operators, and — for a purpose that declares one — the
+template name, publication weekday, coverage anchors and clock. A misspelled one is a load
+error, because a predicate on a value nothing produces filters to nothing and reports
+success, and an unknown weekday or anchor resolves to *some* date and produces an edition
+that looks finished.
 
 ## The published site
 
@@ -105,6 +108,12 @@ predicate on a value nothing produces filters to nothing and reports success.
 stylesheet. The simulator's JavaScript reads `status.json` for feed discovery and holds no
 list of sources — the predecessors' equivalent is byte-identical between two repositories
 with the department baked in.
+
+It holds no *schedule* either. `status.json` carries a top-level `purposes` block with each
+publication's label, template and resolved schedule, so the page is told when an edition
+appears, what window it covers and which layout to render. Two publications exist and they
+agree on none of those, which is what keeps the mechanism honest: a third is a config
+block, and the page does not change.
 
 ## Where the boundaries are
 
@@ -119,6 +128,6 @@ with the department baked in.
 | The Makefile stays macOS-portable | `test_contracts.py` — no `sha256sum`, `getent`, `grep -P` or bare `sed -i` |
 
 **Not** structurally enforced, though it holds: *no module branches on a source slug.* What
-proves it is that all twelve live sources build from one codebase with nothing differing
+proves it is that all fourteen live sources build from one codebase with nothing differing
 but `config/sources.yaml` (`test_every_live_source_builds`). A grep-based assertion was
 considered and rejected as easy to satisfy without being true.

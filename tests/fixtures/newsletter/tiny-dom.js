@@ -98,7 +98,25 @@ function makeElement(tag) {
   };
 }
 
+/* A text node: no tag, no attributes, just escaped content. The inline-date template
+   needs them for the prose it builds around its links ("Hosted by " + a link). */
+function makeText(value) {
+  return {
+    tagName: "",
+    className: "",
+    textContent: String(value),
+    childNodes: [],
+    parentNode: null,
+    attributes: {},
+    get innerHTML() { return escapeText(this.textContent); },
+    get outerHTML() { return escapeText(this.textContent); },
+    get innerText() { return this.textContent; },
+    getAttribute: function () { return null; }
+  };
+}
+
 module.exports = {
-  document: { createElement: makeElement },
-  makeElement: makeElement
+  document: { createElement: makeElement, createTextNode: makeText },
+  makeElement: makeElement,
+  makeText: makeText
 };

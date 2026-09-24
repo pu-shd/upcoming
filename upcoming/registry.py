@@ -550,6 +550,89 @@ def _build_enrich(raw: Mapping[str, Any], slug: str) -> tuple[EnrichTarget, ...]
     return tuple(targets)
 
 
+#: Layouts the simulator implements. A purpose naming anything else would select a
+#: renderer that does not exist and fall back silently to the wrong shape, so the name is
+#: checked here rather than discovered by an editor pasting the wrong thing into Mailchimp.
+TEMPLATES = frozenset({"day-grouped", "inline-date"})
+
+#: Weekday spellings a schedule may use, Monday first to match `weekStartFor`.
+WEEKDAYS = ("MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN")
+
+#: What a coverage bound may be anchored to.
+#:
+#: `publication` follows a publication that shifts; `week_start` stays pinned to the
+#: Monday of the publication's own week; `next_week_start` is the Monday after it, which
+#: is what a Thursday edition covering "next week's events" needs.
+ANCHORS = frozenset({"publication", "week_start", "next_week_start"})
+
+_TIME_RE = re.compile(r"^\d{2}:\d{2}(:\d{2})?$")
+
+
+def _validate_purpose_behaviour(entry: Mapping[str, Any], *, where: str) -> None:
+    """Refuse a template or schedule the simulator could not act on.
+
+    Every value here reaches the published manifest and then a renderer, so an unchecked
+    one is a layout silently falling back to the wrong publication's shape.
+    """
+    template = entry.get("template")
+    if template is not None and template not in TEMPLATES:
+        raise ConfigFatal(
+            f"{where}: template {template!r} is not one the simulator implements. "
+            f"Available: {', '.join(sorted(TEMPLATES))}."
+        )
+
+    schedule = entry.get("schedule")
+    if schedule is None:
+        return
+    if not isinstance(schedule, dict):
+        raise ConfigFatal(f"{where}.schedule must be a mapping")
+    if unknown := set(schedule) - {"publication", "deadline", "coverage"}:
+        raise ConfigFatal(f"{where}.schedule: unknown key(s) {sorted(unknown)}")
+
+    publication = schedule.get("publication")
+    if not isinstance(publication, dict) or "weekday" not in publication:
+        raise ConfigFatal(f"{where}.schedule.publication needs a `weekday`")
+    if str(publication["weekday"]).upper() not in WEEKDAYS:
+        raise ConfigFatal(
+            f"{where}.schedule.publication.weekday: {publication['weekday']!r} is not one "
+            f"of {', '.join(WEEKDAYS)}"
+        )
+    _validate_clock(publication.get("time"), where=f"{where}.schedule.publication.time")
+
+    # A deadline is optional: DaIS publishes none, and inventing one would put a date in
+    # front of an editor that nobody agreed to.
+    if (deadline := schedule.get("deadline")) is not None:
+        if not isinstance(deadline, dict):
+            raise ConfigFatal(f"{where}.schedule.deadline must be a mapping")
+        _validate_anchor(deadline, where=f"{where}.schedule.deadline")
+        _validate_clock(deadline.get("time"), where=f"{where}.schedule.deadline.time")
+
+    coverage = schedule.get("coverage")
+    if not isinstance(coverage, dict) or {"start", "end"} - set(coverage):
+        raise ConfigFatal(f"{where}.schedule.coverage needs both `start` and `end`")
+    for bound in ("start", "end"):
+        node = coverage[bound]
+        if not isinstance(node, dict):
+            raise ConfigFatal(f"{where}.schedule.coverage.{bound} must be a mapping")
+        _validate_anchor(node, where=f"{where}.schedule.coverage.{bound}")
+
+
+def _validate_anchor(node: Mapping[str, Any], *, where: str) -> None:
+    anchor = node.get("anchor")
+    if anchor not in ANCHORS:
+        raise ConfigFatal(f"{where}.anchor: {anchor!r} is not one of {', '.join(sorted(ANCHORS))}")
+    offset = node.get("offset_days", 0)
+    if not isinstance(offset, int) or isinstance(offset, bool):
+        raise ConfigFatal(f"{where}.offset_days must be a whole number of days")
+
+
+def _validate_clock(value: Any, *, where: str) -> None:
+    if value is None:
+        return
+    if not _TIME_RE.match(str(value)):
+        raise ConfigFatal(f"{where}: expected HH:MM, got {value!r}")
+
+
 def _build_source(
     slug: str,
     raw: Mapping[str, Any],
@@ -741,6 +824,7 @@ def load_registry(
                 f"purpose {name!r} needs a `label`. A publication nobody can name is one "
                 f"nobody can tell you whether a feed belongs in."
             )
+        _validate_purpose_behaviour(entry, where=f"purpose {name!r}")
 
     defaults = document.get("defaults") or {}
     entries = document.get("sources")

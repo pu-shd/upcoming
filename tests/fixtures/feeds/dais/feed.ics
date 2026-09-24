@@ -1,0 +1,402 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:princeton-site-builder
+X-WR-CALNAME:Data and Intelligent Systems (DaIS)
+BEGIN:VEVENT
+UID:ps_events:4091:delta:0
+DTSTART:20260909T140000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260909T150000Z
+URL:https://dais.princeton.edu/events/2026/ai-resource-workshop
+LOCATION:Maeder Hall\, 002 Auditorium
+SUMMARY:AI Resource Workshop
+CLASS:PUBLIC
+DESCRIPTION:Join us for an interactive showcase highlighting the AI resourc
+ es\, tools\, expertise\, and support available across Princeton University
+ . Representatives from Data and Intelligent&nbsp\; Systems (DaIS)\, Office
+  of Information Technology (OIT)\, Research Computing\, Office of Dean for
+  Research (ODFR) and the Princeton University Library will discuss the res
+ ources they are offering to the campus community.&nbsp\;Discover opportuni
+ ties to collaborate\, learn about existing AI initiatives\, find tools and
+  services that can support your work\, and connect with colleagues who are
+DTSTAMP:20260909T140806Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4306:delta:0
+DTSTART:20260909T160500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260909T170500Z
+URL:https://dais.princeton.edu/events/2026/bittersweet-lesson-scaling-ai-ma
+ terials-0
+LOCATION:Bowen Hall
+SUMMARY:The Bittersweet Lesson of Scaling in AI for Materials
+CLASS:PUBLIC
+DESCRIPTION:Abstract: AI has the potential to bring much-needed acceleratio
+ n to the development of chemicals and materials for energy and sustainabil
+ ity\, just like it has delivered intelligence gains in other fields. The p
+ ath to success goes through scaling\, perhaps exclusively through scaling.
+  Rich Sutton’s ‘bitter lesson’ states that “general methods that l
+ everage computation are ultimately the most effective” in AI. The coroll
+ aries are bittersweet in chemistry and materials.&nbsp\;&nbsp\;
+CATEGORIES:AI for Accelerating Invention
+DTSTAMP:20260903T153200Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4386:delta:0
+DTSTART;VALUE=DATE:20260910
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20260911
+URL:https://dais.princeton.edu/events/2026/test-time-scaling-makes-overtrai
+ ning-compute-optimal
+LOCATION:Bendheim House 103
+SUMMARY:Test-Time Scaling Makes Overtraining Compute-Optimal
+CLASS:PUBLIC
+DESCRIPTION:Video
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+DTSTAMP:20260912T041538Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4391:delta:0
+DTSTART;VALUE=DATE:20260910
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20260911
+URL:https://dais.princeton.edu/events/2026/do-thinking-tokens-help-safety
+SUMMARY:Do Thinking Tokens Help with Safety?
+CLASS:PUBLIC
+DESCRIPTION:Video
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+DTSTAMP:20260912T041538Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4371:delta:0
+DTSTART:20260911T130000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260911T140000Z
+URL:https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar
+LOCATION:Bendheim House 103
+SUMMARY:AI Alignment + Safety Seminar
+CLASS:PUBLIC
+DESCRIPTION:Join us for the inaugural AI Alignment + Safety seminar featuri
+ ng guest speaker Sylvain Chassang\, Professor of Economics.&nbsp\;Professo
+ r Chassang will speak on “Interactive Alignment.”The seminar series wi
+ ll take place Fridays throughout the year with a mix of talks from faculty
+ \, visitors and students.&nbsp\;&nbsp\;
+DTSTAMP:20260910T133921Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4506:delta:0
+DTSTART;VALUE=DATE:20260917
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20260918
+URL:https://dais.princeton.edu/events/2026/open-questions-ai-benchmarking
+LOCATION:Bendheim House 103
+SUMMARY:Open Questions in AI Benchmarking
+CLASS:PUBLIC
+DESCRIPTION:Video
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+DTSTAMP:20260919T041605Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4376:delta:0
+DTSTART:20260918T130000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260918T140000Z
+URL:https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar-0
+LOCATION:Bendheim House 103
+SUMMARY:AI Alignment + Safety Seminar
+CLASS:PUBLIC
+DESCRIPTION:The AI Alignment + Safety seminar series will take place Friday
+ s throughout the year with a mix of talks from faculty\, visitors and stud
+ ents.&nbsp\;
+DTSTAMP:20260916T160822Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4436:delta:0
+DTSTART:20260923T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260923T213000Z
+URL:https://dais.princeton.edu/events/2026/synthetic-data-real-benefits-rel
+ iable-inference-and-principled-model-steering
+SUMMARY:Synthetic Data\, Real Benefits: Reliable Inference and Principled M
+ odel Steering
+CLASS:PUBLIC
+DTSTAMP:20260915T144732Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4346:delta:0
+DTSTART:20260928T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260928T220000Z
+URL:https://dais.princeton.edu/events/2026/emergent-symbol-processing-mecha
+ nistic-theory-human-cognition
+LOCATION:Friend 006
+SUMMARY:Emergent Symbol Processing as a Mechanistic Theory of Human Cogniti
+ on
+CLASS:PUBLIC
+DESCRIPTION:Speaker: Taylor Webb\, Department of Psychology\, Princeton Uni
+ versityTalk Abstract: There is a longstanding tension in cognitive science
+  between theories that emphasize the structured\, symbolic aspects of the 
+ mind — drawing an analogy to traditional computer programs — and the e
+ mergent properties of cognition that seem to be better explained by neural
+  networks. The rise of AI systems that are powered by neural networks\, bu
+ t that display many of the properties associated with symbolic cognitive m
+ odels (e.g.\, compositionality\, reasoning) has reinvigorated this debate\
+ , while leaving open
+CATEGORIES:Natural and Artificial Minds
+DTSTAMP:20260923T130019Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4546:delta:0
+DTSTART:20260929T161000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260929T171000Z
+URL:https://dais.princeton.edu/events/2026/ddss-connect-interdisciplinary-e
+ xchange
+LOCATION:Bendheim House 103
+SUMMARY:DDSS Connect & Interdisciplinary Exchange
+CLASS:PUBLIC
+DESCRIPTION:Join us for DDSS’s Connect and Interdisciplinary Exchange ser
+ ies where our DDSS Graduate Fellows present on diverse methodologies and t
+ echnical approaches. This is a great opportunity to network with others wo
+ rking in quantitive social science.&nbsp\;Alessandra Rister Portinari Mara
+ nca (Sociology)The Collapse of Early Motherhood and the Reorganization of 
+ Poverty-Stratified Fertility in the USNelson Matthew Tan (Economics)Limite
+ d Information Estimation of Heterogenous Agent ModelsHayoung Jung (Compute
+ r Science)Can AI Agent Synthesize Scientific Conclusions?
+DTSTAMP:20260924T172513Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4526:delta:0
+DTSTART:20260929T161500Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260929T171500Z
+URL:https://dais.princeton.edu/events/2026/dark-mansions-ai-innovation-and-
+ fermat%E2%80%99s-last-theorem
+LOCATION:Computer Science 105
+SUMMARY:DARK MANSIONS: AI\, Innovation\, and Fermat’s Last Theorem
+CLASS:PUBLIC
+DTSTAMP:20260921T142524Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4301:delta:0
+DTSTART:20260930T170000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20260930T194500Z
+URL:https://dais.princeton.edu/events/2026/dais-launch-faculty-research-col
+ laboration-symposium
+LOCATION:Frist Health Center - A78B McLain Pavilion
+SUMMARY:DaIS Launch & Faculty Research Collaboration Symposium
+CLASS:PUBLIC
+DESCRIPTION:Join us for the official launch of&nbsp\;Princeton’s Data and
+  Intelligent Systems (DaIS)\, an initiative dedicated to supporting and ex
+ panding AI\, Data Science\, and Statistics research and education across t
+ he university. This event will introduce the DaIS vision and host a collab
+ orative faculty symposium designed to foster interdisciplinary research pa
+ rtnerships.Event DetailsDate:&nbsp\;September 30\, 2026Location:
+DTSTAMP:20260922T155929Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4541:delta:0
+DTSTART:20261002T130000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261002T140000Z
+URL:https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar-1
+LOCATION:Bendheim House 103
+SUMMARY:AI Alignment + Safety Seminar
+CLASS:PUBLIC
+DESCRIPTION:The seminar series will take place Fridays throughout the year 
+ with a mix of talks from faculty\, visitors and students.&nbsp\;&nbsp\;
+DTSTAMP:20260924T130316Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4531:delta:0
+DTSTART:20261002T173000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261002T190000Z
+URL:https://dais.princeton.edu/events/2026/ddss-workshop-claude-code-i
+LOCATION:Julis Romo Rabinowitz Building - A01
+SUMMARY:DDSS Workshop: Claude Code I
+CLASS:PUBLIC
+DESCRIPTION:Instructor: Colin Swaney\, Lead Research Software Engineer\, Da
+ ta-Driven Social ScienceA gentle introduction to Claude Code\, Anthropic
+ ’s coding agent. We’ll cover what Claude Code is and how to use it for
+  everyday research tasks such as code debugging\, data wrangling\, and dra
+ fting technical documents. You’ll leave ready to hit the ground running 
+ on your own projects.
+DTSTAMP:20260923T173643Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4551:delta:0
+DTSTART:20261006T161000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261006T171000Z
+URL:https://dais.princeton.edu/events/2026/ddss-connect-interdisciplinary-e
+ xchange-0
+LOCATION:Bendheim 103
+SUMMARY:DDSS Connect & Interdisciplinary Exchange
+CLASS:PUBLIC
+DESCRIPTION:Join us for DDSS’s Connect &amp\; Interdisciplinary Exchange 
+ series where our DDSS Graduate Fellows present on diverse methodologies an
+ d technical approaches. This is a great opportunity to network with others
+  working in quantitive social science.&nbsp\;Yining Sun (Politics)Titling 
+ Communal Land with Protected Areas: How Traditional Governance and State E
+ nforcement Interact to Shape Deforestation in MexicoYaelle Goldschlag (Com
+ puter Science)Understanding Uber's Personalized Pricing AlgorithmBella Fas
+ cendini (Psychology)The Riddle Riddle: Testing Flexible
+DTSTAMP:20260924T172443Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4561:delta:0
+DTSTART:20261009T173000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261009T190000Z
+URL:https://dais.princeton.edu/events/2026/claude-code-ii
+LOCATION:Julis Romo Rabinowitz Building - A01
+SUMMARY:Claude Code II
+CLASS:PUBLIC
+DESCRIPTION:Instructor: Colin Swaney\, Lead Research Software Engineer\, Da
+ ta-Driven Social ScienceAn in-depth exploration of Claude's automation too
+ ls. This workshop demonstrates how to use Claude Code to safely and effect
+ ively automate complex research workflows. You'll leave ready to build cus
+ tom agents that let you spend less time on repetitive tasks and more time 
+ reseaching.
+DTSTAMP:20260924T170526Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4496:delta:0
+DTSTART;VALUE=DATE:20261019
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20261020
+URL:https://dais.princeton.edu/events/2026/ai-alignment-safety-inaugural-sy
+ mposium-launch-event
+LOCATION:Friend Center 101
+SUMMARY:AI Alignment + Safety Inaugural Symposium & Launch Event
+CLASS:PUBLIC
+DESCRIPTION:A new initiative to make artificial intelligence safe and benef
+ icial to humanity.Opening Remarks by Elad Hazan\, Director and Mark Braver
+ man\, Associate DirectorFeatured speakers include:Boaz Barak\, Harvard Uni
+ versity\, Open AIPeter Henderson\, Princeton University\, Department of Co
+ mputer ScienceAdam Tauman Kalai\, Institute for Responsible Superintellige
+ nceLydia Liu\, Princeton University\, Department of
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+CATEGORIES:AI Alignment + Safety
+DTSTAMP:20260918T145600Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4566:delta:0
+DTSTART:20261026T203000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261026T220000Z
+URL:https://dais.princeton.edu/events/2026/ai-ra-workshop
+LOCATION:Julis Romo Rabinowitz Building - A01
+SUMMARY:AI-as-an-RA Workshop
+CLASS:PUBLIC
+DESCRIPTION:Instructor: Christopher Kenny\, Postdoctoral Research Associate
+ \, Data-Driven Social ScienceThis workshop introduces researchers to AI co
+ ding agents\, such as Claude Code and Codex\, as tools for research assist
+ ance in the social sciences. These agents work directly inside a project\,
+  editing files and running code\, in ways that raise the same reliability 
+ questions as a human research assistant. A well-structured project can kee
+ p an agent's work inspectable through version control\, written instructio
+ ns\, and automated checks that separate unreviewed from human-approved wor
+ k. I will
+DTSTAMP:20260924T170848Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4571:delta:0
+DTSTART:20261030T173000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261030T190000Z
+URL:https://dais.princeton.edu/events/2026/blackfish-open-source-llms-fast-
+ cheap-and-reproducible-ai
+LOCATION:Julis Romo Rabinowitz Building - A01
+SUMMARY:Blackfish: open source LLMs for fast\, cheap\, and reproducible AI
+CLASS:PUBLIC
+DESCRIPTION:Instructor: Colin Swaney\, Lead Research Software Engineer\, Da
+ ta-Driven Social ScienceResearchers often need to deploy open-source AI mo
+ dels for common tasks such as document digitization\, chat completion\, au
+ dio transcription. This process can be difficult when models are large eno
+ ugh to require cluster computing resources. This workshop introduces Black
+ fish\, a free\, point-and-click solution for researchers seeking access to
+  advanced open-source AI models. We’ll demonstrate how Blackfish leverag
+ es on-premise computing resources to run common machine learning workflows
+  in a convenient
+DTSTAMP:20260924T171158Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4511:delta:0
+DTSTART:20261102T170000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261102T230000Z
+URL:https://dais.princeton.edu/events/2026/princeton-societal-ai-launch-eve
+ nt
+LOCATION:Chancellor Green
+SUMMARY:Princeton Societal AI Launch Event
+CLASS:PUBLIC
+DESCRIPTION:&nbsp\;
+DTSTAMP:20260923T190628Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4576:delta:0
+DTSTART:20261102T213000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261102T230000Z
+URL:https://dais.princeton.edu/events/2026/tigerflow-simplified-workflow-or
+ chestration-hpc
+LOCATION:Julis Romo Rabinowitz Building - A01
+SUMMARY:TigerFlow: simplified workflow orchestration for HPC
+CLASS:PUBLIC
+DESCRIPTION:Instructors:&nbsp\;Sangyoon Park\, Research Software Engineer\,
+  Data-Driven Social ScienceNina van Hoorn\, Associate Research Software En
+ gineer\, Data-Driven Social ScienceDoing complex research well often requi
+ res chaining together multiple complicated steps\, like OCR\, audio transc
+ ription\, or semantic embeddings\, all while being constrained by cluster 
+ limitations. This workshop introduces TigerFlow\, a Python framework for e
+ asy orchestration of scalable pipelines using cluster resources. We’ll f
+ irst learn how to construct and deploy workflows from user-defined Python 
+ tasks\, and
+DTSTAMP:20260924T173035Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ps_events:4556:delta:0
+DTSTART:20261117T171000Z
+SEQUENCE:0
+TRANSP:TRANSPARENT
+DTEND:20261117T181000Z
+URL:https://dais.princeton.edu/events/2026/ddss-connect-interdisciplinary-e
+ xchange-1
+LOCATION:Bendheim 103
+SUMMARY:DDSS Connect & Interdisciplinary Exchange
+CLASS:PUBLIC
+DESCRIPTION:Join us for DDSS’s Connect &amp\; Interdisciplinary Exchange 
+ series where our DDSS Graduate Fellows present on diverse methodologies an
+ d technical approaches. This is a great opportunity to network with others
+  working in quantitive social science. There will be 3 sessions throughout
+  the fall semester.&nbsp\;Luyin Zhang (Sociology)Leveraging DNA and Comput
+ ational Methods to Uncover the Hidden Magnitude of Within-Race Skin Tone I
+ nequalityLeonardo Feitosa Dantas (Politics)Measuring Abstract Concepts Acr
+ oss Text and Images: A Hands-On GuideLucas Ophoff (Politics)
+DTSTAMP:20260924T172401Z
+END:VEVENT
+END:VCALENDAR
