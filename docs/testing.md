@@ -1,6 +1,6 @@
 # Testing
 
-1021 tests. `make test` locally, `make docker-test` for the path CI runs.
+1029 tests. `make test` locally, `make docker-test` for the path CI runs.
 
 Two rules shape all of it:
 
@@ -14,11 +14,11 @@ Two rules shape all of it:
 
 | File | Tests | Covers |
 |---|---:|---|
-| `test_simulator.py` | 145 | The simulator's JavaScript, through Node: dates, editions, both listing templates, the export, the calendar file |
+| `test_simulator.py` | 151 | The simulator's JavaScript, through Node: dates, editions, both listing templates, the export, the calendar file |
 | `test_patterns.py` | 107 | Every named regex's `match` and `no_match` table; `person_name_shape` against 34 real names and 18 real titles |
 | `test_locate.py` | 66 | The seven location rules, including where they decline and where a chain omits one |
 | `test_registry.py` | 66 | Config loading, merging, and every refusal |
-| `test_site.py` | 61 | Both published pages: resources, themes, navigation, controls, and the export's style switcher |
+| `test_site.py` | 63 | Both published pages: resources, themes, navigation, controls, and the export's style switcher |
 | `test_architecture.py` | 55 | Structural boundaries — see below |
 | `test_publish.py` | 51 | The tree, `status.json`, staleness, cadence |
 | `test_purposes.py` | 44 | The purpose vocabulary, per-event overrides, the schedules and templates a publication declares, and the export layouts |

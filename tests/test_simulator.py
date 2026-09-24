@@ -1851,3 +1851,137 @@ def test_the_dais_export_carries_its_own_accent(dais) -> None:  # type: ignore[n
     assert "dotted #EC2770" in styles["hr.ev-rule"]
     assert "text-align: center" in styles["p.ev-when"]
     assert "italic" in styles["p.ev-hosted"]
+
+
+# --------------------------------------------------------------------------------------
+# The DaIS layout's rhythm
+# --------------------------------------------------------------------------------------
+#
+# Three of that edition's eight entries carry no attribution and three carry no speaker,
+# so "what the spacing looks like" is really "what it looks like for every combination of
+# the optional fields". Margins on individual paragraphs cannot express that: whichever
+# paragraph happens to come first in a block needs no top margin, and which one that is
+# changes per event.
+#
+# So the listing is grouped the way their own email is -- Mailchimp builds it from text
+# blocks with 12px of padding top and bottom -- and the gaps live on the groups. These
+# tests hold that: the groups are the only things with margins, and an absent field
+# removes a line rather than moving one.
+
+INLINE_RULES = "console.log(JSON.stringify(S.EXPORT_STYLES['inline-date']));"
+
+#: `div.ev`'s own children, in order, for one combination of the optional fields.
+GROUPS_JS = """
+const feeds = {
+  citp: {label: "Center for Information Technology Policy", home: "https://citp.princeton.edu"}
+};
+const edition = S.resolveEdition({publicationDate: "2026-09-28"});
+const shape = (hasSponsor, hasBlurb, hasSpeaker) => {
+  const item = S.decorate({
+    startTime: "2026-09-28T16:30:00", endTime: "2026-09-28T18:00:00",
+    title: "A Talk", sources: hasSponsor ? ["citp"] : [],
+    urlRef: "https://citp.princeton.edu/events/2026/a-talk",
+    content: hasBlurb ? "A paragraph about the talk." : "",
+    speakers: hasSpeaker ? [{name: "Someone", affiliation: "Somewhere"}] : [],
+    location: {name: "Sherrerd Hall", detail: "306"}
+  }, feeds);
+  const tree = S.buildListing(edition, [item], D.document, "inline-date");
+  const ev = tree.childNodes.filter((n) => n.className === "ev")[0];
+  return {
+    groups: ev.childNodes.map((n) => n.className),
+    head: (ev.childNodes.filter((n) => n.className === "ev-head")[0] || {childNodes: []})
+      .childNodes.map((n) => n.className),
+    detail: (ev.childNodes.filter((n) => n.className === "ev-detail")[0] || {childNodes: []})
+      .childNodes.map((n) => n.className)
+  };
+};
+"""
+
+
+def shapes() -> dict:
+    """Every combination of the three optional fields, as its group structure."""
+    return node(
+        TINY_DOM
+        + GROUPS_JS
+        + """
+        const out = {};
+        [true, false].forEach((a) => [true, false].forEach((b) =>
+          [true, false].forEach((c) => { out[[a, b, c].join(",")] = shape(a, b, c); })));
+        console.log(JSON.stringify(out));
+        """
+    )
+
+
+def test_an_event_is_built_from_groups_not_a_run_of_paragraphs() -> None:
+    """Title with its attribution, speaker with its time and place -- as their email."""
+    every = shapes()
+    assert len(every) == 8
+    for combination, shape in every.items():
+        assert shape["groups"][0] == "ev-head", combination
+        assert shape["groups"][-1] == "ev-more", combination
+        assert set(shape["groups"]) <= {"ev-head", "ev-blurb", "ev-detail", "ev-more"}, combination
+        assert "ev-title" in shape["head"], combination
+        assert "ev-when" in shape["detail"], combination
+
+
+def test_the_blurb_sits_above_the_speaker_as_their_edition_orders_it() -> None:
+    """The blurb explains the series; the speaker belongs with the time and place rather
+    than adrift above a paragraph. Theirs reads that way and ours did not."""
+    shape = shapes()["true,true,true"]
+    assert shape["groups"] == ["ev-head", "ev-blurb", "ev-detail", "ev-more"]
+    assert shape["detail"] == ["ev-speaker", "ev-when"]
+
+
+def test_an_absent_field_removes_a_line_rather_than_moving_one() -> None:
+    """The property the grouping exists for.
+
+    Whatever is missing, the groups that remain are in the same order and carry the same
+    margins -- so no combination of absent fields produces a doubled gap or a line jammed
+    against the one above it.
+    """
+    every = shapes()
+    for combination, shape in every.items():
+        assert shape["groups"] == [
+            g for g in ["ev-head", "ev-blurb", "ev-detail", "ev-more"] if g in shape["groups"]
+        ], combination
+    assert every["false,false,false"]["groups"] == ["ev-head", "ev-detail", "ev-more"]
+    assert every["false,false,false"]["head"] == ["ev-title"]
+    assert every["true,false,false"]["head"] == ["ev-title", "ev-hosted"]
+
+
+def test_only_the_groups_carry_the_spacing() -> None:
+    """A margin on a paragraph inside a group is what the grouping replaced. One left
+    behind would reappear as a stray gap on exactly the entries missing a field."""
+    rules = node(INLINE_RULES)
+    inside = ("p.ev-title", "p.ev-hosted", "p.ev-speaker", "p.ev-when")
+    for selector in inside:
+        assert "margin: 0;" in rules[selector], f"{selector} should sit tight in its group"
+    for selector in ("div.ev-detail", "p.ev-blurb", "p.ev-more"):
+        assert "margin: 24px" in rules[selector], f"{selector} is a gap between groups"
+    assert "margin: 0;" in rules["div.ev-head"], "the first group opens the event"
+
+
+def test_the_listing_is_centred_as_a_column_not_just_as_text() -> None:
+    """`text-align: center` alone centres text inside a block that is still sitting
+    wherever its width left it.
+
+    That is the bug this fixes: the site sets `p { max-width: 46rem }`, so every
+    paragraph was a block narrower than the card and flush left, with its text centred
+    inside -- the whole listing visibly left of centre while every rule said "center".
+    """
+    rules = node(INLINE_RULES)
+    assert "margin: 0 auto 32px;" in rules["div.ev"], "the event centres itself"
+    assert "max-width: 544px" in rules["div.ev"], "and has a measure to be centred within"
+
+    blocks = [s for s in rules if s.startswith(("div.", "p.", "h2."))]
+    for selector in blocks:
+        assert "text-align: center" in rules[selector], selector
+
+
+def test_the_downloaded_file_is_wrapped_in_its_own_layouts_measure() -> None:
+    """Opening the file should look like the email, not like this site with it pasted in."""
+    wrappers = node("console.log(JSON.stringify(S.EXPORT_WRAPPERS));")
+    assert "background: #ffffff" in wrappers["inline-date"]
+    assert "color: #000000" in wrappers["inline-date"]
+    assert wrappers["day-grouped"] != wrappers["inline-date"]
+    assert set(wrappers) == set(node("console.log(JSON.stringify(S.EXPORT_STYLES));"))

@@ -646,3 +646,29 @@ def test_the_dais_preview_does_not_follow_the_sites_theme() -> None:
     block = STYLE[STYLE.index(".export.style-inline-date {") :][:400]
     assert "background: #ffffff" in block
     assert "color: #000000" in block
+
+
+def test_the_dais_preview_is_centred_as_a_column_not_just_as_text() -> None:
+    """The bug behind "it does not look centred".
+
+    The site sets `p { max-width: 46rem }` for readability. In a centred layout that
+    leaves every paragraph a block narrower than the card and still flush left, with its
+    text centred inside it -- so the whole listing sat visibly left of centre while every
+    rule in it said `text-align: center`. The measure belongs on the event, which is then
+    centred with `margin: auto`.
+    """
+    assert "p  { margin: 0 0 1rem; max-width: 46rem; }" in STYLE, (
+        "the rule this has to undo; if it moved, this test is guarding nothing"
+    )
+    assert ".export.style-inline-date p { max-width: none; margin: 0; }" in STYLE
+    assert ".export.style-inline-date .ev { max-width: 34rem; margin: 0 auto 2rem; }" in STYLE
+
+
+def test_the_preview_and_the_export_group_an_event_the_same_way() -> None:
+    """Two stylesheets for one layout, so they are checked against each other.
+
+    The preview is the site's CSS and the export is the inline map. If only one knew
+    about the groups, the preview would show a rhythm the paste does not have.
+    """
+    for group in (".ev-head", ".ev-detail", ".ev-blurb", ".ev-more"):
+        assert f".export.style-inline-date {group}" in STYLE, group
