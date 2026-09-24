@@ -1,61 +1,5 @@
 [
   {
-    "id": "mae:ps_events:4741:delta:0",
-    "guid": "ps_events:4741:delta:0",
-    "sources": [
-      "mae"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-08-24T13:00:00Z",
-    "endsAt": "2026-08-24T15:00:00Z",
-    "startTime": "2026-08-24T09:00:00",
-    "endTime": "2026-08-24T11:00:00",
-    "timezone": "America/New_York",
-    "title": "The influence of surfactants on air-liquid-air sheets and bubble bursting",
-    "speakers": [
-      {
-        "name": "Jun Eshima",
-        "affiliation": ""
-      }
-    ],
-    "speaker": "Jun Eshima",
-    "affiliation": "",
-    "series": "Final Public Oral Exam",
-    "tags": [
-      "fpo"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Final Public Oral Exam"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Engineering Quad J Wing",
-      "id": "",
-      "detail": "J223"
-    },
-    "urlRef": "https://mae.princeton.edu/events/2026/influence-surfactants-air-liquid-air-sheets-and-bubble-bursting",
-    "content": "",
-    "rawEventDetails": "Speaker Jun Eshima Event Category Final Public Oral Exam",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "The influence of surfactants on air-liquid-air sheets and bubble bursting",
-    "locationRaw": "Engineering Quad J Wing/J223",
-    "mappingRules": [
-      "mae:summary-is-title"
-    ],
-    "locationRule": "slash_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ece:ps_events:10916:delta:0",
     "guid": "ps_events:10916:delta:0",
     "sources": [
@@ -970,7 +914,7 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Engineering Quad A Wing -",
+      "name": "Engineering Quad A Wing",
       "id": "",
       "detail": "A210"
     },

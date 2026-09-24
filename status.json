@@ -1,18 +1,63 @@
 {
-  "generatedAt": "2026-09-24T18:47:20Z",
+  "generatedAt": "2026-09-24T18:59:33Z",
+  "purposes": {
+    "engineering-newsletter": {
+      "label": "Engineering events newsletter",
+      "template": "day-grouped",
+      "schedule": {
+        "publication": {
+          "weekday": "MON",
+          "time": "12:00"
+        },
+        "deadline": {
+          "anchor": "week_start",
+          "offset_days": -6,
+          "time": "12:00"
+        },
+        "coverage": {
+          "start": {
+            "anchor": "publication"
+          },
+          "end": {
+            "anchor": "week_start",
+            "offset_days": 6
+          }
+        }
+      }
+    },
+    "dais-newsletter": {
+      "label": "DAIS events newsletter",
+      "template": "inline-date",
+      "schedule": {
+        "publication": {
+          "weekday": "THU",
+          "time": "14:00"
+        },
+        "coverage": {
+          "start": {
+            "anchor": "next_week_start"
+          },
+          "end": {
+            "anchor": "next_week_start",
+            "offset_days": 6
+          }
+        }
+      }
+    }
+  },
   "summary": {
-    "ok": 16,
+    "ok": 18,
     "empty": 1,
     "disabled": 6,
-    "events": 144,
+    "events": 172,
     "stale": 0
   },
   "feeds": [
     {
       "path": "combos/all-no-fpo/events.json",
       "status": "ok",
-      "events": 136,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "events": 165,
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -25,17 +70,19 @@
         "bioengineering",
         "cee",
         "robotics",
+        "nam",
+        "dais",
         "kellercenter"
       ],
       "notes": [
-        "2 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
+        "10 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
       ]
     },
     {
       "path": "combos/all/events.json",
       "status": "ok",
-      "events": 144,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "events": 172,
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -48,17 +95,19 @@
         "bioengineering",
         "cee",
         "robotics",
+        "nam",
+        "dais",
         "kellercenter"
       ],
       "notes": [
-        "2 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
+        "10 group(s) matched on starts_at, title but differed in detail, so every record was kept rather than picking a winner"
       ]
     },
     {
       "path": "combos/engineering/events.json",
       "status": "ok",
-      "events": 37,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "events": 36,
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "sources": [
         "cbe",
         "cee",
@@ -79,8 +128,8 @@
     {
       "path": "combos/seminars/events.json",
       "status": "ok",
-      "events": 71,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "events": 76,
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -93,6 +142,8 @@
         "bioengineering",
         "cee",
         "robotics",
+        "nam",
+        "dais",
         "kellercenter"
       ],
       "notes": [
@@ -103,7 +154,7 @@
       "path": "combos/sherrerd-hall/events.json",
       "status": "ok",
       "events": 47,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -116,6 +167,8 @@
         "bioengineering",
         "cee",
         "robotics",
+        "nam",
+        "dais",
         "kellercenter"
       ]
     },
@@ -137,7 +190,7 @@
       "path": "feeds/ai/events.json",
       "status": "ok",
       "events": 15,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Princeton AI Lab",
       "home": "https://ai.princeton.edu",
       "sources": [
@@ -151,7 +204,7 @@
       "path": "feeds/bioengineering/events.json",
       "status": "ok",
       "events": 5,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Omenn-Darling Bioengineering Institute",
       "home": "https://bioengineering.princeton.edu",
       "sources": [
@@ -165,7 +218,7 @@
       "path": "feeds/cbe/events.json",
       "status": "ok",
       "events": 11,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Chemical and Biological Engineering",
       "home": "https://cbe.princeton.edu",
       "sources": [
@@ -179,7 +232,7 @@
       "path": "feeds/cee/events.json",
       "status": "ok",
       "events": 1,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Civil and Environmental Engineering",
       "home": "https://cee.princeton.edu",
       "sources": [
@@ -193,14 +246,15 @@
       "path": "feeds/citp/events.json",
       "status": "ok",
       "events": 31,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Center for Information Technology Policy",
       "home": "https://citp.princeton.edu",
       "sources": [
         "citp"
       ],
       "purposes": [
-        "engineering-newsletter"
+        "engineering-newsletter",
+        "dais-newsletter"
       ]
     },
     {
@@ -215,6 +269,21 @@
       ],
       "purposes": [
         "engineering-newsletter"
+      ]
+    },
+    {
+      "path": "feeds/dais/events.json",
+      "status": "ok",
+      "events": 23,
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
+      "label": "Data and Intelligent Systems",
+      "home": "https://dais.princeton.edu",
+      "sources": [
+        "dais"
+      ],
+      "purposes": [
+        "engineering-newsletter",
+        "dais-newsletter"
       ]
     },
     {
@@ -235,7 +304,7 @@
       "path": "feeds/ece/events.json",
       "status": "ok",
       "events": 9,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Electrical and Computer Engineering",
       "home": "https://ece.princeton.edu",
       "sources": [
@@ -249,7 +318,7 @@
       "path": "feeds/kellercenter/events.json",
       "status": "empty",
       "events": 0,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Keller Center for Innovation in Engineering Education",
       "home": "https://kellercenter.princeton.edu",
       "sources": [
@@ -262,8 +331,8 @@
     {
       "path": "feeds/mae/events.json",
       "status": "ok",
-      "events": 11,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "events": 10,
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Mechanical and Aerospace Engineering",
       "home": "https://mae.princeton.edu",
       "sources": [
@@ -277,7 +346,7 @@
       "path": "feeds/materials/events.json",
       "status": "ok",
       "events": 15,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Princeton Materials Institute",
       "home": "https://materials.princeton.edu",
       "sources": [
@@ -302,6 +371,20 @@
       ]
     },
     {
+      "path": "feeds/nam/events.json",
+      "status": "ok",
+      "events": 6,
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
+      "label": "Natural and Artificial Minds",
+      "home": "https://nam.ai.princeton.edu",
+      "sources": [
+        "nam"
+      ],
+      "purposes": [
+        "dais-newsletter"
+      ]
+    },
+    {
       "path": "feeds/nextg/events.json",
       "status": "disabled",
       "events": 0,
@@ -319,14 +402,15 @@
       "path": "feeds/orfe/events.json",
       "status": "ok",
       "events": 20,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Operations Research and Financial Engineering",
       "home": "https://orfe.princeton.edu",
       "sources": [
         "orfe"
       ],
       "purposes": [
-        "engineering-newsletter"
+        "engineering-newsletter",
+        "dais-newsletter"
       ],
       "notes": [
         "declined: 4 event(s) present in the upstream feed are deliberately not published here, per this source's publish_unless (tags contains 'fpo')."
@@ -336,7 +420,7 @@
       "path": "feeds/quantum/events.json",
       "status": "ok",
       "events": 18,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Princeton Quantum Initiative",
       "home": "https://quantum.princeton.edu",
       "sources": [
@@ -350,14 +434,15 @@
       "path": "feeds/robotics/events.json",
       "status": "ok",
       "events": 8,
-      "lastSuccessAt": "2026-09-24T18:47:20Z",
+      "lastSuccessAt": "2026-09-24T18:59:33Z",
       "label": "Princeton Robotics",
       "home": "https://robotics.princeton.edu",
       "sources": [
         "robotics"
       ],
       "purposes": [
-        "engineering-newsletter"
+        "engineering-newsletter",
+        "dais-newsletter"
       ],
       "notes": [
         "location_declined: 6 of 8 locations left empty (75%), above the declared band of 30%. The chain may no longer fit this source."

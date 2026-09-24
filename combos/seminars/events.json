@@ -200,7 +200,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -363,7 +364,8 @@
       "lecture"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Distinguished Lecture Series"
@@ -476,7 +478,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar",
@@ -640,7 +643,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -808,7 +812,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -971,7 +976,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -1002,6 +1008,55 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:856:delta:0",
+    "guid": "ps_events:856:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T14:30:00Z",
+    "endsAt": "2026-09-25T16:00:00Z",
+    "startTime": "2026-09-25T10:30:00",
+    "endTime": "2026-09-25T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-2",
+    "content": "The Consequences of Using Human Behavior to Train AILauren Treiman, NAM Postdoctoral Research Fellow Artificial intelligence (AI) is now an integral part of everyday decision making. These systems not only help us make choices but also learn from our behavior. Therefore, it is important to understand how our interactions with AI influence these systems. Current approaches often assume that the behavior used to train AI accurately reflects how people would naturally behave. However, people are often informed that their choices will be used for AI training,",
+    "rawEventDetails": "Details Event Description The Consequences of Using Human Behavior to Train AI Lauren Treiman, NAM Postdoctoral Research Fellow Artificial intelligence (AI) is now an integral part of everyday decision making. These systems not only help us make choices but also learn from our behavior. Therefore, it is important to understand how our interactions with AI influence these systems. Current approaches often assume that the behavior used to train AI accurately reflects how people would naturally behave. However, people are often informed that their choices will be used for AI training, and as a result, may change how they would normally act. My graduate school research combines psychological and computer science perspectives to investigate the consequences of this awareness. We show that people alter their behavior when they know it will be used to train AI. These changes are shaped by contextual factors, including the extent to which people deliberate, how they engage with disclosure information, and their attitudes toward the individuals who will interact with the trained system. Together, this research underscores the importance of considering the consequences of using human-generated training data, which may perpetuate biases in AI systems. A fundamental tradeoff between generalization and parallel processing Marco Nurisso, NAM Postdoctoral Research Fellow The performance of large vision-language models degrades sharply as the number of items to be handled at once grows: counting, comparing, keeping track of which property belongs to which object. The pattern resembles limits on processing multiple items at once documented in humans since George Miller, who found estimates of how many items one can hold at once and still tell apart clustering, across unrelated modalities, at two to three bits' worth. I will argue that these limits have a common and largely architecture-independent origin. To treat novel inputs in terms of familiar ones, a system needs representations that overlap, and overlapping representations interfere when several of them must be kept apart at once: the capacity to process items in parallel is spent on generalization. Competitive choice and noisy comparison are enough to turn this into a provable bound, independently of how the representation is built. The result is a region of the generalization\u2013capacity plane that no system can enter and whose generalization-preserving edge improves so slowly as noise falls that suppressing noise buys a system almost nothing, offering a principled explanation for why small, Miller-like limits can recur across different systems.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:541:delta:0",
     "guid": "ps_events:541:delta:0",
     "sources": [
@@ -1022,7 +1077,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -1134,7 +1190,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -1190,7 +1247,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -1348,7 +1406,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -1707,6 +1766,55 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:871:delta:0",
+    "guid": "ps_events:871:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T14:30:00Z",
+    "endsAt": "2026-10-09T16:00:00Z",
+    "startTime": "2026-10-09T10:30:00",
+    "endTime": "2026-10-09T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-1",
+    "content": "Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
+    "rawEventDetails": "Details Event Description Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4751:delta:0",
     "guid": "ps_events:4751:delta:0",
     "sources": [
@@ -1844,7 +1952,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -2058,7 +2167,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -2083,6 +2193,58 @@
       "robotics:summary-is-title"
     ],
     "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4496:delta:0",
+    "guid": "ps_events:4496:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-19T04:00:00Z",
+    "endsAt": "2026-10-20T04:00:00Z",
+    "startTime": "2026-10-19T00:00:00",
+    "endTime": "2026-10-20T00:00:00",
+    "timezone": "America/New_York",
+    "title": "AI Alignment + Safety Inaugural Symposium & Launch Event",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "AI Alignment + Safety",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "AI Alignment + Safety"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-inaugural-symposium-launch-event",
+    "content": "A new initiative to make artificial intelligence safe and beneficial to humanity.Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate DirectorFeatured speakers include:Boaz Barak, Harvard University, Open AIPeter Henderson, Princeton University, Department of Computer ScienceAdam Tauman Kalai, Institute for Responsible SuperintelligenceLydia Liu, Princeton University, Department of",
+    "rawEventDetails": "Details Event Description A new initiative to make artificial intelligence safe and beneficial to humanity. Opening Remarks by Elad Hazan , Director and Mark Braverman, Associate Director Featured speakers include: Boaz Barak , Harvard University, Open AI Peter Henderson , Princeton University, Department of Computer Science Adam Tauman Kalai , Institute for Responsible Superintelligence Lydia Liu , Princeton University, Department of Computer Science Helen Qu, Flatiron Institute Aaron Roth , University of Pennsylvania Benjamin Van Roy , Stanford University, Google Deep Mind",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI Alignment + Safety Inaugural Symposium & Launch Event",
+    "locationRaw": "Friend Center 101",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -2223,7 +2385,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -2265,7 +2428,7 @@
     "startTime": "2026-10-28T12:05:00",
     "endTime": "2026-10-28T13:05:00",
     "timezone": "America/New_York",
-    "title": "A Talk by Joseph Fedeyko, Johnson Matthey",
+    "title": "A PMI/PCCM SEMINAR SERIES Fall 2026 Talk by Joseph Fedeyko, Johnson Matthey",
     "speakers": [
       {
         "name": "Joseph Fedeyko",
@@ -2274,7 +2437,7 @@
     ],
     "speaker": "Joseph Fedeyko, Johnson Matthey",
     "affiliation": "Johnson Matthey",
-    "series": "",
+    "series": "PMI/PCCM SEMINAR SERIES Fall 2026",
     "tags": [
       "seminar"
     ],
@@ -2379,7 +2542,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -2491,7 +2655,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -2603,7 +2768,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -2659,7 +2825,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar"
@@ -2827,7 +2994,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -2883,7 +3051,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -2970,6 +3139,55 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:876:delta:0",
+    "guid": "ps_events:876:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T15:30:00Z",
+    "endsAt": "2026-11-13T17:00:00Z",
+    "startTime": "2026-11-13T10:30:00",
+    "endTime": "2026-11-13T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-0",
+    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowAkshay Jagadish, NAM Postdoctoral Research Fellow",
+    "rawEventDetails": "Details Event Description Anya Tsvetkov, NAM Postdoctoral Research Fellow Akshay Jagadish, NAM Postdoctoral Research Fellow",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:561:delta:0",
     "guid": "ps_events:561:delta:0",
     "sources": [
@@ -2990,7 +3208,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -3158,7 +3377,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -3270,7 +3490,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar"
@@ -3545,7 +3766,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -3576,6 +3798,55 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:881:delta:0",
+    "guid": "ps_events:881:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T15:30:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T10:30:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks",
+    "content": "Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawEventDetails": "Details Event Description Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:571:delta:0",
     "guid": "ps_events:571:delta:0",
     "sources": [
@@ -3596,7 +3867,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -3764,7 +4036,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -3815,7 +4088,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"

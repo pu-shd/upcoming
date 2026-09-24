@@ -248,7 +248,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -305,7 +306,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -359,7 +361,8 @@
     "series": "",
     "tags": [],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -384,6 +387,54 @@
     "locationRule": "detail_dash_name",
     "summaryRest": "",
     "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4091:delta:0",
+    "guid": "ps_events:4091:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T14:00:00Z",
+    "endsAt": "2026-09-09T15:00:00Z",
+    "startTime": "2026-09-09T10:00:00",
+    "endTime": "2026-09-09T11:00:00",
+    "timezone": "America/New_York",
+    "title": "AI Resource Workshop",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Maeder Hall, 002 Auditorium",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-resource-workshop",
+    "content": "Join us for an interactive showcase highlighting the AI resources, tools, expertise, and support available across Princeton University. Representatives from Data and Intelligent Systems (DaIS), Office of Information Technology (OIT), Research Computing, Office of Dean for Research (ODFR) and the Princeton University Library will discuss the resources they are offering to the campus community. Discover opportunities to collaborate, learn about existing AI initiatives, find tools and services that can support your work, and connect with colleagues who are",
+    "rawEventDetails": "Details Event Description Join us for an interactive showcase highlighting the AI resources, tools, expertise, and support available across Princeton University. Representatives from Data and Intelligent Systems (DaIS), Office of Information Technology (OIT), Research Computing, Office of Dean for Research (ODFR) and the Princeton University Library will discuss the resources they are offering to the campus community. Discover opportunities to collaborate, learn about existing AI initiatives, find tools and services that can support your work, and connect with colleagues who are advancing responsible and innovative uses of AI on campus. Whether you are new to AI or already using it in your research, this event is an opportunity to see what is available across campus and discover ways to get involved. This event is intended for the research community, particularly grad students, research staff, and faculty. This event will also be accessible via live-stream and recording. Live Stream Link Live Stream Public Link",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI Resource Workshop",
+    "locationRaw": "Maeder Hall, 002 Auditorium",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
   },
@@ -442,6 +493,58 @@
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4306:delta:0",
+    "guid": "ps_events:4306:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-09T16:05:00Z",
+    "endsAt": "2026-09-09T17:05:00Z",
+    "startTime": "2026-09-09T12:05:00",
+    "endTime": "2026-09-09T13:05:00",
+    "timezone": "America/New_York",
+    "title": "The Bittersweet Lesson of Scaling in AI for Materials",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "AI for Accelerating Invention",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "AI for Accelerating Invention"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/bittersweet-lesson-scaling-ai-materials-0",
+    "content": "Abstract: AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton\u2019s \u2018bitter lesson\u2019 states that \u201cgeneral methods that leverage computation are ultimately the most effective\u201d in AI. The corollaries are bittersweet in chemistry and materials.",
+    "rawEventDetails": "Details Event Description Abstract : AI has the potential to bring much-needed acceleration to the development of chemicals and materials for energy and sustainability, just like it has delivered intelligence gains in other fields. The path to success goes through scaling, perhaps exclusively through scaling. Rich Sutton's 'bitter lesson' states that \"general methods that leverage computation are ultimately the most effective\" in AI. The corollaries are bittersweet in chemistry and materials. The lesson permeates through the use of AI in chemistry and materials. The tremendous success of universal ML interatomic potentials (MLIPs) as surrogate for quantum-mechanical energies and forces is unarguable. Trained on 100-million-count datasets, they reflect scaling laws similar to the ones in language or vision models, generalizing to new scientific questions and enabling simulations that were intractable a few years ago. Generative models, trained mostly on the same synthetic data, are currently being used to propose novel materials at machine speed. The discussion around the power of inductive bias (energy conservation, equivariance) and whether it is better reflected in model architecture or in training strategy is very much ongoing. The physical sciences may well be the last holdout for domain knowledge and inductive bias, or maybe they will ultimately follow the same trends as other domains. But MLIPs are surrogates for physics-based simulators, and arguably, materials only truly matter if they are made in the lab and then scaled up industrially and commercially. This is the truly bitter scaling lesson in materials. The promise of AI for chemistry and materials needs to be realized through very traditional, expensive and slow channels. In this talk, I will describe our group's work both in the highly scalable fusion of simulations and machine learning, and in the \"high-contact\" and lower throughput effort of translating AI designs into tangible, scalable products, in areas like heterogeneous catalysis, battery materials or sustainable polymers Bio: Rafael Gomez-Bombarelli is the Paul M Cook Associate Professor in MIT's Department of Materials Science and Engineering; and co-founder and Chief Scientific Officer at Lila Sciences. He earned his undergraduate and graduate degrees in chemistry from the University of Salamanca, Spain, and conducted postdoctoral research at Heriot-Watt University and Harvard University, under Alan Aspuru-Guzik. Rafa's research integrates machine learning with atomistic simulations to expedite the discovery and design of novel materials for applications in energy, sustainability, and healthcare.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "The Bittersweet Lesson of Scaling in AI for Materials",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -577,7 +680,8 @@
       "lecture"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Distinguished Lecture Series"
@@ -702,6 +806,102 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4386:delta:0",
+    "guid": "ps_events:4386:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-10T04:00:00Z",
+    "endsAt": "2026-09-11T04:00:00Z",
+    "startTime": "2026-09-10T00:00:00",
+    "endTime": "2026-09-11T00:00:00",
+    "timezone": "America/New_York",
+    "title": "Test-Time Scaling Makes Overtraining Compute-Optimal",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/test-time-scaling-makes-overtraining-compute-optimal",
+    "content": "Video",
+    "rawEventDetails": "Details Event Description Video Abstract Modern LLMs scale at test-time, e.g. via repeated sampling, where inference cost grows with model size and the number of samples. This creates a trade-off that pretraining scaling laws, such as Chinchilla, do not address. In this talk, we present Train-to-Test (T^2) scaling laws that jointly optimize model size, training tokens, and number of inference samples under fixed end-to-end budgets. T^2 modernizes pretraining scaling laws with pass@k modeling used for test-time scaling, then jointly optimizes pretraining and test-time decisions. Forecasts from T^2 are robust over distinct modeling approaches: measuring joint scaling effect on the task loss and modeling impact on task accuracy. Across eight downstream tasks, we find that when accounting for inference cost, optimal pretraining decisions shift radically into the overtraining regime, well-outside of the range of standard pretraining scaling suites. We validate our results by pretraining heavily overtrained models in the optimal region that T^2 scaling forecasts, confirming their substantially stronger performance compared to pretraining scaling alone. Finally, as frontier LLMs are post-trained, we show that our findings survive the post-training stage, making T^2 scaling meaningful in modern deployments. Link to Bio: https://nick11roberts.science/ Sponsor Event organized by PLI Special Event Seminar Lunch Series",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Test-Time Scaling Makes Overtraining Compute-Optimal",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4391:delta:0",
+    "guid": "ps_events:4391:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-10T04:00:00Z",
+    "endsAt": "2026-09-11T04:00:00Z",
+    "startTime": "2026-09-10T00:00:00",
+    "endTime": "2026-09-11T00:00:00",
+    "timezone": "America/New_York",
+    "title": "Do Thinking Tokens Help with Safety?",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/do-thinking-tokens-help-safety",
+    "content": "Video",
+    "rawEventDetails": "Details Event Description Video Abstract : Today's reasoning models use thinking tokens to attain stronger performance on benchmarks than their instruction-tuned counterparts. It is also generally believed that this more \"deliberative\" mode should improve alignment and safety, by providing the model a safe space to consider whether its planned answer to a request violates its safety principles. We present evidence that this intuition is not always correct. Across frontier open-weight reasoning models spanning GPT-OSS, Qwen, Olmo, and Phi families, we find that the eventual refusal/compliance outcome is already strongly predictable via a trained head on the first token's hidden representation (0.84-0.95 AUROC and \u223c88% balanced accuracy for predicting refusal/compliance) before any visible thinking. The thinking process turns out to be more akin to prefix completion than to deliberative revision, with the final outcome rarely changing after the first \u223c20% of thinking, despite giving the appearance of deliberation at the text level (\u223c74% of text-level deliberations occur when the response distribution is already locked to one refusal/compliance side). We also find that existing inference-time and training-based safety interventions, despite being motivated by the goal of inducing deliberation, largely shift model behavior toward over-refusal while suppressing already-scarce deliberation signals. Our results suggest that safety behavior in current reasoning models is much less deliberative than commonly assumed, and highlight the need for methods that induce real safety deliberation. Bio : Narutatsu Ri is a second-year Ph.D. student advised by Professor Sanjeev Arora. His research focuses on the safety and alignment of large foundation models, with particular interests in measuring and mitigating misalignment, scalable oversight, and the safety implications of self-improving AI systems. Sponsor Event organized by PLI Special Event Seminar Lunch Series",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Do Thinking Tokens Help with Safety?",
+    "locationRaw": "",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:0",
     "guid": "ps_events:5261:delta:0",
     "sources": [
@@ -723,7 +923,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -747,6 +948,54 @@
     "locationRaw": "Sherrerd Hall 008",
     "mappingRules": [
       "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4371:delta:0",
+    "guid": "ps_events:4371:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-11T13:00:00Z",
+    "endsAt": "2026-09-11T14:00:00Z",
+    "startTime": "2026-09-11T09:00:00",
+    "endTime": "2026-09-11T10:00:00",
+    "timezone": "America/New_York",
+    "title": "AI Alignment + Safety Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar",
+    "content": "Join us for the inaugural AI Alignment + Safety seminar featuring guest speaker Sylvain Chassang, Professor of Economics. Professor Chassang will speak on \u201cInteractive Alignment.\u201dThe seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
+    "rawEventDetails": "Details Event Description Join us for the inaugural AI Alignment + Safety seminar featuring guest speaker Sylvain Chassang, Professor of Economics. Professor Chassang will speak on \u201cInteractive Alignment.\u201d The seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI Alignment + Safety Seminar",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -941,7 +1190,8 @@
       "privacy-security"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -995,7 +1245,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -1102,7 +1353,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar",
@@ -1313,7 +1565,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -1391,6 +1644,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4506:delta:0",
+    "guid": "ps_events:4506:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-17T04:00:00Z",
+    "endsAt": "2026-09-18T04:00:00Z",
+    "startTime": "2026-09-17T00:00:00",
+    "endTime": "2026-09-18T00:00:00",
+    "timezone": "America/New_York",
+    "title": "Open Questions in AI Benchmarking",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/open-questions-ai-benchmarking",
+    "content": "Video",
+    "rawEventDetails": "Details Event Description Video Abstract: In this talk I will lay out what I take to be some of the big open questions about AI capabilities. These questions govern the impact that AI will have on the world. I'll also discuss some of the work being done (at my company and by others) to build benchmarks that help answer these questions. Short bio : Greg Burnham is the head of benchmarks at Epoch AI. Prior to this, he worked at Elemental Cognition and Bridgewater Associates. He has a BA in mathematics from Princeton University. Website: https://epoch.ai/about/team/greg-burnham Sponsor Organized by PLI Special Event Seminar Lunch Series",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Open Questions in AI Benchmarking",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:1",
     "guid": "ps_events:5261:delta:1",
     "sources": [
@@ -1412,7 +1713,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -1492,6 +1794,54 @@
     "locationRaw": "Bioengineering E105",
     "mappingRules": [
       "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4376:delta:0",
+    "guid": "ps_events:4376:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-18T13:00:00Z",
+    "endsAt": "2026-09-18T14:00:00Z",
+    "startTime": "2026-09-18T09:00:00",
+    "endTime": "2026-09-18T10:00:00",
+    "timezone": "America/New_York",
+    "title": "AI Alignment + Safety Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar-0",
+    "content": "The AI Alignment + Safety seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
+    "rawEventDetails": "Speaker Jerry Han '27 Affiliation \"Measuring Intelligence Beyond Human Scale\" Details Event Description The AI Alignment + Safety seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI Alignment + Safety Seminar",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -1581,7 +1931,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -1633,7 +1984,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -1819,6 +2171,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4436:delta:0",
+    "guid": "ps_events:4436:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-23T20:30:00Z",
+    "endsAt": "2026-09-23T21:30:00Z",
+    "startTime": "2026-09-23T16:30:00",
+    "endTime": "2026-09-23T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Synthetic Data, Real Benefits: Reliable Inference and Principled Model Steering",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/synthetic-data-real-benefits-reliable-inference-and-principled-model-steering",
+    "content": "",
+    "rawEventDetails": "Speaker Yaniv Romano Affiliation Technion- Israel Institute of Technology Details Event Description Abstract AI models are powerful, yet their use in practice raises two fundamental challenges. The first is trust: how can we make reliable inferences from black-box models when we only have a few reference examples to rely on? The second is steerability: how can we guide AI generation when we can recognize the outputs we prefer but cannot precisely quantify our preferences? In this talk, I will show how statistics and AI can empower one another to tackle both challenges. The first part focuses on reliable inference under limited data. I'll introduce General Synthetic-Powered Inference (GESPI), a framework that safely enhances the sample efficiency of any statistical inference procedure\u2014such as conformal prediction and hypothesis testing\u2014by adaptively leveraging synthetic data. GESPI provides distribution-free error control regardless of synthetic-data quality while improving utility when those data are informative. I'll demonstrate its applicability across domains ranging from predictive uncertainty quantification to principled win-rate evaluation of large reasoning models. I'll also discuss how these ideas can support large-scale scientific discovery with false discovery rate control. In the second part, I'll introduce Preference-based Metropolis-Hastings (Pref-MH): a model-steering framework that leverages pairwise votes from an LLM judge to generate data satisfying complex properties of interest. Pref-MH exploits a novel connection between MH and the Bradley-Terry preference model. This connection enables rigorous steering of a base AI generator toward a target distribution that favors outputs preferred by the judge, without ever needing to estimate the judge's latent reward. Finally, I'll demonstrate Pref-MH in molecular design and show how the resulting synthetic data improve downstream inference when incorporated into GESPI. Bio Yaniv Romano is an associate professor in the Departments of Electrical and Computer Engineering and Computer Science at the Technion. He is also affiliated with NVIDIA as a visiting professor. Previously, he was a postdoctoral scholar in the Department of Statistics at Stanford University. Yaniv holds a PhD, an MSc, and a BSc in electrical engineering, all from the Technion. His super-resolution technology, invented with Peyman Milanfar, has been integrated into Google\u2019s flagship products, including Pixel phones. His uncertainty quantification method, developed with Emmanuel Cand\u00e8s, was used by The Washington Post to estimate outstanding votes during the U.S. presidential election. Yaniv has received several honors and awards, including an ERC Starting Grant, the SIAG/IS Early Career Prize, the Sheila Samson Prime Minister\u2019s Prize (Researcher Recruitment Prize), the IEEE Signal Processing Society Best Paper Award, the Alon Scholarship, the Krill Prize for Excellence in Scientific Research, and the Henry Taub Prize for Academic Excellence. Yaniv is a member of the Young Israel Academy. This seminar is supported with funds from the Korhammer Lecture Series. Sponsors Guillermo Sapiro Pramod Viswanath Contact Ryann Myers [email protected]",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Synthetic Data, Real Benefits: Reliable Inference and Principled Model Steering",
+    "locationRaw": "",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ece:ps_events:11001:delta:0",
     "guid": "ps_events:11001:delta:0",
     "sources": [
@@ -1891,7 +2291,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -1943,7 +2344,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -1975,6 +2377,103 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:856:delta:0",
+    "guid": "ps_events:856:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T14:30:00Z",
+    "endsAt": "2026-09-25T16:00:00Z",
+    "startTime": "2026-09-25T10:30:00",
+    "endTime": "2026-09-25T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-2",
+    "content": "The Consequences of Using Human Behavior to Train AILauren Treiman, NAM Postdoctoral Research Fellow Artificial intelligence (AI) is now an integral part of everyday decision making. These systems not only help us make choices but also learn from our behavior. Therefore, it is important to understand how our interactions with AI influence these systems. Current approaches often assume that the behavior used to train AI accurately reflects how people would naturally behave. However, people are often informed that their choices will be used for AI training,",
+    "rawEventDetails": "Details Event Description The Consequences of Using Human Behavior to Train AI Lauren Treiman, NAM Postdoctoral Research Fellow Artificial intelligence (AI) is now an integral part of everyday decision making. These systems not only help us make choices but also learn from our behavior. Therefore, it is important to understand how our interactions with AI influence these systems. Current approaches often assume that the behavior used to train AI accurately reflects how people would naturally behave. However, people are often informed that their choices will be used for AI training, and as a result, may change how they would normally act. My graduate school research combines psychological and computer science perspectives to investigate the consequences of this awareness. We show that people alter their behavior when they know it will be used to train AI. These changes are shaped by contextual factors, including the extent to which people deliberate, how they engage with disclosure information, and their attitudes toward the individuals who will interact with the trained system. Together, this research underscores the importance of considering the consequences of using human-generated training data, which may perpetuate biases in AI systems. A fundamental tradeoff between generalization and parallel processing Marco Nurisso, NAM Postdoctoral Research Fellow The performance of large vision-language models degrades sharply as the number of items to be handled at once grows: counting, comparing, keeping track of which property belongs to which object. The pattern resembles limits on processing multiple items at once documented in humans since George Miller, who found estimates of how many items one can hold at once and still tell apart clustering, across unrelated modalities, at two to three bits' worth. I will argue that these limits have a common and largely architecture-independent origin. To treat novel inputs in terms of familiar ones, a system needs representations that overlap, and overlapping representations interfere when several of them must be kept apart at once: the capacity to process items in parallel is spent on generalization. Competitive choice and noisy comparison are enough to turn this into a provable bound, independently of how the representation is built. The result is a region of the generalization\u2013capacity plane that no system can enter and whose generalization-preserving edge improves so slowly as noise falls that suppressing noise buys a system almost nothing, offering a principled explanation for why small, Miller-like limits can recur across different systems.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4581:delta:0",
+    "guid": "ps_events:4581:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T15:00:00Z",
+    "endsAt": "2026-09-25T16:00:00Z",
+    "startTime": "2026-09-25T11:00:00",
+    "endTime": "2026-09-25T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton University Robotics Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "CS",
+      "id": "",
+      "detail": "105"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/princeton-university-robotics-seminar",
+    "content": "",
+    "rawEventDetails": "Speaker Maurizio Porfiri Affiliation New York University Details Event Description Abstract: How and why base vibration can stabilize an inverted pendulum has puzzled the scientific community for decades, until Pyotr Kapitza's work on dynamic stabilization pointed to the alternation between unstable and stable modes as a pathway to stability. We report the discovery of a mechanical oscillator that switches between two unstable modes, has an unstable average, and yet can be dynamically stabilized. Our impossible system is governed by a modified Meissner\u2019s model \u2013 a one-degree-of-freedom oscillator where both stiffness and damping are modulated through a square wave to switch between positive and negative values. We study the system through the lens of the theory of oscillations in a rapidly oscillating field by Landau and Lifshitz, providing insights into the physical underpinnings of \u201cdynamic stabilization 2.0\u201d. We validate the theory's predictions by computing Floquet exponents, yielding exact results on the emergence and topology of compact antiresonance windows where the system is stable. We provide experimental evidence of the feasibility of this new form of dynamic stabilization through a \u201cFrankenstein\u201d oscillator developed at Stony Brook University in collaboration with Prof. Paolo Celli and his student, David Xiedeng. The oscillator comprises a cantilever beam subject to magnetic and aerodynamic forcing, modulated in time to alternate between unstable configurations and retain an unstable mean. The prospect of dynamic stabilization in the absence of any stable feature has vast implications for network dynamical systems, structural mechanics, and robotics. Bio: Maurizio Porfiri is an Institute Professor at New York University Tandon School of Engineering (Departments of Mechanical and Aerospace Engineering, Biomedical Engineering, Center for Urban Science and Progress, CUSP, and Civil and Urban Engineering). He is presently the Director of CUSP and the founding Director of the Urban Institute. He received M.Sc. and Ph.D. degrees in Engineering Mechanics from Virginia Tech; a \u201cLaurea\u201d in Electrical Engineering and a Ph.D. in Theoretical and Applied Mechanics from Sapienza University of Rome and the University of Toulon. He conducts and supervises research on complex systems, with applications ranging from mechanics and robotics to urban science and behavioral biology. This seminar is supported with funds from the Korhammer Lecture Series.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton University Robotics Seminar",
+    "locationRaw": "CS 105",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:541:delta:0",
     "guid": "ps_events:541:delta:0",
     "sources": [
@@ -1995,7 +2494,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -2163,7 +2663,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -2190,6 +2691,153 @@
     "locationRule": "detail_dash_name",
     "summaryRest": "",
     "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4346:delta:0",
+    "guid": "ps_events:4346:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-28T20:30:00Z",
+    "endsAt": "2026-09-28T22:00:00Z",
+    "startTime": "2026-09-28T16:30:00",
+    "endTime": "2026-09-28T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend",
+      "id": "",
+      "detail": "006"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/emergent-symbol-processing-mechanistic-theory-human-cognition",
+    "content": "Speaker: Taylor Webb, Department of Psychology, Princeton UniversityTalk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open",
+    "rawEventDetails": "Details Event Description Speaker: Taylor Webb, Department of Psychology, Princeton University Talk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open the question of how these systems achieve the capabilities that were thought to require innate symbol processing, and what this says about the mechanistic basis of those capabilities in human cognition. In this talk, I will argue that symbol-like behavioral capabilities in modern neural networks are supported by an emergent form of symbolic computation, and illustrate how this is implemented by their internal mechanisms. I will also discuss the factors that lead to the emergence of these mechanisms, and will consider a case that illustrates how symbolic mechanisms are not necessarily human-like. Overall, these results suggest that connectionist principles may be sufficient to account for the symbol-like aspects of human cognition, while also illustrating how symbolic cognitive models can be translated into mechanistic theories.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
+    "locationRaw": "Friend 006",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "nam:ps_events:831:delta:0",
+    "guid": "ps_events:831:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-28T20:30:00Z",
+    "endsAt": "2026-09-28T22:00:00Z",
+    "startTime": "2026-09-28T16:30:00",
+    "endTime": "2026-09-28T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend",
+      "id": "",
+      "detail": "006"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/emergent-symbol-processing-mechanistic-theory-human-cognition",
+    "content": "Speaker: Taylor Webb, Department of Psychology, Princeton UniversityTalk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open",
+    "rawEventDetails": "Details Event Description Speaker: Taylor Webb, Department of Psychology, Princeton University Talk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open the question of how these systems achieve the capabilities that were thought to require innate symbol processing, and what this says about the mechanistic basis of those capabilities in human cognition. In this talk, I will argue that symbol-like behavioral capabilities in modern neural networks are supported by an emergent form of symbolic computation, and illustrate how this is implemented by their internal mechanisms. I will also discuss the factors that lead to the emergence of these mechanisms, and will consider a case that illustrates how symbolic mechanisms are not necessarily human-like. Overall, these results suggest that connectionist principles may be sufficient to account for the symbol-like aspects of human cognition, while also illustrating how symbolic cognitive models can be translated into mechanistic theories.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
+    "locationRaw": "Friend 006",
+    "mappingRules": [
+      "nam:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4546:delta:0",
+    "guid": "ps_events:4546:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T16:10:00Z",
+    "endsAt": "2026-09-29T17:10:00Z",
+    "startTime": "2026-09-29T12:10:00",
+    "endTime": "2026-09-29T13:10:00",
+    "timezone": "America/New_York",
+    "title": "DDSS Connect & Interdisciplinary Exchange",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ddss-connect-interdisciplinary-exchange",
+    "content": "Join us for DDSS\u2019s Connect and Interdisciplinary Exchange series where our DDSS Graduate Fellows present on diverse methodologies and technical approaches. This is a great opportunity to network with others working in quantitive social science. Alessandra Rister Portinari Maranca (Sociology)The Collapse of Early Motherhood and the Reorganization of Poverty-Stratified Fertility in the USNelson Matthew Tan (Economics)Limited Information Estimation of Heterogenous Agent ModelsHayoung Jung (Computer Science)Can AI Agent Synthesize Scientific Conclusions?",
+    "rawEventDetails": "Details Event Description Join us for DDSS\u2019s Connect and Interdisciplinary Exchange series where our DDSS Graduate Fellows present on diverse methodologies and technical approaches. This is a great opportunity to network with others working in quantitive social science. Alessandra Rister Portinari Maranca (Sociology) The Collapse of Early Motherhood and the Reorganization of Poverty-Stratified Fertility in the US Nelson Matthew Tan (Economics) Limited Information Estimation of Heterogenous Agent Models Hayoung Jung (Computer Science) Can AI Agent Synthesize Scientific Conclusions?",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DDSS Connect & Interdisciplinary Exchange",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
   },
@@ -2267,7 +2915,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -2291,6 +2940,54 @@
     "locationRaw": "Computer Science Building 105",
     "mappingRules": [
       "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4526:delta:0",
+    "guid": "ps_events:4526:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T16:15:00Z",
+    "endsAt": "2026-09-29T17:15:00Z",
+    "startTime": "2026-09-29T12:15:00",
+    "endTime": "2026-09-29T13:15:00",
+    "timezone": "America/New_York",
+    "title": "DARK MANSIONS: AI, Innovation, and Fermat\u2019s Last Theorem",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science",
+      "id": "",
+      "detail": "105"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/dark-mansions-ai-innovation-and-fermat%E2%80%99s-last-theorem",
+    "content": "",
+    "rawEventDetails": "Details Event Description Yiu, Kosoy, and Gopnik (2024) argue that \u201cCultural evolution depends on a fine balance between imitation and innovation.\u201d Writing in a world prior to reasoning models, they argued that large language models fall squarely on the imitation side. This paper\u2014focused principally on formal and scientific innovation\u2014proposes a finer-grained, three-tier taxonomy: Tier 1 is transmission, Tier 2 is something new (invention) within a fixed problem formulation, and Tier 3 is framework-generating innovation. Tier 3 requires both historical novelty\u2014a new construction or framework\u2014and functional novelty\u2014a downstream dividend, where the apparatus introduced to solve a problem helps to reorganize later work. We explore Andrew Wiles\u2019s proof of Fermat\u2019s Last Theorem as a case of Tier 3 innovation. Core elements of the proof architecture\u2014especially the R = T modularity-lifting strategy and Taylor\u2013Wiles patching\u2014were not present in the prior mathematical literature. Moreover, the proof apparatus has had substantial downstream impact on number theory and the Langlands program. We consider whether a current frontier AI system trained on pre\u20111987 mathematical sources could have produced a Wiles-type proof strategy, and offer reasons for doubt. Broadening the argument beyond the Wiles proof, we analyze three current AI paradigms for AI in mathematics and argue that they do not yet offer clear mechanisms for Tier 3 innovation. We then assess the empirical record of AI-assisted mathematical discovery, including the refutation of the unit-distance conjecture and the proof of the existence of non-sofic groups. We find a growing number of striking Tier 2 achievements, but no evidence yet of Tier 3 innovation. Tier 3 innovation, we propose, depends on three capacities\u2014imagination, judgment, and tenacity, understood functionally as capacities for novel decomposition, structural evaluation, and sustained exploration. Current architectures have not shown these capacities at the scale required for Tier 3 innovation. The paper concludes with reflections on the architectural changes that may be needed for the innovation that comes from what Andrew Wiles vividly describes as stumbling around in \u201cdark mansions.\u201d Bio: Joshua Cohen is a political philosopher. He has written on issues of democratic theory, freedom of expression, religious freedom, political equality, democracy and digital technology, good jobs, and global justice. His books include On Democracy (with Joel Rogers); Democracy and Associations ( with Joel Rogers); Philosophy, Politics, Democracy ; Rousseau: A Free Community of Equals ; and The Arc of the Moral Universe and Other Essays . He is co-editor of the Norton Introduction to Philosophy , now in its third edition. Cohen taught at MIT (1977-2005), Stanford (2005-2014), is currently on the faculty at Apple University, and is Distinguished Senior Fellow in Law, Philosophy, and Political Science at University of California, Berkeley. Cohen held the Romanell-Phi Beta Kappa Professorship in 2002-3; gave the Tanner Lectures at UC Berkeley in 2007; the Comte Lectures at LSE in 2012; and the Annual Lecture on Ethics and AI at Oxford in 2024. He is co-editor-in-chief of Boston Review . This talk will be recorded and livestreamed. The recording will be posted to the CITP website, the CITP YouTube channel and the University Media Central channel. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsors Princeton Language and Intelligence Computer Science",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DARK MANSIONS: AI, Innovation, and Fermat\u2019s Last Theorem",
+    "locationRaw": "Computer Science 105",
+    "mappingRules": [
+      "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -2373,7 +3070,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -2507,6 +3205,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4301:delta:0",
+    "guid": "ps_events:4301:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-30T17:00:00Z",
+    "endsAt": "2026-09-30T19:45:00Z",
+    "startTime": "2026-09-30T13:00:00",
+    "endTime": "2026-09-30T15:45:00",
+    "timezone": "America/New_York",
+    "title": "DaIS Launch & Faculty Research Collaboration Symposium",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Frist Health Center - A78B McLain Pavilion",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/dais-launch-faculty-research-collaboration-symposium",
+    "content": "Join us for the official launch of Princeton\u2019s Data and Intelligent Systems (DaIS), an initiative dedicated to supporting and expanding AI, Data Science, and Statistics research and education across the university. This event will introduce the DaIS vision and host a collaborative faculty symposium designed to foster interdisciplinary research partnerships.Event DetailsDate: September 30, 2026Location:",
+    "rawEventDetails": "Details Event Description Join us for the official launch of Princeton\u2019s Data and Intelligent Systems (DaIS), an initiative dedicated to supporting and expanding AI, Data Science, and Statistics research and education across the university. This event will introduce the DaIS vision and host a collaborative faculty symposium designed to foster interdisciplinary research partnerships. Event Details Date: September 30, 2026 Location: Frist Health Center - A78B McLain Pavilion The Launch: Introducing DaIS The event begins with a university-wide introduction to DaIS. This session will feature: Provost Jen Rexford to provide opening remarks. Tom Griffiths, Director of DaIS, will share insights on Princeton AI. Arthur Spirling, Director of DaIS, will share insights on Princeton Statistics and Data Science, and the education efforts of DaIS Faculty Research Collaboration Symposium Following the introductory remarks, the Faculty Research Collaboration Symposium will commence. This portion of the event is specifically for faculty members to present their research ideas and seek guidance and feedback from across disciplines on how AI and data science can support their work. The aim is to help create new productive collaborations among colleagues across the university. In addition, faculty previously in receipt of DaIS seed grants will present work that flowed from those efforts. Reception The conclusion of the event invites all to a light reception to mingle and connect with peers.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DaIS Launch & Faculty Research Collaboration Symposium",
+    "locationRaw": "Frist Health Center - A78B McLain Pavilion",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cbe:ps_events:5296:delta:0",
     "guid": "ps_events:5296:delta:0",
     "sources": [
@@ -2579,7 +3325,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -2611,6 +3358,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4541:delta:0",
+    "guid": "ps_events:4541:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T13:00:00Z",
+    "endsAt": "2026-10-02T14:00:00Z",
+    "startTime": "2026-10-02T09:00:00",
+    "endTime": "2026-10-02T10:00:00",
+    "timezone": "America/New_York",
+    "title": "AI Alignment + Safety Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar-1",
+    "content": "The seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
+    "rawEventDetails": "Details Event Description The seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI Alignment + Safety Seminar",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:546:delta:0",
     "guid": "ps_events:546:delta:0",
     "sources": [
@@ -2631,7 +3426,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -2794,7 +3590,7 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "Julis Romo Rabinowitz Building -",
+      "name": "Julis Romo Rabinowitz Building",
       "id": "",
       "detail": "A01"
     },
@@ -2810,6 +3606,54 @@
     "locationRaw": "Julis Romo Rabinowitz Building - A01",
     "mappingRules": [
       "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4531:delta:0",
+    "guid": "ps_events:4531:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-02T17:30:00Z",
+    "endsAt": "2026-10-02T19:00:00Z",
+    "startTime": "2026-10-02T13:30:00",
+    "endTime": "2026-10-02T15:00:00",
+    "timezone": "America/New_York",
+    "title": "DDSS Workshop: Claude Code I",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Julis Romo Rabinowitz Building",
+      "id": "",
+      "detail": "A01"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ddss-workshop-claude-code-i",
+    "content": "Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social ScienceA gentle introduction to Claude Code, Anthropic\u2019s coding agent. We\u2019ll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You\u2019ll leave ready to hit the ground running on your own projects.",
+    "rawEventDetails": "Details Event Description Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social Science A gentle introduction to Claude Code, Anthropic\u2019s coding agent. We\u2019ll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You\u2019ll leave ready to hit the ground running on your own projects.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DDSS Workshop: Claude Code I",
+    "locationRaw": "Julis Romo Rabinowitz Building - A01",
+    "mappingRules": [
+      "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -2836,7 +3680,8 @@
     "series": "",
     "tags": [],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -3050,7 +3895,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3076,6 +3922,54 @@
       "citp:title"
     ],
     "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4551:delta:0",
+    "guid": "ps_events:4551:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-06T16:10:00Z",
+    "endsAt": "2026-10-06T17:10:00Z",
+    "startTime": "2026-10-06T12:10:00",
+    "endTime": "2026-10-06T13:10:00",
+    "timezone": "America/New_York",
+    "title": "DDSS Connect & Interdisciplinary Exchange",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ddss-connect-interdisciplinary-exchange-0",
+    "content": "Join us for DDSS\u2019s Connect & Interdisciplinary Exchange series where our DDSS Graduate Fellows present on diverse methodologies and technical approaches. This is a great opportunity to network with others working in quantitive social science. Yining Sun (Politics)Titling Communal Land with Protected Areas: How Traditional Governance and State Enforcement Interact to Shape Deforestation in MexicoYaelle Goldschlag (Computer Science)Understanding Uber's Personalized Pricing AlgorithmBella Fascendini (Psychology)The Riddle Riddle: Testing Flexible",
+    "rawEventDetails": "Details Event Description Join us for DDSS\u2019s Connect & Interdisciplinary Exchange series where our DDSS Graduate Fellows present on diverse methodologies and technical approaches. This is a great opportunity to network with others working in quantitive social science. Yining Sun (Politics) Titling Communal Land with Protected Areas: How Traditional Governance and State Enforcement Interact to Shape Deforestation in Mexico Yaelle Goldschlag (Computer Science) Understanding Uber's Personalized Pricing Algorithm Bella Fascendini (Psychology) The Riddle Riddle: Testing Flexible Reasoning in Large Language Models and Humans",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DDSS Connect & Interdisciplinary Exchange",
+    "locationRaw": "Bendheim 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -3108,7 +4002,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3315,7 +4210,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3394,6 +4290,55 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:871:delta:0",
+    "guid": "ps_events:871:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T14:30:00Z",
+    "endsAt": "2026-10-09T16:00:00Z",
+    "startTime": "2026-10-09T10:30:00",
+    "endTime": "2026-10-09T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-1",
+    "content": "Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
+    "rawEventDetails": "Details Event Description Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3951:delta:0",
     "guid": "ps_events:3951:delta:0",
     "sources": [
@@ -3447,6 +4392,54 @@
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4561:delta:0",
+    "guid": "ps_events:4561:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T17:30:00Z",
+    "endsAt": "2026-10-09T19:00:00Z",
+    "startTime": "2026-10-09T13:30:00",
+    "endTime": "2026-10-09T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Claude Code II",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Julis Romo Rabinowitz Building",
+      "id": "",
+      "detail": "A01"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/claude-code-ii",
+    "content": "Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social ScienceAn in-depth exploration of Claude's automation tools. This workshop demonstrates how to use Claude Code to safely and effectively automate complex research workflows. You'll leave ready to build custom agents that let you spend less time on repetitive tasks and more time reseaching.",
+    "rawEventDetails": "Details Event Description Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social Science An in-depth exploration of Claude's automation tools. This workshop demonstrates how to use Claude Code to safely and effectively automate complex research workflows. You'll leave ready to build custom agents that let you spend less time on repetitive tasks and more time reseaching.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Claude Code II",
+    "locationRaw": "Julis Romo Rabinowitz Building - A01",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -3587,7 +4580,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -3644,7 +4638,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3804,7 +4799,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3857,7 +4853,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -3966,7 +4963,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4018,7 +5016,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -4090,6 +5089,58 @@
       "ai:title"
     ],
     "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4496:delta:0",
+    "guid": "ps_events:4496:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-19T04:00:00Z",
+    "endsAt": "2026-10-20T04:00:00Z",
+    "startTime": "2026-10-19T00:00:00",
+    "endTime": "2026-10-20T00:00:00",
+    "timezone": "America/New_York",
+    "title": "AI Alignment + Safety Inaugural Symposium & Launch Event",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "AI Alignment + Safety",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "AI Alignment + Safety"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-inaugural-symposium-launch-event",
+    "content": "A new initiative to make artificial intelligence safe and beneficial to humanity.Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate DirectorFeatured speakers include:Boaz Barak, Harvard University, Open AIPeter Henderson, Princeton University, Department of Computer ScienceAdam Tauman Kalai, Institute for Responsible SuperintelligenceLydia Liu, Princeton University, Department of",
+    "rawEventDetails": "Details Event Description A new initiative to make artificial intelligence safe and beneficial to humanity. Opening Remarks by Elad Hazan , Director and Mark Braverman, Associate Director Featured speakers include: Boaz Barak , Harvard University, Open AI Peter Henderson , Princeton University, Department of Computer Science Adam Tauman Kalai , Institute for Responsible Superintelligence Lydia Liu , Princeton University, Department of Computer Science Helen Qu, Flatiron Institute Aaron Roth , University of Pennsylvania Benjamin Van Roy , Stanford University, Google Deep Mind",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI Alignment + Safety Inaugural Symposium & Launch Event",
+    "locationRaw": "Friend Center 101",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -4313,6 +5364,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4566:delta:0",
+    "guid": "ps_events:4566:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-26T20:30:00Z",
+    "endsAt": "2026-10-26T22:00:00Z",
+    "startTime": "2026-10-26T16:30:00",
+    "endTime": "2026-10-26T18:00:00",
+    "timezone": "America/New_York",
+    "title": "AI-as-an-RA Workshop",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Julis Romo Rabinowitz Building",
+      "id": "",
+      "detail": "A01"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-ra-workshop",
+    "content": "Instructor: Christopher Kenny, Postdoctoral Research Associate, Data-Driven Social ScienceThis workshop introduces researchers to AI coding agents, such as Claude Code and Codex, as tools for research assistance in the social sciences. These agents work directly inside a project, editing files and running code, in ways that raise the same reliability questions as a human research assistant. A well-structured project can keep an agent's work inspectable through version control, written instructions, and automated checks that separate unreviewed from human-approved work. I will",
+    "rawEventDetails": "Details Event Description Instructor: Christopher Kenny, Postdoctoral Research Associate, Data-Driven Social Science This workshop introduces researchers to AI coding agents, such as Claude Code and Codex, as tools for research assistance in the social sciences. These agents work directly inside a project, editing files and running code, in ways that raise the same reliability questions as a human research assistant. A well-structured project can keep an agent's work inspectable through version control, written instructions, and automated checks that separate unreviewed from human-approved work. I will demonstrate structuring a project this way, with a short discussion of common failure points and the practices that catch them before they reach a final product. By the end, attendees will be able to set up a project for agent-assisted research and be comfortable applying best practices for instructing, validating, and reviewing an agent's work.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI-as-an-RA Workshop",
+    "locationRaw": "Julis Romo Rabinowitz Building - A01",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:4701:delta:0",
     "guid": "ps_events:4701:delta:0",
     "sources": [
@@ -4339,7 +5438,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4445,7 +5545,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -4487,7 +5588,7 @@
     "startTime": "2026-10-28T12:05:00",
     "endTime": "2026-10-28T13:05:00",
     "timezone": "America/New_York",
-    "title": "A Talk by Joseph Fedeyko, Johnson Matthey",
+    "title": "A PMI/PCCM SEMINAR SERIES Fall 2026 Talk by Joseph Fedeyko, Johnson Matthey",
     "speakers": [
       {
         "name": "Joseph Fedeyko",
@@ -4496,7 +5597,7 @@
     ],
     "speaker": "Joseph Fedeyko, Johnson Matthey",
     "affiliation": "Johnson Matthey",
-    "series": "",
+    "series": "PMI/PCCM SEMINAR SERIES Fall 2026",
     "tags": [
       "seminar"
     ],
@@ -4602,7 +5703,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4634,6 +5736,53 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:836:delta:0",
+    "guid": "ps_events:836:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-30T14:30:00Z",
+    "endsAt": "2026-10-30T16:00:00Z",
+    "startTime": "2026-10-30T10:30:00",
+    "endTime": "2026-10-30T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Do Neural Networks Have World Models?",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/do-neural-networks-have-world-models",
+    "content": "Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia UniversityTalk Abstract: It is often claimed that neural networks build internal \"world models.\" But the term is used in many conflicting ways, and the evidence offered for it is rarely examined. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue",
+    "rawEventDetails": "Details Event Description Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia University Talk Abstract: It is often claimed that neural networks build internal \"world models.\" But the term is used in many conflicting ways, and the evidence offered for it is rarely examined. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue that many disputes about world models are merely verbal. Second, drawing on joint work with collaborators at Columbia and NYU, I apply this framework to the most celebrated case: Othello-GPT, a transformer widely taken to use a model of the Othello board. I argue that the evidence is ambiguous once we adopt the right baselines (networks that plausibly use only heuristics) and the right metrics (which attend to patterns of error and the probabilities assigned to unchosen moves). I then introduce a fourth kind of evidence that favors the heuristic interpretation: transfer-learning speed on corrupted variants of Othello. I end by considering how transfer learning might also let us apply other notions from cognitive science to neural networks, in particular algorithms and probabilistic inference.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Do Neural Networks Have World Models?",
+    "locationRaw": "Bendheim 103",
+    "mappingRules": [
+      "nam:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:556:delta:0",
     "guid": "ps_events:556:delta:0",
     "sources": [
@@ -4654,7 +5803,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -4679,6 +5829,54 @@
       "robotics:summary-is-title"
     ],
     "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4571:delta:0",
+    "guid": "ps_events:4571:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-30T17:30:00Z",
+    "endsAt": "2026-10-30T19:00:00Z",
+    "startTime": "2026-10-30T13:30:00",
+    "endTime": "2026-10-30T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Blackfish: open source LLMs for fast, cheap, and reproducible AI",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Julis Romo Rabinowitz Building",
+      "id": "",
+      "detail": "A01"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/blackfish-open-source-llms-fast-cheap-and-reproducible-ai",
+    "content": "Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social ScienceResearchers often need to deploy open-source AI models for common tasks such as document digitization, chat completion, audio transcription. This process can be difficult when models are large enough to require cluster computing resources. This workshop introduces Blackfish, a free, point-and-click solution for researchers seeking access to advanced open-source AI models. We\u2019ll demonstrate how Blackfish leverages on-premise computing resources to run common machine learning workflows in a convenient",
+    "rawEventDetails": "Details Event Description Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social Science Researchers often need to deploy open-source AI models for common tasks such as document digitization, chat completion, audio transcription. This process can be difficult when models are large enough to require cluster computing resources. This workshop introduces Blackfish, a free, point-and-click solution for researchers seeking access to advanced open-source AI models. We\u2019ll demonstrate how Blackfish leverages on-premise computing resources to run common machine learning workflows in a convenient, secure, and reproducible manner.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Blackfish: open source LLMs for fast, cheap, and reproducible AI",
+    "locationRaw": "Julis Romo Rabinowitz Building - A01",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -4724,6 +5922,54 @@
     "locationRaw": "Chancellor Green",
     "mappingRules": [
       "ai:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4511:delta:0",
+    "guid": "ps_events:4511:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-02T17:00:00Z",
+    "endsAt": "2026-11-02T23:00:00Z",
+    "startTime": "2026-11-02T12:00:00",
+    "endTime": "2026-11-02T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Societal AI Launch Event",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Chancellor Green",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/princeton-societal-ai-launch-event",
+    "content": "",
+    "rawEventDetails": "Speakers Brian Merchant Affiliation Technology Journalist Audrey Watters Affiliation Writer on Education and Technology Alondra Nelson Affiliation Writer and Policy Adviser Details Event Description",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Societal AI Launch Event",
+    "locationRaw": "Chancellor Green",
+    "mappingRules": [
+      "dais:summary-is-title"
     ],
     "locationRule": "whole",
     "summaryRest": "",
@@ -4813,7 +6059,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -4844,6 +6091,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4576:delta:0",
+    "guid": "ps_events:4576:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-02T21:30:00Z",
+    "endsAt": "2026-11-02T23:00:00Z",
+    "startTime": "2026-11-02T16:30:00",
+    "endTime": "2026-11-02T18:00:00",
+    "timezone": "America/New_York",
+    "title": "TigerFlow: simplified workflow orchestration for HPC",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Julis Romo Rabinowitz Building",
+      "id": "",
+      "detail": "A01"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/tigerflow-simplified-workflow-orchestration-hpc",
+    "content": "Instructors: Sangyoon Park, Research Software Engineer, Data-Driven Social ScienceNina van Hoorn, Associate Research Software Engineer, Data-Driven Social ScienceDoing complex research well often requires chaining together multiple complicated steps, like OCR, audio transcription, or semantic embeddings, all while being constrained by cluster limitations. This workshop introduces TigerFlow, a Python framework for easy orchestration of scalable pipelines using cluster resources. We\u2019ll first learn how to construct and deploy workflows from user-defined Python tasks, and",
+    "rawEventDetails": "Details Event Description Instructors: Sangyoon Park, Research Software Engineer, Data-Driven Social Science Nina van Hoorn, Associate Research Software Engineer, Data-Driven Social Science Doing complex research well often requires chaining together multiple complicated steps, like OCR, audio transcription, or semantic embeddings, all while being constrained by cluster limitations. This workshop introduces TigerFlow, a Python framework for easy orchestration of scalable pipelines using cluster resources. We\u2019ll first learn how to construct and deploy workflows from user-defined Python tasks, and explore TigerFlow-ML, an extension library that provides drop-in solutions for common tasks like document OCR, text embedding, and more.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "TigerFlow: simplified workflow orchestration for HPC",
+    "locationRaw": "Julis Romo Rabinowitz Building - A01",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5151:delta:0",
     "guid": "ps_events:5151:delta:0",
     "sources": [
@@ -4870,7 +6165,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -4983,7 +6279,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -5035,7 +6332,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -5088,7 +6386,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -5145,7 +6444,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar"
@@ -5369,7 +6669,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -5426,7 +6727,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -5532,7 +6834,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -5640,7 +6943,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -5698,7 +7002,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -5730,6 +7035,55 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:876:delta:0",
+    "guid": "ps_events:876:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T15:30:00Z",
+    "endsAt": "2026-11-13T17:00:00Z",
+    "startTime": "2026-11-13T10:30:00",
+    "endTime": "2026-11-13T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-0",
+    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowAkshay Jagadish, NAM Postdoctoral Research Fellow",
+    "rawEventDetails": "Details Event Description Anya Tsvetkov, NAM Postdoctoral Research Fellow Akshay Jagadish, NAM Postdoctoral Research Fellow",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:561:delta:0",
     "guid": "ps_events:561:delta:0",
     "sources": [
@@ -5750,7 +7104,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -5893,6 +7248,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4556:delta:0",
+    "guid": "ps_events:4556:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-17T17:10:00Z",
+    "endsAt": "2026-11-17T18:10:00Z",
+    "startTime": "2026-11-17T12:10:00",
+    "endTime": "2026-11-17T13:10:00",
+    "timezone": "America/New_York",
+    "title": "DDSS Connect & Interdisciplinary Exchange",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ddss-connect-interdisciplinary-exchange-1",
+    "content": "Join us for DDSS\u2019s Connect & Interdisciplinary Exchange series where our DDSS Graduate Fellows present on diverse methodologies and technical approaches. This is a great opportunity to network with others working in quantitive social science. There will be 3 sessions throughout the fall semester. Luyin Zhang (Sociology)Leveraging DNA and Computational Methods to Uncover the Hidden Magnitude of Within-Race Skin Tone InequalityLeonardo Feitosa Dantas (Politics)Measuring Abstract Concepts Across Text and Images: A Hands-On GuideLucas Ophoff (Politics)",
+    "rawEventDetails": "Details Event Description Join us for DDSS\u2019s Connect & Interdisciplinary Exchange series where our DDSS Graduate Fellows present on diverse methodologies and technical approaches. This is a great opportunity to network with others working in quantitive social science. There will be 3 sessions throughout the fall semester. Luyin Zhang (Sociology) Leveraging DNA and Computational Methods to Uncover the Hidden Magnitude of Within-Race Skin Tone Inequality Leonardo Feitosa Dantas (Politics) Measuring Abstract Concepts Across Text and Images: A Hands-On Guide Lucas Ophoff (Politics) Chatting to Challenge or to Confirm? Revisiting Media Curation and Attitude Formation with AI Chatbots",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DDSS Connect & Interdisciplinary Exchange",
+    "locationRaw": "Bendheim 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5146:delta:0",
     "guid": "ps_events:5146:delta:0",
     "sources": [
@@ -5919,7 +7322,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -5976,7 +7380,8 @@
       "colloquium"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "ORFE Department Colloquia"
@@ -6137,7 +7542,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -6194,7 +7600,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Optimization Seminar"
@@ -6416,7 +7823,8 @@
     "series": "",
     "tags": [],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -6577,7 +7985,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Stochastic Analysis and Financial Mathematics Seminar"
@@ -6629,7 +8038,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -6661,6 +8071,55 @@
     "mappingConflict": false
   },
   {
+    "id": "nam:ps_events:881:delta:0",
+    "guid": "ps_events:881:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T15:30:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T10:30:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks",
+    "content": "Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawEventDetails": "Details Event Description Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:571:delta:0",
     "guid": "ps_events:571:delta:0",
     "sources": [
@@ -6681,7 +8140,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -6905,7 +8365,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "S. S. Wilks Memorial Seminar in Statistics"
@@ -7003,7 +8464,8 @@
       "seminar"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Seminar"
@@ -7057,7 +8519,8 @@
     "series": "",
     "tags": [],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],
@@ -7107,7 +8570,8 @@
       "data-science"
     ],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [
       "Artificial Intelligence",
@@ -7209,7 +8673,8 @@
     "series": "",
     "tags": [],
     "purposes": [
-      "engineering-newsletter"
+      "engineering-newsletter",
+      "dais-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [],

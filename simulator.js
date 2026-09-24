@@ -97,16 +97,63 @@
   /* ---------------------------------------------------------------- the edition --- */
 
   /**
-   * The publication date of the next edition that has not gone out yet.
+   * The schedule a purpose that declares none falls back to.
+   *
+   * The engineering one, because it was the only publication when this page was written
+   * and its behaviour is pinned by a differential test against a real edition. A purpose
+   * declaring its own schedule in config overrides every field of this.
+   */
+  var DEFAULT_SCHEDULE = {
+    publication: { weekday: "MON", time: "12:00" },
+    deadline: { anchor: "week_start", offset_days: -6, time: "12:00" },
+    coverage: {
+      start: { anchor: "publication" },
+      end: { anchor: "week_start", offset_days: 6 }
+    }
+  };
+
+  var WEEKDAYS = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+
+  /** Days from the Monday of a week to the named weekday. */
+  function weekdayOffset(name) {
+    var at = WEEKDAYS.indexOf(String(name || "MON").toUpperCase());
+    return at === -1 ? 0 : at;
+  }
+
+  /**
+   * Resolve one anchored bound to a date.
+   *
+   * Three anchors, and the third is why this exists: `next_week_start` is the Monday
+   * *after* the publication's own week, which is what a Thursday edition covering "next
+   * week's events" needs. `publication` follows a shifted publication date; `week_start`
+   * stays pinned to its week.
+   */
+  function anchorDate(node, edition) {
+    var anchor = (node && node.anchor) || "publication";
+    var base =
+      anchor === "week_start" ? edition.weekStart
+      : anchor === "next_week_start" ? addDays(edition.weekStart, 7)
+      : edition.publicationDate;
+    return addDays(base, (node && node.offset_days) || 0);
+  }
+
+  /**
+   * The publication date of the next edition of this publication that has not gone out.
    *
    * Not simply this week's Monday, which is what the reset used to offer: on a Saturday
    * that is an edition published five days ago covering a week that ends tomorrow. The
    * useful default is the edition somebody is composing, which is the next one to publish.
+   *
+   * The weekday comes from the schedule, so selecting the DAIS newsletter resets to the
+   * next *Thursday* rather than the next Monday.
    */
-  function nextEditionDate(nowStamp, publicationTime) {
-    var monday = weekStartFor(nowStamp.slice(0, 10));
-    var publishesAt = monday + "T" + normalizeTime(publicationTime, "12:00:00");
-    return nowStamp >= publishesAt ? addDays(monday, 7) : monday;
+  function nextEditionDate(nowStamp, schedule) {
+    var plan = schedule || DEFAULT_SCHEDULE;
+    var offset = weekdayOffset(plan.publication && plan.publication.weekday);
+    var publicationDay = addDays(weekStartFor(nowStamp.slice(0, 10)), offset);
+    var publishesAt =
+      publicationDay + "T" + normalizeTime(plan.publication && plan.publication.time, "12:00:00");
+    return nowStamp >= publishesAt ? addDays(publicationDay, 7) : publicationDay;
   }
 
   /** The deadline the standard schedule implies: the Tuesday before the week. */
@@ -126,27 +173,48 @@
     if (!DATE_RE.test(input.publicationDate || "")) {
       throw new Error("Pick a publication date.");
     }
+    var plan = input.schedule || DEFAULT_SCHEDULE;
     var publicationDate = input.publicationDate;
     var weekStart = weekStartFor(publicationDate);
-    var deadlineDate = input.deadlineDate || defaultDeadlineDate(publicationDate);
-    if (!DATE_RE.test(deadlineDate)) throw new Error("The deadline date is not a date.");
+    var edition = { weekStart: weekStart, publicationDate: publicationDate };
+
+    /* A publication has no deadline unless its schedule declares one. DaIS states none --
+       its edition says only to send an email -- and inventing one would put a date in
+       front of an editor that nobody agreed to. */
+    var deadlineAt = "";
+    if (plan.deadline) {
+      var deadlineDate = input.deadlineDate || anchorDate(plan.deadline, edition);
+      if (!DATE_RE.test(deadlineDate)) throw new Error("The deadline date is not a date.");
+      deadlineAt =
+        deadlineDate + "T" + normalizeTime(input.deadlineTime || plan.deadline.time, "12:00:00");
+    }
+
+    var start = anchorDate(plan.coverage.start, edition);
+    var end = anchorDate(plan.coverage.end, edition);
+    if (end < start) throw new Error("The coverage window ends before it starts.");
 
     return {
       id: weekStart,
       weekStart: weekStart,
       publicationDate: publicationDate,
-      publicationAt: publicationDate + "T" + normalizeTime(input.publicationTime, "12:00:00"),
-      deadlineAt: deadlineDate + "T" + normalizeTime(input.deadlineTime, "12:00:00"),
-      coverageStart: publicationDate + "T00:00:00",
-      coverageEnd: addDays(weekStart, 6) + "T23:59:59",
-      shifted: publicationDate !== weekStart
+      publicationAt:
+        publicationDate + "T" +
+        normalizeTime(input.publicationTime || plan.publication.time, "12:00:00"),
+      deadlineAt: deadlineAt,
+      coverageStart: start + "T00:00:00",
+      coverageEnd: end + "T23:59:59",
+      /* Shifted from the weekday its own schedule names, not from Monday -- a Thursday
+         publication is not a shifted Monday one. */
+      shifted: publicationDate !== addDays(weekStart, weekdayOffset(plan.publication.weekday))
     };
   }
 
   function phaseAt(nowStamp, edition) {
     if (!STAMP_RE.test(nowStamp || "")) return null;
     if (nowStamp >= edition.publicationAt) return "published";
-    if (nowStamp >= edition.deadlineAt) return "closed";
+    // No deadline means no closed phase: an edition with no stated cut-off is open until
+    // it publishes, which is what DaIS's "send us an email" amounts to.
+    if (edition.deadlineAt && nowStamp >= edition.deadlineAt) return "closed";
     return "open";
   }
 
@@ -170,6 +238,22 @@
     return scalar ? [scalar] : [];
   }
 
+  /** The opening paragraph of a body of text, capped so a listing stays scannable. */
+  function firstParagraph(text, limit) {
+    var first = String(text).split(/\n{2,}/)[0].trim();
+    /* Content opening with a labelled field is the event page's structured metadata, not
+       prose -- `nam`'s reads "Speaker: Taylor Webb, Department of Psychology…Talk
+       Abstract:". Printing it as a description puts a field name in the middle of a
+       sentence, so it is omitted instead. An editor writing their own blurb is the
+       correct outcome here; inventing one from a label is not. */
+    if (/^[A-Z][A-Za-z ]{0,24}:/.test(first)) return "";
+    var cap = limit || 420;
+    if (first.length <= cap) return first;
+    var cut = first.slice(0, cap);
+    var lastStop = cut.lastIndexOf(". ");
+    return lastStop > cap / 2 ? cut.slice(0, lastStop + 1) : cut.trimEnd() + "…";
+  }
+
   function speakerNames(event) {
     var list = Array.isArray(event.speakers) ? event.speakers : [];
     return list.map(function (s) {
@@ -191,23 +275,47 @@
       : name + ", " + detail;
   }
 
+  /** `Friend 006` -- venue and room with nothing inserted between them. */
+  function plainLocation(event) {
+    var loc = event.location;
+    if (!loc || typeof loc !== "object") return "";
+    var name = (loc.name || "").trim();
+    var detail = (loc.detail || "").trim();
+    if (!name) return detail;
+    if (!detail) return name;
+    return /^[A-Za-z]?\d{1,4}[A-Za-z]?$/.test(detail)
+      ? name + " " + detail
+      : name + ", " + detail;
+  }
+
   function decorate(event, feeds) {
     var sources = Array.isArray(event.sources) ? event.sources : [];
     return {
       raw: event,
       guid: event.guid || "",
       startTime: event.startTime || "",
+      // Needed for the inline template's "4:30 — 6 p.m." range; the day-grouped one
+      // prints only a start, which is why its absence went unnoticed.
+      endTime: event.endTime || "",
       title: (event.title || "").trim(),
       /* A comma-joined multi-value series arrives as "A,B" because that is how the feed
          publishes it. Spacing it is presentation for a human composing a listing, not a
          change to what the feed says. */
       series: (event.series || "").trim().replace(/,(?=\S)/g, ", "),
+      /* The DAIS edition prints a blurb for some events; the engineering one never does.
+         Trimmed to a paragraph, because `content` can run to a full abstract and an
+         editor wants the opening of it, not all of it. */
+      description: firstParagraph(event.content || ""),
       speakers: speakerText(event),
       /* Bare names, kept alongside the display strings. The two feeds listing the same
          talk agreed on "Rafael Gomez-Bombarelli" and disagreed on whether to include his
          institution, so a duplicate check on the display string misses it. */
       names: speakerNames(event),
       location: locationText(event),
+      /* The same venue without the word "Room". The DAIS edition writes "in Friend 006"
+         and "in Computer Science Building 105"; the engineering one writes
+         "Sherrerd Hall, Room 306". Two publications, two conventions, one field each. */
+      place: plainLocation(event),
       urlRef: event.urlRef || "",
       sources: sources,
       /* Each sponsor keeps its own site, taken from the feed rather than from the
@@ -369,6 +477,79 @@
     return list.length > 1 ? word + "s:" : word + ":";
   }
 
+  //: Month names as the DAIS edition abbreviates them -- "Sept. 28", not "September 28".
+  //: September is "Sept." rather than "Sep.", which is the Princeton house style and what
+  //: their own edition writes.
+  var SHORT_MONTHS = ["Jan.", "Feb.", "March", "April", "May", "June",
+                      "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+
+  /** `Monday, Sept. 28` -- the inline date form. */
+  function shortDate(dateText) {
+    var parts = dateText.split("-");
+    return weekdayName(dateText) + ", " + SHORT_MONTHS[+parts[1] - 1] + " " + +parts[2];
+  }
+
+  /** `4:30` / `6` -- a clock with no meridiem and no bare `:00`. */
+  function bareClock(stampText) {
+    var hh = +stampText.slice(11, 13);
+    var mm = stampText.slice(14, 16);
+    var hour = hh % 12 === 0 ? 12 : hh % 12;
+    return mm === "00" ? String(hour) : hour + ":" + mm;
+  }
+
+  function meridiem(stampText) {
+    return +stampText.slice(11, 13) < 12 ? "a.m." : "p.m.";
+  }
+
+  /**
+   * True when a span runs midnight to a later midnight.
+   *
+   * The model carries no all-day flag -- an ICS `DTSTART;VALUE=DATE` arrives as
+   * `T00:00:00` like any other time -- so it is read off the stamps rather than trusted
+   * from a field that does not exist. `robotics`' Northeast Robotics Colloquium is the
+   * live case: 3 October 00:00 to 4 October 00:00.
+   */
+  function spansWholeDays(startTime, endTime) {
+    return STAMP_RE.test(endTime || "") &&
+      startTime.slice(11) === "00:00:00" &&
+      endTime.slice(11) === "00:00:00" &&
+      endTime.slice(0, 10) > startTime.slice(0, 10);
+  }
+
+  /**
+   * `4:30 — 6 p.m.` -- a time range the way the DAIS edition writes one.
+   *
+   * The meridiem is stated once when both ends share it and twice when they do not, which
+   * is what makes `11 a.m. — 12 p.m.` read correctly while `4:30 — 6 p.m.` stays short.
+   * `:00` is dropped throughout: their edition writes `6 p.m.`, never `6:00 p.m.`
+   *
+   * An all-day event is written `All day` rather than run through that arithmetic, which
+   * would otherwise produce `12 — 12 a.m.` -- a zero-length midnight event, and a claim
+   * the feed does not make.
+   */
+  function timeRange(startTime, endTime) {
+    if (spansWholeDays(startTime, endTime)) return "All day";
+    var open = bareClock(startTime);
+    if (!STAMP_RE.test(endTime || "")) return open + " " + meridiem(startTime);
+    var sameHalf = meridiem(startTime) === meridiem(endTime);
+    return sameHalf
+      ? open + " — " + bareClock(endTime) + " " + meridiem(endTime)
+      : open + " " + meridiem(startTime) + " — " + bareClock(endTime) + " " + meridiem(endTime);
+  }
+
+  /**
+   * `4:30 — 6 p.m. Monday, Sept. 28, in Friend 006` -- the one line that replaces four.
+   *
+   * `location TBA` where the feed carries none. The engineering template omits the line
+   * entirely in that case; DAIS writes the words, and the difference is per template
+   * rather than an inconsistency.
+   */
+  function whenAndWhere(item) {
+    return timeRange(item.startTime, item.endTime) + " " +
+      shortDate(item.startTime.slice(0, 10)) + ", " +
+      (item.place ? "in " + item.place : "location TBA");
+  }
+
   /**
    * The listing as an element tree, used for the preview and as the copied markup.
    *
@@ -376,7 +557,119 @@
    * stub and asserted -- the export is the part an editor actually pastes into Mailchimp,
    * so it is the last thing that should go unchecked.
    */
-  function buildListing(edition, items, doc) {
+  function buildListing(edition, items, doc, template) {
+    return template === "inline-date"
+      ? buildInlineListing(edition, items, doc)
+      : buildDayGroupedListing(edition, items, doc);
+  }
+
+  /**
+   * The DAIS shape: chronological, no day headings, one when-and-where line.
+   *
+   * Transcribed from the edition of 24 September 2026. Its hand-authored original is
+   * inconsistent about a comma after the meridiem, about including the year, and about en
+   * versus em dash -- and one of its "Learn More" links points at the wrong event. This
+   * picks one form and holds it, which is the whole point of generating it.
+   */
+  function buildInlineListing(edition, items, doc) {
+    var root = doc.createElement("div");
+    var heading = doc.createElement("h2");
+    heading.className = "edition";
+    heading.textContent = "Next Week’s Events";
+    root.appendChild(heading);
+
+    if (!items.length) {
+      var empty = doc.createElement("p");
+      empty.className = "empty";
+      empty.textContent = "No events fall in this edition.";
+      root.appendChild(empty);
+      return root;
+    }
+
+    items.forEach(function (item) {
+      var block = doc.createElement("div");
+      block.className = "ev";
+
+      var title = doc.createElement("p");
+      title.className = "ev-title";
+      if (item.urlRef) {
+        var link = doc.createElement("a");
+        link.className = "ev-link";
+        link.setAttribute("href", item.urlRef);
+        link.textContent = item.title || "(no title)";
+        title.appendChild(link);
+      } else {
+        title.textContent = item.title || "(no title)";
+      }
+      if (item.placeholder) {
+        var flag = doc.createElement("span");
+        flag.className = "placeholder-flag";
+        flag.textContent = "  [no title announced yet — replace before sending]";
+        title.appendChild(flag);
+      }
+      block.appendChild(title);
+
+      /* One verb, generated. Their edition also says "Co-sponsored by" and "Presented
+         by", but neither is in any feed and claiming one would be inventing a fact. */
+      if (item.sponsors.length) {
+        var hosted = doc.createElement("p");
+        hosted.className = "ev-hosted";
+        hosted.appendChild(doc.createTextNode("Hosted by "));
+        item.sponsors.forEach(function (sponsor, index) {
+          if (index) hosted.appendChild(doc.createTextNode(", "));
+          if (sponsor.home) {
+            var anchor = doc.createElement("a");
+            anchor.className = "sponsor-link";
+            anchor.setAttribute("href", sponsor.home);
+            anchor.textContent = sponsor.label;
+            hosted.appendChild(anchor);
+          } else {
+            var plain = doc.createElement("span");
+            plain.className = "sep";
+            plain.textContent = sponsor.label;
+            hosted.appendChild(plain);
+          }
+        });
+        block.appendChild(hosted);
+      }
+
+      // Unlabelled, as their edition writes it: "Taylor Webb, Department of Psychology".
+      if (item.speakers.length) {
+        var who = doc.createElement("p");
+        who.className = "ev-speaker";
+        who.textContent = item.speakers.join("; ");
+        block.appendChild(who);
+      }
+
+      if (item.description) {
+        var blurb = doc.createElement("p");
+        blurb.className = "ev-blurb";
+        blurb.textContent = item.description;
+        block.appendChild(blurb);
+      }
+
+      var when = doc.createElement("p");
+      when.className = "ev-when";
+      when.textContent = whenAndWhere(item);
+      block.appendChild(when);
+
+      if (item.urlRef) {
+        var more = doc.createElement("p");
+        more.className = "ev-more";
+        var moreLink = doc.createElement("a");
+        moreLink.className = "ev-link";
+        moreLink.setAttribute("href", item.urlRef);
+        moreLink.textContent = "Learn More";
+        more.appendChild(moreLink);
+        block.appendChild(more);
+      }
+
+      root.appendChild(block);
+    });
+    return root;
+  }
+
+  function buildDayGroupedListing(edition, items, doc) {
     var root = doc.createElement("div");
     var heading = doc.createElement("h2");
     heading.className = "edition";
@@ -735,6 +1028,8 @@
 
     /** slug -> the feed's manifest record. Filled from status.json, never written here. */
     var feeds = {};
+    /** The declared publications, from status.json. The page holds no schedule of its own. */
+    var publications = {};
     /** slug -> array of events, cached so toggling a checkbox off and on is free. */
     var loaded = {};
     /** Event ids the editor has unticked. Ids, not indices: the set survives a change of
@@ -756,6 +1051,18 @@
       statusEl.textContent = text || "";
       statusEl.className = "status" + (kind ? " " + kind : "");
       statusEl.hidden = !text;
+    }
+
+    /** The selected publication's schedule, or the default when none is chosen. */
+    function selectedSchedule() {
+      var chosen = publications[purposeEl.value];
+      return (chosen && chosen.schedule) || null;
+    }
+
+    /** Its layout, likewise. */
+    function selectedTemplate() {
+      var chosen = publications[purposeEl.value];
+      return (chosen && chosen.template) || "day-grouped";
     }
 
     function selectedSlugs() {
@@ -842,6 +1149,7 @@
         return (a.label || a.path) < (b.label || b.path) ? -1 : 1;
       });
 
+      publications = manifest.purposes || {};
       var purposes = {};
       records.forEach(function (record) {
         var slug = record.path.split("/")[1];
@@ -880,7 +1188,9 @@
       Object.keys(purposes).sort().forEach(function (name) {
         var option = document.createElement("option");
         option.value = name;
-        option.textContent = name;
+        // The publication's own label where the manifest declares one; a purpose a feed
+        // names but nothing declares still appears, under its bare name.
+        option.textContent = (publications[name] && publications[name].label) || name;
         purposeEl.appendChild(option);
       });
 
@@ -925,8 +1235,10 @@
         return;
       }
       $("pubday").textContent = weekdayName(edition.publicationDate) +
-        (edition.shifted ? " — shifted from this week's Monday" : "");
-      $("deadlineday").textContent = weekdayName(edition.deadlineAt.slice(0, 10));
+        (edition.shifted ? " — shifted from its usual weekday" : "");
+      $("deadlineday").innerHTML = edition.deadlineAt
+        ? weekdayName(edition.deadlineAt.slice(0, 10))
+        : "&nbsp;";
 
       var fact = function (label, value, extra) {
         var wrap = document.createElement("div");
@@ -951,6 +1263,13 @@
         prettyDate(edition.coverageStart.slice(0, 10)) + " – " +
           prettyDate(edition.coverageEnd.slice(0, 10))
       );
+      /* No deadline, no row. DaIS's edition states none -- it says only to send an
+         email -- and a "Submissions close" line with nothing after it reads like a value
+         that failed to load rather than a publication that does not have one. */
+      if (!edition.deadlineAt) {
+        fact("Submissions", "No deadline stated for this publication");
+        return;
+      }
       var close = fact(
         "Submissions close",
         "",
@@ -1060,7 +1379,8 @@
       details.replaceChildren();
       entry(details, "Edition", edition.id + " (week of " + prettyDate(edition.weekStart) + ")");
       entry(details, "Publishes", prettyStamp(edition.publicationAt));
-      entry(details, "Deadline", prettyStamp(edition.deadlineAt));
+      entry(details, "Deadline",
+            edition.deadlineAt ? prettyStamp(edition.deadlineAt) : "none stated");
       entry(details, "Coverage window", edition.coverageStart + " to " + edition.coverageEnd);
     }
 
@@ -1257,7 +1577,7 @@
 
     function renderExport(edition, result) {
       var kept = keptOf(result);
-      var listing = buildListing(edition, kept, document);
+      var listing = buildListing(edition, kept, document, selectedTemplate());
       exportEl.replaceChildren.apply(exportEl, Array.prototype.slice.call(listing.childNodes));
       copyStateEl.textContent = "";
       $("export-count").textContent = kept.length === result.included.length
@@ -1289,10 +1609,14 @@
       var params = new URLSearchParams();
       params.set("pub", pubDate.value);
       if (pubTime.value !== "12:00") params.set("pubtime", pubTime.value);
-      if (deadlineDate.value !== defaultDeadlineDate(pubDate.value)) {
-        params.set("deadline", deadlineDate.value);
+      /* A publication with no deadline has no deadline override to carry, and writing an
+         empty one into the link would come back as the other publication's default. */
+      if (deadlineDeclared()) {
+        if (deadlineDate.value !== defaultDeadlineDate(pubDate.value)) {
+          params.set("deadline", deadlineDate.value);
+        }
+        if (deadlineTime.value !== "12:00") params.set("deadlinetime", deadlineTime.value);
       }
-      if (deadlineTime.value !== "12:00") params.set("deadlinetime", deadlineTime.value);
       if (nowEl.value) params.set("now", nowEl.value);
       if (purposeEl.value) params.set("purpose", purposeEl.value);
       params.set("sources", selectedSlugs().join(","));
@@ -1307,6 +1631,7 @@
       var edition;
       try {
         edition = resolveEdition({
+          schedule: selectedSchedule(),
           publicationDate: pubDate.value,
           publicationTime: pubTime.value,
           deadlineDate: deadlineDate.value,
@@ -1375,10 +1700,32 @@
 
     /* --------------------------------------------------------------- wiring ----- */
 
+    /** Does the selected publication state a submission deadline at all? */
+    function deadlineDeclared() {
+      var plan = selectedSchedule();
+      return Boolean(!plan || plan.deadline);
+    }
+
+    /* Two empty date and time fields under "Advanced" invite somebody to fill them in,
+       and nothing would happen if they did -- a control with no effect is worse than no
+       control. They are hidden rather than disabled so the panel does not show a row of
+       greyed-out fields for every publication that works this way. */
+    function syncDeadlineFields() {
+      var shown = deadlineDeclared();
+      $("deadline-date-field").hidden = !shown;
+      $("deadline-time-field").hidden = !shown;
+    }
+
     function deriveDeadline() {
-      if (DATE_RE.test(pubDate.value)) {
-        deadlineDate.value = defaultDeadlineDate(pubDate.value);
+      syncDeadlineFields();
+      if (!DATE_RE.test(pubDate.value)) return;
+      if (!deadlineDeclared()) {
+        // This publication states no deadline, so there is nothing to derive and the
+        // Advanced field is left empty rather than filled with an invented date.
+        deadlineDate.value = "";
+        return;
       }
+      deadlineDate.value = defaultDeadlineDate(pubDate.value);
     }
 
     function resetToNextEdition() {
@@ -1386,7 +1733,7 @@
       var pad = function (n) { return String(n).padStart(2, "0"); };
       var stamp = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" +
         pad(now.getDate()) + "T" + pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":00";
-      pubDate.value = nextEditionDate(stamp);
+      pubDate.value = nextEditionDate(stamp, selectedSchedule());
       pubTime.value = "12:00";
       deadlineTime.value = "12:00";
       deriveDeadline();
@@ -1397,10 +1744,14 @@
       if (!params.has("pub")) return false;
       pubDate.value = params.get("pub");
       if (params.has("pubtime")) pubTime.value = params.get("pubtime");
-      deadlineDate.value = params.get("deadline") || defaultDeadlineDate(pubDate.value);
       if (params.has("deadlinetime")) deadlineTime.value = params.get("deadlinetime");
       if (params.has("now")) nowEl.value = params.get("now");
       if (params.has("purpose")) purposeEl.value = params.get("purpose");
+      /* After the purpose, because whether there is a deadline at all depends on it. */
+      deadlineDate.value = deadlineDeclared()
+        ? params.get("deadline") || defaultDeadlineDate(pubDate.value)
+        : "";
+      syncDeadlineFields();
       if (params.has("drop")) {
         params.get("drop").split(",").filter(Boolean).forEach(function (id) {
           dropped[id] = true;
@@ -1416,8 +1767,15 @@
     }
 
     pubDate.addEventListener("change", function () { deriveDeadline(); refresh(); });
-    [pubTime, deadlineDate, deadlineTime, nowEl, purposeEl].forEach(function (el) {
+    [pubTime, deadlineDate, deadlineTime, nowEl].forEach(function (el) {
       el.addEventListener("change", refresh);
+    });
+
+    /* Choosing a publication changes its schedule, so the date it resets to changes with
+       it. Re-deriving beats leaving a Monday date selected under a Thursday schedule. */
+    purposeEl.addEventListener("change", function () {
+      resetToNextEdition();
+      refresh();
     });
 
     $("reset").addEventListener("click", function () { resetToNextEdition(); refresh(); });
@@ -1519,13 +1877,18 @@
     module.exports = {
       addDays: addDays, weekStartFor: weekStartFor, weekdayName: weekdayName,
       defaultDeadlineDate: defaultDeadlineDate, resolveEdition: resolveEdition,
-      nextEditionDate: nextEditionDate,
+      nextEditionDate: nextEditionDate, anchorDate: anchorDate,
+      weekdayOffset: weekdayOffset, DEFAULT_SCHEDULE: DEFAULT_SCHEDULE,
       phaseAt: phaseAt, inWindow: inWindow, prettyClock: prettyClock,
       prettyDate: prettyDate, locationText: locationText, speakerText: speakerText,
       speakerNames: speakerNames,
       collisionKey: collisionKey, groupByDay: groupByDay, plural: plural,
       readiness: readiness,
       buildListing: buildListing, decorate: decorate, exportDocument: exportDocument,
+      buildInlineListing: buildInlineListing, shortDate: shortDate,
+      timeRange: timeRange, whenAndWhere: whenAndWhere, bareClock: bareClock,
+      plainLocation: plainLocation,
+      firstParagraph: firstParagraph,
       inlineStyles: inlineStyles, exportStylesheet: exportStylesheet, readable: readable,
       zonedToUTC: zonedToUTC, utcStamp: utcStamp, deadlineEvent: deadlineEvent,
       deadlineIcs: deadlineIcs, googleCalendarUrl: googleCalendarUrl,

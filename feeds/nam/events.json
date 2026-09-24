@@ -1,0 +1,292 @@
+[
+  {
+    "id": "nam:ps_events:856:delta:0",
+    "guid": "ps_events:856:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-25T14:30:00Z",
+    "endsAt": "2026-09-25T16:00:00Z",
+    "startTime": "2026-09-25T10:30:00",
+    "endTime": "2026-09-25T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-2",
+    "content": "The Consequences of Using Human Behavior to Train AILauren Treiman, NAM Postdoctoral Research Fellow Artificial intelligence (AI) is now an integral part of everyday decision making. These systems not only help us make choices but also learn from our behavior. Therefore, it is important to understand how our interactions with AI influence these systems. Current approaches often assume that the behavior used to train AI accurately reflects how people would naturally behave. However, people are often informed that their choices will be used for AI training,",
+    "rawEventDetails": "Details Event Description The Consequences of Using Human Behavior to Train AI Lauren Treiman, NAM Postdoctoral Research Fellow Artificial intelligence (AI) is now an integral part of everyday decision making. These systems not only help us make choices but also learn from our behavior. Therefore, it is important to understand how our interactions with AI influence these systems. Current approaches often assume that the behavior used to train AI accurately reflects how people would naturally behave. However, people are often informed that their choices will be used for AI training, and as a result, may change how they would normally act. My graduate school research combines psychological and computer science perspectives to investigate the consequences of this awareness. We show that people alter their behavior when they know it will be used to train AI. These changes are shaped by contextual factors, including the extent to which people deliberate, how they engage with disclosure information, and their attitudes toward the individuals who will interact with the trained system. Together, this research underscores the importance of considering the consequences of using human-generated training data, which may perpetuate biases in AI systems. A fundamental tradeoff between generalization and parallel processing Marco Nurisso, NAM Postdoctoral Research Fellow The performance of large vision-language models degrades sharply as the number of items to be handled at once grows: counting, comparing, keeping track of which property belongs to which object. The pattern resembles limits on processing multiple items at once documented in humans since George Miller, who found estimates of how many items one can hold at once and still tell apart clustering, across unrelated modalities, at two to three bits' worth. I will argue that these limits have a common and largely architecture-independent origin. To treat novel inputs in terms of familiar ones, a system needs representations that overlap, and overlapping representations interfere when several of them must be kept apart at once: the capacity to process items in parallel is spent on generalization. Competitive choice and noisy comparison are enough to turn this into a provable bound, independently of how the representation is built. The result is a region of the generalization\u2013capacity plane that no system can enter and whose generalization-preserving edge improves so slowly as noise falls that suppressing noise buys a system almost nothing, offering a principled explanation for why small, Miller-like limits can recur across different systems.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "nam:ps_events:831:delta:0",
+    "guid": "ps_events:831:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-28T20:30:00Z",
+    "endsAt": "2026-09-28T22:00:00Z",
+    "startTime": "2026-09-28T16:30:00",
+    "endTime": "2026-09-28T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend",
+      "id": "",
+      "detail": "006"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/emergent-symbol-processing-mechanistic-theory-human-cognition",
+    "content": "Speaker: Taylor Webb, Department of Psychology, Princeton UniversityTalk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open",
+    "rawEventDetails": "Details Event Description Speaker: Taylor Webb, Department of Psychology, Princeton University Talk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open the question of how these systems achieve the capabilities that were thought to require innate symbol processing, and what this says about the mechanistic basis of those capabilities in human cognition. In this talk, I will argue that symbol-like behavioral capabilities in modern neural networks are supported by an emergent form of symbolic computation, and illustrate how this is implemented by their internal mechanisms. I will also discuss the factors that lead to the emergence of these mechanisms, and will consider a case that illustrates how symbolic mechanisms are not necessarily human-like. Overall, these results suggest that connectionist principles may be sufficient to account for the symbol-like aspects of human cognition, while also illustrating how symbolic cognitive models can be translated into mechanistic theories.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
+    "locationRaw": "Friend 006",
+    "mappingRules": [
+      "nam:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "nam:ps_events:871:delta:0",
+    "guid": "ps_events:871:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T14:30:00Z",
+    "endsAt": "2026-10-09T16:00:00Z",
+    "startTime": "2026-10-09T10:30:00",
+    "endTime": "2026-10-09T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-1",
+    "content": "Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
+    "rawEventDetails": "Details Event Description Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "nam:ps_events:836:delta:0",
+    "guid": "ps_events:836:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-30T14:30:00Z",
+    "endsAt": "2026-10-30T16:00:00Z",
+    "startTime": "2026-10-30T10:30:00",
+    "endTime": "2026-10-30T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Do Neural Networks Have World Models?",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/do-neural-networks-have-world-models",
+    "content": "Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia UniversityTalk Abstract: It is often claimed that neural networks build internal \"world models.\" But the term is used in many conflicting ways, and the evidence offered for it is rarely examined. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue",
+    "rawEventDetails": "Details Event Description Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia University Talk Abstract: It is often claimed that neural networks build internal \"world models.\" But the term is used in many conflicting ways, and the evidence offered for it is rarely examined. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue that many disputes about world models are merely verbal. Second, drawing on joint work with collaborators at Columbia and NYU, I apply this framework to the most celebrated case: Othello-GPT, a transformer widely taken to use a model of the Othello board. I argue that the evidence is ambiguous once we adopt the right baselines (networks that plausibly use only heuristics) and the right metrics (which attend to patterns of error and the probabilities assigned to unchosen moves). I then introduce a fourth kind of evidence that favors the heuristic interpretation: transfer-learning speed on corrupted variants of Othello. I end by considering how transfer learning might also let us apply other notions from cognitive science to neural networks, in particular algorithms and probabilistic inference.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Do Neural Networks Have World Models?",
+    "locationRaw": "Bendheim 103",
+    "mappingRules": [
+      "nam:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "nam:ps_events:876:delta:0",
+    "guid": "ps_events:876:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T15:30:00Z",
+    "endsAt": "2026-11-13T17:00:00Z",
+    "startTime": "2026-11-13T10:30:00",
+    "endTime": "2026-11-13T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-0",
+    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowAkshay Jagadish, NAM Postdoctoral Research Fellow",
+    "rawEventDetails": "Details Event Description Anya Tsvetkov, NAM Postdoctoral Research Fellow Akshay Jagadish, NAM Postdoctoral Research Fellow",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "nam:ps_events:881:delta:0",
+    "guid": "ps_events:881:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T15:30:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T10:30:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "A NAM Friday Talks Talk",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "NAM Friday Talks",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks",
+    "content": "Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawEventDetails": "Details Event Description Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "nam:series-awaiting-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-template",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  }
+]

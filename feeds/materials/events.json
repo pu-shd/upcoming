@@ -455,7 +455,7 @@
     "startTime": "2026-10-28T12:05:00",
     "endTime": "2026-10-28T13:05:00",
     "timezone": "America/New_York",
-    "title": "A Talk by Joseph Fedeyko, Johnson Matthey",
+    "title": "A PMI/PCCM SEMINAR SERIES Fall 2026 Talk by Joseph Fedeyko, Johnson Matthey",
     "speakers": [
       {
         "name": "Joseph Fedeyko",
@@ -464,7 +464,7 @@
     ],
     "speaker": "Joseph Fedeyko, Johnson Matthey",
     "affiliation": "Johnson Matthey",
-    "series": "",
+    "series": "PMI/PCCM SEMINAR SERIES Fall 2026",
     "tags": [
       "seminar"
     ],
