@@ -13,7 +13,7 @@ import textwrap
 import pytest
 import yaml
 
-from tests.support import FIXTURES, REPO_ROOT
+from tests.support import FIXTURES, REPO_ROOT, TEMPLATES_YAML
 from upcoming.build import build_from_file, load_pronunciation
 from upcoming.errors import ConfigFatal, SourceFatal
 from upcoming.patterns import load_vocabulary
@@ -380,7 +380,7 @@ def test_on_no_match_title_is_available_but_must_be_declared() -> None:
 
 def test_rules_declared_for_a_source_that_would_never_run_them_are_refused() -> None:
     """A chain under `summary_role: title` would sit there doing nothing."""
-    registry_yaml = textwrap.dedent(
+    registry_yaml = TEMPLATES_YAML + textwrap.dedent(
         """
         defaults:
           url_template: "https://{host}/feeds/events/ical.ics"

@@ -16,3 +16,16 @@ FIXTURES = Path(__file__).resolve().parent / "fixtures"
 #: value: these tests assert that config *loads*, not that anything authenticates.
 TEST_HEADER_SECRET = "x-test-bypass: test-value"
 TEST_ENV = {"BOT_BYPASS_HEADER": TEST_HEADER_SECRET}
+
+#: Every registry must declare the export layouts, so a synthetic one under test needs
+#: them too. Prepended by the helpers below rather than written into thirty fixtures: the
+#: requirement is real -- an undeclared layout is a switcher the page cannot populate --
+#: but it is not what any of those tests are about.
+TEMPLATES_YAML = """
+templates:
+  day-grouped:
+    label: Engineering newsletter
+    default: true
+  inline-date:
+    label: DAIS newsletter
+"""

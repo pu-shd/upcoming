@@ -364,6 +364,7 @@ class _EmptyRegistry:
 
     sources: tuple[()] = ()
     purposes: ClassVar[dict[str, object]] = {}
+    templates: ClassVar[dict[str, object]] = {}
 
 
 # --------------------------------------------------------------------------------------

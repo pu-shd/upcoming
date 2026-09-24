@@ -702,7 +702,9 @@ def test_both_export_buttons_read_from_the_element_on_the_page() -> None:
     """
     code = (SITE / "simulator.js").read_text(encoding="utf-8")
     assert "lastListing" not in code, "a second copy of the listing is the trap itself"
-    assert "exportDocument(exportEl)" in code, "download must read from the page"
+    assert "exportDocument(exportEl, selectedTemplate())" in code, (
+        "download must read from the page, in the style the page is showing"
+    )
     assert "exportEl.innerHTML" in code, "copy must read from the page"
     assert "exportEl.innerText" in code
 
@@ -734,13 +736,15 @@ def test_every_element_also_carries_the_style_inline() -> None:
 def test_the_inline_rules_and_the_stylesheet_are_the_same_rules() -> None:
     """One definition. Two renderings of it that disagreed would be worse than either."""
     both = node("""
-        console.log(JSON.stringify({
-          sheet: S.exportStylesheet(),
-          styles: S.EXPORT_STYLES
-        }));
+        const sheet = {};
+        Object.keys(S.EXPORT_STYLES).forEach(function (name) {
+          sheet[name] = S.exportStylesheet(name);
+        });
+        console.log(JSON.stringify({sheet: sheet, styles: S.EXPORT_STYLES}));
     """)
-    for selector, declarations in both["styles"].items():
-        assert f"{selector} {{ {declarations} }}" in both["sheet"]
+    for template, rules in both["styles"].items():
+        for selector, declarations in rules.items():
+            assert f"{selector} {{ {declarations} }}" in both["sheet"][template], template
 
 
 def test_the_export_styling_is_email_safe() -> None:
@@ -751,9 +755,14 @@ def test_the_export_styling_is_email_safe() -> None:
     losing its grid falls back to label-then-value on separate lines, which is how the
     editors' own edition already reads.
     """
-    declarations = " ".join(node("console.log(JSON.stringify(S.EXPORT_STYLES));").values())
-    for banned in ("grid", "flex", "var(--", "currentColor"):
-        assert banned not in declarations, f"{banned} does not survive an email client"
+    styles = node("console.log(JSON.stringify(S.EXPORT_STYLES));")
+    assert len(styles) >= 2, "both layouts, or this checks half of what ships"
+    for template, rules in styles.items():
+        declarations = " ".join(rules.values())
+        for banned in ("grid", "flex", "var(--", "currentColor"):
+            assert banned not in declarations, (
+                f"{template}: {banned} does not survive an email client"
+            )
 
 
 def test_the_page_itself_is_not_restyled_by_the_export() -> None:
@@ -776,7 +785,7 @@ def test_the_page_itself_is_not_restyled_by_the_export() -> None:
 def test_the_copied_markup_is_styled_too() -> None:
     """Copy is the Mailchimp path, so it is the one that most needs the inline rules."""
     code = (SITE / "simulator.js").read_text(encoding="utf-8")
-    assert "inlineStyles(exportEl.innerHTML)" in code
+    assert "inlineStyles(exportEl.innerHTML, selectedTemplate())" in code
 
 
 def test_the_downloaded_file_is_readable_rather_than_one_long_line() -> None:
@@ -1686,3 +1695,159 @@ def test_the_reset_finds_the_next_thursday_for_this_publication(tree) -> None:  
         "onTheDayBefore": "2026-09-24",
         "onceItIsOut": "2026-10-01",
     }
+
+
+# --------------------------------------------------------------------------------------
+# Two styles, and the rule that neither may be half-dressed
+# --------------------------------------------------------------------------------------
+#
+# The DaIS layout shipped with no rules at all in `EXPORT_STYLES`: every class it emits
+# was absent from the map, so the preview looked right against the site's stylesheet and
+# the exported copy went out as unstyled paragraphs. Nothing caught it, because the
+# styling tests rendered the day-grouped listing and only that.
+#
+# So the map and the markup are now checked against each other, in both directions and
+# for every template. A class with no rule is an element that leaves here naked; a rule
+# with no class is dead weight that hides the next rename.
+
+#: One item set exercising every branch either template has: a placeholder title, two
+#: sponsors of which one has no site, a speaker, a description, and an event with no page.
+STYLE_PROBE = (
+    TINY_DOM
+    + """
+const edition = S.resolveEdition({publicationDate: "2026-09-08"});
+const feeds = {
+  citp: {label: "Center for Information Technology Policy", home: "https://citp.princeton.edu"},
+  nowhere: {label: "A Unit With No Site"}
+};
+const items = [
+  S.decorate({
+    startTime: "2026-09-08T12:15:00", endTime: "2026-09-08T13:15:00",
+    title: "AI Agents and the Augmentation Agenda", sources: ["citp", "nowhere"],
+    series: "CITP Seminars", urlRef: "https://citp.princeton.edu/events/2026/ai-agents",
+    speakers: [{name: "Arvind Narayanan", affiliation: "Princeton University"}],
+    location: {name: "Sherrerd Hall", detail: "306"},
+    content: "A talk about what agents can and cannot do."
+  }, feeds),
+  S.decorate({
+    startTime: "2026-09-09T16:30:00", title: "A CITP Seminars Talk by",
+    titleIsPlaceholder: true, sources: ["citp"], series: "CITP Seminars",
+    location: {name: "Sherrerd Hall", detail: "306"}
+  }, feeds)
+];
+const render = (template, list) => {
+  const tree = S.buildListing(edition, list, D.document, template);
+  const host = D.makeElement("div");
+  host.replaceChildren.apply(host, tree.childNodes.slice());
+  return host.innerHTML;
+};
+"""
+)
+
+#: `<tag ... class="name">`, which is exactly the shape `inlineStyles` keys on.
+_TAGGED = re.compile(r'<([a-z0-9]+)[^>]*\sclass="([^"]+)"')
+
+
+def emitted_classes(template: str) -> set[str]:
+    """Every `tag.class` either listing of this template can produce."""
+    markup = node(
+        STYLE_PROBE + f'console.log(JSON.stringify([render("{template}", items), '
+        f'render("{template}", [])]));'
+    )
+    return {f"{tag}.{cls}" for chunk in markup for tag, cls in _TAGGED.findall(chunk)}
+
+
+@pytest.mark.parametrize("template", ["day-grouped", "inline-date"])
+def test_every_class_a_template_emits_has_a_rule(template: str) -> None:
+    """The defect that shipped, in the direction it shipped in."""
+    rules = set(node("console.log(JSON.stringify(S.EXPORT_STYLES));")[template])
+    emitted = emitted_classes(template)
+    assert emitted, "the probe rendered nothing, so this would pass vacuously"
+    assert emitted - rules == set(), (
+        f"{template} emits these with no rule, so they leave here unstyled: "
+        f"{sorted(emitted - rules)}"
+    )
+
+
+@pytest.mark.parametrize("template", ["day-grouped", "inline-date"])
+def test_no_rule_survives_the_class_it_styled(template: str) -> None:
+    """The other direction. A rule for a class nothing emits any more is not harmless:
+    it reads as coverage, and it is what makes the next rename look already handled."""
+    rules = set(node("console.log(JSON.stringify(S.EXPORT_STYLES));")[template])
+    emitted = emitted_classes(template)
+    assert rules - emitted == set(), (
+        f"{template} has rules for classes it never emits: {sorted(rules - emitted)}"
+    )
+
+
+@pytest.mark.parametrize("template", ["day-grouped", "inline-date"])
+def test_every_element_in_either_style_carries_its_rule_inline(template: str) -> None:
+    """Mailchimp strips `<style>`, so the check that matters is per element, per style."""
+    doc = node(
+        STYLE_PROBE + f'const host = D.makeElement("div");\n'
+        f'const tree = S.buildListing(edition, items, D.document, "{template}");\n'
+        f"host.replaceChildren.apply(host, tree.childNodes.slice());\n"
+        f'console.log(JSON.stringify(S.exportDocument(host, "{template}")));'
+    )
+    unstyled = re.findall(r"<(h2|h3|hr|dl|dt|dd|p|span|div|a)(?![^>]*style=)[^>]*>", doc)
+    assert unstyled == [], f"{template}: tags with no inline style: {unstyled}"
+
+
+def test_the_two_styles_are_not_the_same_style() -> None:
+    """Anti-vacuity for everything above. If `inline-date` fell back to the default map,
+    every test here would still pass while the switcher did nothing."""
+    styles = node("console.log(JSON.stringify(S.EXPORT_STYLES));")
+    assert styles["day-grouped"] != styles["inline-date"]
+    assert "#EC2770" in " ".join(styles["inline-date"].values()), "the DaIS accent"
+    assert "#EC2770" not in " ".join(styles["day-grouped"].values())
+
+
+def test_an_unknown_style_falls_back_rather_than_rendering_nothing() -> None:
+    """A stale link carrying a retired style name should produce the default listing, not
+    an unstyled one. The registry refuses an unknown template at load, so this is about a
+    URL somebody kept, not about configuration."""
+    same = node("""
+        console.log(JSON.stringify(
+          S.stylesFor("no-such-style") === S.stylesFor(S.DEFAULT_TEMPLATE)
+        ));
+    """)
+    assert same is True
+
+
+@pytest.mark.parametrize(("events", "rules"), [(0, 0), (1, 0), (2, 1), (5, 4)])
+def test_the_dais_listing_rules_between_events_not_after_them(events: int, rules: int) -> None:
+    """Their edition puts a dotted rule between entries.
+
+    Between, not after: a rule below the last event leaves an editor a trailing line to
+    delete, which is exactly the tidying this exists to remove. The single-event case is
+    the one an off-by-one gets wrong and nobody notices, since most editions have several.
+    """
+    got = node(
+        STYLE_PROBE
+        + f"""
+        const many = [];
+        for (let i = 0; i < {events}; i++) {{
+          many.push(S.decorate({{
+            startTime: "2026-09-0" + (i + 1) + "T12:00:00", title: "Talk " + i,
+            sources: ["citp"], location: {{name: "Sherrerd Hall", detail: "306"}}
+          }}, feeds));
+        }}
+        const html = render("inline-date", many);
+        console.log(JSON.stringify((html.match(/<hr /g) || []).length));
+    """
+    )
+    assert got == rules
+
+
+def test_the_dais_export_carries_its_own_accent(dais) -> None:  # type: ignore[no-untyped-def]
+    """The pink pill and dotted rule are theirs, taken from the issue rather than chosen.
+
+    Worth pinning because it is the visible difference between "the DAIS layout" and
+    "the engineering layout with the headings removed".
+    """
+    styles = node("console.log(JSON.stringify(S.EXPORT_STYLES));")["inline-date"]
+    assert "border-radius: 50px" in styles["a.ev-button"]
+    assert "#EC2770" in styles["a.ev-button"]
+    assert "dotted #EC2770" in styles["hr.ev-rule"]
+    assert "text-align: center" in styles["p.ev-when"]
+    assert "italic" in styles["p.ev-hosted"]

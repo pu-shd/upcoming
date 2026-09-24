@@ -195,9 +195,9 @@ is reported as a gap rather than flagged, since two events in five have none and
 legitimately so. The state is carried three ways, because colour alone is not a signal
 everyone receives: the badge's own word, a stripe, and a tooltip naming what is missing.
 
-Beyond what the predecessor sites do it adds **source selection**, **purpose selection**, and an export shaped like what the editors assemble in Mailchimp by hand — grouped by day, with their own field labels, titles linked to their event pages and sponsors to their units. Both the copy and the download carry their styling inline, because email clients strip `<style>` and honour only `style=""`.
+Beyond what the predecessor sites do it adds **source selection**, **purpose selection**, and an export shaped like what the editors assemble in Mailchimp by hand, in either of two styles: the engineering one, grouped by day with their own field labels; or the DaIS one, centred and chronological with a pill link per event and a dotted rule between them. Each was transcribed from an issue that went out, down to the accent colour. Both the copy and the download carry their styling inline, because email clients strip `<style>` and honour only `style=""` — and the preview carries the same style as the export, so what is on screen is what leaves.
 
-**Nothing about the feeds is written into the page.** Sources, names, sites and purposes all come from `status.json`, so a fifteenth source appears the moment it is registered. That is deliberate: ORFE's and MAE's `feed-simulator.js` are **byte-identical** (`md5 1f4aa8d0…`) with the department baked in, and both are a lossy mirror of ORFE's 750-line `newsletter.py`.
+**Nothing about the feeds is written into the page.** Sources, names, sites, purposes, publication schedules and layout labels all come from `status.json`, so a fifteenth source appears the moment it is registered. That is deliberate: ORFE's and MAE's `feed-simulator.js` are **byte-identical** (`md5 1f4aa8d0…`) with the department baked in, and both are a lossy mirror of ORFE's 750-line `newsletter.py`.
 
 It is checked against editions that went out — two of them, from different publications. `tests/fixtures/newsletter/2026-09-08-edition.json` is the engineering issue of 7–14 September 2026, transcribed from its Mailchimp export; `2026-09-24-dais-edition.json` is the DaIS issue of 24 September, transcribed from the email. Every field in both was verified against the source file. The suite runs the simulator's own JavaScript through Node over the committed feeds and compares.
 
@@ -261,6 +261,19 @@ sources:
 ```
 
 `deadline` is optional and its absence is not a default: DaIS states none — its edition says only to send an email — so the page shows no deadline rather than inventing a date that would look authoritative beside everything else on it. Weekday, anchor, clock and template are all checked at load, because an unknown one resolves to *some* date or *some* layout and produces an edition that looks finished and is wrong.
+
+**The layouts themselves are a vocabulary too.** `templates:` names each one the simulator implements, and the export's **Style** switcher offers them by label. Choosing a purpose presets the switcher to that publication's layout; an editor can still pick the other and the page says when they have.
+
+```yaml
+templates:
+  day-grouped:
+    label: Engineering newsletter
+    default: true
+  inline-date:
+    label: DAIS newsletter
+```
+
+A renderer is the one thing config cannot invent, so it is checked both ways: a declared name with no renderer is a load error, and a renderer nothing declares is one too — otherwise the simulator could produce a layout the switcher cannot offer or name.
 
 Two publications now exist, and they differ on both axes the mechanism claims to carry — Monday against Thursday, the current week against the next, day headings against one inline when-and-where line. That is the test of it: with one publication, nothing distinguishes a mechanism from a hardcoded shape behind a label.
 

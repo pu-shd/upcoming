@@ -12,6 +12,25 @@
 #
 # All counts and shapes in the comments below were measured on 2026-09-11, not assumed.
 
+# The export layouts the simulator implements, named so a purpose can choose one and the
+# page can offer them by name. Declared here rather than written into the JavaScript for
+# the same reason the source list is not: the page should hold no vocabulary of its own.
+#
+# `default: true` marks the one used when nothing has chosen. Exactly one template may
+# claim it, and a purpose that declares no template gets it.
+templates:
+  day-grouped:
+    label: Engineering newsletter
+    default: true
+    note: >-
+      Grouped under a day heading, with the editors' own field labels. Transcribed from
+      the Princeton Engineering issue of 7-14 September 2026.
+  inline-date:
+    label: DAIS newsletter
+    note: >-
+      Centred, chronological, one inline when-and-where line, and a pill link per event.
+      Transcribed from the DaIS issue of 24 September 2026.
+
 # What the events from a feed may be put toward. A declared vocabulary, because a purpose
 # is matched by name: a misspelled one would select nothing and report success, which is
 # indistinguishable from a filter that is simply strict.
@@ -20,6 +39,7 @@
 # per-event override below. Nothing is inherited from `defaults:` -- a feed added for some
 # other reason serves no purpose until it says so, because a source silently joining a
 # publication is a worse failure than one left out and noticed.
+
 purposes:
   engineering-newsletter:
     label: Engineering events newsletter

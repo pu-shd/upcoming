@@ -265,3 +265,34 @@ tbody td:empty::after { content: "—"; color: var(--dim); }
 .export dt { font-weight: 600; }
 .export dd { margin: 0; }
 .export a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); }
+
+/* The DaIS style, previewed as it will actually send.
+ *
+ * Its own colours rather than the site's tokens, including in dark mode: this block is
+ * a preview of an email that is white with black text wherever it lands, and showing it
+ * in the page's palette would make the preview disagree with the export -- the class of
+ * mismatch that shipped an empty download once already. Measured from the issue of
+ * 24 September 2026; `#EC2770` is their accent.
+ */
+.export.style-inline-date {
+  background: #ffffff; color: #000000;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  text-align: center;
+}
+.export.style-inline-date .edition { font-size: 1.35rem; font-weight: 400; margin: 0 0 1.25rem; }
+.export.style-inline-date .ev { margin: 0 0 1.5rem; }
+.export.style-inline-date .ev-title { font-size: 1.25rem; font-weight: 400; margin: 0 0 .25rem; }
+.export.style-inline-date .ev-hosted { font-style: italic; margin: 0 0 .65rem; }
+.export.style-inline-date .ev-speaker,
+.export.style-inline-date .ev-blurb { margin: 0; }
+.export.style-inline-date .ev-when { margin: 0 0 .85rem; }
+.export.style-inline-date .ev-more { margin: 0; }
+.export.style-inline-date a { color: #000000; text-decoration-color: currentColor; }
+.export.style-inline-date .ev-rule {
+  border: 0; border-top: 2px dotted #EC2770; margin: 0 0 1.5rem;
+}
+.export.style-inline-date .ev-button {
+  display: inline-block; padding: .85rem 1.5rem;
+  background: #EC2770; border: 2px solid #000000; border-radius: 50px;
+  color: #ffffff; text-decoration: none; font-size: .95rem;
+}

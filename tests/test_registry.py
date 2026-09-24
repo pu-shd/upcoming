@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pytest
 
-from tests.support import REPO_ROOT, TEST_ENV
+from tests.support import REPO_ROOT, TEMPLATES_YAML, TEST_ENV
 from upcoming.errors import ConfigFatal
 from upcoming.registry import (
     STATUS_LIVE,
@@ -36,8 +36,16 @@ sources:
 
 
 def write(tmp_path: Path, text: str) -> Path:
+    """A synthetic registry, with the template vocabulary supplied unless it declares one.
+
+    See `TEMPLATES_YAML`: the block is required of every registry and is beside the point
+    of nearly every test here, so it is added rather than repeated.
+    """
+    body = textwrap.dedent(text)
+    if "templates:" not in body:
+        body = TEMPLATES_YAML + body
     path = tmp_path / "sources.yaml"
-    path.write_text(textwrap.dedent(text), encoding="utf-8")
+    path.write_text(body, encoding="utf-8")
     return path
 
 

@@ -115,6 +115,12 @@ appears, what window it covers and which layout to render. Two publications exis
 agree on none of those, which is what keeps the mechanism honest: a third is a config
 block, and the page does not change.
 
+A `templates` block sits beside it, naming each export layout and marking one default, so
+the style switcher offers them without the JavaScript holding a list. The layout *names*
+are the exception — a renderer exists in `simulator.js` or it does not — so config is
+checked against the implemented set in both directions at load, and the page's own
+fallback is checked against the declared default by test.
+
 ## Where the boundaries are
 
 | Boundary | Enforced by |

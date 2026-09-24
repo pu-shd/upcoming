@@ -1,6 +1,6 @@
 # Testing
 
-992 tests. `make test` locally, `make docker-test` for the path CI runs.
+1021 tests. `make test` locally, `make docker-test` for the path CI runs.
 
 Two rules shape all of it:
 
@@ -14,17 +14,17 @@ Two rules shape all of it:
 
 | File | Tests | Covers |
 |---|---:|---|
-| `test_simulator.py` | 132 | The simulator's JavaScript, through Node: dates, editions, both listing templates, the export, the calendar file |
+| `test_simulator.py` | 145 | The simulator's JavaScript, through Node: dates, editions, both listing templates, the export, the calendar file |
 | `test_patterns.py` | 107 | Every named regex's `match` and `no_match` table; `person_name_shape` against 34 real names and 18 real titles |
 | `test_locate.py` | 66 | The seven location rules, including where they decline and where a chain omits one |
 | `test_registry.py` | 66 | Config loading, merging, and every refusal |
-| `test_site.py` | 56 | Both published pages: resources, themes, navigation, controls |
+| `test_site.py` | 61 | Both published pages: resources, themes, navigation, controls, and the export's style switcher |
 | `test_architecture.py` | 55 | Structural boundaries — see below |
 | `test_publish.py` | 51 | The tree, `status.json`, staleness, cadence |
+| `test_purposes.py` | 44 | The purpose vocabulary, per-event overrides, the schedules and templates a publication declares, and the export layouts |
 | `test_rules.py` | 38 | The mapping engine's predicates, actions and attribution |
 | `test_model.py` | 35 | The event record, wire round-trip, derived fields |
 | `test_verify.py` | 34 | The watchdog's findings and their severity |
-| `test_purposes.py` | 33 | The purpose vocabulary, per-event overrides, and the schedules and templates a publication declares |
 | `test_workflows.py` | 33 | The CI YAML itself — see below |
 | `test_contracts.py` | 29 | Cross-cutting promises: credentials, dependencies, CLI surface |
 | `test_enrich.py` | 29 | Scraping, rejection, health rates |
@@ -72,6 +72,13 @@ makes it the least reviewable part of a repository. These assert what has actual
 wrong: the crons do not overlap, the deploy is its own job, it runs even when a source
 failed, every job has a timeout, lint cannot block a publish, and **no step reads `$?`
 after a command** — the default shell is `bash -e`, so that branch never runs.
+
+**Both-directions tests.** The export's style map and the markup its templates emit are
+checked against each other, per template: a class with no rule leaves the page unstyled,
+and a rule with no class is dead weight that makes the next rename look already handled.
+The DaIS layout shipped with *no* rules at all — the preview took the site's stylesheet
+and looked right, while the exported copy went out as bare paragraphs — because the
+styling tests rendered one template and only that.
 
 **JavaScript tests.** `site/simulator.js` exports its pure functions under
 `module.exports` and guards its DOM wiring behind `typeof document`, so pytest can drive it

@@ -24,7 +24,8 @@ from upcoming.build import build_from_file, load_pronunciation, resolve_purposes
 from upcoming.combine import Combo, combine, load_combos
 from upcoming.errors import ConfigFatal
 from upcoming.model import Event, to_wire
-from upcoming.registry import PurposeOverride, load_registry
+from upcoming.publish import assemble
+from upcoming.registry import TEMPLATES, PurposeOverride, load_registry
 
 SOURCES = REPO_ROOT / "config" / "sources.yaml"
 ORFE_FEED = FIXTURES / "feeds" / "orfe" / "feed.ics"
@@ -115,6 +116,101 @@ def test_a_predicate_on_an_undeclared_purpose_is_a_load_error(registry, tmp_path
             tags=registry.sources[0].tags,
             purposes=tuple(registry.purposes),
         )
+
+
+# --------------------------------------------------------------------------------------
+# The export layouts
+# --------------------------------------------------------------------------------------
+#
+# A declared vocabulary for the same reason purposes are one, plus a second: the page's
+# style switcher offers them by label, and a label written into the JavaScript would be a
+# copy to keep in step with this file. The names themselves are the one thing config
+# cannot invent -- a renderer either exists in `simulator.js` or it does not.
+
+
+def test_every_declared_template_is_one_the_simulator_implements(registry) -> None:  # type: ignore[no-untyped-def]
+    assert set(registry.templates) == set(TEMPLATES)
+
+
+def test_every_template_has_a_label_for_the_switcher(registry) -> None:  # type: ignore[no-untyped-def]
+    for name, entry in registry.templates.items():
+        assert entry.get("label"), name
+        assert entry["label"] != name, "a bare slug in the switcher tells an editor nothing"
+
+
+def test_exactly_one_template_is_the_default(registry) -> None:  # type: ignore[no-untyped-def]
+    marked = [n for n, e in registry.templates.items() if e.get("default")]
+    assert marked == ["day-grouped"], (
+        "the engineering layout is the default, and it is the one a purpose declaring no "
+        "template falls back to"
+    )
+
+
+def test_the_javascript_agrees_about_which_is_default(registry) -> None:  # type: ignore[no-untyped-def]
+    """`simulator.js` names its own fallback so its pure functions work with no manifest.
+
+    Two copies of one fact, so they are checked against each other. If they drifted, a
+    page that failed to load the manifest would quietly render the other publication's
+    shape -- and look entirely normal doing it.
+    """
+    code = (REPO_ROOT / "site" / "simulator.js").read_text(encoding="utf-8")
+    declared = next(n for n, e in registry.templates.items() if e.get("default"))
+    assert f'var DEFAULT_TEMPLATE = "{declared}";' in code
+
+
+@pytest.mark.parametrize(
+    ("mutate", "complaint"),
+    [
+        pytest.param(
+            lambda d: d["templates"].update({"three-column": {"label": "Three column"}}),
+            "declared but not implemented",
+            id="a-layout-nothing-renders",
+        ),
+        pytest.param(
+            lambda d: d["templates"].pop("inline-date"),
+            "implemented but undeclared",
+            id="a-renderer-the-page-cannot-offer",
+        ),
+        pytest.param(
+            lambda d: d["templates"]["inline-date"].pop("label"),
+            "needs a `label`",
+            id="a-layout-with-no-name",
+        ),
+        pytest.param(
+            lambda d: d["templates"]["inline-date"].update({"default": True}),
+            "exactly one template must set",
+            id="two-defaults",
+        ),
+        pytest.param(
+            lambda d: d["templates"]["day-grouped"].pop("default"),
+            "exactly one template must set",
+            id="no-default",
+        ),
+        pytest.param(
+            lambda d: d["templates"]["day-grouped"].update({"colour": "pink"}),
+            "unknown key",
+            id="a-key-nobody-reads",
+        ),
+    ],
+)
+def test_a_template_declaration_the_page_could_not_use_is_refused(  # type: ignore[no-untyped-def]
+    tmp_path, mutate, complaint
+) -> None:
+    with pytest.raises(ConfigFatal, match=complaint):
+        load_registry(registry_with(tmp_path, mutate), env=TEST_ENV)
+
+
+def test_the_manifest_carries_the_layouts(registry, tmp_path) -> None:  # type: ignore[no-untyped-def]
+    """The page reads them from here, so their absence is a switcher with no options."""
+    load_pronunciation()
+    results = {
+        s.slug: build_from_file(FIXTURES / "feeds" / s.slug / "feed.ics", s) for s in registry.live
+    }
+    tree = assemble(registry, results, {}, {}, root=tmp_path, generated_at="2026-09-24T12:00:00Z")
+    manifest = json.loads(tree.files["status.json"])
+    assert manifest["templates"]["day-grouped"]["default"] is True
+    assert manifest["templates"]["inline-date"]["label"] == "DAIS newsletter"
+    assert set(manifest["templates"]) == set(registry.templates)
 
 
 # --------------------------------------------------------------------------------------

@@ -18,6 +18,12 @@ function escapeText(value) {
     .replace(/>/g, "&gt;");
 }
 
+/* Elements a browser serializes with no closing tag. The inline-date listing emits an
+   `<hr>` between events, and a stub that wrote `</hr>` would have the export tests
+   asserting markup no browser produces. */
+const VOID_TAGS = new Set(["AREA", "BASE", "BR", "COL", "EMBED", "HR", "IMG", "INPUT",
+                           "LINK", "META", "SOURCE", "TRACK", "WBR"]);
+
 function makeElement(tag) {
   return {
     tagName: tag.toUpperCase(),
@@ -88,6 +94,7 @@ function makeElement(tag) {
         attrs += " " + name + '="' + escapeText(this.attributes[name]).replace(/"/g, "&quot;") + '"';
       }, this);
       var tag = this.tagName.toLowerCase();
+      if (VOID_TAGS.has(this.tagName)) return "<" + tag + attrs + ">";
       return "<" + tag + attrs + ">" + this.innerHTML + "</" + tag + ">";
     },
 

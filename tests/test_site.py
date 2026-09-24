@@ -587,3 +587,62 @@ def test_the_health_line_reads_the_manifest_clock_not_the_browsers() -> None:
     ]
     assert "new Date(when)" in health
     assert "isNaN" in health, "an unreadable stamp must not render as NaN minutes ago"
+
+
+def test_the_export_offers_a_style_switcher() -> None:
+    """The control, and the fact that it sits with the export rather than the edition.
+
+    Which layout to paste is a decision about the export; putting it up with the
+    publication date would make it read as part of choosing the edition, which it is not.
+    """
+    assert '<select id="style">' in SIMULATOR
+    assert '<label for="style">Style</label>' in SIMULATOR
+    export_at = SIMULATOR.index("Email and Events Page Export")
+    assert export_at < SIMULATOR.index('<select id="style">')
+
+
+def test_the_switcher_is_empty_in_the_markup() -> None:
+    """Populated from `status.json`, like the sources and the purposes before it.
+
+    A page shipping its own `<option>` list would be a second copy of a vocabulary that
+    already lives in `config/sources.yaml`, and the two would drift the first time a
+    layout was renamed.
+    """
+    select = SIMULATOR[SIMULATOR.index('<select id="style">') :]
+    assert select[: select.index("</select>")].strip() == '<select id="style">'
+
+
+def test_no_layout_label_is_written_into_the_javascript() -> None:
+    """The labels are config. The JavaScript knows the layout *names*, because it is what
+    implements them, but naming them in the page's own words is how the switcher and the
+    registry come to disagree."""
+    code = "\n".join(
+        line
+        for line in (SITE / "simulator.js").read_text(encoding="utf-8").splitlines()
+        # Comments are illustration, as in `test_no_source_is_named_in_the_javascript`:
+        # naming the DaIS newsletter while explaining why a Thursday reset exists is not
+        # the page holding a vocabulary.
+        if not line.strip().startswith(("*", "/*", "//"))
+    )
+    for label in ("Engineering newsletter", "DAIS newsletter"):
+        assert label not in code, f"{label!r} belongs in config/sources.yaml"
+
+
+def test_the_preview_is_styled_per_layout() -> None:
+    """A preview in one shape and an export in another is the mismatch that let an empty
+    download ship. The card takes a `style-<template>` class, and the stylesheet has
+    rules for it."""
+    code = (SITE / "simulator.js").read_text(encoding="utf-8")
+    assert 'exportEl.classList.toggle("style-" + name' in code
+    assert ".export.style-inline-date" in STYLE
+
+
+def test_the_dais_preview_does_not_follow_the_sites_theme() -> None:
+    """It is a preview of an email that is black on white wherever it lands.
+
+    Rendering it in the page's palette would make the preview disagree with what actually
+    sends, which is worse than a white block in a dark page.
+    """
+    block = STYLE[STYLE.index(".export.style-inline-date {") :][:400]
+    assert "background: #ffffff" in block
+    assert "color: #000000" in block

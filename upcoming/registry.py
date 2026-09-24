@@ -306,6 +306,8 @@ class Registry:
     #: Carried on the registry so a combined feed can be refused at load time for naming a
     #: publication nobody defined, rather than quietly selecting nothing.
     purposes: Mapping[str, Any] = field(default_factory=dict)
+    #: Export layouts: name -> label, note, and which one is the default.
+    templates: Mapping[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         seen: dict[str, str] = {}
@@ -550,10 +552,59 @@ def _build_enrich(raw: Mapping[str, Any], slug: str) -> tuple[EnrichTarget, ...]
     return tuple(targets)
 
 
-#: Layouts the simulator implements. A purpose naming anything else would select a
-#: renderer that does not exist and fall back silently to the wrong shape, so the name is
-#: checked here rather than discovered by an editor pasting the wrong thing into Mailchimp.
+#: Layouts `site/simulator.js` implements, by name.
+#:
+#: The only thing hardcoded about a template: config may label and describe one, and a
+#: purpose may choose one, but it cannot invent a renderer. A name nothing implements
+#: would fall back silently to the wrong shape, which an editor discovers by pasting it
+#: into Mailchimp -- so both directions are checked, config against this set at load and
+#: this set against the JavaScript by test.
 TEMPLATES = frozenset({"day-grouped", "inline-date"})
+
+
+def _load_templates(document: Mapping[str, Any], *, where: str) -> dict[str, Any]:
+    """Validate the declared export layouts and return them.
+
+    Declaring them in config rather than in the page is what lets the switcher offer them
+    by name without the JavaScript holding a vocabulary of its own -- the same discipline
+    that keeps the source list and the publication schedules out of it.
+    """
+    declared = document.get("templates") or {}
+    if not isinstance(declared, dict):
+        raise ConfigFatal(f"{where}: `templates` must be a mapping of name to details")
+
+    if unknown := sorted(set(declared) - TEMPLATES):
+        raise ConfigFatal(
+            f"{where}: template(s) {unknown} are declared but not implemented. "
+            f"Available: {', '.join(sorted(TEMPLATES))}."
+        )
+    if missing := sorted(TEMPLATES - set(declared)):
+        raise ConfigFatal(
+            f"{where}: template(s) {missing} are implemented but undeclared, so the "
+            f"simulator could render a layout the page cannot offer or name."
+        )
+
+    defaults = []
+    for name, entry in declared.items():
+        if not isinstance(entry, dict) or not entry.get("label"):
+            raise ConfigFatal(
+                f"template {name!r} needs a `label`. It is what the export's style "
+                f"switcher shows, and a bare slug there tells an editor nothing."
+            )
+        if unknown_keys := sorted(set(entry) - {"label", "default", "note"}):
+            raise ConfigFatal(f"template {name!r}: unknown key(s) {unknown_keys}")
+        if entry.get("default"):
+            defaults.append(name)
+
+    # Exactly one, because "no default" means the page picks for itself and "two" means
+    # whichever happens to come first in a mapping -- both are a layout chosen by accident.
+    if len(defaults) != 1:
+        raise ConfigFatal(
+            f"{where}: exactly one template must set `default: true`; "
+            f"{sorted(defaults) or 'none'} do"
+        )
+    return dict(declared)
+
 
 #: Weekday spellings a schedule may use, Monday first to match `weekStartFor`.
 WEEKDAYS = ("MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN")
@@ -807,8 +858,12 @@ def load_registry(
     tag_vocabulary = load_tags(tags)
     config_path = Path(path)
     document = read_mapping(
-        config_path, what="source registry", allow={"defaults", "sources", "purposes"}
+        config_path,
+        what="source registry",
+        allow={"defaults", "sources", "purposes", "templates"},
     )
+
+    known_templates = _load_templates(document, where=str(config_path))
 
     known_purposes = document.get("purposes") or {}
     if not isinstance(known_purposes, dict):
@@ -862,4 +917,4 @@ def load_registry(
 
         sources.append(source)
 
-    return Registry(sources=tuple(sources), purposes=known_purposes)
+    return Registry(sources=tuple(sources), purposes=known_purposes, templates=known_templates)

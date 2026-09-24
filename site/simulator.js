@@ -112,6 +112,15 @@
     }
   };
 
+  /**
+   * The layout used when nothing has chosen one.
+   *
+   * Named here so the pure functions work under Node with no manifest, and asserted
+   * against `config/sources.yaml`'s declared default by test -- the config is the source
+   * of truth, and this is the copy that has to agree with it.
+   */
+  var DEFAULT_TEMPLATE = "day-grouped";
+
   var WEEKDAYS = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 
   /** Days from the Monday of a week to the named weekday. */
@@ -586,7 +595,15 @@
       return root;
     }
 
-    items.forEach(function (item) {
+    items.forEach(function (item, index) {
+      /* A dotted rule between events, as their edition has -- between, not after, so the
+         listing does not end on a trailing line an editor has to delete. */
+      if (index) {
+        var rule = doc.createElement("hr");
+        rule.className = "ev-rule";
+        root.appendChild(rule);
+      }
+
       var block = doc.createElement("div");
       block.className = "ev";
 
@@ -653,11 +670,14 @@
       when.textContent = whenAndWhere(item);
       block.appendChild(when);
 
+      /* Their "Learn More" is a pink pill, so ours is too -- `ev-button` rather than
+         `ev-link`, because an underlined black link inside a filled button reads as a
+         mistake. The two classes are styled separately for that reason. */
       if (item.urlRef) {
         var more = doc.createElement("p");
         more.className = "ev-more";
         var moreLink = doc.createElement("a");
-        moreLink.className = "ev-link";
+        moreLink.className = "ev-button";
         moreLink.setAttribute("href", item.urlRef);
         moreLink.textContent = "Learn More";
         more.appendChild(moreLink);
@@ -929,28 +949,77 @@
    * leaves this site, where nothing defines `--dim`.
    */
   var EXPORT_STYLES = {
-    "h2.edition": "font: 700 20px/1.3 Georgia, 'Times New Roman', serif; margin: 0 0 20px;",
-    "h3.day": "font: 700 15px/1.3 Helvetica, Arial, sans-serif; margin: 28px 0 10px; "
-      + "padding-bottom: 4px; border-bottom: 1px solid #d8d8d8;",
-    "div.ev": "margin: 0 0 20px;",
-    "p.ev-title": "font: 700 15px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 2px;",
-    "a.ev-link": "color: #17181c; text-decoration: underline;",
-    "p.ev-time": "font: 400 14px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 6px; "
-      + "color: #555555;",
-    "span.placeholder-flag": "font: 400 13px/1.4 Helvetica, Arial, sans-serif; "
-      + "color: #9a6700;",
-    "dl.ev-fields": "margin: 0; font: 400 14px/1.5 Helvetica, Arial, sans-serif;",
-    "dt.ev-label": "font-weight: 700; margin: 0;",
-    "dd.ev-value": "margin: 0 0 4px;",
-    "a.sponsor-link": "color: #17181c; text-decoration: underline;",
-    "span.sep": "color: inherit;",
-    "p.empty": "font: 400 14px/1.5 Helvetica, Arial, sans-serif;"
+    /* The Princeton Engineering shape: left-aligned, a serif edition heading, a ruled day
+       heading, and the editors' own bold field labels. */
+    "day-grouped": {
+      "h2.edition":
+        "font: 700 20px/1.3 Georgia, 'Times New Roman', serif; margin: 0 0 20px;",
+      "h3.day": "font: 700 15px/1.3 Helvetica, Arial, sans-serif; margin: 28px 0 10px; "
+        + "padding-bottom: 4px; border-bottom: 1px solid #d8d8d8;",
+      "div.ev": "margin: 0 0 20px;",
+      "p.ev-title": "font: 700 15px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 2px;",
+      "a.ev-link": "color: #17181c; text-decoration: underline;",
+      "p.ev-time": "font: 400 14px/1.4 Helvetica, Arial, sans-serif; margin: 0 0 6px; "
+        + "color: #555555;",
+      "span.placeholder-flag": "font: 400 13px/1.4 Helvetica, Arial, sans-serif; "
+        + "color: #9a6700;",
+      "dl.ev-fields": "margin: 0; font: 400 14px/1.5 Helvetica, Arial, sans-serif;",
+      "dt.ev-label": "font-weight: 700; margin: 0;",
+      "dd.ev-value": "margin: 0 0 4px;",
+      "a.sponsor-link": "color: #17181c; text-decoration: underline;",
+      "span.sep": "color: inherit;",
+      "p.empty": "font: 400 14px/1.5 Helvetica, Arial, sans-serif;"
+    },
+
+    /* The DaIS shape, measured from the issue of 24 September 2026 rather than designed.
+       Everything centred -- their Mailchimp template sets `text-align: center` on every
+       paragraph -- in Helvetica Neue at 16px/1.5, with a 22px normal-weight underlined
+       title, an italic attribution, a dotted pink rule between events and a pink pill for
+       the link. `#EC2770` is their accent, taken from the divider and the button in that
+       email; it is written here as a literal for the same reason every other colour is,
+       since the exported file leaves this site. */
+    "inline-date": {
+      "h2.edition": "font: 400 26px/1.3 'Helvetica Neue', Helvetica, Arial, Verdana, "
+        + "sans-serif; margin: 0 0 24px; text-align: center; color: #000000;",
+      "div.ev": "margin: 0 0 28px; text-align: center;",
+      "p.ev-title": "font: 400 22px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
+        + "sans-serif; margin: 0 0 4px; text-align: center; color: #000000;",
+      "a.ev-link": "color: #000000; text-decoration: underline;",
+      "p.ev-hosted": "font: italic 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, "
+        + "Verdana, sans-serif; margin: 0 0 12px; text-align: center; color: #000000;",
+      "p.ev-speaker": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
+        + "sans-serif; margin: 0; text-align: center; color: #000000;",
+      "p.ev-blurb": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
+        + "sans-serif; margin: 0 0 4px; text-align: center; color: #000000;",
+      "p.ev-when": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
+        + "sans-serif; margin: 0 0 16px; text-align: center; color: #000000;",
+      "p.ev-more": "margin: 0; text-align: center;",
+      /* `display: inline-block` with padding, not a table: a real Mailchimp button is a
+         nested table, and pasting one in would fight the editor's own block structure. */
+      "a.ev-button": "background-color: #EC2770; border: 2px solid #000000; "
+        + "border-radius: 50px; color: #ffffff; display: inline-block; "
+        + "font: 400 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif; "
+        + "padding: 16px 28px; text-align: center; text-decoration: none;",
+      "span.placeholder-flag": "font: 400 14px/1.5 'Helvetica Neue', Helvetica, Arial, "
+        + "Verdana, sans-serif; color: #9a6700;",
+      "a.sponsor-link": "color: #000000; text-decoration: underline;",
+      "span.sep": "color: inherit;",
+      "hr.ev-rule": "border: 0; border-top: 2px dotted #EC2770; margin: 0 0 28px;",
+      "p.empty": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
+        + "sans-serif; text-align: center;"
+    }
   };
 
+  /** The rules for one layout, falling back to the default rather than to nothing. */
+  function stylesFor(template) {
+    return EXPORT_STYLES[template] || EXPORT_STYLES[DEFAULT_TEMPLATE];
+  }
+
   /** The same rules as a stylesheet, for the file when it is simply opened in a browser. */
-  function exportStylesheet() {
-    return Object.keys(EXPORT_STYLES).map(function (selector) {
-      return selector + " { " + EXPORT_STYLES[selector] + " }";
+  function exportStylesheet(template) {
+    var rules = stylesFor(template);
+    return Object.keys(rules).map(function (selector) {
+      return selector + " { " + rules[selector] + " }";
     }).join("\n");
   }
 
@@ -967,13 +1036,15 @@
   function readable(html) {
     return html
       .replace(/<h3 /g, "\n<h3 ")
+      .replace(/<hr /g, "\n<hr ")
       .replace(/<div class="ev"/g, "\n<div class=\"ev\"")
       .replace(/<\/div>/g, "</div>\n")
       .trim();
   }
 
-  function inlineStyles(html) {
-    return Object.keys(EXPORT_STYLES).reduce(function (text, selector) {
+  function inlineStyles(html, template) {
+    var rules = stylesFor(template);
+    return Object.keys(rules).reduce(function (text, selector) {
       var parts = selector.split(".");
       // Matched on the class anywhere inside the opening tag, so an element that also
       // carries an href is styled regardless of which attribute the DOM serialized first.
@@ -981,7 +1052,7 @@
         "<" + parts[0] + '(\\s[^>]*class="' + parts[1] + '"[^>]*)>', "g"
       );
       return text.replace(pattern, function (_match, attrs) {
-        return "<" + parts[0] + attrs + ' style="' + EXPORT_STYLES[selector] + '">';
+        return "<" + parts[0] + attrs + ' style="' + rules[selector] + '">';
       });
     }, html);
   }
@@ -993,15 +1064,15 @@
    * handler is the one place nothing can reach to test it -- and the first version of this
    * shipped broken, emitting a title and an empty body, precisely because it lived there.
    */
-  function exportDocument(el) {
+  function exportDocument(el, template) {
     var body = el ? el.innerHTML : "";
     if (!body) return "";
     var titleEl = el.querySelector("h2");
     return "<!doctype html>\n<meta charset=\"utf-8\">\n<title>" +
       (titleEl ? titleEl.textContent : "Events") + "</title>\n" +
-      "<style>\n" + exportStylesheet() + "\n</style>\n" +
+      "<style>\n" + exportStylesheet(template) + "\n</style>\n" +
       '<div style="max-width: 640px; margin: 24px auto; padding: 0 16px; color: #17181c;">\n' +
-      readable(inlineStyles(body)) + "\n</div>\n";
+      readable(inlineStyles(body, template)) + "\n</div>\n";
   }
 
   /* ----------------------------------------------------------------- the page ----- */
@@ -1021,7 +1092,7 @@
 
     var pubDate = $("pubdate"), pubTime = $("pubtime");
     var deadlineDate = $("deadlinedate"), deadlineTime = $("deadlinetime");
-    var nowEl = $("now"), purposeEl = $("purpose");
+    var nowEl = $("now"), purposeEl = $("purpose"), styleEl = $("style");
     var sourcesEl = $("sources"), sourceCountEl = $("source-count");
     var statusEl = $("status"), resultsEl = $("results"), errorEl = $("error");
     var exportEl = $("export"), copyStateEl = $("copy-state");
@@ -1030,6 +1101,8 @@
     var feeds = {};
     /** The declared publications, from status.json. The page holds no schedule of its own. */
     var publications = {};
+    /** The declared export layouts, likewise: name -> label, note, default. */
+    var layouts = {};
     /** slug -> array of events, cached so toggling a checkbox off and on is free. */
     var loaded = {};
     /** Event ids the editor has unticked. Ids, not indices: the set survives a change of
@@ -1059,10 +1132,45 @@
       return (chosen && chosen.schedule) || null;
     }
 
-    /** Its layout, likewise. */
-    function selectedTemplate() {
+    /**
+     * The layout a publication declares, which is what the switcher is *preset* to.
+     *
+     * Preset rather than locked. An editor composing the DaIS edition may still want the
+     * engineering shape to paste somewhere else, and a control that silently reverts on
+     * the next redraw is worse than no control.
+     */
+    function declaredTemplate() {
       var chosen = publications[purposeEl.value];
-      return (chosen && chosen.template) || "day-grouped";
+      return (chosen && chosen.template) || DEFAULT_TEMPLATE;
+    }
+
+    /** The layout actually in force: whatever the switcher says. */
+    function selectedTemplate() {
+      return styleEl.value || declaredTemplate();
+    }
+
+    /** The layout the manifest marks `default: true`, or the file's own fallback. */
+    function defaultLayout() {
+      var marked = Object.keys(layouts).filter(function (name) {
+        return layouts[name] && layouts[name]["default"];
+      });
+      return marked.length === 1 ? marked[0] : DEFAULT_TEMPLATE;
+    }
+
+    /* The switcher's own note, so an editor knows what they are about to get without
+       pasting it somewhere to find out. Also says when the style is not the one the
+       selected publication declares, since that is a state somebody can end up in by
+       accident and then not notice in the preview. */
+    function describeStyle() {
+      var chosen = layouts[styleEl.value] || {};
+      var note = chosen.note || "";
+      if (purposeEl.value && styleEl.value !== declaredTemplate()) {
+        var declared = layouts[declaredTemplate()] || {};
+        note += (note ? " " : "") + "Not the layout " +
+          ((publications[purposeEl.value] || {}).label || purposeEl.value) +
+          " declares, which is " + (declared.label || declaredTemplate()) + ".";
+      }
+      $("style-note").textContent = note;
     }
 
     function selectedSlugs() {
@@ -1150,6 +1258,7 @@
       });
 
       publications = manifest.purposes || {};
+      layouts = manifest.templates || {};
       var purposes = {};
       records.forEach(function (record) {
         var slug = record.path.split("/")[1];
@@ -1193,6 +1302,19 @@
         option.textContent = (publications[name] && publications[name].label) || name;
         purposeEl.appendChild(option);
       });
+
+      /* The export's style switcher, from the manifest for the same reason as everything
+         else on this page: the layouts are a declared vocabulary, and a list written here
+         would be a second copy to keep in step with `config/sources.yaml`. */
+      Object.keys(layouts).sort().forEach(function (name) {
+        var option = document.createElement("option");
+        option.value = name;
+        option.textContent = layouts[name].label || name;
+        if (layouts[name].note) option.title = layouts[name].note;
+        styleEl.appendChild(option);
+      });
+      styleEl.value = defaultLayout();
+      describeStyle();
 
       sourcesEl.addEventListener("change", function () { refresh(); });
     }
@@ -1577,8 +1699,15 @@
 
     function renderExport(edition, result) {
       var kept = keptOf(result);
-      var listing = buildListing(edition, kept, document, selectedTemplate());
+      var template = selectedTemplate();
+      var listing = buildListing(edition, kept, document, template);
       exportEl.replaceChildren.apply(exportEl, Array.prototype.slice.call(listing.childNodes));
+      /* The preview carries the chosen style too. A preview in one shape and an export in
+         another is the mismatch that let an empty download ship: what is on screen has to
+         be what leaves. */
+      Object.keys(EXPORT_STYLES).forEach(function (name) {
+        exportEl.classList.toggle("style-" + name, name === template);
+      });
       copyStateEl.textContent = "";
       $("export-count").textContent = kept.length === result.included.length
         ? kept.length + " event(s), all of them"
@@ -1619,6 +1748,10 @@
       }
       if (nowEl.value) params.set("now", nowEl.value);
       if (purposeEl.value) params.set("purpose", purposeEl.value);
+      /* Only an override travels. A link carrying the layout its own purpose already
+         declares would pin it, so a later change to that purpose's template would not
+         reach anybody holding the link. */
+      if (styleEl.value !== declaredTemplate()) params.set("style", styleEl.value);
       params.set("sources", selectedSlugs().join(","));
       var out = Object.keys(dropped);
       if (out.length) params.set("drop", out.join(","));
@@ -1747,6 +1880,8 @@
       if (params.has("deadlinetime")) deadlineTime.value = params.get("deadlinetime");
       if (params.has("now")) nowEl.value = params.get("now");
       if (params.has("purpose")) purposeEl.value = params.get("purpose");
+      styleEl.value = params.get("style") || declaredTemplate();
+      describeStyle();
       /* After the purpose, because whether there is a deadline at all depends on it. */
       deadlineDate.value = deadlineDeclared()
         ? params.get("deadline") || defaultDeadlineDate(pubDate.value)
@@ -1774,8 +1909,19 @@
     /* Choosing a publication changes its schedule, so the date it resets to changes with
        it. Re-deriving beats leaving a Monday date selected under a Thursday schedule. */
     purposeEl.addEventListener("change", function () {
+      // The publication's own layout is what an editor almost always wants, so choosing
+      // one presets the switcher. They can still change it afterwards; it is preset on
+      // each purpose change rather than forced on every redraw.
+      styleEl.value = declaredTemplate();
+      describeStyle();
       resetToNextEdition();
       refresh();
+    });
+
+    styleEl.addEventListener("change", function () {
+      describeStyle();
+      if (lastEdition) renderExport(lastEdition, lastResult);
+      syncQueryState();
     });
 
     $("reset").addEventListener("click", function () { resetToNextEdition(); refresh(); });
@@ -1821,7 +1967,7 @@
     });
 
     $("copy").addEventListener("click", function () {
-      var html = inlineStyles(exportEl.innerHTML);
+      var html = inlineStyles(exportEl.innerHTML, selectedTemplate());
       var text = exportEl.innerText || exportEl.textContent || "";
       if (!html) return;
       var done = function () { copyStateEl.textContent = "Copied."; };
@@ -1845,7 +1991,7 @@
     });
 
     $("download").addEventListener("click", function () {
-      var doc = exportDocument(exportEl);
+      var doc = exportDocument(exportEl, selectedTemplate());
       if (!doc) return;
       download(doc, "text/html;charset=utf-8",
                "events-newsletter-" + (pubDate.value || "edition") + ".html");
@@ -1893,7 +2039,8 @@
       zonedToUTC: zonedToUTC, utcStamp: utcStamp, deadlineEvent: deadlineEvent,
       deadlineIcs: deadlineIcs, googleCalendarUrl: googleCalendarUrl,
       icsText: icsText, foldLine: foldLine, sentence: sentence,
-      EXPORT_STYLES: EXPORT_STYLES,
+      EXPORT_STYLES: EXPORT_STYLES, stylesFor: stylesFor,
+      DEFAULT_TEMPLATE: DEFAULT_TEMPLATE, spansWholeDays: spansWholeDays,
       partition: partition, hoursBetween: hoursBetween
     };
   }

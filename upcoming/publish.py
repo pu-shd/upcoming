@@ -91,6 +91,9 @@ class Tree:
     #: simulator reads its schedules and layouts rather than holding copies -- the same
     #: discipline that keeps the source list out of the JavaScript.
     purposes: Mapping[str, Any] = field(default_factory=dict)
+    #: The export layouts, likewise: the page offers them by label and marks one default
+    #: without holding a list of its own.
+    templates: Mapping[str, Any] = field(default_factory=dict)
 
     def add(self, path: str, body: str, record: PublishedFeed) -> None:
         self.files[path] = body
@@ -201,7 +204,7 @@ def assemble(
     ``generated_at`` is passed in rather than read from the clock here, so a caller can
     make a run reproducible and so nothing in this module reaches for the time.
     """
-    tree = Tree(purposes=registry.purposes)
+    tree = Tree(purposes=registry.purposes, templates=registry.templates)
     was = previous_status(root)
     #: slug -> why a combined feed built from it is not fully current. Recorded during the
     #: per-source pass and read during the combo pass, so a combo never has to guess at the
@@ -372,6 +375,7 @@ def status_document(tree: Tree, *, generated_at: str) -> str:
     document: dict[str, Any] = {
         "generatedAt": generated_at,
         **({"purposes": dict(tree.purposes)} if tree.purposes else {}),
+        **({"templates": dict(tree.templates)} if tree.templates else {}),
         "summary": {
             **summary,
             "events": sum(f.events for f in tree.feeds if f.path.startswith("feeds/")),
