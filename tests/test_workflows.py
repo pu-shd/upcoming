@@ -270,3 +270,41 @@ def test_no_heredoc_terminator_is_indented(name: str) -> None:
                     continue
                 closers = [ln for ln in script.splitlines() if ln.rstrip() == marker]
                 assert closers, f"{name}: heredoc <<{marker} is never closed at column 0"
+
+
+# --------------------------------------------------------------------------------------
+# Action versions
+# --------------------------------------------------------------------------------------
+
+
+def _uses() -> dict[str, str]:
+    """Every `uses:` across the workflows, as action -> the versions it is pinned at."""
+    found: dict[str, set[str]] = {}
+    for path in sorted(WORKFLOWS.glob("*.yml")):
+        for match in re.finditer(r"uses:\s*([\w-]+/[\w-]+)@(\S+)", path.read_text()):
+            found.setdefault(match.group(1), set()).add(match.group(2))
+    return {action: ", ".join(sorted(versions)) for action, versions in found.items()}
+
+
+def test_an_action_is_pinned_to_one_version_everywhere() -> None:
+    """Four workflows check out and set up Python. Two spellings of one action version is
+    a difference nobody chose, and the older one ages into a deprecation on its own."""
+    for action, versions in _uses().items():
+        assert "," not in versions, f"{action} is used at {versions}"
+
+
+def test_the_two_pages_actions_move_together() -> None:
+    """They are a pair: `upload-pages-artifact` writes the artifact and `deploy-pages`
+    is what consumes it, and the artifact format has changed across majors before.
+
+    Dependabot proposes them as separate pull requests, so merging one and not the other
+    is a single click away -- and nothing else here would catch it. The tests workflow
+    does not run either action, because neither belongs to a pull request's build; the
+    first sign would be a failed deploy on main, or a green one that published nothing.
+    """
+    versions = _uses()
+    upload = versions["actions/upload-pages-artifact"]
+    deploy = versions["actions/deploy-pages"]
+    assert upload == deploy, (
+        f"upload-pages-artifact@{upload} against deploy-pages@{deploy}; bump both or neither"
+    )

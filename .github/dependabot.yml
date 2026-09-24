@@ -27,3 +27,12 @@ updates:
     commit-message:
       prefix: "deps(actions)"
     labels: [dependencies]
+    # One pull request for the lot. Ungrouped, the first run opened three -- including
+    # `upload-pages-artifact` and `deploy-pages`, which are a pair: one writes the Pages
+    # artifact and the other consumes it. Merging one of those and not the other is a
+    # single click away, and no pull request can catch it, because neither action runs
+    # outside a publish. `test_the_two_pages_actions_move_together` is the backstop;
+    # this is what stops the situation arising.
+    groups:
+      actions:
+        patterns: ["*"]

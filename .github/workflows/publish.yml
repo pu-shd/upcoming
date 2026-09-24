@@ -177,7 +177,7 @@ jobs:
           git push -q "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" HEAD:published
 
       - name: Upload the Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -202,4 +202,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
