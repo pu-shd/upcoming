@@ -607,6 +607,23 @@
       var block = doc.createElement("div");
       block.className = "ev";
 
+      /* Grouped the way their own email is, rather than as one run of paragraphs.
+       *
+       * Mailchimp builds that edition from text blocks with 12px of padding top and
+       * bottom: the title and its attribution share one block, the speaker and the
+       * when-and-where line share another, and the blurb and the button are blocks of
+       * their own. So lines inside a group sit tight on the leading and the gaps fall
+       * between groups.
+       *
+       * Doing the same here is also what makes the spacing survive a field being absent.
+       * Margins on individual paragraphs cannot: three of the eight entries carry no
+       * attribution and three carry no speaker, and every combination would need its own
+       * first-of-group rule. A sibling combinator would express it in one line and is no
+       * use -- Outlook does not honour them, and `inlineStyles` keys on `tag.class`.
+       */
+      var head = doc.createElement("div");
+      head.className = "ev-head";
+
       var title = doc.createElement("p");
       title.className = "ev-title";
       if (item.urlRef) {
@@ -624,7 +641,7 @@
         flag.textContent = "  [no title announced yet — replace before sending]";
         title.appendChild(flag);
       }
-      block.appendChild(title);
+      head.appendChild(title);
 
       /* One verb, generated. Their edition also says "Co-sponsored by" and "Presented
          by", but neither is in any feed and claiming one would be inventing a fact. */
@@ -647,17 +664,12 @@
             hosted.appendChild(plain);
           }
         });
-        block.appendChild(hosted);
+        head.appendChild(hosted);
       }
+      block.appendChild(head);
 
-      // Unlabelled, as their edition writes it: "Taylor Webb, Department of Psychology".
-      if (item.speakers.length) {
-        var who = doc.createElement("p");
-        who.className = "ev-speaker";
-        who.textContent = item.speakers.join("; ");
-        block.appendChild(who);
-      }
-
+      /* Before the speaker, as their edition orders it -- the blurb explains the series
+         and the speaker belongs with the time and place, not adrift above a paragraph. */
       if (item.description) {
         var blurb = doc.createElement("p");
         blurb.className = "ev-blurb";
@@ -665,10 +677,22 @@
         block.appendChild(blurb);
       }
 
+      var detail = doc.createElement("div");
+      detail.className = "ev-detail";
+
+      // Unlabelled, as their edition writes it: "Taylor Webb, Department of Psychology".
+      if (item.speakers.length) {
+        var who = doc.createElement("p");
+        who.className = "ev-speaker";
+        who.textContent = item.speakers.join("; ");
+        detail.appendChild(who);
+      }
+
       var when = doc.createElement("p");
       when.className = "ev-when";
       when.textContent = whenAndWhere(item);
-      block.appendChild(when);
+      detail.appendChild(when);
+      block.appendChild(detail);
 
       /* Their "Learn More" is a pink pill, so ours is too -- `ev-button` rather than
          `ev-link`, because an underlined black link inside a filled button reads as a
@@ -948,6 +972,12 @@
    * The colours are literal rather than tokens for the same reason: the exported file
    * leaves this site, where nothing defines `--dim`.
    */
+  /* The DaIS email's own type and colour, kept in one place because fourteen rules
+     repeat them and a typo in one would be invisible against thirteen correct ones. */
+  var DAIS_FAMILY = "'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif";
+  var DAIS_FONT = "font-family: " + DAIS_FAMILY + "; font-weight: 400; line-height: 1.5; ";
+  var DAIS_CENTRED = " text-align: center; color: #000000;";
+
   var EXPORT_STYLES = {
     /* The Princeton Engineering shape: left-aligned, a serif edition heading, a ruled day
        heading, and the editors' own bold field labels. */
@@ -979,35 +1009,55 @@
        email; it is written here as a literal for the same reason every other colour is,
        since the exported file leaves this site. */
     "inline-date": {
-      "h2.edition": "font: 400 26px/1.3 'Helvetica Neue', Helvetica, Arial, Verdana, "
-        + "sans-serif; margin: 0 0 24px; text-align: center; color: #000000;",
-      "div.ev": "margin: 0 0 28px; text-align: center;",
-      "p.ev-title": "font: 400 22px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
-        + "sans-serif; margin: 0 0 4px; text-align: center; color: #000000;",
+      "h2.edition": DAIS_FONT + "font-size: 26px; margin: 0 0 32px;" + DAIS_CENTRED,
+      /* The measure, and the reason centred text needs one: a centred line is read from
+         a ragged left edge, so it stays legible for far fewer characters than a flush
+         one. `margin: auto` is what actually centres the column -- `text-align` alone
+         centres the text inside a block that is still sitting wherever its width put it,
+         which is how the preview came to look a little to the left of everything. */
+      "div.ev": "max-width: 544px; margin: 0 auto 32px;" + DAIS_CENTRED,
+      /* Groups. Tight inside, evenly spaced between -- 24px, which is the 12px of top
+         and bottom padding Mailchimp gives each of their text blocks. */
+      "div.ev-head": "margin: 0;" + DAIS_CENTRED,
+      "div.ev-detail": "margin: 24px 0 0;" + DAIS_CENTRED,
+      "p.ev-title": DAIS_FONT + "font-size: 22px; margin: 0;" + DAIS_CENTRED,
       "a.ev-link": "color: #000000; text-decoration: underline;",
-      "p.ev-hosted": "font: italic 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, "
-        + "Verdana, sans-serif; margin: 0 0 12px; text-align: center; color: #000000;",
-      "p.ev-speaker": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
-        + "sans-serif; margin: 0; text-align: center; color: #000000;",
-      "p.ev-blurb": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
-        + "sans-serif; margin: 0 0 4px; text-align: center; color: #000000;",
-      "p.ev-when": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
-        + "sans-serif; margin: 0 0 16px; text-align: center; color: #000000;",
-      "p.ev-more": "margin: 0; text-align: center;",
+      "p.ev-hosted": DAIS_FONT + "font-size: 16px; font-style: italic; margin: 0;"
+        + DAIS_CENTRED,
+      "p.ev-blurb": DAIS_FONT + "font-size: 16px; margin: 24px 0 0;" + DAIS_CENTRED,
+      "p.ev-speaker": DAIS_FONT + "font-size: 16px; margin: 0;" + DAIS_CENTRED,
+      "p.ev-when": DAIS_FONT + "font-size: 16px; margin: 0;" + DAIS_CENTRED,
+      "p.ev-more": "margin: 24px 0 0;" + DAIS_CENTRED,
       /* `display: inline-block` with padding, not a table: a real Mailchimp button is a
          nested table, and pasting one in would fight the editor's own block structure. */
       "a.ev-button": "background-color: #EC2770; border: 2px solid #000000; "
         + "border-radius: 50px; color: #ffffff; display: inline-block; "
-        + "font: 400 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif; "
-        + "padding: 16px 28px; text-align: center; text-decoration: none;",
-      "span.placeholder-flag": "font: 400 14px/1.5 'Helvetica Neue', Helvetica, Arial, "
-        + "Verdana, sans-serif; color: #9a6700;",
+        + "font: 400 16px/1.2 " + DAIS_FAMILY + "; "
+        + "padding: 14px 28px; text-align: center; text-decoration: none;",
+      "span.placeholder-flag": DAIS_FONT + "font-size: 14px; color: #9a6700;",
       "a.sponsor-link": "color: #000000; text-decoration: underline;",
       "span.sep": "color: inherit;",
-      "hr.ev-rule": "border: 0; border-top: 2px dotted #EC2770; margin: 0 0 28px;",
-      "p.empty": "font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, Verdana, "
-        + "sans-serif; text-align: center;"
+      /* Full width while the events are inset, as in their edition: the divider block
+         has no side padding there and the text blocks have 24px of it. */
+      "hr.ev-rule": "border: 0; border-top: 2px dotted #EC2770; margin: 0 0 32px;",
+      "p.empty": DAIS_FONT + "font-size: 16px; margin: 0;" + DAIS_CENTRED
     }
+  };
+
+  /**
+   * The wrapper the downloaded file puts the listing in, per layout.
+   *
+   * Not part of `EXPORT_STYLES`: every key there is a `tag.class` selector that
+   * `inlineStyles` matches against the markup, and a key that named no element would
+   * break the check that the two agree. The wrapper belongs to the document, not to the
+   * listing -- the copied markup has none, because Mailchimp supplies its own.
+   */
+  var EXPORT_WRAPPERS = {
+    "day-grouped": "max-width: 640px; margin: 24px auto; padding: 0 16px; color: #17181c;",
+    /* Their template's own measure and colours, so opening the file looks like the
+       email rather than like this site with the email pasted into it. */
+    "inline-date": "max-width: 600px; margin: 24px auto; padding: 24px 16px; "
+      + "background: #ffffff; color: #000000;"
   };
 
   /** The rules for one layout, falling back to the default rather than to nothing. */
@@ -1071,7 +1121,8 @@
     return "<!doctype html>\n<meta charset=\"utf-8\">\n<title>" +
       (titleEl ? titleEl.textContent : "Events") + "</title>\n" +
       "<style>\n" + exportStylesheet(template) + "\n</style>\n" +
-      '<div style="max-width: 640px; margin: 24px auto; padding: 0 16px; color: #17181c;">\n' +
+      '<div style="' +
+      (EXPORT_WRAPPERS[template] || EXPORT_WRAPPERS[DEFAULT_TEMPLATE]) + '">\n' +
       readable(inlineStyles(body, template)) + "\n</div>\n";
   }
 
@@ -2040,6 +2091,7 @@
       deadlineIcs: deadlineIcs, googleCalendarUrl: googleCalendarUrl,
       icsText: icsText, foldLine: foldLine, sentence: sentence,
       EXPORT_STYLES: EXPORT_STYLES, stylesFor: stylesFor,
+      EXPORT_WRAPPERS: EXPORT_WRAPPERS,
       DEFAULT_TEMPLATE: DEFAULT_TEMPLATE, spansWholeDays: spansWholeDays,
       partition: partition, hoursBetween: hoursBetween
     };
