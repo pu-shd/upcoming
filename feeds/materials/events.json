@@ -224,6 +224,53 @@
     "mappingConflict": false
   },
   {
+    "id": "materials:ps_events:4246:delta:0",
+    "guid": "ps_events:4246:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T16:00:00Z",
+    "endsAt": "2026-09-29T17:00:00Z",
+    "startTime": "2026-09-29T12:00:00",
+    "endTime": "2026-09-29T13:00:00",
+    "timezone": "America/New_York",
+    "title": "The Future of AI-empowered Material Science",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "006"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/future-ai-empowered-material-science",
+    "content": "The Future of AI-empowered Material ScienceAbstract: This talk will discuss the present and future of AI/ML accelerated material discovery, especially using examples of synchrotron methods for soft materials. Autonomous experimentation (AE) based on Bayesian optimization was used to automate x-ray scattering experiments. We probed the scientific creativity of large language models (LLMs). Agentic AI was deployed to operate a beamline, and perform materials simulations. We provide thoughts about high-value ways to deploy frontier AI for",
+    "rawEventDetails": "Details Event Description The Future of AI-empowered Material Science Abstract : This talk will discuss the present and future of AI/ML accelerated material discovery, especially using examples of synchrotron methods for soft materials. Autonomous experimentation (AE) based on Bayesian optimization was used to automate x-ray scattering experiments. We probed the scientific creativity of large language models (LLMs). Agentic AI was deployed to operate a beamline, and perform materials simulations. We provide thoughts about high-value ways to deploy frontier AI for experimental science. Sponsor AI for Accelerating Invention",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "The Future of AI-empowered Material Science",
+    "locationRaw": "Friend Center 006",
+    "mappingRules": [
+      "materials:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "materials:ps_events:4101:delta:0",
     "guid": "ps_events:4101:delta:0",
     "sources": [

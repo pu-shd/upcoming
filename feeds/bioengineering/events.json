@@ -124,6 +124,66 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2781:delta:0",
+    "guid": "ps_events:2781:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-01T20:00:00Z",
+    "endsAt": "2026-10-01T21:00:00Z",
+    "startTime": "2026-10-01T16:00:00",
+    "endTime": "2026-10-01T17:00:00",
+    "timezone": "America/New_York",
+    "title": "BioE Colloquium: Trainee Talk",
+    "speakers": [
+      {
+        "name": "Ananya Chakravarti",
+        "affiliation": ""
+      },
+      {
+        "name": "Beena Lad",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Ananya Chakravarti; Beena Lad",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/bioe-colloquium-trainee-talk",
+    "content": "Pizza will be available 15 minutes prior to the start of the seminar.",
+    "rawEventDetails": "Speakers Ananya Chakravarti Affiliation Joseph Lab Beena Lad Affiliation Toettcher Lab Details Event Description Pizza will be available 15 minutes prior to the start of the seminar.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "BioE Colloquium: Trainee Talk",
+    "locationRaw": "",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "bioengineering:ps_events:2766:delta:0",
     "guid": "ps_events:2766:delta:0",
     "sources": [
