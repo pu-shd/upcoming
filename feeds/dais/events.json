@@ -728,6 +728,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4591:delta:0",
+    "guid": "ps_events:4591:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-05T16:00:00Z",
+    "endsAt": "2026-10-05T17:30:00Z",
+    "startTime": "2026-10-05T12:00:00",
+    "endTime": "2026-10-05T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Can LLMs Reason? A Hands-On Exploration",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Louis A. Simpson International Building",
+      "id": "",
+      "detail": "B60"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/can-llms-reason-hands-exploration",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Can LLMs Reason? A Hands-On Exploration",
+    "locationRaw": "Louis A. Simpson International Building, B60",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4551:delta:0",
     "guid": "ps_events:4551:delta:0",
     "sources": [
@@ -770,6 +818,102 @@
       "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4596:delta:0",
+    "guid": "ps_events:4596:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-06T21:00:00Z",
+    "endsAt": "2026-10-06T22:30:00Z",
+    "startTime": "2026-10-06T17:00:00",
+    "endTime": "2026-10-06T18:30:00",
+    "timezone": "America/New_York",
+    "title": "How to Reason with Words: Models, Metaphors, Metaphysics",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Betts Auditorium",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/how-reason-words-models-metaphors-metaphysics",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "How to Reason with Words: Models, Metaphors, Metaphysics",
+    "locationRaw": "Betts Auditorium",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4601:delta:0",
+    "guid": "ps_events:4601:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-08T22:00:00Z",
+    "endsAt": "2026-10-09T00:00:00Z",
+    "startTime": "2026-10-08T18:00:00",
+    "endTime": "2026-10-08T20:00:00",
+    "timezone": "America/New_York",
+    "title": "Leif Weatherby & Mel Andrews in conversation on AI",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Labyrinth Books 122 Nassau Street, Princeton",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/leif-weatherby-mel-andrews-conversation-ai",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Leif Weatherby & Mel Andrews in conversation on AI",
+    "locationRaw": "Labyrinth Books 122 Nassau Street, Princeton",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
