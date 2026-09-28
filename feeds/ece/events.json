@@ -1,57 +1,5 @@
 [
   {
-    "id": "ece:ps_events:10921:delta:0",
-    "guid": "ps_events:10921:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-08-28T15:00:00Z",
-    "endsAt": "2026-08-28T17:00:00Z",
-    "startTime": "2026-08-28T11:00:00",
-    "endTime": "2026-08-28T13:00:00",
-    "timezone": "America/New_York",
-    "title": "Securing Domain Validation Against Network Attacks: Deployable Defenses for the Web PKI",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Final Public Oral Examinations,Final Public Orals",
-    "tags": [
-      "fpo"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Final Public Oral Examinations",
-      "Final Public Orals"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "EQUAD",
-      "id": "",
-      "detail": "J323"
-    },
-    "urlRef": "https://ece.princeton.edu/events/securing-domain-validation-against-network-attacks-deployable-defenses-web-pki",
-    "content": "HTTPS underpins secure communication on the Web, but its trust is bootstrapped through domain control validation (DV) : a challenge-response protocol through which Certificate Authorities (CAs) verify the requester' s control of a domain name. DV relies on unauthenticated protocols (including BGP, DNS, and HTTP), and is therefore vulnerable to network-level attacks that can enable fraudulent certificate issuance. This thesis hardens DV against network attacks through three deployable defenses spanning ecosystem-wide protection and",
-    "rawEventDetails": "Speaker Grace Cimaszewski Details Event Description HTTPS underpins secure communication on the Web, but its trust is bootstrapped through domain control validation (DV) : a challenge-response protocol through which Certificate Authorities (CAs) verify the requester' s control of a domain name. DV relies on unauthenticated protocols (including BGP, DNS, and HTTP), and is therefore vulnerable to network-level attacks that can enable fraudulent certificate issuance. This thesis hardens DV against network attacks through three deployable defenses spanning ecosystem-wide protection and opt-in cryptographic guarantees, and translates them into real-world standards and deployment. First, we quantify and strengthen multi-perspective issuance corroboration (MPIC). Using a custom full-graph DNS resolver, we present the first Internet-scale measurement of DV' s complete attack surface, covering 1. 1 M domains and over 31 billion DNS queries. Bringing DNS into scope drops single-perspective resilience from 86% to 38%; strategic placement of five diverse vantage points with a unanimous quorum policy restores it to 97%. These findings shaped CA/ Browser Forum Ballot SC-067v3, which standardized the core MPIC framework evaluated here and mandated it for server certificate issuance starting September 2025. MPIC has thus protected over 1. 5 billion certificates to date. Second, we present cryptographically-secure DV (\"crypto-DV\"), a framework providing cryptographic issuance guarantees for opt-in domains. Using DNSSEC trust roots, CAs boot-strap secure channels with domain owners and validate DV challenges with cryptographic integrity. A fail-closed CAA policy enforces this protection under partial deployment: non-implementing CAs must refuse issuance. Its deployment prerequisite, DNSSEC validation by CAs, was mandated by CA/ Browser Forum Ballot SC-085 v2 effective March 2026, and the design informed an IETF working-group draft. Third, we propose secure channel DNS, a scalable alternative to DNSSEC' s stalled per-zone adoption that secures resolver-nameserver communications via encrypted channels. Measuring ~449M domains from Certificate Transparency logs, we find that eight providers host authoritative DNS for 47.7% of measured domains, suggesting that deployment at a few operators could protect resolution for much of the Web. We analyze how SVCB records can support this abstraction and contribute an open-source implementation in Hickory DNS for deployment at Let' a Encrypt. Together, these results show a deployable path for authenticated DNS beyond DNSSEC. Adviser: Prateek Mittal",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Securing Domain Validation Against Network Attacks: Deployable Defenses for the Web PKI",
-    "locationRaw": "EQUAD J323",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ece:ps_events:10946:delta:0",
     "guid": "ps_events:10946:delta:0",
     "sources": [
