@@ -3803,9 +3803,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "CS",
       "id": "",
-      "detail": ""
+      "detail": "105"
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/arash",
     "content": "Abstract: Robotic assembly in construction offers opportunities to alleviate labor shortages, reduce workers\u2019 exposure to physically demanding tasks, and expand the possibilities for novel architecture. However, reliable robotic assembly in construction remains challenging due to uncertainties associated with variability in component geometry and",
@@ -3816,11 +3816,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Advancing Robotic Assembly in Construction through Learning and Adaptive Control",
-    "locationRaw": "To be determined",
+    "locationRaw": "CS 105",
     "mappingRules": [
       "robotics:summary-is-title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -5593,9 +5593,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "CS",
       "id": "",
-      "detail": ""
+      "detail": "105"
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/designing-robots-intelligent-disobedience",
     "content": "Abstract: A prevalent assumption in human-robot teaming is that the artificial teammate should be obedient and compliant. In this talk, I challenge the assumption that autonomous robots should always obey instructions and comply with our expectations. I argue that sometimes, to maximize their potential in the team, robots should employ",
@@ -5606,11 +5606,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Designing Robots with Intelligent Disobedience",
-    "locationRaw": "To be determined",
+    "locationRaw": "CS 105",
     "mappingRules": [
       "robotics:summary-is-title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
