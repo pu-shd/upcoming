@@ -1,10 +1,10 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-09-29T19:44:25Z",
+  "generatedAt": "2026-09-29T20:04:07Z",
   "sources": {
     "ai": {
-      "etag": "\"1790711064\"",
-      "lastModified": "Tue, 29 Sep 2026 19:44:24 GMT",
+      "etag": "\"1790712221\"",
+      "lastModified": "Tue, 29 Sep 2026 20:03:41 GMT",
       "lastEnrichedAt": "2026-09-28T22:03:14Z"
     },
     "bioengineering": {
@@ -28,9 +28,9 @@
       "lastEnrichedAt": "2026-09-29T16:34:28Z"
     },
     "dais": {
-      "etag": "\"1790651443\"",
-      "lastModified": "Tue, 29 Sep 2026 03:10:43 GMT",
-      "lastEnrichedAt": "2026-09-28T20:03:17Z"
+      "etag": "\"1790712223\"",
+      "lastModified": "Tue, 29 Sep 2026 20:03:43 GMT",
+      "lastEnrichedAt": "2026-09-29T20:03:38Z"
     },
     "ece": {
       "etag": "\"1790710101\"",
@@ -55,7 +55,7 @@
     "nam": {
       "etag": "\"1790651280\"",
       "lastModified": "Tue, 29 Sep 2026 03:08:00 GMT",
-      "lastEnrichedAt": "2026-09-28T20:03:17Z"
+      "lastEnrichedAt": "2026-09-29T20:03:38Z"
     },
     "orfe": {
       "etag": "\"1790689255\"",
