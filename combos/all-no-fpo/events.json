@@ -3986,7 +3986,7 @@
     "startTime": "2026-10-05T16:00:00",
     "endTime": "2026-10-05T17:00:00",
     "timezone": "America/New_York",
-    "title": "Refocusing Mammalian Synbio to Speak the Same Language as Biology",
+    "title": "Refocusing Mammalian Synbio to Speak the Language of Biology (and Improve Human Health)",
     "speakers": [
       {
         "name": "Ron Weiss",
@@ -4011,15 +4011,15 @@
       "id": "",
       "detail": "E105"
     },
-    "urlRef": "https://bioengineering.princeton.edu/events/2026/refocusing-mammalian-synbio-speak-same-language-biology",
-    "content": "Refreshments will be available 15 minutes prior to the start of the seminar.",
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/refocusing-mammalian-synbio-speak-language-biology-and-improve-human-health",
+    "content": "Synthetic biology is revolutionizing how we conceptualize and approach the engineering of biological systems. Recent advances in the field are allowing us to expand beyond the construction and analysis of small gene networks towards the implementation of complex multicellular systems with a variety of applications. In this talk I will describe our integrated computational / experimental approach to engineering complex behavior in a variety of cells, with a focus on mammalian cells. In our research, we appropriate design principles from electrical engineering and other established fields.",
     "rawEventDetails": "Speaker Ron Weiss Affiliation Massachusetts Institute of Technology Details Event Description Refreshments will be available 15 minutes prior to the start of the seminar.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Refocusing Mammalian Synbio to Speak the Same Language as Biology",
+    "summaryRaw": "Refocusing Mammalian Synbio to Speak the Language of Biology (and Improve Human Health)",
     "locationRaw": "BioE E105",
     "mappingRules": [
       "bioengineering:summary-is-title"
