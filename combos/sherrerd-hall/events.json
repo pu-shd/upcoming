@@ -836,6 +836,60 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5341:delta:0",
+    "guid": "ps_events:5341:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-09-29T19:00:00Z",
+    "endsAt": "2026-09-29T20:00:00Z",
+    "startTime": "2026-09-29T15:00:00",
+    "endTime": "2026-09-29T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Tech Soc Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/tech-soc-reading-group",
+    "content": "The TechSoc Reading Group will talk about the future of work and the labor economy in light of advancements in powerful AI. We will center our discussion around Anthropic's recent article on potential economic scenarios and David Graeber's 2013 essay on the modern proliferation of seemingly meaningless jobs. If you need additional information please contact Mihir Kshirsagar at mihir@princeton.edu.",
+    "rawEventDetails": "Details Event Description The TechSoc Reading Group will talk about the future of work and the labor economy in light of advancements in powerful AI. We will center our discussion around Anthropic's recent article on potential economic scenarios and David Graeber's 2013 essay on the modern proliferation of seemingly meaningless jobs. If you need additional information please contact Mihir Kshirsagar at [email protected] . Subscribe to the email list.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Tech Soc Reading Group",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4061:delta:0",
     "guid": "ps_events:4061:delta:0",
     "sources": [
