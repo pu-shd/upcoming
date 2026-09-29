@@ -5543,7 +5543,7 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "Chancellor Green Rotunda",
       "id": "",
       "detail": ""
     },
@@ -5556,11 +5556,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "A.I. x Journalism: How to Report from the Digital Wild West",
-    "locationRaw": "TBA",
+    "locationRaw": "Chancellor Green Rotunda",
     "mappingRules": [
       "citp:title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
