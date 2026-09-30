@@ -549,7 +549,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/debarghya-mukherjee-boston-university",
-    "content": "",
+    "content": "Abstract: Self-distillation has emerged as a promising technique for improving model performance in modern machine learning systems. We develop the statistical foundations of self-distillation in spiked covariance models by analyzing a broad class of estimators\\, namely spectral shrinkage estimators. We establish that for spiked covariance matrices with $\\rk$ spikes\\, $\\rk$-step self-distillation achieves optimal performance among spectral shrinkage estimators\\, outperforming well-known estimators in statistics and machine learning. Moreover\\, we show that $\\rk$",
     "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
