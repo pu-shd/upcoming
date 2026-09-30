@@ -1826,55 +1826,6 @@
     "mappingConflict": false
   },
   {
-    "id": "nam:ps_events:871:delta:0",
-    "guid": "ps_events:871:delta:0",
-    "sources": [
-      "nam"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-09T14:30:00Z",
-    "endsAt": "2026-10-09T16:00:00Z",
-    "startTime": "2026-10-09T10:30:00",
-    "endTime": "2026-10-09T12:00:00",
-    "timezone": "America/New_York",
-    "title": "A NAM Friday Talks Talk",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "NAM Friday Talks",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-1",
-    "content": "Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
-    "rawEventDetails": "Details Event Description Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "NAM Friday Talks",
-    "locationRaw": "Bendheim House, 103",
-    "mappingRules": [
-      "nam:series-awaiting-title"
-    ],
-    "locationRule": "comma_room",
-    "summaryRest": "",
-    "titleSource": "fallback-template",
-    "titleIsPlaceholder": true,
-    "mappingConflict": false
-  },
-  {
     "id": "mae:ps_events:4751:delta:0",
     "guid": "ps_events:4751:delta:0",
     "sources": [
@@ -3229,7 +3180,7 @@
       "detail": "103"
     },
     "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-0",
-    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowAkshay Jagadish, NAM Postdoctoral Research Fellow",
+    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowMel Andrews, NAM Postdoctoral Research Fellow",
     "rawEventDetails": "Details Event Description Anya Tsvetkov, NAM Postdoctoral Research Fellow Akshay Jagadish, NAM Postdoctoral Research Fellow",
     "rawExtractAbstract": "",
     "rawExtractBio": "",

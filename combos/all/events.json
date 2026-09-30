@@ -4805,8 +4805,8 @@
     "mappingConflict": false
   },
   {
-    "id": "nam:ps_events:871:delta:0",
-    "guid": "ps_events:871:delta:0",
+    "id": "nam:ps_events:886:delta:0",
+    "guid": "ps_events:886:delta:0",
     "sources": [
       "nam"
     ],
@@ -4816,14 +4816,12 @@
     "startTime": "2026-10-09T10:30:00",
     "endTime": "2026-10-09T12:00:00",
     "timezone": "America/New_York",
-    "title": "A NAM Friday Talks Talk",
+    "title": "Understanding relational memory in brains and LLMs",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
-    "series": "NAM Friday Talks",
-    "tags": [
-      "seminar"
-    ],
+    "series": "",
+    "tags": [],
     "purposes": [
       "dais-newsletter"
     ],
@@ -4834,23 +4832,23 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-1",
-    "content": "Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
-    "rawEventDetails": "Details Event Description Kim Stachenfeld, Senior Research Scientist, Google DeepMind",
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/understanding-relational-memory-brains-and-llms",
+    "content": "",
+    "rawEventDetails": "",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "NAM Friday Talks",
-    "locationRaw": "Bendheim House, 103",
+    "summaryRaw": "Understanding relational memory in brains and LLMs",
+    "locationRaw": "Bendheim House 103",
     "mappingRules": [
-      "nam:series-awaiting-title"
+      "nam:title"
     ],
-    "locationRule": "comma_room",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-template",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -6335,7 +6333,7 @@
       "detail": "103"
     },
     "urlRef": "https://nam.ai.princeton.edu/events/2026/do-neural-networks-have-world-models",
-    "content": "Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia UniversityTalk Abstract: It is often claimed that neural networks build internal \"world models.\" But the term is used in many conflicting ways, and the evidence offered for it is rarely examined. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue",
+    "content": "Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia UniversityTalk Abstract: It is often claimed that neural networks construct models of the world (\"world models\") and don't merely exploit heuristics. In this sense, they are said to understand their tasks. But it isn't always clear what having a world model amounts to, or what should count as evidence for or against. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a",
     "rawEventDetails": "Details Event Description Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia University Talk Abstract: It is often claimed that neural networks build internal \"world models.\" But the term is used in many conflicting ways, and the evidence offered for it is rarely examined. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue that many disputes about world models are merely verbal. Second, drawing on joint work with collaborators at Columbia and NYU, I apply this framework to the most celebrated case: Othello-GPT, a transformer widely taken to use a model of the Othello board. I argue that the evidence is ambiguous once we adopt the right baselines (networks that plausibly use only heuristics) and the right metrics (which attend to patterns of error and the probabilities assigned to unchosen moves). I then introduce a fourth kind of evidence that favors the heuristic interpretation: transfer-learning speed on corrupted variants of Othello. I end by considering how transfer learning might also let us apply other notions from cognitive science to neural networks, in particular algorithms and probabilistic inference.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
@@ -7636,7 +7634,7 @@
       "detail": "103"
     },
     "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-0",
-    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowAkshay Jagadish, NAM Postdoctoral Research Fellow",
+    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowMel Andrews, NAM Postdoctoral Research Fellow",
     "rawEventDetails": "Details Event Description Anya Tsvetkov, NAM Postdoctoral Research Fellow Akshay Jagadish, NAM Postdoctoral Research Fellow",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
