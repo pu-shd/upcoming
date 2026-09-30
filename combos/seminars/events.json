@@ -1949,7 +1949,7 @@
     "startTime": "2026-10-12T12:15:00",
     "endTime": "2026-10-12T13:15:00",
     "timezone": "America/New_York",
-    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Debarghya Mukherjee, Boston University",
+    "title": "Self-Distillation is Optimal Among Spectral Shrinkage Estimators in Spiked Covariance Models",
     "speakers": [
       {
         "name": "Debarghya Mukherjee",
@@ -1977,7 +1977,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/debarghya-mukherjee-boston-university",
     "content": "Abstract: Self-distillation has emerged as a promising technique for improving model performance in modern machine learning systems. We develop the statistical foundations of self-distillation in spiked covariance models by analyzing a broad class of estimators, namely spectral shrinkage estimators. We establish that for spiked covariance matrices with $\\rk$ spikes, $\\rk$-step self-distillation achieves optimal performance among spectral shrinkage estimators, outperforming well-known estimators in statistics and machine learning. Moreover, we show that $\\rk$",
-    "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawEventDetails": "Details Event Description Abstract: Self-distillation has emerged as a promising technique for improving model performance in modern machine learning systems. We develop the statistical foundations of self-distillation in spiked covariance models by analyzing a broad class of estimators, namely spectral shrinkage estimators. We establish that for spiked covariance matrices with $\\rk$ spikes, $\\rk$-step self-distillation achieves optimal performance among spectral shrinkage estimators, outperforming well-known estimators in statistics and machine learning. Moreover, we show that $\\rk$ steps are necessary for optimality: any $(\\rk-k)$-step distilled estimator is strictly suboptimal for $1 \\leq k \\leq s$. For the special subclass of isotropic covariances, we show that optimally tuned Ridge regression performs best among spectral shrinkage estimators. We also study a federated approach in which multiple data centers share spectral shrinkage estimators and a common server aggregates them to achieve optimal performance. In this case, we find that the best local rule again takes the form of self-distillation, though it differs from the optimal rule when data are hosted centrally on a single server. Together, our results show why self-distillation improves predictive performance and provide a broader statistical framework that connects it to classical shrinkage-based methods. Bio: Debarghya Mukherjee is an Assistant Professor of Mathematics and Statistics at Boston University. He received his Ph.D. from the University of Michigan and subsequently was a postdoctoral researcher in the Department of Operations Research and Financial Engineering at Princeton University. His research interests lie broadly in statistics and machine learning, with a focus on high-dimensional and nonparametric inference, empirical process theory, neural network theory, causal inference, and statistical foundations of modern AI. His recent work studies statistical theory in high dimensions and methodology for transfer learning, conditional distribution estimation, learning with dependent data, and preference learning and alignment for modern generative models. Event Category S. S. Wilks Memorial Seminar in Statistics",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1990,8 +1990,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
