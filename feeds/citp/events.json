@@ -1373,9 +1373,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "Location: TBA",
+      "name": "Robertson Hall",
       "id": "",
-      "detail": ""
+      "detail": "016"
     },
     "urlRef": "https://citp.princeton.edu/events/2026/book-talk-reboot-%E2%80%93-ai-and-race-save-democracy-beth-simone-noveck",
     "content": "Democracy is in retreat at home and abroad. Our institutions are more fragile than ever. At this delicate moment, artificial intelligence has burst onto the scene\u2014a powerful technology that holds as much potential to bolster democracy as to harm it.Yet we no longer treat democracy as a design challenge we can solve. We have built extraordinary tools without yet using them where they are needed most: to forge institutions that listen more closely, decide more wisely, and act more effectively.We stand at an inflection point. Will AI tighten the grip of power\u2014or help rebuild",
@@ -1386,11 +1386,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Book Talk - Reboot \u2013 AI and the Race to Save Democracy by Beth Simone Noveck",
-    "locationRaw": "Location: TBA",
+    "locationRaw": "Robertson Hall 016",
     "mappingRules": [
       "citp:speaker-dash-title"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
