@@ -1521,7 +1521,7 @@
     "startTime": "2026-12-01T12:15:00",
     "endTime": "2026-12-01T13:15:00",
     "timezone": "America/New_York",
-    "title": "A Talk by Alia ElKattan",
+    "title": "Examining AI-generated Political Information: Design, Ideology, and Congruence",
     "speakers": [
       {
         "name": "Alia ElKattan",
@@ -1543,23 +1543,23 @@
       "id": "",
       "detail": "306"
     },
-    "urlRef": "https://citp.princeton.edu/events/2026/alia-elkattan",
-    "content": "Talk information: TBABio:Alia ElKattan is a researcher who examines the sociopolitical implications of online platforms and emerging technologies. She obtained her Ph.D. at NYU Politics, where her research focused on how the design of technology mediates the acquisition of political information, and how to motivate and safeguard responsible, healthy, and critical engagement with emerging technologies such as large language models and conversational agents. She also has a creative technology practice which leverages play and interactive storytelling to both",
+    "urlRef": "https://citp.princeton.edu/events/2026/alia-elkattan-examining-ai-generated-political-information-design-ideology-and",
+    "content": "AI tools increasingly mediate the political information ecosystem, as AI generated content proliferates on the internet, and a larger number of people acquire political knowledge - intentionally or not - from LLMs and conversational agents. Conversely, perceptions of and attitudes towards such political content are influenced by various factors, including people\u2019s political ideologies, design considerations, and broader AI attitudes. In her research, ElKattan examines how people perceive objectivity, trust, and ideological signals in AI-generated political content based on both",
     "rawEventDetails": "Details Event Description Talk information: TBA Bio: Alia ElKattan is a researcher who examines the sociopolitical implications of online platforms and emerging technologies. She obtained her Ph.D. at NYU Politics, where her research focused on how the design of technology mediates the acquisition of political information, and how to motivate and safeguard responsible, healthy, and critical engagement with emerging technologies such as large language models and conversational agents. She also has a creative technology practice which leverages play and interactive storytelling to both demystify opaque technologies, and expand public imaginaries of alternative technological futures. ElKattan is a grantee of the Responsible Technology Youth Power Fund and a two-time winner of Mozilla Foundation\u2019s Creative Media Award for work on AI bias, data transparency, user choice in algorithmic feeds. Her work has been published in venues such as Sociological Science, FAccT, the Journal for Quantitative Description, and and been presented in media festivals including the International Documentary Festival Amsterdam (IDFA) in the Netherlands, Sheffield DocFest in the UK, and March On Festival in Washington, DC, among others. When not writing code or papers, ElKattan can most often be found playing football (soccer), skateboarding, or making playlists. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsor Center for Information Technology Policy",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Alia ElKattan",
+    "summaryRaw": "Alia ElKattan - Examining AI-generated Political Information: Design, Ideology, and Congruence",
     "locationRaw": "Sherrerd Hall 306",
     "mappingRules": [
-      "citp:bare-person-name"
+      "citp:speaker-dash-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
