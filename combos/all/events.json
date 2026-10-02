@@ -7583,6 +7583,62 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2836:delta:0",
+    "guid": "ps_events:2836:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T21:00:00Z",
+    "endsAt": "2026-11-12T22:00:00Z",
+    "startTime": "2026-11-12T16:00:00",
+    "endTime": "2026-11-12T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Extensive Gene Evolution on Laboratory Timescales",
+    "speakers": [
+      {
+        "name": "Chang Liu",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Chang Liu",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/extensive-gene-evolution-laboratory-timescales",
+    "content": "My group engineers genetic systems that accelerate the speed of gene evolution in vivo, enabling us to discover new biomolecular functions and explore sequence-to-function relationships at scale. I will summarize our development of orthogonal DNA replication (OrthoRep) to drive experimental evolution of chosen genes at 1-million times the genomic error rate. I will present applications OrthoRep to studying and engineering enzymes, antibodies, and arbitrary genes.Refreshments will be available 15 minutes prior to the start of the seminar.",
+    "rawEventDetails": "Speaker Chang Liu Affiliation University of California - Irvine Details Event Description My group engineers genetic systems that accelerate the speed of gene evolution in vivo, enabling us to discover new biomolecular functions and explore sequence-to-function relationships at scale. I will summarize our development of orthogonal DNA replication (OrthoRep) to drive experimental evolution of chosen genes at 1-million times the genomic error rate. I will present applications OrthoRep to studying and engineering enzymes, antibodies, and arbitrary genes. Refreshments will be available 15 minutes prior to the start of the seminar. Sponsor Omenn Darling Bioengineering Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Extensive Gene Evolution on Laboratory Timescales",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5296:delta:0",
     "guid": "ps_events:5296:delta:0",
     "sources": [
