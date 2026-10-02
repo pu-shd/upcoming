@@ -1,10 +1,10 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-10-02T15:03:06Z",
+  "generatedAt": "2026-10-02T15:31:55Z",
   "sources": {
     "ai": {
-      "etag": "\"1790953385\"",
-      "lastModified": "Fri, 02 Oct 2026 15:03:05 GMT",
+      "etag": "\"1790955103\"",
+      "lastModified": "Fri, 02 Oct 2026 15:31:43 GMT",
       "lastEnrichedAt": "2026-10-01T22:44:58Z"
     },
     "bioengineering": {
@@ -25,7 +25,7 @@
     "citp": {
       "etag": "\"1790936203\"",
       "lastModified": "Fri, 02 Oct 2026 10:16:43 GMT",
-      "lastEnrichedAt": "2026-10-02T09:18:09Z"
+      "lastEnrichedAt": "2026-10-02T15:31:41Z"
     },
     "dais": {
       "etag": "\"1790874172\"",
@@ -43,8 +43,8 @@
       "lastEnrichedAt": "2026-10-01T22:44:58Z"
     },
     "mae": {
-      "etag": "\"1790884724\"",
-      "lastModified": "Thu, 01 Oct 2026 19:58:44 GMT",
+      "etag": "\"1790955103\"",
+      "lastModified": "Fri, 02 Oct 2026 15:31:43 GMT",
       "lastEnrichedAt": "2026-10-01T22:44:58Z"
     },
     "materials": {
@@ -60,7 +60,7 @@
     "orfe": {
       "etag": "\"1790862754\"",
       "lastModified": "Thu, 01 Oct 2026 13:52:34 GMT",
-      "lastEnrichedAt": "2026-10-02T09:18:09Z"
+      "lastEnrichedAt": "2026-10-02T15:31:41Z"
     },
     "quantum": {
       "etag": "\"1790949757\"",
