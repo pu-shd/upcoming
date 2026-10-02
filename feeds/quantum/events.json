@@ -374,7 +374,7 @@
     },
     "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-quantum-error-correction-and-decoding-problem-aleksander-kubica",
     "content": "Title: Quantum error correction and the decoding problem Abstract: Quantum error correction is essential for making quantum computers reliable, but it poses the classical computational problem of decoding, i.e., deciding how to correct errors using indirect, noisy measurement data. These decisions must be made fast enough to keep pace with the quantum hardware. In this talk, I will discuss recent progress in quantum error correction, focusing on what makes decoding difficult and how practical algorithms address this challenge. I will also",
-    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
+    "rawEventDetails": "Details Event Description Title: Quantum error correction and the decoding problem Abstract: Quantum error correction is essential for making quantum computers reliable, but it poses the classical computational problem of decoding, i.e., deciding how to correct errors using indirect, noisy measurement data. These decisions must be made fast enough to keep pace with the quantum hardware. In this talk, I will discuss recent progress in quantum error correction, focusing on what makes decoding difficult and how practical algorithms address this challenge. I will also explore how physical insights and heuristics can guide further advances in the field. Based on arXiv: 2603.22064, 2606.18145, 2608.10081, 2609.39016. A light lunch will be served in the Bowen Atrium at 11:45am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
