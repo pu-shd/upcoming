@@ -1,52 +1,5 @@
 [
   {
-    "id": "ece:ps_events:10946:delta:0",
-    "guid": "ps_events:10946:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-03T20:30:00Z",
-    "endsAt": "2026-09-03T21:30:00Z",
-    "startTime": "2026-09-03T16:30:00",
-    "endTime": "2026-09-03T17:30:00",
-    "timezone": "America/New_York",
-    "title": "From Closed-Loop Systems to Closed-Loop Design: Full-Stack Co-Design for the AI Era",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Engineering Quadrangle",
-      "id": "",
-      "detail": "B205"
-    },
-    "urlRef": "https://ece.princeton.edu/events/closed-loop-systems-closed-loop-design-full-stack-co-design-ai-era",
-    "content": "Abstract: Computing systems are becoming increasingly closed loop. A robot continuously senses, computes, and acts in the physical world; more broadly, emerging AI applications interact dynamically with users, tools, and environments. Yet the way we design these systems remains largely open loop: models, software, hardware architectures, and implementations are developed in separate stages, with slow and incomplete feedback across layers. As a result, improvements in isolated metrics such as kernel latency, energy, or hardware utilization do",
-    "rawEventDetails": "Speaker Yakun Sophia Shao Affiliation University of California, Berkeley Details Event Description Abstract: Computing systems are becoming increasingly closed loop. A robot continuously senses, computes, and acts in the physical world; more broadly, emerging AI applications interact dynamically with users, tools, and environments. Yet the way we design these systems remains largely open loop: models, software, hardware architectures, and implementations are developed in separate stages, with slow and incomplete feedback across layers. As a result, improvements in isolated metrics such as kernel latency, energy, or hardware utilization do not necessarily translate into better end-to-end behavior. In this talk, I will argue that closing this gap requires rethinking both what we design and how we design it. The full computing stack should be treated as a connected, executable design space in which application goals, software, architecture, and implementation continuously inform one another. I will trace our efforts to close this loop: first by making cross-layer consequences observable in end-to-end applications, then by co-designing heterogeneous hardware and software around system-level requirements, and ultimately by using AI to navigate and accelerate the design process itself. I will conclude with a vision for using AI not simply to generate code or implementations, but to participate in system and architecture design itself. By making design choices, constraints, and feedback explicit and machine-operable, we can move toward a closed-loop methodology that connects application goals to deployable systems, from mission to silicon. Bio: Professor Yakun Sophia Shao is The Class of 1951 Chair Associate Professor at the Electrical Engineering and Computer Sciences department of University of California, Berkeley. Her research interests are in the area of computer architecture, with a special focus on specialized accelerator, heterogeneous architecture, and agile VLSI design methodology. Previously, she was a Senior Research Scientist at NVIDIA Research and received her Ph.D. degree in 2016 from Harvard University. She is a recipient of the 2025 Outstanding Teaching Award in EE, the 2024 Anita Borg Early Career Award, a Sloan Research Fellowship, an NSF CAREER Award, the 2022 IEEE TCCA Young Computer Architect Award, a Google Faculty Rising Stars Award in Systems Research, a Google Research Scholar Award, a Facebook Research Award, an Okawa Foundation Research Grant, and the inaugural Dr. Sudhakar Yalamanchili Award. Her work has been awarded multiple Best Paper Awards and Distinguished Artifact Awards at major hardware conferences. Sponsor Emerging Frontiers in Computer Architecture and Systems",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "From Closed-Loop Systems to Closed-Loop Design: Full-Stack Co-Design for the AI Era",
-    "locationRaw": "B205 Engineering Quadrangle",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ece:ps_events:10936:delta:0",
     "guid": "ps_events:10936:delta:0",
     "sources": [
