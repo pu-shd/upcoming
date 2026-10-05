@@ -2674,6 +2674,59 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5391:delta:0",
+    "guid": "ps_events:5391:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-03-02T17:15:00Z",
+    "endsAt": "2027-03-02T18:15:00Z",
+    "startTime": "2027-03-02T12:15:00",
+    "endTime": "2027-03-02T13:15:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by Eddie Yang",
+    "speakers": [
+      {
+        "name": "Eddie Yang",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Eddie Yang",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2027/eddie-yang",
+    "content": "Talk information: TBABio:Eddie Yang is an assistant professor of political science at Purdue University. His research focuses on the political origins of model behavior and how politics reshape state power and knowledge production through AI. Yang received his Ph.D. in political science from UCSD. His work has appeared in Nature, PNAS, and American Journal of Political Science, among other outletsIf you need an accommodation for a disability please contact Jean Butcher at butcher@princeton.edu",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Eddie Yang is an assistant professor of political science at Purdue University. His research focuses on the political origins of model behavior and how politics reshape state power and knowledge production through AI. Yang received his Ph.D. in political science from UCSD. His work has appeared in Nature, PNAS, and American Journal of Political Science, among other outlets If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Eddie Yang",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:4656:delta:0",
     "guid": "ps_events:4656:delta:0",
     "sources": [
