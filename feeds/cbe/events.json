@@ -1,56 +1,5 @@
 [
   {
-    "id": "cbe:ps_events:5276:delta:0",
-    "guid": "ps_events:5276:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-02T20:00:00Z",
-    "endsAt": "2026-09-02T21:00:00Z",
-    "startTime": "2026-09-02T16:00:00",
-    "endTime": "2026-09-02T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Beyond the Monomer: Designing Sequence, Patterns, Composition, and Architecture in Macromolecules",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-BioE",
-      "id": "",
-      "detail": "E105"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/beyond-monomer-designing-sequence-patterns-composition-and-architecture-macromolecules",
-    "content": "Polymers are essential to a wide range of technologies, yet designing them with targeted structural and functional properties remains a grand challenge. Moreover, the products and technology only exploit a fraction of the prospective design space availed by macromolecules. A major opportunity lies in applying machine learning to help navigate the vast combinatorial design space\u2014spanning sequence, composition, architecture, morphology, processing, and more\u2014to discover new formulations or replace existing ones with more sustainable alternatives. However, this complexity, combined with data",
-    "rawEventDetails": "Speaker Michael Webb Affiliation Princeton University Details Event Description Polymers are essential to a wide range of technologies, yet designing them with targeted structural and functional properties remains a grand challenge. Moreover, the products and technology only exploit a fraction of the prospective design space availed by macromolecules. A major opportunity lies in applying machine learning to help navigate the vast combinatorial design space\u2014spanning sequence, composition, architecture, morphology, processing, and more\u2014to discover new formulations or replace existing ones with more sustainable alternatives. However, this complexity, combined with data scarcity and characterization challenges, limits the effectiveness of purely rational design and/or high-throughput screening. In this talk, I will describe some of our recent efforts to integrate molecular simulation, machine learning, and theory to map and navigate structure\u2013function relationships in chemically and topologically diverse polymeric materials. I will describe strategies that we have employed across a range of applications to overcome data limitations in polymer science by developing physics-informed (or guided) models as well as other algorithmic innovations. Specific examples of our approach will be drawn from the characterization of single-chain nanoparticle morphologies, the design of enzyme-stabilizing copolymers, and the formulation of architecturally complex polymer additives that tune solution rheology. These examples will showcase utility, limitations, and opportunities for data-driven approaches in modern-day science and how coupling them with (or using them to develop) physical insight can accelerate innovation and deepen materials understanding.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Beyond the Monomer: Designing Sequence, Patterns, Composition, and Architecture in Macromolecules",
-    "locationRaw": "E105 SEAS-BioE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cbe:ps_events:5281:delta:0",
     "guid": "ps_events:5281:delta:0",
     "sources": [
