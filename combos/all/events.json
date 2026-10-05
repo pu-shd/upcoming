@@ -4892,6 +4892,109 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4156:delta:0",
+    "guid": "ps_events:4156:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T14:30:00Z",
+    "endsAt": "2026-10-09T16:00:00Z",
+    "startTime": "2026-10-09T10:30:00",
+    "endTime": "2026-10-09T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Understanding relational memory in brains and LLMs",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/understanding-relational-memory-brains-and-llms",
+    "content": "How do learning systems go from isolated fragments of local experience to integrated knowledge that supports reasoning? Kim will present two projects on learning to reason about distal relationships from experience of local ones, in artificial and neural systems. In the first project, we study how transformers perform transitive inference, a classic relational reasoning task requiring inference about indirectly related items (e.g., if A>B and B>C, then A>C). Comparing in-weights learning (IWL) and in-context learning (ICL), we find markedly different patterns of generalization. IWL",
+    "rawEventDetails": "Details Event Description How do learning systems go from isolated fragments of local experience to integrated knowledge that supports reasoning? Kim will present two projects on learning to reason about distal relationships from experience of local ones, in artificial and neural systems. In the first project, we study how transformers perform transitive inference, a classic relational reasoning task requiring inference about indirectly related items (e.g., if A>B and B>C, then A>C). Comparing in-weights learning (IWL) and in-context learning (ICL), we find markedly different patterns of generalization. IWL models learn a linear embedding, which yields transitive inference along with other behavioral effects seen in humans and animals. ICL models can learn to generalize transitively, but only when the training data or auxiliary tasks require it; otherwise they learn a match-and-copy strategy. We replicate these findings in large language models given novel (in-context) or familiar (in-weights) transitive inference problems. In the second project, in collaboration with Josh Jacobs's group, we study representational updating in human MTL neurons after changes to learned sequences. Replicating earlier work [Momennejad et al., 2017], we find that humans integrate changes to reward structure more easily than changes to sequence structure, and further show that these two kinds of change produce different patterns of remapping. We identify tabular RL models that reproduce these patterns and show that these properties extend to transformers. Together, these findings highlight how learning mechanisms in both brains and models determine whether local experience is integrated into structured knowledge.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Understanding relational memory in brains and LLMs",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4606:delta:0",
+    "guid": "ps_events:4606:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-09T14:30:00Z",
+    "endsAt": "2026-10-09T16:00:00Z",
+    "startTime": "2026-10-09T10:30:00",
+    "endTime": "2026-10-09T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Understanding relational memory in brains and LLMs",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/understanding-relational-memory-brains-and-llms",
+    "content": "How do learning systems go from isolated fragments of local experience to integrated knowledge that supports reasoning? Kim will present two projects on learning to reason about distal relationships from experience of local ones, in artificial and neural systems. In the first project, we study how transformers perform transitive inference, a classic relational reasoning task requiring inference about indirectly related items (e.g., if A>B and B>C, then A>C). Comparing in-weights learning (IWL) and in-context learning (ICL), we find markedly different patterns of generalization. IWL",
+    "rawEventDetails": "Details Event Description How do learning systems go from isolated fragments of local experience to integrated knowledge that supports reasoning? Kim will present two projects on learning to reason about distal relationships from experience of local ones, in artificial and neural systems. In the first project, we study how transformers perform transitive inference, a classic relational reasoning task requiring inference about indirectly related items (e.g., if A>B and B>C, then A>C). Comparing in-weights learning (IWL) and in-context learning (ICL), we find markedly different patterns of generalization. IWL models learn a linear embedding, which yields transitive inference along with other behavioral effects seen in humans and animals. ICL models can learn to generalize transitively, but only when the training data or auxiliary tasks require it; otherwise they learn a match-and-copy strategy. We replicate these findings in large language models given novel (in-context) or familiar (in-weights) transitive inference problems. In the second project, in collaboration with Josh Jacobs's group, we study representational updating in human MTL neurons after changes to learned sequences. Replicating earlier work [Momennejad et al., 2017], we find that humans integrate changes to reward structure more easily than changes to sequence structure, and further show that these two kinds of change produce different patterns of remapping. We identify tabular RL models that reproduce these patterns and show that these properties extend to transformers. Together, these findings highlight how learning mechanisms in both brains and models determine whether local experience is integrated into structured knowledge.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Understanding relational memory in brains and LLMs",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "nam:ps_events:886:delta:0",
     "guid": "ps_events:886:delta:0",
     "sources": [
