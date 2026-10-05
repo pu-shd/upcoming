@@ -1303,6 +1303,62 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2861:delta:0",
+    "guid": "ps_events:2861:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T20:00:00Z",
+    "endsAt": "2026-10-29T21:00:00Z",
+    "startTime": "2026-10-29T16:00:00",
+    "endTime": "2026-10-29T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Leveraging Engineered Virus-like Particles for Intracellular Protein and RNA Delivery",
+    "speakers": [
+      {
+        "name": "Aditya Raguram",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Aditya Raguram",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Commons",
+      "id": "",
+      "detail": "D301"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/leveraging-engineered-virus-particles-intracellular-protein-and-rna-delivery",
+    "content": "The ability to deliver proteins and RNAs into cells within the body is required for many emerging therapeutic modalities, including gene editing therapies, but efficient intracellular macromolecular delivery remains challenging. To address this challenge, we developed engineered virus-like particles (eVLPs): intracellular delivery vehicles that use retroviral scaffold proteins to package and deliver cargo proteins or RNAs instead of viral genetic material. We used protein engineering and capsid evolution to generate eVLPs that mediate highly efficient gene editing in mice and",
+    "rawEventDetails": "Speaker Aditya Raguram Affiliation Whitehead Institute for Biomedical Research Details Event Description The ability to deliver proteins and RNAs into cells within the body is required for many emerging therapeutic modalities, including gene editing therapies, but efficient intracellular macromolecular delivery remains challenging. To address this challenge, we developed engineered virus-like particles (eVLPs): intracellular delivery vehicles that use retroviral scaffold proteins to package and deliver cargo proteins or RNAs instead of viral genetic material. We used protein engineering and capsid evolution to generate eVLPs that mediate highly efficient gene editing in mice and primary human cells. Additionally, we developed a genome-wide screening approach to systematically investigate how genetic perturbations in producer cells influence eVLP production, and we used this approach to engineer producer cells that support improved particle production and cargo delivery. Overall, eVLPs combine key advantages of both viral and non-viral delivery strategies and are promising tools for therapeutic gene editing, functional genomics, and disease modeling. Refreshements will be available 15 minutes prior to the start of the seminar. Sponsor Omenn Darling Bioengineering Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Leveraging Engineered Virus-like Particles for Intracellular Protein and RNA Delivery",
+    "locationRaw": "Commons D301",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4756:delta:0",
     "guid": "ps_events:4756:delta:0",
     "sources": [
