@@ -4854,7 +4854,7 @@
     "startTime": "2026-10-09T12:00:00",
     "endTime": "2026-10-09T14:00:00",
     "timezone": "America/New_York",
-    "title": "A Quantum Group Meeting Talk by Chengyu Wang, Shayegan Group",
+    "title": "Fractional quantum Hall effect and interlayer correlations in trilayer electron systems",
     "speakers": [
       {
         "name": "Chengyu Wang",
@@ -4879,23 +4879,23 @@
       "id": "",
       "detail": "J401"
     },
-    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-chengyu-wang-shayegan-group",
-    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
-    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-fractional-quantum-hall-effect-and-interlayer-correlations-trilayer",
+    "content": "Title: Fractional quantum Hall effect and interlayer correlations in trilayer electron systemsAbstract: In multilayer quantum Hall systems, the interplay between intralayer and interlayer Coulomb interactions can give rise to exotic many-body states. A well-known example is the fractional quantum Hall state (FQHS) at total filling factor v = 1/2 in bilayer systems, described by the Halperin-Laughlin Psi_331 wavefunction. While such correlated states have been extensively explored in bilayers, little is known about systems with more than two layers.",
+    "rawEventDetails": "Details Event Description Title: Fractional quantum Hall effect and interlayer correlations in trilayer electron systems Abstract: In multilayer quantum Hall systems, the interplay between intralayer and interlayer Coulomb interactions can give rise to exotic many-body states. A well-known example is the fractional quantum Hall state (FQHS) at total filling factor v = 1/2 in bilayer systems, described by the Halperin-Laughlin Psi_331 wavefunction. While such correlated states have been extensively explored in bilayers, little is known about systems with more than two layers. In this talk, I will present our study of an ultrahigh-quality GaAs trilayer electron system, where we observe an unusual FQHS at total filling factor v = 5/7. The state is strongest when the side layers have a higher density than the middle layer and the interlayer separation is sufficiently small, consistent with the long-predicted trilayer generalized Halperin-Laughlin Psi_33311 state. I will discuss the fractional quantum Hall physics of this trilayer system, with particular emphasis on the interlayer-correlated 5/7 state, and conclude with an outlook on new many-body phenomena that may emerge in quantum Hall systems with three or more layers. Bio: Chengyu Wang is a postdoc in ECE, working in Prof. Mansour Shayegan\u2019s group, where he recently completed his PhD on even-denominator fractional quantum Hall effect in GaAs 2D electron and hole systems. Lunch will be provided at 12:00 PM in EQuad J401.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Quantum Group Meeting: TBD - Chengyu Wang (Shayegan Group)",
+    "summaryRaw": "Quantum Group Meeting: Fractional quantum Hall effect and interlayer correlations in trilayer electron systems - Chengyu Wang (Shayegan Group)",
     "locationRaw": "EQuad J401",
     "mappingRules": [
       "quantum:series-title-dash-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
