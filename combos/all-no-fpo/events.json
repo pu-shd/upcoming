@@ -3452,6 +3452,102 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4626:delta:0",
+    "guid": "ps_events:4626:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-01T04:00:00Z",
+    "endsAt": "2026-10-02T04:00:00Z",
+    "startTime": "2026-10-01T00:00:00",
+    "endTime": "2026-10-02T00:00:00",
+    "timezone": "America/New_York",
+    "title": "Statistically-Grounded Methods for Meaningful LLM Evaluation",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/statistically-grounded-methods-meaningful-llm-evaluation",
+    "content": "Video",
+    "rawEventDetails": "Details Event Description Video Abstract: Current LLM benchmarks often fail to measure what users actually care about, as they are skewed by artifacts, such as arbitrary prompt phrasing and its testing language, which standard evaluations usually ignore. In this talk, I will examine these measurement flaws and present statistically grounded methods to address them. First, we will discuss ReliableEval, a multi-prompt evaluation recipe that treats performance as a distribution over meaning-preserving perturbations rather than a single score. It offers statistical guarantees for how many different prompt perturbations a model should be tested on, showing that some models and benchmarks require up to 60 perturbations for a reliable evaluation. Because multi-prompt testing increases compute costs, especially in multilingual benchmarks where expenses multiply by the number of languages, we next introduce a statistical method to reduce this cost. We develop Multilingual-IRT, an extension of psychometric Item Response Theory designed to model the interaction between different benchmark instances and the language in which they are tested. By modeling the difficulty and discriminability of each instance across 29 languages, our approach efficiently predicts a model\u2019s performance on unseen data to significantly improve evaluation efficiency. Additionally, we show how it can be leveraged to detect errors in the data and isolate culture-specific confounds. This talk advocates for a rigorous treatment of LLM evaluation, paving the way for assessments that better reflect real-world usage and human expectations. Bio: Gili Lior is a Ph.D. candidate in Natural Language Processing at The Hebrew University of Jerusalem, advised by Prof. Gabriel Stanovsky. Her work has dealt with cognitively-motivated analysis and comparison between humans and LLMs, and her current research focuses on human-motivated LLM evaluations, leveraging statistical models to ensure that metrics reflect what users actually care about. She is also a research intern at Google Research working on evaluations of long horizon agentic tasks, and has previously interned at IBM Research and the Allen Institute for AI (Ai2). She is a recipient of the Council for Higher Education's fellowship program for excellent female Ph.D. students in hi-tech fields. Sponsor Event organized by PLI Special Event Seminar Lunch Series",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Statistically-Grounded Methods for Meaningful LLM Evaluation",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4631:delta:0",
+    "guid": "ps_events:4631:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-01T04:00:00Z",
+    "endsAt": "2026-10-02T04:00:00Z",
+    "startTime": "2026-10-01T00:00:00",
+    "endTime": "2026-10-02T00:00:00",
+    "timezone": "America/New_York",
+    "title": "Securing LLMs Against Prompt Injection for Agentic Applications",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/securing-llms-against-prompt-injection-agentic-applications",
+    "content": "Video",
+    "rawEventDetails": "Details Event Description Video Abstract : Prompt injection is widely recognized as a major security threat to AI agents, in which external untrusted data (websites, documents, and emails) may contain an injected prompt (\u201cIgnore previous instructions and \u2026\u201d) that arbitrarily manipulates an agent\u2019s operations. The best-defended existing LLMs still suffer from near-100% attack success rates (ASRs) under adaptive prompt-injection attacks. In this talk, I will discuss our latest efforts, SecPO and SecOPD, to fine-tune LLMs with an order-of-magnitude lower ASRs (0% -- 13.3%) against the current strongest prompt-injection attacks. Specifically, we (1) separate the trusted prompt and untrusted data into two input channels; (2) simulate strong adaptively attacked training samples for the model to learn robustness from; and (3) design the loss according to a principle that approximates a (nonexistent) secure-and-powerful LLM. Without a noticeable utility drop, our defended Qwen3.6-27B achieves security that generalizes to realistic agentic tasks with multiple trusted and untrusted messages. We fully open our training set with optimized injections, code for our recipe, and the defended model, which is more robust than industry-scale adversarially-trained GPT-5.5 in agentic tasks. Bio : Sizhe Chen is a Computer Science Ph.D. candidate at UC Berkeley\u2019s Berkeley AI Research (BAIR), working with Prof. David Wagner. He studies real-world AI security problems with general and principled solutions. He developed StruQ, Meta-SecAlign, SecPO, and SecOPD, the most robust open LLMs against adaptive prompt injection attacks. His research has been supported by selective industry fundings, including NVIDIA Fellowship, Meta-BAIR Commons, and Google-BAIR Commons. Previously, he obtained an M.Eng. and a B.Eng. from Shanghai Jiao Tong University. https://sizhe-chen.github.io Sponsor Event organized by PLI Special Event Seminar Lunch Series",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Securing LLMs Against Prompt Injection for Agentic Applications",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:3",
     "guid": "ps_events:5261:delta:3",
     "sources": [
@@ -4670,7 +4766,7 @@
       "detail": "103"
     },
     "urlRef": "https://nam.ai.princeton.edu/events/2026/understanding-relational-memory-brains-and-llms",
-    "content": "",
+    "content": "How do learning systems go from isolated fragments of local experience to integrated knowledge that supports reasoning? Kim will present two projects on learning to reason about distal relationships from experience of local ones, in artificial and neural systems. In the first project, we study how transformers perform transitive inference, a classic relational reasoning task requiring inference about indirectly related items (e.g., if A>B and B>C, then A>C). Comparing in-weights learning (IWL) and in-context learning (ICL), we find markedly different patterns of generalization. IWL",
     "rawEventDetails": "",
     "rawExtractAbstract": "",
     "rawExtractBio": "",

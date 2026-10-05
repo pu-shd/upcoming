@@ -124,7 +124,7 @@
       "detail": "103"
     },
     "urlRef": "https://nam.ai.princeton.edu/events/2026/understanding-relational-memory-brains-and-llms",
-    "content": "",
+    "content": "How do learning systems go from isolated fragments of local experience to integrated knowledge that supports reasoning? Kim will present two projects on learning to reason about distal relationships from experience of local ones, in artificial and neural systems. In the first project, we study how transformers perform transitive inference, a classic relational reasoning task requiring inference about indirectly related items (e.g., if A>B and B>C, then A>C). Comparing in-weights learning (IWL) and in-context learning (ICL), we find markedly different patterns of generalization. IWL",
     "rawEventDetails": "",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
