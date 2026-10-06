@@ -5959,7 +5959,7 @@
     "startTime": "2026-10-26T12:10:00",
     "endTime": "2026-10-26T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by Aram Harrow, MIT",
+    "title": "Trading coherence for randomness in quantum algorithms",
     "speakers": [
       {
         "name": "Aram Harrow",
@@ -5984,23 +5984,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-aram-harrow-mit",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-trading-coherence-randomness-quantum-algorithms-aram-harrow-mit",
+    "content": "Title: Trading coherence for randomness in quantum algorithms Abstract: The power of quantum computers comes from coherent interference between exponentially many different paths. This can yield dramatic speedups but is also difficult to achieve. When can we replace expensive superpositions with cheap randomness? I will describe several strategies for this goal in the context of quantum computing and quantum communication. This will lead us to faster quantum and classical simulations of molecules, quantum optimization algorithms for large",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, Aram Harrow (MIT)",
+    "summaryRaw": "Princeton Quantum Colloquium: Trading coherence for randomness in quantum algorithms, Aram Harrow (MIT)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {

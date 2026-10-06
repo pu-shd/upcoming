@@ -1,10 +1,10 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-10-06T14:03:35Z",
+  "generatedAt": "2026-10-06T14:32:04Z",
   "sources": {
     "ai": {
-      "etag": "\"1791295414\"",
-      "lastModified": "Tue, 06 Oct 2026 14:03:34 GMT",
+      "etag": "\"1791297122\"",
+      "lastModified": "Tue, 06 Oct 2026 14:32:02 GMT",
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "bioengineering": {
@@ -23,18 +23,18 @@
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "citp": {
-      "etag": "\"1791233660\"",
-      "lastModified": "Mon, 05 Oct 2026 20:54:20 GMT",
+      "etag": "\"1791296535\"",
+      "lastModified": "Tue, 06 Oct 2026 14:22:15 GMT",
       "lastEnrichedAt": "2026-10-06T12:42:25Z"
     },
     "dais": {
-      "etag": "\"1791289288\"",
-      "lastModified": "Tue, 06 Oct 2026 12:21:28 GMT",
+      "etag": "\"1791297124\"",
+      "lastModified": "Tue, 06 Oct 2026 14:32:04 GMT",
       "lastEnrichedAt": "2026-10-05T22:03:01Z"
     },
     "ece": {
-      "etag": "\"1791137973\"",
-      "lastModified": "Sun, 04 Oct 2026 18:19:33 GMT",
+      "etag": "\"1791297121\"",
+      "lastModified": "Tue, 06 Oct 2026 14:32:01 GMT",
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "kellercenter": {
@@ -63,8 +63,8 @@
       "lastEnrichedAt": "2026-10-06T12:42:25Z"
     },
     "quantum": {
-      "etag": "\"1791159808\"",
-      "lastModified": "Mon, 05 Oct 2026 00:23:28 GMT",
+      "etag": "\"1791297121\"",
+      "lastModified": "Tue, 06 Oct 2026 14:32:01 GMT",
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "robotics": {
