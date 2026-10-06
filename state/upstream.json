@@ -1,10 +1,10 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-10-06T17:45:43Z",
+  "generatedAt": "2026-10-06T18:03:40Z",
   "sources": {
     "ai": {
-      "etag": "\"1791308741\"",
-      "lastModified": "Tue, 06 Oct 2026 17:45:41 GMT",
+      "etag": "\"1791309818\"",
+      "lastModified": "Tue, 06 Oct 2026 18:03:38 GMT",
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "bioengineering": {
@@ -28,8 +28,8 @@
       "lastEnrichedAt": "2026-10-06T12:42:25Z"
     },
     "dais": {
-      "etag": "\"1791297124\"",
-      "lastModified": "Tue, 06 Oct 2026 14:32:04 GMT",
+      "etag": "\"1791309820\"",
+      "lastModified": "Tue, 06 Oct 2026 18:03:40 GMT",
       "lastEnrichedAt": "2026-10-05T22:03:01Z"
     },
     "ece": {
@@ -43,13 +43,13 @@
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "mae": {
-      "etag": "\"1790978002\"",
-      "lastModified": "Fri, 02 Oct 2026 21:53:22 GMT",
+      "etag": "\"1791309818\"",
+      "lastModified": "Tue, 06 Oct 2026 18:03:38 GMT",
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "materials": {
-      "etag": "\"1790867850\"",
-      "lastModified": "Thu, 01 Oct 2026 15:17:30 GMT",
+      "etag": "\"1791309817\"",
+      "lastModified": "Tue, 06 Oct 2026 18:03:37 GMT",
       "lastEnrichedAt": "2026-10-06T01:31:48Z"
     },
     "nam": {
