@@ -2442,9 +2442,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "COS",
       "id": "",
-      "detail": ""
+      "detail": "105"
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/stephanie-gil",
     "content": "AbstractMulti-robot systems are physically embodied networks \u2014 they sense, move, and communicate through the physical world. The bar for safe decision-making rises as these systems enter safety-critical, real-world settings where they must perform well under uncertainty. Our work shows that physicality is a resource against the two kinds of uncertainty they face: intentional (or adversarial), where data is manipulated by malicious agents, and natural, where aspects of the environment are simply unknown. Most of this talk concerns intentional uncertainty. Here, one way to exploit",
@@ -2455,11 +2455,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Trust, Sensing, and Learning for Provable Multi-Robot Performance",
-    "locationRaw": "To be determined",
+    "locationRaw": "COS 105",
     "mappingRules": [
       "robotics:summary-is-title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
