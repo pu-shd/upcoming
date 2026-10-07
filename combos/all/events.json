@@ -8358,6 +8358,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11061:delta:0",
+    "guid": "ps_events:11061:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-18T21:30:00Z",
+    "endsAt": "2026-11-18T22:30:00Z",
+    "startTime": "2026-11-18T16:30:00",
+    "endTime": "2026-11-18T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Programming and Architecting Physical Intelligence: A Sensing-Computing-Human Co-Optimization Approach",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/programming-and-architecting-physical-intelligence-sensing-computing-human-co-optimization",
+    "content": "Abstract: Computers are increasingly integrated into embodied systems that operate in complex real-world environments, such as autonomous robots and smart wearable/Extended Reality (XR) glasses. These systems must continuously sense and interpret the physical world while also generating information that engages human perceptual and cognitive systems.This talk argues that programming and architecting future computer systems must integrate sensing and human cognition into the computing stack, and presents my lab\u2019s work toward this vision. First, I will",
+    "rawEventDetails": "Speaker Yuhao Zhu Affiliation University of Rochester Details Event Description Abstract: Computers are increasingly integrated into embodied systems that operate in complex real-world environments, such as autonomous robots and smart wearable/Extended Reality (XR) glasses. These systems must continuously sense and interpret the physical world while also generating information that engages human perceptual and cognitive systems. This talk argues that programming and architecting future computer systems must integrate sensing and human cognition into the computing stack, and presents my lab\u2019s work toward this vision. First, I will discuss the co-design of sensing and computation, where we design novel computational image sensors and compile visual programs across heterogeneous sensing and computing hardware. Second, I will discuss co-optimizing computing with humans, where we build novel computational models of human visual perception that provide perceptual, not numerical, specifications and constraints for navigating the enormous design space of visual programs. Together, these projects point toward an exciting future of computing that jointly reasons about machines, the physical world, and human cognition. Bio: Yuhao Zhu is an Associate Professor of Computer Science, Brain and Cognitive Sciences, and an Asaro Biggar Family Fellow in Data Science, all at University of Rochester, where he and his students are mostly drawn to research problems at the intersection of computer architecture, sensing, and human factors. With his collaborators and students, he has won multiple IEEE Micro Top Picks in Computer Architecture for \"novelty and potential for long-term impact,\" along with best paper awards/nominations at MICRO, HPCA, ASPLOS, and IEEE VR. Sponsor Emerging Frontiers in Computer Architecture and Systems",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Programming and Architecting Physical Intelligence: A Sensing-Computing-Human Co-Optimization Approach",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:9",
     "guid": "ps_events:5261:delta:9",
     "sources": [
