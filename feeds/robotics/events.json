@@ -215,7 +215,7 @@
     "startTime": "2026-10-30T11:00:00",
     "endTime": "2026-10-30T12:00:00",
     "timezone": "America/New_York",
-    "title": "Stephanie Gil",
+    "title": "Trust, Sensing, and Learning for Provable Multi-Robot Performance",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -237,14 +237,14 @@
       "detail": ""
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/stephanie-gil",
-    "content": "Talk title, abstract, and speaker biography to be posted.",
+    "content": "AbstractMulti-robot systems are physically embodied networks \u2014 they sense, move, and communicate through the physical world. The bar for safe decision-making rises as these systems enter safety-critical, real-world settings where they must perform well under uncertainty. Our work shows that physicality is a resource against the two kinds of uncertainty they face: intentional (or adversarial), where data is manipulated by malicious agents, and natural, where aspects of the environment are simply unknown. Most of this talk concerns intentional uncertainty. Here, one way to exploit",
     "rawEventDetails": "Speaker Stephanie Gil Details Event Description Talk title, abstract, and speaker biography to be posted.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Stephanie Gil",
+    "summaryRaw": "Trust, Sensing, and Learning for Provable Multi-Robot Performance",
     "locationRaw": "To be determined",
     "mappingRules": [
       "robotics:summary-is-title"
