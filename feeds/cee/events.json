@@ -51,5 +51,99 @@
     "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2436:delta:0",
+    "guid": "ps_events:2436:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-14T20:30:00Z",
+    "endsAt": "2026-10-14T21:30:00Z",
+    "startTime": "2026-10-14T16:30:00",
+    "endTime": "2026-10-14T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Talk \u2014 Alex Sixie Cao: From Random Failures to Strategic Attacks: Quantifying Robustness in Complex Systems",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad E Wing,",
+      "id": "",
+      "detail": "E225"
+    },
+    "urlRef": "https://cee.princeton.edu/events/talk-%E2%80%94-alex-sixie-cao-random-failures-strategic-attacks-quantifying-robustness-complex",
+    "content": "AbstractComplex systems can fail in many ways, from cascading failures triggered by random component loss to deliberately targeted attacks. This raises a fundamental question: How can robustness be quantified when a disturbance changes the probability distribution of system outcomes? This talk develops a probabilistic perspective on robustness in which changes in system performance are represented through changes in outcome distributions. Drawing on information theory, these changes are quantified through an entropy-based robustness index that",
+    "rawEventDetails": "Details Event Description Abstract Complex systems can fail in many ways, from cascading failures triggered by random component loss to deliberately targeted attacks. This raises a fundamental question: How can robustness be quantified when a disturbance changes the probability distribution of system outcomes? This talk develops a probabilistic perspective on robustness in which changes in system performance are represented through changes in outcome distributions. Drawing on information theory, these changes are quantified through an entropy-based robustness index that compares system behaviour before and after a disturbance. The index builds on concepts and methods from system reliability and complements conventional reliability and risk measures by characterizing how system behaviour changes when disrupted. About the Speaker Alex Sixie Cao is an Assistant Professor in the School of Civil and Environmental Engineering at Nanyang Technological University, Singapore, where he leads the Risk and Infrastructure Systems Lab. His work spans impact loading and structural mechanics, mechanical and probabilistic modelling of progressive collapse and cascading failures, quantitative measures of robustness, and risk-informed decision-making. Alex also studies how structural safety objectives and infrastructure decisions should evolve under long-term environmental and societal change, including climate change. He received his doctorate from ETH Zurich, where his research focused on modelling progressive collapse in buildings, and his MSc in Structural Engineering from the Norwegian University of Science and Technology. Before joining NTU, he was a postdoctoral researcher at Empa and ETH Zurich, working across structural mechanics, system reliability, and robustness. Sponsorship of this event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Talk \u2014 Alex Sixie Cao: From Random Failures to Strategic Attacks: Quantifying Robustness in Complex Systems",
+    "locationRaw": "Engineering Quad E Wing, E225",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2441:delta:0",
+    "guid": "ps_events:2441:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T20:30:00Z",
+    "endsAt": "2026-10-29T21:30:00Z",
+    "startTime": "2026-10-29T16:30:00",
+    "endTime": "2026-10-29T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Distinguished Seminar \u2014 Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science, Computer Science Building, Room",
+      "id": "",
+      "detail": "104"
+    },
+    "urlRef": "https://cee.princeton.edu/events/distinguished-seminar-%E2%80%94-alessandro-vespignani-bridging-network-science-and-real-world",
+    "content": "Alessandro Vespignani, Professor of Physics, Northeastern University, opens the CCS Distinguished Seminar Series. The talk is free and open to the University community.AbstractConcepts developed to describe spreading processes on networks, including the role of heterogeneous connectivity, have provided the foundation for a new generation of mechanistic models. Built on empirical mobility and contact networks, these models capture the multi-scale nature of contagion in real populations. These methodological and data integration advances enabled epidemic modeling to evolve",
+    "rawEventDetails": "Details Event Description Alessandro Vespignani, Professor of Physics, Northeastern University, opens the CCS Distinguished Seminar Series. The talk is free and open to the University community. Abstract Concepts developed to describe spreading processes on networks, including the role of heterogeneous connectivity, have provided the foundation for a new generation of mechanistic models. Built on empirical mobility and contact networks, these models capture the multi-scale nature of contagion in real populations. These methodological and data integration advances enabled epidemic modeling to evolve into a public-service activity, generating forecasts and analytics that inform policy in real time. The same framework supports the design of surveillance systems, such as global aircraft-based wastewater monitoring, where the structure of the air-transportation network becomes an asset for early detection. The lecture will discuss this trajectory and why consolidating these capabilities is now a central requirement of pandemic preparedness beyond emergency response. About the speaker Alessandro Vespignani is the Sternberg Family Distinguished University Professor at Northeastern University, where he founded and directs the Network Science Institute. His research focuses on the modeling of contagion processes in complex networks, from the spread of infectious diseases to the diffusion of information. He leads EPISTORM, a national center for epidemic emergency analytics funded by the U.S. CDC. He is elected Fellow of the APS, the Network Science Society, and the AAAS. His awards include the Euler Award and the EPS Statistical and Nonlinear Physics Prize. Sponsorship of this event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Distinguished Seminar \u2014 Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
+    "locationRaw": "Computer Science, Computer Science Building, Room 104",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
   }
 ]
