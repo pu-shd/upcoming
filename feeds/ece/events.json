@@ -238,5 +238,52 @@
     "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:11056:delta:0",
+    "guid": "ps_events:11056:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-28T20:30:00Z",
+    "endsAt": "2026-10-28T21:30:00Z",
+    "startTime": "2026-10-28T16:30:00",
+    "endTime": "2026-10-28T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Architecting Immersive Intelligence: From Glasses to the Datacenter",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/architecting-immersive-intelligence-glasses-datacenter",
+    "content": "Abstract: Immersive computing, including virtual, augmented, and mixed reality (collectively, extended reality or XR), integrates the virtual with the physical. Immersive systems enable AI to escape from the chatbot on a 2D screen into the 3D world around us, where it can perceive, understand, and act alongside the people who live and work there. AI, in turn, is making immersive systems more capable. We refer to the convergence of immersive computing and AI as immersive intelligence.Immersive intelligence places demands on computer systems that are orders of",
+    "rawEventDetails": "Speaker Sarita Adve Affiliation University of Illinois Urbana-Champaign Details Event Description Abstract: Immersive computing, including virtual, augmented, and mixed reality (collectively, extended reality or XR), integrates the virtual with the physical. Immersive systems enable AI to escape from the chatbot on a 2D screen into the 3D world around us, where it can perceive, understand, and act alongside the people who live and work there. AI, in turn, is making immersive systems more capable. We refer to the convergence of immersive computing and AI as immersive intelligence. Immersive intelligence places demands on computer systems that are orders of magnitude beyond what current systems deliver: real-time inference over many interacting models, within the power envelope of all-day wearable devices, with quality ultimately judged by the human experience. Meeting these demands requires distributing immersive intelligence across the wearable, nearby devices, the edge, and the datacenter, and evaluating the resulting designs with new human-centric metrics. I will discuss recent work and what it suggests about the architecture of these systems, from the wearable to the datacenter, and about the opportunities ahead for the architecture and systems community. The talk will draw on ILLIXR, our open-source end-to-end XR system testbed, which supports distributed XR and first-of-their-kind AI-enabled XR capabilities, and on the IMMERSE Center for Immersive Computing at Illinois, which brings together research on immersive technologies, applications, and human experience. Bio: Sarita Adve is the Richard T. Cheng Professor of Computer Science at the University of Illinois Urbana-Champaign. Her research interests span the system stack, from hardware to applications, with a current focus on immersive intelligence. She directs the IMMERSE Center for Immersive Computing, which brings together expertise in immersive technologies, applications, and human experience to perform research, educate a new workforce, and build infrastructure to enable a new era of immersive computing. Her group released ILLIXR (Illinois Extended Reality testbed), an open-source end-to-end extended reality (XR) system and research testbed that is used widely. She led the XR section of SRC's MAPT 2.0 roadmap for the semiconductor industry. Her early work on data-race-free memory consistency models and later work on the memory models for the Java and C++ programming languages form the foundation for memory models used in most hardware and software systems today. She is also known for her work on heterogeneous architectures and software-driven hardware resiliency. She is a member of the American Academy of Arts and Sciences and a fellow of the ACM, IEEE, and AAAS. She has received several awards, including the ACM/IEEE-CS Ken Kennedy award, the ACM SIGARCH Maurice Wilkes award, and the ACM SIGARCH Alan D. Berenbaum Distinguished Service award. As ACM SIGARCH chair, she co-founded the CARES movement, winner of the CRA distinguished service award, to address discrimination and harassment in computer science research events. She received her PhD from the University of Wisconsin-Madison and her B.Tech. from the Indian Institute of Technology Bombay. Sponsor Emerging Frontiers in Computer Architecture and Systems",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Architecting Immersive Intelligence: From Glasses to the Datacenter",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
   }
 ]
