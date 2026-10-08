@@ -217,10 +217,10 @@ def test_build_exits_distinctly_when_a_source_fails(
 def test_build_refuses_a_source_declared_unavailable(
     monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
 ) -> None:
-    """`cs` has no feed, and the reason travels with the refusal."""
+    """`acee` has no usable feed, and the reason travels with the refusal."""
     monkeypatch.setenv("BOT_BYPASS_HEADER", "x-cli-test: placeholder")
     code = main(
-        ["--registry", REGISTRY, "build", "--source", "cs", "--feed", str(feed_path("orfe"))]
+        ["--registry", REGISTRY, "build", "--source", "acee", "--feed", str(feed_path("orfe"))]
     )
     assert code == EXIT_CONFIG
     assert "unavailable" in capsys.readouterr().err
@@ -290,7 +290,7 @@ def test_every_live_source_builds(registry) -> None:
         assert result.status == "ok", f"{source.slug}: {result.diagnostics}"
         built[source.slug] = result.counts["events"]
 
-    assert len(built) == 14, f"expected 14 live sources, built {sorted(built)}"
+    assert len(built) == 15, f"expected 15 live sources, built {sorted(built)}"
     assert sum(built.values()) >= 110
 
 

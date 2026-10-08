@@ -174,14 +174,15 @@ Each is recorded in `config/sources.yaml` with its reason rather than quietly om
 
 | Source | Blocked on | What unblocks it |
 |---|---|---|
-| `cs` | Drupal, not Site Builder, no iCal view enabled. The bare apex was checked too. | Ask CS to enable an iCal view — minutes of their time against a day of ours. **Try this before writing any adapter.** |
 | `acee` | WordPress. REST exposes an `events` post type whose ACF fields are empty unauthenticated. | A read token, or confirmation that dates live only in rendered HTML — which decides scrape versus API. |
 | `decenter` | WordPress, `conference` and `eng_event` post types. | Same question as `acee`. One answer may cover three sources. |
 | `metro` | `/events/feed/` returns RSS, but `pubDate` is the post's publication date, not the event's. | Nothing in that feed carries the event date, so RSS is a dead end regardless. |
 | `nextg` | No feed of its own; correctly a derived view over ECE. ECE publishes one `CATEGORIES` value across all twelve events, so there is no discriminator. | ECE tagging its NextG events, or NextG supplying a curated list. A guessed predicate would publish an unfiltered ECE feed under NextG's name. |
 
-`cs` is the sixth SEAS department and `acee` is named on the newsletter's own page. Between
-them they are the two blocked sources the engineering newsletter actually needs.
+`acee` is named on the newsletter's own page, which makes it the blocked source the
+engineering newsletter most needs. `cs` was the other; it is live since 2026-10-08 on its RSS
+feed (see `drupal-events-rss`), which lists only its next ten events. An iCal view upstream
+would still be better, and would retire the `horizon:` note.
 
 ## Decisions for the owner
 

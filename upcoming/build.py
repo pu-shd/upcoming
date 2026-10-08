@@ -25,10 +25,11 @@ from .config import read_mapping
 from .enrich import breaches, enrich
 from .errors import SourceFatal
 from .fetch import PageCache
-from .model import Event
-from .parse import parse_ics, prodid
+from .model import PLATFORM_DRUPAL_EVENTS_RSS, Event
+from .parse import RawEvent, parse_ics, prodid
 from .predicate import matches
 from .registry import SourceConfig
+from .rss import parse_rss
 from .scrape import ScrapeStats
 from .serialize import dump_feed, wire_format_for
 from .transform import transform
@@ -100,6 +101,19 @@ def check_platform(text: str, source: SourceConfig) -> None:
         )
 
 
+def parse_feed(text: str, source: SourceConfig) -> tuple[RawEvent, ...]:
+    """The feed's events, read by the parser its declared platform calls for.
+
+    Chosen by platform rather than by sniffing the payload, for the same reason the PRODID
+    check exists: the declaration is what says what the fields mean, and a feed that turns
+    out not to match it should fail rather than be read some other way.
+    """
+    if source.platform == PLATFORM_DRUPAL_EVENTS_RSS:
+        return parse_rss(text, source.slug)
+    check_platform(text, source)
+    return parse_ics(text)
+
+
 def resolve_purposes(events: Sequence[Event], source: SourceConfig) -> tuple[Event, ...]:
     """Apply any event-level purpose overrides over the feed's declaration.
 
@@ -147,9 +161,16 @@ def build_events_with_stats(
 
     One implementation, used by every caller.
     """
-    check_platform(text, source)
+    return _pipeline(parse_feed(text, source), source, cache, held)
 
-    events = transform(parse_ics(text), source)
+
+def _pipeline(
+    raw: Sequence[RawEvent],
+    source: SourceConfig,
+    cache: PageCache | None,
+    held: Mapping[str, Event] | None,
+) -> tuple[tuple[Event, ...], dict[str, ScrapeStats], int]:
+    events = transform(raw, source)
     events = resolve_purposes(events, source)
     events, declined = select(events, source)
     stats: dict[str, ScrapeStats] = {}
@@ -190,7 +211,8 @@ def build_from_text(
     """
     enrich_stats: dict[str, ScrapeStats] = {}
     try:
-        events, enrich_stats, declined = build_events_with_stats(text, source, cache, held)
+        raw = parse_feed(text, source)
+        events, enrich_stats, declined = _pipeline(raw, source, cache, held)
     except SourceFatal as exc:
         return BuildResult(source=source.slug, status="failed", diagnostics=(exc.message,))
     except Exception as exc:
@@ -240,7 +262,11 @@ def build_from_text(
         status="ok",
         events=events,
         counts=counts,
-        notes=(*_declined_note(declined, source), *warnings(gates)),
+        notes=(
+            *_upstream_note(raw, source),
+            *_declined_note(declined, source),
+            *warnings(gates),
+        ),
         gates=gates,
     )
 
@@ -259,6 +285,38 @@ def _declined_note(declined: int, source: SourceConfig) -> tuple[str, ...]:
     return (
         f"declined: {declined} event(s) present in the upstream feed are deliberately not "
         f"published here, per this source's {clause} ({_terse(predicate)}).",
+    )
+
+
+def _upstream_note(raw: Sequence[RawEvent], source: SourceConfig) -> tuple[str, ...]:
+    """Say how much of the upstream this feed can vouch for: none of it, or up to when.
+
+    Some upstreams list only their next N events and offer no way to ask for more. A
+    response of exactly N items cannot be told apart from a truncated one, so the feed is
+    published with its horizon stated: complete up to the last start time listed, and
+    possibly missing events after it.
+
+    A note rather than a gate warning, because for such a source a full page is the normal
+    case. A warning that fires on every run teaches everyone to ignore warnings.
+    """
+    if not raw:
+        # An allowed-empty source still says *why* it is empty. "Every event was declined"
+        # and "the upstream listed nothing" publish the same empty array, and only the
+        # second is worth someone looking at.
+        return ("upstream: the feed listed no events at all.",)
+    size = source.expectations.page_size
+    if size is None or len(raw) < size:
+        return ()
+    # The last *start*, not the last day: an eleventh event later that same afternoon is
+    # just as invisible as one next month.
+    last = max((r.dtstart for r in raw), default="")
+    horizon = f"{last[:4]}-{last[4:6]}-{last[6:8]}"
+    if len(last) >= 13:
+        horizon += f" {last[9:11]}:{last[11:13]}"
+    return (
+        f"horizon: the upstream feed lists at most {size} events and returned {len(raw)}, "
+        f"so it is complete only up to the last start it lists ({horizon} local); events "
+        f"starting after that may exist and not be listed yet.",
     )
 
 

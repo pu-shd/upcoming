@@ -32,7 +32,7 @@ from typing import Any
 from . import locate, serialize
 from .config import read_mapping
 from .errors import ConfigFatal
-from .model import PLATFORM_SITE_BUILDER
+from .model import PLATFORM_SITE_BUILDER, PLATFORMS
 from .patterns import Vocabulary, load_vocabulary
 from .predicate import matches
 from .predicate import validate as validate_predicate
@@ -159,6 +159,11 @@ class Expectations:
     #: gate that catches a truncated upstream response, which is otherwise
     #: schema-valid and passes every other check.
     max_removed_ratio: float = 0.5
+    #: The most events the upstream will ever list, for a feed that serves only its next N
+    #: and cannot be paged. None for a feed that lists everything. A response of exactly
+    #: this many is indistinguishable from a truncated one, so the published notes then say
+    #: how far ahead the feed is complete.
+    page_size: int | None = None
 
 
 @dataclass(frozen=True)
@@ -471,7 +476,23 @@ def _build_expectations(raw: Mapping[str, Any], slug: str, status: str) -> Expec
         max_placeholder_title_rate=float(exp.get("max_placeholder_title_rate", 1.0)),
         max_location_declined_rate=float(exp.get("max_location_declined_rate", 0.3)),
         max_removed_ratio=float(exp.get("max_removed_ratio", 0.5)),
+        page_size=_page_size(exp.get("page_size"), slug),
     )
+
+
+def _page_size(value: Any, slug: str) -> int | None:
+    """``expectations.page_size``, refused unless it is a positive whole number.
+
+    Zero or a negative would make every response look full, and a string would compare as
+    never full; both are typos that quietly change what the published notes claim.
+    """
+    if value is None:
+        return None
+    if isinstance(value, bool) or not isinstance(value, int) or value < 1:
+        raise ConfigFatal(
+            f"{slug}: expectations.page_size must be a positive integer, not {value!r}"
+        )
+    return value
 
 
 def _build_http(
@@ -714,6 +735,13 @@ def _build_source(
     if status == STATUS_LIVE and not feed_url:
         raise ConfigFatal(f"{slug} is live but has no feed_url")
 
+    platform = str(raw.get("platform", PLATFORM_SITE_BUILDER))
+    if platform not in PLATFORMS:
+        raise ConfigFatal(
+            f"{slug}: platform {platform!r} is not one of {', '.join(sorted(PLATFORMS))}. The "
+            f"platform chooses the parser, so an unknown one cannot be read correctly."
+        )
+
     expectations = _build_expectations(raw, slug, status)
 
     location_rules = tuple(raw.get("location_rules") or ())
@@ -814,7 +842,7 @@ def _build_source(
         slug=slug,
         label=str(raw.get("label", slug)),
         status=status,
-        platform=str(raw.get("platform", PLATFORM_SITE_BUILDER)),
+        platform=platform,
         timezone=str(raw.get("timezone", "America/New_York")),
         expectations=expectations,
         feed_url=feed_url,

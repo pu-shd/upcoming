@@ -34,6 +34,12 @@ from .clock import stamp
 #: kellercenter serves ``PRODID:-//Drupal iCal API//EN`` from a stable-looking URL.
 PLATFORM_SITE_BUILDER = "princeton-site-builder"
 PLATFORM_DRUPAL_ICAL = "drupal-ical-api"
+#: RSS 2.0 whose items carry an ``events:`` namespace with the start and end, location and
+#: speaker. Computer Science's Drupal serves this and no iCal view at all.
+PLATFORM_DRUPAL_EVENTS_RSS = "drupal-events-rss"
+#: Every platform a source may declare. Closed, because the platform decides which parser
+#: reads the feed, and a misspelled one would otherwise be read as ICS.
+PLATFORMS = frozenset({PLATFORM_SITE_BUILDER, PLATFORM_DRUPAL_ICAL, PLATFORM_DRUPAL_EVENTS_RSS})
 
 #: The compact form the feeds actually publish, e.g. ``20260915T203000Z``.
 _ICS_UTC_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$")

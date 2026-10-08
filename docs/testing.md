@@ -90,7 +90,7 @@ stub could not model, and why a broken export shipped.
 
 | Path | What it is |
 |---|---|
-| `tests/fixtures/feeds/<slug>/feed.ics` | A captured ICS per source. The whole pipeline runs offline against these. |
+| `tests/fixtures/feeds/<slug>/feed.ics` | The captured upstream feed per source — ICS, except RSS for `cs`. The whole pipeline runs offline against these. |
 | `tests/fixtures/pages/` | Trimmed event-page captures plus a `manifest.json` mapping real URLs to them |
 | `tests/fixtures/golden/` | The predecessor's published output, for the differential tests |
 | `tests/fixtures/newsletter/2026-09-08-edition.json` | The engineering newsletter of 7–14 September 2026, transcribed from its Mailchimp export with every field verified against that file |

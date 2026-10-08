@@ -13,6 +13,7 @@ handle from one codebase are both covered.
 |---|---|---|---|
 | `feeds/orfe/feed.ics` | `pubino/mae-upcoming` `tests/fixtures/orfe_shape.ics` | 14 | `SUMMARY` is the **speaker**; `LOCATION` is `101 - Sherrerd Hall` |
 | `feeds/mae/feed.ics` | `pubino/mae-upcoming` `examples/sample_input.example.ics` | 9 | `SUMMARY` is the **title**; `LOCATION` is `Bowen Hall 222` or `Engineering Quad J Wing/J223` |
+| `feeds/cs/feed.ics` | `https://www.cs.princeton.edu/feeds/events.rss`, 2026-10-08 | 10 | **RSS, not ICS** — the capture name is per source, not per format. A full ten-item page; spans the 1 November DST change; 6 CITP items and 1 DaIS item |
 
 The ORFE feed carries two events with the same speaker and start time
 (`ps_events:11931` and `ps_events:11941`, the second with the location typo

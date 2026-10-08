@@ -583,8 +583,8 @@ def test_the_manifest_names_each_feeds_purposes(registry, tmp_path) -> None:  # 
     records = {f["path"]: f for f in document["feeds"]}
     orfe = next(s for s in registry.sources if s.slug == "orfe")
     assert records["feeds/orfe/events.json"]["purposes"] == list(orfe.purposes)
-    assert records["feeds/cs/events.json"]["status"] == "disabled"
-    assert records["feeds/cs/events.json"]["purposes"] == ["engineering-newsletter"]
+    assert records["feeds/acee/events.json"]["status"] == "disabled"
+    assert records["feeds/acee/events.json"]["purposes"] == ["engineering-newsletter"]
 
 
 def test_a_merged_record_unions_its_purposes() -> None:

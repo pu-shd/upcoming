@@ -569,14 +569,50 @@ sources:
     label: Computer Science
     purposes: [engineering-newsletter]
     host: www.cs.princeton.edu
-    status: unavailable
-    reason: >
-      Drupal, but not Princeton Site Builder and with no iCal view enabled. Checked the
-      bare apex too: cs.princeton.edu 301s to www.cs.princeton.edu, so it is the same host
-      rather than a second one. /feeds/events/ical.ics, /events/ical, /ical,
-      /calendar/ical and /events/export/ical all 404 on both spellings, and /events
-      carries no ics, ical or webcal link. Needs an iCal view upstream, or an
-      HTML-listing adapter.
+    # Drupal, but not Site Builder, and with no iCal view anywhere: /feeds/events/ical.ics,
+    # /events/ical, /ical, /calendar/ical and /events/export/ical all 404, on the apex too
+    # (cs.princeton.edu 301s here). This RSS feed is the only machine-readable listing. Its
+    # core RSS dates are useless -- pubDate is the posting date, dc:date is the epoch -- but
+    # each item carries an `events:` namespace with its own start, end, location and
+    # speaker, which is what the drupal-events-rss platform reads.
+    platform: drupal-events-rss
+    feed_url: "https://www.cs.princeton.edu/feeds/events.rss"
+    cadence: 2h
+    # Item links are the node paths (/events/<slug>); Drupal emits no guid. No pattern is
+    # declared, as for kellercenter, rather than inheriting Site Builder's ps_events one.
+    uid_pattern: null
+    # No enrichment: every item already carries its title, and the default raw-details
+    # selectors are Site Builder's, which these pages do not use. A scrape that matched
+    # nothing would fail the success-rate gate on every run.
+    enrich: []
+    # The feed is the department's whole calendar, including events other sources here
+    # already publish from their own feeds. Measured 2026-10-08: 6 of its 10 items are
+    # CITP's, all present in `citp` (with cleaner titles -- no "CITP Seminar - " prefix),
+    # and the AI Alignment + Safety symposium is DaIS's and present in `dais`. They differ
+    # in detail -- the symposium is 09:00 here and all-day there -- so the union would keep
+    # both copies rather than merge them. Declined here instead, by host organisation,
+    # which this platform maps to `series`.
+    publish_unless:
+      series:
+        in:
+          - Center for Information Technology Policy
+          - Data and Intelligent Systems (DaIS)
+    expectations:
+      summary_role: title
+      # The feed lists the next 10 events and cannot be paged: ?page=, items_per_page=50
+      # and items_per_page=All all return the same 10. So a full response is the normal
+      # case, and the published notes say how far ahead it is complete. On 2026-10-08 the
+      # 11th was a CITP seminar on 2026-11-17, visible on /events and not in the feed.
+      page_size: 10
+      # After declining CITP and DaIS, a normal response carries a handful of the
+      # department's own events. Zero is possible -- ten upcoming CITP talks would fill the
+      # page -- so an empty feed is allowed rather than red, as for kellercenter.
+      min_events: 0
+      allow_empty: true
+      # Not the chain declining: 2 of the 10 items carry no events:location at all
+      # (measured 2026-10-08). After declining CITP and DaIS only 3 or 4 events remain, so
+      # one absence is already 25-33% and the 30% default would warn on most runs.
+      max_location_declined_rate: 0.5
 
   - slug: acee
     label: Andlinger Center for Energy and the Environment

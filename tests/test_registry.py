@@ -166,7 +166,12 @@ def test_only_the_uniform_selector_is_harmonized(registry) -> None:
     talk title on orfe, the speaker on mae and the host on materials. A shared default for
     that would scrape with selectors nobody checked and publish the wrong field.
     """
+    # cs alone opts out of enrichment entirely: its RSS items carry their titles, and its
+    # pages are not Site Builder's, so the shared selector would match nothing there.
+    assert [s.slug for s in registry.live if not s.enrich] == ["cs"]
     for source in registry.live:
+        if not source.enrich:
+            continue
         fields = {t.field_name for t in source.enrich}
         assert "raw_details" in fields, f"{source.slug} should inherit the raw-details target"
 
