@@ -139,5 +139,57 @@
     "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
+  },
+  {
+    "id": "cs:https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
+    "guid": "https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-03T17:10:00Z",
+    "endsAt": "2026-11-03T18:10:00Z",
+    "startTime": "2026-11-03T12:10:00",
+    "endTime": "2026-11-03T13:10:00",
+    "timezone": "America/New_York",
+    "title": "ArabIan Nights: Tales of AI, Science, and Trouble",
+    "speakers": [
+      {
+        "name": "Nihar Shah",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ],
+    "speaker": "Nihar Shah, Carnegie Mellon University",
+    "affiliation": "Carnegie Mellon University",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Small Auditorium",
+      "id": "",
+      "detail": "Room 105"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "ArabIan Nights: Tales of AI, Science, and Trouble",
+    "locationRaw": "Computer Science Small Auditorium (Room 105)",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
   }
 ]

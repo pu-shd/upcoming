@@ -7061,6 +7061,58 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
+    "guid": "https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-03T17:10:00Z",
+    "endsAt": "2026-11-03T18:10:00Z",
+    "startTime": "2026-11-03T12:10:00",
+    "endTime": "2026-11-03T13:10:00",
+    "timezone": "America/New_York",
+    "title": "ArabIan Nights: Tales of AI, Science, and Trouble",
+    "speakers": [
+      {
+        "name": "Nihar Shah",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ],
+    "speaker": "Nihar Shah, Carnegie Mellon University",
+    "affiliation": "Carnegie Mellon University",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Small Auditorium",
+      "id": "",
+      "detail": "Room 105"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "ArabIan Nights: Tales of AI, Science, and Trouble",
+    "locationRaw": "Computer Science Small Auditorium (Room 105)",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5151:delta:0",
     "guid": "ps_events:5151:delta:0",
     "sources": [
@@ -7577,14 +7629,14 @@
     "startTime": "2026-11-09T12:15:00",
     "endTime": "2026-11-09T13:15:00",
     "timezone": "America/New_York",
-    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Zhonghua Liu, Columbia University",
+    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Zhonghua Liu, Department of Biostatistics, Columbia University",
     "speakers": [
       {
-        "name": "Zhonghua Liu",
+        "name": "Zhonghua Liu, Department of Biostatistics",
         "affiliation": "Columbia University"
       }
     ],
-    "speaker": "Zhonghua Liu, Columbia University",
+    "speaker": "Zhonghua Liu, Department of Biostatistics, Columbia University",
     "affiliation": "Columbia University",
     "series": "S. S. Wilks Memorial Seminar in Statistics",
     "tags": [
@@ -7603,15 +7655,15 @@
       "id": "",
       "detail": "101"
     },
-    "urlRef": "https://orfe.princeton.edu/events/2026/zhonghua-liu-columbia-university",
-    "content": "",
+    "urlRef": "https://orfe.princeton.edu/events/2026/zhonghua-liu-department-biostatistics-columbia-university",
+    "content": "Abstract: Gradient-flow optimization is usually viewed as an algorithmic procedure for minimizing empirical loss, with training duration selected by validation or heuristic early stopping rules. We develop a statistical inference framework for gradient-flow training. We show that whenever fitted values evolve through a time-invariant positive semidefinite training operator, the output at each time is equivalent to the best linear unbiased predictor under a corresponding random-effects model. Training time then becomes a variance-component parameter governing variance",
     "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Zhonghua Liu, Columbia University",
+    "summaryRaw": "Zhonghua Liu, Department of Biostatistics, Columbia University",
     "locationRaw": "101 - Sherrerd Hall",
     "mappingRules": [
       "orfe:summary-is-speaker"
