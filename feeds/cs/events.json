@@ -152,7 +152,7 @@
     "startTime": "2026-11-03T12:10:00",
     "endTime": "2026-11-03T13:10:00",
     "timezone": "America/New_York",
-    "title": "ArabIan Nights: Tales of AI, Science, and Trouble",
+    "title": "Arabian Nights: Tales of AI, Science, and Trouble",
     "speakers": [
       {
         "name": "Nihar Shah",
@@ -181,7 +181,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "ArabIan Nights: Tales of AI, Science, and Trouble",
+    "summaryRaw": "Arabian Nights: Tales of AI, Science, and Trouble",
     "locationRaw": "Computer Science Small Auditorium (Room 105)",
     "mappingRules": [
       "cs:summary-is-title"
