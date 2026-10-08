@@ -1847,7 +1847,7 @@
     "startTime": "2026-11-09T12:15:00",
     "endTime": "2026-11-09T13:15:00",
     "timezone": "America/New_York",
-    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Zhonghua Liu, Department of Biostatistics, Columbia University",
+    "title": "Gradient\u2013flow optimization as dynamic random\u2013effects inference with applications to deep learning",
     "speakers": [
       {
         "name": "Zhonghua Liu, Department of Biostatistics",
@@ -1875,7 +1875,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/zhonghua-liu-department-biostatistics-columbia-university",
     "content": "Abstract: Gradient-flow optimization is usually viewed as an algorithmic procedure for minimizing empirical loss, with training duration selected by validation or heuristic early stopping rules. We develop a statistical inference framework for gradient-flow training. We show that whenever fitted values evolve through a time-invariant positive semidefinite training operator, the output at each time is equivalent to the best linear unbiased predictor under a corresponding random-effects model. Training time then becomes a variance-component parameter governing variance",
-    "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawEventDetails": "Details Event Description Abstract : Gradient-flow optimization is usually viewed as an algorithmic procedure for minimizing empirical loss, with training duration selected by validation or heuristic early stopping rules. We develop a statistical inference framework for gradient-flow training. We show that whenever fitted values evolve through a time-invariant positive semidefinite training operator, the output at each time is equivalent to the best linear unbiased predictor under a corresponding random-effects model. Training time then becomes a variance-component parameter governing variance reallocation from residual noise to structured signal. This turns two training decisions into inferential problems: whether training is needed becomes a variance-component test for signal beyond initialization, and how long to train becomes restricted maximum likelihood (REML) estimation of the training-time variance component. We show that the REML-guided early stopping rule selects the time at which optimized spectral losses become decorrelated from the training-operator eigenvalues. The asymptotic prediction optimality of the REML-guided early stopping time is established for fixed-design in-sample risk and random-design out-of-sample risk. Deep learning models in fixed-kernel gradient regimes provide canonical instantiations for our results. Numerical experiments and a UK Biobank proteomics application show competitive accuracy of the REML-guided early stopping time with reduced reliance on validation splits and repeated checkpoint evaluation. Bio: Zhonghua Liu is an Assistant Professor in the Department of Biostatistics at Columbia University. He received his doctorate in biostatistics from Harvard University. Before joining Columbia, he was an Assistant Professor at the University of Hong Kong, following two years at Morgan Stanley in New York. His research interests include semiparametric theory, causal inference, and statistical genetics and genomics. His recent work explores the statistical foundations of optimization and deep learning, as well as methods integrating causal inference and AI for drug target discovery and protein design. Event Category S. S. Wilks Memorial Seminar in Statistics",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1888,8 +1888,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
