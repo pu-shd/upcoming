@@ -4515,6 +4515,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/undergraduate-faculty-mixer",
+    "guid": "https://www.cs.princeton.edu/events/undergraduate-faculty-mixer",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-10-08T20:15:00Z",
+    "endsAt": "2026-10-08T21:15:00Z",
+    "startTime": "2026-10-08T16:15:00",
+    "endTime": "2026-10-08T17:15:00",
+    "timezone": "America/New_York",
+    "title": "Undergraduate & Faculty Mixer",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Climate & Inclusion",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Tea Room",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/undergraduate-faculty-mixer",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Undergraduate & Faculty Mixer",
+    "locationRaw": "Computer Science Tea Room",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4601:delta:0",
     "guid": "ps_events:4601:delta:0",
     "sources": [
@@ -5498,7 +5545,7 @@
     },
     "urlRef": "https://ai.princeton.edu/events/2026/ai-alignment-safety-0",
     "content": "A new initiative to make artificial intelligence safe and beneficial to humanity.Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate DirectorFeatured speakers include:Boaz Barak, Harvard University, Open AISurbhi Goel, University of PennsylvaniaPeter Henderson, Princeton University, Department of Computer ScienceLydia Liu, Princeton University, Department of Computer",
-    "rawEventDetails": "Details Event Description A new initiative to make artificial intelligence safe and beneficial to humanity. Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate Director Featured speakers include: Boaz Barak , Harvard University, Open AI Peter Henderson , Princeton University, Department of Computer Science Adam Tauman Kalai , Institute for Responsible Superintelligence Lydia Liu , Princeton University, Department of Computer Science Helen Qu , Flatiron Institute Aaron Roth , University of Pennsylvania Benjamin Van Roy , Stanford University, Google Deep Mind Special Event AI Alignment + Safety",
+    "rawEventDetails": "Details Event Description A new initiative to make artificial intelligence safe and beneficial to humanity. Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate Director Featured speakers include: Boaz Barak , Harvard University, Open AI Surbhi Goel , University of Pennsylvania Peter Henderson , Princeton University, Department of Computer Science Lydia Liu , Princeton University, Department of Computer Science Helen Qu, Flatiron Institute Adam Tauman Kalai , Institute for Responsible Superintelligence Benjamin Van Roy , Stanford University, Google Deep Mind Special Event AI Alignment + Safety",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -5886,6 +5933,53 @@
       "citp:speaker-dash-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cs:https://www.cs.princeton.edu/events/cos-gender-sexuality-resource-center-mixer",
+    "guid": "https://www.cs.princeton.edu/events/cos-gender-sexuality-resource-center-mixer",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-10-27T20:00:00Z",
+    "endsAt": "2026-10-27T21:00:00Z",
+    "startTime": "2026-10-27T16:00:00",
+    "endTime": "2026-10-27T17:00:00",
+    "timezone": "America/New_York",
+    "title": "COS & Gender Sexuality Resource Center Mixer",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Climate & Inclusion",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Tea Room",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/cos-gender-sexuality-resource-center-mixer",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "COS & Gender Sexuality Resource Center Mixer",
+    "locationRaw": "Computer Science Tea Room",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -6388,7 +6482,7 @@
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/stephanie-gil",
     "content": "AbstractMulti-robot systems are physically embodied networks \u2014 they sense, move, and communicate through the physical world. The bar for safe decision-making rises as these systems enter safety-critical, real-world settings where they must perform well under uncertainty. Our work shows that physicality is a resource against the two kinds of uncertainty they face: intentional (or adversarial), where data is manipulated by malicious agents, and natural, where aspects of the environment are simply unknown. Most of this talk concerns intentional uncertainty. Here, one way to exploit",
-    "rawEventDetails": "Speaker Stephanie Gil Details Event Description Talk title, abstract, and speaker biography to be posted.",
+    "rawEventDetails": "Speaker Stephanie Gil Affiliation Harvard University Details Event Description Abstract Multi-robot systems are physically embodied networks \u2014 they sense, move, and communicate through the physical world. The bar for safe decision-making rises as these systems enter safety-critical, real-world settings where they must perform well under uncertainty. Our work shows that physicality is a resource against the two kinds of uncertainty they face: intentional (or adversarial), where data is manipulated by malicious agents, and natural, where aspects of the environment are simply unknown. Most of this talk concerns intentional uncertainty. Here, one way to exploit physicality is by using communication as a sensor. Because the signals robots exchange are difficult to forge, they carry evidence that can be cross-validated to yield a quantifiable likelihood that an agent's data is trustworthy. This is the foundation of cy-trust, in which stochastic observations of trust model an agent's trustworthiness probabilistically from physical rather than cryptographic evidence. Each neighbor's contribution is then weighted by its trust value. Under this framework, we show that consensus, distributed optimization, and other core coordination tasks admit almost-sure convergence with bounded deviation from their nominal performance, even when malicious agents exceed half of a node's connectivity, past the classical Byzantine bound. We support this finding with both theory and hardware experiments under adversarial attack. Against natural uncertainty, we show that real-time sensing can be folded into rollout-based reinforcement learning, where the same machinery reweights futures rather than neighbors. We apply this idea to routing a fleet of robots to stochastically appearing demand and, with Project CETI, to the first autonomous robotic rendezvous with sperm whales at sea. Finally, we preview some of our future work combining trust with long-horizon sequential decision-making, targeting planning that stays provably resilient when the data informing the plan may itself be corrupted. Biography Stephanie Gil is the John L. Loeb Associate Professor of Engineering and Applied Sciences at Harvard University and an Associate Faculty member of the Kempner Institute. Her research focuses on trust and coordination in multi-robot systems, at the intersection of robotics, communication, and learning. Her contributions have been recognized through the DARPA Young Faculty Award (2024), the Office of Naval Research Young Investigator Award (2021), and the National Science Foundation CAREER Award (2019). She was named a 2020 Sloan Research Fellow for her work at the intersection of robotics and communication. She earned her Ph.D. at CSAIL at MIT, specializing in multi-robot coordination and control, and her B.S. at Cornell University.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -6495,6 +6589,53 @@
       "ai:title"
     ],
     "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cs:https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
+    "guid": "https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-02T17:00:00Z",
+    "endsAt": "2026-11-02T23:30:00Z",
+    "startTime": "2026-11-02T12:00:00",
+    "endTime": "2026-11-02T18:30:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Societal AI (PSAI)",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Princeton Societal AI (PSAI)",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Societal AI (PSAI)",
+    "locationRaw": "",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "declined",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
