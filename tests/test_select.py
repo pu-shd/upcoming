@@ -253,4 +253,6 @@ def test_no_other_source_filters_its_own_feed(registry) -> None:  # type: ignore
     by copy-paste; a source that grows one should show up in this test's diff.
     """
     filtering = [s.slug for s in registry.sources if not s.publishes_everything]
-    assert filtering == ["orfe"]
+    # cs declines what citp and dais already publish from their own feeds; see
+    # test_rss.py for why that is a filter rather than a merge.
+    assert filtering == ["orfe", "cs"]

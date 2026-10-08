@@ -221,6 +221,12 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         if series_extra:
             extra_tags = (*extra_tags, series_extra)
 
+    # A feed that names its speakers in fields of their own (the RSS platform) is more
+    # reliable than any reading of SUMMARY, but it only fills what the summary left empty:
+    # the declared role stays the authority on what SUMMARY means.
+    if not speakers and raw.speakers:
+        speakers = tuple(Speaker(name=name, affiliation=org) for name, org in raw.speakers)
+
     location, location_rule = locate.parse_location(
         decode_entities(raw.location), source.location_rules
     )
@@ -259,7 +265,7 @@ def transform_event(raw: RawEvent, source: SourceConfig, *, tags: Sequence[str] 
         # there is nothing here to overwrite. `nam` is the case: no CATEGORIES at all, and
         # a SUMMARY that is the series name, so without this its synthesized titles read
         # "A Talk" instead of "A NAM Friday Talks Talk".
-        series=_series(raw.categories) or series_extra,
+        series=_series(raw.categories) or raw.series or series_extra,
         tags=tuple(dict.fromkeys((*tags, *canonical))),
         unmapped_tags=unmapped,
         # The feed's declaration. Any per-event override is applied afterwards, since its

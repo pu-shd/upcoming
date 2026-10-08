@@ -47,9 +47,10 @@
       "type": "string",
       "enum": [
         "princeton-site-builder",
-        "drupal-ical-api"
+        "drupal-ical-api",
+        "drupal-events-rss"
       ],
-      "description": "Checked against the feed's PRODID rather than assumed: kellercenter serves a Drupal iCal feed from a URL that looks like every Site Builder one."
+      "description": "Checked against the feed's PRODID rather than assumed: kellercenter serves a Drupal iCal feed from a URL that looks like every Site Builder one. drupal-events-rss is an RSS feed whose items carry their own start, end and location, read from the same source declaration."
     },
     "startsAt": {
       "type": "string",

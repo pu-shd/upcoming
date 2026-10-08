@@ -35,13 +35,13 @@ bioengineering  live         title       1h       speakers,raw_details  https://
 
 ## Sources
 
-19 total: 14 live, 5 recorded as unavailable.
+19 total: 15 live, 4 recorded as unavailable.
 
 | | |
 |---|---|
 | **Live, Princeton Site Builder** | `orfe` (23 events), `citp` (24), `dais` (22), `quantum` (18), `materials` (16), `ece` (12), `cbe` (10), `mae` (10), `ai` (7), `nam` (6), `bioengineering` (3), `cee` (1), `robotics` (1) |
-| **Live, different platform** | `kellercenter` — `PRODID:-//Drupal iCal API//EN`, currently a well-formed calendar with **zero events** |
-| **Declared unavailable** | `nextg`, `cs`, `acee`, `decenter`, `metro` |
+| **Live, different platform** | `kellercenter` — `PRODID:-//Drupal iCal API//EN`, currently a well-formed calendar with **zero events**; `cs` — Drupal **RSS**, the only feed CS publishes, read through its `events:` namespace (3 events after declining 7 that `citp` and `dais` already publish) |
+| **Declared unavailable** | `nextg`, `acee`, `decenter`, `metro` |
 
 The design accommodates 4 main inconsistencies:
 
@@ -307,7 +307,8 @@ Stated rather than implied, because most of these look like bugs from outside.
 
 | | |
 |---|---|
-| **Five sources produce nothing** | `cs` is Drupal without an iCal view; `acee`, `decenter` and `metro` are WordPress whose REST fields are empty unauthenticated; `nextg` has no feed of its own. Four of the five need a second platform adapter. `cs` and `acee` are the two the engineering newsletter actually wants. |
+| **Four sources produce nothing** | `acee`, `decenter` and `metro` are WordPress whose REST fields are empty unauthenticated; `nextg` has no feed of its own. `acee` is the one the engineering newsletter actually wants. |
+| **`cs` sees only the next ten events** | Its RSS lists ten items and cannot be paged. A full page publishes a `horizon:` note in `status.json` giving the last start it can vouch for; anything later may exist and not be listed yet. |
 | **The heartbeat cannot rescue itself** | If *every* scheduled workflow is disabled at once, it goes with them. Inherent to running monitoring inside the thing monitored; only a check from outside the repository answers it. |
 | **The simulator's edition rule is JavaScript, and weekly only** | No holiday shifts and no blackouts. The real 7 September 2026 edition published on the Tuesday for Labor Day; reproducing it means overriding the publication date, which the page says. |
 | **No modality** | The feeds carry nothing for the editors' `(hybrid)` marker, so the generated listing omits it. |

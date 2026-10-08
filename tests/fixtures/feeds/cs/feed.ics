@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:events="https://www.cs.princeton.edu" version="2.0" xml:base="https://www.cs.princeton.edu/">
+  <channel>
+    <title>Upcoming Department Events</title>
+    <link>https://www.cs.princeton.edu/</link>
+    <description><![CDATA[Princeton Computer Science Events]]></description>
+    <language>en</language>
+        <atom:link rel="self" href="https://www.cs.princeton.edu/feeds/events.rss"/>
+<generator>PUCS Drupal</generator>
+<lastBuildDate>Thu, 08 Oct 2026 06:03:24 -0400</lastBuildDate>
+<pubDate>Fri, 02 Oct 26 13:15:00 -0400</pubDate>
+<item>
+  <title>Undergraduate &amp; Faculty Mixer</title>
+  <link>https://www.cs.princeton.edu/events/undergraduate-faculty-mixer</link>
+  <description/>
+  <events:date>Thursday, October 8, 2026 - 16:15
+ - Thursday, October 8, 2026 - 17:15
+</events:date>
+          <events:location>Computer Science Tea Room</events:location>
+          <events:host>Corina Hernandez</events:host>
+          <events:hostOrg>Climate &amp; Inclusion</events:hostOrg>
+          <events:type>Undergrad Event</events:type>
+          <pubDate>Thu, 09/24/2026 - 13:13
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>Undergraduate &amp; Faculty Mixer</dc:title>
+          <dc:description>Undergraduate &amp;amp; Faculty Mixer</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>CITP Seminar - From AI Innovation to AI Deployment: Building the Institutions for an AI-Driven Economy</title>
+  <link>https://www.cs.princeton.edu/events/citp-seminar-ai-innovation-ai-deployment-building-institutions-ai-driven-economy</link>
+  <description/>
+  <events:date>Tuesday, October 13, 2026 - 12:15
+ - Tuesday, October 13, 2026 - 13:15
+</events:date>
+          <events:location>Sherrerd Hall 306</events:location>
+          <events:speaker>Liat Krawczyk</events:speaker>
+          <events:speakerOrg>New Jersey AI Hub</events:speakerOrg>
+          <events:hostOrg>Center for Information Technology Policy</events:hostOrg>
+          <events:hostOrgWebsite>https://citp.princeton.edu/</events:hostOrgWebsite>
+          <events:type>Center for Information Technology Policy</events:type>
+          <events:website>https://citp.princeton.edu/</events:website>
+          <pubDate>Fri, 08/28/2026 - 08:57
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>CITP Seminar - From AI Innovation to AI Deployment: Building the Institutions for an AI-Driven Economy</dc:title>
+          <dc:description>CITP Seminar - From AI Innovation to AI Deployment: Building the Institutions for an AI-Driven Economy</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>CITP Special Event - From Voluntary Commitments to Mandatory Kill Switches: How the Regulatory Debate over Model Weights Has (and Hasn’t) Changed</title>
+  <link>https://www.cs.princeton.edu/events/citp-special-event-voluntary-commitments-mandatory-kill-switches-how-regulatory-debate-over</link>
+  <description/>
+  <events:date>Thursday, October 15, 2026 - 12:15
+ - Thursday, October 15, 2026 - 13:15
+</events:date>
+          <events:location>Friend Center Convocation Room</events:location>
+          <events:speaker>Ben Brooks</events:speaker>
+          <events:speakerOrg>Black Forest Labs</events:speakerOrg>
+          <events:hostOrg>Center for Information Technology Policy</events:hostOrg>
+          <events:hostOrgWebsite>https://citp.princeton.edu/</events:hostOrgWebsite>
+          <events:type>Center for Information Technology Policy</events:type>
+          <events:website>https://citp.princeton.edu/</events:website>
+          <pubDate>Fri, 09/18/2026 - 14:37
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>CITP Special Event - From Voluntary Commitments to Mandatory Kill Switches: How the Regulatory Debate over Model Weights Has (and Hasn’t) Changed</dc:title>
+          <dc:description>CITP Special Event - From Voluntary Commitments to Mandatory Kill Switches: How the Regulatory Debate over Model Weights Has (and Hasn’t) Changed</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>CITP Special Event - A.I. x Journalism: How to Report from the Digital Wild West</title>
+  <link>https://www.cs.princeton.edu/events/citp-special-event-ai-x-journalism-how-report-digital-wild-west</link>
+  <description/>
+  <events:date>Thursday, October 15, 2026 - 16:30
+ - Thursday, October 15, 2026 - 18:00
+</events:date>
+          <events:hostOrg>Center for Information Technology Policy</events:hostOrg>
+          <events:hostOrgWebsite>https://citp.princeton.edu/</events:hostOrgWebsite>
+          <events:type>Center for Information Technology Policy</events:type>
+          <events:website>https://citp.princeton.edu/</events:website>
+          <pubDate>Tue, 09/15/2026 - 15:55
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>CITP Special Event - A.I. x Journalism: How to Report from the Digital Wild West</dc:title>
+          <dc:description>CITP Special Event - A.I. x Journalism: How to Report from the Digital Wild West</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>AI Alignment + Safety: Inaugural Symposium &amp; Launch Event</title>
+  <link>https://www.cs.princeton.edu/events/ai-alignment-safety-inaugural-symposium-launch-event</link>
+  <description/>
+  <events:date>Monday, October 19, 2026 - 09:00
+ - Monday, October 19, 2026 - 17:00
+</events:date>
+          <events:location>Friend Center 101</events:location>
+          <events:hostOrg>Data and Intelligent Systems (DaIS)</events:hostOrg>
+          <events:type>Event</events:type>
+          <pubDate>Thu, 09/17/2026 - 11:41
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>AI Alignment + Safety: Inaugural Symposium &amp; Launch Event</dc:title>
+          <dc:description>AI Alignment + Safety: Inaugural Symposium &amp;amp; Launch Event</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>CITP Seminar - Mathematical Communities in the Age of AI Generated Proof</title>
+  <link>https://www.cs.princeton.edu/events/citp-seminar-mathematical-communities-age-ai-generated-proof</link>
+  <description/>
+  <events:date>Tuesday, October 27, 2026 - 12:15
+ - Tuesday, October 27, 2026 - 13:15
+</events:date>
+          <events:location>Sherrerd Hall 306</events:location>
+          <events:speaker>Eamon Duede</events:speaker>
+          <events:speakerOrg>Purdue University</events:speakerOrg>
+          <events:hostOrg>Center for Information Technology Policy</events:hostOrg>
+          <events:hostOrgWebsite>https://citp.princeton.edu/</events:hostOrgWebsite>
+          <events:type>Center for Information Technology Policy</events:type>
+          <events:website>https://citp.princeton.edu/</events:website>
+          <pubDate>Fri, 09/18/2026 - 14:22
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>CITP Seminar - Mathematical Communities in the Age of AI Generated Proof</dc:title>
+          <dc:description>CITP Seminar - Mathematical Communities in the Age of AI Generated Proof</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>COS &amp; Gender Sexuality Resource Center Mixer</title>
+  <link>https://www.cs.princeton.edu/events/cos-gender-sexuality-resource-center-mixer</link>
+  <description/>
+  <events:date>Tuesday, October 27, 2026 - 16:00
+ - Tuesday, October 27, 2026 - 17:00
+</events:date>
+          <events:location>Computer Science Tea Room</events:location>
+          <events:host>Corina Hernandez</events:host>
+          <events:hostOrg>Climate &amp; Inclusion</events:hostOrg>
+          <events:type>Event</events:type>
+          <pubDate>Thu, 09/24/2026 - 13:17
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>COS &amp; Gender Sexuality Resource Center Mixer</dc:title>
+          <dc:description>COS &amp;amp; Gender Sexuality Resource Center Mixer</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>Princeton Societal AI (PSAI)</title>
+  <link>https://www.cs.princeton.edu/events/princeton-societal-ai-psai</link>
+  <description/>
+  <events:date>Monday, November 2, 2026 - 12:00
+ - Monday, November 2, 2026 - 18:30
+</events:date>
+          <events:hostOrg>Princeton Societal AI (PSAI)</events:hostOrg>
+          <events:hostOrgWebsite>https://societal.dais.princeton.edu/</events:hostOrgWebsite>
+          <events:type>Event</events:type>
+          <events:website>https://societal.dais.princeton.edu/</events:website>
+          <pubDate>Fri, 10/02/2026 - 13:15
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>Princeton Societal AI (PSAI)</dc:title>
+          <dc:description>Princeton Societal AI (PSAI)</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>CITP Seminar - From Code to Care: The Moralization of Healthcare Machine Learning</title>
+  <link>https://www.cs.princeton.edu/events/citp-seminar-code-care-moralization-healthcare-machine-learning</link>
+  <description/>
+  <events:date>Tuesday, November 3, 2026 - 12:15
+ - Tuesday, November 3, 2026 - 13:15
+</events:date>
+          <events:location>Sherrerd Hall 306</events:location>
+          <events:speaker>Shira Zilberstein</events:speaker>
+          <events:hostOrg>Center for Information Technology Policy</events:hostOrg>
+          <events:hostOrgWebsite>https://citp.princeton.edu/</events:hostOrgWebsite>
+          <events:type>Center for Information Technology Policy</events:type>
+          <events:website>https://citp.princeton.edu/</events:website>
+          <pubDate>Tue, 09/08/2026 - 16:58
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>CITP Seminar - From Code to Care: The Moralization of Healthcare Machine Learning</dc:title>
+          <dc:description>CITP Seminar - From Code to Care: The Moralization of Healthcare Machine Learning</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+<item>
+  <title>CITP Seminar - Toward Social-Ecosystem-Aware AI for Interpersonal Support</title>
+  <link>https://www.cs.princeton.edu/events/citp-seminar-toward-social-ecosystem-aware-ai-interpersonal-support</link>
+  <description/>
+  <events:date>Tuesday, November 10, 2026 - 12:15
+ - Tuesday, November 10, 2026 - 13:15
+</events:date>
+          <events:location>Sherrerd Hall 306</events:location>
+          <events:speaker>Angel</events:speaker>
+          <events:speakerOrg>Hsing-Chi Hwang</events:speakerOrg>
+          <events:speakerOrgWebsite>University of Southern California</events:speakerOrgWebsite>
+          <events:hostOrg>Center for Information Technology Policy</events:hostOrg>
+          <events:hostOrgWebsite>https://citp.princeton.edu/</events:hostOrgWebsite>
+          <events:type>Center for Information Technology Policy</events:type>
+          <events:website>https://citp.princeton.edu/</events:website>
+          <pubDate>Mon, 09/21/2026 - 14:27
+</pubDate>
+          <source url="https://www.cs.princeton.edu/feeds/events.rss">Upcoming Department Events</source>
+          <dc:title>CITP Seminar - Toward Social-Ecosystem-Aware AI for Interpersonal Support</dc:title>
+          <dc:description>CITP Seminar - Toward Social-Ecosystem-Aware AI for Interpersonal Support</dc:description>
+          <dc:date>1969-12-31T19:00:00-05:00</dc:date>
+          </item>
+</channel>
+</rss>

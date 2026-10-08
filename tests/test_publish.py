@@ -130,7 +130,7 @@ def test_an_empty_feed_is_not_a_failure(registry, built, tmp_path):  # type: ign
 def test_published_feeds_are_valid_json_arrays(registry, built, tmp_path):  # type: ignore[no-untyped-def]
     tree = build_tree(registry, built, tmp_path)
     feeds = [p for p in tree.files if p.startswith(("feeds/", "combos/"))]
-    assert len(feeds) == 19  # fourteen live sources, five enabled combos
+    assert len(feeds) == 20  # fifteen live sources, five enabled combos
     for path in feeds:
         assert isinstance(json.loads(tree.files[path]), list), path
 
@@ -183,7 +183,7 @@ def test_one_failed_source_does_not_block_the_others(registry, built, tmp_path):
     tree = assemble(registry, broken, combos, config, root=tmp_path, generated_at=FIXED_TIME)
 
     healthy = [f for f in tree.feeds if f.path.startswith("feeds/") and f.status == STATUS_OK]
-    assert len(healthy) == 12  # the thirteen non-empty live sources, less orfe
+    assert len(healthy) == 13  # the fourteen non-empty live sources, less orfe
     assert tree.files["feeds/mae/events.json"]
 
 
@@ -282,12 +282,12 @@ def test_status_counts_every_category(registry, built, tmp_path):  # type: ignor
     document = json.loads(tree.files["status.json"])
     assert document["generatedAt"] == FIXED_TIME
     summary = document["summary"]
-    assert summary["ok"] == 18  # 13 non-empty sources + 5 enabled combos
+    assert summary["ok"] == 19  # 14 non-empty sources + 5 enabled combos
     assert summary["empty"] == 1
-    assert summary["disabled"] == 6  # 5 unavailable sources + nextg's combo
+    assert summary["disabled"] == 5  # 4 unavailable sources + nextg's combo
     assert summary["stale"] == 0
     # `events` counts sources only: summing the combos too would double-count every event.
-    assert summary["events"] == 143
+    assert summary["events"] == 146  # cs adds 3 after declining CITP and DaIS
 
 
 def test_status_is_the_only_file_carrying_a_clock(registry, built, tmp_path):  # type: ignore[no-untyped-def]
@@ -599,9 +599,9 @@ def test_every_feed_record_carries_its_units_own_name(registry, built, tmp_path)
 def test_an_unavailable_feed_is_still_named(registry, built, tmp_path):  # type: ignore[no-untyped-def]
     """So a consumer can say what is missing, not just that something is."""
     document = json.loads(build_tree(registry, built, tmp_path).files["status.json"])
-    cs = next(f for f in document["feeds"] if f["path"] == "feeds/cs/events.json")
-    assert cs["status"] == "disabled"
-    assert cs["label"]
+    acee = next(f for f in document["feeds"] if f["path"] == "feeds/acee/events.json")
+    assert acee["status"] == "disabled"
+    assert acee["label"]
 
 
 def test_a_successful_feed_records_when_it_was_built(registry, built, tmp_path):  # type: ignore[no-untyped-def]

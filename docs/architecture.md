@@ -7,7 +7,7 @@ One direction, no loops. Each stage is a module and each is pure apart from the 
 ```
 config/*.yaml ──► registry.py ──────────► SourceConfig (frozen, per source)
                                                 │
-ICS bytes ──► parse.py ──► transform.py ──► resolve_purposes ──► select ──► enrich* ──► fallback
+feed bytes ─► parse.py ──► transform.py ──► resolve_purposes ──► select ──► enrich* ──► fallback
                               │                                              │
                           rules.py                                      scrape.py*
                           locate.py                                     fetch.py*
@@ -26,7 +26,7 @@ the whole pipeline runs offline against committed fixtures.
 | Stage | Module | What it decides |
 |---|---|---|
 | **Load** | `registry.py` | Merges `defaults` → per-source → env. **Lists replace, never append** — rule order is priority order, so an inherited rule silently landing at position three would be unreasonable to debug. The only module allowed to read the environment. |
-| **Parse** | `parse.py` | RFC 5545 unfolding, `\,` unescaping, list splitting. Deliberately not `ics.Calendar`: its `events` is a `set`, which loses feed order. |
+| **Parse** | `parse.py`, `rss.py` | RFC 5545 unfolding, `\,` unescaping, list splitting. Deliberately not `ics.Calendar`: its `events` is a `set`, which loses feed order. The source's declared `platform` picks the parser: `drupal-events-rss` goes to `rss.py`, which produces the same `RawEvent` records, with its wall-clock dates rewritten as floating ICS times so the transform's timezone handling is the only one. |
 | **Map** | `transform.py`, `rules.py` | What `SUMMARY` means. `summary_role` has **no default**; a source that omits it fails to load. |
 | **Locate** | `locate.py` | Seven ordered rules turning `101 Sherrerd Hall` into a venue and a room. Declines rather than guessing when both ends look like rooms. |
 | **Tag** | `tags.py` | Exact alias lookup against a canonical vocabulary. No stemming, no fuzzy matching. |

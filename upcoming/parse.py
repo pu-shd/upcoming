@@ -133,6 +133,13 @@ class RawEvent:
     dtend: str = ""
     dtstart_params: str = ""
     dtend_params: str = ""
+    #: ``(name, affiliation)`` pairs, for a feed that publishes its speakers as structured
+    #: fields rather than inside ``SUMMARY``. ICS never fills this.
+    speakers: tuple[tuple[str, str], ...] = ()
+    #: A series the feed names in a field of its own. Kept apart from ``categories`` because
+    #: it is not a category: it never goes through the tag vocabulary, so a department's
+    #: organising group does not turn up as an unmapped tag on every build.
+    series: str = ""
     #: Every decoded property, for fields a source maps that this dataclass does not name.
     properties: dict[str, str] = field(default_factory=dict)
 
