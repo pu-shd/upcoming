@@ -1,53 +1,5 @@
 [
   {
-    "id": "dais:ps_events:4091:delta:0",
-    "guid": "ps_events:4091:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-09T14:00:00Z",
-    "endsAt": "2026-09-09T15:00:00Z",
-    "startTime": "2026-09-09T10:00:00",
-    "endTime": "2026-09-09T11:00:00",
-    "timezone": "America/New_York",
-    "title": "AI Resource Workshop",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Maeder Hall, 002 Auditorium",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-resource-workshop",
-    "content": "Join us for an interactive showcase highlighting the AI resources, tools, expertise, and support available across Princeton University. Representatives from Data and Intelligent Systems (DaIS), Office of Information Technology (OIT), Research Computing, Office of Dean for Research (ODFR) and the Princeton University Library will discuss the resources they are offering to the campus community. Discover opportunities to collaborate, learn about existing AI initiatives, find tools and services that can support your work, and connect with colleagues who are",
-    "rawEventDetails": "Details Event Description Join us for an interactive showcase highlighting the AI resources, tools, expertise, and support available across Princeton University. Representatives from Data and Intelligent Systems (DaIS), Office of Information Technology (OIT), Research Computing, Office of Dean for Research (ODFR) and the Princeton University Library will discuss the resources they are offering to the campus community. Discover opportunities to collaborate, learn about existing AI initiatives, find tools and services that can support your work, and connect with colleagues who are advancing responsible and innovative uses of AI on campus. Whether you are new to AI or already using it in your research, this event is an opportunity to see what is available across campus and discover ways to get involved. This event is intended for the research community, particularly grad students, research staff, and faculty. This event will also be accessible via live-stream and recording. Live Stream Link Live Stream Public Link",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI Resource Workshop",
-    "locationRaw": "Maeder Hall, 002 Auditorium",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "dais:ps_events:4306:delta:0",
     "guid": "ps_events:4306:delta:0",
     "sources": [
