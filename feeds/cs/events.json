@@ -1,52 +1,5 @@
 [
   {
-    "id": "cs:https://www.cs.princeton.edu/events/undergraduate-faculty-mixer",
-    "guid": "https://www.cs.princeton.edu/events/undergraduate-faculty-mixer",
-    "sources": [
-      "cs"
-    ],
-    "platform": "drupal-events-rss",
-    "startsAt": "2026-10-08T20:15:00Z",
-    "endsAt": "2026-10-08T21:15:00Z",
-    "startTime": "2026-10-08T16:15:00",
-    "endTime": "2026-10-08T17:15:00",
-    "timezone": "America/New_York",
-    "title": "Undergraduate & Faculty Mixer",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Climate & Inclusion",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Computer Science Tea Room",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://www.cs.princeton.edu/events/undergraduate-faculty-mixer",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Undergraduate & Faculty Mixer",
-    "locationRaw": "Computer Science Tea Room",
-    "mappingRules": [
-      "cs:summary-is-title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cs:https://www.cs.princeton.edu/events/julian-ost-fpo",
     "guid": "https://www.cs.princeton.edu/events/julian-ost-fpo",
     "sources": [
