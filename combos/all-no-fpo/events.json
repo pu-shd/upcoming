@@ -6511,7 +6511,7 @@
     "startTime": "2026-11-05T16:30:00",
     "endTime": "2026-11-05T17:30:00",
     "timezone": "America/New_York",
-    "title": "An Optimization Seminar Talk by Andre Wibisono, Yale University",
+    "title": "Hamiltonian Dynamics for Accelerated Optimization and Sampling",
     "speakers": [
       {
         "name": "Andre Wibisono",
@@ -6539,7 +6539,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/andre-wibisono-yale-university",
     "content": "Abstract: Optimization and sampling are fundamental computational tasks. Gradient flow and Langevin dynamics give a familiar connection between the two, while acceleration raises a more subtle question. In this talk, we explore how Hamiltonian dynamics provides an alternative common approach to accelerated optimization and sampling. Concretely, evolving Hamiltonian dynamics with periodic zero-velocity resets yields a descent method for optimization, while Gaussian velocity refreshment yields Hamiltonian Monte Carlo for sampling. In this scheme, short integration times lead",
-    "rawEventDetails": "Event Category Optimization Seminar",
+    "rawEventDetails": "Details Event Description Abstract: Optimization and sampling are fundamental computational tasks. Gradient flow and Langevin dynamics give a familiar connection between the two, while acceleration raises a more subtle question. In this talk, we explore how Hamiltonian dynamics provides an alternative common approach to accelerated optimization and sampling. Concretely, evolving Hamiltonian dynamics with periodic zero-velocity resets yields a descent method for optimization, while Gaussian velocity refreshment yields Hamiltonian Monte Carlo for sampling. In this scheme, short integration times lead to non-accelerated convergence rates analogous to those of gradient descent. Longer integration times, combined with suitable averaging or randomization, give a mechanism for acceleration in optimization, in both continuous and discrete time. By translating the optimization proof to the space of probability distributions, we then prove continuous-time mixing bounds for randomized Hamiltonian Monte Carlo with smooth log-concave targets, with accelerated rates analogous to those in optimization. Bio: Andre Wibisono is an assistant professor in the Department of Computer Science at Yale University, with a secondary appointment in the Department of Statistics & Data Science. His research is in the design and analysis of algorithms for machine learning, in particular for problems in optimization, sampling, and game theory. He received his BS degrees in Mathematics and in Computer Science from MIT, his MEng in Computer Science from MIT, his MA in Statistics from UC Berkeley, and his PhD in Computer Science from UC Berkeley. He has done postdoctoral research at the University of Wisconsin-Madison and at the Georgia Institute of Technology. Event Category Optimization Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -6552,8 +6552,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
