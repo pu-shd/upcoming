@@ -1,56 +1,5 @@
 [
   {
-    "id": "cbe:ps_events:5281:delta:0",
-    "guid": "ps_events:5281:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-09T20:00:00Z",
-    "endsAt": "2026-09-09T21:00:00Z",
-    "startTime": "2026-09-09T16:00:00",
-    "endTime": "2026-09-09T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F204"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/structure-function-relationships-sustainable-feedstock-upgrading-lessons-oxidation-chemistry",
-    "content": "Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other",
-    "rawEventDetails": "Speaker Gina Noh Affiliation The Pennsylvania State University Details Event Description Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other functions, and their consequences for catalysis. In this seminar, I will present two vignettes: (1) dry reforming of methane over Ni-CeO 2 materials and (2) ethanol oxidative dehydrogenation to form acetaldehyde over M1-MoVO x catalysts. The role of elementary steps involving oxygen and oxygen-transport reactions in reactivity, selectivity, and stability will be clarified.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
-    "locationRaw": "F204 SEAS-CBE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ece:ps_events:10936:delta:0",
     "guid": "ps_events:10936:delta:0",
     "sources": [

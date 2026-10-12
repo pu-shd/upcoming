@@ -166,57 +166,6 @@
     "mappingConflict": false
   },
   {
-    "id": "cbe:ps_events:5281:delta:0",
-    "guid": "ps_events:5281:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-09T20:00:00Z",
-    "endsAt": "2026-09-09T21:00:00Z",
-    "startTime": "2026-09-09T16:00:00",
-    "endTime": "2026-09-09T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F204"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/structure-function-relationships-sustainable-feedstock-upgrading-lessons-oxidation-chemistry",
-    "content": "Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other",
-    "rawEventDetails": "Speaker Gina Noh Affiliation The Pennsylvania State University Details Event Description Structure-function relationships for heterogeneous catalysis play a key role in the development of atom-efficient catalysts, reducing the need for energy-intensive separations or catalyst regeneration protocols and enabling new routes to platform chemicals from abundant feedstocks. The Noh research group at Penn State uses multi-scale approaches, spanning from molecular-level detail to mechanistic assessment of catalysts, and combining experiment and theory (density functional theory, DFT) to understand the nature and speciation of active sites, their communication with other functions, and their consequences for catalysis. In this seminar, I will present two vignettes: (1) dry reforming of methane over Ni-CeO 2 materials and (2) ethanol oxidative dehydrogenation to form acetaldehyde over M1-MoVO x catalysts. The role of elementary steps involving oxygen and oxygen-transport reactions in reactivity, selectivity, and stability will be clarified.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Structure-function Relationships for Sustainable Feedstock Upgrading: Lessons in Oxidation Chemistry",
-    "locationRaw": "F204 SEAS-CBE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "orfe:ps_events:12686:delta:0",
     "guid": "ps_events:12686:delta:0",
     "sources": [
@@ -270,60 +219,6 @@
     "locationRule": "detail_dash_name",
     "summaryRest": "",
     "titleSource": "enriched",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "citp:ps_events:5261:delta:0",
-    "guid": "ps_events:5261:delta:0",
-    "sources": [
-      "citp"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-10T19:00:00Z",
-    "endsAt": "2026-09-10T20:00:00Z",
-    "startTime": "2026-09-10T15:00:00",
-    "endTime": "2026-09-10T16:00:00",
-    "timezone": "America/New_York",
-    "title": "Bias in AI Reading Group",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Artificial Intelligence,Data Science & Society",
-    "tags": [
-      "ai",
-      "data-science"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Artificial Intelligence",
-      "Data Science & Society"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "008"
-    },
-    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
-    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
-    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Bias in AI Reading Group",
-    "locationRaw": "Sherrerd Hall 008",
-    "mappingRules": [
-      "citp:title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
   },
@@ -4581,6 +4476,60 @@
       "cs:summary-is-title"
     ],
     "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5416:delta:0",
+    "guid": "ps_events:5416:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-13T19:00:00Z",
+    "endsAt": "2026-10-13T20:00:00Z",
+    "startTime": "2026-10-13T15:00:00",
+    "endTime": "2026-10-13T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Tech Soc Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/tech-soc-reading-group-0",
+    "content": "The TechSoc Reading Group will discuss how developments in the capabilities and behavior of AI systems have raised questions about how people understand and relate to these systems. Between",
+    "rawEventDetails": "Details Event Description The TechSoc Reading Group will discuss how developments in the capabilities and behavior of AI systems have raised questions about how people understand and relate to these systems. Between recent research suggesting that AI agents might be \u201cplaying\u201d and Anthropic model cards that include an AI \u201cwelfare assessment\u201d, there appears to be a growing belief that advanced language models may have some sort of interiority. This belief is mentioned explicitly in a recent New York Times article that details meetings between Anthropic executives and religious scholars regarding the morality of AI. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Tech Soc Reading Group",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
