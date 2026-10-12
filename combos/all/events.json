@@ -6545,6 +6545,57 @@
     "mappingConflict": false
   },
   {
+    "id": "cbe:ps_events:5491:delta:0",
+    "guid": "ps_events:5491:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-04T21:00:00Z",
+    "endsAt": "2026-11-04T22:00:00Z",
+    "startTime": "2026-11-04T16:00:00",
+    "endTime": "2026-11-04T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Engineering Sugars to Direct Immunity",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/engineering-sugars-direct-immunity",
+    "content": "Vaccines remain one of the most important pillars in preventative medicine, providing protection against a wide array of diseases by inducing humoral and/or cellular immunity. Of the many possible candidate antigens for subunit vaccine development, carbohydrates are particularly appealing because of their ubiquitous presence on the surface of all living cells, viruses, and parasites as well as their known interactions with both innate and adaptive immune cells. Indeed, several licensed vaccines leverage bacterial cell-surface carbohydrates as antigens for inducing antigen-specific plasma",
+    "rawEventDetails": "Speaker Matthew DeLisa Affiliation Cornell University Details Event Description Vaccines remain one of the most important pillars in preventative medicine, providing protection against a wide array of diseases by inducing humoral and/or cellular immunity. Of the many possible candidate antigens for subunit vaccine development, carbohydrates are particularly appealing because of their ubiquitous presence on the surface of all living cells, viruses, and parasites as well as their known interactions with both innate and adaptive immune cells. Indeed, several licensed vaccines leverage bacterial cell-surface carbohydrates as antigens for inducing antigen-specific plasma cells secreting protective antibodies and the development of memory T and B cells. Carbohydrates have also garnered attention in other aspects of vaccine development, for example, as adjuvants that enhance the immune response by either activating innate immune responses or targeting specific immune cells. Additionally, carbohydrates can function as immunomodulators that dampen undesired humoral immune responses to entire protein antigens or specific, conserved regions on antigenic proteins. In this talk, I will highlight how the interplay between carbohydrates and the adaptive and innate arms of the immune response is guiding the development of glycans as vaccine components that act as antigens and immunomodulators. I will also discuss how advances in the field of synthetic glycobiology are enabling the design, engineering, and production of a new generation of carbohydrate-containing vaccine formulations with the potential to prevent infectious diseases and malignancies.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Engineering Sugars to Direct Immunity",
+    "locationRaw": "F204 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "orfe:ps_events:12771:delta:0",
     "guid": "ps_events:12771:delta:0",
     "sources": [
