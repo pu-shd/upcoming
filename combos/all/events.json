@@ -4951,6 +4951,102 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4671:delta:0",
+    "guid": "ps_events:4671:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-15T20:30:00Z",
+    "endsAt": "2026-10-15T22:00:00Z",
+    "startTime": "2026-10-15T16:30:00",
+    "endTime": "2026-10-15T18:00:00",
+    "timezone": "America/New_York",
+    "title": "A.I. x Journalism: How to Report from the Digital Wild West",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Chancellor Green Rotunda",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-x-journalism-how-report-digital-wild-west",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "A.I. x Journalism: How to Report from the Digital Wild West",
+    "locationRaw": "Chancellor Green Rotunda",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4676:delta:0",
+    "guid": "ps_events:4676:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-16T15:00:00Z",
+    "endsAt": "2026-10-16T16:00:00Z",
+    "startTime": "2026-10-16T11:00:00",
+    "endTime": "2026-10-16T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Designing Robots with Intelligent Disobedience",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "CS",
+      "id": "",
+      "detail": "105"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/designing-robots-intelligent-disobedience",
+    "content": "",
+    "rawEventDetails": "Speaker Reuth Mirsky Affiliation Tufts University Details Event Description Abstract: A prevalent assumption in human-robot teaming is that the artificial teammate should be obedient and compliant. In this talk, I challenge the assumption that autonomous robots should always obey instructions and comply with our expectations. I argue that sometimes, to maximize their potential in the team, robots should employ intelligent disobedience . I will use guide dogs as inspiration to discuss several exciting manifestations of intelligent disobedience in AI and robotics: reasoning about other agents, initiating an interaction, providing proactive guidance, and more. Bio: Reuth Mirsky is an Assistant Professor in the Computer Science department and the Mechanical Engineering department at Tufts University. In her research, she seeks algorithms, behaviours, and frameworks that challenge current assumptions made for human-aware AI agents and robots. Reuth is an active member of the AI and HRI research communities. Some of her recent roles are a Track Chair at AAAI and ICAPS, program chair for the symposium on Technological Advances in Human-Robot Interactions (TAHRI), a guest editor in Frontiers of Artificial Intelligence, JAAMAS, and THRI. She was elected for IJCAI 2025 Early Career Spotlight and AAAI 2025 New Faculty Highlights.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Designing Robots with Intelligent Disobedience",
+    "locationRaw": "CS 105",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:551:delta:0",
     "guid": "ps_events:551:delta:0",
     "sources": [
