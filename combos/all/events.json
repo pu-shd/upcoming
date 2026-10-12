@@ -328,54 +328,6 @@
     "mappingConflict": false
   },
   {
-    "id": "dais:ps_events:4371:delta:0",
-    "guid": "ps_events:4371:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-11T13:00:00Z",
-    "endsAt": "2026-09-11T14:00:00Z",
-    "startTime": "2026-09-11T09:00:00",
-    "endTime": "2026-09-11T10:00:00",
-    "timezone": "America/New_York",
-    "title": "AI Alignment + Safety Seminar",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar",
-    "content": "Join us for the inaugural AI Alignment + Safety seminar featuring guest speaker Sylvain Chassang, Professor of Economics. Professor Chassang will speak on \u201cInteractive Alignment.\u201dThe seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
-    "rawEventDetails": "Details Event Description Join us for the inaugural AI Alignment + Safety seminar featuring guest speaker Sylvain Chassang, Professor of Economics. Professor Chassang will speak on \u201cInteractive Alignment.\u201d The seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI Alignment + Safety Seminar",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "quantum:ps_events:3941:delta:0",
     "guid": "ps_events:3941:delta:0",
     "sources": [
