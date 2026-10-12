@@ -610,7 +610,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/andre-wibisono-yale-university",
-    "content": "",
+    "content": "Abstract: Optimization and sampling are fundamental computational tasks. Gradient flow and Langevin dynamics give a familiar connection between the two\\, while acceleration raises a more subtle question. In this talk\\, we explore how Hamiltonian dynamics provides an alternative common approach to accelerated optimization and sampling. Concretely\\, evolving Hamiltonian dynamics with periodic zero-velocity resets yields a descent method for optimization\\, while Gaussian velocity refreshment yields Hamiltonian Monte Carlo for sampling. In this scheme\\, short integration times lead",
     "rawEventDetails": "Event Category Optimization Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",

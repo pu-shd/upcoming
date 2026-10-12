@@ -56,62 +56,6 @@
     "mappingConflict": false
   },
   {
-    "id": "quantum:ps_events:3941:delta:0",
-    "guid": "ps_events:3941:delta:0",
-    "sources": [
-      "quantum"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-11T16:00:00Z",
-    "endsAt": "2026-09-11T18:00:00Z",
-    "startTime": "2026-09-11T12:00:00",
-    "endTime": "2026-09-11T14:00:00",
-    "timezone": "America/New_York",
-    "title": "Local Autonomous Inference Machines For Quantum Error Correcting Codes",
-    "speakers": [
-      {
-        "name": "Sid Midha",
-        "affiliation": "Gopalakrishnan Group"
-      }
-    ],
-    "speaker": "Sid Midha, Gopalakrishnan Group",
-    "affiliation": "Gopalakrishnan Group",
-    "series": "Quantum Group Meeting",
-    "tags": [
-      "group-meeting"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Quantum Group Meeting"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "EQuad",
-      "id": "",
-      "detail": "J401"
-    },
-    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-local-autonomous-inference-machines-quantum-error-correcting-codes-sid",
-    "content": "Title: Local autonomous inference machines for quantum error correcting codesAbstract: Quantum error correction is the central ingredient in making large-scale quantum computers work. Over the last three decades, we have found increasingly powerful ways of redundantly encoding quantum information so that it can survive physical errors. Yet, a central challenge remains decoding: the task of inferring which errors have occurred from syndrome measurements, and determining how they should be corrected. As quantum processors grow in size,",
-    "rawEventDetails": "Details Event Description Title: Local autonomous inference machines for quantum error correcting codes Abstract: Quantum error correction is the central ingredient in making large-scale quantum computers work. Over the last three decades, we have found increasingly powerful ways of redundantly encoding quantum information so that it can survive physical errors. Yet, a central challenge remains decoding: the task of inferring which errors have occurred from syndrome measurements, and determining how they should be corrected. As quantum processors grow in size, this quantum-classical feedback loop must remain fast and scalable. In this talk, I will discuss an approach to decoding based on a local and distributed framework of measurement, computation and feedback. This perspective naturally gives rise to a family of decoding algorithms built entirely from local information processing and communication. Such decoders are designed to be scalable, while realizing error-correction as a nonequilibrium phase of noise-robust matter. Bio : Sid is a Ph.D. student at Princeton University working at the intersection of many-body physics, quantum information, and algorithms. His research develops mathematical and computational tools for understanding complex quantum systems. Lunch will be provided at 12:00 PM in EQuad J401.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Quantum Group Meeting: \"Local Autonomous Inference Machines For Quantum Error Correcting Codes\" - Sid Midha (Gopalakrishnan Group)",
-    "locationRaw": "EQuad J401",
-    "mappingRules": [
-      "quantum:series-quoted-title-dash-person"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "quantum:ps_events:3796:delta:0",
     "guid": "ps_events:3796:delta:0",
     "sources": [
@@ -6594,7 +6538,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/andre-wibisono-yale-university",
-    "content": "",
+    "content": "Abstract: Optimization and sampling are fundamental computational tasks. Gradient flow and Langevin dynamics give a familiar connection between the two, while acceleration raises a more subtle question. In this talk, we explore how Hamiltonian dynamics provides an alternative common approach to accelerated optimization and sampling. Concretely, evolving Hamiltonian dynamics with periodic zero-velocity resets yields a descent method for optimization, while Gaussian velocity refreshment yields Hamiltonian Monte Carlo for sampling. In this scheme, short integration times lead",
     "rawEventDetails": "Event Category Optimization Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
