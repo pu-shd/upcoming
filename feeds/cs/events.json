@@ -47,6 +47,58 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/mike-wong-will-present-his-fpo-finding-needle-haystack-application-aware-data-systems",
+    "guid": "https://www.cs.princeton.edu/events/mike-wong-will-present-his-fpo-finding-needle-haystack-application-aware-data-systems",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-10-20T14:00:00Z",
+    "endsAt": "2026-10-20T16:00:00Z",
+    "startTime": "2026-10-20T10:00:00",
+    "endTime": "2026-10-20T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Mike Wong will present his FPO \"FINDING THE NEEDLE IN THE HAYSTACK: APPLICATION-AWARE DATA SYSTEMS FOR EFFICIENT AI INFERENCE\" on 10/20/26 in Friend 108 at 10am.",
+    "speakers": [
+      {
+        "name": "Mike Wong",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Mike Wong",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "108"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/mike-wong-will-present-his-fpo-finding-needle-haystack-application-aware-data-systems",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Mike Wong will present his FPO \"FINDING THE NEEDLE IN THE HAYSTACK: APPLICATION-AWARE DATA SYSTEMS FOR EFFICIENT AI INFERENCE\" on 10/20/26 in Friend 108 at 10am.",
+    "locationRaw": "Friend Center 108",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cs:https://www.cs.princeton.edu/events/cos-gender-sexuality-resource-center-mixer",
     "guid": "https://www.cs.princeton.edu/events/cos-gender-sexuality-resource-center-mixer",
     "sources": [
