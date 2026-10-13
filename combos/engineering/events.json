@@ -1,57 +1,5 @@
 [
   {
-    "id": "ece:ps_events:10936:delta:0",
-    "guid": "ps_events:10936:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-11T17:00:00Z",
-    "endsAt": "2026-09-11T19:00:00Z",
-    "startTime": "2026-09-11T13:00:00",
-    "endTime": "2026-09-11T15:00:00",
-    "timezone": "America/New_York",
-    "title": "Driven-Dissipative Dynamics in Fluxonium: Measurement-Induced Transitions and Effective Temperatures",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Final Public Oral Examinations,Final Public Orals",
-    "tags": [
-      "fpo"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Final Public Oral Examinations",
-      "Final Public Orals"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "EQUAD",
-      "id": "",
-      "detail": "J223"
-    },
-    "urlRef": "https://ece.princeton.edu/events/driven-dissipative-dynamics-fluxonium-measurement-induced-transitions-and-effective",
-    "content": "Superconducting qubits are artificial atoms whose properties are shaped through the engineering of nonlinear electrical circuits. Quantum information is encoded by selecting two levels of this multilevel system to form the computational subspace. Thus, standard operations can inadvertently populate states outside this subspace, producing leakage errors. In transmons, for example, increasing the resonator drive during readout can activate multiphoton resonances that induce measurement-induced state transitions (MISTs), transferring",
-    "rawEventDetails": "Speaker Parth Jatakia Details Event Description Superconducting qubits are artificial atoms whose properties are shaped through the engineering of nonlinear electrical circuits. Quantum information is encoded by selecting two levels of this multilevel system to form the computational subspace. Thus, standard operations can inadvertently populate states outside this subspace, producing leakage errors. In transmons, for example, increasing the resonator drive during readout can activate multiphoton resonances that induce measurement-induced state transitions (MISTs), transferring population to high-lying states and severely reducing measurement fidelity. MISTs therefore constrain attempts to make dispersive readout simultaneously faster and more accurately. Fluxonium pushes this engineering further, suppressing several sources of decoherence within the computational subspace. This produces an unusually rich, strongly anharmonic spectrum in which higher levels can couple more strongly to microwave fields, without the simple nearest-neighbour selection structure of transmons. The first part of this dissertation examines how MISTs arise in fluxonium and what sets their magnitude. Using flux-pulse-assisted measurements, we uncover population transfer that multiphoton resonances alone cannot explain. To explain them, we perform time-dependent open-quantum-system simulations incorporating driven multilevel dynamics and dissipation. The simulations reveal a new decay-assisted pathway for MISTs: the readout drive populates hybridized states involving higher fluxonium levels, while decay redirects population into the excited qubit manifold. We find that the combined action of drive and decay produces an optical-pumping-like transfer that builds up over the measurement pulse. Multiphoton resonances therefore provide pathways for MISTs, while their magnitude depends continuously on the drive protocol and the environment. The second part of this work examines this environment and the processes through which it exchanges energy with the qubit. Existing fluxonium loss models are phenomenological and cannot by themselves pinpoint the microscopic process or material source of dissipation. We therefore measure excitation and relaxation separately, resolving the environment\u2019s ability to supply and absorb energy. Their imbalance defines a transition-specific effective temperature, while flux tunability turns the rates into a spectral probe of the environment. Across frequency and devices, the directed rates reveal substantial variation, underscoring the complexity of the environment governing qubit dissipation. Adviser: Andrew Houck",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Driven-Dissipative Dynamics in Fluxonium: Measurement-Induced Transitions and Effective Temperatures",
-    "locationRaw": "EQUAD J223",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cbe:ps_events:5446:delta:0",
     "guid": "ps_events:5446:delta:0",
     "sources": [
