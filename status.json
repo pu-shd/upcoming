@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T09:23:00Z",
+  "generatedAt": "2026-10-13T10:18:33Z",
   "purposes": {
     "engineering-newsletter": {
       "label": "Engineering events newsletter",
@@ -57,21 +57,18 @@
     }
   },
   "summary": {
-    "ok": 18,
+    "ok": 19,
     "empty": 1,
     "disabled": 5,
-    "failed": 1,
     "events": 178,
-    "stale": 5
+    "stale": 0
   },
   "feeds": [
     {
       "path": "combos/all-no-fpo/events.json",
       "status": "ok",
       "events": 174,
-      "stale": true,
-      "detail": "built from the last good copy of cs",
-      "lastSuccessAt": "2026-10-13T05:20:15Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -97,9 +94,7 @@
       "path": "combos/all/events.json",
       "status": "ok",
       "events": 178,
-      "stale": true,
-      "detail": "built from the last good copy of cs",
-      "lastSuccessAt": "2026-10-13T05:20:15Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -125,7 +120,7 @@
       "path": "combos/engineering/events.json",
       "status": "ok",
       "events": 37,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "sources": [
         "cbe",
         "cee",
@@ -147,9 +142,7 @@
       "path": "combos/seminars/events.json",
       "status": "ok",
       "events": 73,
-      "stale": true,
-      "detail": "built from the last good copy of cs",
-      "lastSuccessAt": "2026-10-13T05:20:15Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -175,9 +168,7 @@
       "path": "combos/sherrerd-hall/events.json",
       "status": "ok",
       "events": 47,
-      "stale": true,
-      "detail": "built from the last good copy of cs",
-      "lastSuccessAt": "2026-10-13T05:20:15Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "sources": [
         "orfe",
         "citp",
@@ -214,7 +205,7 @@
       "path": "feeds/ai/events.json",
       "status": "ok",
       "events": 14,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Princeton AI Lab",
       "home": "https://ai.princeton.edu",
       "sources": [
@@ -228,7 +219,7 @@
       "path": "feeds/bioengineering/events.json",
       "status": "ok",
       "events": 7,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Omenn-Darling Bioengineering Institute",
       "home": "https://bioengineering.princeton.edu",
       "sources": [
@@ -242,7 +233,7 @@
       "path": "feeds/cbe/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Chemical and Biological Engineering",
       "home": "https://cbe.princeton.edu",
       "sources": [
@@ -256,7 +247,7 @@
       "path": "feeds/cee/events.json",
       "status": "ok",
       "events": 3,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Civil and Environmental Engineering",
       "home": "https://cee.princeton.edu",
       "sources": [
@@ -270,7 +261,7 @@
       "path": "feeds/citp/events.json",
       "status": "ok",
       "events": 33,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Center for Information Technology Policy",
       "home": "https://citp.princeton.edu",
       "sources": [
@@ -283,11 +274,9 @@
     },
     {
       "path": "feeds/cs/events.json",
-      "status": "failed",
+      "status": "ok",
       "events": 4,
-      "stale": true,
-      "detail": "could not fetch the feed: ReadTimeout: HTTPSConnectionPool(host='www.cs.princeton.edu', port=443): Read timed out. (read timeout=5.0)",
-      "lastSuccessAt": "2026-10-13T05:20:15Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Computer Science",
       "home": "https://www.cs.princeton.edu",
       "sources": [
@@ -295,13 +284,17 @@
       ],
       "purposes": [
         "engineering-newsletter"
+      ],
+      "notes": [
+        "horizon: the upstream feed lists at most 10 events and returned 10, so it is complete only up to the last start it lists (2026-11-03 12:15 local); events starting after that may exist and not be listed yet.",
+        "declined: 6 event(s) present in the upstream feed are deliberately not published here, per this source's publish_unless (series in ['Center for Information Technology Policy', 'Data and Intelligent Systems (DaIS)'])."
       ]
     },
     {
       "path": "feeds/dais/events.json",
       "status": "ok",
       "events": 27,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Data and Intelligent Systems",
       "home": "https://dais.princeton.edu",
       "sources": [
@@ -330,7 +323,7 @@
       "path": "feeds/ece/events.json",
       "status": "ok",
       "events": 7,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Electrical and Computer Engineering",
       "home": "https://ece.princeton.edu",
       "sources": [
@@ -344,7 +337,7 @@
       "path": "feeds/kellercenter/events.json",
       "status": "empty",
       "events": 0,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Keller Center for Innovation in Engineering Education",
       "home": "https://kellercenter.princeton.edu",
       "sources": [
@@ -361,7 +354,7 @@
       "path": "feeds/mae/events.json",
       "status": "ok",
       "events": 10,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Mechanical and Aerospace Engineering",
       "home": "https://mae.princeton.edu",
       "sources": [
@@ -375,7 +368,7 @@
       "path": "feeds/materials/events.json",
       "status": "ok",
       "events": 15,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Princeton Materials Institute",
       "home": "https://materials.princeton.edu",
       "sources": [
@@ -403,7 +396,7 @@
       "path": "feeds/nam/events.json",
       "status": "ok",
       "events": 6,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Natural and Artificial Minds",
       "home": "https://nam.ai.princeton.edu",
       "sources": [
@@ -431,7 +424,7 @@
       "path": "feeds/orfe/events.json",
       "status": "ok",
       "events": 17,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Operations Research and Financial Engineering",
       "home": "https://orfe.princeton.edu",
       "sources": [
@@ -449,7 +442,7 @@
       "path": "feeds/quantum/events.json",
       "status": "ok",
       "events": 17,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Princeton Quantum Initiative",
       "home": "https://quantum.princeton.edu",
       "sources": [
@@ -463,7 +456,7 @@
       "path": "feeds/robotics/events.json",
       "status": "ok",
       "events": 8,
-      "lastSuccessAt": "2026-10-13T09:23:00Z",
+      "lastSuccessAt": "2026-10-13T10:18:33Z",
       "label": "Princeton Robotics",
       "home": "https://robotics.princeton.edu",
       "sources": [
