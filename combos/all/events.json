@@ -5351,6 +5351,58 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11051:delta:0",
+    "guid": "ps_events:11051:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-27T14:00:00Z",
+    "endsAt": "2026-10-27T16:00:00Z",
+    "startTime": "2026-10-27T10:00:00",
+    "endTime": "2026-10-27T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Scaling Certifiable Safety for Embodied AI: From Fixed Domains toward Open-World Autonomy",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "D321"
+    },
+    "urlRef": "https://ece.princeton.edu/events/scaling-certifiable-safety-embodied-ai-fixed-domains-toward-open-world-autonomy",
+    "content": "Robots are being deployed faster and closer to humans, making safety increasingly difficult to quantify and certify. Analytical methods often rely on reduced-order models, whereas numerical methods can provide stronger guarantees but quickly become intractable. Learning scales to high-dimensional systems, yet typically offers only empirical or probabilistic assurances. This dissertation combines the scalability of learning with the rigor of control-theoretic safety.In the first part, we develop certifiable safety filters",
+    "rawEventDetails": "Speaker Duy Phuong Nguyen Details Event Description Robots are being deployed faster and closer to humans, making safety increasingly difficult to quantify and certify. Analytical methods often rely on reduced-order models, whereas numerical methods can provide stronger guarantees but quickly become intractable. Learning scales to high-dimensional systems, yet typically offers only empirical or probabilistic assurances. This dissertation combines the scalability of learning with the rigor of control-theoretic safety. In the first part, we develop certifiable safety filters for a designed world with a fixed Operational Design Domain (ODD), which specifies the admissible dynamics, environmental conditions, disturbances, and failure modes. Safety synthesis is formulated as solving a zero-sum game between the robot and an adversary representing the admissible disturbances. We develop a provably convergent adversarial actor\u2013critic method to approximate the game solution and synthesize neural safety policies for high-dimensional systems. This framework enables full-order safety-filter synthesis and zero-shot deployment across different high-dimensional robotic systems. The learned safety value function can also serve as a state\u2013action control barrier function, recovering the maximal robust safety envelope while minimally modifying the task policy. We further show that sufficiently permissive filtering does not degrade asymptotic performance, enabling reinforcement learning that reaches state-of-the-art performance faster than imperfectly safe methods, with zero violations under a perfect filter. Finally, we show that goal-conditioned reach-avoid safety filters make interventions preserve the task rather than only avoid failure, and expand rather than restrict what robots can safely do, from quadruped parkour to underactuated industrial cranes. The second part extends safety beyond the designed world, where the ODD can no longer be held fixed. We first introduce dynamic ODDs, which condition safety values and policies on operating limits inferred and updated at runtime, allowing the robot to adapt as physical conditions change. However, this is not enough when the relevant hazards and failure modes were never specified in advance. We therefore develop an open-context architecture in which generative models interpret the scene, revise the relevant ODD, and select control-grounded safety tools through a representation shared with classical autonomy. This progression lays the foundation for extending certifiable safety from fixed physical envelopes toward open, human-centered autonomy. An embargo has been approved for this thesis. To view a copy of the thesis please stop by the EQUAD Graduate office B209. Adviser: Jaime Fern\u00e1ndez Fisac",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Scaling Certifiable Safety for Embodied AI: From Fixed Domains toward Open-World Autonomy",
+    "locationRaw": "EQUAD D321",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:4701:delta:0",
     "guid": "ps_events:4701:delta:0",
     "sources": [
