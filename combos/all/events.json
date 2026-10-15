@@ -5664,6 +5664,58 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11066:delta:0",
+    "guid": "ps_events:11066:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T16:00:00Z",
+    "endsAt": "2026-10-29T18:00:00Z",
+    "startTime": "2026-10-29T12:00:00",
+    "endTime": "2026-10-29T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Algorithm-Hardware Co-Design for Programmable Sensor-Fusion Perception and Scalable In-Memory Computing",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "B327"
+    },
+    "urlRef": "https://ece.princeton.edu/events/algorithm-hardware-co-design-programmable-sensor-fusion-perception-and-scalable-memory",
+    "content": "Machine-perception systems are increasingly deployed at the edge, where they must combine remote sensing (e.g., vision, lidar) with embedded point sensing (e.g., inertial, acoustic, locationing) under tightly constrained energy budgets. Exploiting both forms of sensing requires fusion algorithms that generalize across modalities and tasks, as well as computing platforms that can execute them with high energy efficiency while retaining programmability. This dissertation addresses these needs through algorithm-hardware",
+    "rawEventDetails": "Speaker Rakshit Pathak Details Event Description Machine-perception systems are increasingly deployed at the edge, where they must combine remote sensing (e.g., vision, lidar) with embedded point sensing (e.g., inertial, acoustic, locationing) under tightly constrained energy budgets. Exploiting both forms of sensing requires fusion algorithms that generalize across modalities and tasks, as well as computing platforms that can execute them with high energy efficiency while retaining programmability. This dissertation addresses these needs through algorithm-hardware co-design, spanning the fusion model, processor architecture, silicon prototypes and system infrastructure. First, a generalized Deep-Learning Sensor-Fusion (DL-SF) model is developed, which projects embedded-sensor features into sparse two-dimensional feature maps via domain transformation, scales them to the receptive field of each layer, and concatenates them throughout a convolutional backbone. Across four bookend applications (depth-map generation, 3D human-pose estimation, human trajectory forecasting and human-activity recognition), the DL-SF model improves accuracy and sample efficiency relative to vision-only, early-fusion and late-fusion baselines, for example requiring 3,680 rather than 16k training samples to reach iso-accuracy (98.2%) in activity recognition. Second, the computational structure of the DL-SF model is analyzed to drive the design of a heterogeneous processor in 28nm CMOS, integrating a RISC-V CPU with ISA extensions for embedded-sensor feature extraction, an NVDLA-based convolution accelerator, a Q22.10 fixed-point domain transformation unit, and a memory-data densifier for dense/sparse activation referencing. The prototype executes all four applications end-to-end with 9.3 to 28.1\u00d7 lower energy and 300 to 500\u00d7 lower latency than software execution on the CPU, and 15.6 to 24.6\u00d7 lower energy than reference GPU implementations. Third, this dissertation develops the host-to-chip system infrastructure for a scalable in-memory-computing (IMC) neural-network accelerator in 16nm CMOS, comprising a 4\u00d74 array of IMC cores connected by an on-chip network. This includes the chip interface connecting off-chip signals through the activation and weight buffers to the on-chip network, a PCIe-based FPGA controller using the RIFFA framework, an FPGA emulator of the IMC core for pre-silicon software validation, and a C library that bridges Python-level neural-network mapping tools to the hardware. This infrastructure enabled the measurement and demonstration of CIFAR-10 and ImageNet networks on the prototype. Adviser: Naveen Verma",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Algorithm-Hardware Co-Design for Programmable Sensor-Fusion Perception and Scalable In-Memory Computing",
+    "locationRaw": "EQUAD B327",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:6",
     "guid": "ps_events:5261:delta:6",
     "sources": [
