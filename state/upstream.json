@@ -1,6 +1,6 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-10-15T08:22:47Z",
+  "generatedAt": "2026-10-15T09:17:28Z",
   "sources": {
     "ai": {
       "etag": "\"1792048851\"",
@@ -18,13 +18,13 @@
       "lastEnrichedAt": "2026-10-14T15:48:03Z"
     },
     "cee": {
-      "etag": "\"1791816099\"",
-      "lastModified": "Mon, 12 Oct 2026 14:41:39 GMT",
+      "etag": "\"1792055847\"",
+      "lastModified": "Thu, 15 Oct 2026 09:17:27 GMT",
       "lastEnrichedAt": "2026-10-14T15:48:03Z"
     },
     "citp": {
-      "etag": "\"1791996441\"",
-      "lastModified": "Wed, 14 Oct 2026 16:47:21 GMT",
+      "etag": "\"1792055844\"",
+      "lastModified": "Thu, 15 Oct 2026 09:17:24 GMT",
       "lastEnrichedAt": "2026-10-15T03:18:58Z"
     },
     "dais": {
@@ -53,8 +53,8 @@
       "lastEnrichedAt": "2026-10-14T15:48:03Z"
     },
     "nam": {
-      "etag": "\"1791557200\"",
-      "lastModified": "Fri, 09 Oct 2026 14:46:40 GMT",
+      "etag": "\"1792055745\"",
+      "lastModified": "Thu, 15 Oct 2026 09:15:45 GMT",
       "lastEnrichedAt": "2026-10-14T15:48:03Z"
     },
     "orfe": {
@@ -63,8 +63,8 @@
       "lastEnrichedAt": "2026-10-15T03:18:58Z"
     },
     "quantum": {
-      "etag": "\"1791838960\"",
-      "lastModified": "Mon, 12 Oct 2026 21:02:40 GMT",
+      "etag": "\"1792053585\"",
+      "lastModified": "Thu, 15 Oct 2026 08:39:45 GMT",
       "lastEnrichedAt": "2026-10-14T15:48:03Z"
     },
     "robotics": {
