@@ -1,56 +1,5 @@
 [
   {
-    "id": "cbe:ps_events:5446:delta:0",
-    "guid": "ps_events:5446:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-15T14:30:00Z",
-    "endsAt": "2026-09-15T16:00:00Z",
-    "startTime": "2026-09-15T10:30:00",
-    "endTime": "2026-09-15T12:00:00",
-    "timezone": "America/New_York",
-    "title": "Molecular Mechanisms Underlying Condensed-Phase Phenomena: Insights from Atomistic Simulations",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Final Public Oral Examinations",
-    "tags": [
-      "fpo"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Final Public Oral Examinations"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F212"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/molecular-mechanisms-underlying-condensed-phase-phenomena-insights-atomistic-simulations",
-    "content": "The performance of modern materials often depends on achieving a precise balance among multiple, sometimes competing, properties. Design and optimization of such materials require understanding how subtle variations in molecular composition and organization change this balance. However, this relationship is often difficult to predict as macroscopic properties originate from many interactions occurring at length and time scales far smaller than those directly observed. Molecular simulations provide a means to bridge this gap by relating molecular-level behavior to material response. This",
-    "rawEventDetails": "Speaker Baris Eser Ugur Details Event Description The performance of modern materials often depends on achieving a precise balance among multiple, sometimes competing, properties. Design and optimization of such materials require understanding how subtle variations in molecular composition and organization change this balance. However, this relationship is often difficult to predict as macroscopic properties originate from many interactions occurring at length and time scales far smaller than those directly observed. Molecular simulations provide a means to bridge this gap by relating molecular-level behavior to material response. This dissertation combines physics-based molecular dynamics (MD) simulations and data-driven machine learning techniques to investigate how molecular chemistry governs physical properties across diverse organic condensed-phase systems, particularly molecular liquids and polymeric materials. In the case of molecular liquids, the central challenge is determining how strongly nuclear quantum effects (NQEs) influence thermophysical properties across chemical space. For polymeric materials, the challenge lies in resolving how functional group chemistry, mixture composition, and comonomer sequence underlie distinct physical phenomena in structurally complex systems. The studies presented here address distinct challenges in relating molecular chemistry to macroscopic properties in complex condensed-phase systems. Together, these insights provide molecular-level principles for understanding physical phenomena and help guide the rational design of high-performance materials.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Molecular Mechanisms Underlying Condensed-Phase Phenomena: Insights from Atomistic Simulations",
-    "locationRaw": "SEAS-CBE F212",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cbe:ps_events:5286:delta:0",
     "guid": "ps_events:5286:delta:0",
     "sources": [
