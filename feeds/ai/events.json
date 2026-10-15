@@ -1,52 +1,5 @@
 [
   {
-    "id": "ai:ps_events:4051:delta:0",
-    "guid": "ps_events:4051:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-15T16:00:00Z",
-    "endsAt": "2026-09-15T17:15:00Z",
-    "startTime": "2026-09-15T12:00:00",
-    "endTime": "2026-09-15T13:15:00",
-    "timezone": "America/New_York",
-    "title": "Whose AI for Amazon Forests? Technological Sovereignty for Indigenizing Science",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Aaron Burr Hall",
-      "id": "",
-      "detail": "216"
-    },
-    "urlRef": "https://ai.princeton.edu/events/2026/whose-ai-amazon-forests-technological-sovereignty-indigenizing-science",
-    "content": "The study for this talk traces the techno-scientific and political-economic trajectory of the development and use of an Artificial Intelligence (AI) model that simulates, monitors and predicts Amazonian deforestation. Developed mainly by Brazilian scientists, this model has been used for scientific research, policymaking, and forest conservation. It also provided the technical foundation for South America\u2019s first REDD+ forest carbon project and the world\u2019s first REDD+ carbon accounting methodology. However, in the process of international validation of this REDD+ carbon accounting",
-    "rawEventDetails": "Speaker Shaozeng Zhang Affiliation Associate Professor of Anthropology, Oregon State University; PLAS Visiting Fellow, Princeton University Details Event Description The study for this talk traces the techno-scientific and political-economic trajectory of the development and use of an Artificial Intelligence (AI) model that simulates, monitors and predicts Amazonian deforestation. Developed mainly by Brazilian scientists, this model has been used for scientific research, policymaking, and forest conservation. It also provided the technical foundation for South America\u2019s first REDD+ forest carbon project and the world\u2019s first REDD+ carbon accounting methodology. However, in the process of international validation of this REDD+ carbon accounting methodology, the validation agencies, all from Europe and North America, imposed technical requirements, such as smaller Minimum Mapping Units and higher satellite-imaging resolution, that were disconnected from the geographical scales and technological capacities of tropical rainforest countries. These requirements practically make Brazilian scientists lose control over rainforest data, technical standards, and knowledge validity. They also forced the world\u2019s tropical rainforest countries to reply on European and North American data infrastructures and AI models, continuously paying high transaction costs in global carbon markets and environmental governance. Based on long-term ethnographic work among Brazilian scientists and technocrats since 2009, Shaozeng Zhang uses their growing concern with \u201ctechnological sovereignty\u201d as an emic anthropological concept. Zhang analyzes how AI development and use are constrained by knowledge hegemony and North-South inequality in the postcolonial world. Finally, moving beyond political-economic or ethical debates, Zhang suggests an epistemologically reflexive approach of decolonizing or indigenizing science for better human knowledge production today. ABOUT OUR GUEST SPEAKER Shaozeng Zhang (Ph.D., University of California, Irvine), is Associate Professor of Anthropology, and affiliated professor of humanitarian engineering, at Oregon State University. His research focuses on Amazon forest conservation, climate change adaptation, science and technology studies, big data and artificial intelligence, and mixed-methods innovations. He has published in anthropology journals such as Economic Anthropology , Annals of Anthropological Practice, Teaching Anthropology, and Antropologia Portuguesa, as well as multidisciplinary journals such as Engineering Studies, Methodological Innovations, Annals of the American Association of Geographers, and Tapuya: Latin American Science, Technology and Society. He has been awarded research funding from various agencies, including the U.S. National Science Foundation, the U.S. Department of Energy, and the Wenner-Gren Foundation. He also served as a Junior Visiting Scholar in the Department of Anthropology at the University of Brasilia ( Universidade de Bras\u00edlia ) in Brazil. At Princeton, Zhang will continue developing a carbon-aware and co-evolving human-AI framework for Amazon deforestation monitoring in partnership with computer scientists, Princeton scholars, and Brazilian researchers. DISCUSSANT Lucas Prates, Lecturer, Department of Anthropology, Princeton University This event is co-sponsored by the Department of Anthropology. This event is open to students, faculty, visiting scholars and staff. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Whose AI for Amazon Forests? Technological Sovereignty for Indigenizing Science",
-    "locationRaw": "Aaron Burr Hall, Room 216",
-    "mappingRules": [
-      "ai:title"
-    ],
-    "locationRule": "comma_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ai:ps_events:4056:delta:0",
     "guid": "ps_events:4056:delta:0",
     "sources": [
