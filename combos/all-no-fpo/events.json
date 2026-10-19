@@ -7079,6 +7079,57 @@
     "mappingConflict": false
   },
   {
+    "id": "cbe:ps_events:5501:delta:0",
+    "guid": "ps_events:5501:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-18T21:00:00Z",
+    "endsAt": "2026-11-18T22:00:00Z",
+    "startTime": "2026-11-18T16:00:00",
+    "endTime": "2026-11-18T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Designing Single Chain Heteropolymers with Protein-like Interfacial Behavior: Insights from In-silico Experiments",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Departmental Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Departmental Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/designing-single-chain-heteropolymers-protein-interfacial-behavior-insights-silico",
+    "content": "Single chain nanoparticles (SCNPs) are small globules composed typically of a single random heteropolymer (RHP) chain containing 2 or more chemistries. In the past two decades, there have been significant advances in controlling the properties of these SCNPs in order to convert such seemingly inert globules into chemical reactors. More recently, however, RHPs have been used in many other applications such as protein protectants, catalysis, membrane active polymers, as well as chaperon-like biomimetic polymers. Many of these properties were believed to be only possible with sequence-defined",
+    "rawEventDetails": "Speaker Alfredo Alexander-Katz Affiliation Massachusetts Institute of Technology Details Event Description Single chain nanoparticles (SCNPs) are small globules composed typically of a single random heteropolymer (RHP) chain containing 2 or more chemistries. In the past two decades, there have been significant advances in controlling the properties of these SCNPs in order to convert such seemingly inert globules into chemical reactors. More recently, however, RHPs have been used in many other applications such as protein protectants, catalysis, membrane active polymers, as well as chaperon-like biomimetic polymers. Many of these properties were believed to be only possible with sequence-defined natural peptides, and it is of interest to understand how RHPs are able to achieve these functions. Here, we will present our in-silico work on how RHPs are arranged at the molecular level and highlight under what conditions one expects these polymers to present some of the interfacial properties proteins display. In particular, we will put special attention to the thermodynamics of globule formation in the presence of multiple chemistries, and the effect of Flory interaction parameters between the different species. As will be shown, under some conditions, these globules are able to exhibit a key biological property called hydration frustration, where some hydrophilic groups are dehydrated and buried while some hydrophobic groups are exposed at the water interface of the globule. This frustrated state is the basis of protein function and we believe this property to be critical in the future development of single chain nanoparticle for biological or biomimetic applications. We will finalize with a perspective on how RHPs interact with proteins, and potential avenues for utilizing them for controlling certain biological processes.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Designing Single Chain Heteropolymers with Protein-like Interfacial Behavior: Insights from In-silico Experiments",
+    "locationRaw": "E105 SEAS-BioE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:3391:delta:0",
     "guid": "ps_events:3391:delta:0",
     "sources": [
