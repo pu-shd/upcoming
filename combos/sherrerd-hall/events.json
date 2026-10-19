@@ -1,59 +1,5 @@
 [
   {
-    "id": "citp:ps_events:5261:delta:1",
-    "guid": "ps_events:5261:delta:1",
-    "sources": [
-      "citp"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-17T19:00:00Z",
-    "endsAt": "2026-09-17T20:00:00Z",
-    "startTime": "2026-09-17T15:00:00",
-    "endTime": "2026-09-17T16:00:00",
-    "timezone": "America/New_York",
-    "title": "Bias in AI Reading Group",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Artificial Intelligence,Data Science & Society",
-    "tags": [
-      "ai",
-      "data-science"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Artificial Intelligence",
-      "Data Science & Society"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "008"
-    },
-    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
-    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
-    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Bias in AI Reading Group",
-    "locationRaw": "Sherrerd Hall 008",
-    "mappingRules": [
-      "citp:title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "orfe:ps_events:12731:delta:0",
     "guid": "ps_events:12731:delta:0",
     "sources": [
