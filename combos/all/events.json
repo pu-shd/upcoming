@@ -103,54 +103,6 @@
     "mappingConflict": false
   },
   {
-    "id": "dais:ps_events:4506:delta:0",
-    "guid": "ps_events:4506:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-17T04:00:00Z",
-    "endsAt": "2026-09-18T04:00:00Z",
-    "startTime": "2026-09-17T00:00:00",
-    "endTime": "2026-09-18T00:00:00",
-    "timezone": "America/New_York",
-    "title": "Open Questions in AI Benchmarking",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/open-questions-ai-benchmarking",
-    "content": "Video",
-    "rawEventDetails": "Details Event Description Video Abstract: In this talk I will lay out what I take to be some of the big open questions about AI capabilities. These questions govern the impact that AI will have on the world. I'll also discuss some of the work being done (at my company and by others) to build benchmarks that help answer these questions. Short bio : Greg Burnham is the head of benchmarks at Epoch AI. Prior to this, he worked at Elemental Cognition and Bridgewater Associates. He has a BA in mathematics from Princeton University. Website: https://epoch.ai/about/team/greg-burnham Sponsor Organized by PLI Special Event Seminar Lunch Series",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Open Questions in AI Benchmarking",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "citp:ps_events:5261:delta:1",
     "guid": "ps_events:5261:delta:1",
     "sources": [
@@ -253,54 +205,6 @@
     "locationRaw": "Bioengineering E105",
     "mappingRules": [
       "bioengineering:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "dais:ps_events:4376:delta:0",
-    "guid": "ps_events:4376:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-18T13:00:00Z",
-    "endsAt": "2026-09-18T14:00:00Z",
-    "startTime": "2026-09-18T09:00:00",
-    "endTime": "2026-09-18T10:00:00",
-    "timezone": "America/New_York",
-    "title": "AI Alignment + Safety Seminar",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar-0",
-    "content": "The AI Alignment + Safety seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
-    "rawEventDetails": "Speaker Jerry Han '27 Affiliation \"Measuring Intelligence Beyond Human Scale\" Details Event Description The AI Alignment + Safety seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI Alignment + Safety Seminar",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -5482,7 +5386,7 @@
       "detail": "103"
     },
     "urlRef": "https://nam.ai.princeton.edu/events/2026/do-neural-networks-have-world-models",
-    "content": "Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia UniversityTalk Abstract: It is often claimed that neural networks construct models of the world (\"world models\") and don't merely exploit heuristics. In this sense, they are said to understand their tasks. But it isn't always clear what having a world model amounts to, or what should count as evidence for or against. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a",
+    "content": "Speaker: John Morrison, Professor of Philosophy, Barnard CollegeTalk Abstract: It is often claimed that neural networks construct models of the world (\"world models\") and don't merely exploit heuristics. In this sense, they are said to understand their tasks. But it isn't always clear what having a world model amounts to, or what should count as evidence for or against. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its",
     "rawEventDetails": "Details Event Description Speaker: John Morrison, Professor of Philosophy, Barnard College, Columbia University Talk Abstract: It is often claimed that neural networks construct models of the world (\"world models\") and don't merely exploit heuristics. In this sense, they are said to understand their tasks. But it isn't always clear what having a world model amounts to, or what should count as evidence for or against. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue that many disputes about world models are merely verbal. Second, drawing on joint work with collaborators at Columbia and NYU, I apply this framework to the standard example: Othello-GPT, a transformer trained to predict legal moves in Othello. I argue that the evidence is ambiguous once we adopt the right baselines (networks that plausibly use only heuristics) and the right metrics (which attend to patterns of error and the probabilities assigned to unchosen moves). I then introduce another kind of evidence that favors the heuristic interpretation: how quickly the network learns variants of Othello that extend rather than scramble the board's geometry. I end by drawing general lessons for attributing world models to neural networks, and by describing similar approaches for attributing algorithms and probabilistic inference.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
@@ -6715,7 +6619,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/lydia-liu-princeton-university",
-    "content": "",
+    "content": "Abstract: Many AI systems operate in real-world settings that require making sequential decisions under constraints---such as limited resource capacity---while still providing learning and inferential guarantees. First, consider data-driven recommendations for hospital discharge decisions with the goal of minimizing long-term readmission probability. Hospital beds are a capacity-constrained resource that must be taken into account in decision recommendations. Here, we show that policies based on absolute readmission risk can induce censoring and biased learning",
     "rawEventDetails": "Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",

@@ -2620,7 +2620,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/lydia-liu-princeton-university",
-    "content": "",
+    "content": "Abstract: Many AI systems operate in real-world settings that require making sequential decisions under constraints---such as limited resource capacity---while still providing learning and inferential guarantees. First, consider data-driven recommendations for hospital discharge decisions with the goal of minimizing long-term readmission probability. Hospital beds are a capacity-constrained resource that must be taken into account in decision recommendations. Here, we show that policies based on absolute readmission risk can induce censoring and biased learning",
     "rawEventDetails": "Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
