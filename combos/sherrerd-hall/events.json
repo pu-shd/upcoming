@@ -1006,7 +1006,7 @@
     "startTime": "2026-10-27T16:30:00",
     "endTime": "2026-10-27T17:30:00",
     "timezone": "America/New_York",
-    "title": "An ORFE Department Colloquia Talk by Tim Roughgarden, Institute for Advanced Study",
+    "title": "The Computer in the Sky | Theoretically Speaking",
     "speakers": [
       {
         "name": "Tim Roughgarden",
@@ -1034,7 +1034,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/tim-roughgarden-institute-advanced-study",
     "content": "Abstract: Turing-complete blockchain protocols such as Ethereum approximate the idealized abstraction of a shared \u201ccomputer in the sky\u201d by augmenting the traditional internet with persistent-state and processing capabilities.This technology can, among other things, enable stronger notions of ownership of digital possessions than we have ever had before. Building the computer in the sky is hard (and scientifically fascinating), and requires the synthesis of multiple disciplines, both within computer science (distributed computing, cryptography, algorithmic game",
-    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawEventDetails": "Details Event Description Abstract: Turing-complete blockchain protocols such as Ethereum approximate the idealized abstraction of a shared \u201ccomputer in the sky\u201d by augmenting the traditional internet with persistent-state and processing capabilities. This technology can, among other things, enable stronger notions of ownership of digital possessions than we have ever had before. Building the computer in the sky is hard (and scientifically fascinating), and requires the synthesis of multiple disciplines, both within computer science (distributed computing, cryptography, algorithmic game theory) and beyond (mechanism design, macroeconomics, finance, political science). This talk will survey some of Tim Roughgarden\u2019s work in the area and the practical impact it has had. Bio: Tim Roughgarden is a Professor in the School of Mathematics at the Institute for Advanced Study, on leave from the Department of Computer Science at Columbia University. He is also the Founding Head of Research at a16z crypto. Prior to joining Columbia, he spent 15 years on the computer science faculty at Stanford, following a PhD at Cornell and a postdoc at UC Berkeley. He works on the boundary of computer science and economics, and on the design, analysis, applications, and limitations of algorithms. Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1047,8 +1047,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -1117,7 +1117,7 @@
     "startTime": "2026-11-02T12:15:00",
     "endTime": "2026-11-02T13:15:00",
     "timezone": "America/New_York",
-    "title": "An S. S. Wilks Memorial Seminar in Statistics Talk by Koulik Khamaru, Rutgers University",
+    "title": "Bandit Inference via Regularization.",
     "speakers": [
       {
         "name": "Koulik Khamaru",
@@ -1145,7 +1145,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/koulik-khamaru-rutgers-university",
     "content": "Abstract: Statistical inference in contextual bandits is challenging because the data are collected adaptively and are therefore not i.i.d. As a result, classical Wald-type intervals may fail; valid inference may require inflating them by a factor of \u221ad, where d is the dimension of the problem. When the data-collection method satisfies suitable stability conditions, such as those of Lai and Wei (1982), traditional M-estimators avoid this bad behavior, and standard Wald-type confidence intervals remain valid even under adaptive sampling. In this talk, we",
-    "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
+    "rawEventDetails": "Details Event Description Abstract: Statistical inference in contextual bandits is challenging because the data are collected adaptively and are therefore not i.i.d. As a result, classical Wald-type intervals may fail; valid inference may require inflating them by a factor of \u221ad, where d is the dimension of the problem. When the data-collection method satisfies suitable stability conditions, such as those of Lai and Wei (1982), traditional M-estimators avoid this bad behavior, and standard Wald-type confidence intervals remain valid even under adaptive sampling. In this talk, we discuss how regularization in bandit algorithm design can improve the stability of data collection while preserving strong regret guarantees. The broader message is that carefully designed adaptive algorithms can support both efficient learning, in the form of low regret, and reliable statistical inference. Event Category S. S. Wilks Memorial Seminar in Statistics",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1158,8 +1158,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -1566,7 +1566,7 @@
     "startTime": "2026-11-10T16:30:00",
     "endTime": "2026-11-10T17:30:00",
     "timezone": "America/New_York",
-    "title": "An ORFE Department Colloquia Talk by Lydia Liu, Princeton University",
+    "title": "Reliable AI in Capacity-Constrained Human Decision Processes",
     "speakers": [
       {
         "name": "Lydia Liu",
@@ -1594,7 +1594,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/lydia-liu-princeton-university",
     "content": "Abstract: Many AI systems operate in real-world settings that require making sequential decisions under constraints---such as limited resource capacity---while still providing learning and inferential guarantees. First, consider data-driven recommendations for hospital discharge decisions with the goal of minimizing long-term readmission probability. Hospital beds are a capacity-constrained resource that must be taken into account in decision recommendations. Here, we show that policies based on absolute readmission risk can induce censoring and biased learning",
-    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawEventDetails": "Details Event Description Abstract: Many AI systems operate in real-world settings that require making sequential decisions under constraints---such as limited resource capacity---while still providing learning and inferential guarantees. First, consider data-driven recommendations for hospital discharge decisions with the goal of minimizing long-term readmission probability. Hospital beds are a capacity-constrained resource that must be taken into account in decision recommendations. Here, we show that policies based on absolute readmission risk can induce censoring and biased learning of patient risks, while simple discharge-up-to policies based on relative readmission risk reduction avoid these issues and enable consistent learning. In the second setting of AI auditing, expert verification of algorithmic output can also be a capacity-constrained resource. We study the use of betting-based martingale methods to design risk-limiting auditing protocols with valid guarantees. These studies illustrate different ways to design sequential decision rules for AI systems that remain reliable under real-world constraints. Bio: Lydia Liu is an Assistant Professor of Computer Science at Princeton University. Her research examines the theoretical foundations of machine learning and algorithmic decision-making, with a focus on long-term societal impact. She obtained her Ph.D. in electrical engineering and computer sciences from the University of California, Berkeley, and completed her postdoctoral research at Cornell University at the Artificial Intelligence, Policy, and Practice (AIPP) initiative. She is the recipient of an Amazon Research Award, fellowships from Microsoft and Open Philanthropy, and an ICML Best Paper Award. Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1607,8 +1607,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
