@@ -1,121 +1,5 @@
 [
   {
-    "id": "orfe:ps_events:12691:delta:0",
-    "guid": "ps_events:12691:delta:0",
-    "sources": [
-      "orfe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-15T20:30:00Z",
-    "endsAt": "2026-09-15T21:30:00Z",
-    "startTime": "2026-09-15T16:30:00",
-    "endTime": "2026-09-15T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Finding Stationary Points in Stochastic Convex Optimization: Why and How",
-    "speakers": [
-      {
-        "name": "John Duchi",
-        "affiliation": "Stanford University"
-      }
-    ],
-    "speaker": "John Duchi, Stanford University",
-    "affiliation": "Stanford University",
-    "series": "Optimization Seminar,ORFE Department Colloquia",
-    "tags": [
-      "colloquium",
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Optimization Seminar",
-      "ORFE Department Colloquia"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "101"
-    },
-    "urlRef": "https://orfe.princeton.edu/events/2026/john-duchi-stanford-university",
-    "content": "Abstract: In this talk, I will discuss finding stationary points of possibly non-differentiable stochastic convex functions. Motivation for solving such problems arises in modern \u201cdistribution free\u201d statistical learning problems. We will highlight some of the challenges of solving such problems, including that subgradients of stochastic convex functions do not converge uniformly, and also demonstrate some new geometric tools to show that solving the problem is in fact possible.Based on the paper \u201cFinding a stationary point",
-    "rawEventDetails": "Details Event Description Abstract: In this talk, I will discuss finding stationary points of possibly non-differentiable stochastic convex functions. Motivation for solving such problems arises in modern \u201cdistribution free\u201d statistical learning problems. We will highlight some of the challenges of solving such problems, including that subgradients of stochastic convex functions do not converge uniformly, and also demonstrate some new geometric tools to show that solving the problem is in fact possible. Based on the paper \u201c Finding a stationary point of a stochastic convex problem \u201d, a joint work with Felipe Areces and Malo Sommers. Bio: John Duchi is an associate professor of Statistics and Electrical Engineering at Stanford University. His work spans statistical learning, optimization, information theory, and computation, with a few driving goals. (1) To discover statistical learning procedures that optimally trade between real-world resources \u2014 computation, communication, privacy provided to study participants \u2014 while maintaining statistical efficiency. (2) To build efficient large-scale optimization methods that address the spectrum of optimization, machine learning, and data analysis problems we face, allowing us to move beyond bespoke solutions to methods that robustly work. (3) To develop tools to assess and guarantee the validity of \u2014 and confidence we should have in \u2014 machine-learned systems. Event Category Optimization Seminar ORFE Department Colloquia",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "John Duchi, Stanford University",
-    "locationRaw": "101 - Sherrerd Hall",
-    "mappingRules": [
-      "orfe:summary-is-speaker"
-    ],
-    "locationRule": "detail_dash_name",
-    "summaryRest": "",
-    "titleSource": "enriched",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "orfe:ps_events:12726:delta:0",
-    "guid": "ps_events:12726:delta:0",
-    "sources": [
-      "orfe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-16T20:30:00Z",
-    "endsAt": "2026-09-16T21:30:00Z",
-    "startTime": "2026-09-16T16:30:00",
-    "endTime": "2026-09-16T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Quantitative propagation of chaos and fluctuations for non-exchangeable diffusions",
-    "speakers": [
-      {
-        "name": "Lane Chun Yeung",
-        "affiliation": "Illinois Institute of Technology"
-      }
-    ],
-    "speaker": "Lane Chun Yeung, Illinois Institute of Technology",
-    "affiliation": "Illinois Institute of Technology",
-    "series": "Stochastic Analysis and Financial Mathematics Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Stochastic Analysis and Financial Mathematics Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "101"
-    },
-    "urlRef": "https://orfe.princeton.edu/events/2026/lane-chun-yeung-illinois-institute-technology",
-    "content": "Abstract: We study a system of interacting diffusions with heterogeneous pairwise interactions, so the particle system is non-exchangeable. In the first part of the talk, we develop a quantitative, non-asymptotic approach to mean field approximation by comparing the law of any subcollection of particles with a suitably chosen product measure and proving sharp relative entropy bounds. The proof uses a BBGKY hierarchy adapted to the non-exchangeable setting and an unexpected connection with first-passage percolation.In the second part, we establish a universal",
-    "rawEventDetails": "Details Event Description Abstract: We study a system of interacting diffusions with heterogeneous pairwise interactions, so the particle system is non-exchangeable. In the first part of the talk, we develop a quantitative, non-asymptotic approach to mean field approximation by comparing the law of any subcollection of particles with a suitably chosen product measure and proving sharp relative entropy bounds. The proof uses a BBGKY hierarchy adapted to the non-exchangeable setting and an unexpected connection with first-passage percolation. In the second part, we establish a universal central limit theorem for the global fluctuation field around the McKean-Vlasov limit. Under suitable structural and denseness conditions on the interaction matrix, the fluctuations converge to the same Gaussian SPDE as in the classical exchangeable mean field case. For $m_n$-regular graphs, this holds when $m_n/\\sqrt n\\to\\infty$, and a spatial interaction model shows that the $n^{-1/2}$ denseness threshold is sharp. The proof builds on the sharp propagation of chaos estimates developed in the first part, together with functional inequalities and an analysis in negative Sobolev spaces. Based on joint work with Daniel Lacker and Fuzhong Zhou, and on joint work with Mykhaylo Shkolnikov. Short Bio : Lane Chun Yeung is a postdoctoral research associate at Carnegie Mellon University, mentored by Mykhaylo Shkolnikov. He received his Ph.D. in Operations Research from Columbia University, where he was advised by Daniel Lacker and Ioannis Karatzas. His research interests include interacting particle systems, mean field models, mathematical finance, and stochastic control and games. Event Category Stochastic Analysis and Financial Mathematics Seminar",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Lane Chun Yeung, Illinois Institute of Technology",
-    "locationRaw": "101 - Sherrerd Hall",
-    "mappingRules": [
-      "orfe:summary-is-speaker"
-    ],
-    "locationRule": "detail_dash_name",
-    "summaryRest": "",
-    "titleSource": "enriched",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "citp:ps_events:5261:delta:1",
     "guid": "ps_events:5261:delta:1",
     "sources": [
@@ -1176,15 +1060,15 @@
     "startTime": "2026-10-27T16:30:00",
     "endTime": "2026-10-27T17:30:00",
     "timezone": "America/New_York",
-    "title": "An ORFE Department Colloquia Talk by Tim Roughgarden, Columbia University",
+    "title": "An ORFE Department Colloquia Talk by Tim Roughgarden, Institute for Advanced Study",
     "speakers": [
       {
         "name": "Tim Roughgarden",
-        "affiliation": "Columbia University"
+        "affiliation": "Institute for Advanced Study"
       }
     ],
-    "speaker": "Tim Roughgarden, Columbia University",
-    "affiliation": "Columbia University",
+    "speaker": "Tim Roughgarden, Institute for Advanced Study",
+    "affiliation": "Institute for Advanced Study",
     "series": "ORFE Department Colloquia",
     "tags": [
       "colloquium"
@@ -1202,15 +1086,15 @@
       "id": "",
       "detail": "101"
     },
-    "urlRef": "https://orfe.princeton.edu/events/2026/tim-roughgarden-columbia-university",
-    "content": "",
+    "urlRef": "https://orfe.princeton.edu/events/2026/tim-roughgarden-institute-advanced-study",
+    "content": "Abstract: Turing-complete blockchain protocols such as Ethereum approximate the idealized abstraction of a shared \u201ccomputer in the sky\u201d by augmenting the traditional internet with persistent-state and processing capabilities.This technology can, among other things, enable stronger notions of ownership of digital possessions than we have ever had before. Building the computer in the sky is hard (and scientifically fascinating), and requires the synthesis of multiple disciplines, both within computer science (distributed computing, cryptography, algorithmic game",
     "rawEventDetails": "Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Tim Roughgarden, Columbia University",
+    "summaryRaw": "Tim Roughgarden, Institute for Advanced Study",
     "locationRaw": "101 - Sherrerd Hall",
     "mappingRules": [
       "orfe:summary-is-speaker"

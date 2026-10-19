@@ -1,56 +1,5 @@
 [
   {
-    "id": "cbe:ps_events:5286:delta:0",
-    "guid": "ps_events:5286:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-16T20:00:00Z",
-    "endsAt": "2026-09-16T21:00:00Z",
-    "startTime": "2026-09-16T16:00:00",
-    "endTime": "2026-09-16T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Network Phases in Block Polymers",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F204"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/network-phases-block-polymers",
-    "content": "This presentation will explore our recent computational research self-assembled network phases in block copolymers, which can serve as templates for creating metallic metamaterials. In the first part of the presentation, I will describe routes to produce single-gyroid phases, chiral network with three-fold connectors. While single gyroid is metastable in simple AB diblock copolymers, blends of linear diblock polymers and neat melts of nonlinear copolymer architectures expose stability windows for alternating gyroid and single gyroid, respectively, in experimentally accessible systems. The",
-    "rawEventDetails": "Speaker Kevin Dorfman Affiliation University of Minnesota Details Event Description This presentation will explore our recent computational research self-assembled network phases in block copolymers, which can serve as templates for creating metallic metamaterials. In the first part of the presentation, I will describe routes to produce single-gyroid phases, chiral network with three-fold connectors. While single gyroid is metastable in simple AB diblock copolymers, blends of linear diblock polymers and neat melts of nonlinear copolymer architectures expose stability windows for alternating gyroid and single gyroid, respectively, in experimentally accessible systems. The second part of the presentation will discuss a new principle, known as boundary frustration, that guides termination plane selection between two non-preferential surfaces. Finally, I will describe a new approach known as \u201cgenerative SCFT\u201d that leverages generative adversarial networks to learn from self-consistent field theory (SCFT) solution trajectories to propose new initial guesses for subsequent SCFT calculations. This approach not only identified all known block polymer network phases but also uncovered a vast library of candidate network phases.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Network Phases in Block Polymers",
-    "locationRaw": "F204 SEAS-CBE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ece:ps_events:11016:delta:0",
     "guid": "ps_events:11016:delta:0",
     "sources": [
