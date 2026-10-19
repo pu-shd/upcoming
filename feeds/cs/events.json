@@ -1,7 +1,7 @@
 [
   {
-    "id": "cs:https://www.cs.princeton.edu/events/mike-wong-will-present-his-fpo-finding-needle-haystack-application-aware-data-systems",
-    "guid": "https://www.cs.princeton.edu/events/mike-wong-will-present-his-fpo-finding-needle-haystack-application-aware-data-systems",
+    "id": "cs:https://www.cs.princeton.edu/events/mike-wong-fpo",
+    "guid": "https://www.cs.princeton.edu/events/mike-wong-fpo",
     "sources": [
       "cs"
     ],
@@ -11,7 +11,7 @@
     "startTime": "2026-10-20T10:00:00",
     "endTime": "2026-10-20T12:00:00",
     "timezone": "America/New_York",
-    "title": "Mike Wong will present his FPO \"FINDING THE NEEDLE IN THE HAYSTACK: APPLICATION-AWARE DATA SYSTEMS FOR EFFICIENT AI INFERENCE\" on 10/20/26 in Friend 108 at 10am.",
+    "title": "Mike Wong FPO",
     "speakers": [
       {
         "name": "Mike Wong",
@@ -32,7 +32,7 @@
       "id": "",
       "detail": "108"
     },
-    "urlRef": "https://www.cs.princeton.edu/events/mike-wong-will-present-his-fpo-finding-needle-haystack-application-aware-data-systems",
+    "urlRef": "https://www.cs.princeton.edu/events/mike-wong-fpo",
     "content": "",
     "rawEventDetails": "",
     "rawExtractAbstract": "",
@@ -40,7 +40,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Mike Wong will present his FPO \"FINDING THE NEEDLE IN THE HAYSTACK: APPLICATION-AWARE DATA SYSTEMS FOR EFFICIENT AI INFERENCE\" on 10/20/26 in Friend 108 at 10am.",
+    "summaryRaw": "Mike Wong FPO",
     "locationRaw": "Friend Center 108",
     "mappingRules": [
       "cs:summary-is-title"
