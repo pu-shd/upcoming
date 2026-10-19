@@ -2173,7 +2173,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/koulik-khamaru-rutgers-university",
-    "content": "",
+    "content": "Abstract: Statistical inference in contextual bandits is challenging because the data are collected adaptively and are therefore not i.i.d. As a result, classical Wald-type intervals may fail; valid inference may require inflating them by a factor of \u221ad, where d is the dimension of the problem. When the data-collection method satisfies suitable stability conditions, such as those of Lai and Wei (1982), traditional M-estimators avoid this bad behavior, and standard Wald-type confidence intervals remain valid even under adaptive sampling. In this talk, we",
     "rawEventDetails": "Event Category S. S. Wilks Memorial Seminar in Statistics",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
