@@ -56,53 +56,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ece:ps_events:11016:delta:0",
-    "guid": "ps_events:11016:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-16T20:30:00Z",
-    "endsAt": "2026-09-16T21:30:00Z",
-    "startTime": "2026-09-16T16:30:00",
-    "endTime": "2026-09-16T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Emerging Chip-Scale Terahertz Systems for Sensing, Metrology and Security Applications",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Engineering Quadrangle",
-      "id": "",
-      "detail": "B205"
-    },
-    "urlRef": "https://ece.princeton.edu/events/emerging-chip-scale-terahertz-systems-sensing-metrology-and-security-applications-0",
-    "content": "Abstract: Modern processor architectures are complex machines due to decades' worth of performance optimizations. This complexity can lead to subtle performance issues at the microarchitectural level that are very difficult to diagnose and repair. Fortunately, modern processors also contain a rich set of performance monitoring facilities that enable introspection of many aspects of program execution. I will share our work on techniques to diagnose and repair, in running programs, two particular performance issues: adjusting code layout on-the-fly to match current",
-    "rawEventDetails": "Speaker Joseph Devietti Affiliation University of Pennsylvania Details Event Description Abstract: Modern processor architectures are complex machines due to decades' worth of performance optimizations. This complexity can lead to subtle performance issues at the microarchitectural level that are very difficult to diagnose and repair. Fortunately, modern processors also contain a rich set of performance monitoring facilities that enable introspection of many aspects of program execution. I will share our work on techniques to diagnose and repair, in running programs, two particular performance issues: adjusting code layout on-the-fly to match current hot code paths, and adding data prefetch instructions on-the-fly to improve current data access patterns. I will also discuss some research side quests in bringing GPU acceleration to neurosymbolic programs (which combine deep learning with symbolic reasoning to achieve better data efficiency, interpretability, and generalizability compared to standalone deep learning approaches), and chip design tools that are more idiot-/AI-friendly. Bio: Joseph Devietti is an Associate Professor in the Department of Computer & Information Science at the University of Pennsylvania. His research focuses on making parallel computers easier to program, leveraging techniques across the computing stack, including computer architecture, compilers, runtime systems and programming languages. He was awarded an Intel Early Career Faculty Honor in 2013, and had a paper selected as one of the Top Picks from 2022 Computer Architecture Conferences. He earned his PhD in Computer Science & Engineering from the University of Washington in 2012. Sponsor Emerging Frontiers in Computer Architecture and Systems",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Emerging Chip-Scale Terahertz Systems for Sensing, Metrology and Security Applications",
-    "locationRaw": "B205 Engineering Quadrangle",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2756:delta:0",
     "guid": "ps_events:2756:delta:0",
     "sources": [
@@ -5294,6 +5247,53 @@
     "itemType": "advertisement",
     "summaryRaw": "Distinguished Seminar \u2014 Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
     "locationRaw": "Computer Science, Computer Science Building, Room 104",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2461:delta:0",
+    "guid": "ps_events:2461:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T20:30:00Z",
+    "endsAt": "2026-10-29T21:30:00Z",
+    "startTime": "2026-10-29T16:30:00",
+    "endTime": "2026-10-29T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Prof. Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Building,",
+      "id": "",
+      "detail": "104"
+    },
+    "urlRef": "https://cee.princeton.edu/events/prof-alessandro-vespignani-bridging-network-science-and-real-world-epidemics-theory-public",
+    "content": "Alessandro VespignaniSternberg Family Distinguished ProfessorNortheastern UniversityAbstract: Concepts developed to describe spreading processes on networks,including the role of heterogeneous connectivity, have provided the foundationfor a new generation of mechanistic models. Built on empirical mobility andcontact networks, these models capture the multi-scale nature of contagion inreal populations. These methodological and data integration advances enabledepidemic modeling to evolve into a public-service activity, generating forecasts",
+    "rawEventDetails": "Details Event Description Alessandro Vespignani Sternberg Family Distinguished Professor Northeastern University Abstract : Concepts developed to describe spreading processes on networks, including the role of heterogeneous connectivity, have provided the foundation for a new generation of mechanistic models. Built on empirical mobility and contact networks, these models capture the multi-scale nature of contagion in real populations. These methodological and data integration advances enabled epidemic modeling to evolve into a public-service activity, generating forecasts and analytics that inform policy in real time. The same framework supports the design of surveillance systems, such as global aircraft-based wastewater monitoring, where the structure of the air-transportation network becomes an asset for early detection. The lecture will discuss this trajectory and why consolidating these capabilities is now a central requirement of pandemic preparedness beyond emergency response. Bio : Alessandro Vespignani is the Sternberg Family Distinguished University Professor at Northeastern University, where he founded and directs the Network Science Institute. His research focuses on the modeling of contagion processes in complex networks, from the spread of infectious diseases to the diffusion of information. He leads EPISTORM, a national center for epidemic emergency analytics funded by the U.S. CDC. He is elected Fellow of the APS, the Network Science Society, and the AAAS. His awards include the Euler Award and the EPS Statistical and Nonlinear Physics Prize.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Prof. Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
+    "locationRaw": "Computer Science Building, 104",
     "mappingRules": [
       "cee:summary-is-title"
     ],

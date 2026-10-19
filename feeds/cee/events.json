@@ -145,5 +145,52 @@
     "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2461:delta:0",
+    "guid": "ps_events:2461:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T20:30:00Z",
+    "endsAt": "2026-10-29T21:30:00Z",
+    "startTime": "2026-10-29T16:30:00",
+    "endTime": "2026-10-29T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Prof. Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Building,",
+      "id": "",
+      "detail": "104"
+    },
+    "urlRef": "https://cee.princeton.edu/events/prof-alessandro-vespignani-bridging-network-science-and-real-world-epidemics-theory-public",
+    "content": "Alessandro VespignaniSternberg Family Distinguished ProfessorNortheastern UniversityAbstract: Concepts developed to describe spreading processes on networks,including the role of heterogeneous connectivity, have provided the foundationfor a new generation of mechanistic models. Built on empirical mobility andcontact networks, these models capture the multi-scale nature of contagion inreal populations. These methodological and data integration advances enabledepidemic modeling to evolve into a public-service activity, generating forecasts",
+    "rawEventDetails": "Details Event Description Alessandro Vespignani Sternberg Family Distinguished Professor Northeastern University Abstract : Concepts developed to describe spreading processes on networks, including the role of heterogeneous connectivity, have provided the foundation for a new generation of mechanistic models. Built on empirical mobility and contact networks, these models capture the multi-scale nature of contagion in real populations. These methodological and data integration advances enabled epidemic modeling to evolve into a public-service activity, generating forecasts and analytics that inform policy in real time. The same framework supports the design of surveillance systems, such as global aircraft-based wastewater monitoring, where the structure of the air-transportation network becomes an asset for early detection. The lecture will discuss this trajectory and why consolidating these capabilities is now a central requirement of pandemic preparedness beyond emergency response. Bio : Alessandro Vespignani is the Sternberg Family Distinguished University Professor at Northeastern University, where he founded and directs the Network Science Institute. His research focuses on the modeling of contagion processes in complex networks, from the spread of infectious diseases to the diffusion of information. He leads EPISTORM, a national center for epidemic emergency analytics funded by the U.S. CDC. He is elected Fellow of the APS, the Network Science Society, and the AAAS. His awards include the Euler Award and the EPS Statistical and Nonlinear Physics Prize.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Prof. Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
+    "locationRaw": "Computer Science Building, 104",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
   }
 ]
