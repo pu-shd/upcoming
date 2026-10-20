@@ -4833,6 +4833,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4721:delta:0",
+    "guid": "ps_events:4721:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T17:00:00Z",
+    "endsAt": "2026-10-29T18:00:00Z",
+    "startTime": "2026-10-29T13:00:00",
+    "endTime": "2026-10-29T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Korhammer Special Robotics Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/korhammer-special-robotics-seminar",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Korhammer Special Robotics Seminar",
+    "locationRaw": "Friend Center, Room 008",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:6",
     "guid": "ps_events:5261:delta:6",
     "sources": [
