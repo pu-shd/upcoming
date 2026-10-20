@@ -7,6 +7,10 @@ version: "3.8"
 services:
   # The default. `make docker-test` runs this.
   tests:
+    # Named, because unnamed it would be `upcoming-tests` -- the same name pu-orfe's
+    # compose file gives its own image, from a directory also called `upcoming`. Each
+    # build overwrote the other, and `run` reuses whatever image carries the name.
+    image: pu-shd-upcoming:dev
     build:
       context: .
       dockerfile: Dockerfile
@@ -27,6 +31,8 @@ services:
   # Lint and types. Separate from `tests` because a lint failure must never be able to
   # stop a feed from publishing -- these gate pull requests, not publishes.
   lint:
+    # The same `dev` stage as `tests`, so the same image.
+    image: pu-shd-upcoming:dev
     build:
       context: .
       dockerfile: Dockerfile
