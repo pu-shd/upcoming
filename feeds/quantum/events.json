@@ -389,6 +389,62 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4071:delta:0",
+    "guid": "ps_events:4071:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-30T16:00:00Z",
+    "endsAt": "2026-10-30T18:00:00Z",
+    "startTime": "2026-10-30T12:00:00",
+    "endTime": "2026-10-30T14:00:00",
+    "timezone": "America/New_York",
+    "title": "A Quantum Group Meeting Talk by Xingyan Chen, Cheuk Group",
+    "speakers": [
+      {
+        "name": "Xingyan Chen",
+        "affiliation": "Cheuk Group"
+      }
+    ],
+    "speaker": "Xingyan Chen, Cheuk Group",
+    "affiliation": "Cheuk Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-xingyan-chen-cheuk-group",
+    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: TBD - Xingyan Chen (Cheuk Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3786:delta:0",
     "guid": "ps_events:3786:delta:0",
     "sources": [
@@ -887,6 +943,62 @@
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:4076:delta:0",
+    "guid": "ps_events:4076:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-11T17:00:00Z",
+    "endsAt": "2026-12-11T19:00:00Z",
+    "startTime": "2026-12-11T12:00:00",
+    "endTime": "2026-12-11T14:00:00",
+    "timezone": "America/New_York",
+    "title": "A Quantum Group Meeting Talk by Guillaume Bornet, Thompson Group",
+    "speakers": [
+      {
+        "name": "Guillaume Bornet",
+        "affiliation": "Thompson Group"
+      }
+    ],
+    "speaker": "Guillaume Bornet, Thompson Group",
+    "affiliation": "Thompson Group",
+    "series": "Quantum Group Meeting",
+    "tags": [
+      "group-meeting"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Quantum Group Meeting"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQuad",
+      "id": "",
+      "detail": "J401"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-guillaume-bornet-thompson-group",
+    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Quantum Group Meeting: TBD - Guillaume Bornet (Thompson Group)",
+    "locationRaw": "EQuad J401",
+    "mappingRules": [
+      "quantum:series-title-dash-person"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
