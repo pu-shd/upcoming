@@ -528,8 +528,19 @@ sources:
     purposes: [engineering-newsletter]
     host: kellercenter.princeton.edu
     platform: drupal-ical-api
-    feed_url: "https://kellercenter.princeton.edu/events.ics"
     cadence: 6h
+    # Unavailable since 2026-10-20. To bring it back once the feed answers a plain request
+    # again, remove `status` and `reason` and restore
+    #   feed_url: "https://kellercenter.princeton.edu/events.ics"
+    # (an unavailable source may not carry one). Everything else is still its configuration.
+    status: unavailable
+    reason: >
+      The whole host moved behind Cloudflare on 2026-10-20 and every path, /events.ics
+      included, now answers 403 with `cf-mitigated: challenge` -- a JavaScript challenge
+      no feed reader can pass, and not one to work around. The move showed in Publish as
+      TLS handshake failures from 13:31 UTC, a 503 at 14:03, then the 403. Needs Keller
+      Center to exempt /events.ics from the challenge or allow this project's User-Agent.
+      Nothing was lost by quarantining it: the last good feed had zero events.
     # PRODID:-//Drupal iCal API//EN, NOT Site Builder, from a URL that looks conventional.
     # Currently a well-formed VCALENDAR with zero VEVENTs. `allow_empty` is what separates
     # "valid and empty" from "broken": the two payloads are identical and only this

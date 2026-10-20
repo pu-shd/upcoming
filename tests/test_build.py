@@ -290,7 +290,7 @@ def test_every_live_source_builds(registry) -> None:
         assert result.status == "ok", f"{source.slug}: {result.diagnostics}"
         built[source.slug] = result.counts["events"]
 
-    assert len(built) == 15, f"expected 15 live sources, built {sorted(built)}"
+    assert len(built) == 14, f"expected 14 live sources, built {sorted(built)}"
     assert sum(built.values()) >= 110
 
 

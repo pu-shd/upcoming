@@ -16,7 +16,6 @@ import pytest
 from tests.support import REPO_ROOT, TEMPLATES_YAML, TEST_ENV
 from upcoming.errors import ConfigFatal
 from upcoming.registry import (
-    STATUS_LIVE,
     STATUS_UNAVAILABLE,
     load_registry,
     parse_header_secret,
@@ -106,9 +105,14 @@ def test_kellercenter_is_declared_allowed_empty_on_its_own_platform(registry) ->
     The two payloads are byte-identical in shape, so only this declaration knows which it
     is -- and a count floor it can never satisfy would leave it permanently red, which is
     how people learn to ignore alerts.
+
+    Unavailable since 2026-10-20, when the host went behind a Cloudflare challenge. The
+    rest of its declaration is kept so that bringing it back is a two-line change, and
+    this asserts it stays that way.
     """
     keller = registry.by_slug("kellercenter")
-    assert keller.status == STATUS_LIVE
+    assert keller.status == STATUS_UNAVAILABLE
+    assert "Cloudflare" in keller.reason
     assert keller.expectations.allow_empty is True
     assert keller.expectations.min_events == 0
     assert keller.platform == "drupal-ical-api"
