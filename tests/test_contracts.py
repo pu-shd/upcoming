@@ -210,6 +210,22 @@ def test_compose_keeps_the_version_key() -> None:
     assert "version" in document
 
 
+def test_compose_images_are_named_for_this_repository() -> None:
+    """Compose names an unnamed image `<directory>-<service>`, and the predecessor also
+    lives in a directory called `upcoming` with a service called `tests`. Building either
+    one overwrote the other's `upcoming-tests`, and `docker-compose run` reuses whatever
+    image has that name: on 2026-10-20 this suite ran inside pu-orfe's image, with no Node
+    and none of this package, and failed 148 tests that pass. Named explicitly rather than
+    with a top-level `name:`, which Compose v1 rejects."""
+    document = yaml.safe_load(COMPOSE.read_text(encoding="utf-8"))
+    built = {name: service for name, service in document["services"].items() if "build" in service}
+    assert built, "expected at least one service that builds an image"
+    for name, service in built.items():
+        assert str(service.get("image", "")).startswith("pu-shd-upcoming"), (
+            f"compose service {name!r} builds an image without naming it"
+        )
+
+
 def test_compose_runs_the_suite_by_default() -> None:
     document = yaml.safe_load(COMPOSE.read_text(encoding="utf-8"))
     assert "pytest" in document["services"]["tests"]["command"]
