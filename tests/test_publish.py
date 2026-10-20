@@ -18,7 +18,7 @@ from typing import ClassVar
 import pytest
 
 from tests.support import FIXTURES, REPO_ROOT
-from upcoming.build import BuildResult, build_from_file, load_pronunciation
+from upcoming.build import BuildResult, build_from_file, build_from_text, load_pronunciation
 from upcoming.combine import combine, load_combos
 from upcoming.fetch import FetchOutcome, fetch_feed, fetch_feeds
 from upcoming.model import Event, from_wire
@@ -114,23 +114,28 @@ def test_a_disabled_combo_is_declared_too(registry, built, tmp_path):  # type: i
 
 
 def test_an_empty_feed_is_not_a_failure(registry, built, tmp_path):  # type: ignore[no-untyped-def]
-    """kellercenter serves a well-formed calendar with no events.
+    """An allowed-empty source that builds nothing publishes as empty, not as failed.
 
     The payload is byte-identical to a broken source's. Only the source's own declaration
-    separates them, so the status must too.
+    separates them, so the status must too. kellercenter was the standing example until it
+    went unavailable; cs declares the same allowance, and a well-formed feed with no items
+    is exactly what it would serve with nothing upcoming.
     """
-    tree = build_tree(registry, built, tmp_path)
-    keller = next(f for f in tree.feeds if f.path == "feeds/kellercenter/events.json")
-    assert keller.status == STATUS_EMPTY
-    assert keller.events == 0
-    assert not keller.stale
-    assert json.loads(tree.files["feeds/kellercenter/events.json"]) == []
+    results, combos, config = built
+    empty_rss = '<rss version="2.0"><channel><title>Upcoming</title></channel></rss>'
+    results = {**results, "cs": build_from_text(empty_rss, registry.by_slug("cs"))}
+    tree = build_tree(registry, (results, combos, config), tmp_path)
+    cs = next(f for f in tree.feeds if f.path == "feeds/cs/events.json")
+    assert cs.status == STATUS_EMPTY
+    assert cs.events == 0
+    assert not cs.stale
+    assert json.loads(tree.files["feeds/cs/events.json"]) == []
 
 
 def test_published_feeds_are_valid_json_arrays(registry, built, tmp_path):  # type: ignore[no-untyped-def]
     tree = build_tree(registry, built, tmp_path)
     feeds = [p for p in tree.files if p.startswith(("feeds/", "combos/"))]
-    assert len(feeds) == 20  # fifteen live sources, five enabled combos
+    assert len(feeds) == 19  # fourteen live sources, five enabled combos
     for path in feeds:
         assert isinstance(json.loads(tree.files[path]), list), path
 
@@ -283,8 +288,10 @@ def test_status_counts_every_category(registry, built, tmp_path):  # type: ignor
     assert document["generatedAt"] == FIXED_TIME
     summary = document["summary"]
     assert summary["ok"] == 19  # 14 non-empty sources + 5 enabled combos
-    assert summary["empty"] == 1
-    assert summary["disabled"] == 5  # 4 unavailable sources + nextg's combo
+    # No live source is empty from its fixture since kellercenter went unavailable. Absent
+    # rather than zero is how the document spells it; either way, not one.
+    assert summary.get("empty", 0) == 0
+    assert summary["disabled"] == 6  # 5 unavailable sources + nextg's combo
     assert summary["stale"] == 0
     # `events` counts sources only: summing the combos too would double-count every event.
     assert summary["events"] == 146  # cs adds 3 after declining CITP and DaIS

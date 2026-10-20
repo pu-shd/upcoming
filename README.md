@@ -35,13 +35,13 @@ bioengineering  live         title       1h       speakers,raw_details  https://
 
 ## Sources
 
-19 total: 15 live, 4 recorded as unavailable.
+19 total: 14 live, 5 recorded as unavailable.
 
 | | |
 |---|---|
 | **Live, Princeton Site Builder** | `orfe` (23 events), `citp` (24), `dais` (22), `quantum` (18), `materials` (16), `ece` (12), `cbe` (10), `mae` (10), `ai` (7), `nam` (6), `bioengineering` (3), `cee` (1), `robotics` (1) |
-| **Live, different platform** | `kellercenter` — `PRODID:-//Drupal iCal API//EN`, currently a well-formed calendar with **zero events**; `cs` — Drupal **RSS**, the only feed CS publishes, read through its `events:` namespace (3 events after declining 7 that `citp` and `dais` already publish) |
-| **Declared unavailable** | `nextg`, `acee`, `decenter`, `metro` |
+| **Live, different platform** | `cs` — Drupal **RSS**, the only feed CS publishes, read through its `events:` namespace (3 events after declining 7 that `citp` and `dais` already publish) |
+| **Declared unavailable** | `nextg`, `acee`, `decenter`, `metro`, `kellercenter` (behind a Cloudflare challenge since 2026-10-20) |
 
 The design accommodates 4 main inconsistencies:
 
@@ -53,8 +53,9 @@ The design accommodates 4 main inconsistencies:
 - **An event can have several speakers.** `speakers[]` is canonical, and the scalar `speaker` and `affiliation` are derived
   properties published alongside it so the existing ingest keeps working. `affiliation` is
   empty when the speakers disagree.
-- **Empty is not the same as broken.** `kellercenter` is legitimately empty. Only its
-  `allow_empty` declaration knows that, because the two payloads are identical.
+- **Empty is not the same as broken.** `cs` can legitimately be empty once it declines
+  what other units publish. Only its `allow_empty` declaration knows that, because the
+  two payloads are identical.
 
 Each unavailable source records *why*, so nobody repeats the investigation — run
 `make check` to read them.
@@ -162,7 +163,7 @@ index.html  simulator.html   the landing page and the newsletter simulator
 }
 ```
 
-`empty` is a first-class status, not a kind of failure: `kellercenter` serves a well-formed calendar with no events, and that payload is byte-identical to a broken source's. Only the source's own declaration separates them.
+`empty` is a first-class status, not a kind of failure: `kellercenter` served a well-formed calendar with no events until it went unavailable, and that payload is byte-identical to a broken source's. Only the source's own declaration separates them.
 
 **A failure is never silent.** A source that fails keeps serving its last good feed, marked `stale` with the reason. Every combined feed that includes it is built from that last good copy rather than omitting it, and records which input it fell back to. `lastSuccessAt` is carried across failures, which is what makes staleness a duration rather than a yes/no.
 
@@ -307,7 +308,7 @@ Stated rather than implied, because most of these look like bugs from outside.
 
 | | |
 |---|---|
-| **Four sources produce nothing** | `acee`, `decenter` and `metro` are WordPress whose REST fields are empty unauthenticated; `nextg` has no feed of its own. `acee` is the one the engineering newsletter actually wants. |
+| **Five sources produce nothing** | `acee`, `decenter` and `metro` are WordPress whose REST fields are empty unauthenticated; `nextg` has no feed of its own; `kellercenter` answers every request with a Cloudflare JavaScript challenge, which no feed reader can pass. `acee` is the one the engineering newsletter actually wants. |
 | **`cs` sees only the next ten events** | Its RSS lists ten items and cannot be paged. A full page publishes a `horizon:` note in `status.json` giving the last start it can vouch for; anything later may exist and not be listed yet. |
 | **The heartbeat cannot rescue itself** | If *every* scheduled workflow is disabled at once, it goes with them. Inherent to running monitoring inside the thing monitored; only a check from outside the repository answers it. |
 | **The simulator's edition rule is JavaScript, and weekly only** | No holiday shifts and no blackouts. The real 7 September 2026 edition published on the Tuesday for Labor Day; reproducing it means overriding the publication date, which the page says. |
