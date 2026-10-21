@@ -147,6 +147,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cee:ps_events:2476:delta:0",
+    "guid": "ps_events:2476:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T17:30:00Z",
+    "endsAt": "2026-10-29T18:30:00Z",
+    "startTime": "2026-10-29T13:30:00",
+    "endTime": "2026-10-29T14:30:00",
+    "timezone": "America/New_York",
+    "title": "William Pierson Field Lecture, Dr. Mark Falinski",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall,",
+      "id": "",
+      "detail": "001"
+    },
+    "urlRef": "https://cee.princeton.edu/events/william-pierson-field-lecture-dr-mark-falinski",
+    "content": "Dr. Mark Falinski is a Senior Manager at the World Resources Institute\u2019s Polsky Center for the Global Energy Transition. His work examines how U.S. and global energy systems can navigate growing electricity demand while becoming cleaner, more reliable, and more affordable. His current work spans a range of energy transition issues, with a particular focus on leading research and congressional engagement around the rapid growth of data centers and their implications for energy, water, industrial decarbonization, communities, and sustainability.Mark holds a B.S. in",
+    "rawEventDetails": "Details Event Description Dr. Mark Falinski is a Senior Manager at the World Resources Institute\u2019s Polsky Center for the Global Energy Transition. His work examines how U.S. and global energy systems can navigate growing electricity demand while becoming cleaner, more reliable, and more affordable. His current work spans a range of energy transition issues, with a particular focus on leading research and congressional engagement around the rapid growth of data centers and their implications for energy, water, industrial decarbonization, communities, and sustainability. Mark holds a B.S. in Chemical Engineering from the University at Buffalo and a Ph.D. in Environmental Engineering from Yale University\u2019s Center for Green Chemistry and Green Engineering. He later conducted postdoctoral research in Professor Jason Ren\u2019s Water & Energy Technologies Lab at Princeton University. He has also led research at a sustainability startup and worked as a Climate and Sustainability Consultant at Boston Consulting Group, where his work addressed sustainable finance, circularity strategy, and material supply chains for the energy transition. Mark has most recently served as a AAAS Climate and Energy Fellow in Congress for U.S. Representative Sean Casten of Illinois. There, he developed federal legislation on clean energy deployment, electric grid regulation, and data center impacts, while also working on environmental policy, sustainable finance, water, and climate risk issues. Today, he draws on both his technical and policy backgrounds to examine complex energy and sustainability challenges. His work engages Congress, utilities, hyperscalers, technology providers, and environmental NGOs, with a focus on making complex technical and policy issues accessible to policymakers and their staff, identifying areas of common ground across groups with differing priorities, and helping advance practical solutions. ENE/CEE Lecture Highlights: Overview of the energy, water, and other emerging environmental problems stemming from AI data centers The known and unknown technical and policy constraints to clean, affordable, reliable outcomes from data center development (and how different actors are considering those constraints) Technical and policy solutions to those challenges, including the resource recovery options that will need to be part of the picture (waste heat, e-waste, water reuse) and what is needed to scale the needed clean energy and grid technologies from a policy and technological perspective",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "William Pierson Field Lecture, Dr. Mark Falinski",
+    "locationRaw": "Sherrerd Hall, 001",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cee:ps_events:2461:delta:0",
     "guid": "ps_events:2461:delta:0",
     "sources": [
