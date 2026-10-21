@@ -5191,6 +5191,110 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4216:delta:0",
+    "guid": "ps_events:4216:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T18:00:00Z",
+    "endsAt": "2026-10-29T19:30:00Z",
+    "startTime": "2026-10-29T14:00:00",
+    "endTime": "2026-10-29T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4731:delta:0",
+    "guid": "ps_events:4731:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T18:00:00Z",
+    "endsAt": "2026-10-29T19:30:00Z",
+    "startTime": "2026-10-29T14:00:00",
+    "endTime": "2026-10-29T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:6",
     "guid": "ps_events:5261:delta:6",
     "sources": [
@@ -6428,6 +6532,110 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4216:delta:1",
+    "guid": "ps_events:4216:delta:1",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-05T19:00:00Z",
+    "endsAt": "2026-11-05T20:30:00Z",
+    "startTime": "2026-11-05T14:00:00",
+    "endTime": "2026-11-05T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4731:delta:1",
+    "guid": "ps_events:4731:delta:1",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-05T19:00:00Z",
+    "endsAt": "2026-11-05T20:30:00Z",
+    "startTime": "2026-11-05T14:00:00",
+    "endTime": "2026-11-05T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:7",
     "guid": "ps_events:5261:delta:7",
     "sources": [
@@ -7080,6 +7288,110 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4216:delta:2",
+    "guid": "ps_events:4216:delta:2",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T19:00:00Z",
+    "endsAt": "2026-11-12T20:30:00Z",
+    "startTime": "2026-11-12T14:00:00",
+    "endTime": "2026-11-12T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4731:delta:2",
+    "guid": "ps_events:4731:delta:2",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T19:00:00Z",
+    "endsAt": "2026-11-12T20:30:00Z",
+    "startTime": "2026-11-12T14:00:00",
+    "endTime": "2026-11-12T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:8",
     "guid": "ps_events:5261:delta:8",
     "sources": [
@@ -7542,9 +7854,9 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "Bendheim",
+      "name": "Friend",
       "id": "",
-      "detail": "103"
+      "detail": "009"
     },
     "urlRef": "https://dais.princeton.edu/events/2026/ddss-connect-interdisciplinary-exchange-1",
     "content": "Join us for DDSS\u2019s Connect & Interdisciplinary Exchange series where our DDSS Graduate Fellows present on diverse methodologies and technical approaches. This is a great opportunity to network with others working in quantitive social science. There will be 3 sessions throughout the fall semester. Luyin Zhang (Sociology)Leveraging DNA and Computational Methods to Uncover the Hidden Magnitude of Within-Race Skin Tone InequalityLeonardo Feitosa Dantas (Politics)Measuring Abstract Concepts Across Text and Images: A Hands-On GuideLucas Ophoff (Politics)",
@@ -7555,7 +7867,7 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "DDSS Connect & Interdisciplinary Exchange",
-    "locationRaw": "Bendheim 103",
+    "locationRaw": "Friend 009",
     "mappingRules": [
       "dais:summary-is-title"
     ],
@@ -7928,6 +8240,110 @@
     "locationRaw": "Princeton AI Step Down",
     "mappingRules": [
       "nam:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4216:delta:3",
+    "guid": "ps_events:4216:delta:3",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T19:00:00Z",
+    "endsAt": "2026-11-19T20:30:00Z",
+    "startTime": "2026-11-19T14:00:00",
+    "endTime": "2026-11-19T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4731:delta:3",
+    "guid": "ps_events:4731:delta:3",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T19:00:00Z",
+    "endsAt": "2026-11-19T20:30:00Z",
+    "startTime": "2026-11-19T14:00:00",
+    "endTime": "2026-11-19T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "dais:summary-is-title"
     ],
     "locationRule": "whole",
     "summaryRest": "",
@@ -8527,6 +8943,110 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4216:delta:4",
+    "guid": "ps_events:4216:delta:4",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T19:00:00Z",
+    "endsAt": "2026-12-03T20:30:00Z",
+    "startTime": "2026-12-03T14:00:00",
+    "endTime": "2026-12-03T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4731:delta:4",
+    "guid": "ps_events:4731:delta:4",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T19:00:00Z",
+    "endsAt": "2026-12-03T20:30:00Z",
+    "startTime": "2026-12-03T14:00:00",
+    "endTime": "2026-12-03T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:10",
     "guid": "ps_events:5261:delta:10",
     "sources": [
@@ -9001,6 +9521,110 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4216:delta:5",
+    "guid": "ps_events:4216:delta:5",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-10T19:00:00Z",
+    "endsAt": "2026-12-10T20:30:00Z",
+    "startTime": "2026-12-10T14:00:00",
+    "endTime": "2026-12-10T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4731:delta:5",
+    "guid": "ps_events:4731:delta:5",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-10T19:00:00Z",
+    "endsAt": "2026-12-10T20:30:00Z",
+    "startTime": "2026-12-10T14:00:00",
+    "endTime": "2026-12-10T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:566:delta:0",
     "guid": "ps_events:566:delta:0",
     "sources": [
@@ -9106,6 +9730,58 @@
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4216:delta:6",
+    "guid": "ps_events:4216:delta:6",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-17T19:00:00Z",
+    "endsAt": "2026-12-17T20:30:00Z",
+    "startTime": "2026-12-17T14:00:00",
+    "endTime": "2026-12-17T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Historical Machine Learning and Connectionism Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai",
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton AI Step Down",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
+    "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
+    "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
