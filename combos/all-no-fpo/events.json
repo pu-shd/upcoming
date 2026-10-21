@@ -4090,58 +4090,6 @@
     "mappingConflict": false
   },
   {
-    "id": "cs:https://www.cs.princeton.edu/events/mike-wong-fpo",
-    "guid": "https://www.cs.princeton.edu/events/mike-wong-fpo",
-    "sources": [
-      "cs"
-    ],
-    "platform": "drupal-events-rss",
-    "startsAt": "2026-10-20T14:00:00Z",
-    "endsAt": "2026-10-20T16:00:00Z",
-    "startTime": "2026-10-20T10:00:00",
-    "endTime": "2026-10-20T12:00:00",
-    "timezone": "America/New_York",
-    "title": "Mike Wong FPO",
-    "speakers": [
-      {
-        "name": "Mike Wong",
-        "affiliation": ""
-      }
-    ],
-    "speaker": "Mike Wong",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Friend Center",
-      "id": "",
-      "detail": "108"
-    },
-    "urlRef": "https://www.cs.princeton.edu/events/mike-wong-fpo",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Mike Wong FPO",
-    "locationRaw": "Friend Center 108",
-    "mappingRules": [
-      "cs:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "orfe:ps_events:12876:delta:0",
     "guid": "ps_events:12876:delta:0",
     "sources": [
@@ -9908,6 +9856,53 @@
     "locationRaw": "Princeton AI Step Down",
     "mappingRules": [
       "nam:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cs:https://www.cs.princeton.edu/events/princeton-symposium-millimeter-terahertz-light-sensing",
+    "guid": "https://www.cs.princeton.edu/events/princeton-symposium-millimeter-terahertz-light-sensing",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-12-17T14:00:00Z",
+    "endsAt": "2026-12-17T22:00:00Z",
+    "startTime": "2026-12-17T09:00:00",
+    "endTime": "2026-12-17T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Symposium on Millimeter-Terahertz-Light Sensing",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Maxwell: Millimeter-Terahertz-Light Communications and Sensing",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center Convocation Room",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/princeton-symposium-millimeter-terahertz-light-sensing",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Symposium on Millimeter-Terahertz-Light Sensing",
+    "locationRaw": "Friend Center Convocation Room",
+    "mappingRules": [
+      "cs:summary-is-title"
     ],
     "locationRule": "whole",
     "summaryRest": "",
