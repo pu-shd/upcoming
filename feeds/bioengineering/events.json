@@ -1,61 +1,5 @@
 [
   {
-    "id": "bioengineering:ps_events:2756:delta:0",
-    "guid": "ps_events:2756:delta:0",
-    "sources": [
-      "bioengineering"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-17T20:00:00Z",
-    "endsAt": "2026-09-17T21:00:00Z",
-    "startTime": "2026-09-17T16:00:00",
-    "endTime": "2026-09-17T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Generative Biology - Learning to Program Cellular Machines and Systems",
-    "speakers": [
-      {
-        "name": "Wendell Lim",
-        "affiliation": ""
-      }
-    ],
-    "speaker": "Wendell Lim",
-    "affiliation": "",
-    "series": "BioE Colloquium",
-    "tags": [
-      "colloquium"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "BioE Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bioengineering",
-      "id": "",
-      "detail": "E105"
-    },
-    "urlRef": "https://bioengineering.princeton.edu/events/2026/generative-biology-learning-program-cellular-machines-and-systems",
-    "content": "Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular",
-    "rawEventDetails": "Speaker Wendell Lim Affiliation University of California San Francisco Details Event Description Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular systems to understand the principles that drive multi-cellular self-organization, such as the development of tissues and organs. These synthetic biology tools and approaches are helping to define the fundamental logic underlying complex biological behaviors and provide new avenues to create useful synthetic cellular devices and living materials. Refreshments available 15 minutes before indicated time of seminar",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Generative Biology - Learning to Program Cellular Machines and Systems",
-    "locationRaw": "Bioengineering E105",
-    "mappingRules": [
-      "bioengineering:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2781:delta:0",
     "guid": "ps_events:2781:delta:0",
     "sources": [
@@ -275,6 +219,62 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2871:delta:0",
+    "guid": "ps_events:2871:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T16:30:00Z",
+    "endsAt": "2026-10-29T17:30:00Z",
+    "startTime": "2026-10-29T12:30:00",
+    "endTime": "2026-10-29T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Phase Group Meeting: Sanjay Kumar Keshava",
+    "speakers": [
+      {
+        "name": "Sanjay Kumar Keshava",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Sanjay Kumar Keshava",
+    "affiliation": "",
+    "series": "Phase Group",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Phase Group"
+    ],
+    "unmappedTags": [
+      "Phase Group"
+    ],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E397"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/phase-group-meeting-sanjay-kumar-keshava",
+    "content": "",
+    "rawEventDetails": "Speaker Sanjay Kumar Keshava Affiliation Petry/Stone/Shaevitz Groups",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Phase Group Meeting: Sanjay Kumar Keshava",
+    "locationRaw": "BioE E397",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "bioengineering:ps_events:2861:delta:0",
     "guid": "ps_events:2861:delta:0",
     "sources": [
@@ -321,6 +321,62 @@
     "itemType": "advertisement",
     "summaryRaw": "Leveraging Engineered Virus-like Particles for Intracellular Protein and RNA Delivery",
     "locationRaw": "Commons D301",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2876:delta:0",
+    "guid": "ps_events:2876:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T17:30:00Z",
+    "endsAt": "2026-11-12T18:30:00Z",
+    "startTime": "2026-11-12T12:30:00",
+    "endTime": "2026-11-12T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Phase Group Meeting: Pablo Garcia",
+    "speakers": [
+      {
+        "name": "Pablo Garcia",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Pablo Garcia",
+    "affiliation": "",
+    "series": "Phase Group",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Phase Group"
+    ],
+    "unmappedTags": [
+      "Phase Group"
+    ],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E397"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/phase-group-meeting-pablo-garcia",
+    "content": "",
+    "rawEventDetails": "Speaker Pablo Garcia Affiliation Joseph Group",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Phase Group Meeting: Pablo Garcia",
+    "locationRaw": "BioE E397",
     "mappingRules": [
       "bioengineering:summary-is-title"
     ],

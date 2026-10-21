@@ -1,61 +1,5 @@
 [
   {
-    "id": "bioengineering:ps_events:2756:delta:0",
-    "guid": "ps_events:2756:delta:0",
-    "sources": [
-      "bioengineering"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-17T20:00:00Z",
-    "endsAt": "2026-09-17T21:00:00Z",
-    "startTime": "2026-09-17T16:00:00",
-    "endTime": "2026-09-17T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Generative Biology - Learning to Program Cellular Machines and Systems",
-    "speakers": [
-      {
-        "name": "Wendell Lim",
-        "affiliation": ""
-      }
-    ],
-    "speaker": "Wendell Lim",
-    "affiliation": "",
-    "series": "BioE Colloquium",
-    "tags": [
-      "colloquium"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "BioE Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bioengineering",
-      "id": "",
-      "detail": "E105"
-    },
-    "urlRef": "https://bioengineering.princeton.edu/events/2026/generative-biology-learning-program-cellular-machines-and-systems",
-    "content": "Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular",
-    "rawEventDetails": "Speaker Wendell Lim Affiliation University of California San Francisco Details Event Description Living cells are capable of sensing their environment, integrating this information, and making complex decisions. These decisions are, at their heart, mediated by genetically encoded molecular circuits. In the field of synthetic biology, we have been engineering modular molecular components capable of sensing and actuating and using these components to create diverse cell-based biological programs. These include programming immune cells to search the body for combinatorial molecular signatures of disease (e.g., cancer, autoimmunity, and degeneration). We are also programming multicellular systems to understand the principles that drive multi-cellular self-organization, such as the development of tissues and organs. These synthetic biology tools and approaches are helping to define the fundamental logic underlying complex biological behaviors and provide new avenues to create useful synthetic cellular devices and living materials. Refreshments available 15 minutes before indicated time of seminar",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Generative Biology - Learning to Program Cellular Machines and Systems",
-    "locationRaw": "Bioengineering E105",
-    "mappingRules": [
-      "bioengineering:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ece:ps_events:11011:delta:0",
     "guid": "ps_events:11011:delta:0",
     "sources": [
@@ -1296,6 +1240,62 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2871:delta:0",
+    "guid": "ps_events:2871:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T16:30:00Z",
+    "endsAt": "2026-10-29T17:30:00Z",
+    "startTime": "2026-10-29T12:30:00",
+    "endTime": "2026-10-29T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Phase Group Meeting: Sanjay Kumar Keshava",
+    "speakers": [
+      {
+        "name": "Sanjay Kumar Keshava",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Sanjay Kumar Keshava",
+    "affiliation": "",
+    "series": "Phase Group",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Phase Group"
+    ],
+    "unmappedTags": [
+      "Phase Group"
+    ],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E397"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/phase-group-meeting-sanjay-kumar-keshava",
+    "content": "",
+    "rawEventDetails": "Speaker Sanjay Kumar Keshava Affiliation Petry/Stone/Shaevitz Groups",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Phase Group Meeting: Sanjay Kumar Keshava",
+    "locationRaw": "BioE E397",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "bioengineering:ps_events:2861:delta:0",
     "guid": "ps_events:2861:delta:0",
     "sources": [
@@ -1352,53 +1352,6 @@
     "mappingConflict": false
   },
   {
-    "id": "cee:ps_events:2441:delta:0",
-    "guid": "ps_events:2441:delta:0",
-    "sources": [
-      "cee"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-29T20:30:00Z",
-    "endsAt": "2026-10-29T21:30:00Z",
-    "startTime": "2026-10-29T16:30:00",
-    "endTime": "2026-10-29T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Distinguished Seminar \u2014 Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Computer Science, Computer Science Building, Room",
-      "id": "",
-      "detail": "104"
-    },
-    "urlRef": "https://cee.princeton.edu/events/distinguished-seminar-%E2%80%94-alessandro-vespignani-bridging-network-science-and-real-world",
-    "content": "Alessandro Vespignani, Professor of Physics, Northeastern University, opens the CCS Distinguished Seminar Series. The talk is free and open to the University community.AbstractConcepts developed to describe spreading processes on networks, including the role of heterogeneous connectivity, have provided the foundation for a new generation of mechanistic models. Built on empirical mobility and contact networks, these models capture the multi-scale nature of contagion in real populations. These methodological and data integration advances enabled epidemic modeling to evolve",
-    "rawEventDetails": "Details Event Description Alessandro Vespignani, Professor of Physics, Northeastern University, opens the CCS Distinguished Seminar Series. The talk is free and open to the University community. Abstract Concepts developed to describe spreading processes on networks, including the role of heterogeneous connectivity, have provided the foundation for a new generation of mechanistic models. Built on empirical mobility and contact networks, these models capture the multi-scale nature of contagion in real populations. These methodological and data integration advances enabled epidemic modeling to evolve into a public-service activity, generating forecasts and analytics that inform policy in real time. The same framework supports the design of surveillance systems, such as global aircraft-based wastewater monitoring, where the structure of the air-transportation network becomes an asset for early detection. The lecture will discuss this trajectory and why consolidating these capabilities is now a central requirement of pandemic preparedness beyond emergency response. About the speaker Alessandro Vespignani is the Sternberg Family Distinguished University Professor at Northeastern University, where he founded and directs the Network Science Institute. His research focuses on the modeling of contagion processes in complex networks, from the spread of infectious diseases to the diffusion of information. He leads EPISTORM, a national center for epidemic emergency analytics funded by the U.S. CDC. He is elected Fellow of the APS, the Network Science Society, and the AAAS. His awards include the Euler Award and the EPS Statistical and Nonlinear Physics Prize. Sponsorship of this event does not constitute institutional endorsement of external speakers or views presented.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Distinguished Seminar \u2014 Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
-    "locationRaw": "Computer Science, Computer Science Building, Room 104",
-    "mappingRules": [
-      "cee:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cee:ps_events:2461:delta:0",
     "guid": "ps_events:2461:delta:0",
     "sources": [
@@ -1436,6 +1389,53 @@
     "itemType": "advertisement",
     "summaryRaw": "Prof. Alessandro Vespignani: Bridging network science and real-world epidemics: from theory to public health analytics",
     "locationRaw": "Computer Science Building, 104",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2471:delta:0",
+    "guid": "ps_events:2471:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-02T16:30:00Z",
+    "endsAt": "2026-11-02T17:30:00Z",
+    "startTime": "2026-11-02T11:30:00",
+    "endTime": "2026-11-02T12:30:00",
+    "timezone": "America/New_York",
+    "title": "CEE Special Seminar featuring Associate Professor Lei Zhao",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Briger Hall,",
+      "id": "",
+      "detail": "C400"
+    },
+    "urlRef": "https://cee.princeton.edu/events/cee-special-seminar-featuring-associate-professor-lei-zhao",
+    "content": "Lei Zhao is an Associate Professor of Civil and Environmental Engineering at the University of Illinois Urbana-Champaign. His research focuses on the interactions between the climate system and the built environment. He integrates theory, Earth system modeling, remote sensing, and AI/ML to advance the understanding and prediction of urban climate, extremes and their impacts on cities, and to develop strategies for urban resilience and adaptation. He is a Fellow of the American Geophysical Union (AGU) and a recipient of the AGU James B. Macelwane Medal (2025), the Timothy",
+    "rawEventDetails": "Details Event Description Lei Zhao is an Associate Professor of Civil and Environmental Engineering at the University of Illinois Urbana-Champaign. His research focuses on the interactions between the climate system and the built environment. He integrates theory, Earth system modeling, remote sensing, and AI/ML to advance the understanding and prediction of urban climate, extremes and their impacts on cities, and to develop strategies for urban resilience and adaptation. He is a Fellow of the American Geophysical Union (AGU) and a recipient of the AGU James B. Macelwane Medal (2025), the Timothy Oke Award from the International Association for Urban Climate (2023), the AGU Global Environmental Change Early Career Award (2023), and the NSF CAREER Award (2021). He was also named a Clarivate Highly Cited Researcher in 2025. He received his Ph.D. in atmospheric physics from Yale University and B.S. from Nanjing University and was a postdoctoral fellow at Princeton University before joining UIUC. Abstract: Urbanization represents one of the most significant anthropogenic changes to the Earth\u2019s surface, with profound climatic effects across scales. Many of the most pressing climate risks, including heat stress, water scarcity, extreme precipitation, and energy insecurity, are either rooted in or exacerbated by the unique built environment. Absent measures to ameliorate them, these risks will significantly intensify due to the rapid urban development coupled with climate change. An additional ~2.5 billion people are projected to reside in urban areas by year 2050. This unprecedented transformation poses immense risks to cities and their residents, but also an historic, time-sensitive opportunity to reshape how cities contribute to sustainability and climate resilience. Addressing this grand challenge, however, requires novel modeling frameworks that better resolve urban effects and their complex two-way interactions with climate across spatiotemporal scales, both for improved scientific understanding of cities and for planning effective resilient strategies. Recent advances in AI/ML, satellite remote sensing, high-resolution urban-resolving Earth system modeling, and advanced computing have enabled development of many of these advanced tools and opened up promising opportunities. In this talk, I will present how urban-resolving Earth system modeling, satellite remote sensing, AI/ML-based hybrid approaches, and advanced computing address longstanding challenges in urban climate science, from closing modeling and data gaps to projecting urban climate extremes and impacts, and how they can inform strategies for building resilient cities in a warming world.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "CEE Special Seminar featuring Associate Professor Lei Zhao",
+    "locationRaw": "Briger Hall, C400",
     "mappingRules": [
       "cee:summary-is-title"
     ],
@@ -1545,6 +1545,62 @@
     "locationRaw": "Bowen Hall 222",
     "mappingRules": [
       "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2876:delta:0",
+    "guid": "ps_events:2876:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T17:30:00Z",
+    "endsAt": "2026-11-12T18:30:00Z",
+    "startTime": "2026-11-12T12:30:00",
+    "endTime": "2026-11-12T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Phase Group Meeting: Pablo Garcia",
+    "speakers": [
+      {
+        "name": "Pablo Garcia",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Pablo Garcia",
+    "affiliation": "",
+    "series": "Phase Group",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Phase Group"
+    ],
+    "unmappedTags": [
+      "Phase Group"
+    ],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E397"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/phase-group-meeting-pablo-garcia",
+    "content": "",
+    "rawEventDetails": "Speaker Pablo Garcia Affiliation Joseph Group",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Phase Group Meeting: Pablo Garcia",
+    "locationRaw": "BioE E397",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
