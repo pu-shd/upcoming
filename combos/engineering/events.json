@@ -2188,6 +2188,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cee:ps_events:2481:delta:0",
+    "guid": "ps_events:2481:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-10T17:30:00Z",
+    "endsAt": "2026-12-10T18:30:00Z",
+    "startTime": "2026-12-10T12:30:00",
+    "endTime": "2026-12-10T13:30:00",
+    "timezone": "America/New_York",
+    "title": "CEE Special Seminar featuring Asst. Professor Patrick Brewick",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS BioE,",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://cee.princeton.edu/events/cee-special-seminar-featuring-asst-professor-patrick-brewick",
+    "content": "Patrick Brewick is currently an Assistant Professor in the Department of Civil and Environmental Engineering & Earth Sciences at the University of Notre Dame. Dr. Brewick earned his B.S. (2009) in Civil Engineering from the University of Notre Dame and M.S. (2010) and Ph.D. (2014) in Civil Engineering and Engineering Mechanics from Columbia University. After his Ph.D., Dr. Brewick spent two years as a Viterbi Postdoctoral Fellow at the University of Southern California in the Sonny Astani Department of Civil and Environmental Engineering. Following his postdoc, Dr.",
+    "rawEventDetails": "Details Event Description Patrick Brewick is currently an Assistant Professor in the Department of Civil and Environmental Engineering & Earth Sciences at the University of Notre Dame. Dr. Brewick earned his B.S. (2009) in Civil Engineering from the University of Notre Dame and M.S. (2010) and Ph.D. (2014) in Civil Engineering and Engineering Mechanics from Columbia University. After his Ph.D., Dr. Brewick spent two years as a Viterbi Postdoctoral Fellow at the University of Southern California in the Sonny Astani Department of Civil and Environmental Engineering. Following his postdoc, Dr. Brewick spent several years as a Research Scientist in the Materials Science and Technology Division of the U.S. Naval Research Laboratory before joining the University of Notre Dame. Abstract: Engineers rely upon models every day in a variety of contexts, up to an including the digital twins that are emerging as an increasingly essential tool for designing, maintaining, and monitoring infrastructure. Unfortunately, as the aphorism goes, \u201call models are wrong.\u201d Engineers should not lose hope, though, because models can still become useful when they are informed by measurements and observations. In this context, the importance of properly leveraging experimental data for informed model selection and careful parameter estimation becomes apparent. However, the inherent and ubiquitous presence of structural and parametric uncertainties add significant layers of complexity to these modeling tasks, necessitating the use of uncertainty quantification tools such as Bayesian inference. This presentation will discuss various projects located at this nexus of data, modeling, mechanics, and uncertainty. Applications include using novel response data from distributed fiber optics for modal identification, selecting the most probable nonlinear models for seismic isolation systems, and implementing hierarchical Bayesian approaches for calibrating hysteretic models based on experimental data from full-scale shake table testing. Lunch will be served at noon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "CEE Special Seminar featuring Asst. Professor Patrick Brewick",
+    "locationRaw": "SEAS BioE, E105",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4811:delta:0",
     "guid": "ps_events:4811:delta:0",
     "sources": [
