@@ -4432,7 +4432,7 @@
     "startTime": "2026-10-26T16:30:00",
     "endTime": "2026-10-26T18:00:00",
     "timezone": "America/New_York",
-    "title": "AI-as-an-RA Workshop",
+    "title": "AI-as-an-Research Assistant Workshop",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -4449,7 +4449,7 @@
       "id": "",
       "detail": "A01"
     },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-ra-workshop",
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-research-assistant-workshop",
     "content": "Instructor: Christopher Kenny, Postdoctoral Research Associate, Data-Driven Social ScienceThis workshop introduces researchers to AI coding agents, such as Claude Code and Codex, as tools for research assistance in the social sciences. These agents work directly inside a project, editing files and running code, in ways that raise the same reliability questions as a human research assistant. A well-structured project can keep an agent's work inspectable through version control, written instructions, and automated checks that separate unreviewed from human-approved work. I will",
     "rawEventDetails": "Details Event Description Instructor: Christopher Kenny, Postdoctoral Research Associate, Data-Driven Social Science This workshop introduces researchers to AI coding agents, such as Claude Code and Codex, as tools for research assistance in the social sciences. These agents work directly inside a project, editing files and running code, in ways that raise the same reliability questions as a human research assistant. A well-structured project can keep an agent's work inspectable through version control, written instructions, and automated checks that separate unreviewed from human-approved work. I will demonstrate structuring a project this way, with a short discussion of common failure points and the practices that catch them before they reach a final product. By the end, attendees will be able to set up a project for agent-assisted research and be comfortable applying best practices for instructing, validating, and reviewing an agent's work.",
     "rawExtractAbstract": "",
@@ -4457,7 +4457,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "AI-as-an-RA Workshop",
+    "summaryRaw": "AI-as-an-Research Assistant Workshop",
     "locationRaw": "Julis Romo Rabinowitz Building - A01",
     "mappingRules": [
       "dais:summary-is-title"
