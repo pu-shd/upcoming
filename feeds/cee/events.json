@@ -100,6 +100,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cee:ps_events:2466:delta:0",
+    "guid": "ps_events:2466:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-28T16:30:00Z",
+    "endsAt": "2026-10-28T17:30:00Z",
+    "startTime": "2026-10-28T12:30:00",
+    "endTime": "2026-10-28T13:30:00",
+    "timezone": "America/New_York",
+    "title": "CEE Seminar, featuring Associate Professor Taeyoung Kim",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center,",
+      "id": "",
+      "detail": "004"
+    },
+    "urlRef": "https://cee.princeton.edu/events/cee-seminar-featuring-associate-professor-taeyoung-kim",
+    "content": "Dr. Taeyoung Kim is an associate professor at Clarkson University, holding a joint appointment in the Department of Chemical and Biomolecular Engineering and the Institute for a Sustainable Environment. He joined the faculty as an assistant professor in 2018 and was promoted to associate professor in 2025. Currently, Dr. Kim is a visiting fellow at Princeton University, collaborating with Dr. Ryan Kingsbury. Prior to joining Clarkson, he was a postdoctoral scholar in Civil and Environmental Engineering at Penn State. He earned his B.S. and Ph.D. degrees in Chemical and",
+    "rawEventDetails": "Details Event Description Dr. Taeyoung Kim is an associate professor at Clarkson University, holding a joint appointment in the Department of Chemical and Biomolecular Engineering and the Institute for a Sustainable Environment. He joined the faculty as an assistant professor in 2018 and was promoted to associate professor in 2025. Currently, Dr. Kim is a visiting fellow at Princeton University, collaborating with Dr. Ryan Kingsbury. Prior to joining Clarkson, he was a postdoctoral scholar in Civil and Environmental Engineering at Penn State. He earned his B.S. and Ph.D. degrees in Chemical and Biological Engineering from Seoul National University. Abstract: Electrochemical separations offer a compelling paradigm for process intensification by directly using electrons to drive separations, overcoming the key challenges of conventional separation technologies that rely heavily on chemicals, thermal energy, or high pressures. Electrochemical energy devices represent some of the most successful electron-driven systems that we benefit from in everyday life, and understanding their fundamental mechanisms allows these operating principles to be effectively leveraged for environmental applications. This talk highlights our efforts in adapting core principles from electrochemical energy devices\u2014such as supercapacitors, batteries, and fuel cells\u2014to design innovative electrochemical separation processes. Leveraging redox chemistries and ion-exchange membranes, these processes offer key advantages including high target selectivity, modularity, and direct integration with renewable electricity. This talk will demonstrate their successful application in brackish water desalination, brine management, and selective resource recovery. Finally, key takeaways learned from operational and scientific challenges will be discussed alongside future steps toward establishing electrochemical separations as a robust, scalable platform for environmental sustainability. Lunch will be served at noon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "CEE Seminar, featuring Associate Professor Taeyoung Kim",
+    "locationRaw": "Friend Center, 004",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cee:ps_events:2441:delta:0",
     "guid": "ps_events:2441:delta:0",
     "sources": [
