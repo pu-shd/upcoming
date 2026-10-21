@@ -9197,6 +9197,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cbe:ps_events:5506:delta:0",
+    "guid": "ps_events:5506:delta:0",
+    "sources": [
+      "cbe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T18:20:00Z",
+    "endsAt": "2026-12-03T19:40:00Z",
+    "startTime": "2026-12-03T13:20:00",
+    "endTime": "2026-12-03T14:40:00",
+    "timezone": "America/New_York",
+    "title": "Navigating One\u2019s Career: A Career Panel with Engineering Professionals",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F281"
+    },
+    "urlRef": "https://cbe.princeton.edu/events/navigating-one%E2%80%99s-career-career-panel-engineering-professionals",
+    "content": "Hear from engineers at different stages of their careers, working across industries. Discover how they navigated the transition from school to work, the challenges they face, and the advice they would offer to emerging engineers. Presented as part of CBE 531: Technical Leadership in Engineering",
+    "rawEventDetails": "Speakers Adam Burns *17 Affiliation Johnson & Johnson Patrick Corona Affiliation Bristol Myers Squibb Chet Markwalter *20 Affiliation Optimeos Life Sciences Harshita Polishetty Affiliation Deerfield Management Helen Yao \u201915 Affiliation Merck Details Event Description Hear from engineers at different stages of their careers, working across industries. Discover how they navigated the transition from school to work, the challenges they face, and the advice they would offer to emerging engineers. Presented as part of CBE 531: Technical Leadership in Engineering Related documents 2026 Technical Leadership in Engineering Career Panel",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Navigating One\u2019s Career: A Career Panel with Engineering Professionals",
+    "locationRaw": "F281 SEAS-CBE",
+    "mappingRules": [
+      "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4216:delta:4",
     "guid": "ps_events:4216:delta:4",
     "sources": [
