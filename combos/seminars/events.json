@@ -1971,6 +1971,58 @@
     "mappingConflict": false
   },
   {
+    "id": "robotics:ps_events:576:delta:0",
+    "guid": "ps_events:576:delta:0",
+    "sources": [
+      "robotics"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T17:00:00Z",
+    "endsAt": "2026-10-29T18:00:00Z",
+    "startTime": "2026-10-29T13:00:00",
+    "endTime": "2026-10-29T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Korhammer Special Seminar: Microsoft Research",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "008"
+    },
+    "urlRef": "https://robotics.princeton.edu/events/2026/korhammer-special-seminar-microsoft-research",
+    "content": "",
+    "rawEventDetails": "Speaker Vivan Amin Affiliation Microsoft Research Details Related documents MSR seminar Oct 2026",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Korhammer Special Seminar: Microsoft Research",
+    "locationRaw": "Friend Center 008",
+    "mappingRules": [
+      "robotics:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "bioengineering:ps_events:2861:delta:0",
     "guid": "ps_events:2861:delta:0",
     "sources": [
