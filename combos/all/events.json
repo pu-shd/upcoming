@@ -6780,6 +6780,60 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5471:delta:0",
+    "guid": "ps_events:5471:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-06T14:00:00Z",
+    "endsAt": "2026-11-06T22:00:00Z",
+    "startTime": "2026-11-06T09:00:00",
+    "endTime": "2026-11-06T17:00:00",
+    "timezone": "America/New_York",
+    "title": "CITP and Digital Life Initiative (DLI) @ Cornell Tech Summit",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/citp-and-digital-life-initiative-dli-cornell-tech-summit",
+    "content": "CITP and DLI @ Cornell Tech will be jointly hosting two one-day summits this year, one in the fall at Princeton University and one in the spring of 2027 at Cornell Tech. The summits will be open to affiliates of both centers (graduate students, postdoctoral researchers, faculty, staff, visiting fellows). The goal is to connect with each other, share recent and ongoing work, and find opportunities to collaborate.Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawEventDetails": "Details Event Description CITP and DLI @ Cornell Tech will be jointly hosting two one-day summits this year, one in the fall at Princeton University and one in the spring of 2027 at Cornell Tech. The summits will be open to affiliates of both centers (graduate students, postdoctoral researchers, faculty, staff, visiting fellows). The goal is to connect with each other, share recent and ongoing work, and find opportunities to collaborate. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "CITP and Digital Life Initiative (DLI) @ Cornell Tech Summit",
+    "locationRaw": "",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3961:delta:0",
     "guid": "ps_events:3961:delta:0",
     "sources": [
