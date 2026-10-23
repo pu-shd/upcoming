@@ -166,53 +166,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ece:ps_events:11011:delta:0",
-    "guid": "ps_events:11011:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-22T20:30:00Z",
-    "endsAt": "2026-09-22T21:30:00Z",
-    "startTime": "2026-09-22T16:30:00",
-    "endTime": "2026-09-22T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Extreme Codesign for Efficient AI: Algorithms, Software, and Hardware",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Engineering Quadrangle",
-      "id": "",
-      "detail": "B205"
-    },
-    "urlRef": "https://ece.princeton.edu/events/extreme-codesign-efficient-ai-algorithms-software-and-hardware",
-    "content": "Abstract: Large language model (LLM) inference is computationally expensive and increasingly dominated by memory bandwidth. This talk presents a set of hardware, software, and algorithmic techniques that address these bottlenecks through cross-layer co-design, spanning numerical representation, tensor compression, and custom hardware accelerator architectures. I make the case that we are well past the point of \"traditional codesign\" to get to higher computing speeds, and we need to move towards Extreme Codesign where the lines between algorithm, software, and",
-    "rawEventDetails": "Speaker Mohamed Abdelfattah Affiliation Cornell Tech Details Event Description Abstract: Large language model (LLM) inference is computationally expensive and increasingly dominated by memory bandwidth. This talk presents a set of hardware, software, and algorithmic techniques that address these bottlenecks through cross-layer co-design, spanning numerical representation, tensor compression, and custom hardware accelerator architectures. I make the case that we are well past the point of \"traditional codesign\" to get to higher computing speeds, and we need to move towards Extreme Codesign where the lines between algorithm, software, and hardware abstractions are being blurred in the pursuit of performance for AI systems. Bio: Mohamed Abdelfattah is an Assistant Professor at Cornell Tech and in the Electrical and Computer Engineering Department at Cornell University. His research group is designing the next generation of machine-learning-centric computer systems for both datacenters and mobile devices. He received his BSc from the German University in Cairo, his MSc from the University of Stuttgart, and his PhD from the University of Toronto. After his PhD, Mohamed spent six years at Intel and Samsung Research. Recently, he co-founded a startup, Makora, to automate performance optimizations for AI. He is the recipient of multiple best paper awards, the Vanier Canada Graduate Scholarship, and the NSF CAREER award. Sponsor Emerging Frontiers in Computer Architecture and Systems",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Extreme Codesign for Efficient AI: Algorithms, Software, and Hardware",
-    "locationRaw": "B205 Engineering Quadrangle",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4091:delta:0",
     "guid": "ps_events:4091:delta:0",
     "sources": [
