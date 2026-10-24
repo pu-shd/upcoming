@@ -112,60 +112,6 @@
     "mappingConflict": false
   },
   {
-    "id": "citp:ps_events:5156:delta:0",
-    "guid": "ps_events:5156:delta:0",
-    "sources": [
-      "citp"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-22T16:15:00Z",
-    "endsAt": "2026-09-22T17:15:00Z",
-    "startTime": "2026-09-22T12:15:00",
-    "endTime": "2026-09-22T13:15:00",
-    "timezone": "America/New_York",
-    "title": "Unlocking Digital Behavior Using Accelerator Comscore Data",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Artificial Intelligence,Data Science & Society",
-    "tags": [
-      "ai",
-      "data-science"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Artificial Intelligence",
-      "Data Science & Society"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "306"
-    },
-    "urlRef": "https://citp.princeton.edu/events/2026/unlocking-digital-behavior-using-accelerator-comscore-data",
-    "content": "The Accelerator has acquired several years of Comscore panel data capturing real-world mobile and desktop browsing behavior, enriched with detailed demographic information. This dataset provides session-level insights into how people use their devices \u2014 what apps they open, what websites they visit, how long they spend, and in what sequence. Unlike social media APIs or traditional surveys, these data capture the invisible majority of online behavior: browsing, reading, and app",
-    "rawEventDetails": "Details Event Description The Accelerator has acquired several years of Comscore panel data capturing real-world mobile and desktop browsing behavior, enriched with detailed demographic information. This dataset provides session-level insights into how people use their devices \u2014 what apps they open, what websites they visit, how long they spend, and in what sequence. Unlike social media APIs or traditional surveys, these data capture the invisible majority of online behavior: browsing, reading, and app usage that leaves no public trace. This talk will open with an overview on the data from Professor Jacob Shapiro, followed by two use cases from Kevin Greene at the Empirical Studies of Conflict Project and Alejandro Cuevas from CITP. The Accelerator Comscore dataset is available for Princeton-based research projects and is currently being used across 10+ projects spanning a variety of subject matter. Speakers: Alejandro Cuevas is a researcher focused on the shady, suspicious, and illicit corners of the Internet\u2013\u2013and how emerging technologies like generative AI both influence and are influenced by these spaces. He blends gonzo and computational social science: first-person fieldwork in underground communities paired with large-scale measurements. His work on darkweb marketplaces has informed criminal investigations and the development of law enforcement tools. More recently, he\u2019s explored how generative AI is reshaping the online information ecosystem, including how people build audiences and craft political narratives\u2013\u2013the latter as a research consultant at Microsoft Research. He earned his Ph.D. in societal computing from Carnegie Mellon University in 2025, where he was advised by Nicolas Christin and honored with a CyLab Presidential Fellowship. He holds a B.S. with honors from Penn State. Outside academia, he co-founded Redoux, a NYC-based fragrance brand. Kevin Greene is an academic research manager in the Empirical Studies of Conflict Project at Princeton University leading the Digital Conflict and Information Integrity project. He was previously a postdoctoral fellow in the Computer Science Department at Dartmouth College. He holds a Ph.D. in Political Science from the University of Pittsburgh. His research examines the role of information and information communication technologies in international and domestic politics. Ongoing projects investigate the spread of unreliable content from algorithmic recommendations, the social and political risks posed by generative AI, and the strategies employed by foreign influence operations. His research has been funded by the National Science Foundation, Lockheed Martin Advanced Technology Labs, and Microsoft and published in Science Advances , PNAS Nexus , the American Political Science Review , Political Analysis , the Journal of Politics , and Political Communication among others. Manoel Horta Ribeiro is an assistant professor at Princeton University in the Department of Computer Science and affiliated with CITP. He received his doctoral degree in Switzerland at EPFL\u2019s Data Science Lab, working with Bob West, and his MSc and BSc in Brazil at UFMG. Ribeiro works at the intersection of computational social science, artificial intelligence, and social computing. He likes doing research that tackles real-world issues and provides actionable insights. Ideally, these insights translate into policy and design changes. Ribeiro's work has also received extensive media coverage, helping shape the public debate around online platforms and generative AI. Jacob N. Shapiro is a professor of politics and international affairs and directs the Empirical Studies of Conflict Project and the Accelerator Initiative. His research on conflict, economic development, security, and technology leverages a wide range of data from administrative records of combat events, to satellite imagery, to social media data and browser telemetry. Shapiro received the 2016 Karl Deutsch Award from ISA, given to a scholar younger than 40 or within 10 years of earning a Ph.D. who has made the most significant contribution to the study of international relations. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Unlocking Digital Behavior Using Accelerator Comscore Data",
-    "locationRaw": "Sherrerd Hall 306",
-    "mappingRules": [
-      "citp:title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4091:delta:0",
     "guid": "ps_events:4091:delta:0",
     "sources": [
@@ -374,60 +320,6 @@
     "locationRule": "detail_dash_name",
     "summaryRest": "",
     "titleSource": "enriched",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "citp:ps_events:5261:delta:2",
-    "guid": "ps_events:5261:delta:2",
-    "sources": [
-      "citp"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-24T19:00:00Z",
-    "endsAt": "2026-09-24T20:00:00Z",
-    "startTime": "2026-09-24T15:00:00",
-    "endTime": "2026-09-24T16:00:00",
-    "timezone": "America/New_York",
-    "title": "Bias in AI Reading Group",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Artificial Intelligence,Data Science & Society",
-    "tags": [
-      "ai",
-      "data-science"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Artificial Intelligence",
-      "Data Science & Society"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "008"
-    },
-    "urlRef": "https://citp.princeton.edu/events/2026/bias-ai-reading-group-0",
-    "content": "This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from",
-    "rawEventDetails": "Details Event Description This reading group focuses on justice, bias and fairness concerns in AI from a wide range of disciplinary perspectives\u2014including CS, law, philosophy, and STS. The group is open to anyone interested, regardless of whether bias/fairness is your primary research focus. For an example of the kinds of topics we have discussed in the past, check out our reading list from the previous three semesters. Here are all the details for this semester of planned meeting dates. Sessions take a variety of formats, including book club discussions, presentations of work in progress/recent work by members, presentations of papers in the research area or series of papers on a theme, and guest speakers. If you have any questions, feel free to reach out to Patty Liu ( [email protected] ) or Kara Schechtman ( [email protected] ). Sign up for our mailing list to get regular updates.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Bias in AI Reading Group",
-    "locationRaw": "Sherrerd Hall 008",
-    "mappingRules": [
-      "citp:title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
   },
