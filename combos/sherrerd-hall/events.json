@@ -1058,7 +1058,7 @@
     "startTime": "2026-11-04T16:30:00",
     "endTime": "2026-11-04T17:30:00",
     "timezone": "America/New_York",
-    "title": "A Stochastic Analysis and Financial Mathematics Seminar Talk by Alejandra Quintos, University of Wisconsin\u2013Madison",
+    "title": "Robust Reinforcement Learning under Diffusion Models for Data with Jumps",
     "speakers": [
       {
         "name": "Alejandra Quintos",
@@ -1086,7 +1086,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/alejandra-quintos-university%C2%A0%C2%A0wisconsin%E2%80%93madison",
     "content": "Abstract: Reinforcement learning in continuous time typically models the state as a diffusion. A fixed policy is then evaluated by minimizing the mean-square temporal-difference error (MSTDE), whose high-frequency limit is the expected quadratic variation of an associated martingale. In many financial applications, however, the value function of interest is tied to a continuous diffusion, while the observed state also contains news-driven jumps. We show that with such jump-contaminated observations, the limiting MSTDE objective picks up an additional term generated directly",
-    "rawEventDetails": "Details Event Description Bio: Alejandra Quintos is an Assistant Professor and Nellie McKay Fellow in the Department of Statistics at the University of Wisconsin\u2013Madison. Her research is in applied probability, stochastic processes, and statistical methodology, with a focus on modeling dependence and risk in financial systems. She develops probabilistic and statistical tools for diffusion and jump-driven models, with applications to credit risk, systemic risk, and microfinance. From 2023 to 2025, she was a Visiting Professor at the Instituto de Matem\u00e1ticas at UNAM. She completed her Ph.D. in Statistics at Columbia University in 2022 under the direction of Philip Protter, where she was a Fulbright grantee, received the Howard Levene Outstanding Teaching Award, and was a finalist for Columbia\u2019s Presidential Award for Outstanding Teaching by a Graduate Student in 2021 and 2022. Before graduate school, she studied Actuarial Sciences at Universidad de las Am\u00e9ricas Puebla on a merit scholarship, graduating summa cum laude and as valedictorian of her class. Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "rawEventDetails": "Details Event Description Abstract: Reinforcement learning in continuous time typically models the state as a diffusion. A fixed policy is then evaluated by minimizing the mean-square temporal-difference error (MSTDE), whose high-frequency limit is the expected quadratic variation of an associated martingale. In many financial applications, however, the value function of interest is tied to a continuous diffusion, while the observed state also contains news-driven jumps. We show that with such jump-contaminated observations, the limiting MSTDE objective picks up an additional term generated directly by the jumps. To address this, we propose the Mean-Square Bipower Variation Error (MSBVE). It replaces squared increments of the parametrized value function with products of adjacent absolute increments. We prove that under finite-activity jumps, the limiting MSBVE objective has no direct jump-variation term, at the same order of computational cost as MSTDE. Simulations show MSBVE staying closer to the continuous-process target than MSTDE, and sensitivity analyses indicate that this gap grows with jump size and frequency and does not vanish under finer sampling. Finally, we apply both methods to mean-variance portfolio selection with 5-minute S&P 500 data. Trained directly on raw data, MSBVE achieves the highest out-of-sample Sharpe ratio. Pre-filtering jumps by thresholding lowers the performance of both methods and makes their ranking depend on the threshold level, whereas MSBVE requires no jump-detection step at all. Joint work with Chenyang Jiang, Donggyu Kim, and Yazhen Wang. Bio: Alejandra Quintos is an Assistant Professor and Nellie McKay Fellow in the Department of Statistics at the University of Wisconsin\u2013Madison. Her research is in applied probability, stochastic processes, and statistical methodology, with a focus on modeling dependence and risk in financial systems. She develops probabilistic and statistical tools for diffusion and jump-driven models, with applications to credit risk, systemic risk, and microfinance. From 2023 to 2025, she was a Visiting Professor at the Instituto de Matem\u00e1ticas at UNAM. She completed her Ph.D. in Statistics at Columbia University in 2022 under the direction of Philip Protter, where she was a Fulbright grantee, received the Howard Levene Outstanding Teaching Award, and was a finalist for Columbia\u2019s Presidential Award for Outstanding Teaching by a Graduate Student in 2021 and 2022. Before graduate school, she studied Actuarial Sciences at Universidad de las Am\u00e9ricas Puebla on a merit scholarship, graduating summa cum laude and as valedictorian of her class. Event Category Stochastic Analysis and Financial Mathematics Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1099,8 +1099,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
