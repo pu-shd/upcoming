@@ -1,56 +1,5 @@
 [
   {
-    "id": "cbe:ps_events:5291:delta:0",
-    "guid": "ps_events:5291:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-23T20:00:00Z",
-    "endsAt": "2026-09-23T21:00:00Z",
-    "startTime": "2026-09-23T16:00:00",
-    "endTime": "2026-09-23T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Crystal Engineering in the Pharmaceutical Industry: Opportunities for Further Innovation",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F204"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/crystal-engineering-pharmaceutical-industry-opportunities-further-innovation",
-    "content": "Crystal engineering has been used within the pharmaceutical industry for multiple decades, primarily applied to batch processes. Crystal engineering is employed for the control of crystal attributes such as crystal form, particle size, particle morphology as well as impurity rejection. While applied across intermediate steps, crystal engineering is often utilized for the isolation of the active pharmaceutical ingredient, as these particle attributes can directly impact the bioavailability of the drug when used in solid oral dosage forms. Concurrent with the increased utilization of particle",
-    "rawEventDetails": "Speaker Christopher Burcham Affiliation University of Illinois Urbana-Champaign Details Event Description Crystal engineering has been used within the pharmaceutical industry for multiple decades, primarily applied to batch processes. Crystal engineering is employed for the control of crystal attributes such as crystal form, particle size, particle morphology as well as impurity rejection. While applied across intermediate steps, crystal engineering is often utilized for the isolation of the active pharmaceutical ingredient, as these particle attributes can directly impact the bioavailability of the drug when used in solid oral dosage forms. Concurrent with the increased utilization of particle engineering techniques, the pharmaceutical industry has also rediscovered continuous processing and as a natural result there has been an increased interest in continuous crystallization and isolation of pharmaceutical intermediates and APIs. Continuous crystallization presents unique challenges to the control of physical properties of active pharmaceutical ingredients by direct crystallization when compared to batch crystallization processes. These limitations can be overcome to some extent by the implementation of in-situ milling and other process intensification technologies. Development of these processes has historically been experiential through trial-and-error experimentation \u2013 which leads to long development cycles, and the need for significant quantities of materials to fund the development studies. Application and utilization of population balance models (PBM) significantly decrease both the development cycle time and the material needs \u2013 a case study demonstrating the efficiency gains of using PBMs will be presented. While the utilization of PBMs greatly decreases the development timeframe, the overall process development cycle is quite linear, such that the development of the process cannot begin until many other activities are completed, all of which rely on the selection of the crystal form that will be carried forward \u2013 which until recently has been done through extensive crystal screening studies. Innovations in ab-initio crystal structure predictions (CSP) offer the promise of transforming polymorph screening and selection by predicting all possible polymorphs of a given organic molecule along with the associated free energies of each predicted form. These advances in the ability to predict crystal form as well as crystal growth have progressed to such a point where one can ask \u2013 can the linear process development workflow be replaced through in-silico simulations? (Burcham et al, 2024). An in-silico workflow for the digital design of crystallization processes starting from the chemical structure of the active pharmaceutical ingredient (API) through to process development will be presented. The opportunities, current limitations and prospects for future innovation of this approach will be discussed. 1. Burcham, C. L., et al. (2024). \"PharmaceuScal Digital Design: From Chemical Structure through Crystal Polymorph to Conceptual Crystallization Process.\" Crystal Growth & Design 24(13): 5417\u20135438.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Crystal Engineering in the Pharmaceutical Industry: Opportunities for Further Innovation",
-    "locationRaw": "F204 SEAS-CBE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "mae:ps_events:4746:delta:0",
     "guid": "ps_events:4746:delta:0",
     "sources": [

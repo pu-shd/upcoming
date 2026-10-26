@@ -1,62 +1,5 @@
 [
   {
-    "id": "orfe:ps_events:12701:delta:0",
-    "guid": "ps_events:12701:delta:0",
-    "sources": [
-      "orfe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-23T20:30:00Z",
-    "endsAt": "2026-09-23T21:30:00Z",
-    "startTime": "2026-09-23T16:30:00",
-    "endTime": "2026-09-23T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Particle systems with singular interaction through local times: breakdown and metastability",
-    "speakers": [
-      {
-        "name": "Graeme Baker",
-        "affiliation": "Columbia University"
-      }
-    ],
-    "speaker": "Graeme Baker\\, Columbia University",
-    "affiliation": "Columbia University",
-    "series": "Stochastic Analysis and Financial Mathematics Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Stochastic Analysis and Financial Mathematics Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "101"
-    },
-    "urlRef": "https://orfe.princeton.edu/events/2026/graeme-baker-columbia-university",
-    "content": "Abstract: We study systems of reflected Brownian motions on the half-line in which each particle is pulled toward the origin by the local times at zero of all the particles. When the interaction is too strong\\, the system breaks down in finite time. We characterize the breakdown completely through a dynamic graph structure\\, construct the mean-field limit\\, and describe how the system continues past breakdown as a solution of the extended Skorokhod problem. At criticality\\, the finite system survives for a time of order N while its mean-field limit survives forever\\; we explain",
-    "rawEventDetails": "Details Event Description Abstract: We study systems of reflected Brownian motions on the half-line in which each particle is pulled toward the origin by the local times at zero of all the particles. When the interaction is too strong, the system breaks down in finite time. We characterize the breakdown completely through a dynamic graph structure, construct the mean-field limit, and describe how the system continues past breakdown as a solution of the extended Skorokhod problem. At criticality, the finite system survives for a time of order N while its mean-field limit survives forever; we explain this metastability through an exact skew-product decomposition. Based on joint work with Ben Hambly and Philipp Jettkant, and ongoing work with Kevin Hu. Bio: Graeme Baker is a Term Assistant Professor in the Department of Statistics at Columbia University, where he also teaches in the M.A. in Mathematical Finance program. He received his PhD in Applied and Computational Mathematics from Princeton University, advised by Mykhaylo Shkolnikov. His research concerns interacting particle systems with singular interactions, probabilistic solutions of free boundary problems, and the calibration of stochastic models to financial data. Event Category Stochastic Analysis and Financial Mathematics Seminar",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Graeme Baker, Columbia University",
-    "locationRaw": "101 - Sherrerd Hall",
-    "mappingRules": [
-      "orfe:summary-is-speaker"
-    ],
-    "locationRule": "detail_dash_name",
-    "summaryRest": "",
-    "titleSource": "enriched",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "orfe:ps_events:12736:delta:0",
     "guid": "ps_events:12736:delta:0",
     "sources": [
@@ -437,8 +380,8 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/alejandra-quintos-university%C2%A0%C2%A0wisconsin%E2%80%93madison",
-    "content": "",
-    "rawEventDetails": "Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "content": "Bio:Alejandra Quintos is an Assistant Professor and Nellie McKay Fellow in the Department of Statistics at the University of Wisconsin\u2013Madison. Her research is in applied probability\\, stochastic processes\\, and statistical methodology\\, with a focus on modeling dependence and risk in financial systems. She develops probabilistic and statistical tools for diffusion and jump-driven models\\, with applications to credit risk\\, systemic risk\\, and microfinance.From 2023 to 2025\\, she was a Visiting Professor at the Instituto de Matem\u00e1ticas at UNAM. She",
+    "rawEventDetails": "Details Event Description Bio: Alejandra Quintos is an Assistant Professor and Nellie McKay Fellow in the Department of Statistics at the University of Wisconsin\u2013Madison. Her research is in applied probability, stochastic processes, and statistical methodology, with a focus on modeling dependence and risk in financial systems. She develops probabilistic and statistical tools for diffusion and jump-driven models, with applications to credit risk, systemic risk, and microfinance. From 2023 to 2025, she was a Visiting Professor at the Instituto de Matem\u00e1ticas at UNAM. She completed her Ph.D. in Statistics at Columbia University in 2022 under the direction of Philip Protter, where she was a Fulbright grantee, received the Howard Levene Outstanding Teaching Award, and was a finalist for Columbia\u2019s Presidential Award for Outstanding Teaching by a Graduate Student in 2021 and 2022. Before graduate school, she studied Actuarial Sciences at Universidad de las Am\u00e9ricas Puebla on a merit scholarship, graduating summa cum laude and as valedictorian of her class. Event Category Stochastic Analysis and Financial Mathematics Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
