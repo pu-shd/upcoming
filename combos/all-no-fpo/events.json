@@ -6368,6 +6368,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4746:delta:0",
+    "guid": "ps_events:4746:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-09T17:00:00Z",
+    "endsAt": "2026-11-09T18:00:00Z",
+    "startTime": "2026-11-09T12:00:00",
+    "endTime": "2026-11-09T13:00:00",
+    "timezone": "America/New_York",
+    "title": "DaIS Graduate Certificate Programs Information Session",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "View location on My PrincetonU",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/dais-graduate-certificate-programs-information-session",
+    "content": "Join us for a lunchtime information session to learn more about the graduate certificate programs offered by Data and Intelligent Systems (DaIS): Computational Science and Engineering (CSE) and Statistics and Machine Learning (SML). Prof. Michael Mueller, CSE Graduate Certificate Program Director, will provide an overview of the programs and answer your questions. Lunch will be provided. Please RSVP by Thursday, November 5 For more information, please visit dais.princeton.edu",
+    "rawEventDetails": "Details Event Description Join us for a lunchtime information session to learn more about the graduate certificate programs offered by Data and Intelligent Systems (DaIS): Computational Science and Engineering (CSE) and Statistics and Machine Learning (SML). Prof. Michael Mueller, CSE Graduate Certificate Program Director, will provide an overview of the programs and answer your questions. Lunch will be provided. Please RSVP by Thursday, November 5 For more information, please visit dais.princeton.edu",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "DaIS Graduate Certificate Programs Information Session",
+    "locationRaw": "View location on My PrincetonU",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3816:delta:0",
     "guid": "ps_events:3816:delta:0",
     "sources": [
