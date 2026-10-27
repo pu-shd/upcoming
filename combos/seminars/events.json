@@ -56,62 +56,6 @@
     "mappingConflict": false
   },
   {
-    "id": "quantum:ps_events:3831:delta:0",
-    "guid": "ps_events:3831:delta:0",
-    "sources": [
-      "quantum"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-21T16:10:00Z",
-    "endsAt": "2026-09-21T17:10:00Z",
-    "startTime": "2026-09-21T12:10:00",
-    "endTime": "2026-09-21T13:10:00",
-    "timezone": "America/New_York",
-    "title": "When Crystals Flow: The Emergence of Supersolid Quantum States",
-    "speakers": [
-      {
-        "name": "Francesca Ferlaino",
-        "affiliation": "University of Innsbruck"
-      }
-    ],
-    "speaker": "Francesca Ferlaino, University of Innsbruck",
-    "affiliation": "University of Innsbruck",
-    "series": "Princeton Quantum Colloquium",
-    "tags": [
-      "colloquium"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Princeton Quantum Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen Hall",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-when-crystals-flow-emergence-supersolid-quantum-states",
-    "content": "Title: When Crystals Flow: The Emergence of Supersolid Quantum States Abstract: The exploration of superfluidity has fascinated scientists for decades, spanning a wide range of systems\u2014from solids and liquids to gases, and even light. Traditionally, the study of superfluid order has been confined to spatially homogeneous systems, where uniform conditions provide a simpler framework for understanding this extraordinary quantum state. But what happens when superfluidity arises in systems with periodic density modulations? Can the",
-    "rawEventDetails": "Details Event Description Title: When Crystals Flow: The Emergence of Supersolid Quantum States Abstract: The exploration of superfluidity has fascinated scientists for decades, spanning a wide range of systems\u2014from solids and liquids to gases, and even light. Traditionally, the study of superfluid order has been confined to spatially homogeneous systems, where uniform conditions provide a simpler framework for understanding this extraordinary quantum state. But what happens when superfluidity arises in systems with periodic density modulations? Can the inherent localization of periodic structures coexist with the fluid-like properties of a superfluid? Could a solid, with its rigid crystalline structure, exhibit superfluid behavior? Or conversely, might a superfluid reveal a crystalline order? These questions, long at the frontier of quantum many-body physics, naturally extend early theoretical vision into regimes where broken symmetries intertwine. Recent breakthroughs have provided compelling answers with the discovery of \u201csupersolid\u201d quantum states\u2014phases that uniquely combine superfluid and crystalline properties. This talk will delve into the experimental realization of supersolidity in dipolar quantum gases from the point of view of Innsbruck results. Key topics include the dynamics of symmetry breaking, the emergence of phase-coherent density-modulated states, and the observation of quantized vortices in rotating supersolid phases. A light lunch will be served in the Bowen Atrium at 11:45am. Sponsors Sarang Gopalakrishnan Waseem Bakr",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: When Crystals Flow: The Emergence of Supersolid Quantum States, Francesca Ferlaino (University of Innsbruck)",
-    "locationRaw": "Bowen Hall",
-    "mappingRules": [
-      "quantum:series-title-comma-person"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4091:delta:0",
     "guid": "ps_events:4091:delta:0",
     "sources": [
