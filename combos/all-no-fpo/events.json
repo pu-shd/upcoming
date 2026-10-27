@@ -6386,6 +6386,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11101:delta:0",
+    "guid": "ps_events:11101:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-09T21:30:00Z",
+    "endsAt": "2026-11-09T22:30:00Z",
+    "startTime": "2026-11-09T16:30:00",
+    "endTime": "2026-11-09T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Information Technologies at the Fundemental Physical Limits",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/information-technologies-fundemental-physical-limits",
+    "content": "Abstract Fundamental physical laws set the performance limits of computing, communications, and sensing. Advances in nanotechnology and integrated circuits have brought these technologies closer to their classical limits, while quantum resources offer ways to extend their performance. In this talk, I will discuss the physical and information-theoretic bounds that govern these systems and present large-scale integrated systems in silicon photonics and electronics designed to approach them. The talk will cover experimental demonstrations and proposed architectures",
+    "rawEventDetails": "Speaker Volkan Gurses Affiliation MIT Details Event Description Abstract Fundamental physical laws set the performance limits of computing, communications, and sensing. Advances in nanotechnology and integrated circuits have brought these technologies closer to their classical limits, while quantum resources offer ways to extend their performance. In this talk, I will discuss the physical and information-theoretic bounds that govern these systems and present large-scale integrated systems in silicon photonics and electronics designed to approach them. The talk will cover experimental demonstrations and proposed architectures across three areas: quantum computing on CMOS and hybrid classical\u2013quantum computing; quantum coherent transceivers that encode information in non-classical light, with a path beyond the Shannon limit toward the Holevo limit; and quantum phased arrays and squeezed-light sensors for sensing beyond the standard quantum limit toward the Heisenberg limit. For each system, I will connect the underlying theory to integrated circuit design, experimental results, and applications. I will conclude with a path toward scalable, deployable technologies within today\u2019s CMOS infrastructure. Bio Volkan Gurses is a postdoctoral researcher at the Massachusetts Institute of Technology, a lecturer at the California Institute of Technology, and a visiting researcher at NVIDIA Research. He received his Ph.D. in Electrical Engineering with a subject minor in Physics and his M.S. in Electrical Engineering from the California Institute of Technology, and his B.S. in Electrical Engineering with Research Option from the Georgia Institute of Technology. His research is broadly on integrated systems, with a focus on studying the fundamental physical and information-theoretic limits of technologies (e.g., Landauer, Holevo, Heisenberg) and developing integrated systems that can operate at these limits. During his Ph.D., he founded a chip design startup named Foundation Silicon after winning the Caltech Entrepreneurship Prize. He was additionally awarded the Carver Mead New Adventures Fund, R. David Middlebrook Fellowship, Caltech EAS Division Fellowship, Tau Beta Pi Fellowship, IEEE MTT-S Undergraduate/Pre-Graduate Scholarship, European Union Contest for Young Scientists CERN Special Donated Prize, and First Prize in the Turkish National Research Contest, and he was named a Rising Star by Cell Press. Sponsor Electrical & Computer Engineering",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Information Technologies at the Fundemental Physical Limits",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5196:delta:0",
     "guid": "ps_events:5196:delta:0",
     "sources": [
