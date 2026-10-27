@@ -638,7 +638,7 @@
     "startTime": "2026-11-19T16:30:00",
     "endTime": "2026-11-19T17:30:00",
     "timezone": "America/New_York",
-    "title": "An Optimization Seminar Talk by Sinho Chewi, Yale University",
+    "title": "Continuous-time models and variational structure for the edge of stability",
     "speakers": [
       {
         "name": "Sinho Chewi",
@@ -666,7 +666,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/sinho-chewi-yale-university",
     "content": "Abstract: In non-convex full batch training\\, we often observe that optimization happens at the edge of stability: the iterates are oscillatory\\, and the sharpness (largest eigenvalue of the Hessian) hovers at the boundary between instability and stability. We describe a continuous-time model for the dynamics in this regime\\, which we call the rod flow\\, and explain its relationship with the central flow introduced by Cohen et al. (2024)\\, as well as with the edge coupling functional introduced by Litman (2026).",
-    "rawEventDetails": "Event Category Optimization Seminar",
+    "rawEventDetails": "Details Event Description Abstract: In non-convex full batch training, we often observe that optimization happens at the edge of stability: the iterates are oscillatory, and the sharpness (largest eigenvalue of the Hessian) hovers at the boundary between instability and stability. We describe a continuous-time model for the dynamics in this regime, which we call the rod flow, and explain its relationship with the central flow introduced by Cohen et al. (2024), as well as with the edge coupling functional introduced by Litman (2026). Event Category Optimization Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -679,8 +679,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
