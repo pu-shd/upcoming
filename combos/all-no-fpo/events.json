@@ -8008,7 +8008,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/sinho-chewi-yale-university",
-    "content": "",
+    "content": "Abstract: In non-convex full batch training, we often observe that optimization happens at the edge of stability: the iterates are oscillatory, and the sharpness (largest eigenvalue of the Hessian) hovers at the boundary between instability and stability. We describe a continuous-time model for the dynamics in this regime, which we call the rod flow, and explain its relationship with the central flow introduced by Cohen et al. (2024), as well as with the edge coupling functional introduced by Litman (2026).",
     "rawEventDetails": "Event Category Optimization Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
