@@ -4866,6 +4866,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cee:ps_events:2486:delta:0",
+    "guid": "ps_events:2486:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-29T18:55:00Z",
+    "endsAt": "2026-10-29T20:15:00Z",
+    "startTime": "2026-10-29T14:55:00",
+    "endTime": "2026-10-29T16:15:00",
+    "timezone": "America/New_York",
+    "title": "William Pierson Field Lecture",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Robertson",
+      "id": "",
+      "detail": "001"
+    },
+    "urlRef": "https://cee.princeton.edu/events/william-pierson-field-lecture",
+    "content": "\u201cArtistic Non-Inertial Tracer (ANT): an Educational Kit for a 3-Link Origami Slithering Robot\u201dGuest lecture in Origami Engineering class (CEE345/STC345/MSE345/MAE327/CEE545/MAE556/MSE535)Bio: Cynthia Sung is an Associate Professor in the Department of Mechanical Engineering and Applied Mechanics (MEAM) and a member of the General Robotics, Automation, Sensing & Perception (GRASP) lab at the University",
+    "rawEventDetails": "Details Event Description \u201cArtistic Non-Inertial Tracer (ANT): an Educational Kit for a 3-Link Origami Slithering Robot\u201d Guest lecture in Origami Engineering class (CEE345/STC345/MSE345/MAE327/CEE545/MAE556/MSE535) Bio: Cynthia Sung is an Associate Professor in the Department of Mechanical Engineering and Applied Mechanics (MEAM) and a member of the General Robotics, Automation, Sensing & Perception (GRASP) lab at the University of Pennsylvania. She completed a Ph.D. (2016) in Electrical Engineering and Computer Science at MIT, advised by Prof. Daniela Rus, and a B.S. (2011) in Mechanical Engineering from Rice University. Her research interest is computational design and fabrication for robotic systems, with a particular focus on origami-inspired and compliant robots. She is the recipient of a 2023 ONR Young Investigator award, 2019 NSF CAREER award, 2020 Johnson & Johnson Women in STEM2D Scholars Award, and a 2017 Popular Mechanics Breakthrough Award.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "William Pierson Field Lecture",
+    "locationRaw": "Robertson 001",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5261:delta:6",
     "guid": "ps_events:5261:delta:6",
     "sources": [
