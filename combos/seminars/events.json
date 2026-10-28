@@ -1697,7 +1697,7 @@
     "startTime": "2026-11-02T12:10:00",
     "endTime": "2026-11-02T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by Zohreh Davoudi, University of Maryland",
+    "title": "Quantum-computing frontiers in nuclear and particle physics",
     "speakers": [
       {
         "name": "Zohreh Davoudi",
@@ -1722,23 +1722,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-zohreh-davoudi-university-maryland",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-quantum-computing-frontiers-nuclear-and-particle-physics-zohreh",
+    "content": "Title: Quantum-computing frontiers in nuclear and particle physics Abstract: How does matter evolve in the early universe or in high-energy particle collisions? What does the phase diagram of strongly interacting matter look like? How does a large nucleus respond dynamically to probes of new physics? Large, reliable quantum computers hold the promise of addressing these questions through first-principles simulations of matter. In this talk, I will motivate a quantum-computing program in nuclear and particle physics and describe progress",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, Zohreh Davoudi (University of Maryland)",
+    "summaryRaw": "Princeton Quantum Colloquium: Quantum-computing frontiers in nuclear and particle physics, Zohreh Davoudi (University of Maryland)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
