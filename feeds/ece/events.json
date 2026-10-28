@@ -198,6 +198,57 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11111:delta:0",
+    "guid": "ps_events:11111:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-03T21:30:00Z",
+    "endsAt": "2026-11-03T22:30:00Z",
+    "startTime": "2026-11-03T16:30:00",
+    "endTime": "2026-11-03T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Tracking and Controlling Disorder Across Time and Length Scales for Next-Generation Energy Materials",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Electrical Engineering",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Electrical Engineering"
+    ],
+    "unmappedTags": [
+      "Electrical Engineering"
+    ],
+    "location": {
+      "name": "E-Quad; B-205",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ece.princeton.edu/events/tracking-and-controlling-disorder-across-time-and-length-scales-next-generation-energy",
+    "content": "Abstract: Growing electricity demands and climate targets are forcing unprecedented restructuring of our electrical grid. Solving these issues requires increasing renewable energy generation and storage capacity at exponential rates. To achieve this, we must rapidly improve existing technologies while discovering and optimising new materials and devices at unprecedented speed to ensure diverse, secure energy supply with resilient, domestic supply chains. However, unlike incumbent semiconductors, next-generation energy devices are highly disordered on multiple length",
+    "rawEventDetails": "Speaker Kyle Forhna Affiliation Stanford Energy Postdoctoral Fellow, Physics PhD Details Event Description Abstract: Growing electricity demands and climate targets are forcing unprecedented restructuring of our electrical grid. Solving these issues requires increasing renewable energy generation and storage capacity at exponential rates. To achieve this, we must rapidly improve existing technologies while discovering and optimising new materials and devices at unprecedented speed to ensure diverse, secure energy supply with resilient, domestic supply chains. However, unlike incumbent semiconductors, next-generation energy devices are highly disordered on multiple length scales, and this has massive implications for their operating principles, performance and stability. Understanding and improving these devices requires high resolution and throughput characterisation of this multiscale disorder. In this presentation, I will describe the development of multimodal microscopy toolkits sensitive to optoelectronic and electrochemical activity, crystal structure, and chemical composition. I will then detail their application to materials relevant for renewable energy generation and storage. Using halide perovskite semiconductors as a highly disordered model system, I will discuss the origins of their remarkable tolerance to extremely high concentrations of defects, the chemical and structural origins of this disorder, and how this disorder is predictive of solar cell performance and degradation. Then, in a range of rechargeable battery chemistries, I will show, with single particle resolution, how disorder can seed capacity loss and irreversible degradation, but can also unlock exciting new applications. I will highlight disorder as both a unifying challenge and design axis across a range of crucial technologies. Bio: Kyle Frohna is a Stanford Energy Postdoctoral Fellow in the Departments of Materials Science & Engineering and Electrical Engineering working with Professors William Chueh and Daniel Congreve where he develops tools to study batteries under operational conditions. He completed his PhD in Physics and an EPSRC Doctoral Prize Postdoctoral Fellowship at the Cavendish Laboratory, University of Cambridge in the group of Professor Sam Stranks studying halide perovskite materials and solar cells at the nanoscale and received the Woodruff PhD Thesis Prize from the Institute of Physics. He received his B.Sc. in Nanoscience: The Physics and Chemistry of Advanced Materials from Trinity College Dublin, Ireland, close to where he grew up. His research focuses on how to characterise, understand and manipulate disorder to improve next-generation energy materials with a latest thrust on coupling high-throughput experimentation with advanced characterisation. His work has been recognised with awards including the Cambridge Trust Scholarship, Schiff Foundation Studentship, Robert Gardiner Scholarship and the Winton Sustainability Fellowship. Outside of research, he is an avid heavy metal drummer and likes to practice olympic weightlifting. Sponsor Dane de Quilettes Contact Patricia Kuczmarski [email protected]",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Tracking and Controlling Disorder Across Time and Length Scales for Next-Generation Energy Materials",
+    "locationRaw": "E-Quad; B-205",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ece:ps_events:11101:delta:0",
     "guid": "ps_events:11101:delta:0",
     "sources": [

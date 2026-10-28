@@ -3389,7 +3389,7 @@
     },
     "urlRef": "https://ai.princeton.edu/events/2026/inaugural-symposium-and-launch-event",
     "content": "A new initiative to make artificial intelligence safe and beneficial to humanity.Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate DirectorFeatured speakers include:Boaz Barak, Harvard University, Open AISurbhi Goel, University of PennsylvaniaPeter Henderson, Princeton University, Department of Computer ScienceLydia Liu, Princeton University, Department of Computer",
-    "rawEventDetails": "Details Event Description A new initiative to make artificial intelligence safe and beneficial to humanity. Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate Director Featured speakers include: Boaz Barak, Harvard University, Open AI Surbhi Goel, University of Pennsylvania Peter Henderson, Princeton University, Department of Computer Science Lydia Liu, Princeton University, Department of Computer Science Helen Qu, Flatiron Institute Adam Tauman Kalai, Institute for Responsible Superintelligence Benjamin Van Roy, Stanford University, Google Deep Mind",
+    "rawEventDetails": "",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -5134,7 +5134,7 @@
     },
     "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-observation-van-der-waals-shielding-between-polar-molecules-optical",
     "content": "Title: Observation of van der Waals shielding between polar molecules in optical tweezersAbstract: Ultracold molecules typically suffer fast two-body loss at near-universal rates, and suppressing this loss has so far required strong DC or microwave electric fields. Recently, it has been predicted that particular pairs of molecular states can instead be shielded at zero field by repulsive van der Waals (vdW) interactions arising from either rotational or hyperfine structure. Here, we report the first experimental observation of both rotational and",
-    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
+    "rawEventDetails": "Details Event Description Title: Observation of van der Waals shielding between polar molecules in optical tweezers Abstract: Ultracold molecules typically suffer fast two-body loss at near-universal rates, and suppressing this loss has so far required strong DC or microwave electric fields. Recently, it has been predicted that particular pairs of molecular states can instead be shielded at zero field by repulsive van der Waals (vdW) interactions arising from either rotational or hyperfine structure. Here, we report the first experimental observation of both rotational and hyperfine vdW shielding, in collisions between pairs of laser-cooled CaF molecules trapped in optical tweezers. We observe inelastic loss suppressed by more than three orders of magnitude below the universal rate, and from measurements of thermalization we place a lower bound of 10\u00b3 on the elastic-to-inelastic ratio. We also observe three-body collisions in these shielded state combinations by deterministically preparing three molecules in a single tweezer and reading out the resulting state-resolved populations. Finally, I will present ongoing work of digital evaporative cooling of molecules. Lunch will be provided at 12:00 PM in EQuad J401.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -5427,7 +5427,7 @@
     },
     "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-quantum-computing-frontiers-nuclear-and-particle-physics-zohreh",
     "content": "Title: Quantum-computing frontiers in nuclear and particle physics Abstract: How does matter evolve in the early universe or in high-energy particle collisions? What does the phase diagram of strongly interacting matter look like? How does a large nucleus respond dynamically to probes of new physics? Large, reliable quantum computers hold the promise of addressing these questions through first-principles simulations of matter. In this talk, I will motivate a quantum-computing program in nuclear and particle physics and describe progress",
-    "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
+    "rawEventDetails": "Details Event Description Title: Quantum-computing frontiers in nuclear and particle physics Abstract: How does matter evolve in the early universe or in high-energy particle collisions? What does the phase diagram of strongly interacting matter look like? How does a large nucleus respond dynamically to probes of new physics? Large, reliable quantum computers hold the promise of addressing these questions through first-principles simulations of matter. In this talk, I will motivate a quantum-computing program in nuclear and particle physics and describe progress toward simulating systems governed by the fundamental interactions of the Standard Model or their effective descriptions. I will present current resource estimates for selected problems and showcase recent advances in implementations on quantum hardware and in theory-algorithm-experiment codesign. These advances are laying the groundwork for addressing fundamental questions in nuclear and particle physics with quantum computers. A light lunch will be served in the Bowen Atrium at 11:45am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -5655,6 +5655,57 @@
       "citp:speaker-dash-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ece:ps_events:11111:delta:0",
+    "guid": "ps_events:11111:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-03T21:30:00Z",
+    "endsAt": "2026-11-03T22:30:00Z",
+    "startTime": "2026-11-03T16:30:00",
+    "endTime": "2026-11-03T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Tracking and Controlling Disorder Across Time and Length Scales for Next-Generation Energy Materials",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Electrical Engineering",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Electrical Engineering"
+    ],
+    "unmappedTags": [
+      "Electrical Engineering"
+    ],
+    "location": {
+      "name": "E-Quad; B-205",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ece.princeton.edu/events/tracking-and-controlling-disorder-across-time-and-length-scales-next-generation-energy",
+    "content": "Abstract: Growing electricity demands and climate targets are forcing unprecedented restructuring of our electrical grid. Solving these issues requires increasing renewable energy generation and storage capacity at exponential rates. To achieve this, we must rapidly improve existing technologies while discovering and optimising new materials and devices at unprecedented speed to ensure diverse, secure energy supply with resilient, domestic supply chains. However, unlike incumbent semiconductors, next-generation energy devices are highly disordered on multiple length",
+    "rawEventDetails": "Speaker Kyle Forhna Affiliation Stanford Energy Postdoctoral Fellow, Physics PhD Details Event Description Abstract: Growing electricity demands and climate targets are forcing unprecedented restructuring of our electrical grid. Solving these issues requires increasing renewable energy generation and storage capacity at exponential rates. To achieve this, we must rapidly improve existing technologies while discovering and optimising new materials and devices at unprecedented speed to ensure diverse, secure energy supply with resilient, domestic supply chains. However, unlike incumbent semiconductors, next-generation energy devices are highly disordered on multiple length scales, and this has massive implications for their operating principles, performance and stability. Understanding and improving these devices requires high resolution and throughput characterisation of this multiscale disorder. In this presentation, I will describe the development of multimodal microscopy toolkits sensitive to optoelectronic and electrochemical activity, crystal structure, and chemical composition. I will then detail their application to materials relevant for renewable energy generation and storage. Using halide perovskite semiconductors as a highly disordered model system, I will discuss the origins of their remarkable tolerance to extremely high concentrations of defects, the chemical and structural origins of this disorder, and how this disorder is predictive of solar cell performance and degradation. Then, in a range of rechargeable battery chemistries, I will show, with single particle resolution, how disorder can seed capacity loss and irreversible degradation, but can also unlock exciting new applications. I will highlight disorder as both a unifying challenge and design axis across a range of crucial technologies. Bio: Kyle Frohna is a Stanford Energy Postdoctoral Fellow in the Departments of Materials Science & Engineering and Electrical Engineering working with Professors William Chueh and Daniel Congreve where he develops tools to study batteries under operational conditions. He completed his PhD in Physics and an EPSRC Doctoral Prize Postdoctoral Fellowship at the Cavendish Laboratory, University of Cambridge in the group of Professor Sam Stranks studying halide perovskite materials and solar cells at the nanoscale and received the Woodruff PhD Thesis Prize from the Institute of Physics. He received his B.Sc. in Nanoscience: The Physics and Chemistry of Advanced Materials from Trinity College Dublin, Ireland, close to where he grew up. His research focuses on how to characterise, understand and manipulate disorder to improve next-generation energy materials with a latest thrust on coupling high-throughput experimentation with advanced characterisation. His work has been recognised with awards including the Cambridge Trust Scholarship, Schiff Foundation Studentship, Robert Gardiner Scholarship and the Winton Sustainability Fellowship. Outside of research, he is an avid heavy metal drummer and likes to practice olympic weightlifting. Sponsor Dane de Quilettes Contact Patricia Kuczmarski [email protected]",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Tracking and Controlling Disorder Across Time and Length Scales for Next-Generation Energy Materials",
+    "locationRaw": "E-Quad; B-205",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -7679,7 +7730,7 @@
     },
     "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-mahesh-mahanthappa-university-minnesota",
     "content": "Scale-Invariant Self-Assembled Soft Materials Design: From Surfactants to Block CopolymersAbstract: Amphiphilic molecules, ranging from hydrated molecular amphiphiles (\u201csoaps\u201d) to high molecular block copolymer melts, thermodynamically self-assemble into ordered spherical, cylindrical, network, and lamellar morphologies. These structures exhibit ~5-50 nm spatial periodicities that directly stem from their constituent building block sizes. In spite of the starkly different chain conformations and statistics of these",
-    "rawEventDetails": "Details Event Description Abstract and bio TBA",
+    "rawEventDetails": "Details Event Description Scale-Invariant Self-Assembled Soft Materials Design: From Surfactants to Block Copolymers Abstract : Amphiphilic molecules, ranging from hydrated molecular amphiphiles (\u201csoaps\u201d) to high molecular block copolymer melts, thermodynamically self-assemble into ordered spherical, cylindrical, network, and lamellar morphologies. These structures exhibit ~5-50 nm spatial periodicities that directly stem from their constituent building block sizes. In spite of the starkly different chain conformations and statistics of these amphiphiles, the morphological homology across length scales suggest the potential for scale-invariant molecular design rules for engineering functional self-assembled materials for therapeutic delivery, nanolithography, and photonics. Inspired by analogies with oligomeric surfactants, the first part of this seminar will probe how end-linking narrow dispersity AB diblock polymers into core-shell molecular bottlebrushes alters their composition-dependent self-assembled morphologies and their underlying thermodynamics. Building on packing parameter models for surfactant self-assembly, the second part of this talk will examine how molecular shape control in bottlebrush block copolymers can be leveraged to direct their supramolecular packings into unanticipated morphologies at larger length scales. Bio : Mahesh Mahanthappa obtained B.A. degrees in Chemistry & Mathematics at the University of Colorado\u2013Boulder in 1997, and a Ph.D. in organometallic catalysis with Professor R. M. Waymouth at Stanford University in 2003. After postdoctoral studies with Professors F. S. Bates and M. A. Hillmyer at University of Minnesota (2003\u20132006), he joined the Chemistry faculty of the University of Wisconsin\u2013Madison in 2006. In 2015, he moved to the Department of Chemical Engineering & Materials Science at the University of Minnesota. The Mahanthappa group leverages chemical synthesis and materials characterization to identify new methods for manipulating block copolymer and lyotropic liquid crystal self-assembly into unique morphologies with unusual bulk properties. Mahesh has received various awards for research and teaching, including the 2013 American Physical Society Dillon Medal in Polymer Physics, and the Emil H. Steiger Chancellor\u2019s Distinguished Teaching Award. He is also a Kavli Foundation Fellow and a Fellow of the American Physical Society.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
