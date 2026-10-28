@@ -5107,7 +5107,7 @@
     "startTime": "2026-10-30T12:00:00",
     "endTime": "2026-10-30T14:00:00",
     "timezone": "America/New_York",
-    "title": "A Quantum Group Meeting Talk by Xingyan Chen, Cheuk Group",
+    "title": "Observation of van der Waals shielding between polar molecules in optical tweezers",
     "speakers": [
       {
         "name": "Xingyan Chen",
@@ -5132,23 +5132,23 @@
       "id": "",
       "detail": "J401"
     },
-    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-xingyan-chen-cheuk-group",
-    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-observation-van-der-waals-shielding-between-polar-molecules-optical",
+    "content": "Title: Observation of van der Waals shielding between polar molecules in optical tweezersAbstract: Ultracold molecules typically suffer fast two-body loss at near-universal rates, and suppressing this loss has so far required strong DC or microwave electric fields. Recently, it has been predicted that particular pairs of molecular states can instead be shielded at zero field by repulsive van der Waals (vdW) interactions arising from either rotational or hyperfine structure. Here, we report the first experimental observation of both rotational and",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Quantum Group Meeting: TBD - Xingyan Chen (Cheuk Group)",
+    "summaryRaw": "Quantum Group Meeting: Observation of van der Waals shielding between polar molecules in optical tweezers - Xingyan Chen (Cheuk Group)",
     "locationRaw": "EQuad J401",
     "mappingRules": [
       "quantum:series-title-dash-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
