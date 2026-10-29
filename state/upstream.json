@@ -1,6 +1,6 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-10-29T18:42:42Z",
+  "generatedAt": "2026-10-29T19:02:16Z",
   "sources": {
     "ai": {
       "etag": "\"1793201061\"",
@@ -18,13 +18,13 @@
       "lastEnrichedAt": "2026-10-28T19:22:15Z"
     },
     "cee": {
-      "etag": "\"1793299360\"",
-      "lastModified": "Thu, 29 Oct 2026 18:42:40 GMT",
+      "etag": "\"1793300534\"",
+      "lastModified": "Thu, 29 Oct 2026 19:02:14 GMT",
       "lastEnrichedAt": "2026-10-28T19:22:15Z"
     },
     "citp": {
-      "etag": "\"1793297006\"",
-      "lastModified": "Thu, 29 Oct 2026 18:03:26 GMT",
+      "etag": "\"1793300531\"",
+      "lastModified": "Thu, 29 Oct 2026 19:02:11 GMT",
       "lastEnrichedAt": "2026-10-29T13:24:50Z"
     },
     "dais": {
@@ -48,8 +48,8 @@
       "lastEnrichedAt": "2026-10-28T19:22:15Z"
     },
     "materials": {
-      "etag": "\"1793295666\"",
-      "lastModified": "Thu, 29 Oct 2026 17:41:06 GMT",
+      "etag": "\"1793300532\"",
+      "lastModified": "Thu, 29 Oct 2026 19:02:12 GMT",
       "lastEnrichedAt": "2026-10-28T19:22:15Z"
     },
     "nam": {
