@@ -1,57 +1,5 @@
 [
   {
-    "id": "dais:ps_events:4346:delta:0",
-    "guid": "ps_events:4346:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-28T20:30:00Z",
-    "endsAt": "2026-09-28T22:00:00Z",
-    "startTime": "2026-09-28T16:30:00",
-    "endTime": "2026-09-28T18:00:00",
-    "timezone": "America/New_York",
-    "title": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Natural and Artificial Minds",
-    "tags": [
-      "ai"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Natural and Artificial Minds"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Friend",
-      "id": "",
-      "detail": "006"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/emergent-symbol-processing-mechanistic-theory-human-cognition",
-    "content": "Speaker: Taylor Webb, Department of Psychology, Princeton UniversityTalk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open",
-    "rawEventDetails": "Details Event Description Speaker: Taylor Webb, Department of Psychology, Princeton University Talk Abstract: There is a longstanding tension in cognitive science between theories that emphasize the structured, symbolic aspects of the mind \u2014 drawing an analogy to traditional computer programs \u2014 and the emergent properties of cognition that seem to be better explained by neural networks. The rise of AI systems that are powered by neural networks, but that display many of the properties associated with symbolic cognitive models (e.g., compositionality, reasoning) has reinvigorated this debate, while leaving open the question of how these systems achieve the capabilities that were thought to require innate symbol processing, and what this says about the mechanistic basis of those capabilities in human cognition. In this talk, I will argue that symbol-like behavioral capabilities in modern neural networks are supported by an emergent form of symbolic computation, and illustrate how this is implemented by their internal mechanisms. I will also discuss the factors that lead to the emergence of these mechanisms, and will consider a case that illustrates how symbolic mechanisms are not necessarily human-like. Overall, these results suggest that connectionist principles may be sufficient to account for the symbol-like aspects of human cognition, while also illustrating how symbolic cognitive models can be translated into mechanistic theories.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Emergent Symbol Processing as a Mechanistic Theory of Human Cognition",
-    "locationRaw": "Friend 006",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "dais:ps_events:4546:delta:0",
     "guid": "ps_events:4546:delta:0",
     "sources": [
@@ -1610,6 +1558,54 @@
       "dais:summary-is-title"
     ],
     "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4756:delta:0",
+    "guid": "ps_events:4756:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-20T17:00:00Z",
+    "endsAt": "2026-11-20T21:00:00Z",
+    "startTime": "2026-11-20T12:00:00",
+    "endTime": "2026-11-20T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Collab and Connect",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/collab-and-connect",
+    "content": "Join DaIS on Friday, November 20th, from 12\u20134 PM for a Collab and Connect event! This gathering brings students and researchers together to connect, socialize, exchange ideas, and explore opportunities for research collaboration.This event will include:Spotlight Research Talks \u2013 brief presentations highlighting research, projects, or ideas. Brainstorming / Round Table Discussions \u2013 small, informal",
+    "rawEventDetails": "Details Event Description Join DaIS on Friday, November 20th, from 12\u20134 PM for a Collab and Connect event! This gathering brings students and researchers together to connect, socialize, exchange ideas, and explore opportunities for research collaboration. This event will include: Spotlight Research Talks \u2013 brief presentations highlighting research, projects, or ideas. Brainstorming / Round Table Discussions \u2013 small, informal sessions where participants lead conversations on AI-related topics they\u2019re passionate about. Lunch, games and more! If you are interested, we are actively seeking volunteer presenters and discussion leaders to help shape the day\u2019s sessions. Please take a moment to fill out our quick volunteer form . Your participation will help make this event a dynamic and engaging experience for everyone.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Collab and Connect",
+    "locationRaw": "",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "declined",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
