@@ -5880,6 +5880,58 @@
     "mappingConflict": false
   },
   {
+    "id": "materials:ps_events:4271:delta:0",
+    "guid": "ps_events:4271:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-06T20:00:00Z",
+    "endsAt": "2026-11-06T21:00:00Z",
+    "startTime": "2026-11-06T15:00:00",
+    "endTime": "2026-11-06T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Dr. David Cahill, University of Illinois Urbana-Champaign",
+    "speakers": [
+      {
+        "name": "MAE Departmental Seminars",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "MAE Departmental Seminars",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://materials.princeton.edu/events/2026/dr-david-cahill-university-illinois-urbana-champaign",
+    "content": "Current Understanding and Unsolved Problems in the Thermal Conductivity of MaterialsAbstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of",
+    "rawEventDetails": "Details Event Description Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials Abstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and high accuracy. Theory and computation are playing an increasingly importantrole in guiding and interpreting experiments. In this lecture, I will highlight recent discoveries of extremes of thermal conductivity of materials using examples from hard and soft matter (cubic boron arsenide, ultra-high molecular weight polyethylene, disordered layered 2D materials, functionalized fullerenes) and our work on expanding the upper and lower limits of the thermal conductivity ofcommon polymers (polyurethanes, epoxies, polyesters, and polyimides). Bio : Dr. David Cahill is the Grainger Distinguished Chair in Engineering, and Professor of Materials Science and Engineering at the University of Illinois Urbana-Champaign. He served as department head from 2010 to 2018. His research program advances physical insights on thermal transport at the nanoscale; extremes of low and high thermal conductivity in polymers; thermal metrology for microelectronics;the thermal science of electrochemical cells and battery materials; and materials for quantum computing. Cahill received the 2018 Innovation in Materials Characterization Award of the Materials Research Society, the 2015 Touloukian Award of the American Society of Mechanical Engineers, and the Klemens Award from the International Conference on Phonon Scattering in Condensed Matter. He is a fellow of the MRS, the American Physical Society, the AAAS, and is an elected member of the American Academy of Arts and Sciences.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Dr. David Cahill, University of Illinois Urbana-Champaign",
+    "locationRaw": "",
+    "mappingRules": [
+      "materials:title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4746:delta:0",
     "guid": "ps_events:4746:delta:0",
     "sources": [
