@@ -2076,6 +2076,62 @@
     "mappingConflict": false
   },
   {
+    "id": "mae:ps_events:4926:delta:0",
+    "guid": "ps_events:4926:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-06T20:00:00Z",
+    "endsAt": "2026-11-06T21:00:00Z",
+    "startTime": "2026-11-06T15:00:00",
+    "endTime": "2026-11-06T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials",
+    "speakers": [
+      {
+        "name": "Dr. David Cahill",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      }
+    ],
+    "speaker": "Dr. David Cahill, University of Illinois Urbana-Champaign",
+    "affiliation": "University of Illinois Urbana-Champaign",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/current-understanding-and-unsolved-problems-thermal-conductivity-materials-0",
+    "content": "Abstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can",
+    "rawEventDetails": "Details Event Description Abstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and high accuracy. Theory and computation are playing an increasingly important role in guiding and interpreting experiments. In this lecture, I will highlight recent discoveries of extremes of thermal conductivity of materials using examples from hard and soft matter (cubic boron arsenide, ultra-high molecular weight polyethylene, disordered layered 2D materials, functionalized fullerenes) and our work on expanding the upper and lower limits of the thermal conductivity of common polymers (polyurethanes, epoxies, polyesters, and polyimides). Bio: Dr. David Cahill is the Grainger Distinguished Chair in Engineering, and Professor of Materials Science and Engineering at the University of Illinois Urbana-Champaign. He served as department head from 2010 to 2018. His research program advances physical insights on thermal transport at the nanoscale; extremes of low and high thermal conductivity in polymers; thermal metrology for microelectronics; the thermal science of electrochemical cells and battery materials; and materials for quantum computing. Cahill received the 2018 Innovation in Materials Characterization Award of the Materials Research Society, the 2015 Touloukian Award of the American Society of Mechanical Engineers, and the Klemens Award from the International Conference on Phonon Scattering in Condensed Matter. He is a fellow of the MRS, the American Physical Society, the AAAS, and is an elected member of the American Academy of Arts and Sciences. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3816:delta:0",
     "guid": "ps_events:3816:delta:0",
     "sources": [
@@ -2497,6 +2553,62 @@
     },
     "urlRef": "https://mae.princeton.edu/events/2026/distributed-optimization-learning-and-coordination-aerospace-autonomy",
     "content": "Abstract:Learning and task coordination for multi-agent systems can be generally viewed to characterize autonomy as overarching system-level properties. The complex interplay between trust and information privacy for onboard decision support systems introduces new vulnerabilities that are extremely hard to predict with most existing guidance and control tools. In this seminar, we review some recent advances in regret-free learning algorithms, trust, and information-awareness metrics for distributed motion planning algorithms. The concept of \u201cmulti-thread\u201d learning and composite",
+    "rawEventDetails": "Details Event Description Abstract: Learning and task coordination for multi-agent systems can be generally viewed to characterize autonomy as overarching system-level properties. The complex interplay between trust and information privacy for onboard decision support systems introduces new vulnerabilities that are extremely hard to predict with most existing guidance and control tools. In this seminar, we review some recent advances in regret-free learning algorithms, trust, and information-awareness metrics for distributed motion planning algorithms. The concept of \u201cmulti-thread\u201d learning and composite adaptation is realized through certain new metrics that are inspired by cognitive dissonance from social psychology. These technical foundations will be highlighted through aerospace applications with active learning inside dynamic and uncertain environments. Bio: Dr. Maruthi Akella is a professor in Aerospace Engineering and Engineering Mechanics at UT Austin where he holds the Cockrell Family Endowed Chair in Engineering. His research encompasses coordinated systems, learning, adaptation, and vision-based sensing. His research group contributed the onboard guidance algorithm for the Intuitive Machines IM-1 mission \u2013 the first U.S. moon landing in more than 50 years since the Apollo era. The major impacts of Dr. Akella\u2019s work have been recognized through the AIAA Mechanics and Control of Flight Award, the AAS Dirk Brouwer Award, the IEEE-CSS Award for Excellence in Aerospace Control, the Judith Resnik Space Award from the IEEE Aerospace and Electronic Systems Society, and the AIAA von K\u00e1rm\u00e1n Lecture Award in Astronautics. In October 2024, the International Astronomical Union designated asteroid number 5376 \u2013 a nearly 5-mile diameter-sized minor planet from the main asteroid belt as \u201cMaruthiakella\u201d honoring Dr. Akella\u2019s contributions to many successful applications in astrodynamics. Dr. Akella is Editor-in Chief for the Journal of the Astronautical Sciences, a Fellow of the AIAA, IEEE, and AAS, and holds the Academician rank with the International Academy of Astronautics. Event Category MAE Departmental Seminars",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Distributed Optimization, Learning, and Coordination for Aerospace Autonomy",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:4931:delta:0",
+    "guid": "ps_events:4931:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T20:00:00Z",
+    "endsAt": "2026-11-13T21:00:00Z",
+    "startTime": "2026-11-13T15:00:00",
+    "endTime": "2026-11-13T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Distributed Optimization, Learning, and Coordination for Aerospace Autonomy",
+    "speakers": [
+      {
+        "name": "Dr. Maruthi Akella, UT Austin",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Dr. Maruthi Akella, UT Austin",
+    "affiliation": "",
+    "series": "MAE Departmental Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "MAE Departmental Seminars"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/distributed-optimization-learning-and-coordination-aerospace-autonomy-0",
+    "content": "Abstract: Learning and task coordination for multi-agent systems can be generally viewed to characterize autonomy as overarching system-level properties. The complex interplay between trust and information privacy for onboard decision support systems introduces new vulnerabilities that are extremely hard to predict with most existing guidance and control tools. In this seminar, we review some recent advances in regret-free learning algorithms, trust, and information-awareness metrics for distributed motion planning algorithms. The concept of \u201cmulti-thread\u201d learning and composite",
     "rawEventDetails": "Details Event Description Abstract: Learning and task coordination for multi-agent systems can be generally viewed to characterize autonomy as overarching system-level properties. The complex interplay between trust and information privacy for onboard decision support systems introduces new vulnerabilities that are extremely hard to predict with most existing guidance and control tools. In this seminar, we review some recent advances in regret-free learning algorithms, trust, and information-awareness metrics for distributed motion planning algorithms. The concept of \u201cmulti-thread\u201d learning and composite adaptation is realized through certain new metrics that are inspired by cognitive dissonance from social psychology. These technical foundations will be highlighted through aerospace applications with active learning inside dynamic and uncertain environments. Bio: Dr. Maruthi Akella is a professor in Aerospace Engineering and Engineering Mechanics at UT Austin where he holds the Cockrell Family Endowed Chair in Engineering. His research encompasses coordinated systems, learning, adaptation, and vision-based sensing. His research group contributed the onboard guidance algorithm for the Intuitive Machines IM-1 mission \u2013 the first U.S. moon landing in more than 50 years since the Apollo era. The major impacts of Dr. Akella\u2019s work have been recognized through the AIAA Mechanics and Control of Flight Award, the AAS Dirk Brouwer Award, the IEEE-CSS Award for Excellence in Aerospace Control, the Judith Resnik Space Award from the IEEE Aerospace and Electronic Systems Society, and the AIAA von K\u00e1rm\u00e1n Lecture Award in Astronautics. In October 2024, the International Astronomical Union designated asteroid number 5376 \u2013 a nearly 5-mile diameter-sized minor planet from the main asteroid belt as \u201cMaruthiakella\u201d honoring Dr. Akella\u2019s contributions to many successful applications in astrodynamics. Dr. Akella is Editor-in Chief for the Journal of the Astronautical Sciences, a Fellow of the AIAA, IEEE, and AAS, and holds the Academician rank with the International Academy of Astronautics. Event Category MAE Departmental Seminars",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
