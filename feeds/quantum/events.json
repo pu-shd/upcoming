@@ -400,14 +400,14 @@
     "startTime": "2026-11-06T12:00:00",
     "endTime": "2026-11-06T14:00:00",
     "timezone": "America/New_York",
-    "title": "A Quantum Group Meeting Talk by Laura Futamura, Bakr Group",
+    "title": "Static-Field Shielding of Bosonic Molecules: Evaporation to Degeneracy and Self",
     "speakers": [
       {
-        "name": "Laura Futamura",
+        "name": "Bound Droplets - Laura Futamura",
         "affiliation": "Bakr Group"
       }
     ],
-    "speaker": "Laura Futamura, Bakr Group",
+    "speaker": "Bound Droplets - Laura Futamura, Bakr Group",
     "affiliation": "Bakr Group",
     "series": "Quantum Group Meeting",
     "tags": [
@@ -425,23 +425,23 @@
       "id": "",
       "detail": "J401"
     },
-    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-laura-futamura-bakr-group",
-    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-static-field-shielding-bosonic-molecules-evaporation-degeneracy-and",
+    "content": "Title: Static-Field Shielding of Bosonic Molecules: Evaporation to Degeneracy and Self-Bound DropletsAbstract: The strong, tunable dipolar interactions of ultracold molecules make them a powerful platform for quantum many-body physics, but reaching degeneracy by evaporative cooling requires suppressing inelastic collisions. Microwave collisional shielding has enabled the preparation of degenerate Fermi gases and Bose-Einstein condensates of polar molecules, whereas static electric field shielding has been limited to fermionic species, which are less",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Quantum Group Meeting: TBD - Laura Futamura (Bakr Group)",
+    "summaryRaw": "Quantum Group Meeting: Static-Field Shielding of Bosonic Molecules: Evaporation to Degeneracy and Self-Bound Droplets - Laura Futamura (Bakr Group)",
     "locationRaw": "EQuad J401",
     "mappingRules": [
       "quantum:series-title-dash-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
