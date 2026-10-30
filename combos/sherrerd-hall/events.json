@@ -1,54 +1,5 @@
 [
   {
-    "id": "ai:ps_events:4061:delta:0",
-    "guid": "ps_events:4061:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-29T20:30:00Z",
-    "endsAt": "2026-09-29T21:30:00Z",
-    "startTime": "2026-09-29T16:30:00",
-    "endTime": "2026-09-29T17:30:00",
-    "timezone": "America/New_York",
-    "title": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [
-      "listing"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "101"
-    },
-    "urlRef": "https://ai.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-2026-colloquium",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
-    "locationRaw": "101 Sherrerd Hall",
-    "mappingRules": [
-      "ai:series-listing"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "citp:ps_events:5261:delta:3",
     "guid": "ps_events:5261:delta:3",
     "sources": [
@@ -755,6 +706,101 @@
     "locationRaw": "Sherrerd Hall 008",
     "mappingRules": [
       "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4276:delta:0",
+    "guid": "ps_events:4276:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-30T16:00:00Z",
+    "endsAt": "2026-10-30T17:00:00Z",
+    "startTime": "2026-10-30T12:00:00",
+    "endTime": "2026-10-30T13:00:00",
+    "timezone": "America/New_York",
+    "title": "Efficient Retrieval of Influential LLM Training Examples",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/efficient-retrieval-influential-llm-training-examples",
+    "content": "Abstract: Attributing LLM outputs to the training examples that causally influence their behavior can give us visibility into LLMs\u2019 opaque reasoning and help us understand subtle persona changes such as emergent misaligment. Unfortunately, finding training data attribution algorithms which are both accurate and scalable has remained an elusive goal. I argue for separately studying an Estimation Problem (accurately estimating the causal effect of a training example) and a Retrieval Problem (efficiently finding the highest-scoring training examples). I then present a generic",
+    "rawEventDetails": "Details Event Description Abstract: Attributing LLM outputs to the training examples that causally influence their behavior can give us visibility into LLMs\u2019 opaque reasoning and help us understand subtle persona changes such as emergent misaligment. Unfortunately, finding training data attribution algorithms which are both accurate and scalable has remained an elusive goal. I argue for separately studying an Estimation Problem (accurately estimating the causal effect of a training example) and a Retrieval Problem (efficiently finding the highest-scoring training examples). I then present a generic retrieval method for influential sequences which can be paired with a wide range of influence estimators (including EKFAC) and for which one can obtain high confidence about recall. I discuss how causal training data attribution can be used as a tool to assure LLM alignment. Bio: Roger is an Associate Professor of Computer Science at the University of Toronto, focusing on machine learning. Previously, he was a postdoc at the University of Toronto, after having received a Ph.D. at MIT, studying under Bill Freeman and Josh Tenenbaum. Before that, Roger did his undergraduate degree in symbolic systems and MS in computer science at Stanford University. Roger is a co-creator of Metacademy, a web site which uses a dependency graph of concepts to help you formulate personalized learning plans for machine learning and related topics.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Efficient Retrieval of Influential LLM Training Examples",
+    "locationRaw": "Sherrerd Hall 101",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4761:delta:0",
+    "guid": "ps_events:4761:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-10-30T16:00:00Z",
+    "endsAt": "2026-10-30T17:00:00Z",
+    "startTime": "2026-10-30T12:00:00",
+    "endTime": "2026-10-30T13:00:00",
+    "timezone": "America/New_York",
+    "title": "Efficient Retrieval of Influential LLM Training Examples",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/efficient-retrieval-influential-llm-training-examples",
+    "content": "Abstract: Attributing LLM outputs to the training examples that causally influence their behavior can give us visibility into LLMs\u2019 opaque reasoning and help us understand subtle persona changes such as emergent misaligment. Unfortunately, finding training data attribution algorithms which are both accurate and scalable has remained an elusive goal. I argue for separately studying an Estimation Problem (accurately estimating the causal effect of a training example) and a Retrieval Problem (efficiently finding the highest-scoring training examples). I then present a generic",
+    "rawEventDetails": "Details Event Description Abstract: Attributing LLM outputs to the training examples that causally influence their behavior can give us visibility into LLMs\u2019 opaque reasoning and help us understand subtle persona changes such as emergent misaligment. Unfortunately, finding training data attribution algorithms which are both accurate and scalable has remained an elusive goal. I argue for separately studying an Estimation Problem (accurately estimating the causal effect of a training example) and a Retrieval Problem (efficiently finding the highest-scoring training examples). I then present a generic retrieval method for influential sequences which can be paired with a wide range of influence estimators (including EKFAC) and for which one can obtain high confidence about recall. I discuss how causal training data attribution can be used as a tool to assure LLM alignment. Bio: Roger is an Associate Professor of Computer Science at the University of Toronto, focusing on machine learning. Previously, he was a postdoc at the University of Toronto, after having received a Ph.D. at MIT, studying under Bill Freeman and Josh Tenenbaum. Before that, Roger did his undergraduate degree in symbolic systems and MS in computer science at Stanford University. Roger is a co-creator of Metacademy, a web site which uses a dependency graph of concepts to help you formulate personalized learning plans for machine learning and related topics.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Efficient Retrieval of Influential LLM Training Examples",
+    "locationRaw": "Sherrerd Hall 101",
+    "mappingRules": [
+      "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
