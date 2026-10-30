@@ -1754,6 +1754,62 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2916:delta:0",
+    "guid": "ps_events:2916:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T21:00:00Z",
+    "endsAt": "2026-11-19T22:00:00Z",
+    "startTime": "2026-11-19T16:00:00",
+    "endTime": "2026-11-19T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Molecular Intelligence",
+    "speakers": [
+      {
+        "name": "Lulu Qian",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Lulu Qian",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/molecular-intelligence",
+    "content": "Intelligence has traditionally been discussed at the level of organisms and, increasingly, cells. Yet rudimentary forms of intelligence could exist at the molecular level\u2014not in individual molecules, but in systems of molecules that interact, change, remember, and persist together.Can a molecular system recognize high-dimensional patterns? Can it observe molecular examples of stimuli paired with desired responses, generalize learned patterns, and respond appropriately to new variations of the stimuli on its own? Can sophisticated information processing and learning arise from pure",
+    "rawEventDetails": "Speaker Lulu Qian Affiliation California Institute of Technology Details Event Description Intelligence has traditionally been discussed at the level of organisms and, increasingly, cells. Yet rudimentary forms of intelligence could exist at the molecular level\u2014not in individual molecules, but in systems of molecules that interact, change, remember, and persist together. Can a molecular system recognize high-dimensional patterns? Can it observe molecular examples of stimuli paired with desired responses, generalize learned patterns, and respond appropriately to new variations of the stimuli on its own? Can sophisticated information processing and learning arise from pure nucleic-acid systems, without complex proteins or enzymatic pathways? Can long-term learning and evolutionary behavior be powered by an environmental energy source, using a rudimentary metabolism far simpler than modern biology? In this talk, I will provide concrete evidence for some aspects of these questions and speculate on the others. Light Refreshments will be available 15 minutes prior to the start of the seminar. Sponsor Omenn-Darling Bioengineering Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Molecular Intelligence",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4936:delta:0",
     "guid": "ps_events:4936:delta:0",
     "sources": [

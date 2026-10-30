@@ -5725,7 +5725,7 @@
     "startTime": "2026-11-06T15:00:00",
     "endTime": "2026-11-06T16:00:00",
     "timezone": "America/New_York",
-    "title": "Dr. David Cahill, University of Illinois Urbana-Champaign",
+    "title": "MAE Departmental Seminars, Dr. David Cahill, University of Illinois Urbana-Champaign",
     "speakers": [
       {
         "name": "MAE Departmental Seminars",
@@ -5746,7 +5746,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://materials.princeton.edu/events/2026/dr-david-cahill-university-illinois-urbana-champaign",
+    "urlRef": "https://materials.princeton.edu/events/2026/mae-departmental-seminars-dr-david-cahill-university-illinois-urbana-champaign",
     "content": "Current Understanding and Unsolved Problems in the Thermal Conductivity of MaterialsAbstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of",
     "rawEventDetails": "Details Event Description Current Understanding and Unsolved Problems in the Thermal Conductivity of Materials Abstract: Thermal conductivity is a basic and familiar property of materials: silver spoons conduct heat well and plastic does not. High thermal conductivity is desirable for heat exchangers and thermal management while low thermal conductivity is needed for thermal insulation. In recent years, the combined efforts of materials scientists, engineers, physicists, and chemists have succeeded in pushing-back long-established limits in the thermal conductivity of materials. Advances in experimental methods have expanded the range of materials that can be studied with high throughput and high accuracy. Theory and computation are playing an increasingly importantrole in guiding and interpreting experiments. In this lecture, I will highlight recent discoveries of extremes of thermal conductivity of materials using examples from hard and soft matter (cubic boron arsenide, ultra-high molecular weight polyethylene, disordered layered 2D materials, functionalized fullerenes) and our work on expanding the upper and lower limits of the thermal conductivity ofcommon polymers (polyurethanes, epoxies, polyesters, and polyimides). Bio : Dr. David Cahill is the Grainger Distinguished Chair in Engineering, and Professor of Materials Science and Engineering at the University of Illinois Urbana-Champaign. He served as department head from 2010 to 2018. His research program advances physical insights on thermal transport at the nanoscale; extremes of low and high thermal conductivity in polymers; thermal metrology for microelectronics;the thermal science of electrochemical cells and battery materials; and materials for quantum computing. Cahill received the 2018 Innovation in Materials Characterization Award of the Materials Research Society, the 2015 Touloukian Award of the American Society of Mechanical Engineers, and the Klemens Award from the International Conference on Phonon Scattering in Condensed Matter. He is a fellow of the MRS, the American Physical Society, the AAAS, and is an elected member of the American Academy of Arts and Sciences.",
     "rawExtractAbstract": "",
@@ -5754,7 +5754,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Dr. David Cahill, University of Illinois Urbana-Champaign",
+    "summaryRaw": "MAE Departmental Seminars, Dr. David Cahill, University of Illinois Urbana-Champaign",
     "locationRaw": "",
     "mappingRules": [
       "materials:title"
@@ -7456,6 +7456,62 @@
     "locationRaw": "Sherrerd Hall 008",
     "mappingRules": [
       "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2916:delta:0",
+    "guid": "ps_events:2916:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T21:00:00Z",
+    "endsAt": "2026-11-19T22:00:00Z",
+    "startTime": "2026-11-19T16:00:00",
+    "endTime": "2026-11-19T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Molecular Intelligence",
+    "speakers": [
+      {
+        "name": "Lulu Qian",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Lulu Qian",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/molecular-intelligence",
+    "content": "Intelligence has traditionally been discussed at the level of organisms and, increasingly, cells. Yet rudimentary forms of intelligence could exist at the molecular level\u2014not in individual molecules, but in systems of molecules that interact, change, remember, and persist together.Can a molecular system recognize high-dimensional patterns? Can it observe molecular examples of stimuli paired with desired responses, generalize learned patterns, and respond appropriately to new variations of the stimuli on its own? Can sophisticated information processing and learning arise from pure",
+    "rawEventDetails": "Speaker Lulu Qian Affiliation California Institute of Technology Details Event Description Intelligence has traditionally been discussed at the level of organisms and, increasingly, cells. Yet rudimentary forms of intelligence could exist at the molecular level\u2014not in individual molecules, but in systems of molecules that interact, change, remember, and persist together. Can a molecular system recognize high-dimensional patterns? Can it observe molecular examples of stimuli paired with desired responses, generalize learned patterns, and respond appropriately to new variations of the stimuli on its own? Can sophisticated information processing and learning arise from pure nucleic-acid systems, without complex proteins or enzymatic pathways? Can long-term learning and evolutionary behavior be powered by an environmental energy source, using a rudimentary metabolism far simpler than modern biology? In this talk, I will provide concrete evidence for some aspects of these questions and speculate on the others. Light Refreshments will be available 15 minutes prior to the start of the seminar. Sponsor Omenn-Darling Bioengineering Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Molecular Intelligence",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
