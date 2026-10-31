@@ -1,6 +1,6 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-10-31T01:01:25Z",
+  "generatedAt": "2026-10-31T02:01:53Z",
   "sources": {
     "ai": {
       "etag": "\"1793379737\"",
