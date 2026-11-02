@@ -56,101 +56,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ai:ps_events:4136:delta:0",
-    "guid": "ps_events:4136:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-30T17:00:00Z",
-    "endsAt": "2026-09-30T19:45:00Z",
-    "startTime": "2026-09-30T13:00:00",
-    "endTime": "2026-09-30T15:45:00",
-    "timezone": "America/New_York",
-    "title": "DaIS Launch & Faculty Research Collaboration Symposium",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Frist Health Center - A78B McLain Pavilion",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://ai.princeton.edu/events/2026/dais-launch-faculty-research-collaboration-symposium",
-    "content": "",
-    "rawEventDetails": "Details Event Description Join us for the official launch of Princeton\u2019s Data and Intelligent Systems (DaIS), an initiative dedicated to supporting and expanding AI, Data Science, and Statistics research and education across the university. This event will introduce the DaIS vision and host a collaborative faculty symposium designed to foster interdisciplinary research partnerships. Event Details Date: September 30, 2026 Location: Frist Health Center - A78B McLain Pavilion The Launch: Introducing DaIS The event begins with a university-wide introduction to DaIS. This session will feature: Provost Jen Rexford to provide opening remarks. Tom Griffiths, Director of DaIS, will share insights on Princeton AI. Arthur Spirling, Director of DaIS, will share insights on Princeton Statistics and Data Science, and the education efforts of DaIS Faculty Research Collaboration Symposium Following the introductory remarks, the Faculty Research Collaboration Symposium will commence. This portion of the event is specifically for faculty members to present their research ideas and seek guidance and feedback from across disciplines on how AI and data science can support their work. The aim is to help create new productive collaborations among colleagues across the university. In addition, faculty previously in receipt of DaIS seed grants will present work that flowed from those efforts. Reception The conclusion of the event invites all to a light reception to mingle and connect with peers.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "DaIS Launch & Faculty Research Collaboration Symposium",
-    "locationRaw": "Frist Health Center - A78B McLain Pavilion",
-    "mappingRules": [
-      "ai:title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "dais:ps_events:4301:delta:0",
-    "guid": "ps_events:4301:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-30T17:00:00Z",
-    "endsAt": "2026-09-30T19:45:00Z",
-    "startTime": "2026-09-30T13:00:00",
-    "endTime": "2026-09-30T15:45:00",
-    "timezone": "America/New_York",
-    "title": "DaIS Launch & Faculty Research Collaboration Symposium",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Frist Health Center - A78B McLain Pavilion",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/dais-launch-faculty-research-collaboration-symposium",
-    "content": "Join us for the official launch of Princeton\u2019s Data and Intelligent Systems (DaIS), an initiative dedicated to supporting and expanding AI, Data Science, and Statistics research and education across the university. This event will introduce the DaIS vision and host a collaborative faculty symposium designed to foster interdisciplinary research partnerships.Event DetailsDate: September 30, 2026Location:",
-    "rawEventDetails": "Details Event Description Join us for the official launch of Princeton\u2019s Data and Intelligent Systems (DaIS), an initiative dedicated to supporting and expanding AI, Data Science, and Statistics research and education across the university. This event will introduce the DaIS vision and host a collaborative faculty symposium designed to foster interdisciplinary research partnerships. Event Details Date: September 30, 2026 Location: Frist Health Center - A78B McLain Pavilion The Launch: Introducing DaIS The event begins with a university-wide introduction to DaIS. This session will feature: Provost Jen Rexford to provide opening remarks. Tom Griffiths, Director of DaIS, will share insights on Princeton AI. Arthur Spirling, Director of DaIS, will share insights on Princeton Statistics and Data Science, and the education efforts of DaIS Faculty Research Collaboration Symposium Following the introductory remarks, the Faculty Research Collaboration Symposium will commence. This portion of the event is specifically for faculty members to present their research ideas and seek guidance and feedback from across disciplines on how AI and data science can support their work. The aim is to help create new productive collaborations among colleagues across the university. In addition, faculty previously in receipt of DaIS seed grants will present work that flowed from those efforts. Reception The conclusion of the event invites all to a light reception to mingle and connect with peers.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "DaIS Launch & Faculty Research Collaboration Symposium",
-    "locationRaw": "Frist Health Center - A78B McLain Pavilion",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cbe:ps_events:5296:delta:0",
     "guid": "ps_events:5296:delta:0",
     "sources": [
@@ -194,196 +99,6 @@
     "locationRaw": "F204 SEAS-CBE",
     "mappingRules": [
       "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "ai:ps_events:4156:delta:0",
-    "guid": "ps_events:4156:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-01T04:00:00Z",
-    "endsAt": "2026-10-02T04:00:00Z",
-    "startTime": "2026-10-01T00:00:00",
-    "endTime": "2026-10-02T00:00:00",
-    "timezone": "America/New_York",
-    "title": "Statistically-Grounded Methods for Meaningful LLM Evaluation",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://ai.princeton.edu/events/2026/statistically-grounded-methods-meaningful-llm-evaluation",
-    "content": "Video",
-    "rawEventDetails": "Details Event Description Video Abstract: In cognitive science, the well-established task of statistical learning, i.e., picking up hidden regularities in sequences, has been linked to neural plasticity in humans. However, we found that LLMs are able to learn a hidden automaton structure entirely in context, simply by feeding them valid sequences from the automaton, and they learn it even faster when the structure reappears with new vocabulary. Building on this, I present Agentic Automata Learning, a framework to formalize what agents can infer from an environment. The agent's task is to identify a hidden automaton by querying an oracle. The framework generates instances of controllable difficulty and tests planning, hypothesis formation and memory, with formal efficiency metrics. We find that frontier models struggle as automata grow, their queries become less informative over time, and they fail at both planning and reasoning from evidence. Providing the agent with stateful scaffolding helps but doesn't close the gap. These results point to inferring structure from interaction as a key open challenge for building agents that can operate in unfamiliar environments. Bio: Gili Lior is a Ph.D. candidate in Natural Language Processing at The Hebrew University of Jerusalem, advised by Prof. Gabriel Stanovsky. Her work has dealt with cognitively-motivated analysis and comparison between humans and LLMs, and her current research focuses on human-motivated LLM evaluations, leveraging statistical models to ensure that metrics reflect what users actually care about. She is also a research intern at Google Research working on evaluations of long horizon agentic tasks, and has previously interned at IBM Research and the Allen Institute for AI (Ai2). She is a recipient of the Council for Higher Education's fellowship program for excellent female Ph.D. students in hi-tech fields. Sponsor Event organized by PLI Special Event Seminar Lunch Series",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Statistically-Grounded Methods for Meaningful LLM Evaluation",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "ai:title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "ai:ps_events:4161:delta:0",
-    "guid": "ps_events:4161:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-01T04:00:00Z",
-    "endsAt": "2026-10-02T04:00:00Z",
-    "startTime": "2026-10-01T00:00:00",
-    "endTime": "2026-10-02T00:00:00",
-    "timezone": "America/New_York",
-    "title": "Securing LLMs Against Prompt Injection for Agentic Applications",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://ai.princeton.edu/events/2026/securing-llms-against-prompt-injection-agentic-applications",
-    "content": "Video",
-    "rawEventDetails": "Details Event Description Video Abstract : Prompt injection is widely recognized as a major security threat to AI agents, in which external untrusted data (websites, documents, and emails) may contain an injected prompt (\u201cIgnore previous instructions and \u2026\u201d) that arbitrarily manipulates an agent\u2019s operations. The best-defended existing LLMs still suffer from near-100% attack success rates (ASRs) under adaptive prompt-injection attacks. In this talk, I will discuss our latest efforts, SecPO and SecOPD, to fine-tune LLMs with an order-of-magnitude lower ASRs (0% -- 13.3%) against the current strongest prompt-injection attacks. Specifically, we (1) separate the trusted prompt and untrusted data into two input channels; (2) simulate strong adaptively attacked training samples for the model to learn robustness from; and (3) design the loss according to a principle that approximates a (nonexistent) secure-and-powerful LLM. Without a noticeable utility drop, our defended Qwen3.6-27B achieves security that generalizes to realistic agentic tasks with multiple trusted and untrusted messages. We fully open our training set with optimized injections, code for our recipe, and the defended model, which is more robust than industry-scale adversarially-trained GPT-5.5 in agentic tasks. Bio : Sizhe Chen is a Computer Science Ph.D. candidate at UC Berkeley\u2019s Berkeley AI Research (BAIR), working with Prof. David Wagner. He studies real-world AI security problems with general and principled solutions. He developed StruQ, Meta-SecAlign, SecPO, and SecOPD, the most robust open LLMs against adaptive prompt injection attacks. His research has been supported by selective industry fundings, including NVIDIA Fellowship, Meta-BAIR Commons, and Google-BAIR Commons. Previously, he obtained an M.Eng. and a B.Eng. from Shanghai Jiao Tong University. https://sizhe-chen.github.io Sponsor Event organized by PLI Special Event Seminar Lunch Series",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Securing LLMs Against Prompt Injection for Agentic Applications",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "ai:title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "dais:ps_events:4626:delta:0",
-    "guid": "ps_events:4626:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-01T04:00:00Z",
-    "endsAt": "2026-10-02T04:00:00Z",
-    "startTime": "2026-10-01T00:00:00",
-    "endTime": "2026-10-02T00:00:00",
-    "timezone": "America/New_York",
-    "title": "Statistically-Grounded Methods for Meaningful LLM Evaluation",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/statistically-grounded-methods-meaningful-llm-evaluation",
-    "content": "Video",
-    "rawEventDetails": "Details Event Description Video Abstract: In cognitive science, the well-established task of statistical learning, i.e., picking up hidden regularities in sequences, has been linked to neural plasticity in humans. However, we found that LLMs are able to learn a hidden automaton structure entirely in context, simply by feeding them valid sequences from the automaton, and they learn it even faster when the structure reappears with new vocabulary. Building on this, I present Agentic Automata Learning, a framework to formalize what agents can infer from an environment. The agent's task is to identify a hidden automaton by querying an oracle. The framework generates instances of controllable difficulty and tests planning, hypothesis formation and memory, with formal efficiency metrics. We find that frontier models struggle as automata grow, their queries become less informative over time, and they fail at both planning and reasoning from evidence. Providing the agent with stateful scaffolding helps but doesn't close the gap. These results point to inferring structure from interaction as a key open challenge for building agents that can operate in unfamiliar environments. Bio: Gili Lior is a Ph.D. candidate in Natural Language Processing at The Hebrew University of Jerusalem, advised by Prof. Gabriel Stanovsky. Her work has dealt with cognitively-motivated analysis and comparison between humans and LLMs, and her current research focuses on human-motivated LLM evaluations, leveraging statistical models to ensure that metrics reflect what users actually care about. She is also a research intern at Google Research working on evaluations of long horizon agentic tasks, and has previously interned at IBM Research and the Allen Institute for AI (Ai2). She is a recipient of the Council for Higher Education's fellowship program for excellent female Ph.D. students in hi-tech fields. Sponsor Event organized by PLI Special Event Seminar Lunch Series",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Statistically-Grounded Methods for Meaningful LLM Evaluation",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "dais:ps_events:4631:delta:0",
-    "guid": "ps_events:4631:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-01T04:00:00Z",
-    "endsAt": "2026-10-02T04:00:00Z",
-    "startTime": "2026-10-01T00:00:00",
-    "endTime": "2026-10-02T00:00:00",
-    "timezone": "America/New_York",
-    "title": "Securing LLMs Against Prompt Injection for Agentic Applications",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/securing-llms-against-prompt-injection-agentic-applications",
-    "content": "Video",
-    "rawEventDetails": "Details Event Description Video Abstract : Prompt injection is widely recognized as a major security threat to AI agents, in which external untrusted data (websites, documents, and emails) may contain an injected prompt (\u201cIgnore previous instructions and \u2026\u201d) that arbitrarily manipulates an agent\u2019s operations. The best-defended existing LLMs still suffer from near-100% attack success rates (ASRs) under adaptive prompt-injection attacks. In this talk, I will discuss our latest efforts, SecPO and SecOPD, to fine-tune LLMs with an order-of-magnitude lower ASRs (0% -- 13.3%) against the current strongest prompt-injection attacks. Specifically, we (1) separate the trusted prompt and untrusted data into two input channels; (2) simulate strong adaptively attacked training samples for the model to learn robustness from; and (3) design the loss according to a principle that approximates a (nonexistent) secure-and-powerful LLM. Without a noticeable utility drop, our defended Qwen3.6-27B achieves security that generalizes to realistic agentic tasks with multiple trusted and untrusted messages. We fully open our training set with optimized injections, code for our recipe, and the defended model, which is more robust than industry-scale adversarially-trained GPT-5.5 in agentic tasks. Bio : Sizhe Chen is a Computer Science Ph.D. candidate at UC Berkeley\u2019s Berkeley AI Research (BAIR), working with Prof. David Wagner. He studies real-world AI security problems with general and principled solutions. He developed StruQ, Meta-SecAlign, SecPO, and SecOPD, the most robust open LLMs against adaptive prompt injection attacks. His research has been supported by selective industry fundings, including NVIDIA Fellowship, Meta-BAIR Commons, and Google-BAIR Commons. Previously, he obtained an M.Eng. and a B.Eng. from Shanghai Jiao Tong University. https://sizhe-chen.github.io Sponsor Event organized by PLI Special Event Seminar Lunch Series",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Securing LLMs Against Prompt Injection for Agentic Applications",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "dais:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -446,54 +161,6 @@
       "bioengineering:summary-is-title"
     ],
     "locationRule": "declined",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "dais:ps_events:4541:delta:0",
-    "guid": "ps_events:4541:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-02T13:00:00Z",
-    "endsAt": "2026-10-02T14:00:00Z",
-    "startTime": "2026-10-02T09:00:00",
-    "endTime": "2026-10-02T10:00:00",
-    "timezone": "America/New_York",
-    "title": "AI Alignment + Safety Seminar",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-seminar-1",
-    "content": "The seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
-    "rawEventDetails": "Details Event Description The seminar series will take place Fridays throughout the year with a mix of talks from faculty, visitors and students.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI Alignment + Safety Seminar",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -6551,6 +6218,101 @@
       "robotics:summary-is-title"
     ],
     "locationRule": "sentinel",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4281:delta:0",
+    "guid": "ps_events:4281:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T17:00:00Z",
+    "endsAt": "2026-11-13T18:00:00Z",
+    "startTime": "2026-11-13T12:00:00",
+    "endTime": "2026-11-13T13:00:00",
+    "timezone": "America/New_York",
+    "title": "Learning treatment effects and mechanisms in AI Model Evaluation",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Robertson",
+      "id": "",
+      "detail": "016"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/learning-treatment-effects-and-mechanisms-ai-model-evaluation",
+    "content": "Speaker: Apoorva Lal, Research Scientist, OpenAI",
+    "rawEventDetails": "Details Event Description Speaker: Apoorva Lal, Research Scientist, OpenAI",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Learning treatment effects and mechanisms in AI Model Evaluation",
+    "locationRaw": "Robertson 016",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4766:delta:0",
+    "guid": "ps_events:4766:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T17:00:00Z",
+    "endsAt": "2026-11-13T18:00:00Z",
+    "startTime": "2026-11-13T12:00:00",
+    "endTime": "2026-11-13T13:00:00",
+    "timezone": "America/New_York",
+    "title": "Learning treatment effects and mechanisms in AI Model Evaluation",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Robertson",
+      "id": "",
+      "detail": "016"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/learning-treatment-effects-and-mechanisms-ai-model-evaluation",
+    "content": "Speaker: Apoorva Lal, Research Scientist, OpenAI",
+    "rawEventDetails": "Details Event Description Speaker: Apoorva Lal, Research Scientist, OpenAI",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Learning treatment effects and mechanisms in AI Model Evaluation",
+    "locationRaw": "Robertson 016",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
