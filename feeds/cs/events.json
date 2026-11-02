@@ -99,6 +99,58 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/knowledge-flywheels",
+    "guid": "https://www.cs.princeton.edu/events/knowledge-flywheels",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-12-07T17:10:00Z",
+    "endsAt": "2026-12-07T18:10:00Z",
+    "startTime": "2026-12-07T12:10:00",
+    "endTime": "2026-12-07T13:10:00",
+    "timezone": "America/New_York",
+    "title": "Knowledge Flywheels",
+    "speakers": [
+      {
+        "name": "Yisong Yue",
+        "affiliation": "Caltech"
+      }
+    ],
+    "speaker": "Yisong Yue, Caltech",
+    "affiliation": "Caltech",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Small Auditorium",
+      "id": "",
+      "detail": "Room 105"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/knowledge-flywheels",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Knowledge Flywheels",
+    "locationRaw": "Computer Science Small Auditorium (Room 105)",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cs:https://www.cs.princeton.edu/events/princeton-symposium-millimeter-terahertz-light-sensing",
     "guid": "https://www.cs.princeton.edu/events/princeton-symposium-millimeter-terahertz-light-sensing",
     "sources": [

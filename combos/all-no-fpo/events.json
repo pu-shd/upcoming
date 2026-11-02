@@ -8130,6 +8130,58 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/knowledge-flywheels",
+    "guid": "https://www.cs.princeton.edu/events/knowledge-flywheels",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-12-07T17:10:00Z",
+    "endsAt": "2026-12-07T18:10:00Z",
+    "startTime": "2026-12-07T12:10:00",
+    "endTime": "2026-12-07T13:10:00",
+    "timezone": "America/New_York",
+    "title": "Knowledge Flywheels",
+    "speakers": [
+      {
+        "name": "Yisong Yue",
+        "affiliation": "Caltech"
+      }
+    ],
+    "speaker": "Yisong Yue, Caltech",
+    "affiliation": "Caltech",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Small Auditorium",
+      "id": "",
+      "detail": "Room 105"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/knowledge-flywheels",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Knowledge Flywheels",
+    "locationRaw": "Computer Science Small Auditorium (Room 105)",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3931:delta:0",
     "guid": "ps_events:3931:delta:0",
     "sources": [
@@ -9110,6 +9162,59 @@
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5531:delta:0",
+    "guid": "ps_events:5531:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-02-09T17:15:00Z",
+    "endsAt": "2027-02-09T18:15:00Z",
+    "startTime": "2027-02-09T12:15:00",
+    "endTime": "2027-02-09T13:15:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by Anna Bernard",
+    "speakers": [
+      {
+        "name": "Anna Bernard",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Anna Bernard",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2027/anna-bernard",
+    "content": "Talk information: TBABio:Anna Bernard is an assistant professor of economics at CUBE Research Unit of Catolica Lisbon School of Business and Economics and vice-director of PROSPER Research Center, a hub for cutting-edge research on critical economic issues such as employment, innovation, growth, poverty, inequality, and social mobility. Her topics of interest lie between public economics, behavioral economics and digital economics, with a particular focus on how Internet access influences citizen behavior. Her research is primarily empirical, using a",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Anna Bernard is an assistant professor of economics at CUBE Research Unit of Catolica Lisbon School of Business and Economics and vice-director of PROSPER Research Center, a hub for cutting-edge research on critical economic issues such as employment, innovation, growth, poverty, inequality, and social mobility. Her topics of interest lie between public economics, behavioral economics and digital economics, with a particular focus on how Internet access influences citizen behavior. Her research is primarily empirical, using a combination of experimental, survey, and proprietary data. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Anna Bernard",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
     "mappingConflict": false
   },
   {
