@@ -5329,7 +5329,7 @@
     "startTime": "2026-11-09T12:10:00",
     "endTime": "2026-11-09T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by Andrew Potter, Quantinuum",
+    "title": "To unlock the full power of quantum computers, fault-tolerant computation with error-corrected logical qubits must achieve the ultralow error rates needed for large-scale applications",
     "speakers": [
       {
         "name": "Andrew Potter",
@@ -5354,23 +5354,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-andrew-potter-quantinuum",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-unlock-full-power-quantum-computers-fault-tolerant-computation",
+    "content": "Title: To unlock the full power of quantum computers, fault-tolerant computation with error-corrected logical qubits must achieve the ultralow error rates needed for large-scale applications.Abstract: . This talk will highlight recent experimental progress in quantum error correction (QEC) and fault-tolerant logical operations on Quantinuum\u2019s Helios, a 98-qubit trapped-ion quantum processor. First, I will describe demonstrations of exponential error suppression with increasing code distance for quantum memory and two-qubit logic using triangular",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, Andrew Potter (Quantinuum)",
+    "summaryRaw": "Princeton Quantum Colloquium: To unlock the full power of quantum computers, fault-tolerant computation with error-corrected logical qubits must achieve the ultralow error rates needed for large-scale applications, Andrew Potter (Quantinuum)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
