@@ -1,53 +1,5 @@
 [
   {
-    "id": "dais:ps_events:4531:delta:0",
-    "guid": "ps_events:4531:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-02T17:30:00Z",
-    "endsAt": "2026-10-02T19:00:00Z",
-    "startTime": "2026-10-02T13:30:00",
-    "endTime": "2026-10-02T15:00:00",
-    "timezone": "America/New_York",
-    "title": "DDSS Workshop: Claude Code I",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Julis Romo Rabinowitz Building",
-      "id": "",
-      "detail": "A01"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ddss-workshop-claude-code-i",
-    "content": "Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social ScienceA gentle introduction to Claude Code, Anthropic\u2019s coding agent. We\u2019ll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You\u2019ll leave ready to hit the ground running on your own projects.",
-    "rawEventDetails": "Details Event Description Instructor: Colin Swaney, Lead Research Software Engineer, Data-Driven Social Science A gentle introduction to Claude Code, Anthropic\u2019s coding agent. We\u2019ll cover what Claude Code is and how to use it for everyday research tasks such as code debugging, data wrangling, and drafting technical documents. You\u2019ll leave ready to hit the ground running on your own projects.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "DDSS Workshop: Claude Code I",
-    "locationRaw": "Julis Romo Rabinowitz Building - A01",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "dais:ps_events:4591:delta:0",
     "guid": "ps_events:4591:delta:0",
     "sources": [
