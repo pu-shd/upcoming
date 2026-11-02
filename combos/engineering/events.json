@@ -1283,6 +1283,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cee:ps_events:2496:delta:0",
+    "guid": "ps_events:2496:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-03T21:30:00Z",
+    "endsAt": "2026-11-03T22:30:00Z",
+    "startTime": "2026-11-03T16:30:00",
+    "endTime": "2026-11-03T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Professor Indumathi Nambi Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering QUAD",
+      "id": "",
+      "detail": "E225"
+    },
+    "urlRef": "https://cee.princeton.edu/events/professor-indumathi-nambi-seminar",
+    "content": "BIO: Professor Indu Nambi is a short term distinguished visitor at Princeton University\u2019s Chadha Center for Global India, visiting from IIT-Madras. She is an accomplished scholar and a member of India National Academy of Engineering. As an academician, Prof Indu has been transitioning from a core researcher- teacher role to working in the real world issues across India from Legacy Contaminated Industrial sites, Environmental Disaster investigations to Innovation and Entrepreneurship for environment. Abstract: Professor Nambi\u2019s talk will cover two aspects of her work.",
+    "rawEventDetails": "Details Event Description BIO: Professor Indu Nambi is a short term distinguished visitor at Princeton University\u2019s Chadha Center for Global India, visiting from IIT-Madras. She is an accomplished scholar and a member of India National Academy of Engineering. As an academician, Prof Indu has been transitioning from a core researcher- teacher role to working in the real world issues across India from Legacy Contaminated Industrial sites, Environmental Disaster investigations to Innovation and Entrepreneurship for environment. Abstract: Professor Nambi\u2019s talk will cover two aspects of her work. The first, will describe her fieldwork discovering high levels of PFAS in wastewater in Chennai, as well as a case study of an Oil spill in Chennai during the Michang Cyclone and throws light on the huge responsibility of academicians to steer constructive environment action on ground as they navigate their way witnessing lopsided corporate actions, indecisive regulatory authorities, ignorant justice systems, impacted communities and restrictive publication, while being in dialogues with all parties. These experiences have shaped her career path into a meaningful balance of advocacy and translational research into implementable solutions. The second part will describe her 10-year efforts leading the EcoInnovation and Entrepreneurship programs at IITMadras which has been highly impactful nurturing 300 startup ideas with 30 + successful startups. Translating technology academic research into marketable products can be challenging for environmental domains due to low ROIs, market rejects and long incubation times. Innovations for environment for industry can be successfully scaled up only if sustainability is sold as a driver of competitiveness in global markets. When industry and community pain points and government policies are on board at the early stage of the venture, sustainability can move from aspiration to action. Joint CEE and CGI Event",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Professor Indumathi Nambi Seminar",
+    "locationRaw": "Engineering QUAD E225",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ece:ps_events:11111:delta:0",
     "guid": "ps_events:11111:delta:0",
     "sources": [
@@ -1328,6 +1375,53 @@
       "ece:summary-is-title"
     ],
     "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2501:delta:0",
+    "guid": "ps_events:2501:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-04T15:40:00Z",
+    "endsAt": "2026-11-04T17:00:00Z",
+    "startTime": "2026-11-04T10:40:00",
+    "endTime": "2026-11-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Dr. Lin Meng Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS CBE",
+      "id": "",
+      "detail": "F281"
+    },
+    "urlRef": "https://cee.princeton.edu/events/dr-lin-meng-seminar",
+    "content": "Abstract: The timing of seasonal biological events, such as spring leaf emergence, flowering, and autumn leaf senescence, is known as phenology. Plant phenology is highly sensitive to environmental change, with rising temperatures driving earlier spring growth across many ecosystems. Yet how multiple environmental factors interact to affect phenology in complex urban environments remains poorly understood. In this talk, I will explore how urban warming and artificial light at night (ALAN) influence plant phenology across major U.S. cities and at the global scale. Our research reveals that",
+    "rawEventDetails": "Details Event Description Abstract: The timing of seasonal biological events, such as spring leaf emergence, flowering, and autumn leaf senescence, is known as phenology. Plant phenology is highly sensitive to environmental change, with rising temperatures driving earlier spring growth across many ecosystems. Yet how multiple environmental factors interact to affect phenology in complex urban environments remains poorly understood. In this talk, I will explore how urban warming and artificial light at night (ALAN) influence plant phenology across major U.S. cities and at the global scale. Our research reveals that both the urban heat island effect and ALAN advance spring leaf emergence and delay autumn senescence, extending the urban growing season. At the global scale, ALAN can have an even stronger influence on plant phenology than temperature. Beyond changes in vegetation, ALAN also alters pollen phenology, prolonging pollen seasons and increasing exposure to allergenic pollen and associated health risks. Finally, I will discuss how urban lighting policies in Washington, D.C., and New York City can reduce light pollution and help mitigate its ecological consequences. Together, these findings highlight ALAN as an important yet often overlooked driver of urban ecological change and demonstrate opportunities to design urban environments that better support both ecosystem health and human well-being. Bio: Dr. Lin Meng is an Assistant Professor in the Department of Earth and Environmental Sciences at Vanderbilt University. As a global change ecologist, she studies how human activities affect urban ecosystems from local to global scales. Her research integrates satellite observations, in situ networks, local field observations, and AI/ML modeling to understand ecosystem responses to urbanization and environmental change. She is particularly interested in how urban environmental factors influence \u200becosystem processes and their consequences for human well-being. Her work aims to advance our understanding of urban ecosystems and inform strategies for building healthier, more sustainable, and resilient cities.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Dr. Lin Meng Seminar",
+    "locationRaw": "SEAS CBE F281",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
