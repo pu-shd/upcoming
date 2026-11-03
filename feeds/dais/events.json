@@ -976,6 +976,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4791:delta:0",
+    "guid": "ps_events:4791:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-05T17:30:00Z",
+    "endsAt": "2026-11-05T18:30:00Z",
+    "startTime": "2026-11-05T12:30:00",
+    "endTime": "2026-11-05T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "-",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/princeton-language-intelligence-lunch-series-invitation-only",
+    "content": "Yihe Dong, PLI Sr Research Software Engineer Gabriel Sarch, PLI Postdoctoral Research Fellow",
+    "rawEventDetails": "Details Event Description Yihe Dong, PLI Sr Research Software Engineer Gabriel Sarch, PLI Postdoctoral Research Fellow",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
+    "locationRaw": "-",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4731:delta:1",
     "guid": "ps_events:4731:delta:1",
     "sources": [
@@ -1118,6 +1166,54 @@
       "dais:summary-is-title"
     ],
     "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4796:delta:0",
+    "guid": "ps_events:4796:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T17:30:00Z",
+    "endsAt": "2026-11-12T18:30:00Z",
+    "startTime": "2026-11-12T12:30:00",
+    "endTime": "2026-11-12T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/princeton-language-intelligence-lunch-series-invitation-only-0",
+    "content": "Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science",
+    "rawEventDetails": "Details Event Description Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -1302,7 +1398,7 @@
     },
     "urlRef": "https://dais.princeton.edu/events/2026/learning-treatment-effects-and-mechanisms-ai-model-evaluation",
     "content": "Speaker: Apoorva Lal, Research Scientist, OpenAI Large language models offer new ways to improve both the precision and interpretation of randomized experiments, especially in settings where a model component (weights, sysprompts etc) itself is the randomized treatment. The first paper studies AI-generated predictions as auxiliary covariates in standard regression adjustment and demonstrates that traditional regression machinery can be used fruitfully in conjunction with zero-shot or fine-tuned LLM predictions for precision gains, and appropriately calibrated adjustment has an",
-    "rawEventDetails": "Details Event Description Speaker: Apoorva Lal, Research Scientist, OpenAI",
+    "rawEventDetails": "Details Event Description Speaker: Apoorva Lal, Research Scientist, OpenAI Large language models offer new ways to improve both the precision and interpretation of randomized experiments, especially in settings where a model component (weights, sysprompts etc) itself is the randomized treatment. The first paper studies AI-generated predictions as auxiliary covariates in standard regression adjustment and demonstrates that traditional regression machinery can be used fruitfully in conjunction with zero-shot or fine-tuned LLM predictions for precision gains, and appropriately calibrated adjustment has an asymptotic \u201cdo no harm\u201d property when predictions are uninformative. The second paper proposes a complementary framework for investigating mechanisms expressed in text. LLM graders and/or embeddings would identify interpretable binary indicators, M_j, representing hypothesized mechanisms, with coding rules and predictive validity assessed on held-out data. We then propose estimators that plug these learned hypotheses into Baron\u2013Kenny-style mediation regressions and complementary difference-in-differences regressions that compare treatment\u2013control contrasts across settings with high versus low mechanism prevalence are consistent for learning effect mechanisms.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
