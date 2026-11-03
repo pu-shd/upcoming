@@ -1,52 +1,5 @@
 [
   {
-    "id": "cs:https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
-    "guid": "https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
-    "sources": [
-      "cs"
-    ],
-    "platform": "drupal-events-rss",
-    "startsAt": "2026-11-02T17:00:00Z",
-    "endsAt": "2026-11-02T23:30:00Z",
-    "startTime": "2026-11-02T12:00:00",
-    "endTime": "2026-11-02T18:30:00",
-    "timezone": "America/New_York",
-    "title": "Princeton Societal AI (PSAI)",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Princeton Societal AI (PSAI)",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Societal AI (PSAI)",
-    "locationRaw": "",
-    "mappingRules": [
-      "cs:summary-is-title"
-    ],
-    "locationRule": "declined",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cs:https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
     "guid": "https://www.cs.princeton.edu/events/arabian-nights-tales-ai-science-and-trouble",
     "sources": [

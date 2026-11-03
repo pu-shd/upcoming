@@ -3874,53 +3874,6 @@
     "mappingConflict": false
   },
   {
-    "id": "cs:https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
-    "guid": "https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
-    "sources": [
-      "cs"
-    ],
-    "platform": "drupal-events-rss",
-    "startsAt": "2026-11-02T17:00:00Z",
-    "endsAt": "2026-11-02T23:30:00Z",
-    "startTime": "2026-11-02T12:00:00",
-    "endTime": "2026-11-02T18:30:00",
-    "timezone": "America/New_York",
-    "title": "Princeton Societal AI (PSAI)",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Princeton Societal AI (PSAI)",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://www.cs.princeton.edu/events/princeton-societal-ai-psai",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Societal AI (PSAI)",
-    "locationRaw": "",
-    "mappingRules": [
-      "cs:summary-is-title"
-    ],
-    "locationRule": "declined",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "dais:ps_events:4511:delta:0",
     "guid": "ps_events:4511:delta:0",
     "sources": [
@@ -6536,6 +6489,101 @@
     "locationRaw": "View location on My PrincetonU",
     "mappingRules": [
       "ai:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4771:delta:0",
+    "guid": "ps_events:4771:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-17T21:30:00Z",
+    "endsAt": "2026-11-17T22:30:00Z",
+    "startTime": "2026-11-17T16:30:00",
+    "endTime": "2026-11-17T17:30:00",
+    "timezone": "America/New_York",
+    "title": "NAM Chilloquium series: Mathematics in the age of AI",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "View location on My PrincetonU",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/nam-chilloquium-series-mathematics-age-ai",
+    "content": "Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical",
+    "rawEventDetails": "Details Event Description Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical research, what it means to understand discoveries made by AI, and what researchers should focus on as these systems become increasingly capable. The discussion will also explore what these changes might mean for the next generation of researchers. The event will begin with brief remarks from each speaker, followed by a moderated discussion and audience Q&A. We'll conclude with a casual reception from 5:30\u20136:00 PM, with an opportunity to continue the conversation with the speakers and other attendees. No background in advanced mathematics is required. All are welcome! Interested in future Chilloquium events? Subscribe to NAM's mailing list to hear about upcoming conversations in the series.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Chilloquium series: Mathematics in the age of AI",
+    "locationRaw": "View location on My PrincetonU",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "nam:ps_events:896:delta:0",
+    "guid": "ps_events:896:delta:0",
+    "sources": [
+      "nam"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-17T21:30:00Z",
+    "endsAt": "2026-11-17T22:30:00Z",
+    "startTime": "2026-11-17T16:30:00",
+    "endTime": "2026-11-17T17:30:00",
+    "timezone": "America/New_York",
+    "title": "NAM Chilloquium series: Mathematics in the age of AI",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "View location on My PrincetonU",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-chilloquium-series-mathematics-age-ai",
+    "content": "Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical",
+    "rawEventDetails": "Details Event Description Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical research, what it means to understand discoveries made by AI, and what researchers should focus on as these systems become increasingly capable. The discussion will also explore what these changes might mean for the next generation of researchers. The event will begin with brief remarks from each speaker, followed by a moderated discussion and audience Q&A. We'll conclude with a casual reception from 5:30\u20136:00 PM, with an opportunity to continue the conversation with the speakers and other attendees. No background in advanced mathematics is required. All are welcome! Interested in future Chilloquium events? Subscribe to NAM's mailing list to hear about upcoming conversations in the series.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Chilloquium series: Mathematics in the age of AI",
+    "locationRaw": "View location on My PrincetonU",
+    "mappingRules": [
+      "nam:title"
     ],
     "locationRule": "whole",
     "summaryRest": "",
