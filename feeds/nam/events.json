@@ -235,8 +235,8 @@
     "mappingConflict": false
   },
   {
-    "id": "nam:ps_events:876:delta:0",
-    "guid": "ps_events:876:delta:0",
+    "id": "nam:ps_events:901:delta:0",
+    "guid": "ps_events:901:delta:0",
     "sources": [
       "nam"
     ],
@@ -246,14 +246,12 @@
     "startTime": "2026-11-13T10:30:00",
     "endTime": "2026-11-13T12:00:00",
     "timezone": "America/New_York",
-    "title": "A NAM Friday Talks Talk",
+    "title": "NAM Friday Talk",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
-    "series": "NAM Friday Talks",
-    "tags": [
-      "seminar"
-    ],
+    "series": "",
+    "tags": [],
     "purposes": [
       "dais-newsletter"
     ],
@@ -264,23 +262,23 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks-0",
-    "content": "Anya Tsvetkov, NAM Postdoctoral Research FellowMel Andrews, NAM Postdoctoral Research Fellow",
-    "rawEventDetails": "Details Event Description Anya Tsvetkov, NAM Postdoctoral Research Fellow Mel Andrews, NAM Postdoctoral Research Fellow",
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talk",
+    "content": "Speaker: Mel Andrews",
+    "rawEventDetails": "Details Event Description Speaker: Mel Andrews",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "NAM Friday Talks",
-    "locationRaw": "Bendheim House, 103",
+    "summaryRaw": "NAM Friday Talk",
+    "locationRaw": "Bendheim House 103",
     "mappingRules": [
-      "nam:series-awaiting-title"
+      "nam:title"
     ],
-    "locationRule": "comma_room",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-template",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
