@@ -51,62 +51,6 @@
     "mappingConflict": false
   },
   {
-    "id": "materials:ps_events:4101:delta:0",
-    "guid": "ps_events:4101:delta:0",
-    "sources": [
-      "materials"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-30T16:05:00Z",
-    "endsAt": "2026-09-30T17:05:00Z",
-    "startTime": "2026-09-30T12:05:00",
-    "endTime": "2026-09-30T13:05:00",
-    "timezone": "America/New_York",
-    "title": "A PMI/PCCM Seminar Series Talk by Amrit Venkatesh, University of Virginia",
-    "speakers": [
-      {
-        "name": "Amrit Venkatesh",
-        "affiliation": "University of Virginia"
-      }
-    ],
-    "speaker": "Amrit Venkatesh, University of Virginia",
-    "affiliation": "University of Virginia",
-    "series": "PMI/PCCM Seminar Series",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "PMI/PCCM Seminar Series"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen Hall",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-amrit-venkatesh-university-virginia",
-    "content": "Atomic-Level Characterization of Materials using Advanced Solid-State NMRAbstract: Establishing atomic-level structure-property relationships is essential for understanding and designing functional materials. Solid-state NMR spectroscopy is uniquely suited to probe local structure and dynamics in complex materials, but its application is often constrained by inherently low sensitivity. The Venkatesh group develops and applies dynamic nuclear polarization (DNP) and fast magic-angle spinning (MAS) methods that dramatically enhance the sensitivity and",
-    "rawEventDetails": "Details Event Description Atomic-Level Characterization of Materials using Advanced Solid-State NMR Abstract : Establishing atomic-level structure-property relationships is essential for understanding and designing functional materials. Solid-state NMR spectroscopy is uniquely suited to probe local structure and dynamics in complex materials, but its application is often constrained by inherently low sensitivity. The Venkatesh group develops and applies dynamic nuclear polarization (DNP) and fast magic-angle spinning (MAS) methods that dramatically enhance the sensitivity and resolution of solid-state NMR experiments. These advances enable high-resolution studies of nuclei across the Periodic Table and facilitate multidimensional investigations of heterogeneous materials, including surfaces, interfaces, and nanostructured systems. In this seminar, we will highlight recent efforts to characterize complex materials relevant to catalysis and energy, demonstrating how advanced solid-state NMR methodologies provide atomic-level insights that are inaccessible by conventional approaches. Bio : Dr. Amrit Venkatesh is an Assistant Professor of Chemistry at the University of Virginia (UVA), where he leads a research program focused on developing dynamic nuclear polarization (DNP) enhanced and advanced solid-state NMR methods for characterizing complex materials. He received his Ph.D. in Chemistry from Iowa State University, earning the Zaffarano Award in 2021 for outstanding doctoral research. He subsequently held a Marie Sk\u0142odowska-Curie Postdoctoral Fellowship at the \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne (EPFL), Switzerland, and later served as Research Faculty at the National High Magnetic Field Laboratory at Florida State University. At UVA, his research combines methodological innovation in magnetic resonance with applications to heterogeneous materials, surfaces, catalysts, and energy-relevant systems, with the goal of establishing atomic-level structure-property relationships that guide materials design.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Amrit Venkatesh, University of Virginia",
-    "locationRaw": "Bowen Hall",
-    "mappingRules": [
-      "materials:series-person-affiliation"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
-    "mappingConflict": false
-  },
-  {
     "id": "cbe:ps_events:5296:delta:0",
     "guid": "ps_events:5296:delta:0",
     "sources": [
