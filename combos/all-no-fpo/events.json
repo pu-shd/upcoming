@@ -6417,9 +6417,9 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "View location on My PrincetonU",
+      "name": "Robertson",
       "id": "",
-      "detail": ""
+      "detail": "001"
     },
     "urlRef": "https://ai.princeton.edu/events/2026/nam-chilloquium-series-mathematics-age-ai",
     "content": "Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical",
@@ -6430,11 +6430,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "NAM Chilloquium series: Mathematics in the age of AI",
-    "locationRaw": "View location on My PrincetonU",
+    "locationRaw": "Robertson 001",
     "mappingRules": [
       "ai:title"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -6465,9 +6465,9 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "View location on My PrincetonU",
+      "name": "Robertson",
       "id": "",
-      "detail": ""
+      "detail": "001"
     },
     "urlRef": "https://dais.princeton.edu/events/2026/nam-chilloquium-series-mathematics-age-ai",
     "content": "Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical",
@@ -6478,11 +6478,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "NAM Chilloquium series: Mathematics in the age of AI",
-    "locationRaw": "View location on My PrincetonU",
+    "locationRaw": "Robertson 001",
     "mappingRules": [
       "dais:summary-is-title"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
