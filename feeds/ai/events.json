@@ -457,7 +457,7 @@
     "startTime": "2026-11-13T12:00:00",
     "endTime": "2026-11-13T13:00:00",
     "timezone": "America/New_York",
-    "title": "Learning treatment effects and mechanisms in AI Model Evaluation",
+    "title": "Learning treatment effects and mechanisms in AI model evaluation",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -481,7 +481,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Learning treatment effects and mechanisms in AI Model Evaluation",
+    "summaryRaw": "Learning treatment effects and mechanisms in AI model evaluation",
     "locationRaw": "Robertson 016",
     "mappingRules": [
       "ai:title"
