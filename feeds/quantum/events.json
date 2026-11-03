@@ -680,7 +680,7 @@
     "startTime": "2026-11-23T12:10:00",
     "endTime": "2026-11-23T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by Xing Fan, Harvard University",
+    "title": "Quantum Precision Measurement for Fundamental Physics",
     "speakers": [
       {
         "name": "Xing Fan",
@@ -705,23 +705,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-xing-fan-harvard-university",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-quantum-precision-measurement-fundamental-physics-xing-fan",
+    "content": "Title: Quantum Precision Measurement for Fundamental Physics Abstract: We will present a new experiment to measure CP violation beyond the Standard Model using \u00b2\u00b2\u2079ThF\u207a molecular ions. The \u00b2\u00b2\u2079Th nucleus has an enhanced Schiff moment due to its octupole deformation and can be efficiently produced using nuclear clock technologies. By employing advanced ion manipulation techniques, this approach aims to overcome the challenges associated with the limited availability of radioactive species.We will also present ongoing work on entangling",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, Xing Fan (Harvard University)",
+    "summaryRaw": "Princeton Quantum Colloquium: Quantum Precision Measurement for Fundamental Physics, Xing Fan (Harvard University)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {

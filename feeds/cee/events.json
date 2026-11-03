@@ -1,58 +1,5 @@
 [
   {
-    "id": "cee:ps_events:2411:delta:0",
-    "guid": "ps_events:2411:delta:0",
-    "sources": [
-      "cee"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-02T16:15:00Z",
-    "endsAt": "2026-10-02T17:15:00Z",
-    "startTime": "2026-10-02T12:15:00",
-    "endTime": "2026-10-02T13:15:00",
-    "timezone": "America/New_York",
-    "title": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Civil and Environmental Engineering,Special Seminar",
-    "tags": [
-      "civil-environmental",
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Civil and Environmental Engineering",
-      "Special Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Briger Hall,",
-      "id": "",
-      "detail": "C102"
-    },
-    "urlRef": "https://cee.princeton.edu/events/peculiarities-heat-driven-and-light-driven-evaporation",
-    "content": "Joint CEE/MAE Distinguished SeminarAbstract:This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular",
-    "rawEventDetails": "Details Event Description Joint CEE/MAE Distinguished Seminar Abstract: This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular evaporation process may exist widely in nature. Our studies on photomolecular evaporation also led us to investigate peculiarities in thermal evaporation. At an evaporating interface, a temperature discontinuity exists between the liquid and the vapor sides, which was predicted by theories and observed in some experiments. However, the existing theories cannot explain experiments. We develop a new interfacial condition that can be used to couple transport on both sides of the interface, leading to agreements between theory and experiments. Our modeling reveals the existence of a new refrigeration effect: the vapor temperature can drop below that of the liquid film and in fact, lower than even the condensing surface temperature. This effect has yet to be confirmed experimentally and may find applications in air-conditioning and refrigeration. Biography: Gang Chen is the Carl Richard Soderberg Professor of Power Engineering at Massachusetts Institute of Technology (MIT). He served as the Department Head of the Department of Mechanical Engineering at MIT from 2013 to 2018. He obtained his PhD degree from the Mechanical Engineering Department at UC Berkeley under the supervision of then UC Berkeley Chancellor Chang-Lin Tien. He was a faculty member at Duke University and UCLA, before joining MIT in 2001. He received an NSF Young Investigator Award, an R&D 100 award, an ASME Heat Transfer Memorial Award, an ASME Frank Kreith Award in Energy, a Nukiyama Memorial Award by the Japan Heat Transfer Society, a World Technology Network Award in Energy, an Eringen medal from the Society of Engineering Science, the Capers and Marion McDonald Award for Excellences in Mentoring and Advising from MIT, a Steven Chu medal from the Asian American Academy of Science and Engineering, and an American Courage Award from Asian American Advancing Justice. He serves on the board of the Asian American Scholar Forum. He is a fellow of the American Association for the Advancement of Science, the American Physical Society, The American Society of Mechanical Engineers, and the Guggenheim Foundation. He is a foreign member of the Chinese Academy of Sciences, an academician of Academy Sinica, a fellow of the American Academy of Arts and Sciences, and a member of the US National Academy of Engineering and a member of the US National Academy of Science.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
-    "locationRaw": "Briger Hall, C102",
-    "mappingRules": [
-      "cee:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "cee:ps_events:2436:delta:0",
     "guid": "ps_events:2436:delta:0",
     "sources": [
@@ -423,6 +370,104 @@
       "cee:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2506:delta:0",
+    "guid": "ps_events:2506:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T17:30:00Z",
+    "endsAt": "2026-11-12T18:30:00Z",
+    "startTime": "2026-11-12T12:30:00",
+    "endTime": "2026-11-12T13:30:00",
+    "timezone": "America/New_York",
+    "title": "William Pierson Field Lecture, featuring Professor Nicos Makris",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Civil and Environmental Engineering",
+    "tags": [
+      "civil-environmental"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Civil and Environmental Engineering"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Maeder Hall Auditorium",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://cee.princeton.edu/events/william-pierson-field-lecture-featuring-professor-nicos-makris",
+    "content": "Cluster of Excellence in Engineering and Cultural HeritageAbstract: The uplifting and rocking of slender, free-standing structures when subjected to ground shaking may limit appreciably the seismic moments and shears that develop at their base. While the unparalleled seismic performance of rocking isolation has been documented with the through-the-centuries survival of several free-standing ancient temples; and careful post-earthquake observations in Japan during the 1940\u2019s suggested that the increasing size of",
+    "rawEventDetails": "Details Event Description Cluster of Excellence in Engineering and Cultural Heritage Abstract: The uplifting and rocking of slender, free-standing structures when subjected to ground shaking may limit appreciably the seismic moments and shears that develop at their base. While the unparalleled seismic performance of rocking isolation has been documented with the through-the-centuries survival of several free-standing ancient temples; and careful post-earthquake observations in Japan during the 1940\u2019s suggested that the increasing size of slender free-standing tombstones enhances their seismic stability; it was G. W. Housner (1963) who elucidated a size-frequency scale effect and explained that there is a safety margin between uplifting and overturning; and as the size of the column or the frequency of the excitation increases, this safety margin increases appreciably to the extent that tall, free-standing columns enjoy ample seismic stability. This talk revisits the important implications of this post-uplift dynamic stability and explains that the enhanced seismic stability originates from the difficulty to mobilize the rotational inertia of the free-standing column. As the size of the column increases, the seismic resistance (rotational inertia) increases with the square of the column size; whereas, the seismic demand (overturning moment) increases linearly with size. The same result applies to the articulated rocking frame given that its dynamic rocking esponse is identical to the rocking response of a solitary free-standing column with the same slenderness; yet, larger size. The talk concludes that the concept of rocking isolation is a unique seismic protection strategy for large, slender structures such as tall valley bridges\u2014not just at the limit-state but also at the operational state. Bio: Professor Nicos Makris, an internationally recognized expert in structural-earthquake engineering and structural mechanics-dynamics, is the Addy Family Centennial Professor in Civil Engineering at Southern Methodist University, Dallas, Texas. Makris received his Ph.D (1992) and Master of Science (1990) from the State University of New York at Buffalo, USA; while he holds a Diploma in Civil Engineering from the National Technical University, Athens, Greece (1988). He has previously served on the faculty of the University of Notre Dame, Indiana (1992-1996); the University of California, Berkeley (1996-2005); the University of Patras, Greece (2003-2 14) and the University of Central Florida (2014-2018). He has published more than 143 papers in archival journals, while he has supervised 16 Ph.D thesis and more than 40 MSc and 5th yea Diploma thesis. He has served as the Editor of the Journal Earthquakes and Structures; the A sociate Editor for the Journal of Engineering Mechanics, ASCE, and the Chair of the Dynamics Committee on the same Journal. He is a member of Academia Europaea \u201cThe Academy of Europe\u201d, a foreign member of the Serbian Academy of Sciences and Arts, a Fellow of the American Society of Civil Engineers (ASCE) and a distinguished Visiting Fellow of the Royal Academy of Engineering, UK; while, he has been honored with several international prizes and awards including the George W. Housner Structural Control &amp; Monitoring Medal and the J. James R. Croes Medal (two times) both from ASCE, the Walter L. Huber Civil Engineering Research Prize from ASCE, the T. K. Hsieh Award from the Institution of Civil Engineers, U.K., the Shah Family Innovation Prize from the Earthquake Engineering Research Institute (EERI), USA and the CAREER Award from the National Science Foundation, USA. During the years 2003-2009, Professor Makris has served as the Director of Reconstruction of the Temple of Zeus in Ancient Nemea, Greece. Lunch will be served at noon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "William Pierson Field Lecture, featuring Professor Nicos Makris",
+    "locationRaw": "Maeder Hall Auditorium",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2511:delta:0",
+    "guid": "ps_events:2511:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-01T17:30:00Z",
+    "endsAt": "2026-12-01T18:30:00Z",
+    "startTime": "2026-12-01T12:30:00",
+    "endTime": "2026-12-01T13:30:00",
+    "timezone": "America/New_York",
+    "title": "William Pierson Field Lecture, featuring Professor Antonio Maria D'Altri",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Maeder Hall Auditorium",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://cee.princeton.edu/events/william-pierson-field-lecture-featuring-professor-antonio-maria-daltri",
+    "content": "Cluster of Excellence in Engineering and Cultural HeritageAbstract: How can we assess the condition of a medieval tower that has stood for centuries but now raises serious structural concerns? This lecture explores the Garisenda Tower in Bologna, Italy, whose pronounced lean, complex masonry construction, and material deterioration pose a demanding engineering challenge. After introducing its geometry, constituent materials, monitoring system, and structural vulnerabilities, the lecture follows a progression from hand",
+    "rawEventDetails": "Details Event Description Cluster of Excellence in Engineering and Cultural Heritage Abstract: How can we assess the condition of a medieval tower that has stood for centuries but now raises serious structural concerns? This lecture explores the Garisenda Tower in Bologna, Italy, whose pronounced lean, complex masonry construction, and material deterioration pose a demanding engineering challenge. After introducing its geometry, constituent materials, monitoring system, and structural vulnerabilities, the lecture follows a progression from hand calculations to advanced computational and data-driven methods. A cantilever beam under eccentric compression provides an initial understanding of the tower\u2019s structural behavior. Geometrically accurate three-dimensional models, informed by laser scanning and vibration measurements, reveal how uncertainties in masonry properties affect structural assessment and why reproducing measured vibrations does not uniquely determine internal stresses. Thermomechanical simulations examine how solar radiation and temperature variations drive the tower\u2019s movements and thermal stresses, providing a physical basis for interpreting monitoring data. Neural-network-based approaches are subsequently introduced to characterize environmentally driven movements and help detect anomalies in the monitored response. The lecture concludes with ongoing efforts to integrate these approaches into a digital twin of the tower, connecting mechanics, structural health monitoring, and machine learning to support the conservation of a major cultural landmark. Bio: Antonio Maria D\u2019Altri is an Associate Professor of Mechanics of Solids and Structures at the University of Bologna, Italy. His research focuses on computational mechanics and the structural analysis of masonry and cultural heritage structures. He received his Ph.D. from the University of Bologna in 2019. From 2022 to 2025, he held a Marie Sk\u0142odowska-Curie Global Fellowship, a competitive research fellowship funded by the European Union, for the HOLAHERIS project (\u201cA holistic structural analysis method for cultural heritage structures conservation\u201d). The fellowship included an 18-month research stay at Princeton University with Prof. Branko Glisic and a six-month stay at the University of Minho (Portugal) with Prof. Paulo B. Louren\u00e7o. He has contributed to winning entries in two international blind prediction competitions, in which researchers predicted the seismic response of masonry structures before experimental results were disclosed. He also served as Chair of the ECCOMAS Young Investigators Committee (2024-2026), supporting early-career researchers in computational engineering across Europe. Lunch will be served at noon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "William Pierson Field Lecture, featuring Professor Antonio Maria D'Altri",
+    "locationRaw": "Maeder Hall Auditorium",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
