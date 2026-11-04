@@ -4329,6 +4329,58 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4321:delta:0",
+    "guid": "ps_events:4321:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-04T17:00:00Z",
+    "endsAt": "2026-11-04T18:30:00Z",
+    "startTime": "2026-11-04T12:00:00",
+    "endTime": "2026-11-04T13:30:00",
+    "timezone": "America/New_York",
+    "title": "A Talk by AI\u00b2 Weekly Office Hours",
+    "speakers": [
+      {
+        "name": "AI\u00b2 Weekly Office Hours",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "AI\u00b2 Weekly Office Hours",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "PU Press Building (PAI, formally the AI Lab)",
+      "id": "",
+      "detail": "274"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/ai%C2%B2-weekly-office-hours",
+    "content": "This week's theme: Latest in AI News This Wednesday, Nov. 4th, 12-1PM AI Lab step-down space (2nd floor) Lunch provided! Sponsored by AI\u00b2 (AI for Accelerating Invention) Think AI could be useful for your research but don't know where to start? Want to chat about latest AI news and workflows? Join us for weekly open office hours! This year, AI\u00b2 office hours will feature a rotating theme. This week's theme will be Latest in AI News. Come discuss multiple perspectives from researchers across disciplines on how AI technologies could/should impact",
+    "rawEventDetails": "Details Event Description This week's theme: Latest in AI News This Wednesday, Nov. 4th, 12-1PM AI Lab step-down space (2nd floor) Lunch provided! Sponsored by AI\u00b2 (AI for Accelerating Invention) Think AI could be useful for your research but don't know where to start? Want to chat about latest AI news and workflows? Join us for weekly open office hours! This year, AI\u00b2 office hours will feature a rotating theme. This week's theme will be Latest in AI News. Come discuss multiple perspectives from researchers across disciplines on how AI technologies could/should impact scientific research. Graduate students, researchers, and faculty from any department are welcome.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI\u00b2 Weekly Office Hours",
+    "locationRaw": "PU Press Building (PAI, formally the AI Lab), Room 274",
+    "mappingRules": [
+      "ai:bare-person-name"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "materials:ps_events:4116:delta:0",
     "guid": "ps_events:4116:delta:0",
     "sources": [
