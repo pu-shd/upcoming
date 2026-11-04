@@ -1,105 +1,5 @@
 [
   {
-    "id": "robotics:ps_events:546:delta:0",
-    "guid": "ps_events:546:delta:0",
-    "sources": [
-      "robotics"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-02T15:00:00Z",
-    "endsAt": "2026-10-02T16:00:00Z",
-    "startTime": "2026-10-02T11:00:00",
-    "endTime": "2026-10-02T12:00:00",
-    "timezone": "America/New_York",
-    "title": "Advancing Robotic Assembly in Construction through Learning and Adaptive Control",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "CS",
-      "id": "",
-      "detail": "105"
-    },
-    "urlRef": "https://robotics.princeton.edu/events/2026/arash",
-    "content": "Abstract: Robotic assembly in construction offers opportunities to alleviate labor shortages, reduce workers\u2019 exposure to physically demanding tasks, and expand the possibilities for novel architecture. However, reliable robotic assembly in construction remains challenging due to uncertainties associated with variability in component geometry and",
-    "rawEventDetails": "Speaker Arash Adel Affiliation Princeton University Details Event Description Abstract: Robotic assembly in construction offers opportunities to alleviate labor shortages, reduce workers\u2019 exposure to physically demanding tasks, and expand the possibilities for novel architecture. However, reliable robotic assembly in construction remains challenging due to uncertainties associated with variability in component geometry and material properties; tolerance accumulation during fabrication and assembly; discrepancies between as-designed and as-built states; incomplete observations resulting from limited sensing coverage of large components, occlusion, and clutter; and unmodeled contact dynamics. These challenges are particularly pronounced in contact-rich robotic assembly at construction scale, where small geometric deviations or pose estimation errors can prevent insertion, generate excessive contact forces, or damage components. To address these challenges, this lecture presents a framework for contact-rich robotic assembly in construction that integrates perception, planning, and control. Within this framework, three complementary approaches are examined: adaptive control to compensate for model mismatch and disturbances; learned sensorimotor policies to handle complex, tight-tolerance interactions for which effective control strategies are difficult to formulate analytically; and a hybrid approach that combines learned policies with adaptive control to improve robustness and enable zero-shot sim-to-real transfer without real-world demonstrations for policy training. Through construction-scale case studies, the lecture highlights key methods, experimental findings, and current limitations of these approaches. It concludes by discussing open challenges and future directions for generalizing across material systems and component geometries, transferring skills between tasks, and extending these methods to longer assembly sequences in construction. Bio: Dr. Arash Adel is an Assistant Professor at the School of Architecture, a Core Faculty of Princeton Robotics, and an Associated Faculty of the Department of Computer Science at Princeton University. He is the founder and director of Adel Research Group (ARG). ARG conducts interdisciplinary research at the intersection of robotics, artificial intelligence, and computational design; the research contributes to resilient, sustainable, and low-carbon construction outlooks and achievements. At the core of ARG\u2019s comprehensive research is investigating human\u2013robot collaborative processes, which tackle fundamental questions related to the future of the design and construction industries and their potential to have a broader impact on inclusive and equitable building culture. Prior to joining Princeton University in 2023, Adel was an Assistant Professor of Architecture at the University of Michigan\u2019s Taubman College of Architecture and Urban Planning. Adel received his Doctorate in Architecture from the Swiss Federal Institute of Technology (ETH) and his Master\u2019s in Architecture from Harvard University.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Advancing Robotic Assembly in Construction through Learning and Adaptive Control",
-    "locationRaw": "CS 105",
-    "mappingRules": [
-      "robotics:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "robotics:ps_events:236:delta:0",
-    "guid": "ps_events:236:delta:0",
-    "sources": [
-      "robotics"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-03T04:00:00Z",
-    "endsAt": "2026-10-04T04:00:00Z",
-    "startTime": "2026-10-03T00:00:00",
-    "endTime": "2026-10-04T00:00:00",
-    "timezone": "America/New_York",
-    "title": "Northeast Robotics Colloquium (NERC)",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Commons",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://robotics.princeton.edu/events/2026/northeast-robotics-colloquium-nerc",
-    "content": "NERC 2026 will provide a vibrant forum for researchers, students, and industry professionals in the field of robotics. The colloquium will feature distinguished keynotes, rising star lightning talks, engaging poster sessions, valuable networking opportunities, and technical demonstrations. This event aims to foster collaboration and showcase cutting-edge research among the leading robotics research institutions in the Northeast. It offers an exceptional platform for students and researchers to present their latest work and engage with the broader robotics",
-    "rawEventDetails": "Details Event Description NERC 2026 will provide a vibrant forum for researchers, students, and industry professionals in the field of robotics. The colloquium will feature distinguished keynotes, rising star lightning talks, engaging poster sessions, valuable networking opportunities, and technical demonstrations. This event aims to foster collaboration and showcase cutting-edge research among the leading robotics research institutions in the Northeast. It offers an exceptional platform for students and researchers to present their latest work and engage with the broader robotics community. Visit event site for more details: https://nerc2026.github.io/ Contacts Tom Silver [email protected] Jaime F. Fisac [email protected]",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Northeast Robotics Colloquium (NERC)",
-    "locationRaw": "Commons",
-    "mappingRules": [
-      "robotics:summary-is-title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "robotics:ps_events:551:delta:0",
     "guid": "ps_events:551:delta:0",
     "sources": [
@@ -336,9 +236,9 @@
     ],
     "unmappedTags": [],
     "location": {
-      "name": "",
+      "name": "CS",
       "id": "",
-      "detail": ""
+      "detail": "105"
     },
     "urlRef": "https://robotics.princeton.edu/events/2026/making-robots-learn-smarter-not-harder-aligning-interaction-and-uncertainty-targeted",
     "content": "Abstract: As our expectations for robots' adaptive capacities grow, it will be increasingly important for them to reason about the novel objects, tasks, and interactions inherent to everyday life. Recent advances in foundation models have produced impressive general-purpose models for robots, but they still need extensive fine-tuning to behave reasonably in novel environments. I argue that we can develop more capable and robust robots by assuming they will inevitably encounter situations that they are initially unprepared to address.My work enables a robot to address",
@@ -349,11 +249,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Making Robots Learn Smarter, Not Harder: Aligning Interaction and Uncertainty for Targeted Data Collection",
-    "locationRaw": "To be determined",
+    "locationRaw": "CS 105",
     "mappingRules": [
       "robotics:summary-is-title"
     ],
-    "locationRule": "sentinel",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
