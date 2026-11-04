@@ -5953,6 +5953,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4806:delta:0",
+    "guid": "ps_events:4806:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-13T15:00:00Z",
+    "endsAt": "2026-11-13T16:00:00Z",
+    "startTime": "2026-11-13T10:00:00",
+    "endTime": "2026-11-13T11:00:00",
+    "timezone": "America/New_York",
+    "title": "Agent Skill Sharing Session",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Princeton University Press",
+      "id": "",
+      "detail": "274"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/agent-skill-sharing-session",
+    "content": "AI agents are changing research faster than any of us can keep up with alone. Someone in this building has likely already automated the literature review you dread or the figure pipeline you keep rebuilding, but these tricks rarely leave individual setups. This bi-weekly session is about changing that, so we stop reinventing workflows and start building on each other\u2019s.The rule is simple: if you attend, you share. Bring one skill, workflow, or trick you created or adapted. No preparation expected, a casual 5-minute on-the-fly demo or explanation is plenty!",
+    "rawEventDetails": "Details Event Description AI agents are changing research faster than any of us can keep up with alone. Someone in this building has likely already automated the literature review you dread or the figure pipeline you keep rebuilding, but these tricks rarely leave individual setups. This bi-weekly session is about changing that, so we stop reinventing workflows and start building on each other\u2019s. The rule is simple: if you attend, you share. Bring one skill, workflow, or trick you created or adapted. No preparation expected, a casual 5-minute on-the-fly demo or explanation is plenty!",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Agent Skill Sharing Session",
+    "locationRaw": "Princeton University Press, 274",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4291:delta:0",
     "guid": "ps_events:4291:delta:0",
     "sources": [
