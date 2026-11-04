@@ -1422,6 +1422,66 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2921:delta:0",
+    "guid": "ps_events:2921:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-09T20:00:00Z",
+    "endsAt": "2026-11-09T21:30:00Z",
+    "startTime": "2026-11-09T15:00:00",
+    "endTime": "2026-11-09T16:30:00",
+    "timezone": "America/New_York",
+    "title": "Special Joint PNI/ODBI Symposium",
+    "speakers": [
+      {
+        "name": "Carsen Stringer",
+        "affiliation": ""
+      },
+      {
+        "name": "Marius Pachitariu",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Carsen Stringer; Marius Pachitariu",
+    "affiliation": "",
+    "series": "Special Seminars",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Special Seminars"
+    ],
+    "unmappedTags": [
+      "Special Seminars"
+    ],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/special-joint-pniodbi-symposium",
+    "content": "AI-based methods for biological data analysisMachine learning methods are increasingly necessary to analyze biological datasets as they become larger and larger, but traditional AI methods are not designed for biology problems. My lab develops AI methods for analyzing and understanding large-scale biological data. We focus on multiple problems in visual-based segmentation and tracking, as well as on predictive models of neural activity with an emphasis on interpretability. I will present two of our long-term projects, one in the area of cellular and subcellular",
+    "rawEventDetails": "Speakers Carsen Stringer Affiliation HHMI Janelia Research Campus Marius Pachitariu Affiliation HHMI Janelia Research Campus Details Event Description AI-based methods for biological data analysis Machine learning methods are increasingly necessary to analyze biological datasets as they become larger and larger, but traditional AI methods are not designed for biology problems. My lab develops AI methods for analyzing and understanding large-scale biological data. We focus on multiple problems in visual-based segmentation and tracking, as well as on predictive models of neural activity with an emphasis on interpretability. I will present two of our long-term projects, one in the area of cellular and subcellular segmentation and one in the area of behavioral-to-neural predictive models. We have developed a widely used deep learning-based bioimage analysis package called Cellpose, which can denoise, deconvolve, upscale and segment arbitrary repeating elements in an image, most commonly cells. I will present our current efforts to increase segmentation quality for 3D and live-cell imaging. Using a model called Facemap, I will show that we can predict the mind of a mouse from its face, and discuss what this means for understanding neuronal dynamics. Visual learning in biological neural networks Biological intelligence has an unmatched capacity to solve problems arising in new situations not previously encountered. This capacity arises from many layers of previous experience and learning throughout the lifetime, which modifies synaptic circuits in the brain and changes neural network representations. My lab studies the nature of these changes in visual cortical circuits, and how the neuronal changes affect behavior in novel scenarios. Using large-scale neural recordings across a majority of visual cortical areas in mice, we found that visual experience during development is necessary to establish invariant visual representations. We also found that visual experience in adulthood reorganizes representations in most visual cortical areas, enables faster subsequent learning and accounts for a substantial portion of all plasticity observed during sensorimotor learning. Additional representational changes were induced by learned behavior in higher-order visual areas. I will also describe planned future work for identifying the anatomical substrates of this representational plasticity, and the mathematical hypotheses we have for interpreting the anatomical and functional data. Refreshments will be available 15 minutes prior to the start of the seminar. Sponsors Omenn-Darling Bioengineering Institute Princeton Neuroscience Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Joint PNI/ODBI Symposium",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ece:ps_events:11101:delta:0",
     "guid": "ps_events:11101:delta:0",
     "sources": [
@@ -2091,6 +2151,62 @@
     "locationRaw": "F281 SEAS-CBE",
     "mappingRules": [
       "cbe:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2926:delta:0",
+    "guid": "ps_events:2926:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T21:00:00Z",
+    "endsAt": "2026-12-03T22:00:00Z",
+    "startTime": "2026-12-03T16:00:00",
+    "endTime": "2026-12-03T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Measuring the Structural Energetics of Proteins in Water, Membranes and Condensates",
+    "speakers": [
+      {
+        "name": "Tobin Sosnick",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Tobin Sosnick",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/measuring-structural-energetics-proteins-water-membranes-and-condensates",
+    "content": "Hydrogen-deuterium exchange mass spectrometry (HDX-MS) reveals that proteins constantly undergo local unfolding events, ranging from small fluctuations to large-scale openings, that transiently break backbone hydrogen bonds. The measured exchange rates report on the stability and folding cooperativity of individual protein segments. We propose that cooperative unfolding regions correspond to mechanically stiff elements that can transmit force or store strain energy. In contrast, regions of low cooperativity correspond to flexible elements that can optimize binding interfaces and enable",
+    "rawEventDetails": "Speaker Tobin Sosnick Affiliation University of Chicago Details Event Description Hydrogen-deuterium exchange mass spectrometry (HDX-MS) reveals that proteins constantly undergo local unfolding events, ranging from small fluctuations to large-scale openings, that transiently break backbone hydrogen bonds. The measured exchange rates report on the stability and folding cooperativity of individual protein segments. We propose that cooperative unfolding regions correspond to mechanically stiff elements that can transmit force or store strain energy. In contrast, regions of low cooperativity correspond to flexible elements that can optimize binding interfaces and enable rapid motions. This interpretation rationalizes functional data across a diverse array of systems. In the second part, we characterize the hydrogen bond network and condensation of yeast Pab1, a stress granule marker that, unlike proteins that undergo reversible liquid-liquid phase separation, condenses irreversibly. We propose a sequential activation model in which each of four RRM domains activates at progressively higher temperatures, partially unfolds, and associates with other activated RRMs. Our latest results reveal that three regions within the RRM domains form amyloidogenic latches that account for the condensate's irreversibility. Refreshments will be available 15 minutes prior to the start of the seminar. Sponsor Omenn-Darling Bioengineering Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Measuring the Structural Energetics of Proteins in Water, Membranes and Condensates",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",

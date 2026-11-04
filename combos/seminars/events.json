@@ -2639,6 +2639,62 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2926:delta:0",
+    "guid": "ps_events:2926:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T21:00:00Z",
+    "endsAt": "2026-12-03T22:00:00Z",
+    "startTime": "2026-12-03T16:00:00",
+    "endTime": "2026-12-03T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Measuring the Structural Energetics of Proteins in Water, Membranes and Condensates",
+    "speakers": [
+      {
+        "name": "Tobin Sosnick",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Tobin Sosnick",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/measuring-structural-energetics-proteins-water-membranes-and-condensates",
+    "content": "Hydrogen-deuterium exchange mass spectrometry (HDX-MS) reveals that proteins constantly undergo local unfolding events, ranging from small fluctuations to large-scale openings, that transiently break backbone hydrogen bonds. The measured exchange rates report on the stability and folding cooperativity of individual protein segments. We propose that cooperative unfolding regions correspond to mechanically stiff elements that can transmit force or store strain energy. In contrast, regions of low cooperativity correspond to flexible elements that can optimize binding interfaces and enable",
+    "rawEventDetails": "Speaker Tobin Sosnick Affiliation University of Chicago Details Event Description Hydrogen-deuterium exchange mass spectrometry (HDX-MS) reveals that proteins constantly undergo local unfolding events, ranging from small fluctuations to large-scale openings, that transiently break backbone hydrogen bonds. The measured exchange rates report on the stability and folding cooperativity of individual protein segments. We propose that cooperative unfolding regions correspond to mechanically stiff elements that can transmit force or store strain energy. In contrast, regions of low cooperativity correspond to flexible elements that can optimize binding interfaces and enable rapid motions. This interpretation rationalizes functional data across a diverse array of systems. In the second part, we characterize the hydrogen bond network and condensation of yeast Pab1, a stress granule marker that, unlike proteins that undergo reversible liquid-liquid phase separation, condenses irreversibly. We propose a sequential activation model in which each of four RRM domains activates at progressively higher temperatures, partially unfolds, and associates with other activated RRMs. Our latest results reveal that three regions within the RRM domains form amyloidogenic latches that account for the condensate's irreversibility. Refreshments will be available 15 minutes prior to the start of the seminar. Sponsor Omenn-Darling Bioengineering Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Measuring the Structural Energetics of Proteins in Water, Membranes and Condensates",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "nam:ps_events:881:delta:0",
     "guid": "ps_events:881:delta:0",
     "sources": [
