@@ -4770,7 +4770,7 @@
       "detail": ""
     },
     "urlRef": "https://dais.princeton.edu/events/2026/princeton-language-intelligence-lunch-series-invitation-only",
-    "content": "Yihe Dong, PLI Sr Research Software Engineer Gabriel Sarch, PLI Postdoctoral Research Fellow",
+    "content": "Yihe Dong, PLI Sr Research Software Engineer Gabriel Sarch, PLI Postdoctoral Research Fellow The seminar recording will be posted at pli.princeton.edu shortly after the event.",
     "rawEventDetails": "Details Event Description Yihe Dong, PLI Sr Research Software Engineer Gabriel Sarch, PLI Postdoctoral Research Fellow",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
@@ -5764,12 +5764,12 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "Bendheim House",
+      "name": "-",
       "id": "",
-      "detail": "103"
+      "detail": ""
     },
     "urlRef": "https://ai.princeton.edu/events/2026/princeton-language-intelligence-lunch-series-invitation-only-0",
-    "content": "Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science",
+    "content": "Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science The seminar recording will be posted at pli.princeton.edu shortly after the event.",
     "rawEventDetails": "Details Event Description Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
@@ -5777,11 +5777,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
-    "locationRaw": "Bendheim House 103",
+    "locationRaw": "-",
     "mappingRules": [
       "ai:title"
     ],
-    "locationRule": "unambiguous_room",
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
@@ -5919,12 +5919,12 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "Bendheim House",
+      "name": "-",
       "id": "",
-      "detail": "103"
+      "detail": ""
     },
     "urlRef": "https://dais.princeton.edu/events/2026/princeton-language-intelligence-lunch-series-invitation-only-0",
-    "content": "Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science",
+    "content": "Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science The seminar recording will be posted at pli.princeton.edu shortly after the event.",
     "rawEventDetails": "Details Event Description Yida Yin, PhD Candidate in Computer Science Jeffrey Cheng, PhD Candidate in Computer Science",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
@@ -5932,11 +5932,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
-    "locationRaw": "Bendheim House 103",
+    "locationRaw": "-",
     "mappingRules": [
       "dais:summary-is-title"
     ],
-    "locationRule": "unambiguous_room",
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
