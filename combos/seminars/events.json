@@ -1646,6 +1646,64 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4091:delta:0",
+    "guid": "ps_events:4091:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-10T16:00:00Z",
+    "endsAt": "2026-11-10T17:00:00Z",
+    "startTime": "2026-11-10T11:00:00",
+    "endTime": "2026-11-10T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Atomic Precision at Wafer Scale for Electronic and Quantum Technologies",
+    "speakers": [
+      {
+        "name": "Sheldon Zheng",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Sheldon Zheng, MIT",
+    "affiliation": "MIT",
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Other Seminars"
+    ],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Commons Visualization Lab",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-atomic-precision-wafer-scale-electronic-and-quantum-technologies",
+    "content": "Title: Atomic Precision at Wafer Scale for Electronic and Quantum TechnologiesAbstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier",
+    "rawEventDetails": "Details Event Description Title: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies Abstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier is an amorphous oxide about one nanometer thick. For future computing, from energy-efficient AI hardware to scalable quantum processors, a key challenge is to extend atomic-scale control to new materials and interfaces without sacrificing wafer-scale manufacturability. In this talk, I will introduce physical principles that allow atomic precision and wafer-scale manufacturing to coexist for emerging electronic and quantum technologies. First, I will present surface-kinetics-controlled synthesis of an air-stable monolayer superconductor at the inch scale, which reaches a kinetic inductance of ~0.7 nH/sq in superconducting circuits, together with atomically thin n-type and p-type semiconductors for CMOS applications. Second, I will discuss electrostatic-force-enabled transfer and heterogenous integration of these materials onto functional electronic and superconducting circuits with clean, minimally damaged interfaces. Finally, I will show how nano-scale strain modulates the band structures in ultra-scaled 2D transistors, delivering on-currents above 1 mA/\u00b5m at 1 V with CMOS-compatible contacts. These studies, spanning material synthesis, interface formation, and device engineering, demonstrate that atomic precision can be achieved at wafer scale and open new opportunities for energy-efficient electronics and scalable quantum technologies.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies, Sheldon Zheng (MIT)",
+    "locationRaw": "Commons Visualization Lab",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "orfe:ps_events:12781:delta:0",
     "guid": "ps_events:12781:delta:0",
     "sources": [
@@ -2143,6 +2201,64 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4096:delta:0",
+    "guid": "ps_events:4096:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T16:00:00Z",
+    "endsAt": "2026-11-19T17:00:00Z",
+    "startTime": "2026-11-19T11:00:00",
+    "endTime": "2026-11-19T12:00:00",
+    "timezone": "America/New_York",
+    "title": "An Other Seminars Talk by Xin Wei, Stanford",
+    "speakers": [
+      {
+        "name": "Xin Wei",
+        "affiliation": "Stanford"
+      }
+    ],
+    "speaker": "Xin Wei, Stanford",
+    "affiliation": "Stanford",
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Other Seminars"
+    ],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Jadwin",
+      "id": "",
+      "detail": "A06"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-xin-wei-stanford",
+    "content": "Title: TBDAbstract: TBD",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: TBD, Xin Wei (Stanford)",
+    "locationRaw": "Jadwin A06",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "bioengineering:ps_events:2916:delta:0",
     "guid": "ps_events:2916:delta:0",
     "sources": [
@@ -2362,6 +2478,64 @@
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:4121:delta:0",
+    "guid": "ps_events:4121:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T20:00:00Z",
+    "endsAt": "2026-11-23T21:00:00Z",
+    "startTime": "2026-11-23T15:00:00",
+    "endTime": "2026-11-23T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Many-body effects in high harmonic generation from quantum matter",
+    "speakers": [
+      {
+        "name": "Mingyao Guo",
+        "affiliation": "Caltech"
+      }
+    ],
+    "speaker": "Mingyao Guo, Caltech",
+    "affiliation": "Caltech",
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Other Seminars"
+    ],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Jadwin",
+      "id": "",
+      "detail": "A09"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-many-body-effects-high-harmonic-generation-quantum-matter-mingyao",
+    "content": "Title: Many-body effects in high harmonic generation from quantum matter Abstract: Quantum materials host intertwined charge, spin, orbital, and lattice degrees of freedom, providing a rich setting for exploring light\u2013matter interactions. In the strong-field regime, high harmonic generation (HHG) connects coherent electron dynamics driven by intense lightwaves to extremely nonlinear light emission. Yet how many-body interactions shape this process on sub-optical-cycle timescales remains an open question. In this talk, I will highlight our",
+    "rawEventDetails": "Details Event Description Title: Many-body effects in high harmonic generation from quantum matter Abstract: Quantum materials host intertwined charge, spin, orbital, and lattice degrees of freedom, providing a rich setting for exploring light\u2013matter interactions. In the strong-field regime, high harmonic generation (HHG) connects coherent electron dynamics driven by intense lightwaves to extremely nonlinear light emission. Yet how many-body interactions shape this process on sub-optical-cycle timescales remains an open question. In this talk, I will highlight our recent efforts to understand and control HHG in quantum matter. I will first demonstrate how collective magnetism emerging at millielectronvolt energies enables switching of HHG on the petahertz frequency scale in an antiferromagnet. Turning from manipulation of the harmonic yield to the structure of the emission spectrum, I will then present our discovery of non-integer HHG arising from strong electron correlations in a cuprate Mott insulator. Together, these examples illustrate how high harmonic radiation can both reveal and be tailored by emergent many-body phenomena, opening new pathways towards lightwave electronics and attosecond technologies enabled by quantum materials.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: Many-body effects in high harmonic generation from quantum matter, Mingyao Guo (Caltech)",
+    "locationRaw": "Jadwin A09",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,

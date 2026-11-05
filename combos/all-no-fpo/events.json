@@ -5135,12 +5135,16 @@
     ],
     "speaker": "Sheldon Zheng, MIT",
     "affiliation": "MIT",
-    "series": "Special Quantum Seminar",
-    "tags": [],
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
     "purposes": [
       "engineering-newsletter"
     ],
-    "rawCategories": [],
+    "rawCategories": [
+      "Other Seminars"
+    ],
     "unmappedTags": [
       "Special Quantum Seminar"
     ],
@@ -7121,6 +7125,64 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4096:delta:0",
+    "guid": "ps_events:4096:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T16:00:00Z",
+    "endsAt": "2026-11-19T17:00:00Z",
+    "startTime": "2026-11-19T11:00:00",
+    "endTime": "2026-11-19T12:00:00",
+    "timezone": "America/New_York",
+    "title": "An Other Seminars Talk by Xin Wei, Stanford",
+    "speakers": [
+      {
+        "name": "Xin Wei",
+        "affiliation": "Stanford"
+      }
+    ],
+    "speaker": "Xin Wei, Stanford",
+    "affiliation": "Stanford",
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Other Seminars"
+    ],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Jadwin",
+      "id": "",
+      "detail": "A06"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-xin-wei-stanford",
+    "content": "Title: TBDAbstract: TBD",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: TBD, Xin Wei (Stanford)",
+    "locationRaw": "Jadwin A06",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4216:delta:3",
     "guid": "ps_events:4216:delta:3",
     "sources": [
@@ -7276,6 +7338,60 @@
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:4101:delta:0",
+    "guid": "ps_events:4101:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T20:00:00Z",
+    "endsAt": "2026-11-19T21:00:00Z",
+    "startTime": "2026-11-19T15:00:00",
+    "endTime": "2026-11-19T16:00:00",
+    "timezone": "America/New_York",
+    "title": "A Special Quantum Seminar Talk by Anant Kale, Harvard",
+    "speakers": [
+      {
+        "name": "Anant Kale",
+        "affiliation": "Harvard"
+      }
+    ],
+    "speaker": "Anant Kale, Harvard",
+    "affiliation": "Harvard",
+    "series": "Special Quantum Seminar",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-anant-kale-harvard",
+    "content": "Title: TBDAbstract: TBD",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: TBD, Anant Kale (Harvard)",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
     "mappingConflict": false
   },
   {
@@ -7496,6 +7612,60 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4106:delta:0",
+    "guid": "ps_events:4106:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-20T19:30:00Z",
+    "endsAt": "2026-11-20T20:30:00Z",
+    "startTime": "2026-11-20T14:30:00",
+    "endTime": "2026-11-20T15:30:00",
+    "timezone": "America/New_York",
+    "title": "A Special Quantum Seminar Talk by Natalie Parham, Columbia",
+    "speakers": [
+      {
+        "name": "Natalie Parham",
+        "affiliation": "Columbia"
+      }
+    ],
+    "speaker": "Natalie Parham, Columbia",
+    "affiliation": "Columbia",
+    "series": "Special Quantum Seminar",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "TBD:",
+      "id": "",
+      "detail": "CS105"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-natalie-parham-columbia",
+    "content": "Title: TBDAbstract: TBD",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: TBD, Natalie Parham (Columbia)",
+    "locationRaw": "TBD: CS105",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4936:delta:0",
     "guid": "ps_events:4936:delta:0",
     "sources": [
@@ -7552,6 +7722,60 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4111:delta:0",
+    "guid": "ps_events:4111:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-20T21:00:00Z",
+    "endsAt": "2026-11-20T22:00:00Z",
+    "startTime": "2026-11-20T16:00:00",
+    "endTime": "2026-11-20T17:00:00",
+    "timezone": "America/New_York",
+    "title": "A Special Quantum Seminar Talk by Joern Bannies, UC Berkeley",
+    "speakers": [
+      {
+        "name": "Joern Bannies",
+        "affiliation": "UC Berkeley"
+      }
+    ],
+    "speaker": "Joern Bannies, UC Berkeley",
+    "affiliation": "UC Berkeley",
+    "series": "Special Quantum Seminar",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Jadwin",
+      "id": "",
+      "detail": "A10"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-joern-bannies-uc-berkeley",
+    "content": "Title: TBDAbstract: TBD",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: TBD, Joern Bannies (UC Berkeley)",
+    "locationRaw": "Jadwin A10",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:3821:delta:0",
     "guid": "ps_events:3821:delta:0",
     "sources": [
@@ -7602,6 +7826,118 @@
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:4116:delta:0",
+    "guid": "ps_events:4116:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T18:30:00Z",
+    "endsAt": "2026-11-23T19:30:00Z",
+    "startTime": "2026-11-23T13:30:00",
+    "endTime": "2026-11-23T14:30:00",
+    "timezone": "America/New_York",
+    "title": "A Special Quantum Seminar Talk by Norah Tan, MIT",
+    "speakers": [
+      {
+        "name": "Norah Tan",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Norah Tan, MIT",
+    "affiliation": "MIT",
+    "series": "Special Quantum Seminar",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Jadwin",
+      "id": "",
+      "detail": "A10"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-norah-tan-mit",
+    "content": "Title: TBDAbstract: TBD",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: TBD, Norah Tan (MIT)",
+    "locationRaw": "Jadwin A10",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:4121:delta:0",
+    "guid": "ps_events:4121:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T20:00:00Z",
+    "endsAt": "2026-11-23T21:00:00Z",
+    "startTime": "2026-11-23T15:00:00",
+    "endTime": "2026-11-23T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Many-body effects in high harmonic generation from quantum matter",
+    "speakers": [
+      {
+        "name": "Mingyao Guo",
+        "affiliation": "Caltech"
+      }
+    ],
+    "speaker": "Mingyao Guo, Caltech",
+    "affiliation": "Caltech",
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Other Seminars"
+    ],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Jadwin",
+      "id": "",
+      "detail": "A09"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-many-body-effects-high-harmonic-generation-quantum-matter-mingyao",
+    "content": "Title: Many-body effects in high harmonic generation from quantum matter Abstract: Quantum materials host intertwined charge, spin, orbital, and lattice degrees of freedom, providing a rich setting for exploring light\u2013matter interactions. In the strong-field regime, high harmonic generation (HHG) connects coherent electron dynamics driven by intense lightwaves to extremely nonlinear light emission. Yet how many-body interactions shape this process on sub-optical-cycle timescales remains an open question. In this talk, I will highlight our",
+    "rawEventDetails": "Details Event Description Title: Many-body effects in high harmonic generation from quantum matter Abstract: Quantum materials host intertwined charge, spin, orbital, and lattice degrees of freedom, providing a rich setting for exploring light\u2013matter interactions. In the strong-field regime, high harmonic generation (HHG) connects coherent electron dynamics driven by intense lightwaves to extremely nonlinear light emission. Yet how many-body interactions shape this process on sub-optical-cycle timescales remains an open question. In this talk, I will highlight our recent efforts to understand and control HHG in quantum matter. I will first demonstrate how collective magnetism emerging at millielectronvolt energies enables switching of HHG on the petahertz frequency scale in an antiferromagnet. Turning from manipulation of the harmonic yield to the structure of the emission spectrum, I will then present our discovery of non-integer HHG arising from strong electron correlations in a cuprate Mott insulator. Together, these examples illustrate how high harmonic radiation can both reveal and be tailored by emergent many-body phenomena, opening new pathways towards lightwave electronics and attosecond technologies enabled by quantum materials.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: Many-body effects in high harmonic generation from quantum matter, Mingyao Guo (Caltech)",
+    "locationRaw": "Jadwin A09",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
