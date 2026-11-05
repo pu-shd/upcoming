@@ -56,62 +56,6 @@
     "mappingConflict": false
   },
   {
-    "id": "quantum:ps_events:3776:delta:0",
-    "guid": "ps_events:3776:delta:0",
-    "sources": [
-      "quantum"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-05T16:10:00Z",
-    "endsAt": "2026-10-05T17:10:00Z",
-    "startTime": "2026-10-05T12:10:00",
-    "endTime": "2026-10-05T13:10:00",
-    "timezone": "America/New_York",
-    "title": "Many body quantum games",
-    "speakers": [
-      {
-        "name": "Rahul Nandkishore",
-        "affiliation": "University of Colorado, Boulder"
-      }
-    ],
-    "speaker": "Rahul Nandkishore, University of Colorado, Boulder",
-    "affiliation": "University of Colorado, Boulder",
-    "series": "Princeton Quantum Colloquium",
-    "tags": [
-      "colloquium"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Princeton Quantum Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen Hall",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-many-body-quantum-games-rahul-nandkishore-university-colorado",
-    "content": "Title: Many body quantum games Abstract: I will discuss co-ordinational games played on quantum devices from the perspective of many body physics. In the first half of the talk, I will discuss how concepts from many body physics may be used to secure robust and provable quantum advantage at concrete scalable tasks on already existing quantum devices. In the second part of my talk, I will discuss how already existing quantum devices may be used to learn new things about many body quantum physicsA light lunch will be served in the Bowen",
-    "rawEventDetails": "Details Event Description Title: Many body quantum games Abstract: I will discuss co-ordinational games played on quantum devices from the perspective of many body physics. In the first half of the talk, I will discuss how concepts from many body physics may be used to secure robust and provable quantum advantage at concrete scalable tasks on already existing quantum devices. In the second part of my talk, I will discuss how already existing quantum devices may be used to learn new things about many body quantum physics A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: Many body quantum games, Rahul Nandkishore (University of Colorado, Boulder)",
-    "locationRaw": "Bowen Hall",
-    "mappingRules": [
-      "quantum:series-title-comma-person"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2766:delta:0",
     "guid": "ps_events:2766:delta:0",
     "sources": [

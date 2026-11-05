@@ -104,62 +104,6 @@
     "mappingConflict": false
   },
   {
-    "id": "quantum:ps_events:3776:delta:0",
-    "guid": "ps_events:3776:delta:0",
-    "sources": [
-      "quantum"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-05T16:10:00Z",
-    "endsAt": "2026-10-05T17:10:00Z",
-    "startTime": "2026-10-05T12:10:00",
-    "endTime": "2026-10-05T13:10:00",
-    "timezone": "America/New_York",
-    "title": "Many body quantum games",
-    "speakers": [
-      {
-        "name": "Rahul Nandkishore",
-        "affiliation": "University of Colorado, Boulder"
-      }
-    ],
-    "speaker": "Rahul Nandkishore, University of Colorado, Boulder",
-    "affiliation": "University of Colorado, Boulder",
-    "series": "Princeton Quantum Colloquium",
-    "tags": [
-      "colloquium"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Princeton Quantum Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen Hall",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-many-body-quantum-games-rahul-nandkishore-university-colorado",
-    "content": "Title: Many body quantum games Abstract: I will discuss co-ordinational games played on quantum devices from the perspective of many body physics. In the first half of the talk, I will discuss how concepts from many body physics may be used to secure robust and provable quantum advantage at concrete scalable tasks on already existing quantum devices. In the second part of my talk, I will discuss how already existing quantum devices may be used to learn new things about many body quantum physicsA light lunch will be served in the Bowen",
-    "rawEventDetails": "Details Event Description Title: Many body quantum games Abstract: I will discuss co-ordinational games played on quantum devices from the perspective of many body physics. In the first half of the talk, I will discuss how concepts from many body physics may be used to secure robust and provable quantum advantage at concrete scalable tasks on already existing quantum devices. In the second part of my talk, I will discuss how already existing quantum devices may be used to learn new things about many body quantum physics A light lunch will be served in the Bowen Atrium at 11:45am. Sponsor Sarang Gopalakrishnan",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: Many body quantum games, Rahul Nandkishore (University of Colorado, Boulder)",
-    "locationRaw": "Bowen Hall",
-    "mappingRules": [
-      "quantum:series-title-comma-person"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2766:delta:0",
     "guid": "ps_events:2766:delta:0",
     "sources": [
@@ -5165,6 +5109,60 @@
       "ece:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:4091:delta:0",
+    "guid": "ps_events:4091:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-10T16:00:00Z",
+    "endsAt": "2026-11-10T17:00:00Z",
+    "startTime": "2026-11-10T11:00:00",
+    "endTime": "2026-11-10T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Atomic Precision at Wafer Scale for Electronic and Quantum Technologies",
+    "speakers": [
+      {
+        "name": "Sheldon Zheng",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Sheldon Zheng, MIT",
+    "affiliation": "MIT",
+    "series": "PQI Fellowship",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [
+      "PQI Fellowship"
+    ],
+    "location": {
+      "name": "Commons Visualization Lab",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/pqi-fellowship-atomic-precision-wafer-scale-electronic-and-quantum-technologies-sheldon",
+    "content": "Title: Atomic Precision at Wafer Scale for Electronic and Quantum TechnologiesAbstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier",
+    "rawEventDetails": "Details Event Description Title: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies Abstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier is an amorphous oxide about one nanometer thick. For future computing, from energy-efficient AI hardware to scalable quantum processors, a key challenge is to extend atomic-scale control to new materials and interfaces without sacrificing wafer-scale manufacturability. In this talk, I will introduce physical principles that allow atomic precision and wafer-scale manufacturing to coexist for emerging electronic and quantum technologies. First, I will present surface-kinetics-controlled synthesis of an air-stable monolayer superconductor at the inch scale, which reaches a kinetic inductance of ~0.7 nH/sq in superconducting circuits, together with atomically thin n-type and p-type semiconductors for CMOS applications. Second, I will discuss electrostatic-force-enabled transfer and heterogenous integration of these materials onto functional electronic and superconducting circuits with clean, minimally damaged interfaces. Finally, I will show how nano-scale strain modulates the band structures in ultra-scaled 2D transistors, delivering on-currents above 1 mA/\u00b5m at 1 V with CMOS-compatible contacts. These studies, spanning material synthesis, interface formation, and device engineering, demonstrate that atomic precision can be achieved at wafer scale and open new opportunities for energy-efficient electronics and scalable quantum technologies.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PQI Fellowship: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies, Sheldon Zheng (MIT)",
+    "locationRaw": "Commons Visualization Lab",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "whole",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
