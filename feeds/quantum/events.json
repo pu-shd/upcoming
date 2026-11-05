@@ -465,21 +465,21 @@
     ],
     "speaker": "Sheldon Zheng, MIT",
     "affiliation": "MIT",
-    "series": "PQI Fellowship",
+    "series": "Special Quantum Seminar",
     "tags": [],
     "purposes": [
       "engineering-newsletter"
     ],
     "rawCategories": [],
     "unmappedTags": [
-      "PQI Fellowship"
+      "Special Quantum Seminar"
     ],
     "location": {
       "name": "Commons Visualization Lab",
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/pqi-fellowship-atomic-precision-wafer-scale-electronic-and-quantum-technologies-sheldon",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-atomic-precision-wafer-scale-electronic-and-quantum-technologies",
     "content": "Title: Atomic Precision at Wafer Scale for Electronic and Quantum TechnologiesAbstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier",
     "rawEventDetails": "Details Event Description Title: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies Abstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier is an amorphous oxide about one nanometer thick. For future computing, from energy-efficient AI hardware to scalable quantum processors, a key challenge is to extend atomic-scale control to new materials and interfaces without sacrificing wafer-scale manufacturability. In this talk, I will introduce physical principles that allow atomic precision and wafer-scale manufacturing to coexist for emerging electronic and quantum technologies. First, I will present surface-kinetics-controlled synthesis of an air-stable monolayer superconductor at the inch scale, which reaches a kinetic inductance of ~0.7 nH/sq in superconducting circuits, together with atomically thin n-type and p-type semiconductors for CMOS applications. Second, I will discuss electrostatic-force-enabled transfer and heterogenous integration of these materials onto functional electronic and superconducting circuits with clean, minimally damaged interfaces. Finally, I will show how nano-scale strain modulates the band structures in ultra-scaled 2D transistors, delivering on-currents above 1 mA/\u00b5m at 1 V with CMOS-compatible contacts. These studies, spanning material synthesis, interface formation, and device engineering, demonstrate that atomic precision can be achieved at wafer scale and open new opportunities for energy-efficient electronics and scalable quantum technologies.",
     "rawExtractAbstract": "",
@@ -487,7 +487,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "PQI Fellowship: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies, Sheldon Zheng (MIT)",
+    "summaryRaw": "Special Quantum Seminar: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies, Sheldon Zheng (MIT)",
     "locationRaw": "Commons Visualization Lab",
     "mappingRules": [
       "quantum:series-title-comma-person"
