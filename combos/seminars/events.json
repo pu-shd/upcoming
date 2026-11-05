@@ -1,56 +1,5 @@
 [
   {
-    "id": "cbe:ps_events:5296:delta:0",
-    "guid": "ps_events:5296:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-09-30T20:00:00Z",
-    "endsAt": "2026-09-30T21:00:00Z",
-    "startTime": "2026-09-30T16:00:00",
-    "endTime": "2026-09-30T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Flow, Structure, and Motion Correlation in Nearly-jammed Suspensions",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F204"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/flow-structure-and-motion-correlation-nearly-jammed-suspensions",
-    "content": "Some general introductory ideas about suspensions of particles in liquids as well as a set of new findings will be developed in this talk. Suspensions are found in many forms and settings, and the compositions and properties can vary widely. However, certain issues prevail: one is the influence of the liquid through hydrodynamic interactions, and a second is the importance of the solid fraction and interparticle forces in controlling the flow properties, which we usually call the rheology of the material. Suspensions include colloidal dispersions of nanoparticles as well as cases",
-    "rawEventDetails": "Speaker Jeffrey Morris Affiliation The City College of New York Details Event Description Some general introductory ideas about suspensions of particles in liquids as well as a set of new findings will be developed in this talk. Suspensions are found in many forms and settings, and the compositions and properties can vary widely. However, certain issues prevail: one is the influence of the liquid through hydrodynamic interactions, and a second is the importance of the solid fraction and interparticle forces in controlling the flow properties, which we usually call the rheology of the material. Suspensions include colloidal dispersions of nanoparticles as well as cases involving somewhat larger particles such as cement, ceramics, and mud. The last three are all examples of dense suspensions, with solid fraction approaching the limit of flowability known as jamming. Because the rheology most often depends on the magnitude of the applied forces (e.g. pressure gradient in a pipe flow), suspensions are complex fluids \u2013 or they may be unyielded soft solids that can be caused to flow by enough force, as seen in the examples of cement mortars or muds. Here, we will present results based on simulations of suspensions approaching jamming to illustrate the unique features of these materials. These include discontinuous shear thickening (DST) as well as shear-induced jamming. The role of interparticle forces, including conservative and frictional contact forces, and the imposed stress in this process will be briefly reviewed, followed by our current examination of structures that are found to be related to the abrupt flow transitions. On approach to jamming, these structures develop as a result of the progressive reduction of the particle degrees of freedom in their motion as networks of contacts are formed. These networks rapidly break and reform during flow, but give rise to strongly correlated near-rigid motions of identifiable domains or \u201ctransient clusters.\u201d The resulting fluctuations in motion become dominant as jamming is approached. In the DST regime, the contact number is found to fluctuate very strongly, but can result in highly connected but once again transient structures; system-spanning, or percolating, structures of frictionally-contacting particles are found to have important influence on the observed rheology.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Flow, Structure, and Motion Correlation in Nearly-jammed Suspensions",
-    "locationRaw": "F204 SEAS-CBE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "mae:ps_events:4846:delta:0",
     "guid": "ps_events:4846:delta:0",
     "sources": [
