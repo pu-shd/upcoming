@@ -2716,6 +2716,64 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4131:delta:0",
+    "guid": "ps_events:4131:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T20:00:00Z",
+    "endsAt": "2026-11-23T21:00:00Z",
+    "startTime": "2026-11-23T15:00:00",
+    "endTime": "2026-11-23T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Many-body effects in high harmonic generation from quantum matter",
+    "speakers": [
+      {
+        "name": "Mingyao Guo",
+        "affiliation": "Caltech"
+      }
+    ],
+    "speaker": "Mingyao Guo, Caltech",
+    "affiliation": "Caltech",
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Other Seminars"
+    ],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "Jadwin",
+      "id": "",
+      "detail": "A09"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-many-body-effects-high-harmonic-generation-quantum-matter-mingyao",
+    "content": "Title: Many-body effects in high harmonic generation from quantum matter Abstract: Quantum materials host intertwined charge, spin, orbital, and lattice degrees of freedom, providing a rich setting for exploring light\u2013matter interactions. In the strong-field regime, high harmonic generation (HHG) connects coherent electron dynamics driven by intense lightwaves to extremely nonlinear light emission. Yet how many-body interactions shape this process on sub-optical-cycle timescales remains an open question. In this talk, I will highlight our",
+    "rawEventDetails": "Details Event Description Title: Many-body effects in high harmonic generation from quantum matter Abstract: Quantum materials host intertwined charge, spin, orbital, and lattice degrees of freedom, providing a rich setting for exploring light\u2013matter interactions. In the strong-field regime, high harmonic generation (HHG) connects coherent electron dynamics driven by intense lightwaves to extremely nonlinear light emission. Yet how many-body interactions shape this process on sub-optical-cycle timescales remains an open question. In this talk, I will highlight our recent efforts to understand and control HHG in quantum matter. I will first demonstrate how collective magnetism emerging at millielectronvolt energies enables switching of HHG on the petahertz frequency scale in an antiferromagnet. Turning from manipulation of the harmonic yield to the structure of the emission spectrum, I will then present our discovery of non-integer HHG arising from strong electron correlations in a cuprate Mott insulator. Together, these examples illustrate how high harmonic radiation can both reveal and be tailored by emergent many-body phenomena, opening new pathways towards lightwave electronics and attosecond technologies enabled by quantum materials.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: Many-body effects in high harmonic generation from quantum matter, Mingyao Guo (Caltech)",
+    "locationRaw": "Jadwin A09",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:4121:delta:0",
     "guid": "ps_events:4121:delta:0",
     "sources": [
@@ -2808,9 +2866,9 @@
       "Special Quantum Seminar"
     ],
     "location": {
-      "name": "",
+      "name": "Jadwin",
       "id": "",
-      "detail": ""
+      "detail": "A010"
     },
     "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-simon-fischer-university-cambridge",
     "content": "Title: TBD Abstract: TBD",
@@ -2821,11 +2879,69 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Special Quantum Seminar: TBD, Simon Fischer (University of Cambridge)",
-    "locationRaw": "",
+    "locationRaw": "Jadwin A010",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
-    "locationRule": "declined",
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "quantum:ps_events:4136:delta:0",
+    "guid": "ps_events:4136:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-25T19:00:00Z",
+    "endsAt": "2026-11-25T20:00:00Z",
+    "startTime": "2026-11-25T14:00:00",
+    "endTime": "2026-11-25T15:00:00",
+    "timezone": "America/New_York",
+    "title": "An Other Seminars Talk by Joseph Carolan, U Maryland",
+    "speakers": [
+      {
+        "name": "Joseph Carolan",
+        "affiliation": "U Maryland"
+      }
+    ],
+    "speaker": "Joseph Carolan, U Maryland",
+    "affiliation": "U Maryland",
+    "series": "Other Seminars",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Other Seminars"
+    ],
+    "unmappedTags": [
+      "Special Quantum Seminar"
+    ],
+    "location": {
+      "name": "TBD: CS",
+      "id": "",
+      "detail": "105"
+    },
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-joseph-carolan-u-maryland",
+    "content": "Title: TBD Abstract: TBD",
+    "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: TBD, Joseph Carolan (U Maryland)",
+    "locationRaw": "TBD: CS 105",
+    "mappingRules": [
+      "quantum:series-title-comma-person"
+    ],
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
