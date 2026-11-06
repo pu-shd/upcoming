@@ -6463,7 +6463,7 @@
     "startTime": "2026-11-16T12:10:00",
     "endTime": "2026-11-16T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by James Thompson, University of Colorado, Boulder",
+    "title": "Photon-Mediated Interactions for Quantum Sensing and Simulation",
     "speakers": [
       {
         "name": "James Thompson",
@@ -6488,23 +6488,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-james-thompson-university-colorado-boulder",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-photon-mediated-interactions-quantum-sensing-and-simulation",
+    "content": "Title: Photon-Mediated Interactions for Quantum Sensing and Simulation Abstract: Modern atomic physics enables remarkable control over the quantum states of atoms. This control underlies technologies such as precision timekeeping and navigation, and provides sensitive probes of new physics. An important frontier is to understand how to sculpt interactions between atoms so that they develop correlations and entanglement. Such collective quantum behavior can enhance the",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, James Thompson (University of Colorado, Boulder)",
+    "summaryRaw": "Princeton Quantum Colloquium: Photon-Mediated Interactions for Quantum Sensing and Simulation, James Thompson (University of Colorado, Boulder)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
