@@ -296,6 +296,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11331:delta:0",
+    "guid": "ps_events:11331:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-10T16:00:00Z",
+    "endsAt": "2026-11-10T17:00:00Z",
+    "startTime": "2026-11-10T11:00:00",
+    "endTime": "2026-11-10T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Special Quantum Seminar: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies, Sheldon Zheng (MIT)",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Commons Visualization Lab",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ece.princeton.edu/events/special-quantum-seminar-atomic-precision-wafer-scale-electronic-and-quantum-technologies",
+    "content": "Abstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier is an amorphous oxide about one nanometer thick. For future computing, from energy-efficient AI",
+    "rawEventDetails": "Details Event Description Abstract: Progress in solid-state electronics has been driven by increasingly precise control over electrons, atoms, and interfaces. From controlled doping to high-\u03ba/metal-gate stacks and gate-all-around nanosheets, each generation of silicon CMOS technology has depended on engineering matter at the scale of a few atoms. Superconducting quantum computing rests on a similar foundation: the nonlinearity that defines a qubit comes from a Josephson junction whose tunnel barrier is an amorphous oxide about one nanometer thick. For future computing, from energy-efficient AI hardware to scalable quantum processors, a key challenge is to extend atomic-scale control to new materials and interfaces without sacrificing wafer-scale manufacturability. In this talk, I will introduce physical principles that allow atomic precision and wafer-scale manufacturing to coexist for emerging electronic and quantum technologies. First, I will present surface-kinetics-controlled synthesis of an air-stable monolayer superconductor at the inch scale, which reaches a kinetic inductance of ~0.7 nH/sq in superconducting circuits, together with atomically thin n-type and p-type semiconductors for CMOS applications. Second, I will discuss electrostatic-force-enabled transfer and heterogenous integration of these materials onto functional electronic and superconducting circuits with clean, minimally damaged interfaces. Finally, I will show how nano-scale strain modulates the band structures in ultra-scaled 2D transistors, delivering on-currents above 1 mA/\u00b5m at 1 V with CMOS-compatible contacts. These studies, spanning material synthesis, interface formation, and device engineering, demonstrate that atomic precision can be achieved at wafer scale and open new opportunities for energy-efficient electronics and scalable quantum technologies. Sponsor Host: Professor Nathalie de Leon, ECE",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar: Atomic Precision at Wafer Scale for Electronic and Quantum Technologies, Sheldon Zheng (MIT)",
+    "locationRaw": "Commons Visualization Lab",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ece:ps_events:11061:delta:0",
     "guid": "ps_events:11061:delta:0",
     "sources": [
