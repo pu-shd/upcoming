@@ -7144,6 +7144,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/yiming-zuo-fpo",
+    "guid": "https://www.cs.princeton.edu/events/yiming-zuo-fpo",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-20T13:30:00Z",
+    "endsAt": "2026-11-20T15:30:00Z",
+    "startTime": "2026-11-20T08:30:00",
+    "endTime": "2026-11-20T10:30:00",
+    "timezone": "America/New_York",
+    "title": "Yiming Zuo FPO",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "202"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/yiming-zuo-fpo",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Yiming Zuo FPO",
+    "locationRaw": "Friend Center 202",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4756:delta:0",
     "guid": "ps_events:4756:delta:0",
     "sources": [
