@@ -215,53 +215,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ece:ps_events:10996:delta:0",
-    "guid": "ps_events:10996:delta:0",
-    "sources": [
-      "ece"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-07T20:30:00Z",
-    "endsAt": "2026-10-07T21:30:00Z",
-    "startTime": "2026-10-07T16:30:00",
-    "endTime": "2026-10-07T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Internet of Radar Things: Turning a World of Radios into One Radar",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Engineering Quadrangle",
-      "id": "",
-      "detail": "B205"
-    },
-    "urlRef": "https://ece.princeton.edu/events/internet-radar-things-turning-world-radios-one-radar",
-    "content": "Abstract: Almost every wireless device transmits over the air to communicate, and an increasing fraction of these devices can also use their signals to sense the physical world. As integrated sensing and communication (ISAC) is moving from research into standards, these radios periodically sense the world from the response of the environment on their transmitted signal. At the same time, WiFi, cellular, and automotive platforms are expanding into millimeter-wave spectrum, where wide bandwidths and compact antenna arrays provide fine spatial and temporal",
-    "rawEventDetails": "Speaker Akshay Gadre Affiliation University of Washington Details Event Description Abstract: Almost every wireless device transmits over the air to communicate, and an increasing fraction of these devices can also use their signals to sense the physical world. As integrated sensing and communication (ISAC) is moving from research into standards, these radios periodically sense the world from the response of the environment on their transmitted signal. At the same time, WiFi, cellular, and automotive platforms are expanding into millimeter-wave spectrum, where wide bandwidths and compact antenna arrays provide fine spatial and temporal resolution, Together, these trends create the foundation for an Internet of Radar Things (IoRT) : a dense population of access points, base stations, vehicles, robots, and mobile devices whose radios can sense while they communicate. Unfortunately, a network of these sensing-capable radios operates largely as n isolated monostatic sensors: each independently occupies spectrum, illuminates an overlapping environment, and retains only the echoes at its own small aperture. These discarded paths contain complementary viewpoints that could extend coverage through occlusions, distinguish physical objects from multipath ghosts, and synthesize apertures far larger than any individual device. This talk presents a unique vision to coordinate these distributed radars coherently to turn this world of radios into one mega-radar. In this talk, we will first present the unique capabilities such a coherent future could enable and how we achieve coherence on commodity off-the-shelf radars to demonstrate these solutions. We specifically show how distributed radars can eliminate ghost artifacts and improve sensing capability, how we can extract material characteristics of objects using this large aperture and how we can use coherence-in-motion to develop free-flowing hand-held imaging solutions for mmWave radars. We further demonstrate how these improvements can directly translate to WiFi and cellular radios. Finally, we end the talk by describing open challenges that still need to be addressed to unleash the true potential of the Internet of Radar Things. Bio: Akshay Gadre is an Assistant Professor at Electrical and Computer Engineering department at the University of Washington. He leads the Networking and Emerging Wireless Technologies (NEWT) Lab at the University of Washington where they explore the upcoming application domains such as satellite IoT, mmWave radars and underwater devices, to apply wireless expertise for improving communication and sensing capability of these devices while preserving the security and privacy of sensor data. Further, the lab explores novel interaction mechanisms for future smart devices such as smart gloves and XR systems using novel force sensing and gaze modalities. His previous research at Carnegie Mellon University operated at the intersection of wireless, mobile and cyber-physical systems with special focus on empowering the low-power Internet-of-Things devices deployed on earth and space. NEWT Lab is also translating these technologies to industry partners including General Motors and IDD Aerospace. His work is published in premier wireless and mobile systems venues including ACM MobiCom, MobiSys, SenSys, Transactions on Sensor Networks and NSDI. Their lab's work has won two best paper awards, four best demo awards, two best-demo runner up awards at these venues. Both Akshay and his students have received the best PhD Forum presentation award at the CPS-IoT Week. Their work has been recognized with the T-Mobile T-Challenge 2024 Most Engaging Presentation Award for their vision of radio digital twins for consumer applications as well as the AFRL SDR University Challenge Best Demo award for developing a cheap SDR platform for exploring satellite networking. He has been also recognized with the ACM SIGBED-SIGSOFT Frank Anger Memorial Award 2021 for his cross-disciplinary work on IoT networking, cyber-security and software engineering. He was also recognized as a Distinguished TPC Member for his services to ACM SenSys 2026. He received his Bachelor of Technology (Honors) and Master of Technology degrees in Computer Science and Engineering from IIT Madras as well as a Ph.D in Electrical and Computer Engineering from Carnegie Mellon University. Sponsor NextG Wireless",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Internet of Radar Things: Turning a World of Radios into One Radar",
-    "locationRaw": "B205 Engineering Quadrangle",
-    "mappingRules": [
-      "ece:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "citp:ps_events:5261:delta:4",
     "guid": "ps_events:5261:delta:4",
     "sources": [
