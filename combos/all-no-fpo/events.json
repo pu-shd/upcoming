@@ -8096,6 +8096,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11346:delta:0",
+    "guid": "ps_events:11346:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-02T21:30:00Z",
+    "endsAt": "2026-12-02T22:30:00Z",
+    "startTime": "2026-12-02T16:30:00",
+    "endTime": "2026-12-02T17:30:00",
+    "timezone": "America/New_York",
+    "title": "From Scalable Systems to Quantum Computing: Emerging Applications and Computing Challenges",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/scalable-systems-quantum-computing-emerging-applications-and-computing-challenges",
+    "content": "Abstract: Over the past several decades, the high performance computing (HPC) community has played a central role in advancing computing infrastructures, from operating systems to cloud platforms and large-scale distributed environments. Many of the systems challenges addressed by this community are now reappearing in the context of emerging scientific workflows that combine advances in artificial intelligence (AI), HPC, and quantum computing.This talk connects a long-standing research trajectory in scalable systems with more recent work in quantum computing. It",
+    "rawEventDetails": "Speaker Dilma Da Silva Affiliation Texas A&M University Details Event Description Abstract: Over the past several decades, the high performance computing (HPC) community has played a central role in advancing computing infrastructures, from operating systems to cloud platforms and large-scale distributed environments. Many of the systems challenges addressed by this community are now reappearing in the context of emerging scientific workflows that combine advances in artificial intelligence (AI), HPC, and quantum computing. This talk connects a long-standing research trajectory in scalable systems with more recent work in quantum computing. It discusses emerging opportunities for quantum computing in scientific simulation and optimization, with applications in chemistry, materials science, geosciences & energy, illustrating the distinction between promising demonstrations and practical computational advantages. The talk will explore how expertise in HPC and distributed systems can help address the challenges of turning promising quantum computing capabilities into practical applications. As quantum technologies evolve toward larger and more programmable platforms, challenges involving hybrid quantum\u2013classical workflow orchestration, runtime and compilation systems, resource management, distributed control, and reliability are becoming increasingly important. We will discuss how familiar systems abstractions and techniques can contribute to the emerging quantum software stack and enable the integration of quantum resources into scientific computing environments. The presentation will conclude with a brief overview of the evolving U.S. federal research funding landscape in quantum computing, quantum networking, and quantum sensing. Bio: Dilma Da Silva is a Regents Professor and holder of the Ford Design Professorship II in the Department of Computer Science and Engineering at Texas A&M University. From July 2022 to June 2026, she served in several leadership positions at the U.S. National Science Foundation. Her roles at Texas A&M include Department Head (2014-2019), Associate Dean (2019-2020), interim Director of the Texas A&M Institute of Data Science, and interim Director of the Texas A&M Cybersecurity Center. Her primary research interests are high performance computing, computer science education, and quantum computing. Before joining Texas A&M, she worked at Qualcomm Research (2012-2014), IBM Research (2000-2012), and the University of S\u00e3o Paulo (1996-2000). Dilma is an ACM Distinguished Scientist. She received her doctoral degree in computer science from Georgia Tech in 1997 and her bachelor's and master's degrees from the University of S\u00e3o Paulo, Brazil. She is passionate about mentoring and supporting the next generation of computing researchers and practitioners. Sponsor Emerging Frontiers in Computer Architecture and Systems",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "From Scalable Systems to Quantum Computing: Emerging Applications and Computing Challenges",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "orfe:ps_events:12791:delta:0",
     "guid": "ps_events:12791:delta:0",
     "sources": [
