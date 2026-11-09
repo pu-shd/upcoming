@@ -108,62 +108,6 @@
     "mappingConflict": false
   },
   {
-    "id": "materials:ps_events:4096:delta:0",
-    "guid": "ps_events:4096:delta:0",
-    "sources": [
-      "materials"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-07T16:05:00Z",
-    "endsAt": "2026-10-07T17:05:00Z",
-    "startTime": "2026-10-07T12:05:00",
-    "endTime": "2026-10-07T13:05:00",
-    "timezone": "America/New_York",
-    "title": "A PMI/PCCM Seminar Series Talk by Yuriy Roman, Massachusetts Institute of Technology",
-    "speakers": [
-      {
-        "name": "Yuriy Roman",
-        "affiliation": "Massachusetts Institute of Technology"
-      }
-    ],
-    "speaker": "Yuriy Roman, Massachusetts Institute of Technology",
-    "affiliation": "Massachusetts Institute of Technology",
-    "series": "PMI/PCCM Seminar Series",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "PMI/PCCM Seminar Series"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen",
-      "id": "",
-      "detail": "222"
-    },
-    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-yuriy-roman-massachusetts-institute-technology",
-    "content": "Reimagining Thermochemical Catalysis: Promoting Reactions with Electric FieldsAbstract: Catalysis has long relied on conventional handles such as temperature, pressure, and concentration to accelerate chemical reactions. Across biology and electrochemistry, electric fields provide an additional parameter to control rates. Enzymes exploit strong, oriented fields within their active sites to stabilize intermediates and accelerate turnover, while in electrochemistry, interfacial polarization dictates electron and proton transfer rates. In heterogeneous",
-    "rawEventDetails": "Details Event Description Reimagining Thermochemical Catalysis: Promoting Reactions with Electric Fields Abstract : Catalysis has long relied on conventional handles such as temperature, pressure, and concentration to accelerate chemical reactions. Across biology and electrochemistry, electric fields provide an additional parameter to control rates. Enzymes exploit strong, oriented fields within their active sites to stabilize intermediates and accelerate turnover, while in electrochemistry, interfacial polarization dictates electron and proton transfer rates. In heterogeneous thermochemical catalysis, however, little is known about these effects, yet they may offer new opportunities to control reactivity. In this talk, I will describe our group\u2019s efforts to harness electric fields to promote thermochemical reactions. For many electrochemical half-reactions, varying the applied potential accelerates rates by driving rate-controlling proton-coupled electron transfer (PCET) steps. We hypothesized that if an elementary PCET step were embedded within a thermochemical reaction, its strong potential dependence could be leveraged to enhance the overall rate. Because interfacial PCET involves proton exchange across the electric double layer, we anticipated that Br\u00f8nsted acid catalysis, governed by proton transfer, would be particularly susceptible to polarization. First, I will show how spontaneous interfacial fields at conductive particles dispersed in liquid media can measurably modulate turnover rates. Next, I will discuss how applied potentials produce reversible, exponential rate promotion in acid-catalyzed alcohol dehydration, accelerating rates by up to five orders of magnitude while the overall catalytic cycle remains non-Faradaic. Our kinetic analyses reveal that this acceleration arises from a field-driven increase in the population of reactive intermediates prior to the rate-determining step, providing a mechanistic basis for log-linear rate scaling with potential. I will then examine how electrolyte concentration and solvent properties set the interfacial potential profile and the fraction of the potential drop sampled by proton transfer, which separates electrostatic promotion from conventional solvent effects. In highly polar solvents, even trace ionic species can place nominally electrolyte-free reactions in a strongly suppressed regime through the catalyst's native open-circuit potential. Finally, I will highlight our development of polarized slurry reactors, which extend these principles from 2D electrodes to 3D catalyst slurries and enable rate enhancements under conditions more suitable for scale-up. These results establish interfacial electric fields and catalyst potential as design variables for controlling thermochemical reactivity and developing scalable catalytic processes. Bio : Yuriy Rom\u00e1n-Leshkov is the Robert T. Haslam Professor of Chemical Engineering at MIT, where he joined the faculty in 2010 and holds a joint appointment in the Department of Chemistry. His research group works at the intersection of heterogeneous catalysis, materials science, and sustainable chemical processes. His research group designs heterogeneous catalysts and functional materials to tackle sustainability challenges in energy and chemicals. His group pioneered the use of electric fields to promote thermochemical reactions, developed catalytic routes to convert lignin into drop-in sustainable aviation fuel components, established the analytical and reactor engineering foundations for the chemical recycling of polyolefins, and created data-driven tools to predict zeolite synthesis. Several of these technologies are on a path to commercialization. Together, these efforts build the foundation for a circular, low-carbon chemical industry. From 2023 to 2025 he served as Chief Scientist of Solugen, where he led catalyst development for the production of bio-based chemicals at the ton scale. A native of Mexico City, he earned his B.S. at the University of Pennsylvania and his Ph.D. at the University of Wisconsin-Madison under the supervision of Prof. Jim Dumesic, followed by postdoctoral research at Caltech under the guidance of Prof. Mark Davis. He has authored more than 200 peer-reviewed articles and holds 28 patents. His work has been recognized with the Paul H. Emmett Award in Fundamental Catalysis, the International Catalysis Award from the International Association of Catalysis Societies, the NSF CAREER Award, the ACS Early Career in Catalysis Award, the AIChE Catalysis and Reaction Engineering Division Young Investigator Award, among other honors.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Yuriy Roman, Massachusetts Institute of Technology",
-    "locationRaw": "Bowen 222",
-    "mappingRules": [
-      "materials:series-person-affiliation"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
-    "mappingConflict": false
-  },
-  {
     "id": "cbe:ps_events:5301:delta:0",
     "guid": "ps_events:5301:delta:0",
     "sources": [
