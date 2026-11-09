@@ -4607,6 +4607,60 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5561:delta:0",
+    "guid": "ps_events:5561:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-10T20:00:00Z",
+    "endsAt": "2026-11-10T21:00:00Z",
+    "startTime": "2026-11-10T15:00:00",
+    "endTime": "2026-11-10T16:00:00",
+    "timezone": "America/New_York",
+    "title": "TechSoc Reading Group",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/techsoc-reading-group-1",
+    "content": "The TechSoc Reading Group will discuss the role of shame and stigma around widespread AI adoption. In",
+    "rawEventDetails": "Details Event Description The TechSoc Reading Group will discuss the role of shame and stigma around widespread AI adoption. In academia , education , and likely beyond, a lack of clear institutional guidelines regarding AI usage seems to be leading to embarrassment about using AI. There is also evidence to suggest that shame is frequently used by the public to push back against AI diffusion. All the while, proponents of AI (including developers, practitioners, enthusiasts, and business executives) have largely adopted an ethos of shamelessness and general disregard for public opinions. If you need additional information please contact Bradley Moorehead at [email protected] or Blossom Metevier at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "TechSoc Reading Group",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4071:delta:0",
     "guid": "ps_events:4071:delta:0",
     "sources": [
