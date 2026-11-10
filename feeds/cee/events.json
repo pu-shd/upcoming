@@ -427,6 +427,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cee:ps_events:2516:delta:0",
+    "guid": "ps_events:2516:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T21:20:00Z",
+    "endsAt": "2026-11-19T22:20:00Z",
+    "startTime": "2026-11-19T16:20:00",
+    "endTime": "2026-11-19T17:20:00",
+    "timezone": "America/New_York",
+    "title": "William Pierson Field Lecture Seminar, featuring Professor Jan Knippers",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad E Wing,",
+      "id": "",
+      "detail": "E225"
+    },
+    "urlRef": "https://cee.princeton.edu/events/william-pierson-field-lecture-seminar-featuring-professor-jan-knippers",
+    "content": "Professor Jan Knippers from the University of Stuttgart will lead a talk on Bio-Inspired Lightweight Structures: from natural principals to digital fabrication.",
+    "rawEventDetails": "Details Event Description Professor Jan Knippers from the University of Stuttgart will lead a talk on Bio-Inspired Lightweight Structures: from natural principals to digital fabrication.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "William Pierson Field Lecture Seminar, featuring Professor Jan Knippers",
+    "locationRaw": "Engineering Quad E Wing, E225",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cee:ps_events:2511:delta:0",
     "guid": "ps_events:2511:delta:0",
     "sources": [
