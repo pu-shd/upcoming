@@ -1039,7 +1039,7 @@
     "startTime": "2026-11-13T10:30:00",
     "endTime": "2026-11-13T12:00:00",
     "timezone": "America/New_York",
-    "title": "NAM Friday Talk",
+    "title": "Automated Social Epistemology: Language Models in Scientific Peer Review",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -1056,15 +1056,15 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://dais.princeton.edu/events/2026/nam-friday-talk",
-    "content": "Hosted by Natural and Artificial Minds Speaker: Mel Andrews, Postdoctoral Research Associate, Center for Information Technology Policy and Natural and Artificial Minds",
+    "urlRef": "https://dais.princeton.edu/events/2026/automated-social-epistemology-language-models-scientific-peer-review",
+    "content": "Hosted by Natural and Artificial Minds Speaker: Mel Andrews, Postdoctoral Research Associate, Center for Information Technology Policy and Natural and Artificial Minds Talk abstract: The proliferation of large language models (LLMs) has sparked debate over the prospect of automating peer review in scientific publishing and funding allocation. Not all human tasks, however, are amenable to automation. The feasibility and even the conceptual coherence of automation depend on prior commitments to an account of peer review. Proposals for automated",
     "rawEventDetails": "Details Event Description Hosted by Natural and Artificial Minds Speaker: Mel Andrews, Postdoctoral Research Associate, Center for Information Technology Policy and Natural and Artificial Minds",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "NAM Friday Talk",
+    "summaryRaw": "Automated Social Epistemology: Language Models in Scientific Peer Review",
     "locationRaw": "Bendheim House 103",
     "mappingRules": [
       "dais:summary-is-title"
