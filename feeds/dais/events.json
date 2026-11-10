@@ -1316,6 +1316,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4831:delta:0",
+    "guid": "ps_events:4831:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-18T21:30:00Z",
+    "endsAt": "2026-11-18T22:30:00Z",
+    "startTime": "2026-11-18T16:30:00",
+    "endTime": "2026-11-18T17:30:00",
+    "timezone": "America/New_York",
+    "title": "AI\u00b2 Research Talk Series - Chris Maddison, University of Toronto",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai%C2%B2-research-talk-series-chris-maddison-university-toronto",
+    "content": "Taming the Big Blob of Compute Abstractions let us study complex systems. In physics, Newtonian mechanics is wrong but useful for modeling physical systems at the right level of granularity. We use abstractions to study learning systems in the same way. As an example, I present a simple abstraction of how LLM loss depends on model size, data, and batch size. This abstraction is a noisy quadratic model of training that (partly) explains the Chinchilla scaling law and predicts LLM loss across a 1000x compute gap. Yet even this \"successful\" abstraction fails in certain critical",
+    "rawEventDetails": "Details Event Description Taming the Big Blob of Compute Abstractions let us study complex systems. In physics, Newtonian mechanics is wrong but useful for modeling physical systems at the right level of granularity. We use abstractions to study learning systems in the same way. As an example, I present a simple abstraction of how LLM loss depends on model size, data, and batch size. This abstraction is a noisy quadratic model of training that (partly) explains the Chinchilla scaling law and predicts LLM loss across a 1000x compute gap. Yet even this \"successful\" abstraction fails in certain critical regimes, and fixing it requires patching in LayerNorm-like effects. I argue this case is actually typical, because deep networks keep leaking through our abstractions. This leads me to a more radical proposal: rather than keep patching our abstractions, we should design model classes that admit them by construction, are easier to study by construction, all the while staying competitive with Transformers.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI\u00b2 Research Talk Series - Chris Maddison, University of Toronto",
+    "locationRaw": "Bendheim House, 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "comma_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4731:delta:3",
     "guid": "ps_events:4731:delta:3",
     "sources": [
