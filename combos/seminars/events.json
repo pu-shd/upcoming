@@ -1598,6 +1598,63 @@
     "mappingConflict": false
   },
   {
+    "id": "orfe:ps_events:12996:delta:0",
+    "guid": "ps_events:12996:delta:0",
+    "sources": [
+      "orfe"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T21:30:00Z",
+    "endsAt": "2026-11-12T22:30:00Z",
+    "startTime": "2026-11-12T16:30:00",
+    "endTime": "2026-11-12T17:30:00",
+    "timezone": "America/New_York",
+    "title": "Long Time Behaviour, Stabilisation and Turnpike for Displacement Monotone Mean Field Games",
+    "speakers": [
+      {
+        "name": "Alp\u00e1r R. Meszaros",
+        "affiliation": "University of Durham"
+      }
+    ],
+    "speaker": "Alp\u00e1r R. Meszaros, University of Durham",
+    "affiliation": "University of Durham",
+    "series": "Stochastic Analysis and Financial Mathematics Seminar",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [
+      "Stochastic Analysis and Financial Mathematics Seminar"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "001"
+    },
+    "urlRef": "https://orfe.princeton.edu/events/2026/alp%C3%A1r-r-meszaros-university-durham",
+    "content": "Abstract: In this talk we will study the long time behaviour of Nash equilibria in Mean Field Games within the framework of displacement monotonicity. We first show that any two equilibria defined on the time horizon $(0,T)$ must be close as $T\\to+\\infty$, in a suitable sense, independently of initial/terminal conditions. The way this stability property is made quantitative involves the $L^2$ distance between solutions of the associated Pontryagin system of FBSDEs that characterises the equilibria. Therefore, this implies in particular the stability in the $2$-Wasserstein",
+    "rawEventDetails": "Details Event Description Abstract: In this talk we will study the long time behaviour of Nash equilibria in Mean Field Games within the framework of displacement monotonicity. We first show that any two equilibria defined on the time horizon $(0,T)$ must be close as $T\\to+\\infty$, in a suitable sense, independently of initial/terminal conditions. The way this stability property is made quantitative involves the $L^2$ distance between solutions of the associated Pontryagin system of FBSDEs that characterises the equilibria. Therefore, this implies in particular the stability in the $2$-Wasserstein distance for the two flows of probability measures describing the agent population density and the $L^2$ distance between the co-states of agents, that are related to the optimal feedback controls. We then prove that the value function of a typical agent converges as $T\\to+\\infty$ and we describe this limit via an infinite horizon MFG system, involving an ergodic constant. All of our convergence results hold true in a unified way for deterministic and idiosyncratic noise driven Mean Field Games, in the case of strongly displacement monotone non-separable Hamiltonians. All these are quantitative at exponential rates. The talk is based on a recent joint work with Marco Cirant (Padova). Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Alp\u00e1r R. Meszaros, University of Durham",
+    "locationRaw": "001 - Sherrerd Hall",
+    "mappingRules": [
+      "orfe:summary-is-speaker"
+    ],
+    "locationRule": "detail_dash_name",
+    "summaryRest": "",
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "robotics:ps_events:561:delta:0",
     "guid": "ps_events:561:delta:0",
     "sources": [
