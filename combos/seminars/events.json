@@ -1633,7 +1633,7 @@
     "location": {
       "name": "Sherrerd Hall",
       "id": "",
-      "detail": "001"
+      "detail": "125"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/alp%C3%A1r-r-meszaros-university-durham",
     "content": "Abstract: In this talk we will study the long time behaviour of Nash equilibria in Mean Field Games within the framework of displacement monotonicity. We first show that any two equilibria defined on the time horizon $(0,T)$ must be close as $T\\to+\\infty$, in a suitable sense, independently of initial/terminal conditions. The way this stability property is made quantitative involves the $L^2$ distance between solutions of the associated Pontryagin system of FBSDEs that characterises the equilibria. Therefore, this implies in particular the stability in the $2$-Wasserstein",
@@ -1644,7 +1644,7 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Alp\u00e1r R. Meszaros, University of Durham",
-    "locationRaw": "001 - Sherrerd Hall",
+    "locationRaw": "125 - Sherrerd Hall",
     "mappingRules": [
       "orfe:summary-is-speaker"
     ],
