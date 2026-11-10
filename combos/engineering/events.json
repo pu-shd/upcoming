@@ -1,113 +1,5 @@
 [
   {
-    "id": "mae:ps_events:4846:delta:0",
-    "guid": "ps_events:4846:delta:0",
-    "sources": [
-      "mae"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-02T16:15:00Z",
-    "endsAt": "2026-10-02T17:15:00Z",
-    "startTime": "2026-10-02T12:15:00",
-    "endTime": "2026-10-02T13:15:00",
-    "timezone": "America/New_York",
-    "title": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
-    "speakers": [
-      {
-        "name": "Dr. Gang Chen",
-        "affiliation": "MIT"
-      }
-    ],
-    "speaker": "Dr. Gang Chen, MIT",
-    "affiliation": "MIT",
-    "series": "MAE Departmental Seminars",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "MAE Departmental Seminars"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Briger Hall Auditorium",
-      "id": "",
-      "detail": "C112"
-    },
-    "urlRef": "https://mae.princeton.edu/events/2026/peculiarities-heat-driven-and-light-driven-evaporation",
-    "content": "Joint CEE/MAE Distinguished SeminarAbstract:This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular",
-    "rawEventDetails": "Details Event Description Joint CEE/MAE Distinguished Seminar Abstract: This talk will discuss two peculiar effects we recently discovered: the photomolecular effect and the evaporative refrigeration effect. To explain super-thermal solar-interfacial evaporation from hydrogels and other porous materials, we hypothesize that photons can directly cleave off water clusters at the liquid-vapor interface in a way similar to the photoelectric effect, which we call the photomolecular effect. I will discuss experimental evidence we have so far. This photomolecular evaporation process may exist widely in nature. Our studies on photomolecular evaporation also led us to investigate peculiarities in thermal evaporation. At an evaporating interface, a temperature discontinuity exists between the liquid and the vapor sides, which was predicted by theories and observed in some experiments. However, the existing theories cannot explain experiments. We develop a new interfacial condition that can be used to couple transport on both sides of the interface, leading to agreements between theory and experiments. Our modeling reveals the existence of a new refrigeration effect: the vapor temperature can drop below that of the liquid film and in fact, lower than even the condensing surface temperature. This effect has yet to be confirmed experimentally and may find applications in air-conditioning and refrigeration. Biography: Gang Chen is the Carl Richard Soderberg Professor of Power Engineering at Massachusetts Institute of Technology (MIT). He served as the Department Head of the Department of Mechanical Engineering at MIT from 2013 to 2018. He obtained his PhD degree from the Mechanical Engineering Department at UC Berkeley under the supervision of then UC Berkeley Chancellor Chang-Lin Tien. He was a faculty member at Duke University and UCLA, before joining MIT in 2001. He received an NSF Young Investigator Award, an R&D 100 award, an ASME Heat Transfer Memorial Award, an ASME Frank Kreith Award in Energy, a Nukiyama Memorial Award by the Japan Heat Transfer Society, a World Technology Network Award in Energy, an Eringen medal from the Society of Engineering Science, the Capers and Marion McDonald Award for Excellences in Mentoring and Advising from MIT, a Steven Chu medal from the Asian American Academy of Science and Engineering, and an American Courage Award from Asian American Advancing Justice. He serves on the board of the Asian American Scholar Forum. He is a fellow of the American Association for the Advancement of Science, the American Physical Society, The American Society of Mechanical Engineers, and the Guggenheim Foundation. He is a foreign member of the Chinese Academy of Sciences, an academician of Academy Sinica, a fellow of the American Academy of Arts and Sciences, and a member of the US National Academy of Engineering and a member of the US National Academy of Science. Event Category MAE Departmental Seminars",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Peculiarities of Heat-Driven and Light-Driven Evaporation",
-    "locationRaw": "Briger Hall Auditorium C112",
-    "mappingRules": [
-      "mae:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "mae:ps_events:4856:delta:0",
-    "guid": "ps_events:4856:delta:0",
-    "sources": [
-      "mae"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-05T21:00:00Z",
-    "endsAt": "2026-10-05T23:30:00Z",
-    "startTime": "2026-10-05T17:00:00",
-    "endTime": "2026-10-05T19:30:00",
-    "timezone": "America/New_York",
-    "title": "Space Cluster Fall (Kick-Off) Symposium",
-    "speakers": [
-      {
-        "name": "Carlos Westhelle",
-        "affiliation": "NASA Johnson Space Center"
-      }
-    ],
-    "speaker": "Carlos Westhelle, NASA Johnson Space Center",
-    "affiliation": "NASA Johnson Space Center",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Commons",
-      "id": "",
-      "detail": "D301"
-    },
-    "urlRef": "https://mae.princeton.edu/events/2026/space-cluster-fall-kick-symposium",
-    "content": "Bio: Mr. Carlos Westhelle has more than 25 years of experience at NASA Johnson Space Center (JSC). He holds a Bachelor of Science in Aeronautical and Astronautical Engineering from the University of Illinois at Urbana-Champaign and an Executive MBA from the Naval Postgraduate School. He began his career in the Aeroscience and Flight Mechanics Division and later served as Technical Assistant for Strategic Integration in both the Engineering Directorate and the Exploration Integration and Science Directorate. In these roles, he led the development of domain implementation plans",
-    "rawEventDetails": "Details Event Description Bio: Mr. Carlos Westhelle has more than 25 years of experience at NASA Johnson Space Center (JSC). He holds a Bachelor of Science in Aeronautical and Astronautical Engineering from the University of Illinois at Urbana-Champaign and an Executive MBA from the Naval Postgraduate School. He began his career in the Aeroscience and Flight Mechanics Division and later served as Technical Assistant for Strategic Integration in both the Engineering Directorate and the Exploration Integration and Science Directorate. In these roles, he led the development of domain implementation plans and helped establish research and development priorities that enable exploration and science missions. He subsequently served as Manager of the Exploration Technology Office and as the JSC Chief Technologist, providing leadership, technical direction, and strategic planning for the Center\u2019s technology portfolio, including partnerships and technology transfer efforts. From September 2021 to July 2025, he served as the Engineering Directorate\u2019s Chief of the Aeroscience and Flight Mechanics Division. Following a brief break in government service, Mr. Westhelle worked within the local private space industry before returning to JSC. Over the course of his career, he has been recognized with numerous group achievement awards, JSC Director\u2019s Commendation, Exceptional Service Medal, Outstanding Leadership Medal, and the Silver Snoopy Award.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Space Cluster Fall (Kick-Off) Symposium",
-    "locationRaw": "D301 Commons",
-    "mappingRules": [
-      "mae:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2776:delta:0",
     "guid": "ps_events:2776:delta:0",
     "sources": [
@@ -147,62 +39,6 @@
     "locationRaw": "BioE E140",
     "mappingRules": [
       "bioengineering:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "mae:ps_events:4751:delta:0",
-    "guid": "ps_events:4751:delta:0",
-    "sources": [
-      "mae"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-09T19:00:00Z",
-    "endsAt": "2026-10-09T20:00:00Z",
-    "startTime": "2026-10-09T15:00:00",
-    "endTime": "2026-10-09T16:00:00",
-    "timezone": "America/New_York",
-    "title": "The Mechanics of Asteroid Exploration: Recent Missions and Future Plans",
-    "speakers": [
-      {
-        "name": "Dr. Daniel Scheeres",
-        "affiliation": "University of Colorado"
-      }
-    ],
-    "speaker": "Dr. Daniel Scheeres, University of Colorado",
-    "affiliation": "University of Colorado",
-    "series": "MAE Departmental Seminars",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "MAE Departmental Seminars"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen Hall",
-      "id": "",
-      "detail": "222"
-    },
-    "urlRef": "https://mae.princeton.edu/events/2026/mechanics-asteroid-exploration-recent-missions-and-future-plans",
-    "content": "Abstract:The exploration of primitive bodies in the solar system, such as asteroids and comets, is driven by scientific questions about the early solar system, long-term goals of utilizing primitive body resources in space, and the protection of the planet from hazardous impacts. Motivated by these concerns, there have been many missions to these small bodies over the last few decades, with each one uncovering new details about these bodies that further motivate their exploration, while identifying new technologies that are needed to continue our progress. Despite past success, there",
-    "rawEventDetails": "Details Event Description Abstract: The exploration of primitive bodies in the solar system, such as asteroids and comets, is driven by scientific questions about the early solar system, long-term goals of utilizing primitive body resources in space, and the protection of the planet from hazardous impacts. Motivated by these concerns, there have been many missions to these small bodies over the last few decades, with each one uncovering new details about these bodies that further motivate their exploration, while identifying new technologies that are needed to continue our progress. Despite past success, there still remain significant challenges across a range of scientific and technical issues associated with small body exploration. Several recent missions have opened up new possibilities for their exploration, and some current and planned missions will continue our progress in the exploration and characterization of these bodies. These missions, both from NASA and from international agencies, are pushing boundaries by exploring new classes of asteroids and improving our ability to interact with them. This talk will introduce the motivations for exploring these primitive bodies, discuss recent progress made by a range of missions, and outline their future exploration, identifying what new questions can and are being pursued. Bio: Daniel J. Scheeres is a University of Colorado Distinguished Professor and holds the A. Richard Seebass Endowed Chair in the Smead Department of Aerospace Engineering Sciences. Before this, he held faculty positions at the University of Michigan and Iowa State, and was a senior member of the technical staff at NASA\u2019s Jet Propulsion Laboratory. Scheeres is a member of the National Academy of Engineering and the International Academy of Astronautics, an Honorary Fellow of the American Institute of Aeronautics and Astronautics, and a Fellow of the American Astronautical Society. Asteroid 8887 is named \u201cScheeres\u201d to recognize his contributions to the scientific understanding of the dynamical environment about asteroids. Event Category MAE Departmental Seminars",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "The Mechanics of Asteroid Exploration: Recent Missions and Future Plans",
-    "locationRaw": "Bowen Hall 222",
-    "mappingRules": [
-      "mae:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -1888,6 +1724,62 @@
       "ece:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "mae:ps_events:5141:delta:0",
+    "guid": "ps_events:5141:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T15:00:00Z",
+    "endsAt": "2026-12-03T17:30:00Z",
+    "startTime": "2026-12-03T10:00:00",
+    "endTime": "2026-12-03T12:30:00",
+    "timezone": "America/New_York",
+    "title": "Magnetic Boundary Programming",
+    "speakers": [
+      {
+        "name": "Francisco Saenz Castro",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Francisco Saenz Castro",
+    "affiliation": "",
+    "series": "Final Public Oral Exam",
+    "tags": [
+      "fpo"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Final Public Oral Exam"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad E Wing",
+      "id": "",
+      "detail": "E225"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/magnetic-boundary-programming",
+    "content": "",
+    "rawEventDetails": "Speaker Francisco Saenz Castro Event Category Final Public Oral Exam",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Magnetic Boundary Programming",
+    "locationRaw": "Engineering Quad E Wing/E225",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "slash_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
