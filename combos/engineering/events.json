@@ -108,57 +108,6 @@
     "mappingConflict": false
   },
   {
-    "id": "cbe:ps_events:5301:delta:0",
-    "guid": "ps_events:5301:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-07T20:00:00Z",
-    "endsAt": "2026-10-07T21:00:00Z",
-    "startTime": "2026-10-07T16:00:00",
-    "endTime": "2026-10-07T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Selective Ion Transport in Hydration-limited Sub-nm Pores of Polymer Membranes",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F204"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/selective-ion-transport-hydration-limited-sub-nm-pores-polymer-membranes",
-    "content": "Ion transport under nanoscale confinement and in the presence of charge is poorly understood from a fundamental perspective. Under the conditions of dielectric saturation that arise in nanoscale pores, the classical ideas that guide our understanding of electrostatic interactions break down, and new principles that account for the role of pore geometry and chemistry on water structure and ion interactions are needed. At the same time, our ability to develop such principles is hindered by the challenge of generating relevant well-defined geometries that enable experimental studies over",
-    "rawEventDetails": "Speaker Chinedum Osuji Affiliation University of Pennsylvania Details Event Description Ion transport under nanoscale confinement and in the presence of charge is poorly understood from a fundamental perspective. Under the conditions of dielectric saturation that arise in nanoscale pores, the classical ideas that guide our understanding of electrostatic interactions break down, and new principles that account for the role of pore geometry and chemistry on water structure and ion interactions are needed. At the same time, our ability to develop such principles is hindered by the challenge of generating relevant well-defined geometries that enable experimental studies over statistically meaningful volumes such that experimental data can be more confidently considered alongside data from computational efforts. Beyond the fundamental implications, new understanding is needed to drive the rational design of materials for ion separations in critical minerals production and resource recovery, among other examples, where the need to distinguish between ions of the same valency and charge imposes a severe challenge. Here, we examine transport of ions in polymer membranes with well-defined sub-1 nm pores. The membranes are charged, modestly hydrated nanoporous polymers produced by crosslinking self-assembled lyotropic mesophases with direct hexagonal and gyroid nanostructures. This work addresses the roles of hydration, pore geometry and ion identity on transport using a combination of electrochemical and NMR measurements, and molecular simulation. Our results highlight the roles of hydration, solubility, pore size, and ion-pore wall interactions in dictating transport in the pores. They provide new insight regarding transport under nanoscale confinement in the presence of charge and that we suggest could be relevant for the development of materials for challenging ion separations.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Selective Ion Transport in Hydration-limited Sub-nm Pores of Polymer Membranes",
-    "locationRaw": "F204 SEAS-CBE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2776:delta:0",
     "guid": "ps_events:2776:delta:0",
     "sources": [
