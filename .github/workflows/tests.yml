@@ -40,6 +40,9 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: '22'
+      # The operator scripts are zsh, and their tests run them. ubuntu-latest has make but
+      # not zsh; a test that skipped without it would pass while checking nothing.
+      - run: sudo apt-get update && sudo apt-get install --no-install-recommends -y zsh
       - run: pip install -e '.[dev]'
       - run: pytest -q
 

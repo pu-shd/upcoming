@@ -10,6 +10,10 @@
 # own monitoring inside the thing being monitored. The keepalive commit is what prevents it
 # arising; the API check catches the partial cases, including somebody switching the
 # publisher off by hand and forgetting.
+#
+# It also checks that main still carries the ruleset committed in .github/rulesets/main.json
+# -- a safeguard that, like a schedule, can vanish from the settings page with nothing here
+# noticing.
 
 name: Heartbeat
 
@@ -21,8 +25,13 @@ on:
     - cron: '47 5 * * *'
   workflow_dispatch:
 
+# contents: read, not write. The keepalive is pushed with a deploy key, not this token:
+# main's ruleset requires a pull request and passing checks, and GitHub will not accept the
+# Actions app as a ruleset bypass -- measured 2026-11-11, "Actor GitHub Actions integration
+# must be part of the ruleset source or owner organization". Deploy keys are a bypass it
+# does accept.
 permissions:
-  contents: write
+  contents: read
   actions: write
   issues: write
 
@@ -49,6 +58,9 @@ jobs:
         run: |
           set -uo pipefail
           gh api "repos/${GITHUB_REPOSITORY}/actions/workflows" > workflows.json
+          # The rules in force on main, from every active ruleset. An unprotected branch
+          # answers `[]` with a 200, which is why this is compared rather than trusted.
+          gh api "repos/${GITHUB_REPOSITORY}/rules/branches/main" > branch-rules.json
 
           # `|| code=$?` because the default shell is `bash -e`: a stopped schedule exits
           # non-zero, and ending the step here would skip the steps that repair and report
@@ -59,6 +71,7 @@ jobs:
             --sha "$GITHUB_SHA" \
             --ref "$GITHUB_REF_NAME" \
             --workflow-states workflows.json \
+            --branch-rules branch-rules.json \
             --github-output "$GITHUB_OUTPUT" > report.txt 2>&1 || code=$?
           cat report.txt
           echo "status=$code" >> "$GITHUB_OUTPUT"
@@ -70,13 +83,29 @@ jobs:
 
       - name: Commit the keepalive
         if: steps.beat.outputs.changed == 'true'
+        env:
+          # The private half of the write deploy key the main ruleset lets bypass it. No
+          # default: without it the push is refused, and saying so here is clearer than
+          # reading a ruleset violation out of git's output.
+          HEARTBEAT_DEPLOY_KEY: ${{ secrets.HEARTBEAT_DEPLOY_KEY }}
         run: |
           set -euo pipefail
+          if [ -z "${HEARTBEAT_DEPLOY_KEY}" ]; then
+            echo "::error::HEARTBEAT_DEPLOY_KEY is unset; main's ruleset refuses the keepalive without it (docs/operations.md)"
+            exit 1
+          fi
+          umask 077
+          key="${RUNNER_TEMP}/heartbeat_key"
+          known="${RUNNER_TEMP}/known_hosts"
+          printf '%s\n' "${HEARTBEAT_DEPLOY_KEY}" > "$key"
+          # Pinned from `gh api meta`, rather than trusting whatever answers on first use.
+          echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > "$known"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .ci/heartbeat.json
           git commit -m "Keep the scheduled workflows alive"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          GIT_SSH_COMMAND="ssh -i ${key} -o IdentitiesOnly=yes -o UserKnownHostsFile=${known} -o StrictHostKeyChecking=yes" \
+            git push "git@github.com:${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
 
       - name: Re-enable anything GitHub stopped
         if: steps.beat.outputs.stopped != '0'
@@ -102,6 +131,25 @@ jobs:
             "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")
           gh issue create --title "A scheduled workflow had stopped" --label watchdog --body "$body"
 
-      - name: Fail the run if a schedule had stopped
+      - name: Say that main is unprotected
+        if: steps.beat.outputs.unprotected != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          title="main is missing its branch protection"
+          body=$(printf '%s\n\n```\n%s\n```\n\n[the run](%s/%s/actions/runs/%s)\n' \
+            "The heartbeat compared the rules in force on main with .github/rulesets/main.json." \
+            "$(cat report.txt)" \
+            "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")
+          # One issue, updated daily while it lasts, rather than one a day.
+          open=$(gh issue list --state open --label watchdog --search "\"${title}\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "$body"
+          else
+            gh issue create --title "$title" --label watchdog --body "$body"
+          fi
+
+      - name: Fail the run if a schedule had stopped or main is unprotected
         if: steps.beat.outputs.status != '0'
         run: exit 1

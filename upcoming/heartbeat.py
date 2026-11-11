@@ -13,6 +13,12 @@ Two mechanisms, because they cover different halves and neither covers both:
 * **Detection.** Ask the API whether each scheduled workflow is still ``active``. This
   catches a workflow disabled by hand, or one disabled while others survived.
 
+A third check rides along because it has the same shape -- a safeguard that can vanish
+with nothing in the repository noticing: **branch protection**. The rules ``main`` must carry
+are committed in ``.github/rulesets/main.json`` and applied with ``make protect``; this
+compares them against what GitHub says actually applies to the branch, so a ruleset deleted
+or disabled in the settings page is reported rather than discovered after a broken push.
+
 What neither covers, and the documentation says so plainly rather than implying otherwise:
 if *every* scheduled workflow is disabled at once, the heartbeat is disabled too and cannot
 rescue itself. That is inherent to running your own monitoring inside the thing being
@@ -25,6 +31,7 @@ import json
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Any
 
 from .clock import now as clock_now
 from .clock import stamp
@@ -174,6 +181,65 @@ def parse_states(payload: Mapping[str, object]) -> list[WorkflowState]:
     ]
 
 
+def _required_contexts(rules: Sequence[Mapping[str, Any]]) -> set[str]:
+    return {
+        str(check.get("context", ""))
+        for rule in rules
+        if rule.get("type") == "required_status_checks"
+        for check in (rule.get("parameters") or {}).get("required_status_checks") or ()
+    }
+
+
+def protection_gaps(live: Sequence[Mapping[str, Any]], spec: Mapping[str, Any]) -> list[str]:
+    """What the committed ruleset requires of ``main`` that GitHub is not enforcing.
+
+    ``live`` is ``GET /repos/{owner}/{repo}/rules/branches/main`` -- the rules in force on
+    the branch, from every active ruleset, readable with the workflow's read-only token.
+    ``spec`` is ``.github/rulesets/main.json``. Compared by rule type and, for status
+    checks, by context name, because those are what decide whether a broken commit can
+    reach ``main``; parameter details such as review counts are left to ``make protect``.
+
+    An empty ``live`` list is the important case: it is exactly what an unprotected branch
+    returns, and it is not an error from the API's point of view.
+    """
+    spec_rules = [r for r in spec.get("rules") or () if isinstance(r, Mapping)]
+    live_rules = [r for r in live if isinstance(r, Mapping)]
+    live_types = {str(r.get("type", "")) for r in live_rules}
+
+    gaps = [
+        f"rule `{rule_type}` is not enforced on main"
+        for rule_type in sorted({str(r.get("type", "")) for r in spec_rules})
+        if rule_type not in live_types
+    ]
+    if "required_status_checks" in live_types:
+        missing = _required_contexts(spec_rules) - _required_contexts(live_rules)
+        gaps.extend(f"status check `{name}` is not required on main" for name in sorted(missing))
+    return gaps
+
+
+def protection_report(gaps: Sequence[str]) -> str:
+    """What to say about main's protection, in a form an issue body can carry."""
+    if not gaps:
+        return "main carries every rule in .github/rulesets/main.json"
+    lines = [f"main is missing {len(gaps)} protection rule(s):", ""]
+    lines.extend(f"- {gap}" for gap in gaps)
+    lines.append("")
+    lines.append("Reapply the committed ruleset with `make protect` (see docs/operations.md).")
+    return "\n".join(lines)
+
+
+def parse_rules(payload: object) -> list[Mapping[str, Any]]:
+    """Read the API's branch-rules listing.
+
+    Anything but a list reads as no rules at all, which reports every gap: for a malformed
+    answer that is the safe direction, and an empty list is what an unprotected branch
+    returns anyway.
+    """
+    if not isinstance(payload, list):
+        return []
+    return [item for item in payload if isinstance(item, Mapping)]
+
+
 def utc_now() -> datetime:
     """The current instant. Re-exported so callers need one import, not two."""
     return clock_now()
@@ -188,7 +254,10 @@ __all__ = [
     "WorkflowState",
     "decide",
     "keepalive",
+    "parse_rules",
     "parse_states",
+    "protection_gaps",
+    "protection_report",
     "report",
     "scheduled_workflows",
     "stopped",
