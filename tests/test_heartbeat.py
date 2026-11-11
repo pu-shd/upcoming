@@ -23,7 +23,10 @@ from upcoming.heartbeat import (
     WorkflowState,
     decide,
     keepalive,
+    parse_rules,
     parse_states,
+    protection_gaps,
+    protection_report,
     report,
     scheduled_workflows,
     stopped,
@@ -195,3 +198,97 @@ def test_the_heartbeat_does_not_collide_with_the_other_schedules() -> None:
 
     assert not (minutes("heartbeat.yml") & minutes("publish.yml"))
     assert not (minutes("heartbeat.yml") & minutes("verify.yml"))
+
+
+# --------------------------------------------------------------------------------------
+# Branch protection
+# --------------------------------------------------------------------------------------
+
+RULESET = json.loads((REPO_ROOT / ".github" / "rulesets" / "main.json").read_text())
+
+
+def _live(*rules: dict[str, object]) -> list[dict[str, object]]:
+    """Rules as `GET rules/branches/main` reports them: the spec's, plus provenance."""
+    return [{**rule, "ruleset_source_type": "Repository", "ruleset_id": 1} for rule in rules]
+
+
+def test_a_branch_carrying_the_committed_ruleset_has_no_gaps() -> None:
+    assert protection_gaps(_live(*RULESET["rules"]), RULESET) == []
+    assert protection_report([]) == "main carries every rule in .github/rulesets/main.json"
+
+
+def test_an_unprotected_branch_reports_every_rule() -> None:
+    """`[]` with a 200 is exactly what GitHub answers for an unprotected branch."""
+    gaps = protection_gaps([], RULESET)
+    assert gaps == [
+        "rule `deletion` is not enforced on main",
+        "rule `non_fast_forward` is not enforced on main",
+        "rule `pull_request` is not enforced on main",
+        "rule `required_status_checks` is not enforced on main",
+    ]
+    assert "make protect" in protection_report(gaps)
+
+
+def test_a_dropped_status_check_is_reported_by_name() -> None:
+    """Requiring checks, but not the container one, lets an image-only break reach main."""
+    rules = json.loads(json.dumps(RULESET["rules"]))
+    for rule in rules:
+        if rule["type"] == "required_status_checks":
+            checks = rule["parameters"]["required_status_checks"]
+            rule["parameters"]["required_status_checks"] = [
+                c for c in checks if c["context"] != "container"
+            ]
+    assert protection_gaps(_live(*rules), RULESET) == [
+        "status check `container` is not required on main"
+    ]
+
+
+def test_a_malformed_rules_answer_reads_as_unprotected() -> None:
+    """The safe direction: anything unreadable reports every gap rather than none."""
+    assert parse_rules({"message": "Not Found"}) == []
+    assert parse_rules(None) == []
+    assert len(protection_gaps(parse_rules("garbage"), RULESET)) == 4
+
+
+def test_the_cli_fails_and_says_so_when_main_is_unprotected(tmp_path, monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    from upcoming.cli import EXIT_OK, EXIT_SOURCE_FAILED, main
+
+    monkeypatch.chdir(REPO_ROOT)
+    recent = int(NOW.timestamp())
+    output = tmp_path / "github_output"
+    rules = tmp_path / "rules.json"
+
+    rules.write_text("[]")
+    code = main(
+        [
+            "heartbeat",
+            "--last-commit-epoch",
+            str(recent),
+            "--output",
+            str(tmp_path / "heartbeat.json"),
+            "--branch-rules",
+            str(rules),
+            "--github-output",
+            str(output),
+        ]
+    )
+    assert code == EXIT_SOURCE_FAILED
+    assert "unprotected=4" in output.read_text()
+
+    rules.write_text(json.dumps(_live(*RULESET["rules"])))
+    output.write_text("")
+    code = main(
+        [
+            "heartbeat",
+            "--last-commit-epoch",
+            str(recent),
+            "--output",
+            str(tmp_path / "heartbeat.json"),
+            "--branch-rules",
+            str(rules),
+            "--github-output",
+            str(output),
+        ]
+    )
+    assert code == EXIT_OK
+    assert "unprotected=0" in output.read_text()

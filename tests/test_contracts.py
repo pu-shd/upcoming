@@ -226,6 +226,23 @@ def test_compose_images_are_named_for_this_repository() -> None:
         )
 
 
+def test_the_dev_image_carries_every_test_runner() -> None:
+    """Node runs the simulator's tests; zsh and make run the operator scripts'. A test that
+    skipped itself when one was missing would pass while checking nothing, so the image
+    installs all three and the tests fail without them."""
+    dockerfile = (REPO_ROOT / "Dockerfile").read_text(encoding="utf-8")
+    dev = dockerfile.split("AS dev", 1)[1]
+    for package in ("nodejs", "zsh", "make"):
+        assert package in dev, f"the dev image does not install {package}"
+
+
+def test_ci_installs_zsh_for_the_script_tests() -> None:
+    """ubuntu-latest has make but not zsh."""
+    tests = (REPO_ROOT / ".github" / "workflows" / "tests.yml").read_text(encoding="utf-8")
+    pytest_job = tests.split("  pytest:", 1)[1].split("\n  lint:", 1)[0]
+    assert "apt-get install" in pytest_job and "zsh" in pytest_job
+
+
 def test_compose_runs_the_suite_by_default() -> None:
     document = yaml.safe_load(COMPOSE.read_text(encoding="utf-8"))
     assert "pytest" in document["services"]["tests"]["command"]
@@ -266,3 +283,56 @@ def test_every_declared_dependency_is_actually_imported() -> None:
         name for name in declared if module_of.get(name, name.replace("-", "_")) not in imported
     }
     assert unused == set(), f"declared but never imported: {sorted(unused)}"
+
+
+# --------------------------------------------------------------------------------------
+# Branch protection
+# --------------------------------------------------------------------------------------
+
+RULESET = REPO_ROOT / ".github" / "rulesets" / "main.json"
+
+
+def _ruleset() -> dict:  # type: ignore[type-arg]
+    import json
+
+    return json.loads(RULESET.read_text(encoding="utf-8"))
+
+
+def test_main_requires_exactly_the_jobs_the_tests_workflow_runs() -> None:
+    """A required check nothing produces blocks every merge forever; a job left out of the
+    required set can fail and still merge. Both are drift between two files, so the job
+    names are read from the workflow rather than written twice."""
+    jobs = set(load_workflow(WORKFLOWS / "tests.yml")["jobs"])
+    (checks,) = [r for r in _ruleset()["rules"] if r["type"] == "required_status_checks"]
+    required = {c["context"] for c in checks["parameters"]["required_status_checks"]}
+    assert required == jobs
+
+
+def test_main_needs_a_pull_request_and_cannot_be_rewritten_or_deleted() -> None:
+    types = {r["type"] for r in _ruleset()["rules"]}
+    assert {"pull_request", "required_status_checks", "non_fast_forward", "deletion"} <= types
+    assert _ruleset()["enforcement"] == "active"
+    assert _ruleset()["conditions"]["ref_name"]["include"] == ["~DEFAULT_BRANCH"]
+
+
+def test_only_deploy_keys_bypass_the_main_ruleset() -> None:
+    """The heartbeat's keepalive is the one thing that must reach main without a pull
+    request, and it pushes with a deploy key. GitHub refuses the Actions app as a bypass
+    actor -- measured 2026-11-11, "Actor GitHub Actions integration must be part of the
+    ruleset source or owner organization" -- so an Integration entry here would fail to
+    apply rather than quietly working."""
+    actors = _ruleset()["bypass_actors"]
+    assert actors == [{"actor_id": None, "actor_type": "DeployKey", "bypass_mode": "always"}]
+
+
+def test_the_heartbeat_pushes_with_the_deploy_key_and_checks_protection() -> None:
+    text = (WORKFLOWS / "heartbeat.yml").read_text(encoding="utf-8")
+    document = load_workflow(WORKFLOWS / "heartbeat.yml")
+    assert document["permissions"]["contents"] == "read", (
+        "the keepalive pushes with the deploy key; the token needs no write access"
+    )
+    assert "${{ secrets.HEARTBEAT_DEPLOY_KEY }}" in text
+    assert 'git push origin "HEAD' not in text, "a token push is refused by the main ruleset"
+    assert "--branch-rules branch-rules.json" in text
+    assert "rules/branches/main" in text
+    assert "StrictHostKeyChecking=yes" in text

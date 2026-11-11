@@ -36,7 +36,10 @@ from .heartbeat import (
     WorkflowState,
     decide,
     keepalive,
+    parse_rules,
     parse_states,
+    protection_gaps,
+    protection_report,
     report,
     scheduled_workflows,
     stopped,
@@ -208,8 +211,20 @@ def _build_parser() -> argparse.ArgumentParser:
         ),
     )
     beat.add_argument(
+        "--branch-rules",
+        help=(
+            "a JSON file from `gh api repos/{owner}/{repo}/rules/branches/main`. Compared "
+            "against --ruleset; without it the protection check does not run."
+        ),
+    )
+    beat.add_argument(
+        "--ruleset",
+        default=".github/rulesets/main.json",
+        help="the committed ruleset main must carry",
+    )
+    beat.add_argument(
         "--github-output",
-        help="write `changed` and `stopped` here for a workflow step to read",
+        help="write `changed`, `stopped` and `unprotected` here for a workflow step to read",
     )
 
     verify_cmd = sub.add_parser(
@@ -599,14 +614,24 @@ def _cmd_heartbeat(args: argparse.Namespace) -> int:
         )
         print(report(stopped_states))
 
+    gaps: list[str] = []
+    if args.branch_rules:
+        gaps = protection_gaps(
+            parse_rules(json.loads(Path(args.branch_rules).read_text(encoding="utf-8"))),
+            json.loads(Path(args.ruleset).read_text(encoding="utf-8")),
+        )
+        print(protection_report(gaps))
+
     if args.github_output:
         with Path(args.github_output).open("a", encoding="utf-8") as handle:
             handle.write(f"changed={str(decision.needed).lower()}\n")
             handle.write(f"stopped={len(stopped_states)}\n")
             handle.write(f"paths={' '.join(s.path for s in stopped_states)}\n")
+            handle.write(f"unprotected={len(gaps)}\n")
 
-    # A stopped schedule is a failure; a keepalive being unnecessary is not.
-    return EXIT_SOURCE_FAILED if stopped_states else EXIT_OK
+    # A stopped schedule or a missing protection rule is a failure; a keepalive being
+    # unnecessary is not.
+    return EXIT_SOURCE_FAILED if stopped_states or gaps else EXIT_OK
 
 
 def _cmd_verify(args: argparse.Namespace) -> int:

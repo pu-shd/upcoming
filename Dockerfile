@@ -34,11 +34,13 @@ FROM runtime AS dev
 
 # Node is a test dependency, not a build one: the newsletter simulator's edition logic is
 # JavaScript by decision, and the suite exercises it through Node rather than leaving it
-# unchecked. It goes in `dev` alone -- generating feeds needs none of it -- and it is
-# installed rather than made optional, because a test that skips itself when a tool is
-# absent reports green while checking nothing.
+# unchecked. zsh and make are test dependencies for the same reason: `make bootstrap` and
+# `make protect` are zsh scripts behind make targets, and their tests run both. All three go
+# in `dev` alone -- generating feeds needs none of them -- and they are installed rather
+# than made optional, because a test that skips itself when a tool is absent reports green
+# while checking nothing.
 RUN apt-get update \
- && apt-get install --no-install-recommends -y nodejs \
+ && apt-get install --no-install-recommends -y nodejs zsh make \
  && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir -e '.[dev]'

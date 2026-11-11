@@ -14,14 +14,18 @@ COMPOSE     ?= docker-compose
 #   * no `sed -i` without a backup suffix
 # A test asserts these stay absent from the Makefile.
 
-.PHONY: help venv install sources check build build-fixtures publish serve verify test \
+.PHONY: help bootstrap protect venv install sources check build build-fixtures publish serve verify test \
         test-cov \
         lint typecheck fmt \
         docker-build docker-test docker-lint docker-sources clean
 
 help:
 	@echo "Setup"
+	@echo "  make bootstrap      check the tools, then build .venv and the test image"
+	@echo "  make bootstrap DRY_RUN=1   check the tools; say what would be built"
 	@echo "  make install        create $(VENV) and install the package with dev extras"
+	@echo "  make protect        apply .github/rulesets/main.json to the repository (admin)"
+	@echo "  make protect DRY_RUN=1     say what protect would change"
 	@echo ""
 	@echo "Inspect"
 	@echo "  make sources        print the resolved registry: what each SUMMARY field means"
@@ -48,13 +52,25 @@ help:
 	@echo "  make docker-lint    run lint and types in the container"
 	@echo "  make docker-sources print the registry from inside the container"
 
-$(VENV):
+# Keyed on the interpreter, not the directory. A Homebrew Python upgrade deletes the
+# interpreter a venv links to and leaves the directory behind; a rule on the directory
+# then calls a python that no longer exists. make treats a dangling link as missing, so
+# this rebuilds exactly that case and leaves a working venv alone.
+$(PY):
+	rm -rf $(VENV)
 	python3 -m venv $(VENV)
 	$(PY) -m pip install --quiet --upgrade pip
 
-venv: $(VENV)
+venv: $(PY)
 
-install: $(VENV)
+# Both scripts are zsh, both take --dry-run, and docs/operations.md says when to run each.
+bootstrap:
+	zsh scripts/bootstrap.zsh $(if $(DRY_RUN),--dry-run,)
+
+protect:
+	zsh scripts/protect-main.zsh $(if $(DRY_RUN),--dry-run,)
+
+install: $(PY)
 	$(PY) -m pip install --quiet -e '.[dev]'
 	@echo "installed; run 'make check' to validate the registry"
 
@@ -63,18 +79,18 @@ install: $(VENV)
 # credential is how the predecessor's pipeline came to 403 on every event page while
 # reporting success. These targets pass a visibly fake line because they only prove that
 # config *loads*.
-sources: $(VENV)
+sources: $(PY)
 	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) sources
 
-check: $(VENV)
+check: $(PY)
 	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) check
 
 # Builds from committed fixtures, so it reaches no network. Fetching arrives with the
 # enrichment layer; until then --feed is required, which keeps the offline guarantee
 # structural rather than a convention.
-build: $(VENV)
+build: $(PY)
 	@if [ -z "$(SOURCE)" ]; then echo "usage: make build SOURCE=<slug> [FEED=<path>]" >&2; exit 2; fi
 	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) build \
@@ -84,7 +100,7 @@ build: $(VENV)
 
 # The two sources whose SUMMARY means opposite things. Building both from one codebase
 # with nothing differing but config is the proof the refactor exists to deliver.
-build-fixtures: $(VENV)
+build-fixtures: $(PY)
 	@$(MAKE) --no-print-directory build SOURCE=orfe
 	@$(MAKE) --no-print-directory build SOURCE=mae
 
@@ -92,7 +108,7 @@ build-fixtures: $(VENV)
 # succeeded and how stale anything is. Offline by default -- it builds from the committed
 # fixtures, so a developer gets the same code path over known bytes that CI runs over live
 # ones. FETCH=1 pulls each source's ICS first, which is what CI does.
-publish: $(VENV)
+publish: $(PY)
 	@BOT_BYPASS_HEADER="$${BOT_BYPASS_HEADER:-x-make-placeholder: not-a-credential}" \
 		$(PY) -m upcoming.cli --registry $(REGISTRY) publish \
 			--out "$${OUT:-dist}" \
@@ -102,29 +118,29 @@ publish: $(VENV)
 
 # The landing page reads status.json over fetch(), which file:// will not allow, so
 # previewing it needs a real origin. Same tree the deploy uploads.
-serve: $(VENV) publish
+serve: $(PY) publish
 	@echo "serving dist/ at http://localhost:8000 -- ctrl-c to stop"
 	@$(PY) -m http.server 8000 --directory "$${OUT:-dist}"
 
 # The watchdog, run by hand. It takes no credential on purpose: it must see exactly what a
 # consumer sees, and a credential would let it pass where a consumer fails.
-verify: $(VENV)
+verify: $(PY)
 	$(PY) -m upcoming.cli verify --base-url "$${SITE:-https://pu-shd.github.io/upcoming}"
 
-test: $(VENV)
+test: $(PY)
 	$(PY) -m pytest
 
-test-cov: $(VENV)
+test-cov: $(PY)
 	$(PY) -m pytest --tb=short -v
 
-lint: $(VENV)
+lint: $(PY)
 	$(PY) -m ruff check .
 	$(PY) -m ruff format --check .
 
-typecheck: $(VENV)
+typecheck: $(PY)
 	$(PY) -m mypy upcoming
 
-fmt: $(VENV)
+fmt: $(PY)
 	$(PY) -m ruff check --fix .
 	$(PY) -m ruff format .
 
