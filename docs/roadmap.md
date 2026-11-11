@@ -65,9 +65,9 @@ Notes worth recording before adopting it:
 
 ### A Codespace, so a developer can tinker with their own instance
 
-Getting started currently means Python 3.12, Node 22, Docker, a virtualenv, and knowing
-that `BOT_BYPASS_HEADER` holds a whole header line. None of that is written down as a
-sequence; it is inferred from the Makefile and two workflows.
+Getting started is written down as a sequence in
+[operations.md](operations.md#a-fresh-machine), and `make bootstrap` checks every tool it
+needs. It is still a sequence a person follows on their own machine.
 
 A `.devcontainer/` makes the working setup the *default* one, and it suits this project
 better than most because **everything already runs offline**. A Codespace needs no

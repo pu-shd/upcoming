@@ -7,7 +7,7 @@ This project is a heavy refactor of [pu-orfe/upcoming](https://github.com/pu-orf
 
 Developer documentation is in [`docs/`](docs/) — [architecture](docs/architecture.md),
 [failure modes](docs/failure-modes.md), [testing](docs/testing.md),
-[CI/CD](docs/ci-cd.md), and a [roadmap](docs/roadmap.md).
+[CI/CD](docs/ci-cd.md), [operations](docs/operations.md) — setting up a machine, secrets, settings, runbooks — and a [roadmap](docs/roadmap.md).
 
 ## Implementation
 
@@ -63,6 +63,7 @@ Each unavailable source records *why*, so nobody repeats the investigation — r
 ## Usage
 
 ```sh
+make bootstrap         # check the tools, build .venv and the test image (fresh machine)
 make install           # create .venv and install with dev extras
 make sources           # the resolved registry: what each SUMMARY field means
 make check             # validate the registry; non-zero on any problem
@@ -75,7 +76,7 @@ make lint typecheck    # ruff + mypy
 make docker-test       # the suite in the container (the path CI runs)
 ```
 
-Requires Python 3.12+. Docker Compose is invoked as `docker-compose` (Homebrew).
+Requires Python 3.12+, Node 22+, zsh, Docker, `docker-compose` and `gh` (Homebrew). [docs/operations.md](docs/operations.md#a-fresh-machine) is the step-by-step for a fresh machine; `make bootstrap` checks all of it. Changes reach `main` only through a pull request whose checks pass.
 
 ## The Worst Case: When one field means several things
 

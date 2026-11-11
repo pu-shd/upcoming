@@ -1,12 +1,13 @@
 # Testing
 
-1029 tests. `make test` locally, `make docker-test` for the path CI runs.
+1103 tests. `make test` locally, `make docker-test` for the path CI runs.
 
 Two rules shape all of it:
 
 1. **Silence is never success.** A test that skips itself when a tool is missing reports
-   green while checking nothing. Node is installed in CI and in the dev image so the
-   JavaScript checks actually run.
+   green while checking nothing. Node, zsh and make are installed in CI and in the dev
+   image so the JavaScript and the operator scripts' tests actually run, and a test fails
+   if one is missing.
 2. **A test states the failure it prevents.** Most docstrings here name a real defect —
    several from the predecessor's published output, several found by these tests.
 
@@ -19,23 +20,25 @@ Two rules shape all of it:
 | `test_locate.py` | 66 | The seven location rules, including where they decline and where a chain omits one |
 | `test_registry.py` | 66 | Config loading, merging, and every refusal |
 | `test_site.py` | 63 | Both published pages: resources, themes, navigation, controls, and the export's style switcher |
-| `test_architecture.py` | 55 | Structural boundaries — see below |
+| `test_architecture.py` | 57 | Structural boundaries — see below |
 | `test_publish.py` | 51 | The tree, `status.json`, staleness, cadence |
 | `test_purposes.py` | 44 | The purpose vocabulary, per-event overrides, the schedules and templates a publication declares, and the export layouts |
+| `test_rss.py` | 40 | The `drupal-events-rss` platform: dates across DST, the ten-item horizon, what is declined and why |
 | `test_rules.py` | 38 | The mapping engine's predicates, actions and attribution |
+| `test_contracts.py` | 36 | Cross-cutting promises: credentials, dependencies, CLI surface, compose, the `main` ruleset |
 | `test_model.py` | 35 | The event record, wire round-trip, derived fields |
+| `test_workflows.py` | 35 | The CI YAML itself — see below |
 | `test_verify.py` | 34 | The watchdog's findings and their severity |
-| `test_workflows.py` | 33 | The CI YAML itself — see below |
-| `test_contracts.py` | 29 | Cross-cutting promises: credentials, dependencies, CLI surface |
 | `test_enrich.py` | 29 | Scraping, rejection, health rates |
 | `test_upstream.py` | 29 | Conditional requests and enrichment windows |
 | `test_combine.py` | 27 | Set algebra, merging, divergence |
+| `test_heartbeat.py` | 27 | Keepalive thresholds, stopped-schedule detection, and the branch-protection comparison |
 | `test_parse.py` | 27 | RFC 5545 unfolding and escaping |
 | `test_provenance.py` | 26 | `titleSource`, `titleIsPlaceholder`, what counts as missing |
-| `test_heartbeat.py` | 22 | Keepalive thresholds and stopped-schedule detection |
 | `test_build.py` | 21 | End-to-end assembly per source |
 | `test_shared.py` | 21 | `clock.py` and `config.py`, and that nothing bypasses them |
 | `test_differential.py` | 20 | This pipeline against the predecessor's goldens |
+| `test_scripts.py` | 18 | `make bootstrap`, `make protect` and the venv rule, against stub tools on a private PATH |
 | `test_tags.py` | 18 | Canonical tags and alias lookup |
 | `test_select.py` | 17 | Per-source `publish_where` / `publish_unless` |
 
