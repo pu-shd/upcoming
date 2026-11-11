@@ -107,8 +107,11 @@ jobs:
           GIT_SSH_COMMAND="ssh -i ${key} -o IdentitiesOnly=yes -o UserKnownHostsFile=${known} -o StrictHostKeyChecking=yes" \
             git push "git@github.com:${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
 
+      # Each step below runs even if the keepalive push failed (no deploy key, or a revoked
+      # one): that failure comes on the days the repository is quiet, which are the days
+      # schedules stop, so it must not also silence the repair and the reports.
       - name: Re-enable anything GitHub stopped
-        if: steps.beat.outputs.stopped != '0'
+        if: ${{ !cancelled() && steps.beat.outputs.stopped != '0' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -120,7 +123,7 @@ jobs:
           done
 
       - name: Say so, beyond this run
-        if: steps.beat.outputs.stopped != '0'
+        if: ${{ !cancelled() && steps.beat.outputs.stopped != '0' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -132,7 +135,7 @@ jobs:
           gh issue create --title "A scheduled workflow had stopped" --label watchdog --body "$body"
 
       - name: Say that main is unprotected
-        if: steps.beat.outputs.unprotected != '0'
+        if: ${{ !cancelled() && steps.beat.outputs.unprotected != '0' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -151,5 +154,5 @@ jobs:
           fi
 
       - name: Fail the run if a schedule had stopped or main is unprotected
-        if: steps.beat.outputs.status != '0'
+        if: ${{ !cancelled() && steps.beat.outputs.status != '0' }}
         run: exit 1
