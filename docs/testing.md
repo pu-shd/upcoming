@@ -1,6 +1,6 @@
 # Testing
 
-1103 tests. `make test` locally, `make docker-test` for the path CI runs.
+1104 tests. `make test` locally, `make docker-test` for the path CI runs.
 
 Two rules shape all of it:
 
@@ -25,7 +25,7 @@ Two rules shape all of it:
 | `test_purposes.py` | 44 | The purpose vocabulary, per-event overrides, the schedules and templates a publication declares, and the export layouts |
 | `test_rss.py` | 40 | The `drupal-events-rss` platform: dates across DST, the ten-item horizon, what is declined and why |
 | `test_rules.py` | 38 | The mapping engine's predicates, actions and attribution |
-| `test_contracts.py` | 36 | Cross-cutting promises: credentials, dependencies, CLI surface, compose, the `main` ruleset |
+| `test_contracts.py` | 37 | Cross-cutting promises: credentials, dependencies, CLI surface, compose, the `main` ruleset |
 | `test_model.py` | 35 | The event record, wire round-trip, derived fields |
 | `test_workflows.py` | 35 | The CI YAML itself — see below |
 | `test_verify.py` | 34 | The watchdog's findings and their severity |

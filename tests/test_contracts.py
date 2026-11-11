@@ -336,3 +336,19 @@ def test_the_heartbeat_pushes_with_the_deploy_key_and_checks_protection() -> Non
     assert "--branch-rules branch-rules.json" in text
     assert "rules/branches/main" in text
     assert "StrictHostKeyChecking=yes" in text
+
+
+def test_a_failed_keepalive_does_not_skip_the_repair_and_the_reports() -> None:
+    """A step's `if:` without a status function carries an implicit `success()`, so a
+    refused keepalive push -- no deploy key, or a revoked one -- would skip re-enabling the
+    stopped schedules and reporting them. That failure arrives on exactly the days the
+    repository has gone quiet, which is when schedules stop, so every step after it must
+    still run."""
+    steps = load_workflow(WORKFLOWS / "heartbeat.yml")["jobs"]["heartbeat"]["steps"]
+    names = [step.get("name") for step in steps]
+    after = steps[names.index("Commit the keepalive") + 1 :]
+    assert after, "the heartbeat has no steps after the keepalive"
+    for step in after:
+        assert "!cancelled()" in str(step.get("if", "")), (
+            f"step {step.get('name')!r} is skipped when the keepalive push fails"
+        )
