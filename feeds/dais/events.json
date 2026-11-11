@@ -1268,6 +1268,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4836:delta:0",
+    "guid": "ps_events:4836:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-18T17:00:00Z",
+    "endsAt": "2026-11-18T18:00:00Z",
+    "startTime": "2026-11-18T12:00:00",
+    "endTime": "2026-11-18T13:00:00",
+    "timezone": "America/New_York",
+    "title": "AI\u00b2 Weekly Office Hours",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "View location on My PrincetonU",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai%C2%B2-weekly-office-hours-0",
+    "content": "Think AI could be useful for your research but don\u2019t know where to start? Want to chat about latest AI news and workflows? Join us for weekly open office hours! This week\u2019s discussion will focus on how experimentalists across engineering/sciences can best leverage AI for their research. Graduate students, postdocs, and faculty from any department are welcome.",
+    "rawEventDetails": "Details Event Description Think AI could be useful for your research but don\u2019t know where to start? Want to chat about latest AI news and workflows? Join us for weekly open office hours! This week\u2019s discussion will focus on how experimentalists across engineering/sciences can best leverage AI for their research. Graduate students, postdocs, and faculty from any department are welcome.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI\u00b2 Weekly Office Hours",
+    "locationRaw": "View location on My PrincetonU",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4801:delta:0",
     "guid": "ps_events:4801:delta:0",
     "sources": [
