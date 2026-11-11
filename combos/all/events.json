@@ -6711,7 +6711,7 @@
     "startTime": "2026-11-19T11:00:00",
     "endTime": "2026-11-19T12:00:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Xin Wei, Stanford",
+    "title": "Strain Engineering of Nickelate Freestanding Membranes",
     "speakers": [
       {
         "name": "Xin Wei",
@@ -6738,23 +6738,23 @@
       "id": "",
       "detail": "A06"
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-xin-wei-stanford",
-    "content": "Title: TBDAbstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-strain-engineering-nickelate-freestanding-membranes-xin-wei-stanford",
+    "content": "Title: Strain Engineering of Nickelate Freestanding MembranesAbstract: Rare-earth nickelates host a rich landscape of electronic phases, including metal-to-insulator transitions and superconductivity, reflecting the interplay between strong electronic correlations and lattice degrees of freedom. Strain offers a powerful means of tuning these phases, but conventional epitaxial thin films are constrained by a limited and discrete strain range and device-to-device variability. Freestanding membranes overcome these limitations, opening new opportunities",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Xin Wei (Stanford)",
+    "summaryRaw": "Special Quantum Seminar: Strain Engineering of Nickelate Freestanding Membranes, Xin Wei (Stanford)",
     "locationRaw": "Jadwin A06",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -6974,7 +6974,7 @@
     "startTime": "2026-11-19T15:00:00",
     "endTime": "2026-11-19T16:00:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Anant Kale, Harvard",
+    "title": "New Frontiers in Quantum Simulation of Strongly Correlated Matter with Ultracold Atoms",
     "speakers": [
       {
         "name": "Anant Kale",
@@ -7001,23 +7001,23 @@
       "id": "",
       "detail": "222"
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-anant-kale-harvard",
-    "content": "Title: TBDAbstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-new-frontiers-quantum-simulation-strongly-correlated-matter",
+    "content": "Title: New Frontiers in Quantum Simulation of Strongly Correlated Matter with Ultracold AtomsAbstract: Quantum simulation of strongly correlated matter is a promising probe of fundamental physics while also being practically useful in making progress on long-standing problems in condensed matter. A paradigmatic example is understanding the physics of high-Tc cuprate materials, where many open questions remain regarding the origin and nature of unconventional superconductivity, pseudogap phase, and spin and charge stripes. Ultracold fermionic atoms in",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Anant Kale (Harvard)",
+    "summaryRaw": "Special Quantum Seminar: New Frontiers in Quantum Simulation of Strongly Correlated Matter with Ultracold Atoms, Anant Kale (Harvard)",
     "locationRaw": "Bowen 222",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -7343,7 +7343,7 @@
     "startTime": "2026-11-20T14:30:00",
     "endTime": "2026-11-20T15:30:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Natalie Parham, Columbia",
+    "title": "Why is it so hard to prove the limits of quantum circuits?",
     "speakers": [
       {
         "name": "Natalie Parham",
@@ -7366,27 +7366,27 @@
       "Special Quantum Seminar"
     ],
     "location": {
-      "name": "TBD:",
+      "name": "CS105",
       "id": "",
-      "detail": "CS105"
+      "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-natalie-parham-columbia",
-    "content": "Title: TBDAbstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-why-it-so-hard-prove-limits-quantum-circuits-natalie-parham-columbia",
+    "content": "Title: Why is it so hard to prove the limits of quantum circuits? Abstract: Although almost all quantum states require exponentially large quantum circuits to prepare, it remains a central challenge to prove that even very restricted circuits cannot prepare specific states. In this talk, I will describe the landscape of what we can currently prove about the limits of quantum circuits, known as circuit lower bounds. I will highlight some of the strongest known results, including my work introducing the magic hierarchy, a framework that",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Natalie Parham (Columbia)",
-    "locationRaw": "TBD: CS105",
+    "summaryRaw": "Special Quantum Seminar: Why is it so hard to prove the limits of quantum circuits?, Natalie Parham (Columbia)",
+    "locationRaw": "CS105",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
-    "locationRule": "unambiguous_room",
+    "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
