@@ -146,14 +146,16 @@ with them. That is inherent to running monitoring inside the thing being monitor
 
 ## Secrets
 
-Two. Both are described, with how to set and rotate them, in
-[operations.md](operations.md#secrets).
+Two, of which only `BOT_BYPASS_HEADER` is set. Both are described, with how to set and
+rotate them, in [operations.md](operations.md#secrets).
 
 `HEARTBEAT_DEPLOY_KEY` is the private half of the write deploy key the heartbeat pushes its
 keepalive with -- the one push that must reach `main` without a pull request. The workflow
 token cannot do it: GitHub refuses the Actions app as a ruleset bypass actor, and deploy
-keys are a bypass it accepts. Both halves of that were measured against a throwaway branch
-before the ruleset reached `main`.
+keys are a bypass it accepts. The refusal was measured against a throwaway branch; the
+deploy-key bypass is GitHub's documented behaviour and has not been exercised here, because
+the key is **not set**. Without it the keepalive fails loudly after 35 quiet days, and any
+merged pull request supplies the activity instead.
 
 `BOT_BYPASS_HEADER` holds a **whole header line** (`Name: value`), so neither half
 is written in this repository. It has no default anywhere. A contract test refuses any

@@ -13,8 +13,8 @@ The question this answers: **if this laptop were wiped tonight, what would be lo
 | Code, config, fixtures, docs, the ruleset definition | `main` on GitHub | Yes |
 | The last published tree and the fetch state (`state/upstream.json`) | the `published` branch | Yes. Every build reads it; see [ci-cd.md](ci-cd.md#the-published-branch) |
 | Publishing, the watchdog, the heartbeat | GitHub Actions, on GitHub's runners | Yes. They do not need this machine and keep running while it is gone |
-| `BOT_BYPASS_HEADER`, `HEARTBEAT_DEPLOY_KEY` | repository secrets | Yes, but **write-only**: GitHub never shows a secret again. See [Secrets](#secrets) |
-| Pages, the `github-pages` environment, the `main` ruleset, the deploy key | repository settings | Yes. Listed in [GitHub settings](#github-settings) so they can be rebuilt if the repository ever is |
+| `BOT_BYPASS_HEADER` (and `HEARTBEAT_DEPLOY_KEY`, optional and not set) | repository secrets | Yes, but **write-only**: GitHub never shows a secret again. See [Secrets](#secrets) |
+| Pages, the `github-pages` environment, the `main` ruleset | repository settings | Yes. Listed in [GitHub settings](#github-settings) so they can be rebuilt if the repository ever is |
 | `.venv`, the Docker test image, `dist/`, `.feeds/` | this checkout, gitignored | No, and nothing is lost: `make bootstrap` rebuilds them |
 | Homebrew tools, the Docker VM, the `gh` login | this machine | No. [A fresh machine](#a-fresh-machine) reinstalls them |
 
@@ -103,9 +103,15 @@ workflow that gives `BOT_BYPASS_HEADER` a plausible-looking one.
   `main` ruleset lets deploy keys bypass it, and the heartbeat pushes its keepalive commit
   with this key -- the workflow token cannot, because GitHub refuses the Actions app as a
   ruleset bypass.
+- **Status: not set, by choice.** The repository runs without it.
 - **Who needs it:** the heartbeat, only on the rare day the repository has been quiet for
-  35 days. Without it the keepalive push fails, loudly, with a message naming the secret.
-- **It is replaceable:** nothing else uses the key. To create or rotate it:
+  35 days. Without it the keepalive push fails, loudly, with a message naming the secret,
+  and the heartbeat goes red every day until something lands on `main`. It still
+  re-enables any stopped schedule and opens its issues on those days.
+- **What to do instead:** when the heartbeat goes red with *HEARTBEAT_DEPLOY_KEY is unset*,
+  merge any pull request -- a docs fix will do -- before day 60 of quiet. That is the
+  activity the keepalive would have supplied.
+- **To add it later:** nothing else uses the key. To create or rotate it:
 
   ```sh
   ssh-keygen -t ed25519 -N '' -C 'pu-shd/upcoming heartbeat keepalive' -f heartbeat_key
@@ -128,8 +134,8 @@ re-created.
 | Pages | Source: **GitHub Actions**. Served at `https://pu-shd.github.io/upcoming/` | Settings > Pages |
 | Environment `github-pages` | Deployment branches: `main` only | Created by the first Pages deploy; set the branch policy under Settings > Environments |
 | Ruleset `main` | `.github/rulesets/main.json`: pull request required, the three Tests jobs (`pytest`, `lint`, `container`) required, no force-push, no deletion; deploy keys may bypass | `make protect` |
-| Deploy key | *heartbeat keepalive*, write access | [`HEARTBEAT_DEPLOY_KEY`](#heartbeat_deploy_key) |
-| Secrets | `BOT_BYPASS_HEADER`, `HEARTBEAT_DEPLOY_KEY` | [Secrets](#secrets) |
+| Deploy key | None. Optional; see [`HEARTBEAT_DEPLOY_KEY`](#heartbeat_deploy_key) | -- |
+| Secrets | `BOT_BYPASS_HEADER` (`HEARTBEAT_DEPLOY_KEY` optional, not set) | [Secrets](#secrets) |
 | Actions workflow permissions | Default **read**. Every workflow declares the permissions it needs | Settings > Actions > General |
 | Label `watchdog` | Carried by every issue Verify and the heartbeat open | `gh label create watchdog` |
 
@@ -259,7 +265,8 @@ Its summary says which half:
 - **A scheduled workflow had stopped:** it has already re-enabled it and opened an issue.
   If it recurs, the repository is going quiet faster than the 35-day keepalive expects.
 - **main is missing its branch protection:** run `make protect`.
-- **`HEARTBEAT_DEPLOY_KEY is unset`:** create it; see [the secret](#heartbeat_deploy_key).
+- **`HEARTBEAT_DEPLOY_KEY is unset`:** the repository has been quiet 35 days. Merge any
+  pull request before day 60, or add the key; see [the secret](#heartbeat_deploy_key).
 
 ### Running Publish by hand
 
