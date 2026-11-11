@@ -2337,7 +2337,7 @@
     "startTime": "2026-11-20T16:00:00",
     "endTime": "2026-11-20T17:00:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Joern Bannies, UC Berkeley",
+    "title": "Controlling the nodal-loop topology of LaSbxTe2-x",
     "speakers": [
       {
         "name": "Joern Bannies",
@@ -2364,23 +2364,23 @@
       "id": "",
       "detail": "A10"
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-joern-bannies-uc-berkeley",
-    "content": "Title: TBDAbstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-controlling-nodal-loop-topology-lasbxte2-x-joern-bannies-uc-berkeley",
+    "content": "Title: Controlling the nodal-loop topology of LaSbxTe2-xAbstract: In crystalline materials, the crystal symmetry can impose strong constraints on the electronic structure. Highly symmetric square-nets, for example, guarantee the existence of several line-node degeneracies in the electronic structure of square-net materials. However, manipulating the underlying crystalline symmetries to achieve experimental control over topological states remains challenging. In this talk, I will establish a symmetry-based framework that describes the",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Joern Bannies (UC Berkeley)",
+    "summaryRaw": "Special Quantum Seminar: Controlling the nodal-loop topology of LaSbxTe2-x, Joern Bannies (UC Berkeley)",
     "locationRaw": "Jadwin A10",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -3118,7 +3118,7 @@
     "startTime": "2026-12-07T12:10:00",
     "endTime": "2026-12-07T13:10:00",
     "timezone": "America/New_York",
-    "title": "A Princeton Quantum Colloquium Talk by Marko Loncar, Harvard University",
+    "title": "Efficient photon and phonon interfaces for spin qubits in diamond",
     "speakers": [
       {
         "name": "Marko Loncar",
@@ -3143,23 +3143,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-tbd-marko-loncar-harvard-university",
-    "content": "Title: tbd Abstract: tbdA light lunch will be served in the Bowen Atrium at 11:45am.",
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-efficient-photon-and-phonon-interfaces-spin-qubits-diamond",
+    "content": "Title: Efficient photon and phonon interfaces for spin qubits in diamond Abstract: Color centers in diamond provide optically accessible, long-lived spin qubits that are promising building blocks for distributed quantum networks. Realizing scalable quantum nodes, however, requires efficient and controllable interfaces between spins and both photons and phonons. In this talk, I will describe our efforts to engineer the electromagnetic and elastic environments of silicon-vacancy (SiV) centers to realize efficient spin\u2013photon and spin\u2013phonon",
     "rawEventDetails": "Details Event Description Title: tbd Abstract: tbd A light lunch will be served in the Bowen Atrium at 11:45am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: TBD, Marko Loncar (Harvard University)",
+    "summaryRaw": "Princeton Quantum Colloquium: Efficient photon and phonon interfaces for spin qubits in diamond, Marko Loncar (Harvard University)",
     "locationRaw": "Bowen Hall",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "whole",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
