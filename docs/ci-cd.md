@@ -70,8 +70,11 @@ for.
 
 Scheduled and manual runs carry no `workflow_run` payload and are unaffected. They publish
 whatever is on `main`, which is the point of a schedule — and it is why this narrows the
-window rather than closing it. **The only thing that keeps broken code off `main` is
-branch protection**, which is a repository setting rather than anything in this tree.
+window rather than closing it. **What keeps broken code off `main` is its ruleset**: a
+pull request is required, and so are the three Tests jobs. The ruleset is committed in
+`.github/rulesets/main.json` and applied with `make protect`, a contract test keeps its
+required checks identical to the Tests jobs, and the heartbeat checks daily that GitHub is
+still enforcing it. See [operations.md](operations.md#changing-main).
 
 CodeQL is deliberately not waited on: it is a security scan rather than a correctness gate,
 and blocking a departmental feed on it would trade a real delay for no correctness the
@@ -133,12 +136,26 @@ Two mechanisms, because neither covers both halves:
   re-enable what GitHub stopped. A workflow somebody switched off by hand is reported too:
   turning the publisher off is legitimate, leaving it off silently is not.
 
+A third check: **branch protection.** It fetches the rules GitHub enforces on `main` and
+compares them with `.github/rulesets/main.json`, and opens one `watchdog` issue -- updated
+daily, not repeated -- if any are missing. A ruleset switched off in the settings page is
+otherwise invisible from inside the repository.
+
 **It cannot rescue itself.** If every scheduled workflow is disabled at once, this one goes
 with them. That is inherent to running monitoring inside the thing being monitored.
 
 ## Secrets
 
-One: `BOT_BYPASS_HEADER`, holding a **whole header line** (`Name: value`), so neither half
+Two. Both are described, with how to set and rotate them, in
+[operations.md](operations.md#secrets).
+
+`HEARTBEAT_DEPLOY_KEY` is the private half of the write deploy key the heartbeat pushes its
+keepalive with -- the one push that must reach `main` without a pull request. The workflow
+token cannot do it: GitHub refuses the Actions app as a ruleset bypass actor, and deploy
+keys are a bypass it accepts. Both halves of that were measured against a throwaway branch
+before the ruleset reached `main`.
+
+`BOT_BYPASS_HEADER` holds a **whole header line** (`Name: value`), so neither half
 is written in this repository. It has no default anywhere. A contract test refuses any
 workflow that assigns it a value that is neither the secret store nor visibly fake — a
 placeholder credential reaching a real host is how the predecessor came to 403 on every
@@ -150,6 +167,7 @@ page while reporting a clean run.
 make test           # the pytest job
 make lint typecheck # the lint job
 make docker-test    # the container job, byte-for-byte
+make bootstrap      # a fresh machine: check the tools, build .venv and the image
 make publish        # the publish job, offline from fixtures
 make publish FETCH=1 ENRICH=1   # with the network
 make verify         # the watchdog, against the live site

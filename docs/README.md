@@ -1,14 +1,16 @@
 # Developer documentation
 
 For people changing this code. The [project README](../README.md) covers what it produces
-and how to use it; these cover how it works and why it is shaped this way.
+and how to use it; these cover how it works and why it is shaped this way, and
+[operations.md](operations.md) covers running it.
 
 | | |
 |---|---|
 | [**architecture.md**](architecture.md) | The pipeline stage by stage, the module map, and the decisions each stage encodes |
 | [**failure-modes.md**](failure-modes.md) | What can go wrong, what catches it, and what nothing catches |
-| [**testing.md**](testing.md) | What the 891 tests cover, how they are organised, and how to add one |
+| [**testing.md**](testing.md) | What the tests cover, how they are organised, and how to add one |
 | [**ci-cd.md**](ci-cd.md) | The four workflows, the cadence, and the publishing model |
+| [**operations.md**](operations.md) | What lives where, a fresh machine, secrets, GitHub settings, and runbooks for each failure seen so far |
 | [**roadmap.md**](roadmap.md) | What to build next, ordered by whether anyone else has to act first |
 
 ## The one idea

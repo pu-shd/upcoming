@@ -27,6 +27,9 @@ each drove a mechanism here.
 | A feed is stale rather than fresh | `status.json` is the only file with a clock; `lastSuccessAt` carried across failures | A consumer that does not read it cannot tell |
 | Enrichment silently stops filling a field | `min_enrich_success_rate`, per source | A warm run attempts nothing, so there is no rate to breach — correct, but it means the gate is quiet on most runs |
 | The publisher stops running entirely | The watchdog, within 90 minutes | See **What nothing catches** below |
+| `main`'s protection is switched off in the settings page | The heartbeat compares the enforced rules with `.github/rulesets/main.json` daily and files an issue | Up to a day of exposure |
+| A `.venv` whose interpreter a Homebrew upgrade deleted | The `make` rule is keyed on the interpreter, so it rebuilds; `make bootstrap` says why | — |
+| The local container suite runs in another project's image | Images are named `pu-shd-upcoming:*`, enforced by a contract test | Any image pulled under that name by hand |
 
 ## Degradation, by design
 
