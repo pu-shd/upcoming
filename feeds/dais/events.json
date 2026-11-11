@@ -980,6 +980,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4841:delta:0",
+    "guid": "ps_events:4841:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T22:00:00Z",
+    "endsAt": "2026-11-12T23:15:00Z",
+    "startTime": "2026-11-12T17:00:00",
+    "endTime": "2026-11-12T18:15:00",
+    "timezone": "America/New_York",
+    "title": "Faith & Culture Speaker Series",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "McCosh",
+      "id": "",
+      "detail": "28"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/faith-culture-speaker-series",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Faith & Culture Speaker Series",
+    "locationRaw": "McCosh 28",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4806:delta:0",
     "guid": "ps_events:4806:delta:0",
     "sources": [

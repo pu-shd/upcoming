@@ -5179,6 +5179,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4841:delta:0",
+    "guid": "ps_events:4841:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-12T22:00:00Z",
+    "endsAt": "2026-11-12T23:15:00Z",
+    "startTime": "2026-11-12T17:00:00",
+    "endTime": "2026-11-12T18:15:00",
+    "timezone": "America/New_York",
+    "title": "Faith & Culture Speaker Series",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "McCosh",
+      "id": "",
+      "detail": "28"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/faith-culture-speaker-series",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Faith & Culture Speaker Series",
+    "locationRaw": "McCosh 28",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4346:delta:0",
     "guid": "ps_events:4346:delta:0",
     "sources": [
@@ -6847,6 +6895,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11371:delta:0",
+    "guid": "ps_events:11371:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-19T20:00:00Z",
+    "endsAt": "2026-11-19T21:00:00Z",
+    "startTime": "2026-11-19T15:00:00",
+    "endTime": "2026-11-19T16:00:00",
+    "timezone": "America/New_York",
+    "title": "Special Quantum Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://ece.princeton.edu/events/special-quantum-seminar",
+    "content": "Abstract: Quantum simulation of strongly correlated matter is a promising probe of fundamental physics while also being practically useful in making progress on long-standing problems in condensed matter. A paradigmatic example is understanding the physics of high-Tc cuprate materials, where many open questions remain regarding the origin and nature of unconventional superconductivity, pseudogap phase, and spin and charge stripes. Ultracold fermionic atoms in optical lattices provide a clean and controllable realization of the Fermi-Hubbard model, believed to capture the",
+    "rawEventDetails": "Speaker Anant Kale Affiliation Harvard Details Event Description Abstract: Quantum simulation of strongly correlated matter is a promising probe of fundamental physics while also being practically useful in making progress on long-standing problems in condensed matter. A paradigmatic example is understanding the physics of high-Tc cuprate materials, where many open questions remain regarding the origin and nature of unconventional superconductivity, pseudogap phase, and spin and charge stripes. Ultracold fermionic atoms in optical lattices provide a clean and controllable realization of the Fermi-Hubbard model, believed to capture the essential physics of the cuprates. In this talk, I will describe our recent experimental results achieving a several-fold reduction in temperature, reaching a regime inaccessible to numerical simulation. Using equilibrium and dynamical probes, we experimentally characterize the pseudogap phase, thought to be a parent state for the d-wave superconductor. In the pseudogap regime, we observe novel peaks versus doping in the compressibility and nematic susceptibility, possible precursors to charge and spin stripes. We also observe direct signatures of spin stripes at the lowest temperatures, although these appear to differ from the conventional picture of stripes. Finally, I will describe ongoing efforts to push beyond the plain Hubbard model, including a three-band Lieb lattice and next-nearest-neighbor hopping t\u2032, which may play an important role in understanding the long-sought-after high-Tc superconductivity. Sponsor Host: Professor Jeff Thompson, ECE",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar",
+    "locationRaw": "222 Bowen Hall",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "quantum:ps_events:4101:delta:0",
     "guid": "ps_events:4101:delta:0",
     "sources": [
@@ -7213,6 +7308,58 @@
     "summaryRest": "",
     "titleSource": "fallback-speaker",
     "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "cs:https://www.cs.princeton.edu/events/special-quantum-seminar-why-it-so-hard-prove-limits-quantum-circuits",
+    "guid": "https://www.cs.princeton.edu/events/special-quantum-seminar-why-it-so-hard-prove-limits-quantum-circuits",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-20T19:30:00Z",
+    "endsAt": "2026-11-20T20:30:00Z",
+    "startTime": "2026-11-20T14:30:00",
+    "endTime": "2026-11-20T15:30:00",
+    "timezone": "America/New_York",
+    "title": "Special Quantum Seminar - Why is it so hard to prove the limits of quantum circuits?",
+    "speakers": [
+      {
+        "name": "Natalie Parham",
+        "affiliation": "Columbia University"
+      }
+    ],
+    "speaker": "Natalie Parham, Columbia University",
+    "affiliation": "Columbia University",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Small Auditorium",
+      "id": "",
+      "detail": "Room 105"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/special-quantum-seminar-why-it-so-hard-prove-limits-quantum-circuits",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar - Why is it so hard to prove the limits of quantum circuits?",
+    "locationRaw": "Computer Science Small Auditorium (Room 105)",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
