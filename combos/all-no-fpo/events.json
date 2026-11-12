@@ -8910,6 +8910,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11386:delta:0",
+    "guid": "ps_events:11386:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T19:00:00Z",
+    "endsAt": "2026-12-04T20:00:00Z",
+    "startTime": "2026-12-04T14:00:00",
+    "endTime": "2026-12-04T15:00:00",
+    "timezone": "America/New_York",
+    "title": "High-Frequency Power Electronics for Semiconductor Plasma Processing",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quadrangle",
+      "id": "",
+      "detail": "B205"
+    },
+    "urlRef": "https://ece.princeton.edu/events/high-frequency-power-electronics-semiconductor-plasma-processing",
+    "content": "Abstract: Radio-frequency (RF) plasmas enable critical etching and deposition processes in semiconductor manufacturing. As device structures become increasingly three-dimensional and feature dimensions shrink, these processes demand tighter control of RF power over wide operating ranges and during rapid changes in plasma impedance. Meeting these requirements presents a central challenge for high-frequency power electronics: achieving high efficiency together with wide-range power control and fast dynamic response.This talk explores how coordinated design of RF",
+    "rawEventDetails": "Speaker Alex Jurkov Affiliation MKS Details Event Description Abstract: Radio-frequency (RF) plasmas enable critical etching and deposition processes in semiconductor manufacturing. As device structures become increasingly three-dimensional and feature dimensions shrink, these processes demand tighter control of RF power over wide operating ranges and during rapid changes in plasma impedance. Meeting these requirements presents a central challenge for high-frequency power electronics: achieving high efficiency together with wide-range power control and fast dynamic response. This talk explores how coordinated design of RF inverters, power-combining networks, and tunable matching networks can address this challenge. Following a brief introduction to semiconductor plasma processing and its power-delivery requirements, this presentation examines soft-switched inverters that accommodate variable loading, power-combining architectures that enable rapid and efficient output-power control, and phase-switched impedance modulation (PSIM) for high-speed impedance matching. Experimental examples include a 13.56 MHz RF power system operating over a 5 W\u20135 kW range with microsecond pulsing capability, and a 3.5 kW tunable matching network for dynamic plasma loads. The talk will conclude with open research opportunities in adaptive RF power architectures, high-frequency components, sensing, and control. Bio: Alex Jurkov received the B.Sc. degree in Electrical Engineering and Computer Engineering from the University of Calgary, Calgary, AB, Canada, and the S.M. and Ph.D. degrees in Electrical Engineering from the Massachusetts Institute of Technology (MIT), Cambridge, MA. Since 2019, he has been a Senior Principal Scientist in the Advanced Development Group at MKS Instruments, Rochester, NY, where he leads research on next-generation RF power delivery systems for plasma processing. He is also a Visiting Research Scientist at MIT\u2019s Laboratory for Electromagnetic and Electronic Systems. His research interests include high-efficiency RF power converters, phase-switched impedance modulation (PSIM), high-bandwidth tunable matching networks, and embedded mixed-signal control systems for semiconductor manufacturing. Sponsor Professor Minjie Chen",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "High-Frequency Power Electronics for Semiconductor Plasma Processing",
+    "locationRaw": "B205 Engineering Quadrangle",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "mae:ps_events:4766:delta:0",
     "guid": "ps_events:4766:delta:0",
     "sources": [
