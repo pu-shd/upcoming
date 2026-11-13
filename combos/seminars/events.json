@@ -2338,7 +2338,7 @@
     "startTime": "2026-11-23T13:30:00",
     "endTime": "2026-11-23T14:30:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Norah Tan, MIT",
+    "title": "Complexity growth and efficient compilation of quantum circuits",
     "speakers": [
       {
         "name": "Norah Tan",
@@ -2365,23 +2365,23 @@
       "id": "",
       "detail": "CS105"
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-norah-tan-mit",
-    "content": "Title: TBDAbstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-complexity-growth-and-efficient-compilation-quantum-circuits-norah",
+    "content": "Title: Complexity growth and efficient compilation of quantum circuitsAbstract: Simple quantum gates can generate complex dynamics. In this talk, I will explore this relationship in two settings: complexity growth in random quantum circuits and compilation into a fault-tolerant gate set.First, if a quantum system undergoes a long sequence of local random interactions, could the same evolution be produced by a much shorter sequence? We show that the circuit complexity of random quantum circuits grows linearly with the number of gates applied,",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Norah Tan (MIT)",
+    "summaryRaw": "Special Quantum Seminar: Complexity growth and efficient compilation of quantum circuits, Norah Tan (MIT)",
     "locationRaw": "TBD: CS105",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -2449,12 +2449,12 @@
       "quantum"
     ],
     "platform": "princeton-site-builder",
-    "startsAt": "2026-11-24T16:00:00Z",
-    "endsAt": "2026-11-24T17:00:00Z",
-    "startTime": "2026-11-24T11:00:00",
-    "endTime": "2026-11-24T12:00:00",
+    "startsAt": "2026-11-24T17:00:00Z",
+    "endsAt": "2026-11-24T18:00:00Z",
+    "startTime": "2026-11-24T12:00:00",
+    "endTime": "2026-11-24T13:00:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Yiyu Xia, Cornell",
+    "title": "Mott Transition and Superconductivity in Moir\u00e9 WSe2",
     "speakers": [
       {
         "name": "Yiyu Xia",
@@ -2481,23 +2481,23 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-yiyu-xia-cornell",
-    "content": "Title: TBD Abstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-mott-transition-and-superconductivity-moir%C3%A9-wse2-yiyu-xia-cornell",
+    "content": "Title: Mott Transition and Superconductivity in Moir\u00e9 WSe2 Abstract: The Hubbard model is a prototypical model of strongly correlated electrons. Tuning the correlation strength and doping density is expected to give rise to a complex phase diagram hosting novel states of matter, most notably high-temperature superconductivity. However, solving the model is notoriously difficult. Semiconductor moir\u00e9 materials have emerged as a promising platform for simulating the Hubbard model, offering hope for new insights.In this talk, I will present",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Yiyu Xia (Cornell)",
+    "summaryRaw": "Special Quantum Seminar: Mott Transition and Superconductivity in Moir\u00e9 WSe2, Yiyu Xia (Cornell)",
     "locationRaw": "",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "declined",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -2512,7 +2512,7 @@
     "startTime": "2026-11-24T13:30:00",
     "endTime": "2026-11-24T14:30:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Simon Fischer, University of Cambridge",
+    "title": "Weak wave turbulence as a precursor to universal coarsening in a homogeneous Bose gas",
     "speakers": [
       {
         "name": "Simon Fischer",
@@ -2539,23 +2539,23 @@
       "id": "",
       "detail": "A010"
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-simon-fischer-university-cambridge",
-    "content": "Title: TBD Abstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-weak-wave-turbulence-precursor-universal-coarsening-homogeneous-bose",
+    "content": "Title: Weak wave turbulence as a precursor to universal coarsening in a homogeneous Bose gasAbstract: Relaxation and condensation of an isolated low-energy Bose gas provide an ideal setting for the study of the universal features of far-from-equilibrium many-body dynamics and the emergence of long-range order. Here, we study particle transport during the relaxation of an isolated low-energy Bose gas from a far-from-equilibrium incoherent state towards a condensed state, and the late-time emergence of coherence. We first consider the initial stage of",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Simon Fischer (University of Cambridge)",
+    "summaryRaw": "Special Quantum Seminar: Weak wave turbulence as a precursor to universal coarsening in a homogeneous Bose gas, Simon Fischer (University of Cambridge)",
     "locationRaw": "Jadwin A010",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
@@ -2593,7 +2593,7 @@
       "Special Quantum Seminar"
     ],
     "location": {
-      "name": "TBD: CS",
+      "name": "CS",
       "id": "",
       "detail": "105"
     },
@@ -2606,7 +2606,7 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "Special Quantum Seminar: TBD, Joseph Carolan (U Maryland)",
-    "locationRaw": "TBD: CS 105",
+    "locationRaw": "CS 105",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
