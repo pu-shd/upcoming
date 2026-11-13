@@ -1,61 +1,5 @@
 [
   {
-    "id": "quantum:ps_events:3811:delta:0",
-    "guid": "ps_events:3811:delta:0",
-    "sources": [
-      "quantum"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-12T16:10:00Z",
-    "endsAt": "2026-10-12T17:10:00Z",
-    "startTime": "2026-10-12T12:10:00",
-    "endTime": "2026-10-12T13:10:00",
-    "timezone": "America/New_York",
-    "title": "Quantum error correction and the decoding problem",
-    "speakers": [
-      {
-        "name": "Aleksander Kubica",
-        "affiliation": "Yale University"
-      }
-    ],
-    "speaker": "Aleksander Kubica, Yale University",
-    "affiliation": "Yale University",
-    "series": "Princeton Quantum Colloquium",
-    "tags": [
-      "colloquium"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Princeton Quantum Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen Hall",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-quantum-error-correction-and-decoding-problem-aleksander-kubica",
-    "content": "Title: Quantum error correction and the decoding problem Abstract: Quantum error correction is essential for making quantum computers reliable, but it poses the classical computational problem of decoding, i.e., deciding how to correct errors using indirect, noisy measurement data. These decisions must be made fast enough to keep pace with the quantum hardware. In this talk, I will discuss recent progress in quantum error correction, focusing on what makes decoding difficult and how practical algorithms address this challenge. I will also",
-    "rawEventDetails": "Details Event Description Title: Quantum error correction and the decoding problem Abstract: Quantum error correction is essential for making quantum computers reliable, but it poses the classical computational problem of decoding, i.e., deciding how to correct errors using indirect, noisy measurement data. These decisions must be made fast enough to keep pace with the quantum hardware. In this talk, I will discuss recent progress in quantum error correction, focusing on what makes decoding difficult and how practical algorithms address this challenge. I will also explore how physical insights and heuristics can guide further advances in the field. Based on arXiv: 2603.22064, 2606.18145, 2608.10081, 2609.39016. A light lunch will be served in the Bowen Atrium at 11:45am.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Colloquium: Quantum error correction and the decoding problem, Aleksander Kubica (Yale University)",
-    "locationRaw": "Bowen Hall",
-    "mappingRules": [
-      "quantum:series-title-comma-person"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "quantum:ps_events:3741:delta:0",
     "guid": "ps_events:3741:delta:0",
     "sources": [
@@ -458,7 +402,7 @@
     "startTime": "2026-11-13T12:00:00",
     "endTime": "2026-11-13T14:00:00",
     "timezone": "America/New_York",
-    "title": "A Quantum Group Meeting Talk by Nadine Bradbury, Subotnik Group",
+    "title": "Electronic and spin coriolis forces: a phase space electronic structure theory from diatomic molecule models to spectroscopy",
     "speakers": [
       {
         "name": "Nadine Bradbury",
@@ -483,23 +427,23 @@
       "id": "",
       "detail": "J401"
     },
-    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-nadine-bradbury-subotnik-group",
-    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-electronic-and-spin-coriolis-forces-phase-space-electronic-structure",
+    "content": "Title: Electronic and spin coriolis forces: a phase space electronic structure theory from diatomic molecule models to spectroscopyAbstract: In this talk I explore phase space electronic structure theory (PSEST) as it applies to the coupling between nuclear, electronic and spin degrees of freedom under molecular rotation. PESET goes beyond the standard treatment of nuclei under the Born Oppenheimer approximation by parametrizing the electronic Hamiltonian by both the nuclear position (R) and nuclear momenta (P). In this picture the Hamiltonian is non",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Quantum Group Meeting: TBD - Nadine Bradbury (Subotnik Group)",
+    "summaryRaw": "Quantum Group Meeting: Electronic and spin coriolis forces: a phase space electronic structure theory from diatomic molecule models to spectroscopy - Nadine Bradbury (Subotnik Group)",
     "locationRaw": "EQuad J401",
     "mappingRules": [
       "quantum:series-title-dash-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
