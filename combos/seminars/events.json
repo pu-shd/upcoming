@@ -1717,7 +1717,7 @@
     "startTime": "2026-11-17T16:30:00",
     "endTime": "2026-11-17T17:30:00",
     "timezone": "America/New_York",
-    "title": "An ORFE Department Colloquia Talk by Pablo Parrilo, Massachusetts Institute of Technology",
+    "title": "Elliptic Sampling: Optimal Diffusion Schedules for Gaussians and Beyond",
     "speakers": [
       {
         "name": "Pablo Parrilo",
@@ -1745,7 +1745,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/pablo-parrilo-massachusetts-institute-technology",
     "content": "Abstract: Generative diffusion modeling aims to produce new samples from complex probability distributions, with applications ranging from image and speech generation to scientific computing. This approach typically involves two key design choices: an interpolant schedule bridging the initial and final distributions, and a discretization of the resulting probability-flow ODE. In this talk, we propose a unified framework for jointly optimizing both, based on the analyticity properties of the ODE trajectories. Using conformal mapping, we derive a novel family of schedules",
-    "rawEventDetails": "Event Category ORFE Department Colloquia",
+    "rawEventDetails": "Details Event Description Abstract: Generative diffusion modeling aims to produce new samples from complex probability distributions, with applications ranging from image and speech generation to scientific computing. This approach typically involves two key design choices: an interpolant schedule bridging the initial and final distributions, and a discretization of the resulting probability-flow ODE. In this talk, we propose a unified framework for jointly optimizing both, based on the analyticity properties of the ODE trajectories. Using conformal mapping, we derive a novel family of schedules based on Jacobi elliptic functions and introduce Zoloflow, a sampling algorithm closely related to Zolotarev\u2019s optimal rational approximations. Our approach explicitly adapts to the condition number of the target distribution, yielding optimal sampling guarantees for Gaussian targets and improved complexity bounds for log-concave distributions. We also demonstrate the practical benefits of elliptic schedules through experiments on synthetic distributions and real image generation benchmarks. The talk will be self-contained and is based on joint work with Cole Becker, Kimia Hassibi, Taylan Kargin, and Asu Ozdaglar (MIT). Bio: Pablo A. Parrilo is the Joseph F. and Nancy P. Keithley Professor of Electrical Engineering and Computer Science at MIT, with a joint appointment in Mathematics. He is affiliated with the Laboratory for Information and Decision Systems (LIDS) and the Operations Research Center (ORC). Past appointments include Assistant Professor at the Automatic Control Laboratory of the Swiss Federal Institute of Technology (ETH Zurich), and Visiting Associate Professor at the California Institute of Technology. He received an Electronics Engineering undergraduate degree from the University of Buenos Aires, and a PhD in Control and Dynamical Systems from the California Institute of Technology. His research interests include mathematical optimization, machine learning, control and identification, robustness analysis and synthesis, and the development and application of computational tools based on convex optimization and algorithmic algebra to practically relevant engineering problems. Prof. Parrilo has received several distinctions, including the Donald P. Eckman Award of the American Automatic Control Council, the SIAM Activity Group on Control and Systems Theory (SIAG/CST) Prize, the IEEE Antonio Ruberti Young Researcher Prize, and the Farkas Prize of the INFORMS Optimization Society. He is an IEEE and SIAM Fellow. Event Category ORFE Department Colloquia",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -1758,8 +1758,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
