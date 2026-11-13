@@ -1560,6 +1560,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4846:delta:0",
+    "guid": "ps_events:4846:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T15:40:00Z",
+    "endsAt": "2026-11-23T17:00:00Z",
+    "startTime": "2026-11-23T10:40:00",
+    "endTime": "2026-11-23T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Front Office to Founder",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Louis A. Simpson International Building",
+      "id": "",
+      "detail": "A71"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/front-office-founder",
+    "content": "The tools change every month. The fundamentals do not. This session traces a path from a statistics and engineering PhD to professional baseball front offices to founding a data science company, and what that path teaches about building with Al. Expect a candid look at how models reach the people who make decisions, why understanding the full loop from hardware to software to model to stakeholder matters more as code gets cheaper, and how technical skill becomes something people pay for.",
+    "rawEventDetails": "Speaker Michael Czahor Details Event Description The tools change every month. The fundamentals do not. This session traces a path from a statistics and engineering PhD to professional baseball front offices to founding a data science company, and what that path teaches about building with Al. Expect a candid look at how models reach the people who make decisions, why understanding the full loop from hardware to software to model to stakeholder matters more as code gets cheaper, and how technical skill becomes something people pay for.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Front Office to Founder",
+    "locationRaw": "Louis A. Simpson International Building A71",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4681:delta:0",
     "guid": "ps_events:4681:delta:0",
     "sources": [
