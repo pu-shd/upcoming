@@ -1,41 +1,41 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-11-15T03:01:22Z",
+  "generatedAt": "2026-11-15T04:02:24Z",
   "sources": {
     "ai": {
       "etag": "\"1794603602\"",
       "lastModified": "Fri, 13 Nov 2026 21:00:02 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "bioengineering": {
       "etag": "\"1794579752\"",
       "lastModified": "Fri, 13 Nov 2026 14:22:32 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "cbe": {
       "etag": "\"1794321691\"",
       "lastModified": "Tue, 10 Nov 2026 14:41:31 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "cee": {
       "etag": "\"1794594161\"",
       "lastModified": "Fri, 13 Nov 2026 18:22:41 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "citp": {
       "etag": "\"1794590492\"",
       "lastModified": "Fri, 13 Nov 2026 17:21:32 GMT",
-      "lastEnrichedAt": "2026-11-14T21:01:26Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "dais": {
       "etag": "\"1794603488\"",
       "lastModified": "Fri, 13 Nov 2026 20:58:08 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "ece": {
       "etag": "\"1794502930\"",
       "lastModified": "Thu, 12 Nov 2026 17:02:10 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "kellercenter": {
       "etag": "\"1792115290\"",
@@ -45,32 +45,32 @@
     "mae": {
       "etag": "\"1794543626\"",
       "lastModified": "Fri, 13 Nov 2026 04:20:26 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "materials": {
       "etag": "\"1794254534\"",
       "lastModified": "Mon, 09 Nov 2026 20:02:14 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "nam": {
       "etag": "\"1794315216\"",
       "lastModified": "Tue, 10 Nov 2026 12:53:36 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "orfe": {
       "etag": "\"1794618085\"",
       "lastModified": "Sat, 14 Nov 2026 01:01:25 GMT",
-      "lastEnrichedAt": "2026-11-14T21:01:26Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "quantum": {
       "etag": "\"1794586916\"",
       "lastModified": "Fri, 13 Nov 2026 16:21:56 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     },
     "robotics": {
       "etag": "\"1793802157\"",
       "lastModified": "Wed, 04 Nov 2026 14:22:37 GMT",
-      "lastEnrichedAt": "2026-11-14T03:01:29Z"
+      "lastEnrichedAt": "2026-11-15T04:01:19Z"
     }
   }
 }
