@@ -163,54 +163,6 @@
     "mappingConflict": false
   },
   {
-    "id": "dais:ps_events:4671:delta:0",
-    "guid": "ps_events:4671:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-15T20:30:00Z",
-    "endsAt": "2026-10-15T22:00:00Z",
-    "startTime": "2026-10-15T16:30:00",
-    "endTime": "2026-10-15T18:00:00",
-    "timezone": "America/New_York",
-    "title": "A.I. x Journalism: How to Report from the Digital Wild West",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Chancellor Green Rotunda",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-x-journalism-how-report-digital-wild-west",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "A.I. x Journalism: How to Report from the Digital Wild West",
-    "locationRaw": "Chancellor Green Rotunda",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "dais:ps_events:4676:delta:0",
     "guid": "ps_events:4676:delta:0",
     "sources": [
@@ -6165,54 +6117,6 @@
       "ai:series-listing"
     ],
     "locationRule": "comma_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
-    "id": "dais:ps_events:4801:delta:0",
-    "guid": "ps_events:4801:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-11-18T21:30:00Z",
-    "endsAt": "2026-11-18T22:30:00Z",
-    "startTime": "2026-11-18T16:30:00",
-    "endTime": "2026-11-18T17:30:00",
-    "timezone": "America/New_York",
-    "title": "AI\u00b2 Research Talk Series",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bendheim House",
-      "id": "",
-      "detail": "103"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai%C2%B2-research-talk-series-0",
-    "content": "",
-    "rawEventDetails": "Speaker Chris Maddison Affiliation University of Toronto",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI\u00b2 Research Talk Series",
-    "locationRaw": "Bendheim House 103",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
