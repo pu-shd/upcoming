@@ -1512,6 +1512,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4856:delta:0",
+    "guid": "ps_events:4856:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-01T20:30:00Z",
+    "endsAt": "2026-12-01T21:30:00Z",
+    "startTime": "2026-12-01T15:30:00",
+    "endTime": "2026-12-01T16:30:00",
+    "timezone": "America/New_York",
+    "title": "AI for Math Seminar Series",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series-0",
+    "content": "Jaume de Dios, Postdoctoral Researcher, NYU",
+    "rawEventDetails": "Details Event Description Jaume de Dios, Postdoctoral Researcher, NYU",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI for Math Seminar Series",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4681:delta:0",
     "guid": "ps_events:4681:delta:0",
     "sources": [
@@ -1650,6 +1698,54 @@
     "itemType": "advertisement",
     "summaryRaw": "Historical Machine Learning and Connectionism Reading Group",
     "locationRaw": "Princeton AI Step Down",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4861:delta:0",
+    "guid": "ps_events:4861:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T21:30:00Z",
+    "endsAt": "2026-12-03T22:30:00Z",
+    "startTime": "2026-12-03T16:30:00",
+    "endTime": "2026-12-03T17:30:00",
+    "timezone": "America/New_York",
+    "title": "AI for Math Seminar Series",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "-",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series-1",
+    "content": "Mario Szededy, Distinguished Professor of Computer Science Rutgers University",
+    "rawEventDetails": "Details Event Description Mario Szededy, Distinguished Professor of Computer Science Rutgers University",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI for Math Seminar Series",
+    "locationRaw": "-",
     "mappingRules": [
       "dais:summary-is-title"
     ],
