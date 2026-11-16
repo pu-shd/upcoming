@@ -1421,6 +1421,59 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5571:delta:0",
+    "guid": "ps_events:5571:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-07T15:00:00Z",
+    "endsAt": "2026-12-07T17:00:00Z",
+    "startTime": "2026-12-07T10:00:00",
+    "endTime": "2026-12-07T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Pre FPO",
+    "speakers": [
+      {
+        "name": "Madelyne Xiao",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Madelyne Xiao",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/madelyne-xiao-pre-fpo",
+    "content": "Talk information: TBABio:Madelyne Xiao is a graduate student at CITP advised by Jonathan Mayer, with support from a NSF Graduate Research Fellowship. She is broadly interested in online speech, platform governance, and applied cryptography. Current work includes the design and implementation of privacy-preserving systems for content analysis (joint with the Digital Witness Lab), robustness testing of age",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Madelyne Xiao is a graduate student at CITP advised by Jonathan Mayer , with support from a NSF Graduate Research Fellowship. She is broadly interested in online speech, platform governance, and applied cryptography. Current work includes the design and implementation of privacy-preserving systems for content analysis (joint with the Digital Witness Lab), robustness testing of age assurance systems, and an audit of Twitter/X\u2019s Community Notes. Prior to coming to Princeton, she was an editorial staff member at The New Yorker . She graduated from Stanford University with undergraduate degrees in mathematics and comparative literature. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Madelyne Xiao - Pre FPO",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:speaker-dash-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "orfe:ps_events:12821:delta:0",
     "guid": "ps_events:12821:delta:0",
     "sources": [

@@ -879,59 +879,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ai:ps_events:3391:delta:0",
-    "guid": "ps_events:3391:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-11-18T21:30:00Z",
-    "endsAt": "2026-11-18T22:30:00Z",
-    "startTime": "2026-11-18T16:30:00",
-    "endTime": "2026-11-18T17:30:00",
-    "timezone": "America/New_York",
-    "title": "AI\u00b2 Research Talk Series",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "AI for Accelerating Invention,Princeton AI",
-    "tags": [
-      "ai",
-      "listing"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "AI for Accelerating Invention",
-      "Princeton AI"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://ai.princeton.edu/events/2026/ai%C2%B2-research-talk-series",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI\u00b2 Research Talk Series",
-    "locationRaw": "TBA",
-    "mappingRules": [
-      "ai:series-listing"
-    ],
-    "locationRule": "sentinel",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ai:ps_events:4351:delta:0",
     "guid": "ps_events:4351:delta:0",
     "sources": [

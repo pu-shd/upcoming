@@ -1,61 +1,5 @@
 [
   {
-    "id": "materials:ps_events:4106:delta:0",
-    "guid": "ps_events:4106:delta:0",
-    "sources": [
-      "materials"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-14T16:05:00Z",
-    "endsAt": "2026-10-14T17:05:00Z",
-    "startTime": "2026-10-14T12:05:00",
-    "endTime": "2026-10-14T13:05:00",
-    "timezone": "America/New_York",
-    "title": "A PMI/PCCM Seminar Series Talk by Alan West, Columbia University",
-    "speakers": [
-      {
-        "name": "Alan West",
-        "affiliation": "Columbia University"
-      }
-    ],
-    "speaker": "Alan West, Columbia University",
-    "affiliation": "Columbia University",
-    "series": "PMI/PCCM Seminar Series",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "PMI/PCCM Seminar Series"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Bowen",
-      "id": "",
-      "detail": "222"
-    },
-    "urlRef": "https://materials.princeton.edu/events/2026/pmipccm-seminar-series-fall-2026-alan-west-columbia-university",
-    "content": "Critical Materials Processing via Closed-Loop Redox-Mediated LeachingAbstract: Electrification can transform the way chemical reagents are produced, regenerated, and integrated into industrial processes. In hydrometallurgy, electrochemical regeneration of redox carriers enables closed-loop redox-mediated leaching (CL-RML), changing the relationship between reagent selection, process performance, and sustainability. Rather than treating oxidants or reductants as consumable reagents, CL-RML allows redox carriers to be selected primarily for their",
-    "rawEventDetails": "Details Event Description Critical Materials Processing via Closed-Loop Redox-Mediated Leaching Abstract: Electrification can transform the way chemical reagents are produced, regenerated, and integrated into industrial processes. In hydrometallurgy, electrochemical regeneration of redox carriers enables closed-loop redox-mediated leaching (CL-RML), changing the relationship between reagent selection, process performance, and sustainability. Rather than treating oxidants or reductants as consumable reagents, CL-RML allows redox carriers to be selected primarily for their extraction performance and selectivity. This seminar will discuss a framework of closed-loop redox chemistry and discuss how it expands the design space for critical-materials extraction. Recent studies of nickel and copper extraction from sulfide minerals will be presented to illustrate how electrochemically regenerated redox carriers enable new opportunities to control mineral transformations, improve selectivity, and rethink process architecture. These examples demonstrate how regeneration influences not only leaching chemistry, but also upstream and downstream processes. By leveraging scalable industrial electrochemical technologies, closed-loop redox chemistry offers a pathway toward more modular, flexible extraction processes capable of treating increasingly complex mineral resources. Together, these concepts suggest that the greatest opportunity of CL-RML may be to expand the chemical and process design space available for future critical-minerals supply chains while simultaneously improving sustainability. Bio: Alan West is the Samuel Ruben\u2013Peter G. Viele Professor of Electrochemistry at Columbia University, with appointments in the Department of Chemical Engineering, the Department of Earth and Environmental Engineering, and the Columbia Climate School. He is also Co-Director of the Columbia Electrochemical Energy Center, which has grown to 14 core faculty from five departments. Professor West received his B.S. in Chemical Engineering from Case Western Reserve University and his Ph.D. in Chemical Engineering from the University of California, Berkeley. His research integrates electrochemistry, reaction engineering, and hydrometallurgy to develop sustainable technologies for critical materials production, resource recovery, batteries, electrochemical synthesis, and electrodeposition. His recent work focuses on electrochemically regenerated redox carriers and closed-loop redox-mediated leaching for the selective extraction of critical metals from sulfide minerals and other complex resources.Professor West previously served as Chair of Columbia's Department of Chemical Engineering for eight years, during a period of significant growth and expansion. He is a Fellow of The Electrochemical Society.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "PMI/PCCM SEMINAR SERIES Fall 2026: Alan West, Columbia University",
-    "locationRaw": "Bowen 222",
-    "mappingRules": [
-      "materials:series-person-affiliation"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
-    "mappingConflict": false
-  },
-  {
     "id": "cbe:ps_events:5306:delta:0",
     "guid": "ps_events:5306:delta:0",
     "sources": [
@@ -5861,59 +5805,6 @@
     "mappingConflict": false
   },
   {
-    "id": "ai:ps_events:3391:delta:0",
-    "guid": "ps_events:3391:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-11-18T21:30:00Z",
-    "endsAt": "2026-11-18T22:30:00Z",
-    "startTime": "2026-11-18T16:30:00",
-    "endTime": "2026-11-18T17:30:00",
-    "timezone": "America/New_York",
-    "title": "AI\u00b2 Research Talk Series",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "AI for Accelerating Invention,Princeton AI",
-    "tags": [
-      "ai",
-      "listing"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "AI for Accelerating Invention",
-      "Princeton AI"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://ai.princeton.edu/events/2026/ai%C2%B2-research-talk-series",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI\u00b2 Research Talk Series",
-    "locationRaw": "TBA",
-    "mappingRules": [
-      "ai:series-listing"
-    ],
-    "locationRule": "sentinel",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ai:ps_events:4351:delta:0",
     "guid": "ps_events:4351:delta:0",
     "sources": [
@@ -8526,6 +8417,59 @@
     "locationRaw": "Bowen Hall 222",
     "mappingRules": [
       "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "citp:ps_events:5571:delta:0",
+    "guid": "ps_events:5571:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-07T15:00:00Z",
+    "endsAt": "2026-12-07T17:00:00Z",
+    "startTime": "2026-12-07T10:00:00",
+    "endTime": "2026-12-07T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Pre FPO",
+    "speakers": [
+      {
+        "name": "Madelyne Xiao",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Madelyne Xiao",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2026/madelyne-xiao-pre-fpo",
+    "content": "Talk information: TBABio:Madelyne Xiao is a graduate student at CITP advised by Jonathan Mayer, with support from a NSF Graduate Research Fellowship. She is broadly interested in online speech, platform governance, and applied cryptography. Current work includes the design and implementation of privacy-preserving systems for content analysis (joint with the Digital Witness Lab), robustness testing of age",
+    "rawEventDetails": "Details Event Description Talk information: TBA Bio: Madelyne Xiao is a graduate student at CITP advised by Jonathan Mayer , with support from a NSF Graduate Research Fellowship. She is broadly interested in online speech, platform governance, and applied cryptography. Current work includes the design and implementation of privacy-preserving systems for content analysis (joint with the Digital Witness Lab), robustness testing of age assurance systems, and an audit of Twitter/X\u2019s Community Notes. Prior to coming to Princeton, she was an editorial staff member at The New Yorker . She graduated from Stanford University with undergraduate degrees in mathematics and comparative literature. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Madelyne Xiao - Pre FPO",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:speaker-dash-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
