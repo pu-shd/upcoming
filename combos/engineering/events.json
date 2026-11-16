@@ -51,53 +51,6 @@
     "mappingConflict": false
   },
   {
-    "id": "cee:ps_events:2436:delta:0",
-    "guid": "ps_events:2436:delta:0",
-    "sources": [
-      "cee"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-14T20:30:00Z",
-    "endsAt": "2026-10-14T21:30:00Z",
-    "startTime": "2026-10-14T16:30:00",
-    "endTime": "2026-10-14T17:30:00",
-    "timezone": "America/New_York",
-    "title": "Talk \u2014 Alex Sixie Cao: From Random Failures to Strategic Attacks: Quantifying Robustness in Complex Systems",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Engineering Quad E Wing,",
-      "id": "",
-      "detail": "E225"
-    },
-    "urlRef": "https://cee.princeton.edu/events/talk-%E2%80%94-alex-sixie-cao-random-failures-strategic-attacks-quantifying-robustness-complex",
-    "content": "AbstractComplex systems can fail in many ways, from cascading failures triggered by random component loss to deliberately targeted attacks. This raises a fundamental question: How can robustness be quantified when a disturbance changes the probability distribution of system outcomes? This talk develops a probabilistic perspective on robustness in which changes in system performance are represented through changes in outcome distributions. Drawing on information theory, these changes are quantified through an entropy-based robustness index that",
-    "rawEventDetails": "Details Event Description Abstract Complex systems can fail in many ways, from cascading failures triggered by random component loss to deliberately targeted attacks. This raises a fundamental question: How can robustness be quantified when a disturbance changes the probability distribution of system outcomes? This talk develops a probabilistic perspective on robustness in which changes in system performance are represented through changes in outcome distributions. Drawing on information theory, these changes are quantified through an entropy-based robustness index that compares system behaviour before and after a disturbance. The index builds on concepts and methods from system reliability and complements conventional reliability and risk measures by characterizing how system behaviour changes when disrupted. About the Speaker Alex Sixie Cao is an Assistant Professor in the School of Civil and Environmental Engineering at Nanyang Technological University, Singapore, where he leads the Risk and Infrastructure Systems Lab. His work spans impact loading and structural mechanics, mechanical and probabilistic modelling of progressive collapse and cascading failures, quantitative measures of robustness, and risk-informed decision-making. Alex also studies how structural safety objectives and infrastructure decisions should evolve under long-term environmental and societal change, including climate change. He received his doctorate from ETH Zurich, where his research focused on modelling progressive collapse in buildings, and his MSc in Structural Engineering from the Norwegian University of Science and Technology. Before joining NTU, he was a postdoctoral researcher at Empa and ETH Zurich, working across structural mechanics, system reliability, and robustness. Sponsorship of this event does not constitute institutional endorsement of external speakers or views presented.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Talk \u2014 Alex Sixie Cao: From Random Failures to Strategic Attacks: Quantifying Robustness in Complex Systems",
-    "locationRaw": "Engineering Quad E Wing, E225",
-    "mappingRules": [
-      "cee:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "bioengineering:ps_events:2771:delta:0",
     "guid": "ps_events:2771:delta:0",
     "sources": [
@@ -1320,6 +1273,57 @@
     "locationRaw": "Bowen Hall 222",
     "mappingRules": [
       "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cee:ps_events:2526:delta:0",
+    "guid": "ps_events:2526:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-17T16:00:00Z",
+    "endsAt": "2026-11-17T17:00:00Z",
+    "startTime": "2026-11-17T11:00:00",
+    "endTime": "2026-11-17T12:00:00",
+    "timezone": "America/New_York",
+    "title": "CEE Special Seminar featuring PhD Candidate, Maram Ammar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Civil and Environmental Engineering",
+    "tags": [
+      "civil-environmental"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Civil and Environmental Engineering"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Engineering Quad E Wing,",
+      "id": "",
+      "detail": "E219"
+    },
+    "urlRef": "https://cee.princeton.edu/events/cee-special-seminar-featuring-phd-candidate-maram-ammar",
+    "content": "AbstractImproving air quality and thermal comfort in urban environments requires both effective mitigation strategies and reliable numerical tools capable of predicting complex flow phenomena. As urban populations continue to grow, the development of such strategies and tools becomes increasingly important.In this talk, I will present two complementary research efforts addressing these challenges. First, I will discuss the potential of buoyancy-driven flows in isothermally heated building shafts as a passive ventilation strategy for urban environments. I will then shift the",
+    "rawEventDetails": "Details Event Description Abstract Improving air quality and thermal comfort in urban environments requires both effective mitigation strategies and reliable numerical tools capable of predicting complex flow phenomena. As urban populations continue to grow, the development of such strategies and tools becomes increasingly important. In this talk, I will present two complementary research efforts addressing these challenges. First, I will discuss the potential of buoyancy-driven flows in isothermally heated building shafts as a passive ventilation strategy for urban environments. I will then shift the focus to vortex methods, a class of Lagrangian numerical methods that we aim to extend to the modeling of external flows in urban environments. More specifically, I will discuss the numerical treatment of viscous diffusion in a grid-free framework, focusing on two approaches: the Vorticity Redistribution Method (VRM) and the Particle Strength Exchange (PSE) scheme. I will highlight the advantages and limitations of each approach and present a comparative assessment of their performance, focusing on the tradeoff between numerical accuracy and computational cost. Finally, I will discuss how Large Eddy Simulation (LES) concepts can be incorporated into vortex methods to account for unresolved turbulence effects, which are particularly important in urban flows. I will conclude by discussing the limitations of the current work and outlining future research directions toward the simulation of turbulent flows in complex urban environments. Biography Maram Ammar is a PhD candidate in the Department of Mechanical Engineering at the American University of Beirut (AUB) working under the supervision of Professor Issam Lakkis. She received an Engineering Diploma in Mechanical Engineering from the Lebanese University and a Master of Engineering (M.E.) in Applied Energy from AUB. Her master's research focused on numerically investigating the potential of isothermally heated building shafts as a passive ventilation strategy for urban environments. During this period, she also contributed to the development of the CFD textbook \u201cComputational Fluid Dynamics: Introduction to Modeling and Applications\u201d, authored by Imane Khalil and Issam Lakkis. As part of her PhD research, she has investigated the numerical performance of two grid-free diffusion schemes, focusing on their accuracy and computational cost. Her current research focuses on incorporating Large Eddy Simulation (LES) concepts into vortex methods to model unresolved turbulence effects.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "CEE Special Seminar featuring PhD Candidate, Maram Ammar",
+    "locationRaw": "Engineering Quad E Wing, E219",
+    "mappingRules": [
+      "cee:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
