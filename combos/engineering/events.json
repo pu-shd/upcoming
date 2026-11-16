@@ -1636,6 +1636,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11401:delta:0",
+    "guid": "ps_events:11401:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-24T17:00:00Z",
+    "endsAt": "2026-11-24T18:00:00Z",
+    "startTime": "2026-11-24T12:00:00",
+    "endTime": "2026-11-24T13:00:00",
+    "timezone": "America/New_York",
+    "title": "Special Quantum Seminar",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ece.princeton.edu/events/special-quantum-seminar-1",
+    "content": "Abstract: The Hubbard model is a prototypical model of strongly correlated electrons. Tuning the correlation strength and doping density is expected to give rise to a complex phase diagram hosting novel states of matter, most notably high-temperature superconductivity. However, solving the model is notoriously difficult. Semiconductor moir\u00e9 materials have emerged as a promising platform for simulating the Hubbard model, offering hope for new insights.In this talk, I will present our recent progress in this direction using moir\u00e9 WSe2. I will first describe how we",
+    "rawEventDetails": "Speaker Yiyu Xia Affiliation Cornell Details Event Description Abstract: The Hubbard model is a prototypical model of strongly correlated electrons. Tuning the correlation strength and doping density is expected to give rise to a complex phase diagram hosting novel states of matter, most notably high-temperature superconductivity. However, solving the model is notoriously difficult. Semiconductor moir\u00e9 materials have emerged as a promising platform for simulating the Hubbard model, offering hope for new insights. In this talk, I will present our recent progress in this direction using moir\u00e9 WSe2. I will first describe how we achieved highly tunable, low-disorder devices by optimizing the device structure, which enabled the observation of superconductivity in a semiconductor moir\u00e9 material. Next, I will focus on the intermediate coupling regime, where we observed a phase diagram remarkably similar to that of the cuprates, including antiferromagnetism around half band filling, superconducting domes upon doping, and strange metallicity. Leveraging the tunability of our system, we further studied how this cuprate-like phase diagram evolves with correlation strength, revealing an intimate connection between the Mott transition and superconductivity. Finally, I will briefly highlight some of our most recent results, including a stripe phase around the Mott insulator and a new superconducting dome at partial band filling. Sponsor Host: Professor Nathalie de Leon, ECE",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar",
+    "locationRaw": "",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "declined",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cee:ps_events:2511:delta:0",
     "guid": "ps_events:2511:delta:0",
     "sources": [
