@@ -7340,6 +7340,57 @@
     "mappingConflict": false
   },
   {
+    "id": "cee:ps_events:2531:delta:0",
+    "guid": "ps_events:2531:delta:0",
+    "sources": [
+      "cee"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-30T16:00:00Z",
+    "endsAt": "2026-11-30T17:00:00Z",
+    "startTime": "2026-11-30T11:00:00",
+    "endTime": "2026-11-30T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Kenan Visiting Professor for Distinguished Teaching, Professor Tonina",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Civil and Environmental Engineering",
+    "tags": [
+      "civil-environmental"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Civil and Environmental Engineering"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Maeder Hall, Auditorium",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://cee.princeton.edu/events/kenan-visiting-professor-distinguished-teaching-professor-tonina",
+    "content": "\u201cHidden Flows Beneath Rivers: How Hyporheic Exchange Shapes Aquatic Habitat and Greenhouse-Gas Emissions\u201dAbstract:Rivers extend well beyond the water we see at the surface. Water is continuously exchanged between the channel and the surrounding sediments, creating the hyporheic zone\u2014a dynamic interface where river hydraulics, groundwater, geomorphology, biology, and biogeochemistry interact. After a brief overview of current research on river thermal dynamics, wildfire hydrology, and particle transport, this seminar will focus on how",
+    "rawEventDetails": "Details Event Description \u201cHidden Flows Beneath Rivers: How Hyporheic Exchange Shapes Aquatic Habitat and Greenhouse-Gas Emissions\u201d Abstract: Rivers extend well beyond the water we see at the surface. Water is continuously exchanged between the channel and the surrounding sediments, creating the hyporheic zone\u2014a dynamic interface where river hydraulics, groundwater, geomorphology, biology, and biogeochemistry interact. After a brief overview of current research on river thermal dynamics, wildfire hydrology, and particle transport, this seminar will focus on how these hidden subsurface flows are generated and why they matter. I will examine how channel morphology and streambed topography drive hyporheic exchange across scales, from individual bedforms to reaches and river networks. Two examples illustrate the ecological and biogeochemical consequences of these processes. First, salmon construct redds, or spawning nests, that modify streambed morphology, sediment properties, and hyporheic flow, thereby controlling oxygen delivery to developing embryos. Second, hyporheic residence times regulate nitrogen transformations and the production and release of nitrous oxide (N\u2082O), a potent greenhouse gas. Together, these examples show how relatively small-scale physical processes within riverbeds can influence aquatic habitat, ecosystem function, and biogeochemical fluxes at river-network and global scales. Bio: Daniele Tonina is the William R. Kenan, Jr. Visiting Professor of Civil and Environmental Engineering at Princeton University and Professor of Civil and Environmental Engineering at the University of Idaho, where he co-directs the Center for Ecohydraulics Research. His research lies at the intersection of fluid mechanics, river morphodynamics, groundwater\u2013surface water exchange, aquatic ecology, and biogeochemistry. He investigates how physical processes in rivers create and modify aquatic habitat and regulate the transport and transformation of water, heat, sediment, nutrients, and contaminants across scales ranging from individual bedforms to river networks. He is a Fellow of the International Association for Hydro-Environment Engineering and Research (IAHR).",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Kenan Visiting Professor for Distinguished Teaching, Professor Tonina",
+    "locationRaw": "Maeder Hall, Auditorium",
+    "mappingRules": [
+      "cee:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5106:delta:0",
     "guid": "ps_events:5106:delta:0",
     "sources": [
