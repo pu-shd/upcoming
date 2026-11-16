@@ -7231,6 +7231,103 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4371:delta:0",
+    "guid": "ps_events:4371:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-24T15:30:00Z",
+    "endsAt": "2026-11-24T16:30:00Z",
+    "startTime": "2026-11-24T10:30:00",
+    "endTime": "2026-11-24T11:30:00",
+    "timezone": "America/New_York",
+    "title": "AI for Math Seminar Series",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [
+      "listing"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/ai-math-seminar-series",
+    "content": "Charles Arnal, Postdoctoral Reseacher, Meta",
+    "rawEventDetails": "Details Event Description Charles Arnal, Postdoctoral Reseacher, Meta",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI for Math Seminar Series",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "ai:series-listing"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4851:delta:0",
+    "guid": "ps_events:4851:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-24T15:30:00Z",
+    "endsAt": "2026-11-24T16:30:00Z",
+    "startTime": "2026-11-24T10:30:00",
+    "endTime": "2026-11-24T11:30:00",
+    "timezone": "America/New_York",
+    "title": "AI for Math Seminar Series",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series",
+    "content": "Charles Arnal, Postdoctoral Reseacher, Meta",
+    "rawEventDetails": "Details Event Description Charles Arnal, Postdoctoral Reseacher, Meta",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AI for Math Seminar Series",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ece:ps_events:11401:delta:0",
     "guid": "ps_events:11401:delta:0",
     "sources": [
