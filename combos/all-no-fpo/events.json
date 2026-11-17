@@ -51,62 +51,6 @@
     "mappingConflict": false
   },
   {
-    "id": "bioengineering:ps_events:2771:delta:0",
-    "guid": "ps_events:2771:delta:0",
-    "sources": [
-      "bioengineering"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-15T20:00:00Z",
-    "endsAt": "2026-10-15T21:00:00Z",
-    "startTime": "2026-10-15T16:00:00",
-    "endTime": "2026-10-15T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Control of Tissue Flows and Embryo Geometry in Avian Gastrulation",
-    "speakers": [
-      {
-        "name": "Mattia Serra",
-        "affiliation": ""
-      }
-    ],
-    "speaker": "Mattia Serra",
-    "affiliation": "",
-    "series": "BioE Colloquium",
-    "tags": [
-      "colloquium"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "BioE Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "BioE",
-      "id": "",
-      "detail": "E105"
-    },
-    "urlRef": "https://bioengineering.princeton.edu/events/2026/control-tissue-flows-and-embryo-geometry-avian-gastrulation",
-    "content": "Embryonic tissues undergo coordinated flows during avian gastrulation to establish the body plan. Here, we elucidate how tens of thousands of cells coordinate their behaviors to sculpt the chick embryo\u2019s dynamic geometry (size and shape). Each of these two distinct geometric changes is associated with dynamic curves across which trajectories separate (kinematic repellers). Through physical modeling and experimental manipulations, we selectively eliminate either or both repellers in model and experiments, revealing their mechanistic origins. We find that embryo size is affected by the",
-    "rawEventDetails": "Speaker Mattia Serra Affiliation University of California, San Diego Details Event Description Embryonic tissues undergo coordinated flows during avian gastrulation to establish the body plan. Here, we elucidate how tens of thousands of cells coordinate their behaviors to sculpt the chick embryo\u2019s dynamic geometry (size and shape). Each of these two distinct geometric changes is associated with dynamic curves across which trajectories separate (kinematic repellers). Through physical modeling and experimental manipulations, we selectively eliminate either or both repellers in model and experiments, revealing their mechanistic origins. We find that embryo size is affected by the competition between extraembryonic epiboly and embryonic myosin-driven contraction\u2014which persists even when mesoderm induction is blocked. Instead, the characteristic shape change from circular to pear-shaped arises from myosin-driven cell intercalations in the mesendoderm, irrespective of epiboly. These findings elucidate modular mechanisms that independently regulate embryo size and shape during development. Refreshments available 15 minutes before indicated time of seminar",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Control of Tissue Flows and Embryo Geometry in Avian Gastrulation",
-    "locationRaw": "BioE E105",
-    "mappingRules": [
-      "bioengineering:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "robotics:ps_events:551:delta:0",
     "guid": "ps_events:551:delta:0",
     "sources": [
@@ -6582,15 +6526,15 @@
     "startTime": "2026-11-20T12:00:00",
     "endTime": "2026-11-20T14:00:00",
     "timezone": "America/New_York",
-    "title": "A Quantum Group Meeting Talk by Faranak Bahrami, De Leon Group",
+    "title": "Beyond Millisecond Lifetimes and Coherence Times in 2D Transmons via Mitigation of Surface Loss",
     "speakers": [
       {
         "name": "Faranak Bahrami",
-        "affiliation": "De Leon Group"
+        "affiliation": "de Leon Group"
       }
     ],
-    "speaker": "Faranak Bahrami, De Leon Group",
-    "affiliation": "De Leon Group",
+    "speaker": "Faranak Bahrami, de Leon Group",
+    "affiliation": "de Leon Group",
     "series": "Quantum Group Meeting",
     "tags": [
       "group-meeting"
@@ -6607,23 +6551,23 @@
       "id": "",
       "detail": "J401"
     },
-    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-faranak-bahrami-de-leon-group",
-    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-beyond-millisecond-lifetimes-and-coherence-times-2d-transmons",
+    "content": "Title: Beyond Millisecond Lifetimes and Coherence Times in 2D Transmons via Mitigation of Surface LossAbstract: Superconducting qubits are one of the most promising platforms for building large-scale quantum processors. Despite recent progress in mid-scale processors and quantum error correction demonstrations, the performance of superconducting qubit processors is still largely limited by single qubit performance. In this context, materials improvements and fabrication optimization provide powerful pathways to improve single qubit performance,",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Quantum Group Meeting: TBD - Faranak Bahrami (De Leon Group)",
+    "summaryRaw": "Quantum Group Meeting: Beyond Millisecond Lifetimes and Coherence Times in 2D Transmons via Mitigation of Surface Loss - Faranak Bahrami (de Leon Group)",
     "locationRaw": "EQuad J401",
     "mappingRules": [
       "quantum:series-title-dash-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {

@@ -1,6 +1,6 @@
 {
   "note": "Internal bookkeeping, not a published contract. Cache validators for conditional requests, and when each source's event pages were last scraped. See status.json for feed health.",
-  "generatedAt": "2026-11-17T14:22:42Z",
+  "generatedAt": "2026-11-17T14:41:29Z",
   "sources": {
     "ai": {
       "etag": "\"1794925358\"",
@@ -8,8 +8,8 @@
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "bioengineering": {
-      "etag": "\"1794579752\"",
-      "lastModified": "Fri, 13 Nov 2026 14:22:32 GMT",
+      "etag": "\"1794926488\"",
+      "lastModified": "Tue, 17 Nov 2026 14:41:28 GMT",
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "cbe": {
@@ -18,8 +18,8 @@
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "cee": {
-      "etag": "\"1794861690\"",
-      "lastModified": "Mon, 16 Nov 2026 20:41:30 GMT",
+      "etag": "\"1794926488\"",
+      "lastModified": "Tue, 17 Nov 2026 14:41:28 GMT",
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "citp": {
@@ -28,8 +28,8 @@
       "lastEnrichedAt": "2026-11-17T09:12:01Z"
     },
     "dais": {
-      "etag": "\"1794924936\"",
-      "lastModified": "Tue, 17 Nov 2026 14:15:36 GMT",
+      "etag": "\"1794926021\"",
+      "lastModified": "Tue, 17 Nov 2026 14:33:41 GMT",
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "ece": {
@@ -48,8 +48,8 @@
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "materials": {
-      "etag": "\"1794844643\"",
-      "lastModified": "Mon, 16 Nov 2026 15:57:23 GMT",
+      "etag": "\"1794926021\"",
+      "lastModified": "Tue, 17 Nov 2026 14:33:41 GMT",
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "nam": {
@@ -63,8 +63,8 @@
       "lastEnrichedAt": "2026-11-17T09:12:01Z"
     },
     "quantum": {
-      "etag": "\"1794586916\"",
-      "lastModified": "Fri, 13 Nov 2026 16:21:56 GMT",
+      "etag": "\"1794926021\"",
+      "lastModified": "Tue, 17 Nov 2026 14:33:41 GMT",
       "lastEnrichedAt": "2026-11-17T05:10:38Z"
     },
     "robotics": {

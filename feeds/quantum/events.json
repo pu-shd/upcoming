@@ -630,15 +630,15 @@
     "startTime": "2026-11-20T12:00:00",
     "endTime": "2026-11-20T14:00:00",
     "timezone": "America/New_York",
-    "title": "A Quantum Group Meeting Talk by Faranak Bahrami, De Leon Group",
+    "title": "Beyond Millisecond Lifetimes and Coherence Times in 2D Transmons via Mitigation of Surface Loss",
     "speakers": [
       {
         "name": "Faranak Bahrami",
-        "affiliation": "De Leon Group"
+        "affiliation": "de Leon Group"
       }
     ],
-    "speaker": "Faranak Bahrami, De Leon Group",
-    "affiliation": "De Leon Group",
+    "speaker": "Faranak Bahrami, de Leon Group",
+    "affiliation": "de Leon Group",
     "series": "Quantum Group Meeting",
     "tags": [
       "group-meeting"
@@ -655,23 +655,23 @@
       "id": "",
       "detail": "J401"
     },
-    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-tbd-faranak-bahrami-de-leon-group",
-    "content": "Title: TBDAbstract: TBDLunch will be provided at 12:00 PM in EQuad J401.",
+    "urlRef": "https://quantum.princeton.edu/events/quantum-group-meeting-beyond-millisecond-lifetimes-and-coherence-times-2d-transmons",
+    "content": "Title: Beyond Millisecond Lifetimes and Coherence Times in 2D Transmons via Mitigation of Surface LossAbstract: Superconducting qubits are one of the most promising platforms for building large-scale quantum processors. Despite recent progress in mid-scale processors and quantum error correction demonstrations, the performance of superconducting qubit processors is still largely limited by single qubit performance. In this context, materials improvements and fabrication optimization provide powerful pathways to improve single qubit performance,",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD Lunch will be provided at 12:00 PM in EQuad J401.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Quantum Group Meeting: TBD - Faranak Bahrami (De Leon Group)",
+    "summaryRaw": "Quantum Group Meeting: Beyond Millisecond Lifetimes and Coherence Times in 2D Transmons via Mitigation of Surface Loss - Faranak Bahrami (de Leon Group)",
     "locationRaw": "EQuad J401",
     "mappingRules": [
       "quantum:series-title-dash-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
