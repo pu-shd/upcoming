@@ -9601,6 +9601,57 @@
     "mappingConflict": false
   },
   {
+    "id": "quantum:ps_events:4141:delta:0",
+    "guid": "ps_events:4141:delta:0",
+    "sources": [
+      "quantum"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-14T17:20:00Z",
+    "endsAt": "2026-12-14T18:20:00Z",
+    "startTime": "2026-12-14T12:20:00",
+    "endTime": "2026-12-14T13:20:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Quantum Colloquium: Postdoc Triple Feature including Zeeshawn Kazi, Yukai Lu, and Xiaochuan Wu",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Princeton Quantum Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Princeton Quantum Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-postdoc-triple-feature-including-zeeshawn-kazi-yukai-lu-and",
+    "content": "Zeeshawn Kazi, de Leon groupTitle: tbdAbstract: tbd Yukai Lu, Bakr Group Title: tbdAbstract: tbd Xiaochuan Wu, Ryu groupTitle: Hearing the Geometry of Quantum Matter from Charge FluctuationsAbstract: Charge fluctuations, defined as the variance of particle number within a spatial region, provide a simple yet powerful probe of quantum many-body systems",
+    "rawEventDetails": "Details Event Description Zeeshawn Kazi, de Leon group Title: tbd Abstract: tbd Yukai Lu, Bakr Group Title: tbd Abstract: tbd Xiaochuan Wu, Ryu group Title: Hearing the Geometry of Quantum Matter from Charge Fluctuations Abstract: Charge fluctuations, defined as the variance of particle number within a spatial region, provide a simple yet powerful probe of quantum many-body systems. Often studied alongside entanglement-based diagnostics, they offer a complementary approach based on experimentally accessible density correlations. In this talk, I will show how charge fluctuations reveal surprisingly rich geometric information about quantum states. For insulators, they encode the many-body quantum geometry, which characterizes how quantum states change across parameter space and is closely connected to their localization and topological properties. For 3D metals, charge fluctuations reveal not only quantum geometry but also the shape of the Fermi surface. Together, these results demonstrate how a simple real-space observable can probe different aspects of the geometry of quantum matter. A light lunch will be served outside of Bowen Auditorium at 11:50am.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Quantum Colloquium: Postdoc Triple Feature including Zeeshawn Kazi, Yukai Lu, and Xiaochuan Wu",
+    "locationRaw": "Bowen Hall",
+    "mappingRules": [
+      "quantum:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "nam:ps_events:891:delta:6",
     "guid": "ps_events:891:delta:6",
     "sources": [
