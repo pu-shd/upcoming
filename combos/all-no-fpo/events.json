@@ -1,56 +1,5 @@
 [
   {
-    "id": "cbe:ps_events:5306:delta:0",
-    "guid": "ps_events:5306:delta:0",
-    "sources": [
-      "cbe"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-14T20:00:00Z",
-    "endsAt": "2026-10-14T21:00:00Z",
-    "startTime": "2026-10-14T16:00:00",
-    "endTime": "2026-10-14T17:00:00",
-    "timezone": "America/New_York",
-    "title": "Material Chemistry Approaches to the Design of Electrocatalyst for Sustainability",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Departmental Seminar",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Departmental Seminar"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "SEAS-CBE",
-      "id": "",
-      "detail": "F204"
-    },
-    "urlRef": "https://cbe.princeton.edu/events/material-chemistry-approaches-design-electrocatalyst-sustainability",
-    "content": "Meeting the growing demand for energy requires the development of innovative energy conversion and storage processes beyond conventional thermal technologies and electrocatalysis plays a central role in this transition. While electrocatalysis shares a number of common design principles with thermal catalysis, they also differ greatly. Besides reactivity and selectivity, durability and stability under electrochemical reaction conditions are required for an electrocatalyst. In addition, electrochemical processes often occur at liquid-solid interface under potential, posting new challenges in",
-    "rawEventDetails": "Speaker Hong Yang Affiliation University of Illinois Urbana-Champaign Details Event Description Meeting the growing demand for energy requires the development of innovative energy conversion and storage processes beyond conventional thermal technologies and electrocatalysis plays a central role in this transition. While electrocatalysis shares a number of common design principles with thermal catalysis, they also differ greatly. Besides reactivity and selectivity, durability and stability under electrochemical reaction conditions are required for an electrocatalyst. In addition, electrochemical processes often occur at liquid-solid interface under potential, posting new challenges in design. In this presentation, I will discuss our research effort, aiming at uncovering structural design for electrocatalysts. Specifically, I will present the studies on structural and interfacial control of metal oxide and alloy electrocatalysts for oxygen evolution reaction (OER) which occurs in a range of chemical processes, such as hydrogen production from water splitting. Our finding suggests defect engineering is often central in the design of high-performance electrocatalysts for site and crystalline phase tunable complex oxides (i.e., rutile, pyrochlore, and perovskite) and for strained alloys. Flexibility in lattice of complex oxides (A x B y O z ) and tunability of surface strain of alloys often provide the controls of surface and lattice structures that affect the electrocatalytic reaction pathways and performance. Notably, unlike thermal catalysts, proper design of structural defects could simultaneously enhance both activity and stability of electrocatalysts. Valence band analysis, in situ Raman spectroscopy, X-ray photoelectron spectroscopy, molecular probe and isotope kinetic studies, together with electrochemical characterizations, have been used to identify reactive intermediates and to understand reaction mechanisms.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Material Chemistry Approaches to the Design of Electrocatalyst for Sustainability",
-    "locationRaw": "F204 SEAS-CBE",
-    "mappingRules": [
-      "cbe:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "robotics:ps_events:551:delta:0",
     "guid": "ps_events:551:delta:0",
     "sources": [
