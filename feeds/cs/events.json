@@ -99,6 +99,110 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/special-quantum-seminar-complexity-growth-and-efficient-compilation-quantum-circuits",
+    "guid": "https://www.cs.princeton.edu/events/special-quantum-seminar-complexity-growth-and-efficient-compilation-quantum-circuits",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-23T18:30:00Z",
+    "endsAt": "2026-11-23T19:30:00Z",
+    "startTime": "2026-11-23T13:30:00",
+    "endTime": "2026-11-23T14:30:00",
+    "timezone": "America/New_York",
+    "title": "Special Quantum Seminar - Complexity growth and efficient compilation of quantum circuits",
+    "speakers": [
+      {
+        "name": "Norah Tan",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Norah Tan, MIT",
+    "affiliation": "MIT",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Small Auditorium",
+      "id": "",
+      "detail": "Room 105"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/special-quantum-seminar-complexity-growth-and-efficient-compilation-quantum-circuits",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Special Quantum Seminar - Complexity growth and efficient compilation of quantum circuits",
+    "locationRaw": "Computer Science Small Auditorium (Room 105)",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cs:https://www.cs.princeton.edu/events/algorithmic-wave-particle-duality-pathfinding-welded-trees-hard",
+    "guid": "https://www.cs.princeton.edu/events/algorithmic-wave-particle-duality-pathfinding-welded-trees-hard",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-25T19:00:00Z",
+    "endsAt": "2026-11-25T20:00:00Z",
+    "startTime": "2026-11-25T14:00:00",
+    "endTime": "2026-11-25T15:00:00",
+    "timezone": "America/New_York",
+    "title": "Algorithmic Wave-Particle Duality: Pathfinding in Welded Trees is Hard",
+    "speakers": [
+      {
+        "name": "Joseph Carolan",
+        "affiliation": "University of Maryland"
+      }
+    ],
+    "speaker": "Joseph Carolan, University of Maryland",
+    "affiliation": "University of Maryland",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science Small Auditorium",
+      "id": "",
+      "detail": "Room 105"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/algorithmic-wave-particle-duality-pathfinding-welded-trees-hard",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Algorithmic Wave-Particle Duality: Pathfinding in Welded Trees is Hard",
+    "locationRaw": "Computer Science Small Auditorium (Room 105)",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "parenthetical",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cs:https://www.cs.princeton.edu/events/knowledge-flywheels",
     "guid": "https://www.cs.princeton.edu/events/knowledge-flywheels",
     "sources": [
