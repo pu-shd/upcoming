@@ -1090,7 +1090,7 @@
     "startTime": "2026-11-25T14:00:00",
     "endTime": "2026-11-25T15:00:00",
     "timezone": "America/New_York",
-    "title": "An Other Seminars Talk by Joseph Carolan, U Maryland",
+    "title": "Algorithmic Wave-Particle Duality: Pathfinding in Welded Trees is Hard",
     "speakers": [
       {
         "name": "Joseph Carolan",
@@ -1117,23 +1117,23 @@
       "id": "",
       "detail": "105"
     },
-    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-tbd-joseph-carolan-u-maryland",
-    "content": "Title: TBD Abstract: TBD",
+    "urlRef": "https://quantum.princeton.edu/events/special-quantum-seminar-algorithmic-wave-particle-duality-pathfinding-welded-trees-hard",
+    "content": "Title: Algorithmic Wave-Particle Duality: Pathfinding in Welded Trees is Hard Abstract: In the welded tree problem, an algorithm is tasked with navigating a graph formed from two binary trees joined at the leaves through a \"weld\" of connecting edges. A quantum walk can navigate from root to root exponentially faster than any classical algorithm. However, known efficient quantum algorithms cannot find a path between the roots, as recording the path destroys constructive interference and thus the speedup. We prove that this is inherent: any",
     "rawEventDetails": "Details Event Description Title: TBD Abstract: TBD",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Special Quantum Seminar: TBD, Joseph Carolan (U Maryland)",
+    "summaryRaw": "Special Quantum Seminar:   Algorithmic Wave-Particle Duality: Pathfinding in Welded Trees is Hard, Joseph Carolan (U Maryland)",
     "locationRaw": "CS 105",
     "mappingRules": [
       "quantum:series-title-comma-person"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
