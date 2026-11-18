@@ -1704,10 +1704,10 @@
       "citp"
     ],
     "platform": "princeton-site-builder",
-    "startsAt": "2027-02-23T17:15:00Z",
-    "endsAt": "2027-02-23T18:15:00Z",
-    "startTime": "2027-02-23T12:15:00",
-    "endTime": "2027-02-23T13:15:00",
+    "startsAt": "2027-02-16T17:15:00Z",
+    "endsAt": "2027-02-16T18:15:00Z",
+    "startTime": "2027-02-16T12:15:00",
+    "endTime": "2027-02-16T13:15:00",
     "timezone": "America/New_York",
     "title": "From Code to Care: The Moralization of Healthcare Machine Learning",
     "speakers": [
