@@ -1348,7 +1348,7 @@
       "detail": "101"
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/felipe-verastegui-gruenewald-columbia-university",
-    "content": "",
+    "content": "Abstract: We study the optimal design of virtual power contracts when a buyer procures from privately informed sellers subject to quantity and congestion risk in the underlying commodity network under imperfect enforcement. The optimal contract conditions payments on generation and transmission outcomes, providing production and locational insurance. When auctioning a virtual power contract, contract rules such as fixed-price contract-for-differences can yield price stability conditional on no default but expose the buyer to aggressive bidding with large equilibrium",
     "rawEventDetails": "Event Category Stochastic Analysis and Financial Mathematics Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
