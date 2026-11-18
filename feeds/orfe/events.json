@@ -581,7 +581,7 @@
     "startTime": "2026-12-01T16:30:00",
     "endTime": "2026-12-01T17:30:00",
     "timezone": "America/New_York",
-    "title": "A Stochastic Analysis and Financial Mathematics Seminar Talk by Felipe Verastegui-Gruenewald, Columbia University",
+    "title": "Virtual Power Contracts and Seller Default Risk",
     "speakers": [
       {
         "name": "Felipe Verastegui-Gruenewald",
@@ -609,7 +609,7 @@
     },
     "urlRef": "https://orfe.princeton.edu/events/2026/felipe-verastegui-gruenewald-columbia-university",
     "content": "Abstract: We study the optimal design of virtual power contracts when a buyer procures from privately informed sellers subject to quantity and congestion risk in the underlying commodity network under imperfect enforcement. The optimal contract conditions payments on generation and transmission outcomes\\, providing production and locational insurance. When auctioning a virtual power contract\\, contract rules such as fixed-price contract-for-differences can yield price stability conditional on no default but expose the buyer to aggressive bidding with large equilibrium",
-    "rawEventDetails": "Event Category Stochastic Analysis and Financial Mathematics Seminar",
+    "rawEventDetails": "Details Event Description Abstract: We study the optimal design of virtual power contracts when a buyer procures from privately informed sellers subject to quantity and congestion risk in the underlying commodity network under imperfect enforcement. The optimal contract conditions payments on generation and transmission outcomes, providing production and locational insurance. When auctioning a virtual power contract, contract rules such as fixed-price contract-for-differences can yield price stability conditional on no default but expose the buyer to aggressive bidding with large equilibrium default rates. Flexible contract rules, such as adaptive-price contracts with a floor, improve the buyer's ability to reduce aggressive bidding at the cost of greater price volatility. Our results highlight a trade-off between price stability and counter-party risk screening, and provide guidance for the design of long-term electricity procurement auctions. Bio: Felipe is a PhD student in the Department of Industrial Engineering and Operations Research at Columbia University in the City of New York co-advised by Agostino Capponi and Jay Sethuraman. His research examines market design and optimization algorithms in power and energy systems, as well as the structure and organization of financial markets for real assets. He is a research affiliate at Columbia's Center for Digital Finance and Technologies and was an inaugural Global Energy Fellow at Columbia's Center on Global Energy Policy. Event Category Stochastic Analysis and Financial Mathematics Seminar",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -622,8 +622,8 @@
     ],
     "locationRule": "detail_dash_name",
     "summaryRest": "",
-    "titleSource": "fallback-speaker",
-    "titleIsPlaceholder": true,
+    "titleSource": "enriched",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
