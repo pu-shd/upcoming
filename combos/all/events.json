@@ -8814,6 +8814,54 @@
     "mappingConflict": false
   },
   {
+    "id": "dais:ps_events:4876:delta:0",
+    "guid": "ps_events:4876:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T15:30:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T10:30:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "NAM Friday Talks",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/nam-friday-talks-0",
+    "content": "Speaker: Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawEventDetails": "Details Event Description Speaker: Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "NAM Friday Talks",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "nam:ps_events:881:delta:0",
     "guid": "ps_events:881:delta:0",
     "sources": [
