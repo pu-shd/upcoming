@@ -10109,6 +10109,54 @@
     "mappingConflict": false
   },
   {
+    "id": "citp:ps_events:5581:delta:0",
+    "guid": "ps_events:5581:delta:0",
+    "sources": [
+      "citp"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-02-23T17:15:00Z",
+    "endsAt": "2027-02-23T18:15:00Z",
+    "startTime": "2027-02-23T12:15:00",
+    "endTime": "2027-02-23T13:15:00",
+    "timezone": "America/New_York",
+    "title": "CITP Minor Information Session",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Sherrerd Hall",
+      "id": "",
+      "detail": "306"
+    },
+    "urlRef": "https://citp.princeton.edu/events/2027/citp-minor-information-session",
+    "content": "The Computing, Society, & Policy minor aims to bring its students to the cutting edge of knowledge and research on computing\u2019s impact on individuals and society, understanding of approaches to measure such impact, and exposure to technology policy that aims to shape such impact. Computing, Society and Policy provides students with the necessary academic rigor, a diversity of perspectives, and",
+    "rawEventDetails": "Details Event Description The Computing, Society, & Policy minor aims to bring its students to the cutting edge of knowledge and research on computing\u2019s impact on individuals and society, understanding of approaches to measure such impact, and exposure to technology policy that aims to shape such impact. Computing, Society and Policy provides students with the necessary academic rigor, a diversity of perspectives, and motivation to develop and implement innovative approaches to addressing computing\u2019s impact on society, one of the most challenging problems in computing in the service of humanity. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "CITP Minor Information Session",
+    "locationRaw": "Sherrerd Hall 306",
+    "mappingRules": [
+      "citp:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5391:delta:0",
     "guid": "ps_events:5391:delta:0",
     "sources": [
