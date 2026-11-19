@@ -387,14 +387,12 @@
     "startTime": "2026-12-04T10:30:00",
     "endTime": "2026-12-04T12:00:00",
     "timezone": "America/New_York",
-    "title": "A NAM Friday Talks Talk",
+    "title": "The memories that come to mind; the futures that we imagine",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
-    "series": "NAM Friday Talks",
-    "tags": [
-      "seminar"
-    ],
+    "series": "",
+    "tags": [],
     "purposes": [
       "dais-newsletter"
     ],
@@ -405,23 +403,23 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks",
-    "content": "Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/memories-come-mind-futures-we-imagine",
+    "content": "Abstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive control of memory and planning. I'll present a resource-rational modeling framework that formalize the tradeoffs governing",
     "rawEventDetails": "Details Event Description Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "NAM Friday Talks",
+    "summaryRaw": "The memories that come to mind; the futures that we imagine",
     "locationRaw": "Bendheim House, 103",
     "mappingRules": [
-      "nam:series-awaiting-title"
+      "nam:title"
     ],
     "locationRule": "comma_room",
     "summaryRest": "",
-    "titleSource": "fallback-template",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {

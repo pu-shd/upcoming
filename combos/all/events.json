@@ -8861,6 +8861,57 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4416:delta:0",
+    "guid": "ps_events:4416:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T15:30:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T10:30:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "The memories that come to mind; the futures that we imagine",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Natural and Artificial Minds",
+    "tags": [
+      "ai"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Natural and Artificial Minds"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bendheim House",
+      "id": "",
+      "detail": "103"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/memories-come-mind-futures-we-imagine",
+    "content": "Abstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive control of memory and planning. I'll present a resource-rational modeling framework that formalize the tradeoffs governing",
+    "rawEventDetails": "Details Event Description Abstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive control of memory and planning. I'll present a resource-rational modeling framework that formalize the tradeoffs governing which mental operations are worth performing and when deliberation should stop. Instantiating these models in recurrent neural networks allows us to ask how useful cognitive strategies and internal representations emerge through learning, linking the goals of cognition to candidate neural mechanisms. Alongside this modeling framework, I'll present our experiments using eye movements as a window into the contents and dynamics of thought. By tracking where people look as they remember and plan, we can probe which information they consider, how they revisit and combine it, and how these processes shape their choices. These measurements allow us to test models against the unfolding process of deliberation. Together, these approaches offer a framework for understanding how we learn to remember and think selectively, using limited cognitive resources to support flexible behavior.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "The memories that come to mind; the futures that we imagine",
+    "locationRaw": "Bendheim House 103",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4876:delta:0",
     "guid": "ps_events:4876:delta:0",
     "sources": [
@@ -8872,7 +8923,7 @@
     "startTime": "2026-12-04T10:30:00",
     "endTime": "2026-12-04T12:00:00",
     "timezone": "America/New_York",
-    "title": "NAM Friday Talks",
+    "title": "The memories that come to mind; the futures that we imagine",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -8889,15 +8940,15 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://dais.princeton.edu/events/2026/nam-friday-talks-0",
-    "content": "Speaker: Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "urlRef": "https://dais.princeton.edu/events/2026/memories-come-mind-futures-we-imagine",
+    "content": "Speaker: Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York UniversityAbstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive",
     "rawEventDetails": "Details Event Description Speaker: Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "NAM Friday Talks",
+    "summaryRaw": "The memories that come to mind; the futures that we imagine",
     "locationRaw": "Bendheim House 103",
     "mappingRules": [
       "dais:summary-is-title"
@@ -8920,14 +8971,12 @@
     "startTime": "2026-12-04T10:30:00",
     "endTime": "2026-12-04T12:00:00",
     "timezone": "America/New_York",
-    "title": "A NAM Friday Talks Talk",
+    "title": "The memories that come to mind; the futures that we imagine",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
-    "series": "NAM Friday Talks",
-    "tags": [
-      "seminar"
-    ],
+    "series": "",
+    "tags": [],
     "purposes": [
       "dais-newsletter"
     ],
@@ -8938,23 +8987,23 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-friday-talks",
-    "content": "Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
+    "urlRef": "https://nam.ai.princeton.edu/events/2026/memories-come-mind-futures-we-imagine",
+    "content": "Abstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive control of memory and planning. I'll present a resource-rational modeling framework that formalize the tradeoffs governing",
     "rawEventDetails": "Details Event Description Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "NAM Friday Talks",
+    "summaryRaw": "The memories that come to mind; the futures that we imagine",
     "locationRaw": "Bendheim House, 103",
     "mappingRules": [
-      "nam:series-awaiting-title"
+      "nam:title"
     ],
     "locationRule": "comma_room",
     "summaryRest": "",
-    "titleSource": "fallback-template",
-    "titleIsPlaceholder": true,
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
     "mappingConflict": false
   },
   {
