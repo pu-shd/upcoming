@@ -7712,13 +7712,19 @@
     ],
     "speaker": "Alia ElKattan",
     "affiliation": "",
-    "series": "",
-    "tags": [],
+    "series": "Artificial Intelligence,Data Science & Society",
+    "tags": [
+      "ai",
+      "data-science"
+    ],
     "purposes": [
       "engineering-newsletter",
       "dais-newsletter"
     ],
-    "rawCategories": [],
+    "rawCategories": [
+      "Artificial Intelligence",
+      "Data Science & Society"
+    ],
     "unmappedTags": [],
     "location": {
       "name": "Sherrerd Hall",
