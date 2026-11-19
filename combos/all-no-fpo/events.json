@@ -9984,6 +9984,60 @@
     "mappingConflict": false
   },
   {
+    "id": "materials:ps_events:4296:delta:0",
+    "guid": "ps_events:4296:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-01-27T17:05:00Z",
+    "endsAt": "2027-01-27T18:05:00Z",
+    "startTime": "2027-01-27T12:05:00",
+    "endTime": "2027-01-27T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Deji Akinwande, University of Texas at Austin",
+    "speakers": [
+      {
+        "name": "Deji Akinwande",
+        "affiliation": "University of Texas at Austin"
+      }
+    ],
+    "speaker": "Deji Akinwande, University of Texas at Austin",
+    "affiliation": "University of Texas at Austin",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-deji-akinwande-university-texas-austin",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Deji Akinwande, University of Texas at Austin",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5336:delta:0",
     "guid": "ps_events:5336:delta:0",
     "sources": [
@@ -10093,6 +10147,60 @@
     "mappingConflict": false
   },
   {
+    "id": "materials:ps_events:4301:delta:0",
+    "guid": "ps_events:4301:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-02-03T17:05:00Z",
+    "endsAt": "2027-02-03T18:05:00Z",
+    "startTime": "2027-02-03T12:05:00",
+    "endTime": "2027-02-03T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Efrain Rodriguez, University of Maryland",
+    "speakers": [
+      {
+        "name": "Efrain Rodriguez",
+        "affiliation": "University of Maryland"
+      }
+    ],
+    "speaker": "Efrain Rodriguez, University of Maryland",
+    "affiliation": "University of Maryland",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-efrain-rodriguez-university-maryland",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Efrain Rodriguez, University of Maryland",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5301:delta:0",
     "guid": "ps_events:5301:delta:0",
     "sources": [
@@ -10192,6 +10300,60 @@
     "locationRaw": "Sherrerd Hall 306",
     "mappingRules": [
       "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4306:delta:0",
+    "guid": "ps_events:4306:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-02-10T17:05:00Z",
+    "endsAt": "2027-02-10T18:05:00Z",
+    "startTime": "2027-02-10T12:05:00",
+    "endTime": "2027-02-10T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Caglar Oskay, Vanderbilt University",
+    "speakers": [
+      {
+        "name": "Caglar Oskay",
+        "affiliation": "Vanderbilt University"
+      }
+    ],
+    "speaker": "Caglar Oskay, Vanderbilt University",
+    "affiliation": "Vanderbilt University",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-caglar-oskay-vanderbilt-university",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Caglar Oskay, Vanderbilt University",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
