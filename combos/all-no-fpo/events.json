@@ -8707,7 +8707,7 @@
     "startTime": "2026-12-04T10:30:00",
     "endTime": "2026-12-04T12:00:00",
     "timezone": "America/New_York",
-    "title": "The memories that come to mind; the futures that we imagine",
+    "title": "NAM Friday Talks: The memories that come to mind; the futures that we imagine",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -8724,7 +8724,7 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://dais.princeton.edu/events/2026/memories-come-mind-futures-we-imagine",
+    "urlRef": "https://dais.princeton.edu/events/2026/nam-friday-talks-memories-come-mind-futures-we-imagine",
     "content": "Speaker: Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York UniversityAbstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive",
     "rawEventDetails": "Details Event Description Speaker: Marcelo Mattar, Assistant Professor of Psychology and Neural Science, New York University",
     "rawExtractAbstract": "",
@@ -8732,7 +8732,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "The memories that come to mind; the futures that we imagine",
+    "summaryRaw": "NAM Friday Talks: The memories that come to mind; the futures that we imagine",
     "locationRaw": "Bendheim House 103",
     "mappingRules": [
       "dais:summary-is-title"
