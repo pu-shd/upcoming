@@ -10421,6 +10421,60 @@
     "mappingConflict": false
   },
   {
+    "id": "materials:ps_events:4311:delta:0",
+    "guid": "ps_events:4311:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-02-17T17:05:00Z",
+    "endsAt": "2027-02-17T18:05:00Z",
+    "startTime": "2027-02-17T12:05:00",
+    "endTime": "2027-02-17T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Alejandro Strachan, Perdue University",
+    "speakers": [
+      {
+        "name": "Alejandro Strachan",
+        "affiliation": "Perdue University"
+      }
+    ],
+    "speaker": "Alejandro Strachan, Perdue University",
+    "affiliation": "Perdue University",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-alejandro-strachan-perdue-university",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Alejandro Strachan, Perdue University",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "citp:ps_events:5581:delta:0",
     "guid": "ps_events:5581:delta:0",
     "sources": [
@@ -10466,6 +10520,60 @@
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4316:delta:0",
+    "guid": "ps_events:4316:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-02-24T17:05:00Z",
+    "endsAt": "2027-02-24T18:05:00Z",
+    "startTime": "2027-02-24T12:05:00",
+    "endTime": "2027-02-24T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Minjiang Zhong, Yale University",
+    "speakers": [
+      {
+        "name": "Minjiang Zhong",
+        "affiliation": "Yale University"
+      }
+    ],
+    "speaker": "Minjiang Zhong, Yale University",
+    "affiliation": "Yale University",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-minjiang-zhong-yale-university",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Minjiang Zhong, Yale University",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
     "mappingConflict": false
   },
   {
@@ -10522,6 +10630,168 @@
     "mappingConflict": false
   },
   {
+    "id": "materials:ps_events:4321:delta:0",
+    "guid": "ps_events:4321:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-03-03T17:05:00Z",
+    "endsAt": "2027-03-03T18:05:00Z",
+    "startTime": "2027-03-03T12:05:00",
+    "endTime": "2027-03-03T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Alberto Salleo, Stanford University",
+    "speakers": [
+      {
+        "name": "Alberto Salleo",
+        "affiliation": "Stanford University"
+      }
+    ],
+    "speaker": "Alberto Salleo, Stanford University",
+    "affiliation": "Stanford University",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-alberto-salleo-stanford-university",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Alberto Salleo, Stanford University",
+    "locationRaw": "Bowen 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4326:delta:0",
+    "guid": "ps_events:4326:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-03-17T16:05:00Z",
+    "endsAt": "2027-03-17T17:05:00Z",
+    "startTime": "2027-03-17T12:05:00",
+    "endTime": "2027-03-17T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Mikhail Kats, University of Wisconsin",
+    "speakers": [
+      {
+        "name": "Mikhail Kats",
+        "affiliation": "University of Wisconsin"
+      }
+    ],
+    "speaker": "Mikhail Kats, University of Wisconsin",
+    "affiliation": "University of Wisconsin",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-mikhail-kats-university-wisconsin",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Mikhail Kats, University of Wisconsin",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4331:delta:0",
+    "guid": "ps_events:4331:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-03-24T16:05:00Z",
+    "endsAt": "2027-03-24T17:05:00Z",
+    "startTime": "2027-03-24T12:05:00",
+    "endTime": "2027-03-24T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Regina Gracia-Mendez, Johns Hopkins University",
+    "speakers": [
+      {
+        "name": "Regina Gracia-Mendez",
+        "affiliation": "Johns Hopkins University"
+      }
+    ],
+    "speaker": "Regina Gracia-Mendez, Johns Hopkins University",
+    "affiliation": "Johns Hopkins University",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-regina-gracia-mendez-johns-hopkins-university",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Regina Gracia-Mendez, Johns Hopkins University",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
     "id": "materials:ps_events:4056:delta:0",
     "guid": "ps_events:4056:delta:0",
     "sources": [
@@ -10566,6 +10836,60 @@
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4336:delta:0",
+    "guid": "ps_events:4336:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-04-07T16:05:00Z",
+    "endsAt": "2027-04-07T17:05:00Z",
+    "startTime": "2027-04-07T12:05:00",
+    "endTime": "2027-04-07T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Shelly Zhang, University of Illinois at Urbana-Champaign",
+    "speakers": [
+      {
+        "name": "Shelly Zhang",
+        "affiliation": "University of Illinois at Urbana-Champaign"
+      }
+    ],
+    "speaker": "Shelly Zhang, University of Illinois at Urbana-Champaign",
+    "affiliation": "University of Illinois at Urbana-Champaign",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-shelly-zhang-university-illinois-urbana-champaign",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Shelly Zhang, University of Illinois at Urbana-Champaign",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
     "mappingConflict": false
   },
   {
@@ -10614,6 +10938,60 @@
     "locationRaw": "Sherrerd Hall 306",
     "mappingRules": [
       "citp:bare-person-name"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4341:delta:0",
+    "guid": "ps_events:4341:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-04-14T16:05:00Z",
+    "endsAt": "2027-04-14T17:05:00Z",
+    "startTime": "2027-04-14T12:05:00",
+    "endTime": "2027-04-14T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by Carlos Portela, Massachusetts Institute of Technology",
+    "speakers": [
+      {
+        "name": "Carlos Portela",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "speaker": "Carlos Portela, Massachusetts Institute of Technology",
+    "affiliation": "Massachusetts Institute of Technology",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-carlos-portela-massachusetts-institute-technology",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: Carlos Portela, Massachusetts Institute of Technology",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -10675,6 +11053,60 @@
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "materials:ps_events:4346:delta:0",
+    "guid": "ps_events:4346:delta:0",
+    "sources": [
+      "materials"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2027-04-21T16:05:00Z",
+    "endsAt": "2027-04-21T17:05:00Z",
+    "startTime": "2027-04-21T12:05:00",
+    "endTime": "2027-04-21T13:05:00",
+    "timezone": "America/New_York",
+    "title": "A PMI/PCCM SEMINAR SERIES Spring 2027 Talk by William Boley, Boston University",
+    "speakers": [
+      {
+        "name": "William Boley",
+        "affiliation": "Boston University"
+      }
+    ],
+    "speaker": "William Boley, Boston University",
+    "affiliation": "Boston University",
+    "series": "PMI/PCCM SEMINAR SERIES Spring 2027",
+    "tags": [
+      "seminar"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Bowen Hall",
+      "id": "",
+      "detail": "222"
+    },
+    "urlRef": "https://materials.princeton.edu/events/2027/pmipccm-seminar-series-spring-2027-william-boley-boston-university",
+    "content": "Abstract and bio coming soon.",
+    "rawEventDetails": "Details Event Description Abstract and bio coming soon.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "PMI/PCCM SEMINAR SERIES Spring 2027: William Boley, Boston University",
+    "locationRaw": "Bowen Hall 222",
+    "mappingRules": [
+      "materials:series-person-affiliation"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "fallback-speaker",
+    "titleIsPlaceholder": true,
     "mappingConflict": false
   }
 ]
