@@ -7437,6 +7437,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4411:delta:0",
+    "guid": "ps_events:4411:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-30T18:00:00Z",
+    "endsAt": "2026-11-30T19:00:00Z",
+    "startTime": "2026-11-30T13:00:00",
+    "endTime": "2026-11-30T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Distinguished Lecture Series - Shafi Goldwasser",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/distinguished-lecture-series-shafi-goldwasser",
+    "content": "\"A Cryptographer's Perspective on Machine Learning Safety Challenges\" For decades cryptographic tools and models have transformed technology platforms controlled by worst case adversaries to trustworthy platforms. In this talk, Distinguished Lecturer Shafi Goldwasser will describe how the cryptographic and interactive proofs tool kit can address trust challenges in various phases of the machine learning pipeline. Light reception to follow. Bio: Shafi Goldwasser is the Leighton family Professor of Mathematics at MIT, the C. Lester",
+    "rawEventDetails": "Details Event Description \"A Cryptographer's Perspective on Machine Learning Safety Challenges\" For decades cryptographic tools and models have transformed technology platforms controlled by worst case adversaries to trustworthy platforms. In this talk, Distinguished Lecturer Shafi Goldwasser will describe how the cryptographic and interactive proofs tool kit can address trust challenges in various phases of the machine learning pipeline. Light reception to follow. Bio: Shafi Goldwasser is the Leighton family Professor of Mathematics at MIT, the C. Lester Hogan Professor in Electrical Engineering and Computer Sciences at UC Berkeley (on leave), and an Emeritus professor at the Computer science and applied mathematics department at the Weizmann Institute of Science in Israel. She was a director of the Simons Institute for the Theory of Computing, and is a co-founder and chief scientist of Duality Technologies. Goldwasser received a BS in applied mathematics from Carnegie Mellon University in 1979, and MS and PhD in computer science from UC Berkeley in 1984. Goldwasser was the recipient of ACM Turing Award for 2012. She was also the recipient of the G\u00f6del Prize in 1993 and another in 2001 for her work on interactive proofs and connections to approximation, and was awarded the ACM Grace Murray Hopper Award (1996), the RSA award in mathematics (1998), the ACM Athena award for women in computer science (2008), the Benjamin Franklin Medal in Computer and Cognitive Science (2010), the IEEE Emanuel R. Piore Award (2011), the Barnard College Medal of Distinction (2016), and the Suffrage Science Award (2016). She is a member of the AAAS, ACM, NAE, NAS, Israeli Academy of Science, London Mathematical Society, Royal Society, and Russian Academy of Science.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Distinguished Lecture Series - Shafi Goldwasser",
+    "locationRaw": "Friend Center 101",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "dais:ps_events:4866:delta:0",
     "guid": "ps_events:4866:delta:0",
     "sources": [
@@ -7468,6 +7515,54 @@
     "urlRef": "https://dais.princeton.edu/events/2026/distinguished-lecture-series-shafi-goldwasser",
     "content": "A Cryptographers Perspective on Machine Learning Safety ChallengesFor decades cryptographic tools and models have transformed technology platforms controlled by worst case adversaries to trustworthy platforms. In this talk, Distinguished Lecturer Shafi Goldwasser will describe how the cryptographic and interactive proofs tool kit can address trust challenges in various phases of the machine learning pipeline.Light reception to follow. Bio: Shafi Goldwasser is the Leighton family Professor of",
     "rawEventDetails": "Details Event Description A Cryptographers Perspective on Machine Learning Safety Challenges For decades cryptographic tools and models have transformed technology platforms controlled by worst case adversaries to trustworthy platforms. In this talk, Distinguished Lecturer Shafi Goldwasser will describe how the cryptographic and interactive proofs tool kit can address trust challenges in various phases of the machine learning pipeline. Light reception to follow. Bio: Shafi Goldwasser is the Leighton family Professor of Mathematics at MIT, the C. Lester Hogan Professor in Electrical Engineering and Computer Sciences at UC Berkeley (on leave), and an Emeritus professor at the Computer science and applied mathematics department at the Weizmann Institute of Science in Israel. She was a director of the Simons Institute for the Theory of Computing, and is a co-founder and chief scientist of Duality Technologies. Goldwasser received a BS in applied mathematics from Carnegie Mellon University in 1979, and MS and PhD in computer science from UC Berkeley in 1984. Goldwasser was the recipient of ACM Turing Award for 2012. She was also the recipient of the G\u00f6del Prize in 1993 and another in 2001 for her work on interactive proofs and connections to approximation, and was awarded the ACM Grace Murray Hopper Award (1996), the RSA award in mathematics (1998), the ACM Athena award for women in computer science (2008), the Benjamin Franklin Medal in Computer and Cognitive Science (2010), the IEEE Emanuel R. Piore Award (2011), the Barnard College Medal of Distinction (2016), and the Suffrage Science Award (2016). She is a member of the AAAS, ACM, NAE, NAS, Israeli Academy of Science, London Mathematical Society, Royal Society, and Russian Academy of Science.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Distinguished Lecture Series - Shafi Goldwasser",
+    "locationRaw": "Friend Center 101",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4881:delta:0",
+    "guid": "ps_events:4881:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-30T18:00:00Z",
+    "endsAt": "2026-11-30T19:00:00Z",
+    "startTime": "2026-11-30T13:00:00",
+    "endTime": "2026-11-30T14:00:00",
+    "timezone": "America/New_York",
+    "title": "Distinguished Lecture Series - Shafi Goldwasser",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/distinguished-lecture-series-shafi-goldwasser-0",
+    "content": "\"A Cryptographer's Perspective on Machine Learning Safety Challenges\" For decades cryptographic tools and models have transformed technology platforms controlled by worst case adversaries to trustworthy platforms. In this talk, Distinguished Lecturer Shafi Goldwasser will describe how the cryptographic and interactive proofs tool kit can address trust challenges in various phases of the machine learning pipeline. Light reception to follow. Bio: Shafi Goldwasser is the Leighton family Professor of Mathematics at MIT, the C. Lester",
+    "rawEventDetails": "Details Event Description \"A Cryptographer's Perspective on Machine Learning Safety Challenges\" For decades cryptographic tools and models have transformed technology platforms controlled by worst case adversaries to trustworthy platforms. In this talk, Distinguished Lecturer Shafi Goldwasser will describe how the cryptographic and interactive proofs tool kit can address trust challenges in various phases of the machine learning pipeline. Light reception to follow. Bio: Shafi Goldwasser is the Leighton family Professor of Mathematics at MIT, the C. Lester Hogan Professor in Electrical Engineering and Computer Sciences at UC Berkeley (on leave), and an Emeritus professor at the Computer science and applied mathematics department at the Weizmann Institute of Science in Israel. She was a director of the Simons Institute for the Theory of Computing, and is a co-founder and chief scientist of Duality Technologies. Goldwasser received a BS in applied mathematics from Carnegie Mellon University in 1979, and MS and PhD in computer science from UC Berkeley in 1984. Goldwasser was the recipient of ACM Turing Award for 2012. She was also the recipient of the G\u00f6del Prize in 1993 and another in 2001 for her work on interactive proofs and connections to approximation, and was awarded the ACM Grace Murray Hopper Award (1996), the RSA award in mathematics (1998), the ACM Athena award for women in computer science (2008), the Benjamin Franklin Medal in Computer and Cognitive Science (2010), the IEEE Emanuel R. Piore Award (2011), the Barnard College Medal of Distinction (2016), and the Suffrage Science Award (2016). She is a member of the AAAS, ACM, NAE, NAS, Israeli Academy of Science, London Mathematical Society, Royal Society, and Russian Academy of Science.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
@@ -8917,7 +9012,7 @@
     "startTime": "2026-12-07T10:00:00",
     "endTime": "2026-12-07T12:00:00",
     "timezone": "America/New_York",
-    "title": "Pre FPO",
+    "title": "Pre FPO - Auditing Platforms for Transparency and Accountability",
     "speakers": [
       {
         "name": "Madelyne Xiao",
@@ -8939,15 +9034,15 @@
       "id": "",
       "detail": "306"
     },
-    "urlRef": "https://citp.princeton.edu/events/2026/madelyne-xiao-pre-fpo",
-    "content": "Talk information: TBABio:Madelyne Xiao is a graduate student at CITP advised by Jonathan Mayer, with support from a NSF Graduate Research Fellowship. She is broadly interested in online speech, platform governance, and applied cryptography. Current work includes the design and implementation of privacy-preserving systems for content analysis (joint with the Digital Witness Lab), robustness testing of age",
+    "urlRef": "https://citp.princeton.edu/events/2026/madelyne-xiao-pre-fpo-auditing-platforms-transparency-and-accountability",
+    "content": "How should online platforms verify identity and information at scale? Many social media platforms and online services have turned to automated technical systems to verify user identity, determine eligibility for access, and evaluate information credibility. Though these systems promise accuracy and ease-of-use, the signals they detect are often imperfect proxies for the properties they claim to measure. Using adversarial audits, user and measurement studies, and observational analyses, this dissertation examines the technical mechanisms by which online platforms establish identity and",
     "rawEventDetails": "Details Event Description Talk information: TBA Bio: Madelyne Xiao is a graduate student at CITP advised by Jonathan Mayer , with support from a NSF Graduate Research Fellowship. She is broadly interested in online speech, platform governance, and applied cryptography. Current work includes the design and implementation of privacy-preserving systems for content analysis (joint with the Digital Witness Lab), robustness testing of age assurance systems, and an audit of Twitter/X\u2019s Community Notes. Prior to coming to Princeton, she was an editorial staff member at The New Yorker . She graduated from Stanford University with undergraduate degrees in mathematics and comparative literature. This talk will not be livestreamed or recorded. If you need an accommodation for a disability please contact Jean Butcher at [email protected] . Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "Madelyne Xiao - Pre FPO",
+    "summaryRaw": "Madelyne Xiao - Pre FPO - Auditing Platforms for Transparency and Accountability",
     "locationRaw": "Sherrerd Hall 306",
     "mappingRules": [
       "citp:speaker-dash-title"
