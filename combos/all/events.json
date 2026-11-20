@@ -99,58 +99,6 @@
     "mappingConflict": false
   },
   {
-    "id": "dais:ps_events:4496:delta:0",
-    "guid": "ps_events:4496:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-19T04:00:00Z",
-    "endsAt": "2026-10-20T04:00:00Z",
-    "startTime": "2026-10-19T00:00:00",
-    "endTime": "2026-10-20T00:00:00",
-    "timezone": "America/New_York",
-    "title": "AI Alignment + Safety Inaugural Symposium & Launch Event",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "AI Alignment + Safety",
-    "tags": [
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [
-      "AI Alignment + Safety"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Friend Center",
-      "id": "",
-      "detail": "101"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-alignment-safety-inaugural-symposium-launch-event",
-    "content": "A new initiative to make artificial intelligence safe and beneficial to humanity.Opening Remarks by Elad Hazan, Director and Mark Braverman, Associate DirectorFeatured speakers include:Boaz Barak, Harvard University, Open AISurbhi Goel, University of PennsylvaniaPeter Henderson, Princeton University, Department of Computer ScienceLydia Liu, Princeton University, Department of Computer Science",
-    "rawEventDetails": "Details Event Description A new initiative to make artificial intelligence safe and beneficial to humanity. Opening Remarks by Elad Hazan , Director and Mark Braverman, Associate Director Featured speakers include: Boaz Barak , Harvard University, Open AI Surbhi Goel , University of Pennsylvania Peter Henderson , Princeton University, Department of Computer Science Lydia Liu , Princeton University, Department of Computer Science Helen Qu, Flatiron Institute Adam Tauman Kalai , Institute for Responsible Superintelligence Benjamin Van Roy , Stanford University, Google Deep Mind",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AI Alignment + Safety Inaugural Symposium & Launch Event",
-    "locationRaw": "Friend Center 101",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4181:delta:0",
     "guid": "ps_events:4181:delta:0",
     "sources": [
@@ -6933,7 +6881,7 @@
       "detail": "A71"
     },
     "urlRef": "https://dais.princeton.edu/events/2026/front-office-founder",
-    "content": "The tools change every month. The fundamentals do not. This session traces a path from a statistics and engineering PhD to professional baseball front offices to founding a data science company, and what that path teaches about building with Al. Expect a candid look at how models reach the people who make decisions, why understanding the full loop from hardware to software to model to stakeholder matters more as code gets cheaper, and how technical skill becomes something people pay for.",
+    "content": "Michael Czahor, principal data scientist, Broadata Communications.The tools change every month. The fundamentals do not. This session traces a path from a statistics and engineering PhD to professional baseball front offices to founding a data science company, and what that path teaches about building with Al. Expect a candid look at how models reach the people who make decisions, why understanding the full loop from hardware to software to model to stakeholder matters more as code gets cheaper, and how technical skill becomes",
     "rawEventDetails": "Speaker Michael Czahor Details Event Description The tools change every month. The fundamentals do not. This session traces a path from a statistics and engineering PhD to professional baseball front offices to founding a data science company, and what that path teaches about building with Al. Expect a candid look at how models reach the people who make decisions, why understanding the full loop from hardware to software to model to stakeholder matters more as code gets cheaper, and how technical skill becomes something people pay for.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
