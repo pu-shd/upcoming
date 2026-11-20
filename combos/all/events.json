@@ -8768,6 +8768,62 @@
     "mappingConflict": false
   },
   {
+    "id": "mae:ps_events:5181:delta:0",
+    "guid": "ps_events:5181:delta:0",
+    "sources": [
+      "mae"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T15:00:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T10:00:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Development and Application of Surface and Gas-Phase Diagnostic Techniques for Plasma-Assisted Ammonia Synthesis and Energy Materials",
+    "speakers": [
+      {
+        "name": "Chris Kondratowicz",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Chris Kondratowicz",
+    "affiliation": "",
+    "series": "Final Public Oral Exam",
+    "tags": [
+      "fpo"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Final Public Oral Exam"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "SEAS-CBE",
+      "id": "",
+      "detail": "F212"
+    },
+    "urlRef": "https://mae.princeton.edu/events/2026/development-and-application-surface-and-gas-phase-diagnostic-techniques-plasma-assisted",
+    "content": "",
+    "rawEventDetails": "Speaker Chris Kondratowicz Event Category Final Public Oral Exam",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Development and Application of Surface and Gas-Phase Diagnostic Techniques for Plasma-Assisted Ammonia Synthesis and Energy Materials",
+    "locationRaw": "SEAS-CBE F212",
+    "mappingRules": [
+      "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4416:delta:0",
     "guid": "ps_events:4416:delta:0",
     "sources": [
