@@ -105,54 +105,6 @@
     "mappingConflict": false
   },
   {
-    "id": "dais:ps_events:4736:delta:0",
-    "guid": "ps_events:4736:delta:0",
-    "sources": [
-      "dais"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-22T17:00:00Z",
-    "endsAt": "2026-10-22T19:30:00Z",
-    "startTime": "2026-10-22T13:00:00",
-    "endTime": "2026-10-22T15:30:00",
-    "timezone": "America/New_York",
-    "title": "Coding with AI Tools: Shared Best Practices for Scientific Software Development",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter",
-      "dais-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Friend Center",
-      "id": "",
-      "detail": "004"
-    },
-    "urlRef": "https://dais.princeton.edu/events/2026/coding-ai-tools-shared-best-practices-scientific-software-development",
-    "content": "AI tools and agents are becoming an essential asset for scientific software development and maintenance with the potential of orders of magnitude speed-up of the modeling development cycle. There remains the need to develop and establish best practices for their efficient deployment in research.This workshop includes a demo on AI tools including Claude,",
-    "rawEventDetails": "Details Event Description AI tools and agents are becoming an essential asset for scientific software development and maintenance with the potential of orders of magnitude speed-up of the modeling development cycle. There remains the need to develop and establish best practices for their efficient deployment in research. This workshop includes a demo on AI tools including Claude, vibe coding, its capacity and capabilities, and best practices. It also aims at bringing together graduate students, researchers, and computational scientists across campus who are interested in sharing their experiences in this fast developing new frontier of modeling. Bring your questions, research projects or what you want to build using AI tools.",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Coding with AI Tools: Shared Best Practices for Scientific Software Development",
-    "locationRaw": "Friend Center 004",
-    "mappingRules": [
-      "dais:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "quantum:ps_events:3781:delta:0",
     "guid": "ps_events:3781:delta:0",
     "sources": [
@@ -6880,14 +6832,12 @@
     "startTime": "2026-11-24T10:30:00",
     "endTime": "2026-11-24T11:30:00",
     "timezone": "America/New_York",
-    "title": "AI for Math Seminar Series",
+    "title": "Maths in the age of AI | Charles Arnal, Postdoctoral Reseacher, Meta",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
     "series": "",
-    "tags": [
-      "listing"
-    ],
+    "tags": [],
     "purposes": [
       "engineering-newsletter"
     ],
@@ -6898,18 +6848,18 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://ai.princeton.edu/events/2026/ai-math-seminar-series",
-    "content": "Charles Arnal, Postdoctoral Reseacher, Meta",
+    "urlRef": "https://ai.princeton.edu/events/2026/maths-age-ai-charles-arnal-postdoctoral-reseacher-meta",
+    "content": "Abstract: We will discuss recent advances in AI for maths, including current and future model capabilities, the interplay between frontier labs and the mathematical community, and what makes a good research direction in the age of AI. Bio: Charles Arnal is a postdoctoral researcher at Meta, where he studies reasoning in large language models. He previously held a postdoctoral position in topological data analysis at the Laboratoire de Math\u00e9matiques d\u2019Orsay at Universit\u00e9 Paris-Saclay and earned his PhD at Sorbonne Universit\u00e9 under the supervision of Ilia Itenberg. His research",
     "rawEventDetails": "Details Event Description Charles Arnal, Postdoctoral Reseacher, Meta",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "AI for Math Seminar Series",
+    "summaryRaw": "Maths in the age of AI | Charles Arnal, Postdoctoral Reseacher, Meta",
     "locationRaw": "Bendheim House 103",
     "mappingRules": [
-      "ai:series-listing"
+      "ai:title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -6929,7 +6879,7 @@
     "startTime": "2026-11-24T10:30:00",
     "endTime": "2026-11-24T11:30:00",
     "timezone": "America/New_York",
-    "title": "AI for Math Seminar Series",
+    "title": "Maths in the age of AI | Charles Arnal, Postdoctoral Reseacher, Meta",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -6946,15 +6896,15 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series",
-    "content": "Charles Arnal, Postdoctoral Reseacher, Meta",
+    "urlRef": "https://dais.princeton.edu/events/2026/maths-age-ai-charles-arnal-postdoctoral-reseacher-meta",
+    "content": "Abstract: We will discuss recent advances in AI for maths, including current and future model capabilities, the interplay between frontier labs and the mathematical community, and what makes a good research direction in the age of AI. Bio: Charles Arnal is a postdoctoral researcher at Meta, where he studies reasoning in large language models. He previously held a postdoctoral position in topological data analysis at the Laboratoire de Math\u00e9matiques d\u2019Orsay at Universit\u00e9 Paris-Saclay and earned his PhD at Sorbonne Universit\u00e9 under the supervision of Ilia Itenberg. His research",
     "rawEventDetails": "Details Event Description Charles Arnal, Postdoctoral Reseacher, Meta",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "AI for Math Seminar Series",
+    "summaryRaw": "Maths in the age of AI | Charles Arnal, Postdoctoral Reseacher, Meta",
     "locationRaw": "Bendheim House 103",
     "mappingRules": [
       "dais:summary-is-title"
