@@ -110,10 +110,10 @@
       "cs"
     ],
     "platform": "drupal-events-rss",
-    "startsAt": "2026-11-30T17:30:00Z",
-    "endsAt": "2026-11-30T18:30:00Z",
-    "startTime": "2026-11-30T12:30:00",
-    "endTime": "2026-11-30T13:30:00",
+    "startsAt": "2026-11-30T18:00:00Z",
+    "endsAt": "2026-11-30T19:00:00Z",
+    "startTime": "2026-11-30T13:00:00",
+    "endTime": "2026-11-30T14:00:00",
     "timezone": "America/New_York",
     "title": "AIAS Distinguished Lecture Series - A Cryptographer\u2019s Perspective on Machine Learning Safety Challenges",
     "speakers": [

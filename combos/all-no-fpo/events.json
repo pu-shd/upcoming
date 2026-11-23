@@ -7080,58 +7080,6 @@
     "mappingConflict": false
   },
   {
-    "id": "cs:https://www.cs.princeton.edu/events/aias-distinguished-lecture-series-cryptographers-perspective-machine-learning-safety",
-    "guid": "https://www.cs.princeton.edu/events/aias-distinguished-lecture-series-cryptographers-perspective-machine-learning-safety",
-    "sources": [
-      "cs"
-    ],
-    "platform": "drupal-events-rss",
-    "startsAt": "2026-11-30T17:30:00Z",
-    "endsAt": "2026-11-30T18:30:00Z",
-    "startTime": "2026-11-30T12:30:00",
-    "endTime": "2026-11-30T13:30:00",
-    "timezone": "America/New_York",
-    "title": "AIAS Distinguished Lecture Series - A Cryptographer\u2019s Perspective on Machine Learning Safety Challenges",
-    "speakers": [
-      {
-        "name": "Shafi Goldwasser",
-        "affiliation": "MIT"
-      }
-    ],
-    "speaker": "Shafi Goldwasser, MIT",
-    "affiliation": "MIT",
-    "series": "Princeton AI Alignment + Safety",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Friend Center",
-      "id": "",
-      "detail": "101"
-    },
-    "urlRef": "https://www.cs.princeton.edu/events/aias-distinguished-lecture-series-cryptographers-perspective-machine-learning-safety",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "AIAS Distinguished Lecture Series - A Cryptographer\u2019s Perspective on Machine Learning Safety Challenges",
-    "locationRaw": "Friend Center 101",
-    "mappingRules": [
-      "cs:summary-is-title"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ai:ps_events:4411:delta:0",
     "guid": "ps_events:4411:delta:0",
     "sources": [
@@ -7171,6 +7119,58 @@
     "locationRaw": "Friend Center 101",
     "mappingRules": [
       "ai:title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "cs:https://www.cs.princeton.edu/events/aias-distinguished-lecture-series-cryptographers-perspective-machine-learning-safety",
+    "guid": "https://www.cs.princeton.edu/events/aias-distinguished-lecture-series-cryptographers-perspective-machine-learning-safety",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-11-30T18:00:00Z",
+    "endsAt": "2026-11-30T19:00:00Z",
+    "startTime": "2026-11-30T13:00:00",
+    "endTime": "2026-11-30T14:00:00",
+    "timezone": "America/New_York",
+    "title": "AIAS Distinguished Lecture Series - A Cryptographer\u2019s Perspective on Machine Learning Safety Challenges",
+    "speakers": [
+      {
+        "name": "Shafi Goldwasser",
+        "affiliation": "MIT"
+      }
+    ],
+    "speaker": "Shafi Goldwasser, MIT",
+    "affiliation": "MIT",
+    "series": "Princeton AI Alignment + Safety",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Friend Center",
+      "id": "",
+      "detail": "101"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/aias-distinguished-lecture-series-cryptographers-perspective-machine-learning-safety",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "AIAS Distinguished Lecture Series - A Cryptographer\u2019s Perspective on Machine Learning Safety Challenges",
+    "locationRaw": "Friend Center 101",
+    "mappingRules": [
+      "cs:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
