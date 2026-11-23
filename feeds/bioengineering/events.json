@@ -450,5 +450,61 @@
     "titleSource": "ics",
     "titleIsPlaceholder": false,
     "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2951:delta:0",
+    "guid": "ps_events:2951:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-10T21:00:00Z",
+    "endsAt": "2026-12-10T22:00:00Z",
+    "startTime": "2026-12-10T16:00:00",
+    "endTime": "2026-12-10T17:00:00",
+    "timezone": "America/New_York",
+    "title": "Mapping the Cellular Determinants of Genome Editing in Human Cells",
+    "speakers": [
+      {
+        "name": "Britt Adamson",
+        "affiliation": ""
+      }
+    ],
+    "speaker": "Britt Adamson",
+    "affiliation": "",
+    "series": "BioE Colloquium",
+    "tags": [
+      "colloquium"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "BioE Colloquium"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "BioE",
+      "id": "",
+      "detail": "E105"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/mapping-cellular-determinants-genome-editing-human-cells",
+    "content": "Efforts to repurpose CRISPR-Cas systems have produced a suite of genome-editing tools, including programmable nucleases, base editors, and prime editors. These tools have greatly enabled the study of genomes and gene function, and their advancement to therapeutic development has demonstrated promise for addressing a host of unmet medical needs. Our understanding of how endogenous cellular processes influence the activity of these tools, however, lags behind their application and, due to the rapid pace of technology development, behind efforts to build new approaches. Our work focuses on",
+    "rawEventDetails": "Speaker Britt Adamson Affiliation Princeton University Details Event Description Efforts to repurpose CRISPR-Cas systems have produced a suite of genome-editing tools, including programmable nucleases, base editors, and prime editors. These tools have greatly enabled the study of genomes and gene function, and their advancement to therapeutic development has demonstrated promise for addressing a host of unmet medical needs. Our understanding of how endogenous cellular processes influence the activity of these tools, however, lags behind their application and, due to the rapid pace of technology development, behind efforts to build new approaches. Our work focuses on identifying cellular determinants of genome-editing tools to better understand how they work. In pursuit of this goal, we consider that to introduce sequence changes, genome-editing tools must damage DNA. Development of genome-editing tools therefore requires a basic understanding of the cellular systems that sense and respond to DNA damage and presents new opportunities to study those basic cellular systems. Our results provide key insights into how genome-editing tools interact with the cellular environment and suggest general strategies for improvement of these important technologies. Light refreshments will be available 15 minutes prior to the start of the seminar. Sponsor Omenn-Darling Bioengineering Institute",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Mapping the Cellular Determinants of Genome Editing in Human Cells",
+    "locationRaw": "BioE E105",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
   }
 ]
