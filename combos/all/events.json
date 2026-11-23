@@ -6821,6 +6821,57 @@
     "mappingConflict": false
   },
   {
+    "id": "bioengineering:ps_events:2956:delta:0",
+    "guid": "ps_events:2956:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-11-23T21:00:00Z",
+    "endsAt": "2026-11-23T21:30:00Z",
+    "startTime": "2026-11-23T16:00:00",
+    "endTime": "2026-11-23T16:30:00",
+    "timezone": "America/New_York",
+    "title": "iGEM 2026 Info Session",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Undergraduate",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Undergraduate"
+    ],
+    "unmappedTags": [
+      "Undergraduate"
+    ],
+    "location": {
+      "name": "CBE Building",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/igem-2026-info-session",
+    "content": "We\u2019re looking for undergraduate students to join Princeton\u2019s International Genetically Engineered Machines Competition (iGEM) team. This program brings together a group of about 10 students to develop and carry out a synthetic biology research project (no biology experience necessary!).Piecing together this project involves many components, such as reading, research, writing, web design, community outreach, and more. It\u2019s the perfect opportunity for students who are eager to learn and collaborate.Participants will enroll in the course \u201cIntroduction to Synthetic Biology\u201d in",
+    "rawEventDetails": "Details Event Description We\u2019re looking for undergraduate students to join Princeton\u2019s International Genetically Engineered Machines Competition (iGEM) team. This program brings together a group of about 10 students to develop and carry out a synthetic biology research project (no biology experience necessary!). Piecing together this project involves many components, such as reading, research, writing, web design, community outreach, and more. It\u2019s the perfect opportunity for students who are eager to learn and collaborate. Participants will enroll in the course \u201cIntroduction to Synthetic Biology\u201d in the spring. They will live on campus throughout the summer to complete the project, and then travel to Paris in the fall to present their team\u2019s project at the iGEM Jamboree. If you're interested in learning more, please attend the iGEM info session.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "iGEM 2026 Info Session",
+    "locationRaw": "CBE Building F204",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ai:ps_events:4371:delta:0",
     "guid": "ps_events:4371:delta:0",
     "sources": [
@@ -7582,6 +7633,57 @@
     "locationRaw": "Bendheim House 103",
     "mappingRules": [
       "dais:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2961:delta:0",
+    "guid": "ps_events:2961:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-01T21:00:00Z",
+    "endsAt": "2026-12-01T21:30:00Z",
+    "startTime": "2026-12-01T16:00:00",
+    "endTime": "2026-12-01T16:30:00",
+    "timezone": "America/New_York",
+    "title": "iGEM 2026 Info Session",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Undergraduate",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Undergraduate"
+    ],
+    "unmappedTags": [
+      "Undergraduate"
+    ],
+    "location": {
+      "name": "CBE Building",
+      "id": "",
+      "detail": "F212"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/igem-2026-info-session-0",
+    "content": "We\u2019re looking for undergraduate students to join Princeton\u2019s International Genetically Engineered Machines Competition (iGEM) team. This program brings together a group of about 10 students to develop and carry out a synthetic biology research project (no biology experience necessary!).Piecing together this project involves many components, such as reading, research, writing, web design, community outreach, and more. It\u2019s the perfect opportunity for students who are eager to learn and collaborate.Participants will enroll in the course \u201cIntroduction to Synthetic Biology\u201d in",
+    "rawEventDetails": "Details Event Description We\u2019re looking for undergraduate students to join Princeton\u2019s International Genetically Engineered Machines Competition (iGEM) team. This program brings together a group of about 10 students to develop and carry out a synthetic biology research project (no biology experience necessary!). Piecing together this project involves many components, such as reading, research, writing, web design, community outreach, and more. It\u2019s the perfect opportunity for students who are eager to learn and collaborate. Participants will enroll in the course \u201cIntroduction to Synthetic Biology\u201d in the spring. They will live on campus throughout the summer to complete the project, and then travel to Paris in the fall to present their team\u2019s project at the iGEM Jamboree. If you're interested in learning more, please attend the iGEM info session.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "iGEM 2026 Info Session",
+    "locationRaw": "CBE Building F212",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
@@ -9019,6 +9121,57 @@
     "locationRaw": "Bowen Hall 222",
     "mappingRules": [
       "mae:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "bioengineering:ps_events:2966:delta:0",
+    "guid": "ps_events:2966:delta:0",
+    "sources": [
+      "bioengineering"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T21:00:00Z",
+    "endsAt": "2026-12-04T21:30:00Z",
+    "startTime": "2026-12-04T16:00:00",
+    "endTime": "2026-12-04T16:30:00",
+    "timezone": "America/New_York",
+    "title": "iGEM 2026 Info Session",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Undergraduate",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Undergraduate"
+    ],
+    "unmappedTags": [
+      "Undergraduate"
+    ],
+    "location": {
+      "name": "CBE Building",
+      "id": "",
+      "detail": "F204"
+    },
+    "urlRef": "https://bioengineering.princeton.edu/events/2026/igem-2026-info-session-1",
+    "content": "We\u2019re looking for undergraduate students to join Princeton\u2019s International Genetically Engineered Machines Competition (iGEM) team. This program brings together a group of about 10 students to develop and carry out a synthetic biology research project (no biology experience necessary!).Piecing together this project involves many components, such as reading, research, writing, web design, community outreach, and more. It\u2019s the perfect opportunity for students who are eager to learn and collaborate.Participants will enroll in the course \u201cIntroduction to Synthetic Biology\u201d in",
+    "rawEventDetails": "Details Event Description We\u2019re looking for undergraduate students to join Princeton\u2019s International Genetically Engineered Machines Competition (iGEM) team. This program brings together a group of about 10 students to develop and carry out a synthetic biology research project (no biology experience necessary!). Piecing together this project involves many components, such as reading, research, writing, web design, community outreach, and more. It\u2019s the perfect opportunity for students who are eager to learn and collaborate. Participants will enroll in the course \u201cIntroduction to Synthetic Biology\u201d in the spring. They will live on campus throughout the summer to complete the project, and then travel to Paris in the fall to present their team\u2019s project at the iGEM Jamboree. If you're interested in learning more, please attend the iGEM info session.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "iGEM 2026 Info Session",
+    "locationRaw": "CBE Building F204",
+    "mappingRules": [
+      "bioengineering:summary-is-title"
     ],
     "locationRule": "unambiguous_room",
     "summaryRest": "",
