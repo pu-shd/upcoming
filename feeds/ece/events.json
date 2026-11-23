@@ -531,6 +531,58 @@
     "mappingConflict": false
   },
   {
+    "id": "ece:ps_events:11411:delta:0",
+    "guid": "ps_events:11411:delta:0",
+    "sources": [
+      "ece"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-04T15:00:00Z",
+    "endsAt": "2026-12-04T17:00:00Z",
+    "startTime": "2026-12-04T10:00:00",
+    "endTime": "2026-12-04T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Spatio-Temporal Programmable and Active Dual-Surface mm-wave Reflect/Transmit Arrays",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "Final Public Oral Examinations,Final Public Orals",
+    "tags": [
+      "fpo"
+    ],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [
+      "Final Public Oral Examinations",
+      "Final Public Orals"
+    ],
+    "unmappedTags": [],
+    "location": {
+      "name": "EQUAD",
+      "id": "",
+      "detail": "B327"
+    },
+    "urlRef": "https://ece.princeton.edu/events/spatio-temporal-programmable-and-active-dual-surface-mm-wave-reflecttransmit-arrays-0",
+    "content": "Sixth-generation (6G) wireless networks are expected to deliver multi-gigabit data rates while sensing their environment, pushing operation into the millimeter-wave (mmWave) and sub-terahertz bands. These frequencies, however, suffer from severe path loss and blockage, and receiver power consumption grows with carrier frequency and bandwidth. While reconfigurable intelligent surfaces (RIS) have emerged as a promising way to shape the wireless environment, passive implementations suffer from multiplicative channel loss and limited",
+    "rawEventDetails": "Speaker Muhamed Allam Details Event Description Sixth-generation (6G) wireless networks are expected to deliver multi-gigabit data rates while sensing their environment, pushing operation into the millimeter-wave (mmWave) and sub-terahertz bands. These frequencies, however, suffer from severe path loss and blockage, and receiver power consumption grows with carrier frequency and bandwidth. While reconfigurable intelligent surfaces (RIS) have emerged as a promising way to shape the wireless environment, passive implementations suffer from multiplicative channel loss and limited functionality. The central contribution is SPARTA, a scalable, programmable, and active 60 GHz dual-surface reflect/ transmit array. The platform integrates 46 custom 65-nm CMCS ICs across two faces of a multilayer laminate, each providing amplification, 8-bit vector phase control, and high-speed time modulation along two independent paths. Eight operating modes span reflection, transmission, and simultaneous reflection and transmission, enabling full-azimuth signal routing. The thesis presents the co-design of the ICs, package, and antennas< and suppresses instability mechanisms specific to active Reflect RIS. SPARTA demonstrates communication, sensing, and security functions from a single aper-ture. It synthesizes multiple simultaneous beams, concurrently relays independent streams through its reflection and transmission paths, and operates as an active backscatter transmit-ter. For integrated sensing and communication (ISAC), on-surface modulation gives a base station separate views of both sides of the surface, revealing targets beyond its line of sight, and wideband communication signals double as sensing probes. Finally, SPARTA cancels its own passive reflection and suppresses radar returns while maintaining a communication link. On the user side, the thesis presents a low-power mmWave Kramers-Kronig receiver that reconstructs complex modulated signals from their detected amplitude, without a local oscillator. Analog and mixed-signal circuits implement the logarithm and Hilbert-transform operations, avoiding high-speed digitization, and a noise-driven methodology optimizes the envelope detector. Together, these contributions establish a hardware foundation for reliable, environment-aware 6G mmWave communication and sensing. Adviser: Kaushik Sengupta",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Spatio-Temporal Programmable and Active Dual-Surface mm-wave Reflect/Transmit Arrays",
+    "locationRaw": "EQUAD B327",
+    "mappingRules": [
+      "ece:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "ece:ps_events:11386:delta:0",
     "guid": "ps_events:11386:delta:0",
     "sources": [
