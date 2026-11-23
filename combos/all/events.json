@@ -7570,7 +7570,7 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series-0",
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series",
     "content": "Jaume de Dios, Postdoctoral Researcher, NYU",
     "rawEventDetails": "Details Event Description Jaume de Dios, Postdoctoral Researcher, NYU",
     "rawExtractAbstract": "",
@@ -8542,7 +8542,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series-1",
+    "urlRef": "https://dais.princeton.edu/events/2026/ai-math-seminar-series-0",
     "content": "Mario Szededy, Distinguished Professor of Computer Science Rutgers University",
     "rawEventDetails": "Details Event Description Mario Szededy, Distinguished Professor of Computer Science Rutgers University",
     "rawExtractAbstract": "",
@@ -10237,7 +10237,7 @@
     "startTime": "2027-02-02T12:15:00",
     "endTime": "2027-02-02T13:15:00",
     "timezone": "America/New_York",
-    "title": "CITP Seminar: Noam Kantor",
+    "title": "CITP Seminar",
     "speakers": [],
     "speaker": "",
     "affiliation": "",
@@ -10254,7 +10254,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://dais.princeton.edu/events/2027/citp-seminar-noam-kantor",
+    "urlRef": "https://dais.princeton.edu/events/2027/citp-seminar",
     "content": "",
     "rawEventDetails": "Details Event Description Talk information: TBA Bio: Noam Kantor is a mathematician and a public interest technologist. Kantor has spent his career using his technical skills to advise efforts to hold technology companies accountable for privacy, civil rights, and competition harms. These efforts have spanned the United States Senate as a TechCongress Fellow, the Mozilla policy team, the Federal Trade Commission's Office of Technology, and now as an AI Lab Policy Fellow at the California Attorney General's Office. He has advised on legal and legislative projects with the potential for multi-billion-dollar impact. In his current role, he is working across high-profile consumer protection investigations and lawsuits. Kantor obtained his doctorate in math from Oxford as a Marshall Scholar. If you need an accommodation for a disability please contact Jean Butcher at [email protected] at least one week prior to the event. Sponsorship of an event does not constitute institutional endorsement of external speakers or views presented. Sponsors Program in Law and Public Policy Data and Intelligent Systems",
     "rawExtractAbstract": "",
@@ -10262,7 +10262,7 @@
     "cancelled": "",
     "bannerImage": "",
     "itemType": "advertisement",
-    "summaryRaw": "CITP Seminar: Noam Kantor",
+    "summaryRaw": "CITP Seminar",
     "locationRaw": "",
     "mappingRules": [
       "dais:summary-is-title"
