@@ -156,6 +156,53 @@
     "mappingConflict": false
   },
   {
+    "id": "cs:https://www.cs.princeton.edu/events/olga-solodova-fpo",
+    "guid": "https://www.cs.princeton.edu/events/olga-solodova-fpo",
+    "sources": [
+      "cs"
+    ],
+    "platform": "drupal-events-rss",
+    "startsAt": "2026-12-01T15:00:00Z",
+    "endsAt": "2026-12-01T17:00:00Z",
+    "startTime": "2026-12-01T10:00:00",
+    "endTime": "2026-12-01T12:00:00",
+    "timezone": "America/New_York",
+    "title": "Olga Solodova FPO",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "Computer Science",
+      "id": "",
+      "detail": "401"
+    },
+    "urlRef": "https://www.cs.princeton.edu/events/olga-solodova-fpo",
+    "content": "",
+    "rawEventDetails": "",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Olga Solodova FPO",
+    "locationRaw": "Computer Science 401",
+    "mappingRules": [
+      "cs:summary-is-title"
+    ],
+    "locationRule": "unambiguous_room",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "cs:https://www.cs.princeton.edu/events/citp-seminar-pre-final-public-oral-fpo-auditing-platforms-transparency-and-accountability",
     "guid": "https://www.cs.princeton.edu/events/citp-seminar-pre-final-public-oral-fpo-auditing-platforms-transparency-and-accountability",
     "sources": [
