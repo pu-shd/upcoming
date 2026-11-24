@@ -1247,11 +1247,11 @@
     "rawCategories": [],
     "unmappedTags": [],
     "location": {
-      "name": "-",
+      "name": "Bendheim House",
       "id": "",
-      "detail": ""
+      "detail": "103"
     },
-    "urlRef": "https://ai.princeton.edu/events/2026/ai-math-seminar-series-1",
+    "urlRef": "https://ai.princeton.edu/events/2026/ai-math-seminar-series",
     "content": "Mario Szededy, Distinguished Professor of Computer Science Rutgers University",
     "rawEventDetails": "Details Event Description Mario Szededy, Distinguished Professor of Computer Science Rutgers University",
     "rawExtractAbstract": "",
@@ -1260,11 +1260,11 @@
     "bannerImage": "",
     "itemType": "advertisement",
     "summaryRaw": "AI for Math Seminar Series",
-    "locationRaw": "-",
+    "locationRaw": "Bendheim House 103",
     "mappingRules": [
       "ai:series-listing"
     ],
-    "locationRule": "whole",
+    "locationRule": "unambiguous_room",
     "summaryRest": "",
     "titleSource": "ics",
     "titleIsPlaceholder": false,
