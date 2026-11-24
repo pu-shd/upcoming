@@ -214,12 +214,16 @@
     "speakers": [],
     "speaker": "",
     "affiliation": "",
-    "series": "",
-    "tags": [],
+    "series": "Princeton AI",
+    "tags": [
+      "ai"
+    ],
     "purposes": [
       "engineering-newsletter"
     ],
-    "rawCategories": [],
+    "rawCategories": [
+      "Princeton AI"
+    ],
     "unmappedTags": [],
     "location": {
       "name": "Chancellor Green",
@@ -1413,6 +1417,53 @@
     "locationRaw": "Princeton AI Step Down",
     "mappingRules": [
       "ai:series-listing"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "ai:ps_events:4436:delta:0",
+    "guid": "ps_events:4436:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-15T21:00:00Z",
+    "endsAt": "2026-12-15T23:00:00Z",
+    "startTime": "2026-12-15T16:00:00",
+    "endTime": "2026-12-15T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Machine Learning in Chemical Physics",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "View location on My PrincetonU",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/machine-learning-chemical-physics",
+    "content": "Drew Novick, AI\u00b2 Prostoc How to Train a Wavefunction: Density Functional Theory as Explicit Optimization.",
+    "rawEventDetails": "Details Event Description Drew Novick, AI\u00b2 Prostoc How to Train a Wavefunction: Density Functional Theory as Explicit Optimization.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Machine Learning in Chemical Physics",
+    "locationRaw": "View location on My PrincetonU",
+    "mappingRules": [
+      "ai:title"
     ],
     "locationRule": "whole",
     "summaryRest": "",

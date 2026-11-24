@@ -599,7 +599,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
     "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
     "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
     "rawExtractAbstract": "",
@@ -1312,7 +1312,7 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/do-neural-networks-have-world-models",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/do-neural-networks-have-world-models",
     "content": "Speaker: John Morrison, Professor of Philosophy, Barnard CollegeTalk Abstract: It is often claimed that neural networks construct models of the world (\"world models\") and don't merely exploit heuristics. In this sense, they are said to understand their tasks. But it isn't always clear what having a world model amounts to, or what should count as evidence for or against. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its",
     "rawEventDetails": "Details Event Description Speaker: John Morrison, Professor of Philosophy, Barnard College Talk Abstract: It is often claimed that neural networks construct models of the world (\"world models\") and don't merely exploit heuristics. In this sense, they are said to understand their tasks. But it isn't always clear what having a world model amounts to, or what should count as evidence for or against. This talk has two parts. First, drawing on joint work with Rapha\u00ebl Milli\u00e8re, I propose a minimal notion of a world model: a single, unified representation of a task that preserves its structural relations. I explain how this notion sits within a hierarchy of stronger ones, and argue that many disputes about world models are merely verbal. Second, drawing on joint work with collaborators at Columbia and NYU, I apply this framework to the standard example: Othello-GPT, a transformer trained to predict legal moves in Othello. I argue that the evidence is ambiguous once we adopt the right baselines (networks that plausibly use only heuristics) and the right metrics (which attend to patterns of error and the probabilities assigned to unchosen moves). I then introduce another kind of evidence that favors the heuristic interpretation: how quickly the network learns variants of Othello that extend rather than scramble the board's geometry. I end by drawing general lessons for attributing world models to neural networks, and by describing similar approaches for attributing algorithms and probabilistic inference.",
     "rawExtractAbstract": "",
@@ -1693,12 +1693,16 @@
     "speakers": [],
     "speaker": "",
     "affiliation": "",
-    "series": "",
-    "tags": [],
+    "series": "Princeton AI",
+    "tags": [
+      "ai"
+    ],
     "purposes": [
       "engineering-newsletter"
     ],
-    "rawCategories": [],
+    "rawCategories": [
+      "Princeton AI"
+    ],
     "unmappedTags": [],
     "location": {
       "name": "Chancellor Green",
@@ -2322,7 +2326,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
     "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
     "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
     "rawExtractAbstract": "",
@@ -3690,7 +3694,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
     "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
     "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
     "rawExtractAbstract": "",
@@ -4554,7 +4558,7 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/automated-social-epistemology-language-models-scientific-peer-review",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/automated-social-epistemology-language-models-scientific-peer-review",
     "content": "Hosted by Natural and Artificial Minds Speaker: Mel Andrews, Postdoctoral Research Associate, Center for Information Technology Policy and Natural and Artificial Minds Talk abstract: The proliferation of large language models (LLMs) has sparked debate over the prospect of automating peer review in scientific publishing and funding allocation. Not all human tasks, however, are amenable to automation. The feasibility and even the conceptual coherence of automation depend on prior commitments to an account of peer review. Proposals for automated",
     "rawEventDetails": "Details Event Description Hosted by Natural and Artificial Minds Speaker: Mel Andrews, Postdoctoral Research Associate, Center for Information Technology Policy and Natural and Artificial Minds Talk abstract: The proliferation of large language models (LLMs) has sparked debate over the prospect of automating peer review in scientific publishing and funding allocation. Not all human tasks, however, are amenable to automation. The feasibility and even the conceptual coherence of automation depend on prior commitments to an account of peer review. Proposals for automated reviewing treat performance at the task of peer review as a benchmark, i.e., something that can be captured under quantitative, unitary, scalar, context-independent model evaluation practices. The benchmarking of review is revelatory of particular commitments to the nature of the task, which, taken together, we dub the measurement account of peer review. This account, we argue, is not epistemically coherent, and further, negates the social-epistemic nature of both scientific knowledge production and science evaluation. An eye to the historical development of peer reviewing practices reveals two compelling alternatives: the correspondence account and the democratic account of peer review. On these historically-backed accounts, peer review comes out resistant to attempts at automation. If peer review is indeed an irreducibly social-epistemic practice, offloading the task to LLMs or related technologies would not be an automation of peer review but rather a replacement of peer review with something wholly unlike it. This leaves open the question of whether peer review is a desirable institution to uphold in the context of modern science.",
     "rawExtractAbstract": "",
@@ -5217,7 +5221,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/nam-chilloquium-series-mathematics-age-ai",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/nam-chilloquium-series-mathematics-age-ai",
     "content": "Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical",
     "rawEventDetails": "Details Event Description Speakers: Akshay Venkatesh, Institute for Advanced Study Arvind Narayanan, Computer Science and CITP AI systems are beginning to produce proofs for mathematical problems that researchers have worked on for decades. What do these developments tell us about the capabilities of AI, and how might they change the future of mathematics and scientific discovery? Join Professors Akshay Venkatesh (Institute for Advanced Study) and Arvind Narayanan (Computer Science, Princeton University) for an informal conversation about how AI is changing mathematical research, what it means to understand discoveries made by AI, and what researchers should focus on as these systems become increasingly capable. The discussion will also explore what these changes might mean for the next generation of researchers. The event will begin with brief remarks from each speaker, followed by a moderated discussion and audience Q&A. We'll conclude with a casual reception from 5:30\u20136:00 PM, with an opportunity to continue the conversation with the speakers and other attendees. No background in advanced mathematics is required. All are welcome! Interested in future Chilloquium events? Subscribe to NAM's mailing list to hear about upcoming conversations in the series.",
     "rawExtractAbstract": "",
@@ -5672,7 +5676,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
     "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
     "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
     "rawExtractAbstract": "",
@@ -7967,7 +7971,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
     "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
     "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
     "rawExtractAbstract": "",
@@ -8887,7 +8891,7 @@
       "id": "",
       "detail": "103"
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/memories-come-mind-futures-we-imagine",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/memories-come-mind-futures-we-imagine",
     "content": "Abstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive control of memory and planning. I'll present a resource-rational modeling framework that formalize the tradeoffs governing",
     "rawEventDetails": "Details Event Description Abstract: Every decision draws on a tiny fraction of what we can remember or imagine, so making a good decision depends on the right information coming to mind, at the right time: the right memories to retrieve, the right possibilities to consider. How does the brain learn to retrieve the right information under time and memory constraints? In this talk, I will present our lab's computational and experimental work for understanding the adaptive control of memory and planning. I'll present a resource-rational modeling framework that formalize the tradeoffs governing which mental operations are worth performing and when deliberation should stop. Instantiating these models in recurrent neural networks allows us to ask how useful cognitive strategies and internal representations emerge through learning, linking the goals of cognition to candidate neural mechanisms. Alongside this modeling framework, I'll present our experiments using eye movements as a window into the contents and dynamics of thought. By tracking where people look as they remember and plan, we can probe which information they consider, how they revisit and combine it, and how these processes shape their choices. These measurements allow us to test models against the unfolding process of deliberation. Together, these approaches offer a framework for understanding how we learn to remember and think selectively, using limited cognitive resources to support flexible behavior.",
     "rawExtractAbstract": "",
@@ -9513,7 +9517,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
     "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
     "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
     "rawExtractAbstract": "",
@@ -9955,6 +9959,101 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4436:delta:0",
+    "guid": "ps_events:4436:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-15T21:00:00Z",
+    "endsAt": "2026-12-15T23:00:00Z",
+    "startTime": "2026-12-15T16:00:00",
+    "endTime": "2026-12-15T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Machine Learning in Chemical Physics",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "View location on My PrincetonU",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/machine-learning-chemical-physics",
+    "content": "Drew Novick, AI\u00b2 Prostoc How to Train a Wavefunction: Density Functional Theory as Explicit Optimization.",
+    "rawEventDetails": "Details Event Description Drew Novick, AI\u00b2 Prostoc How to Train a Wavefunction: Density Functional Theory as Explicit Optimization.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Machine Learning in Chemical Physics",
+    "locationRaw": "View location on My PrincetonU",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
+    "id": "dais:ps_events:4886:delta:0",
+    "guid": "ps_events:4886:delta:0",
+    "sources": [
+      "dais"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-15T21:00:00Z",
+    "endsAt": "2026-12-15T23:00:00Z",
+    "startTime": "2026-12-15T16:00:00",
+    "endTime": "2026-12-15T18:00:00",
+    "timezone": "America/New_York",
+    "title": "Machine Learning in Chemical Physics",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter",
+      "dais-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "View location on My PrincetonU",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://dais.princeton.edu/events/2026/machine-learning-chemical-physics",
+    "content": "Drew Novick, AI\u00b2 Prostoc How to Train a Wavefunction: Density Functional Theory as Explicit Optimization.",
+    "rawEventDetails": "Details Event Description Drew Novick, AI\u00b2 Prostoc How to Train a Wavefunction: Density Functional Theory as Explicit Optimization.",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Machine Learning in Chemical Physics",
+    "locationRaw": "View location on My PrincetonU",
+    "mappingRules": [
+      "dais:summary-is-title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "nam:ps_events:891:delta:6",
     "guid": "ps_events:891:delta:6",
     "sources": [
@@ -9982,7 +10081,7 @@
       "id": "",
       "detail": ""
     },
-    "urlRef": "https://nam.ai.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
+    "urlRef": "https://nam.dais.princeton.edu/events/2026/historical-machine-learning-and-connectionism-reading-group",
     "content": "The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models.Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert,",
     "rawEventDetails": "Details Event Description The reading group will explore the intellectual history of machine learning and artificial intelligence, tracing foundational ideas from early theories of neural computation and the perceptron through symbolic AI, the connectionist revival, deep learning, and contemporary foundation models. Rather than studying these methods only in their modern textbook form, we will return to the original papers, debates, and historical context in which they emerged. Sessions will combine readings of foundational work by researchers such as McCulloch and Pitts, Rosenblatt, Minsky and Papert, Hopfield, Rumelhart, Hinton, and McClelland with occasional watch parties featuring archival documentaries, interviews, and television debates from the early history of AI. The group is intended for participants from across machine learning, cognitive science, neuroscience, linguistics, philosophy, and related fields. No prior background in the history of AI or connectionism is required; the goal is to understand not only how major ideas in machine learning work, but why they emerged, what problems they were intended to solve, and how earlier debates continue to shape AI research today.",
     "rawExtractAbstract": "",
