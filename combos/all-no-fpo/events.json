@@ -8034,6 +8034,53 @@
     "mappingConflict": false
   },
   {
+    "id": "ai:ps_events:4426:delta:0",
+    "guid": "ps_events:4426:delta:0",
+    "sources": [
+      "ai"
+    ],
+    "platform": "princeton-site-builder",
+    "startsAt": "2026-12-03T17:30:00Z",
+    "endsAt": "2026-12-03T18:30:00Z",
+    "startTime": "2026-12-03T12:30:00",
+    "endTime": "2026-12-03T13:30:00",
+    "timezone": "America/New_York",
+    "title": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
+    "speakers": [],
+    "speaker": "",
+    "affiliation": "",
+    "series": "",
+    "tags": [],
+    "purposes": [
+      "engineering-newsletter"
+    ],
+    "rawCategories": [],
+    "unmappedTags": [],
+    "location": {
+      "name": "-",
+      "id": "",
+      "detail": ""
+    },
+    "urlRef": "https://ai.princeton.edu/events/2026/princeton-language-intelligence-lunch-series-invitation-only-3",
+    "content": "Benjamin Feuer, Post-Training Lead, Marin Project, Open Athena Xiaomin Li, Co-Founder and CEO MatrAIx Yuexing Hao, Co-Founder and COO MatrAIx",
+    "rawEventDetails": "Details Event Description Benjamin Feuer, Post-Training Lead, Marin Project, Open Athena Xiaomin Li, Co-Founder and CEO MatrAIx Yuexing Hao, Co-Founder and COO MatrAIx",
+    "rawExtractAbstract": "",
+    "rawExtractBio": "",
+    "cancelled": "",
+    "bannerImage": "",
+    "itemType": "advertisement",
+    "summaryRaw": "Princeton Language + Intelligence Lunch Series - By Invitation Only",
+    "locationRaw": "-",
+    "mappingRules": [
+      "ai:title"
+    ],
+    "locationRule": "whole",
+    "summaryRest": "",
+    "titleSource": "ics",
+    "titleIsPlaceholder": false,
+    "mappingConflict": false
+  },
+  {
     "id": "bioengineering:ps_events:2906:delta:0",
     "guid": "ps_events:2906:delta:0",
     "sources": [
