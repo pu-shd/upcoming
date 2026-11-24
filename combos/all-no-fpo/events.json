@@ -52,59 +52,6 @@
     "mappingConflict": false
   },
   {
-    "id": "quantum:ps_events:3741:delta:0",
-    "guid": "ps_events:3741:delta:0",
-    "sources": [
-      "quantum"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-22T12:30:00Z",
-    "endsAt": "2026-10-23T19:00:00Z",
-    "startTime": "2026-10-22T08:30:00",
-    "endTime": "2026-10-23T15:00:00",
-    "timezone": "America/New_York",
-    "title": "Princeton Quantum Technology Conference 2026",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "Other Seminars,Princeton Quantum Colloquium",
-    "tags": [
-      "colloquium",
-      "seminar"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [
-      "Other Seminars",
-      "Princeton Quantum Colloquium"
-    ],
-    "unmappedTags": [],
-    "location": {
-      "name": "Princeton University Commons",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://quantum.princeton.edu/pqtc2026",
-    "content": "The Princeton Quantum Technology Conference (PQTC) aims to bring together visionary speakers from disparate fields that are pushing the frontiers of quantum technology by seriously tackling challenges in quantum hardware and materials, system architecture and scaling, and error correction. The event structure will be designed to allow ample time for discussion and interaction, with the hope of catalyzing new ideas and collaborations.This event is supported by the Princeton Quantum Initiative.Event details",
-    "rawEventDetails": "Details Event Description The Princeton Quantum Technology Conference (PQTC) aims to bring together visionary speakers from disparate fields that are pushing the frontiers of quantum technology by seriously tackling challenges in quantum hardware and materials, system architecture and scaling, and error correction. The event structure will be designed to allow ample time for discussion and interaction, with the hope of catalyzing new ideas and collaborations. This event is supported by the Princeton Quantum Initiative. Event details When: October 22-23, 2026 Location: The Commons , Princeton University Contacts: Ana Ferrari ( [email protected] ) Katie Gallagher ( [email protected] ) Sarang Gopalakrishnan ( [email protected] ) Registration Registration is now closed. We have reached our in-person capacity and are no longer accepting registrations for onsite attendance. However, we are pleased to offer the opportunity to attend the conference virtually via Zoom Webinar . Click on the links below to watch the conference live : Thursday, October 22, 2026 - 9:00 AM Friday, October 23, 2026 - 9:30 AM No registration is required to join the livestream. Invited Speakers Trond Anderson (Google), Ryan Babbush (Google), Anthony Chen (Oratomic), Jake Covey (Chicago), Henrik Dreyer (Quantinuum), Stephen Jordan (Google Quantum AI), Lin Lin (Caltech and UC Berkeley), Shayan Majidy (Harvard), Greg Meyer (MIT), Adam Paetznick (Microsoft), Natalie Parham (Columbia), Ewin Tang (Princeton), Hong Tang (Yale), Vladan Vuletic (MIT), Nathan Wiebe (U Toronto), Henry Yuen (Columbia), Bichen Zhang (Yale) Agenda Sponsor Sarang Gopalakrishnan",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "Princeton Quantum Technology Conference 2026",
-    "locationRaw": "Princeton University Commons",
-    "mappingRules": [
-      "quantum:title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "quantum:ps_events:3781:delta:0",
     "guid": "ps_events:3781:delta:0",
     "sources": [
@@ -9670,7 +9617,7 @@
       "detail": ""
     },
     "urlRef": "https://quantum.princeton.edu/events/princeton-quantum-colloquium-postdoc-triple-feature-including-zeeshawn-kazi-yukai-lu-and",
-    "content": "Zeeshawn Kazi, de Leon groupTitle: tbdAbstract: tbd Yukai Lu, Bakr Group Title: tbdAbstract: tbd Xiaochuan Wu, Ryu groupTitle: Hearing the Geometry of Quantum Matter from Charge FluctuationsAbstract: Charge fluctuations, defined as the variance of particle number within a spatial region, provide a simple yet powerful probe of quantum many-body systems",
+    "content": "Zeeshawn Kazi, de Leon groupTitle: tbdAbstract: tbd Yukai Lu, Bakr Group Title: High-Fidelity Universal Quantum Gates in a Cryogenic Atom ArrayAbstract: Neutral atoms trapped in optical tweezer arrays have emerged as a powerful platform for quantum science, combining long-lived qubits, programmable connectivity, and strong interactions mediated by highly excited Rydberg states. However, the finite lifetime of these Rydberg states",
     "rawEventDetails": "Details Event Description Zeeshawn Kazi, de Leon group Title: tbd Abstract: tbd Yukai Lu, Bakr Group Title: tbd Abstract: tbd Xiaochuan Wu, Ryu group Title: Hearing the Geometry of Quantum Matter from Charge Fluctuations Abstract: Charge fluctuations, defined as the variance of particle number within a spatial region, provide a simple yet powerful probe of quantum many-body systems. Often studied alongside entanglement-based diagnostics, they offer a complementary approach based on experimentally accessible density correlations. In this talk, I will show how charge fluctuations reveal surprisingly rich geometric information about quantum states. For insulators, they encode the many-body quantum geometry, which characterizes how quantum states change across parameter space and is closely connected to their localization and topological properties. For 3D metals, charge fluctuations reveal not only quantum geometry but also the shape of the Fermi surface. Together, these results demonstrate how a simple real-space observable can probe different aspects of the geometry of quantum matter. A light lunch will be served outside of Bowen Auditorium at 11:50am.",
     "rawExtractAbstract": "",
     "rawExtractBio": "",
