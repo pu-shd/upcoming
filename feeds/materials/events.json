@@ -1,57 +1,5 @@
 [
   {
-    "id": "materials:ps_events:4181:delta:0",
-    "guid": "ps_events:4181:delta:0",
-    "sources": [
-      "materials"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-19T12:00:00Z",
-    "endsAt": "2026-10-21T18:00:00Z",
-    "startTime": "2026-10-19T08:00:00",
-    "endTime": "2026-10-21T14:00:00",
-    "timezone": "America/New_York",
-    "title": "4th Frontiers in Electron and Scanning Probe Microscopy for the Physical and Life Sciences",
-    "speakers": [
-      {
-        "name": "In partnership with Nature Conference",
-        "affiliation": ""
-      }
-    ],
-    "speaker": "In partnership with Nature Conference",
-    "affiliation": "",
-    "series": "",
-    "tags": [],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Maeder Hall",
-      "id": "",
-      "detail": ""
-    },
-    "urlRef": "https://materials.princeton.edu/events/2026/4th-frontiers-electron-and-scanning-probe-microscopy-physical-and-life-sciences",
-    "content": "Advances in electron microscopy instrumentation and methods continue to drive progress in the physical and life sciences. The",
-    "rawEventDetails": "Details Event Description Advances in electron microscopy instrumentation and methods continue to drive progress in the physical and life sciences. The 4th edition of the Frontiers in Electron and Scanning Probe Microscopy for the Physical and Life Sciences conference will bring together researchers from physical and life sciences working at the frontiers of electron microscopy, tomography, artificial intelligence, and scanning probe microscopy. Enjoy engaging presentations from select international scientists and explore scientific questions outside of your comfort zone. Emphasis on identifying and addressing new challenges, promoting synergies and developing the next generation of instruments and tools. Interactive panel discussions on scientific publishing with Nature Portfolio editors and on diverse career paths with field leaders. Ample opportunities for engaging with leading scientists, peers, and editors through poster sessions, flash talks, and networking events. Tentative Agenda https://natureconferences.streamgo.live/4th-frontiers-in-electron-and-scanning-probe-microscopy/agenda Registration fees All fees are in $, US Dollars. Early Bird Until September 8, 2026 Regular From September 8 - September 21, 2026 Student $150 $250 Academic $650 $750 Industry $1,150 $1,250 Early Bird fees end on: September 8, 2026 Regular Registration from: September 8 - September 21, 2026 Registration Your registration includes: Acess to all scientific presentations Poster session(s) Meals as indicated in the conference program E-Program book Cancellation Policy Cancellation by September 21, 2026: 100% refund, minus a $100 administrative fee. Cancellation after September 21, 2026: No refund. Questions? For questions regarding registration, please contact [email protected] .",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "4th Frontiers in Electron and Scanning Probe Microscopy for the Physical and Life Sciences",
-    "locationRaw": "Maeder Hall",
-    "mappingRules": [
-      "materials:title"
-    ],
-    "locationRule": "whole",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "materials:ps_events:4166:delta:0",
     "guid": "ps_events:4166:delta:0",
     "sources": [
