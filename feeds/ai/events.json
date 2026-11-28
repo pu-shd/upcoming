@@ -1,54 +1,5 @@
 [
   {
-    "id": "ai:ps_events:4066:delta:0",
-    "guid": "ps_events:4066:delta:0",
-    "sources": [
-      "ai"
-    ],
-    "platform": "princeton-site-builder",
-    "startsAt": "2026-10-27T20:30:00Z",
-    "endsAt": "2026-10-27T21:30:00Z",
-    "startTime": "2026-10-27T16:30:00",
-    "endTime": "2026-10-27T17:30:00",
-    "timezone": "America/New_York",
-    "title": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
-    "speakers": [],
-    "speaker": "",
-    "affiliation": "",
-    "series": "",
-    "tags": [
-      "listing"
-    ],
-    "purposes": [
-      "engineering-newsletter"
-    ],
-    "rawCategories": [],
-    "unmappedTags": [],
-    "location": {
-      "name": "Sherrerd Hall",
-      "id": "",
-      "detail": "101"
-    },
-    "urlRef": "https://ai.dais.princeton.edu/events/2026/orfe-talks-seminars-flyers-fall-2026-colloquium-0",
-    "content": "",
-    "rawEventDetails": "",
-    "rawExtractAbstract": "",
-    "rawExtractBio": "",
-    "cancelled": "",
-    "bannerImage": "",
-    "itemType": "advertisement",
-    "summaryRaw": "ORFE Talks & Seminars Flyers Fall 2026 Colloquium",
-    "locationRaw": "101 Sherrerd Hall",
-    "mappingRules": [
-      "ai:series-listing"
-    ],
-    "locationRule": "unambiguous_room",
-    "summaryRest": "",
-    "titleSource": "ics",
-    "titleIsPlaceholder": false,
-    "mappingConflict": false
-  },
-  {
     "id": "ai:ps_events:4216:delta:0",
     "guid": "ps_events:4216:delta:0",
     "sources": [
